@@ -1752,7 +1752,7 @@ PHP_METHOD(php_wxCaret, __construct)
 				_this = new wxCaret_php((wxWindow*) object_pointer1_0, (int) width1, (int) height1);
 
 				((wxCaret_php*) _this)->references.Initialize();
-				((wxCaret_php*) _this)->references.AddReference(window1);
+				((wxCaret_php*) _this)->references.AddReference(window1, "wxCaret::wxCaret at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -2022,7 +2022,7 @@ PHP_METHOD(php_wxCaret, SetSize)
 				#endif
 				((wxCaret_php*)_this)->SetSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxCaret::SetSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2281,7 +2281,7 @@ PHP_METHOD(php_wxCaret, Move)
 				#endif
 				((wxCaret_php*)_this)->Move(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxCaret::Move at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2704,7 +2704,7 @@ PHP_METHOD(php_wxCaret, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxCaret::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -3573,7 +3573,7 @@ PHP_METHOD(php_wxNotificationMessage, SetParent)
 				#endif
 				((wxNotificationMessage_php*)_this)->SetParent((wxWindow*) object_pointer0_0);
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxNotificationMessage::SetParent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3931,7 +3931,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				_this = new wxNotificationMessage_php(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8), (wxWindow*) object_pointer1_2);
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
-				((wxNotificationMessage_php*) _this)->references.AddReference(parent1);
+				((wxNotificationMessage_php*) _this)->references.AddReference(parent1, "wxNotificationMessage::wxNotificationMessage at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3942,7 +3942,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				_this = new wxNotificationMessage_php(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8), (wxWindow*) object_pointer1_2, (int) flags1);
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
-				((wxNotificationMessage_php*) _this)->references.AddReference(parent1);
+				((wxNotificationMessage_php*) _this)->references.AddReference(parent1, "wxNotificationMessage::wxNotificationMessage at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -4564,6 +4564,7 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -4571,7 +4572,10 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4589,6 +4593,11 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxMenu_php* var = (wxMenu_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxMenu*) return_object;
 	}
 	
@@ -5089,7 +5098,7 @@ PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->PopupMenu((wxMenu*) object_pointer0_0));
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxTaskBarIcon::PopupMenu at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5306,7 +5315,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0));
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxTaskBarIcon::SetIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5318,7 +5327,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0, wxString(tooltip0, wxConvUTF8)));
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxTaskBarIcon::SetIcon at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5766,7 +5775,7 @@ PHP_METHOD(php_wxTimer, GetOwner)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTimer::GetOwner at call with 0 argument(s)");
 				}
 
 
@@ -6176,7 +6185,7 @@ PHP_METHOD(php_wxTimer, SetOwner)
 				#endif
 				((wxTimer_php*)_this)->SetOwner((wxEvtHandler*) object_pointer0_0);
 
-				references->AddReference(owner0);
+				references->AddReference(owner0, "wxTimer::SetOwner at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6188,7 +6197,7 @@ PHP_METHOD(php_wxTimer, SetOwner)
 				#endif
 				((wxTimer_php*)_this)->SetOwner((wxEvtHandler*) object_pointer0_0, (int) id0);
 
-				references->AddReference(owner0);
+				references->AddReference(owner0, "wxTimer::SetOwner at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6528,7 +6537,7 @@ PHP_METHOD(php_wxTimer, __construct)
 				_this = new wxTimer_php((wxEvtHandler*) object_pointer1_0);
 
 				((wxTimer_php*) _this)->references.Initialize();
-				((wxTimer_php*) _this)->references.AddReference(owner1);
+				((wxTimer_php*) _this)->references.AddReference(owner1, "wxTimer::wxTimer at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -6539,7 +6548,7 @@ PHP_METHOD(php_wxTimer, __construct)
 				_this = new wxTimer_php((wxEvtHandler*) object_pointer1_0, (int) id1);
 
 				((wxTimer_php*) _this)->references.Initialize();
-				((wxTimer_php*) _this)->references.AddReference(owner1);
+				((wxTimer_php*) _this)->references.AddReference(owner1, "wxTimer::wxTimer at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -6732,7 +6741,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 				_this = new wxWindowDisabler_php((wxWindow*) object_pointer1_0);
 
 				((wxWindowDisabler_php*) _this)->references.Initialize();
-				((wxWindowDisabler_php*) _this)->references.AddReference(winToSkip1);
+				((wxWindowDisabler_php*) _this)->references.AddReference(winToSkip1, "wxWindowDisabler::wxWindowDisabler at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -6889,7 +6898,7 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 				_this = new wxBusyCursor_php((const wxCursor*) object_pointer0_0);
 
 				((wxBusyCursor_php*) _this)->references.Initialize();
-				((wxBusyCursor_php*) _this)->references.AddReference(cursor0);
+				((wxBusyCursor_php*) _this)->references.AddReference(cursor0, "wxBusyCursor::wxBusyCursor at call with 1 argument(s)");
 				break;
 			}
 		}

@@ -201,7 +201,7 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 				_this = new wxAcceleratorEntry_php(*(wxAcceleratorEntry*) object_pointer0_0);
 
 				((wxAcceleratorEntry_php*) _this)->references.Initialize();
-				((wxAcceleratorEntry_php*) _this)->references.AddReference(entry0);
+				((wxAcceleratorEntry_php*) _this)->references.AddReference(entry0, "wxAcceleratorEntry::wxAcceleratorEntry at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -259,7 +259,7 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 				_this = new wxAcceleratorEntry_php((int) flags1, (int) keyCode1, (int) cmd1, (wxMenuItem*) object_pointer1_3);
 
 				((wxAcceleratorEntry_php*) _this)->references.Initialize();
-				((wxAcceleratorEntry_php*) _this)->references.AddReference(item1);
+				((wxAcceleratorEntry_php*) _this)->references.AddReference(item1, "wxAcceleratorEntry::wxAcceleratorEntry at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -513,7 +513,7 @@ PHP_METHOD(php_wxAcceleratorEntry, Set)
 				#endif
 				((wxAcceleratorEntry_php*)_this)->Set((int) flags0, (int) keyCode0, (int) cmd0, (wxMenuItem*) object_pointer0_3);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxAcceleratorEntry::Set at call with 4 argument(s)");
 
 				return;
 				break;
@@ -726,7 +726,7 @@ PHP_METHOD(php_wxAcceleratorEntry, GetMenuItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAcceleratorEntry::GetMenuItem at call with 0 argument(s)");
 				}
 
 
@@ -1568,7 +1568,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				_this = new wxCalendarDateAttr_php((wxCalendarDateBorder) border0, *(wxColour*) object_pointer0_1);
 
 				((wxCalendarDateAttr_php*) _this)->references.Initialize();
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder0);
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder0, "wxCalendarDateAttr::wxCalendarDateAttr at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -1596,7 +1596,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				_this = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0);
 
 				((wxCalendarDateAttr_php*) _this)->references.Initialize();
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1);
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -1607,8 +1607,8 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				_this = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
 				((wxCalendarDateAttr_php*) _this)->references.Initialize();
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1);
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 2 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -1619,9 +1619,9 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				_this = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2);
 
 				((wxCalendarDateAttr_php*) _this)->references.Initialize();
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder1);
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 3 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 3 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -1632,10 +1632,10 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				_this = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxFont*) object_pointer1_3);
 
 				((wxCalendarDateAttr_php*) _this)->references.Initialize();
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(font1);
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 4 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 4 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 4 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(font1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -1646,10 +1646,10 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 				_this = new wxCalendarDateAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxFont*) object_pointer1_3, (wxCalendarDateBorder) border1);
 
 				((wxCalendarDateAttr_php*) _this)->references.Initialize();
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder1);
-				((wxCalendarDateAttr_php*) _this)->references.AddReference(font1);
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colText1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 5 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBack1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 5 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(colBorder1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 5 argument(s)");
+				((wxCalendarDateAttr_php*) _this)->references.AddReference(font1, "wxCalendarDateAttr::wxCalendarDateAttr at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -1787,7 +1787,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 				#endif
 				((wxCalendarDateAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colText0);
+				references->AddReference(colText0, "wxCalendarDateAttr::SetTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2007,7 +2007,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 				#endif
 				((wxCalendarDateAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxCalendarDateAttr::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2126,7 +2126,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 				#endif
 				((wxCalendarDateAttr_php*)_this)->SetBorderColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(col0);
+				references->AddReference(col0, "wxCalendarDateAttr::SetBorderColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2346,7 +2346,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 				#endif
 				((wxCalendarDateAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colBack0);
+				references->AddReference(colBack0, "wxCalendarDateAttr::SetBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3036,7 +3036,7 @@ PHP_METHOD(php_wxCalendarDateAttr, GetTextColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxCalendarDateAttr::GetTextColour at call with 0 argument(s)");
 				}
 
 
@@ -3265,7 +3265,7 @@ PHP_METHOD(php_wxCalendarDateAttr, GetFont)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxCalendarDateAttr::GetFont at call with 0 argument(s)");
 				}
 
 
@@ -3381,7 +3381,7 @@ PHP_METHOD(php_wxCalendarDateAttr, GetBorderColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxCalendarDateAttr::GetBorderColour at call with 0 argument(s)");
 				}
 
 
@@ -3593,7 +3593,7 @@ PHP_METHOD(php_wxCalendarDateAttr, GetBackgroundColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxCalendarDateAttr::GetBackgroundColour at call with 0 argument(s)");
 				}
 
 
@@ -5660,7 +5660,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPrintData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPageSetupDialogData::GetPrintData at call with 0 argument(s)");
 				}
 
 
@@ -5698,7 +5698,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPrintData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPageSetupDialogData::GetPrintData at call with 0 argument(s)");
 				}
 
 
@@ -6117,7 +6117,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginBottomRight)
 				#endif
 				((wxPageSetupDialogData_php*)_this)->SetMarginBottomRight(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMarginBottomRight at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6236,7 +6236,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginTopLeft)
 				#endif
 				((wxPageSetupDialogData_php*)_this)->SetMarginTopLeft(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMarginTopLeft at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6355,7 +6355,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginBottomRight)
 				#endif
 				((wxPageSetupDialogData_php*)_this)->SetMinMarginBottomRight(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMinMarginBottomRight at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6474,7 +6474,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginTopLeft)
 				#endif
 				((wxPageSetupDialogData_php*)_this)->SetMinMarginTopLeft(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxPageSetupDialogData::SetMinMarginTopLeft at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6694,7 +6694,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPaperSize)
 				#endif
 				((wxPageSetupDialogData_php*)_this)->SetPaperSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxPageSetupDialogData::SetPaperSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6813,7 +6813,7 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPrintData)
 				#endif
 				((wxPageSetupDialogData_php*)_this)->SetPrintData(*(wxPrintData*) object_pointer0_0);
 
-				references->AddReference(printData0);
+				references->AddReference(printData0, "wxPageSetupDialogData::SetPrintData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6932,7 +6932,7 @@ PHP_METHOD(php_wxPageSetupDialogData, __construct)
 				_this = new wxPageSetupDialogData_php(*(wxPrintData*) object_pointer1_0);
 
 				((wxPageSetupDialogData_php*) _this)->references.Initialize();
-				((wxPageSetupDialogData_php*) _this)->references.AddReference(printData1);
+				((wxPageSetupDialogData_php*) _this)->references.AddReference(printData1, "wxPageSetupDialogData::wxPageSetupDialogData at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -9544,7 +9544,7 @@ PHP_METHOD(php_wxRealPoint, __construct)
 				_this = new wxRealPoint_php(*(wxPoint*) object_pointer2_0);
 
 				((wxRealPoint_php*) _this)->references.Initialize();
-				((wxRealPoint_php*) _this)->references.AddReference(pt2);
+				((wxRealPoint_php*) _this)->references.AddReference(pt2, "wxRealPoint::wxRealPoint at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -9934,8 +9934,8 @@ PHP_METHOD(php_wxRect, __construct)
 				_this = new wxRect_php(*(wxPoint*) object_pointer2_0, *(wxPoint*) object_pointer2_1);
 
 				((wxRect_php*) _this)->references.Initialize();
-				((wxRect_php*) _this)->references.AddReference(topLeft2);
-				((wxRect_php*) _this)->references.AddReference(bottomRight2);
+				((wxRect_php*) _this)->references.AddReference(topLeft2, "wxRect::wxRect at call with 2 argument(s)");
+				((wxRect_php*) _this)->references.AddReference(bottomRight2, "wxRect::wxRect at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -9953,8 +9953,8 @@ PHP_METHOD(php_wxRect, __construct)
 				_this = new wxRect_php(*(wxPoint*) object_pointer3_0, *(wxSize*) object_pointer3_1);
 
 				((wxRect_php*) _this)->references.Initialize();
-				((wxRect_php*) _this)->references.AddReference(pos3);
-				((wxRect_php*) _this)->references.AddReference(size3);
+				((wxRect_php*) _this)->references.AddReference(pos3, "wxRect::wxRect at call with 2 argument(s)");
+				((wxRect_php*) _this)->references.AddReference(size3, "wxRect::wxRect at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -9972,7 +9972,7 @@ PHP_METHOD(php_wxRect, __construct)
 				_this = new wxRect_php(*(wxSize*) object_pointer4_0);
 
 				((wxRect_php*) _this)->references.Initialize();
-				((wxRect_php*) _this)->references.AddReference(size4);
+				((wxRect_php*) _this)->references.AddReference(size4, "wxRect::wxRect at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -10402,10 +10402,10 @@ PHP_METHOD(php_wxRect, Union)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Union at call with 1 argument(s)");
 				}
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxRect::Union at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10625,7 +10625,7 @@ PHP_METHOD(php_wxRect, SetSize)
 				#endif
 				((wxRect_php*)_this)->SetSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(s0);
+				references->AddReference(s0, "wxRect::SetSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10883,7 +10883,7 @@ PHP_METHOD(php_wxRect, Offset)
 				#endif
 				((wxRect_php*)_this)->Offset(*(wxPoint*) object_pointer1_0);
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxRect::Offset at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11098,7 +11098,7 @@ PHP_METHOD(php_wxRect, Intersects)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRect_php*)_this)->Intersects(*(wxRect*) object_pointer0_0));
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxRect::Intersects at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11258,7 +11258,7 @@ PHP_METHOD(php_wxRect, Intersect)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxRect::Intersect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11294,10 +11294,10 @@ PHP_METHOD(php_wxRect, Intersect)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Intersect at call with 1 argument(s)");
 				}
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxRect::Intersect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11515,7 +11515,7 @@ PHP_METHOD(php_wxRect, Inflate)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Inflate at call with 1 argument(s)");
 				}
 
 
@@ -11553,10 +11553,10 @@ PHP_METHOD(php_wxRect, Inflate)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Inflate at call with 1 argument(s)");
 				}
 
-				references->AddReference(diff2);
+				references->AddReference(diff2, "wxRect::Inflate at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11592,7 +11592,7 @@ PHP_METHOD(php_wxRect, Inflate)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Inflate at call with 2 argument(s)");
 				}
 
 
@@ -12603,7 +12603,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-				references->AddReference(r0);
+				references->AddReference(r0, "wxRect::CenterIn at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12620,7 +12620,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-				references->AddReference(r0);
+				references->AddReference(r0, "wxRect::CenterIn at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12745,7 +12745,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-				references->AddReference(r0);
+				references->AddReference(r0, "wxRect::CentreIn at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12762,7 +12762,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-				references->AddReference(r0);
+				references->AddReference(r0, "wxRect::CentreIn at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12955,7 +12955,7 @@ PHP_METHOD(php_wxRect, Contains)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRect_php*)_this)->Contains(*(wxPoint*) object_pointer1_0));
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxRect::Contains at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12974,7 +12974,7 @@ PHP_METHOD(php_wxRect, Contains)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRect_php*)_this)->Contains(*(wxRect*) object_pointer2_0));
 
-				references->AddReference(rect2);
+				references->AddReference(rect2, "wxRect::Contains at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13169,7 +13169,7 @@ PHP_METHOD(php_wxRect, Deflate)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Deflate at call with 2 argument(s)");
 				}
 
 
@@ -13207,10 +13207,10 @@ PHP_METHOD(php_wxRect, Deflate)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Deflate at call with 1 argument(s)");
 				}
 
-				references->AddReference(diff1);
+				references->AddReference(diff1, "wxRect::Deflate at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13246,7 +13246,7 @@ PHP_METHOD(php_wxRect, Deflate)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRect::Deflate at call with 1 argument(s)");
 				}
 
 
@@ -13957,7 +13957,7 @@ PHP_METHOD(php_wxPoint, __construct)
 				_this = new wxPoint_php(*(wxRealPoint*) object_pointer2_0);
 
 				((wxPoint_php*) _this)->references.Initialize();
-				((wxPoint_php*) _this)->references.AddReference(pt2);
+				((wxPoint_php*) _this)->references.AddReference(pt2, "wxPoint::wxPoint at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -14619,7 +14619,7 @@ PHP_METHOD(php_wxSize, SetDefaults)
 				#endif
 				((wxSize_php*)_this)->SetDefaults(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(sizeDefault0);
+				references->AddReference(sizeDefault0, "wxSize::SetDefaults at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15129,7 +15129,7 @@ PHP_METHOD(php_wxSize, Scale)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSize::Scale at call with 2 argument(s)");
 				}
 
 
@@ -15250,7 +15250,7 @@ PHP_METHOD(php_wxSize, DecTo)
 				#endif
 				((wxSize_php*)_this)->DecTo(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxSize::DecTo at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15369,7 +15369,7 @@ PHP_METHOD(php_wxSize, IncTo)
 				#endif
 				((wxSize_php*)_this)->IncTo(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxSize::IncTo at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15523,7 +15523,7 @@ PHP_METHOD(php_wxListItemAttr, GetBackgroundColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxListItemAttr::GetBackgroundColour at call with 0 argument(s)");
 				}
 
 
@@ -15680,9 +15680,9 @@ PHP_METHOD(php_wxListItemAttr, __construct)
 				_this = new wxListItemAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
 				((wxListItemAttr_php*) _this)->references.Initialize();
-				((wxListItemAttr_php*) _this)->references.AddReference(colText1);
-				((wxListItemAttr_php*) _this)->references.AddReference(colBack1);
-				((wxListItemAttr_php*) _this)->references.AddReference(font1);
+				((wxListItemAttr_php*) _this)->references.AddReference(colText1, "wxListItemAttr::wxListItemAttr at call with 3 argument(s)");
+				((wxListItemAttr_php*) _this)->references.AddReference(colBack1, "wxListItemAttr::wxListItemAttr at call with 3 argument(s)");
+				((wxListItemAttr_php*) _this)->references.AddReference(font1, "wxListItemAttr::wxListItemAttr at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -15820,7 +15820,7 @@ PHP_METHOD(php_wxListItemAttr, SetTextColour)
 				#endif
 				((wxListItemAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxListItemAttr::SetTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15939,7 +15939,7 @@ PHP_METHOD(php_wxListItemAttr, SetFont)
 				#endif
 				((wxListItemAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxListItemAttr::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16058,7 +16058,7 @@ PHP_METHOD(php_wxListItemAttr, SetBackgroundColour)
 				#endif
 				((wxListItemAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxListItemAttr::SetBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16460,7 +16460,7 @@ PHP_METHOD(php_wxListItemAttr, GetTextColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxListItemAttr::GetTextColour at call with 0 argument(s)");
 				}
 
 
@@ -16576,7 +16576,7 @@ PHP_METHOD(php_wxListItemAttr, GetFont)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxListItemAttr::GetFont at call with 0 argument(s)");
 				}
 
 
@@ -17018,7 +17018,7 @@ PHP_METHOD(php_wxListItem, SetTextColour)
 				#endif
 				((wxListItem_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colText0);
+				references->AddReference(colText0, "wxListItem::SetTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -17744,7 +17744,7 @@ PHP_METHOD(php_wxListItem, SetFont)
 				#endif
 				((wxListItem_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxListItem::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18065,7 +18065,7 @@ PHP_METHOD(php_wxListItem, SetBackgroundColour)
 				#endif
 				((wxListItem_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colBack0);
+				references->AddReference(colBack0, "wxListItem::SetBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19965,7 +19965,7 @@ PHP_METHOD(php_wxFileType, __construct)
 				_this = new wxFileType_php(*(wxFileTypeInfo*) object_pointer0_0);
 
 				((wxFileType_php*) _this)->references.Initialize();
-				((wxFileType_php*) _this)->references.AddReference(ftInfo0);
+				((wxFileType_php*) _this)->references.AddReference(ftInfo0, "wxFileType::wxFileType at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -21087,7 +21087,7 @@ PHP_METHOD(php_wxRegion, Contains)
 				#endif
 				ZVAL_LONG(return_value, ((wxRegion_php*)_this)->Contains(*(wxPoint*) object_pointer1_0));
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxRegion::Contains at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21124,7 +21124,7 @@ PHP_METHOD(php_wxRegion, Contains)
 				#endif
 				ZVAL_LONG(return_value, ((wxRegion_php*)_this)->Contains(*(wxRect*) object_pointer3_0));
 
-				references->AddReference(rect3);
+				references->AddReference(rect3, "wxRegion::Contains at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21561,7 +21561,7 @@ PHP_METHOD(php_wxRegion, Intersect)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Intersect(*(wxRect*) object_pointer1_0));
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxRegion::Intersect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21580,7 +21580,7 @@ PHP_METHOD(php_wxRegion, Intersect)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Intersect(*(wxRegion*) object_pointer2_0));
 
-				references->AddReference(region2);
+				references->AddReference(region2, "wxRegion::Intersect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21795,7 +21795,7 @@ PHP_METHOD(php_wxRegion, IsEqual)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->IsEqual(*(wxRegion*) object_pointer0_0));
 
-				references->AddReference(region0);
+				references->AddReference(region0, "wxRegion::IsEqual at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21952,7 +21952,7 @@ PHP_METHOD(php_wxRegion, Offset)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Offset(*(wxPoint*) object_pointer1_0));
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxRegion::Offset at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22107,7 +22107,7 @@ PHP_METHOD(php_wxRegion, Subtract)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Subtract(*(wxRect*) object_pointer0_0));
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxRegion::Subtract at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22126,7 +22126,7 @@ PHP_METHOD(php_wxRegion, Subtract)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Subtract(*(wxRegion*) object_pointer1_0));
 
-				references->AddReference(region1);
+				references->AddReference(region1, "wxRegion::Subtract at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22412,7 +22412,7 @@ PHP_METHOD(php_wxRegion, Union)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Union(*(wxRect*) object_pointer1_0));
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxRegion::Union at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22431,7 +22431,7 @@ PHP_METHOD(php_wxRegion, Union)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Union(*(wxRegion*) object_pointer2_0));
 
-				references->AddReference(region2);
+				references->AddReference(region2, "wxRegion::Union at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22450,7 +22450,7 @@ PHP_METHOD(php_wxRegion, Union)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Union(*(wxBitmap*) object_pointer3_0));
 
-				references->AddReference(bmp3);
+				references->AddReference(bmp3, "wxRegion::Union at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22469,8 +22469,8 @@ PHP_METHOD(php_wxRegion, Union)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Union(*(wxBitmap*) object_pointer4_0, *(wxColour*) object_pointer4_1));
 
-				references->AddReference(bmp4);
-				references->AddReference(transColour4);
+				references->AddReference(bmp4, "wxRegion::Union at call with 2 argument(s)");
+				references->AddReference(transColour4, "wxRegion::Union at call with 2 argument(s)");
 
 				return;
 				break;
@@ -22482,8 +22482,8 @@ PHP_METHOD(php_wxRegion, Union)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Union(*(wxBitmap*) object_pointer4_0, *(wxColour*) object_pointer4_1, (int) tolerance4));
 
-				references->AddReference(bmp4);
-				references->AddReference(transColour4);
+				references->AddReference(bmp4, "wxRegion::Union at call with 3 argument(s)");
+				references->AddReference(transColour4, "wxRegion::Union at call with 3 argument(s)");
 
 				return;
 				break;
@@ -22678,7 +22678,7 @@ PHP_METHOD(php_wxRegion, Xor)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Xor(*(wxRect*) object_pointer1_0));
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxRegion::Xor at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22697,7 +22697,7 @@ PHP_METHOD(php_wxRegion, Xor)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRegion_php*)_this)->Xor(*(wxRegion*) object_pointer2_0));
 
-				references->AddReference(region2);
+				references->AddReference(region2, "wxRegion::Xor at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23074,8 +23074,8 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php(*(wxPoint*) object_pointer2_0, *(wxPoint*) object_pointer2_1);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(topLeft2);
-				((wxRegion_php*) _this)->references.AddReference(bottomRight2);
+				((wxRegion_php*) _this)->references.AddReference(topLeft2, "wxRegion::wxRegion at call with 2 argument(s)");
+				((wxRegion_php*) _this)->references.AddReference(bottomRight2, "wxRegion::wxRegion at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -23093,7 +23093,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php(*(wxRect*) object_pointer3_0);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(rect3);
+				((wxRegion_php*) _this)->references.AddReference(rect3, "wxRegion::wxRegion at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23111,7 +23111,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php(*(wxRegion*) object_pointer4_0);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(region4);
+				((wxRegion_php*) _this)->references.AddReference(region4, "wxRegion::wxRegion at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23129,7 +23129,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php((size_t) n5, (const wxPoint*) object_pointer5_1);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(points5);
+				((wxRegion_php*) _this)->references.AddReference(points5, "wxRegion::wxRegion at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -23140,7 +23140,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php((size_t) n5, (const wxPoint*) object_pointer5_1, (wxPolygonFillMode) fillStyle5);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(points5);
+				((wxRegion_php*) _this)->references.AddReference(points5, "wxRegion::wxRegion at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -23158,7 +23158,7 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php(*(wxBitmap*) object_pointer6_0);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(bmp6);
+				((wxRegion_php*) _this)->references.AddReference(bmp6, "wxRegion::wxRegion at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23176,8 +23176,8 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php(*(wxBitmap*) object_pointer7_0, *(wxColour*) object_pointer7_1);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(bmp7);
-				((wxRegion_php*) _this)->references.AddReference(transColour7);
+				((wxRegion_php*) _this)->references.AddReference(bmp7, "wxRegion::wxRegion at call with 2 argument(s)");
+				((wxRegion_php*) _this)->references.AddReference(transColour7, "wxRegion::wxRegion at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -23188,8 +23188,8 @@ PHP_METHOD(php_wxRegion, __construct)
 				_this = new wxRegion_php(*(wxBitmap*) object_pointer7_0, *(wxColour*) object_pointer7_1, (int) tolerance7);
 
 				((wxRegion_php*) _this)->references.Initialize();
-				((wxRegion_php*) _this)->references.AddReference(bmp7);
-				((wxRegion_php*) _this)->references.AddReference(transColour7);
+				((wxRegion_php*) _this)->references.AddReference(bmp7, "wxRegion::wxRegion at call with 3 argument(s)");
+				((wxRegion_php*) _this)->references.AddReference(transColour7, "wxRegion::wxRegion at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -24031,7 +24031,7 @@ PHP_METHOD(php_wxVariant, Append)
 				#endif
 				((wxVariant_php*)_this)->Append(*(wxVariant*) object_pointer0_0);
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxVariant::Append at call with 1 argument(s)");
 
 				return;
 				break;
@@ -24940,7 +24940,7 @@ PHP_METHOD(php_wxVariant, GetData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxVariant::GetData at call with 0 argument(s)");
 				}
 
 
@@ -25649,7 +25649,7 @@ PHP_METHOD(php_wxVariant, GetWxObjectPtr)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxVariant::GetWxObjectPtr at call with 0 argument(s)");
 				}
 
 
@@ -25770,7 +25770,7 @@ PHP_METHOD(php_wxVariant, Insert)
 				#endif
 				((wxVariant_php*)_this)->Insert(*(wxVariant*) object_pointer0_0);
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxVariant::Insert at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25985,7 +25985,7 @@ PHP_METHOD(php_wxVariant, IsValueKindOf)
 				#endif
 				ZVAL_BOOL(return_value, ((wxVariant_php*)_this)->IsValueKindOf((const wxClassInfo*) object_pointer0_0));
 
-				references->AddReference(type0);
+				references->AddReference(type0, "wxVariant::IsValueKindOf at call with 1 argument(s)");
 
 				return;
 				break;
@@ -26302,7 +26302,7 @@ PHP_METHOD(php_wxVariant, Member)
 				#endif
 				ZVAL_BOOL(return_value, ((wxVariant_php*)_this)->Member(*(wxVariant*) object_pointer0_0));
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxVariant::Member at call with 1 argument(s)");
 
 				return;
 				break;
@@ -26817,7 +26817,7 @@ PHP_METHOD(php_wxVariant, SetData)
 				#endif
 				((wxVariant_php*)_this)->SetData((wxVariantData*) object_pointer0_0);
 
-				references->AddReference(data0);
+				references->AddReference(data0, "wxVariant::SetData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -27231,7 +27231,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				_this = new wxVariant_php((wxObject*) object_pointer5_0);
 
 				((wxVariant_php*) _this)->references.Initialize();
-				((wxVariant_php*) _this)->references.AddReference(value5);
+				((wxVariant_php*) _this)->references.AddReference(value5, "wxVariant::wxVariant at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -27242,7 +27242,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				_this = new wxVariant_php((wxObject*) object_pointer5_0, wxString(name5, wxConvUTF8));
 
 				((wxVariant_php*) _this)->references.Initialize();
-				((wxVariant_php*) _this)->references.AddReference(value5);
+				((wxVariant_php*) _this)->references.AddReference(value5, "wxVariant::wxVariant at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -27347,7 +27347,7 @@ PHP_METHOD(php_wxVariant, __construct)
 				_this = new wxVariant_php(*(wxVariant*) object_pointer8_0);
 
 				((wxVariant_php*) _this)->references.Initialize();
-				((wxVariant_php*) _this)->references.AddReference(variant8);
+				((wxVariant_php*) _this)->references.AddReference(variant8, "wxVariant::wxVariant at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -27491,7 +27491,7 @@ PHP_METHOD(php_wxVariantData, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxVariantData::Clone at call with 0 argument(s)");
 				}
 
 
@@ -27633,6 +27633,7 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariantData_entry);
@@ -27642,7 +27643,15 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -27650,11 +27659,12 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
 		
 		wxMessageBox("Failed to call virtual method 'wxVariantData::Eq'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -27681,6 +27691,7 @@ wxString wxVariantData_php::GetType()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -27688,7 +27699,10 @@ wxString wxVariantData_php::GetType()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -27696,11 +27710,12 @@ wxString wxVariantData_php::GetType()const
 		
 		wxMessageBox("Failed to call virtual method 'wxVariantData::GetType'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -27805,7 +27820,7 @@ PHP_METHOD(php_wxVariantData, GetValueClassInfo)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxVariantData::GetValueClassInfo at call with 0 argument(s)");
 				}
 
 

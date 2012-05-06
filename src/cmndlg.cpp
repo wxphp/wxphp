@@ -1770,7 +1770,7 @@ PHP_METHOD(php_wxAboutDialogInfo, SetIcon)
 				#endif
 				((wxAboutDialogInfo_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0);
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxAboutDialogInfo::SetIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2539,7 +2539,7 @@ PHP_METHOD(php_wxBusyInfo, __construct)
 				_this = new wxBusyInfo_php(wxString(msg0, wxConvUTF8), (wxWindow*) object_pointer0_1);
 
 				((wxBusyInfo_php*) _this)->references.Initialize();
-				((wxBusyInfo_php*) _this)->references.AddReference(parent0);
+				((wxBusyInfo_php*) _this)->references.AddReference(parent0, "wxBusyInfo::wxBusyInfo at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -3167,7 +3167,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) n0, strings_array0_4);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3193,7 +3193,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) n0, strings_array0_4, (void**) 0);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -3219,7 +3219,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) n0, strings_array0_4, (void**) 0, (long) style0);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -3245,8 +3245,8 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) n0, strings_array0_4, (void**) 0, (long) style0, *(wxPoint*) object_pointer0_7);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0);
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(pos0);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent0, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 8 argument(s)");
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(pos0, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 8 argument(s)");
 				break;
 			}
 		}
@@ -3282,7 +3282,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer1_0, wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), strings_array1_3);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3308,7 +3308,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer1_0, wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), strings_array1_3, (void**) 0);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3334,7 +3334,7 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer1_0, wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), strings_array1_3, (void**) 0, (long) style1);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -3360,8 +3360,8 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 				_this = new wxSingleChoiceDialog_php((wxWindow*) object_pointer1_0, wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), strings_array1_3, (void**) 0, (long) style1, *(wxPoint*) object_pointer1_6);
 
 				((wxSingleChoiceDialog_php*) _this)->references.Initialize();
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1);
-				((wxSingleChoiceDialog_php*) _this)->references.AddReference(pos1);
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(parent1, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 7 argument(s)");
+				((wxSingleChoiceDialog_php*) _this)->references.AddReference(pos1, "wxSingleChoiceDialog::wxSingleChoiceDialog at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -4610,7 +4610,7 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintDialogData::GetPrintData at call with 0 argument(s)");
 				}
 
 
@@ -5620,7 +5620,7 @@ PHP_METHOD(php_wxPrintDialogData, SetPrintData)
 				#endif
 				((wxPrintDialogData_php*)_this)->SetPrintData(*(wxPrintData*) object_pointer0_0);
 
-				references->AddReference(printData0);
+				references->AddReference(printData0, "wxPrintDialogData::SetPrintData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6042,7 +6042,7 @@ PHP_METHOD(php_wxPrintDialogData, __construct)
 				_this = new wxPrintDialogData_php(*(wxPrintData*) object_pointer1_0);
 
 				((wxPrintDialogData_php*) _this)->references.Initialize();
-				((wxPrintDialogData_php*) _this)->references.AddReference(printData1);
+				((wxPrintDialogData_php*) _this)->references.AddReference(printData1, "wxPrintDialogData::wxPrintDialogData at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -6171,7 +6171,7 @@ PHP_METHOD(php_wxColourDialog, __construct)
 				_this = new wxColourDialog_php((wxWindow*) object_pointer0_0);
 
 				((wxColourDialog_php*) _this)->references.Initialize();
-				((wxColourDialog_php*) _this)->references.AddReference(parent0);
+				((wxColourDialog_php*) _this)->references.AddReference(parent0, "wxColourDialog::wxColourDialog at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -6182,8 +6182,8 @@ PHP_METHOD(php_wxColourDialog, __construct)
 				_this = new wxColourDialog_php((wxWindow*) object_pointer0_0, (wxColourData*) object_pointer0_1);
 
 				((wxColourDialog_php*) _this)->references.Initialize();
-				((wxColourDialog_php*) _this)->references.AddReference(parent0);
-				((wxColourDialog_php*) _this)->references.AddReference(data0);
+				((wxColourDialog_php*) _this)->references.AddReference(parent0, "wxColourDialog::wxColourDialog at call with 2 argument(s)");
+				((wxColourDialog_php*) _this)->references.AddReference(data0, "wxColourDialog::wxColourDialog at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -6412,7 +6412,7 @@ PHP_METHOD(php_wxColourDialog, GetColourData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxColourDialog::GetColourData at call with 0 argument(s)");
 				}
 
 
@@ -6551,7 +6551,7 @@ PHP_METHOD(php_wxColourDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourDialog_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxColourDialog::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6563,8 +6563,8 @@ PHP_METHOD(php_wxColourDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxColourData*) object_pointer0_1));
 
-				references->AddReference(parent0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxColourDialog::Create at call with 2 argument(s)");
+				references->AddReference(data0, "wxColourDialog::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6910,7 +6910,7 @@ PHP_METHOD(php_wxColourData, SetCustomColour)
 				#endif
 				((wxColourData_php*)_this)->SetCustomColour((int) i0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxColourData::SetCustomColour at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7029,7 +7029,7 @@ PHP_METHOD(php_wxColourData, SetColour)
 				#endif
 				((wxColourData_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxColourData::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7350,7 +7350,7 @@ PHP_METHOD(php_wxColourData, GetColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxColourData::GetColour at call with 0 argument(s)");
 				}
 
 
@@ -8120,7 +8120,7 @@ PHP_METHOD(php_wxDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDialog::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8132,8 +8132,8 @@ PHP_METHOD(php_wxDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxDialog::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxDialog::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -8145,9 +8145,9 @@ PHP_METHOD(php_wxDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDialog::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxDialog::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxDialog::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -8159,9 +8159,9 @@ PHP_METHOD(php_wxDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDialog::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxDialog::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxDialog::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -8173,9 +8173,9 @@ PHP_METHOD(php_wxDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDialog::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxDialog::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxDialog::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -8361,7 +8361,7 @@ PHP_METHOD(php_wxDialog, CreateButtonSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDialog::CreateButtonSizer at call with 1 argument(s)");
 				}
 
 
@@ -8549,7 +8549,7 @@ PHP_METHOD(php_wxDialog, CreateSeparatedButtonSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDialog::CreateSeparatedButtonSizer at call with 1 argument(s)");
 				}
 
 
@@ -8754,10 +8754,10 @@ PHP_METHOD(php_wxDialog, CreateSeparatedSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDialog::CreateSeparatedSizer at call with 1 argument(s)");
 				}
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxDialog::CreateSeparatedSizer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8943,7 +8943,7 @@ PHP_METHOD(php_wxDialog, CreateStdDialogButtonSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDialog::CreateStdDialogButtonSizer at call with 1 argument(s)");
 				}
 
 
@@ -9451,7 +9451,7 @@ PHP_METHOD(php_wxDialog, GetContentWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDialog::GetContentWindow at call with 0 argument(s)");
 				}
 
 
@@ -10578,7 +10578,7 @@ PHP_METHOD(php_wxDialog, __construct)
 				_this = new wxDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8));
 
 				((wxDialog_php*) _this)->references.Initialize();
-				((wxDialog_php*) _this)->references.AddReference(parent0);
+				((wxDialog_php*) _this)->references.AddReference(parent0, "wxDialog::wxDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -10589,8 +10589,8 @@ PHP_METHOD(php_wxDialog, __construct)
 				_this = new wxDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3);
 
 				((wxDialog_php*) _this)->references.Initialize();
-				((wxDialog_php*) _this)->references.AddReference(parent0);
-				((wxDialog_php*) _this)->references.AddReference(pos0);
+				((wxDialog_php*) _this)->references.AddReference(parent0, "wxDialog::wxDialog at call with 4 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(pos0, "wxDialog::wxDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -10601,9 +10601,9 @@ PHP_METHOD(php_wxDialog, __construct)
 				_this = new wxDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxDialog_php*) _this)->references.Initialize();
-				((wxDialog_php*) _this)->references.AddReference(parent0);
-				((wxDialog_php*) _this)->references.AddReference(pos0);
-				((wxDialog_php*) _this)->references.AddReference(size0);
+				((wxDialog_php*) _this)->references.AddReference(parent0, "wxDialog::wxDialog at call with 5 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(pos0, "wxDialog::wxDialog at call with 5 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(size0, "wxDialog::wxDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -10614,9 +10614,9 @@ PHP_METHOD(php_wxDialog, __construct)
 				_this = new wxDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxDialog_php*) _this)->references.Initialize();
-				((wxDialog_php*) _this)->references.AddReference(parent0);
-				((wxDialog_php*) _this)->references.AddReference(pos0);
-				((wxDialog_php*) _this)->references.AddReference(size0);
+				((wxDialog_php*) _this)->references.AddReference(parent0, "wxDialog::wxDialog at call with 6 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(pos0, "wxDialog::wxDialog at call with 6 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(size0, "wxDialog::wxDialog at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -10627,9 +10627,9 @@ PHP_METHOD(php_wxDialog, __construct)
 				_this = new wxDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxDialog_php*) _this)->references.Initialize();
-				((wxDialog_php*) _this)->references.AddReference(parent0);
-				((wxDialog_php*) _this)->references.AddReference(pos0);
-				((wxDialog_php*) _this)->references.AddReference(size0);
+				((wxDialog_php*) _this)->references.AddReference(parent0, "wxDialog::wxDialog at call with 7 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(pos0, "wxDialog::wxDialog at call with 7 argument(s)");
+				((wxDialog_php*) _this)->references.AddReference(size0, "wxDialog::wxDialog at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -11839,7 +11839,7 @@ PHP_METHOD(php_wxDialog, SetIcons)
 				#endif
 				((wxDialog_php*)_this)->SetIcons(*(wxIconBundle*) object_pointer0_0);
 
-				references->AddReference(icons0);
+				references->AddReference(icons0, "wxDialog::SetIcons at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12022,7 +12022,7 @@ PHP_METHOD(php_wxDialog, SetIcon)
 				#endif
 				((wxDialog_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0);
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxDialog::SetIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13958,7 +13958,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0);
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -13969,7 +13969,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8));
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -13980,7 +13980,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultPath0, wxConvUTF8));
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -13991,7 +13991,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultPath0, wxConvUTF8), (long) style0);
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -14002,8 +14002,8 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultPath0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_4);
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
-				((wxDirDialog_php*) _this)->references.AddReference(pos0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 5 argument(s)");
+				((wxDirDialog_php*) _this)->references.AddReference(pos0, "wxDirDialog::wxDirDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -14014,9 +14014,9 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultPath0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5);
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
-				((wxDirDialog_php*) _this)->references.AddReference(pos0);
-				((wxDirDialog_php*) _this)->references.AddReference(size0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 6 argument(s)");
+				((wxDirDialog_php*) _this)->references.AddReference(pos0, "wxDirDialog::wxDirDialog at call with 6 argument(s)");
+				((wxDirDialog_php*) _this)->references.AddReference(size0, "wxDirDialog::wxDirDialog at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -14027,9 +14027,9 @@ PHP_METHOD(php_wxDirDialog, __construct)
 				_this = new wxDirDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultPath0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, wxString(name0, wxConvUTF8));
 
 				((wxDirDialog_php*) _this)->references.Initialize();
-				((wxDirDialog_php*) _this)->references.AddReference(parent0);
-				((wxDirDialog_php*) _this)->references.AddReference(pos0);
-				((wxDirDialog_php*) _this)->references.AddReference(size0);
+				((wxDirDialog_php*) _this)->references.AddReference(parent0, "wxDirDialog::wxDirDialog at call with 7 argument(s)");
+				((wxDirDialog_php*) _this)->references.AddReference(pos0, "wxDirDialog::wxDirDialog at call with 7 argument(s)");
+				((wxDirDialog_php*) _this)->references.AddReference(size0, "wxDirDialog::wxDirDialog at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -14936,8 +14936,8 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxFindReplaceDialog::Create at call with 3 argument(s)");
+				references->AddReference(data0, "wxFindReplaceDialog::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14949,8 +14949,8 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8), (int) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxFindReplaceDialog::Create at call with 4 argument(s)");
+				references->AddReference(data0, "wxFindReplaceDialog::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -15067,7 +15067,7 @@ PHP_METHOD(php_wxFindReplaceDialog, GetData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFindReplaceDialog::GetData at call with 0 argument(s)");
 				}
 
 
@@ -15192,8 +15192,8 @@ PHP_METHOD(php_wxFindReplaceDialog, __construct)
 				_this = new wxFindReplaceDialog_php((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8));
 
 				((wxFindReplaceDialog_php*) _this)->references.Initialize();
-				((wxFindReplaceDialog_php*) _this)->references.AddReference(parent0);
-				((wxFindReplaceDialog_php*) _this)->references.AddReference(data0);
+				((wxFindReplaceDialog_php*) _this)->references.AddReference(parent0, "wxFindReplaceDialog::wxFindReplaceDialog at call with 3 argument(s)");
+				((wxFindReplaceDialog_php*) _this)->references.AddReference(data0, "wxFindReplaceDialog::wxFindReplaceDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -15204,8 +15204,8 @@ PHP_METHOD(php_wxFindReplaceDialog, __construct)
 				_this = new wxFindReplaceDialog_php((wxWindow*) object_pointer0_0, (wxFindReplaceData*) object_pointer0_1, wxString(title0, wxConvUTF8), (int) style0);
 
 				((wxFindReplaceDialog_php*) _this)->references.Initialize();
-				((wxFindReplaceDialog_php*) _this)->references.AddReference(parent0);
-				((wxFindReplaceDialog_php*) _this)->references.AddReference(data0);
+				((wxFindReplaceDialog_php*) _this)->references.AddReference(parent0, "wxFindReplaceDialog::wxFindReplaceDialog at call with 4 argument(s)");
+				((wxFindReplaceDialog_php*) _this)->references.AddReference(data0, "wxFindReplaceDialog::wxFindReplaceDialog at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -15380,7 +15380,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0);
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -15391,7 +15391,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8));
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -15402,7 +15402,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8));
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -15413,7 +15413,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8), wxString(defaultFile0, wxConvUTF8));
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -15424,7 +15424,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8), wxString(defaultFile0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -15435,7 +15435,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8), wxString(defaultFile0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (long) style0);
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -15446,8 +15446,8 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8), wxString(defaultFile0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_6);
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
-				((wxFileDialog_php*) _this)->references.AddReference(pos0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 7 argument(s)");
+				((wxFileDialog_php*) _this)->references.AddReference(pos0, "wxFileDialog::wxFileDialog at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -15458,9 +15458,9 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8), wxString(defaultFile0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7);
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
-				((wxFileDialog_php*) _this)->references.AddReference(pos0);
-				((wxFileDialog_php*) _this)->references.AddReference(size0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 8 argument(s)");
+				((wxFileDialog_php*) _this)->references.AddReference(pos0, "wxFileDialog::wxFileDialog at call with 8 argument(s)");
+				((wxFileDialog_php*) _this)->references.AddReference(size0, "wxFileDialog::wxFileDialog at call with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -15471,9 +15471,9 @@ PHP_METHOD(php_wxFileDialog, __construct)
 				_this = new wxFileDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(defaultDir0, wxConvUTF8), wxString(defaultFile0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7, wxString(name0, wxConvUTF8));
 
 				((wxFileDialog_php*) _this)->references.Initialize();
-				((wxFileDialog_php*) _this)->references.AddReference(parent0);
-				((wxFileDialog_php*) _this)->references.AddReference(pos0);
-				((wxFileDialog_php*) _this)->references.AddReference(size0);
+				((wxFileDialog_php*) _this)->references.AddReference(parent0, "wxFileDialog::wxFileDialog at call with 9 argument(s)");
+				((wxFileDialog_php*) _this)->references.AddReference(pos0, "wxFileDialog::wxFileDialog at call with 9 argument(s)");
+				((wxFileDialog_php*) _this)->references.AddReference(size0, "wxFileDialog::wxFileDialog at call with 9 argument(s)");
 				break;
 			}
 		}
@@ -17080,7 +17080,7 @@ PHP_METHOD(php_wxFileDialog, GetExtraControl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFileDialog::GetExtraControl at call with 0 argument(s)");
 				}
 
 
@@ -17630,7 +17630,7 @@ PHP_METHOD(php_wxFontData, SetInitialFont)
 				#endif
 				((wxFontData_php*)_this)->SetInitialFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxFontData::SetInitialFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -17749,7 +17749,7 @@ PHP_METHOD(php_wxFontData, SetColour)
 				#endif
 				((wxFontData_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxFontData::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -17868,7 +17868,7 @@ PHP_METHOD(php_wxFontData, SetChosenFont)
 				#endif
 				((wxFontData_php*)_this)->SetChosenFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxFontData::SetChosenFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18376,7 +18376,7 @@ PHP_METHOD(php_wxFontData, GetColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontData::GetColour at call with 0 argument(s)");
 				}
 
 
@@ -18853,7 +18853,7 @@ PHP_METHOD(php_wxFontDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontDialog_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFontDialog::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18872,8 +18872,8 @@ PHP_METHOD(php_wxFontDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontDialog_php*)_this)->Create((wxWindow*) object_pointer1_0, *(wxFontData*) object_pointer1_1));
 
-				references->AddReference(parent1);
-				references->AddReference(data1);
+				references->AddReference(parent1, "wxFontDialog::Create at call with 2 argument(s)");
+				references->AddReference(data1, "wxFontDialog::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -19001,7 +19001,7 @@ PHP_METHOD(php_wxFontDialog, GetFontData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontDialog::GetFontData at call with 0 argument(s)");
 				}
 
 
@@ -19039,7 +19039,7 @@ PHP_METHOD(php_wxFontDialog, GetFontData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontDialog::GetFontData at call with 0 argument(s)");
 				}
 
 
@@ -19310,7 +19310,7 @@ PHP_METHOD(php_wxFontDialog, __construct)
 				_this = new wxFontDialog_php((wxWindow*) object_pointer1_0);
 
 				((wxFontDialog_php*) _this)->references.Initialize();
-				((wxFontDialog_php*) _this)->references.AddReference(parent1);
+				((wxFontDialog_php*) _this)->references.AddReference(parent1, "wxFontDialog::wxFontDialog at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -19328,8 +19328,8 @@ PHP_METHOD(php_wxFontDialog, __construct)
 				_this = new wxFontDialog_php((wxWindow*) object_pointer2_0, *(wxFontData*) object_pointer2_1);
 
 				((wxFontDialog_php*) _this)->references.Initialize();
-				((wxFontDialog_php*) _this)->references.AddReference(parent2);
-				((wxFontDialog_php*) _this)->references.AddReference(data2);
+				((wxFontDialog_php*) _this)->references.AddReference(parent2, "wxFontDialog::wxFontDialog at call with 2 argument(s)");
+				((wxFontDialog_php*) _this)->references.AddReference(data2, "wxFontDialog::wxFontDialog at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -20658,7 +20658,7 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 				_this = new wxMessageDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8));
 
 				((wxMessageDialog_php*) _this)->references.Initialize();
-				((wxMessageDialog_php*) _this)->references.AddReference(parent0);
+				((wxMessageDialog_php*) _this)->references.AddReference(parent0, "wxMessageDialog::wxMessageDialog at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -20669,7 +20669,7 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 				_this = new wxMessageDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
 
 				((wxMessageDialog_php*) _this)->references.Initialize();
-				((wxMessageDialog_php*) _this)->references.AddReference(parent0);
+				((wxMessageDialog_php*) _this)->references.AddReference(parent0, "wxMessageDialog::wxMessageDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -20680,7 +20680,7 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 				_this = new wxMessageDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (long) style0);
 
 				((wxMessageDialog_php*) _this)->references.Initialize();
-				((wxMessageDialog_php*) _this)->references.AddReference(parent0);
+				((wxMessageDialog_php*) _this)->references.AddReference(parent0, "wxMessageDialog::wxMessageDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -20691,8 +20691,8 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 				_this = new wxMessageDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_4);
 
 				((wxMessageDialog_php*) _this)->references.Initialize();
-				((wxMessageDialog_php*) _this)->references.AddReference(parent0);
-				((wxMessageDialog_php*) _this)->references.AddReference(pos0);
+				((wxMessageDialog_php*) _this)->references.AddReference(parent0, "wxMessageDialog::wxMessageDialog at call with 5 argument(s)");
+				((wxMessageDialog_php*) _this)->references.AddReference(pos0, "wxMessageDialog::wxMessageDialog at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -22535,7 +22535,7 @@ PHP_METHOD(php_wxGenericProgressDialog, __construct)
 				_this = new wxGenericProgressDialog_php(wxString(title0, wxConvUTF8), wxString(message0, wxConvUTF8), (int) maximum0, (wxWindow*) object_pointer0_3);
 
 				((wxGenericProgressDialog_php*) _this)->references.Initialize();
-				((wxGenericProgressDialog_php*) _this)->references.AddReference(parent0);
+				((wxGenericProgressDialog_php*) _this)->references.AddReference(parent0, "wxGenericProgressDialog::wxGenericProgressDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -22546,7 +22546,7 @@ PHP_METHOD(php_wxGenericProgressDialog, __construct)
 				_this = new wxGenericProgressDialog_php(wxString(title0, wxConvUTF8), wxString(message0, wxConvUTF8), (int) maximum0, (wxWindow*) object_pointer0_3, (int) style0);
 
 				((wxGenericProgressDialog_php*) _this)->references.Initialize();
-				((wxGenericProgressDialog_php*) _this)->references.AddReference(parent0);
+				((wxGenericProgressDialog_php*) _this)->references.AddReference(parent0, "wxGenericProgressDialog::wxGenericProgressDialog at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -22724,7 +22724,7 @@ PHP_METHOD(php_wxRearrangeDialog, AddExtraControls)
 				#endif
 				((wxRearrangeDialog_php*)_this)->AddExtraControls((wxWindow*) object_pointer0_0);
 
-				references->AddReference(win0);
+				references->AddReference(win0, "wxRearrangeDialog::AddExtraControls at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22841,7 +22841,7 @@ PHP_METHOD(php_wxRearrangeDialog, GetList)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRearrangeDialog::GetList at call with 0 argument(s)");
 				}
 
 
@@ -23096,7 +23096,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)_this)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxSymbolPickerDialog::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -23108,7 +23108,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)_this)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxSymbolPickerDialog::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -23120,7 +23120,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)_this)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxSymbolPickerDialog::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -23132,8 +23132,8 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)_this)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxSymbolPickerDialog::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxSymbolPickerDialog::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -23145,9 +23145,9 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)_this)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxSymbolPickerDialog::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxSymbolPickerDialog::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxSymbolPickerDialog::Create at call with 8 argument(s)");
 
 				return;
 				break;
@@ -23159,9 +23159,9 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)_this)->Create(wxString(symbol0, wxConvUTF8), wxString(initialFont0, wxConvUTF8), wxString(normalTextFont0, wxConvUTF8), (wxWindow*) object_pointer0_3, (wxWindowID) id0, wxString(caption0, wxConvUTF8), *(wxPoint*) object_pointer0_6, *(wxSize*) object_pointer0_7, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxSymbolPickerDialog::Create at call with 9 argument(s)");
+				references->AddReference(pos0, "wxSymbolPickerDialog::Create at call with 9 argument(s)");
+				references->AddReference(size0, "wxSymbolPickerDialog::Create at call with 9 argument(s)");
 
 				return;
 				break;
@@ -24524,7 +24524,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 				_this = new wxSymbolPickerDialog_php(wxString(symbol1, wxConvUTF8), wxString(initialFont1, wxConvUTF8), wxString(normalTextFont1, wxConvUTF8), (wxWindow*) object_pointer1_3);
 
 				((wxSymbolPickerDialog_php*) _this)->references.Initialize();
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1);
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -24535,7 +24535,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 				_this = new wxSymbolPickerDialog_php(wxString(symbol1, wxConvUTF8), wxString(initialFont1, wxConvUTF8), wxString(normalTextFont1, wxConvUTF8), (wxWindow*) object_pointer1_3, (wxWindowID) id1);
 
 				((wxSymbolPickerDialog_php*) _this)->references.Initialize();
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1);
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -24546,7 +24546,7 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 				_this = new wxSymbolPickerDialog_php(wxString(symbol1, wxConvUTF8), wxString(initialFont1, wxConvUTF8), wxString(normalTextFont1, wxConvUTF8), (wxWindow*) object_pointer1_3, (wxWindowID) id1, wxString(title1, wxConvUTF8));
 
 				((wxSymbolPickerDialog_php*) _this)->references.Initialize();
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1);
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -24557,8 +24557,8 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 				_this = new wxSymbolPickerDialog_php(wxString(symbol1, wxConvUTF8), wxString(initialFont1, wxConvUTF8), wxString(normalTextFont1, wxConvUTF8), (wxWindow*) object_pointer1_3, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_6);
 
 				((wxSymbolPickerDialog_php*) _this)->references.Initialize();
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1);
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(pos1);
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 7 argument(s)");
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(pos1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -24569,9 +24569,9 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 				_this = new wxSymbolPickerDialog_php(wxString(symbol1, wxConvUTF8), wxString(initialFont1, wxConvUTF8), wxString(normalTextFont1, wxConvUTF8), (wxWindow*) object_pointer1_3, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_6, *(wxSize*) object_pointer1_7);
 
 				((wxSymbolPickerDialog_php*) _this)->references.Initialize();
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1);
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(pos1);
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(size1);
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 8 argument(s)");
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(pos1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 8 argument(s)");
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(size1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -24582,9 +24582,9 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 				_this = new wxSymbolPickerDialog_php(wxString(symbol1, wxConvUTF8), wxString(initialFont1, wxConvUTF8), wxString(normalTextFont1, wxConvUTF8), (wxWindow*) object_pointer1_3, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_6, *(wxSize*) object_pointer1_7, (long) style1);
 
 				((wxSymbolPickerDialog_php*) _this)->references.Initialize();
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1);
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(pos1);
-				((wxSymbolPickerDialog_php*) _this)->references.AddReference(size1);
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(parent1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 9 argument(s)");
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(pos1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 9 argument(s)");
+				((wxSymbolPickerDialog_php*) _this)->references.AddReference(size1, "wxSymbolPickerDialog::wxSymbolPickerDialog at call with 9 argument(s)");
 				break;
 			}
 		}
@@ -24720,7 +24720,7 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 				_this = new wxPasswordEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8));
 
 				((wxPasswordEntryDialog_php*) _this)->references.Initialize();
-				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0, "wxPasswordEntryDialog::wxPasswordEntryDialog at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -24731,7 +24731,7 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 				_this = new wxPasswordEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
 
 				((wxPasswordEntryDialog_php*) _this)->references.Initialize();
-				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0, "wxPasswordEntryDialog::wxPasswordEntryDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -24742,7 +24742,7 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 				_this = new wxPasswordEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(defaultValue0, wxConvUTF8));
 
 				((wxPasswordEntryDialog_php*) _this)->references.Initialize();
-				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0, "wxPasswordEntryDialog::wxPasswordEntryDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -24753,7 +24753,7 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 				_this = new wxPasswordEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(defaultValue0, wxConvUTF8), (long) style0);
 
 				((wxPasswordEntryDialog_php*) _this)->references.Initialize();
-				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0, "wxPasswordEntryDialog::wxPasswordEntryDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -24764,8 +24764,8 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 				_this = new wxPasswordEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(defaultValue0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_5);
 
 				((wxPasswordEntryDialog_php*) _this)->references.Initialize();
-				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0);
-				((wxPasswordEntryDialog_php*) _this)->references.AddReference(pos0);
+				((wxPasswordEntryDialog_php*) _this)->references.AddReference(parent0, "wxPasswordEntryDialog::wxPasswordEntryDialog at call with 6 argument(s)");
+				((wxPasswordEntryDialog_php*) _this)->references.AddReference(pos0, "wxPasswordEntryDialog::wxPasswordEntryDialog at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -25213,7 +25213,7 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 				_this = new wxTextEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8));
 
 				((wxTextEntryDialog_php*) _this)->references.Initialize();
-				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0, "wxTextEntryDialog::wxTextEntryDialog at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -25224,7 +25224,7 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 				_this = new wxTextEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
 
 				((wxTextEntryDialog_php*) _this)->references.Initialize();
-				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0, "wxTextEntryDialog::wxTextEntryDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -25235,7 +25235,7 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 				_this = new wxTextEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(value0, wxConvUTF8));
 
 				((wxTextEntryDialog_php*) _this)->references.Initialize();
-				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0, "wxTextEntryDialog::wxTextEntryDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -25246,7 +25246,7 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 				_this = new wxTextEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(value0, wxConvUTF8), (long) style0);
 
 				((wxTextEntryDialog_php*) _this)->references.Initialize();
-				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0);
+				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0, "wxTextEntryDialog::wxTextEntryDialog at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -25257,8 +25257,8 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 				_this = new wxTextEntryDialog_php((wxWindow*) object_pointer0_0, wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(value0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_5);
 
 				((wxTextEntryDialog_php*) _this)->references.Initialize();
-				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0);
-				((wxTextEntryDialog_php*) _this)->references.AddReference(pos0);
+				((wxTextEntryDialog_php*) _this)->references.AddReference(parent0, "wxTextEntryDialog::wxTextEntryDialog at call with 6 argument(s)");
+				((wxTextEntryDialog_php*) _this)->references.AddReference(pos0, "wxTextEntryDialog::wxTextEntryDialog at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -25440,7 +25440,7 @@ PHP_METHOD(php_wxWizard, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxWizard::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25452,7 +25452,7 @@ PHP_METHOD(php_wxWizard, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->Create((wxWindow*) object_pointer0_0, (int) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxWizard::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -25464,7 +25464,7 @@ PHP_METHOD(php_wxWizard, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxWizard::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -25476,8 +25476,8 @@ PHP_METHOD(php_wxWizard, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(bitmap0);
+				references->AddReference(parent0, "wxWizard::Create at call with 4 argument(s)");
+				references->AddReference(bitmap0, "wxWizard::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -25489,9 +25489,9 @@ PHP_METHOD(php_wxWizard, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(bitmap0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxWizard::Create at call with 5 argument(s)");
+				references->AddReference(bitmap0, "wxWizard::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxWizard::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -25503,9 +25503,9 @@ PHP_METHOD(php_wxWizard, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->Create((wxWindow*) object_pointer0_0, (int) id0, wxString(title0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(bitmap0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxWizard::Create at call with 6 argument(s)");
+				references->AddReference(bitmap0, "wxWizard::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxWizard::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -25624,7 +25624,7 @@ PHP_METHOD(php_wxWizard, FitToPage)
 				#endif
 				((wxWizard_php*)_this)->FitToPage((const wxWizardPage*) object_pointer0_0);
 
-				references->AddReference(firstPage0);
+				references->AddReference(firstPage0, "wxWizard::FitToPage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25738,7 +25738,7 @@ PHP_METHOD(php_wxWizard, GetBitmap)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWizard::GetBitmap at call with 0 argument(s)");
 				}
 
 
@@ -25854,7 +25854,7 @@ PHP_METHOD(php_wxWizard, GetBitmapBackgroundColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWizard::GetBitmapBackgroundColour at call with 0 argument(s)");
 				}
 
 
@@ -26069,7 +26069,7 @@ PHP_METHOD(php_wxWizard, GetCurrentPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWizard::GetCurrentPage at call with 0 argument(s)");
 				}
 
 
@@ -26387,7 +26387,7 @@ PHP_METHOD(php_wxWizard, HasNextPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->HasNextPage((wxWizardPage*) object_pointer0_0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxWizard::HasNextPage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -26506,7 +26506,7 @@ PHP_METHOD(php_wxWizard, HasPrevPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->HasPrevPage((wxWizardPage*) object_pointer0_0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxWizard::HasPrevPage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -26625,7 +26625,7 @@ PHP_METHOD(php_wxWizard, RunWizard)
 				#endif
 				ZVAL_BOOL(return_value, ((wxWizard_php*)_this)->RunWizard((wxWizardPage*) object_pointer0_0));
 
-				references->AddReference(firstPage0);
+				references->AddReference(firstPage0, "wxWizard::RunWizard at call with 1 argument(s)");
 
 				return;
 				break;
@@ -26744,7 +26744,7 @@ PHP_METHOD(php_wxWizard, SetBitmap)
 				#endif
 				((wxWizard_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxWizard::SetBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -26863,7 +26863,7 @@ PHP_METHOD(php_wxWizard, SetBitmapBackgroundColour)
 				#endif
 				((wxWizard_php*)_this)->SetBitmapBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxWizard::SetBitmapBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -27285,7 +27285,7 @@ PHP_METHOD(php_wxWizard, SetPageSize)
 				#endif
 				((wxWizard_php*)_this)->SetPageSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(sizePage0);
+				references->AddReference(sizePage0, "wxWizard::SetPageSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -27444,7 +27444,7 @@ PHP_METHOD(php_wxWizard, __construct)
 				_this = new wxWizard_php((wxWindow*) object_pointer1_0);
 
 				((wxWizard_php*) _this)->references.Initialize();
-				((wxWizard_php*) _this)->references.AddReference(parent1);
+				((wxWizard_php*) _this)->references.AddReference(parent1, "wxWizard::wxWizard at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -27455,7 +27455,7 @@ PHP_METHOD(php_wxWizard, __construct)
 				_this = new wxWizard_php((wxWindow*) object_pointer1_0, (int) id1);
 
 				((wxWizard_php*) _this)->references.Initialize();
-				((wxWizard_php*) _this)->references.AddReference(parent1);
+				((wxWizard_php*) _this)->references.AddReference(parent1, "wxWizard::wxWizard at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -27466,7 +27466,7 @@ PHP_METHOD(php_wxWizard, __construct)
 				_this = new wxWizard_php((wxWindow*) object_pointer1_0, (int) id1, wxString(title1, wxConvUTF8));
 
 				((wxWizard_php*) _this)->references.Initialize();
-				((wxWizard_php*) _this)->references.AddReference(parent1);
+				((wxWizard_php*) _this)->references.AddReference(parent1, "wxWizard::wxWizard at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -27477,8 +27477,8 @@ PHP_METHOD(php_wxWizard, __construct)
 				_this = new wxWizard_php((wxWindow*) object_pointer1_0, (int) id1, wxString(title1, wxConvUTF8), *(wxBitmap*) object_pointer1_3);
 
 				((wxWizard_php*) _this)->references.Initialize();
-				((wxWizard_php*) _this)->references.AddReference(parent1);
-				((wxWizard_php*) _this)->references.AddReference(bitmap1);
+				((wxWizard_php*) _this)->references.AddReference(parent1, "wxWizard::wxWizard at call with 4 argument(s)");
+				((wxWizard_php*) _this)->references.AddReference(bitmap1, "wxWizard::wxWizard at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -27489,9 +27489,9 @@ PHP_METHOD(php_wxWizard, __construct)
 				_this = new wxWizard_php((wxWindow*) object_pointer1_0, (int) id1, wxString(title1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4);
 
 				((wxWizard_php*) _this)->references.Initialize();
-				((wxWizard_php*) _this)->references.AddReference(parent1);
-				((wxWizard_php*) _this)->references.AddReference(bitmap1);
-				((wxWizard_php*) _this)->references.AddReference(pos1);
+				((wxWizard_php*) _this)->references.AddReference(parent1, "wxWizard::wxWizard at call with 5 argument(s)");
+				((wxWizard_php*) _this)->references.AddReference(bitmap1, "wxWizard::wxWizard at call with 5 argument(s)");
+				((wxWizard_php*) _this)->references.AddReference(pos1, "wxWizard::wxWizard at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -27502,9 +27502,9 @@ PHP_METHOD(php_wxWizard, __construct)
 				_this = new wxWizard_php((wxWindow*) object_pointer1_0, (int) id1, wxString(title1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, (long) style1);
 
 				((wxWizard_php*) _this)->references.Initialize();
-				((wxWizard_php*) _this)->references.AddReference(parent1);
-				((wxWizard_php*) _this)->references.AddReference(bitmap1);
-				((wxWizard_php*) _this)->references.AddReference(pos1);
+				((wxWizard_php*) _this)->references.AddReference(parent1, "wxWizard::wxWizard at call with 6 argument(s)");
+				((wxWizard_php*) _this)->references.AddReference(bitmap1, "wxWizard::wxWizard at call with 6 argument(s)");
+				((wxWizard_php*) _this)->references.AddReference(pos1, "wxWizard::wxWizard at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -27640,7 +27640,7 @@ PHP_METHOD(php_wxWizard, GetPageAreaSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWizard::GetPageAreaSizer at call with 0 argument(s)");
 				}
 
 

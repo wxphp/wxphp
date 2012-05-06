@@ -113,6 +113,7 @@ bool wxEventLoopBase_php::Dispatch()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -120,7 +121,10 @@ bool wxEventLoopBase_php::Dispatch()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -128,11 +132,12 @@ bool wxEventLoopBase_php::Dispatch()
 		
 		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::Dispatch'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -164,6 +169,7 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], timeout);
@@ -172,7 +178,15 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -180,11 +194,12 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 		
 		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::DispatchTimeout'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -216,6 +231,7 @@ void wxEventLoopBase_php::Exit(int rc)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], rc);
@@ -224,7 +240,15 @@ void wxEventLoopBase_php::Exit(int rc)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -232,11 +256,12 @@ void wxEventLoopBase_php::Exit(int rc)
 		
 		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::Exit'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -879,6 +904,7 @@ void wxEventLoopBase_php::OnExit()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -886,7 +912,10 @@ void wxEventLoopBase_php::OnExit()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -934,6 +963,7 @@ bool wxEventLoopBase_php::Pending()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -941,7 +971,10 @@ bool wxEventLoopBase_php::Pending()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -949,11 +982,12 @@ bool wxEventLoopBase_php::Pending()const
 		
 		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::Pending'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1079,6 +1113,7 @@ int wxEventLoopBase_php::Run()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1086,7 +1121,10 @@ int wxEventLoopBase_php::Run()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1094,11 +1132,12 @@ int wxEventLoopBase_php::Run()
 		
 		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::Run'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1244,6 +1283,7 @@ void wxEventLoopBase_php::WakeUp()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1251,7 +1291,10 @@ void wxEventLoopBase_php::WakeUp()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1259,11 +1302,12 @@ void wxEventLoopBase_php::WakeUp()
 		
 		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::WakeUp'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -1700,7 +1744,7 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 				_this = new wxEventLoopActivator_php((wxEventLoopBase*) object_pointer0_0);
 
 				((wxEventLoopActivator_php*) _this)->references.Initialize();
-				((wxEventLoopActivator_php*) _this)->references.AddReference(loop0);
+				((wxEventLoopActivator_php*) _this)->references.AddReference(loop0, "wxEventLoopActivator::wxEventLoopActivator at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -1798,6 +1842,7 @@ void wxModule_php::OnExit()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1805,7 +1850,10 @@ void wxModule_php::OnExit()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1813,11 +1861,12 @@ void wxModule_php::OnExit()
 		
 		wxMessageBox("Failed to call virtual method 'wxModule::OnExit'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -1844,6 +1893,7 @@ bool wxModule_php::OnInit()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1851,7 +1901,10 @@ bool wxModule_php::OnInit()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1859,11 +1912,12 @@ bool wxModule_php::OnInit()
 		
 		wxMessageBox("Failed to call virtual method 'wxModule::OnInit'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2386,7 +2440,7 @@ PHP_METHOD(php_wxProcess, GetErrorStream)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxProcess::GetErrorStream at call with 0 argument(s)");
 				}
 
 
@@ -2505,7 +2559,7 @@ PHP_METHOD(php_wxProcess, GetInputStream)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxProcess::GetInputStream at call with 0 argument(s)");
 				}
 
 
@@ -2624,7 +2678,7 @@ PHP_METHOD(php_wxProcess, GetOutputStream)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxProcess::GetOutputStream at call with 0 argument(s)");
 				}
 
 
@@ -3182,6 +3236,7 @@ void wxProcess_php::OnTerminate(int pid, int status)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], pid);
@@ -3191,7 +3246,15 @@ void wxProcess_php::OnTerminate(int pid, int status)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3568,7 +3631,7 @@ PHP_METHOD(php_wxProcess, __construct)
 				_this = new wxProcess_php((wxEvtHandler*) object_pointer0_0);
 
 				((wxProcess_php*) _this)->references.Initialize();
-				((wxProcess_php*) _this)->references.AddReference(parent0);
+				((wxProcess_php*) _this)->references.AddReference(parent0, "wxProcess::wxProcess at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -3579,7 +3642,7 @@ PHP_METHOD(php_wxProcess, __construct)
 				_this = new wxProcess_php((wxEvtHandler*) object_pointer0_0, (int) id0);
 
 				((wxProcess_php*) _this)->references.Initialize();
-				((wxProcess_php*) _this)->references.AddReference(parent0);
+				((wxProcess_php*) _this)->references.AddReference(parent0, "wxProcess::wxProcess at call with 2 argument(s)");
 				break;
 			}
 		}

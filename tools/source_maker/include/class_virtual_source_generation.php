@@ -122,16 +122,16 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 					case "pointer":
 					case "const_pointer":
 						$output .= "temp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index]."->size()+1));\n";
-						$output .= "\tstrcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index]."->char_str());\n";
-						$output .= "\tZVAL_STRING(arguments[$parameter_index], temp_string, 1);\n";
-						$output .= "\tfree(temp_string);\n";
+						$output .= tabs(1) . "strcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index]."->char_str());\n";
+						$output .= tabs(1) . "ZVAL_STRING(arguments[$parameter_index], temp_string, 1);\n";
+						$output .= tabs(1) . "free(temp_string);\n";
 						break;
 						
 					default: 
 						$output .= "temp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index].".size()+1));\n";
-						$output .= "\tstrcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index].".char_str());\n";
-						$output .= "\tZVAL_STRING(arguments[$parameter_index], temp_string, 1);\n";
-						$output .= "\tfree(temp_string);\n";
+						$output .= tabs(1) . "strcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index].".char_str());\n";
+						$output .= tabs(1) . "ZVAL_STRING(arguments[$parameter_index], temp_string, 1);\n";
+						$output .= tabs(1) . "free(temp_string);\n";
 				}
 				break;
 			}	
@@ -146,13 +146,13 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 						
 					default: 
 						$output .= "array_init(arguments[$parameter_index]);\n";
-						$output .= "\tfor(int i=0; i<".$method_definition[$parameter_names][$parameter_index].".GetCount(); i++)\n";
-						$output .= "\t{\n";
-						$output .= "\ttemp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index]."[i].size()+1));\n";
-						$output .= "\tstrcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index]."[i].char_str());\n";
-						$output .= "\tadd_next_index_string(arguments[$parameter_index], temp_string, 1);\n";
-						$output .= "\tfree(temp_string);\n";
-						$output .= "\t}\n";
+						$output .= tabs(1) . "for(int i=0; i<".$method_definition[$parameter_names][$parameter_index].".GetCount(); i++)\n";
+						$output .= tabs(1) . "{\n";
+						$output .= tabs(2) . "temp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index]."[i].size()+1));\n";
+						$output .= tabs(2) . "strcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index]."[i].char_str());\n";
+						$output .= tabs(2) . "add_next_index_string(arguments[$parameter_index], temp_string, 1);\n";
+						$output .= tabs(2) . "free(temp_string);\n";
+						$output .= tabs(1) . "}\n";
 				}
 				break;
 			}	
@@ -163,19 +163,19 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 					case "pointer":
 					case "const_pointer":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= tabs(1) . "add_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
 						break;
 				
 					case "reference":
 					case "const_reference":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= tabs(1) . "add_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
 						break;
 						
 					case "none":
 					case "const_none":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= tabs(1) . "add_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
 						break;
 				}
 				break;
@@ -268,25 +268,30 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 			
 		case "object":
 		{
+			$plain_return_type = str_replace(array("const", " ", "&", "*"), "", $method_definition[$function_return_types]);
+			
 			$output .= "if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)\n";
-			$output .= "\t\t{\n";
-			$output .= "\t\t\tid_to_find = Z_RESVAL_P(*tmp);\n";
-			$output .= "\t\t\treturn_object = zend_list_find(id_to_find, &rsrc_type);\n";
-			$output .= "\t\t}\n";
+			$output .= tabs(2) . "{\n";
+			$output .= tabs(3) . "id_to_find = Z_RESVAL_P(*tmp);\n";
+			$output .= tabs(3) . "return_object = zend_list_find(id_to_find, &rsrc_type);\n";
+			$output .= tabs(2) . "}\n\n";
+			
+			$output .= tabs(2) . "//Threat it as a normal object on the calling function and not a php user space intiialized one\n";
+			$output .= tabs(2) . "{$plain_return_type}_php* var = ({$plain_return_type}_php*) return_object;\n";
+			$output .= tabs(2) . "var->references.UnInitialize();\n\n";
 			
 			switch($return_type_modifier)
 			{
 				case "const_pointer":
 				case "pointer":
-					$output .= "\t\treturn (".$method_definition[$function_return_types].") return_object;\n";
+					$output .= tabs(2) . "return (".$method_definition[$function_return_types].") return_object;\n";
 					break;
 					
 				case "const_reference":
 				case "reference":
 				case "const_none":
 				case "none":
-					$class = str_replace(array("const", " ", "&"), "", $method_definition[$function_return_types]);
-					$output .= "\t\treturn *(".$class."*) return_object;\n";
+					$output .= tabs(2) . "return *(".$plain_return_type."*) return_object;\n";
 			}
 			break;
 		}

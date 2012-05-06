@@ -113,6 +113,7 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -120,7 +121,10 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -128,15 +132,21 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::Clone'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxRibbonArtProvider_php* var = (wxRibbonArtProvider_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxRibbonArtProvider*) return_object;
 	
 }
@@ -169,6 +179,7 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -182,7 +193,15 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -190,11 +209,12 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawButtonBarBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -226,6 +246,7 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -239,7 +260,15 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -247,11 +276,12 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawGalleryBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -283,6 +313,7 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -298,7 +329,15 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -306,11 +345,12 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawGalleryItemBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -342,6 +382,7 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -357,7 +398,15 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -365,11 +414,12 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawMinimisedPanel'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -401,6 +451,7 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -414,7 +465,15 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -422,11 +481,12 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawPageBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -458,6 +518,7 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -471,7 +532,15 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -479,11 +548,12 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawPanelBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -515,6 +585,7 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -529,7 +600,15 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -537,11 +616,12 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawScrollButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -573,6 +653,7 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -586,7 +667,15 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -594,11 +683,12 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawTabCtrlBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -630,6 +720,7 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -644,7 +735,15 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -652,11 +751,12 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawTabSeparator'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -688,6 +788,7 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -705,7 +806,15 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<6; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -713,11 +822,12 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawTool'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -749,6 +859,7 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -762,7 +873,15 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -770,11 +889,12 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawToolBarBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -806,6 +926,7 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -819,7 +940,15 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -827,11 +956,12 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawToolGroupBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -863,6 +993,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -884,7 +1015,15 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 8, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 8, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<8; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -892,11 +1031,12 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetBarTabWidth'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -1036,6 +1176,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -1044,7 +1185,15 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1052,15 +1201,21 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxColour_php* var = (wxColour_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxColour*) return_object;
 	
 }
@@ -1093,6 +1248,7 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxColour_entry);
@@ -1106,7 +1262,15 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1114,11 +1278,12 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetColourScheme'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -1145,6 +1310,7 @@ long wxRibbonArtProvider_php::GetFlags()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1152,7 +1318,10 @@ long wxRibbonArtProvider_php::GetFlags()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1160,11 +1329,12 @@ long wxRibbonArtProvider_php::GetFlags()const
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetFlags'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (long) Z_LVAL_P(return_value);
+	return (long) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1196,6 +1366,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -1204,7 +1375,15 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1212,15 +1391,21 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxFont_php* var = (wxFont_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxFont*) return_object;
 	
 }
@@ -1253,6 +1438,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1274,7 +1460,15 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<7; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1282,15 +1476,21 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetGalleryClientSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1323,6 +1523,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1336,7 +1537,15 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1344,15 +1553,21 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetGallerySize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1385,6 +1600,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -1393,7 +1609,15 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1401,11 +1625,12 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetMetric'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1437,6 +1662,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1451,7 +1677,15 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1459,15 +1693,21 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetMinimisedPanelMinimumSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1500,6 +1740,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1515,7 +1756,15 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1523,15 +1772,21 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetPageBackgroundRedrawArea'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxRect_php* var = (wxRect_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxRect*) return_object;
 	
 }
@@ -1564,6 +1819,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1579,7 +1835,15 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1587,15 +1851,21 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetPanelClientSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1628,6 +1898,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1643,7 +1914,15 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1651,15 +1930,21 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetPanelSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1692,6 +1977,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1704,7 +1990,15 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1712,15 +2006,21 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetScrollButtonMinimumSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1753,6 +2053,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -1771,7 +2072,15 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<7; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1779,15 +2088,21 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetToolSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -1898,7 +2213,7 @@ PHP_METHOD(php_wxRibbonArtProvider, SetColor)
 					((wxRibbonArtProvider_php*)_this)->SetColor((int) id0, *(wxColour*) object_pointer0_1);
 				}
 
-				references->AddReference(color0);
+				references->AddReference(color0, "wxRibbonArtProvider::SetColor at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1942,6 +2257,7 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxColour_entry);
@@ -1955,7 +2271,15 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1963,11 +2287,12 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::SetColourScheme'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -1999,6 +2324,7 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], flags);
@@ -2007,7 +2333,15 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2015,11 +2349,12 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::SetFlags'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2051,6 +2386,7 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -2061,7 +2397,15 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2069,11 +2413,12 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::SetFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2105,6 +2450,7 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -2114,7 +2460,15 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2122,11 +2476,12 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::SetMetric'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2158,6 +2513,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -2181,7 +2537,15 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 8, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 8, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<8; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2189,11 +2553,12 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::DrawButtonBarButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2225,6 +2590,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -2252,7 +2618,15 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 10, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 10, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<10; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2260,11 +2634,12 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 		
 		wxMessageBox("Failed to call virtual method 'wxRibbonArtProvider::GetButtonBarButtonSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2512,7 +2887,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonBar::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2524,7 +2899,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonBar::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2536,8 +2911,8 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxRibbonBar::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxRibbonBar::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -2549,9 +2924,9 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonBar::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxRibbonBar::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxRibbonBar::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -2563,9 +2938,9 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonBar::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxRibbonBar::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxRibbonBar::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -2879,7 +3254,7 @@ PHP_METHOD(php_wxRibbonBar, GetPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonBar::GetPage at call with 1 argument(s)");
 				}
 
 
@@ -3229,7 +3604,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->SetActivePage((wxRibbonPage*) object_pointer1_0));
 
-				references->AddReference(page1);
+				references->AddReference(page1, "wxRibbonBar::SetActivePage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3348,7 +3723,7 @@ PHP_METHOD(php_wxRibbonBar, SetArtProvider)
 				#endif
 				((wxRibbonBar_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
-				references->AddReference(art0);
+				references->AddReference(art0, "wxRibbonBar::SetArtProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3719,7 +4094,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
-				((wxRibbonBar_php*) _this)->references.AddReference(parent1);
+				((wxRibbonBar_php*) _this)->references.AddReference(parent1, "wxRibbonBar::wxRibbonBar at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -3730,7 +4105,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
-				((wxRibbonBar_php*) _this)->references.AddReference(parent1);
+				((wxRibbonBar_php*) _this)->references.AddReference(parent1, "wxRibbonBar::wxRibbonBar at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3741,8 +4116,8 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
-				((wxRibbonBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonBar_php*) _this)->references.AddReference(pos1);
+				((wxRibbonBar_php*) _this)->references.AddReference(parent1, "wxRibbonBar::wxRibbonBar at call with 3 argument(s)");
+				((wxRibbonBar_php*) _this)->references.AddReference(pos1, "wxRibbonBar::wxRibbonBar at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3753,9 +4128,9 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
-				((wxRibbonBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonBar_php*) _this)->references.AddReference(pos1);
-				((wxRibbonBar_php*) _this)->references.AddReference(size1);
+				((wxRibbonBar_php*) _this)->references.AddReference(parent1, "wxRibbonBar::wxRibbonBar at call with 4 argument(s)");
+				((wxRibbonBar_php*) _this)->references.AddReference(pos1, "wxRibbonBar::wxRibbonBar at call with 4 argument(s)");
+				((wxRibbonBar_php*) _this)->references.AddReference(size1, "wxRibbonBar::wxRibbonBar at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3766,9 +4141,9 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
-				((wxRibbonBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonBar_php*) _this)->references.AddReference(pos1);
-				((wxRibbonBar_php*) _this)->references.AddReference(size1);
+				((wxRibbonBar_php*) _this)->references.AddReference(parent1, "wxRibbonBar::wxRibbonBar at call with 5 argument(s)");
+				((wxRibbonBar_php*) _this)->references.AddReference(pos1, "wxRibbonBar::wxRibbonBar at call with 5 argument(s)");
+				((wxRibbonBar_php*) _this)->references.AddReference(size1, "wxRibbonBar::wxRibbonBar at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -3938,10 +4313,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddDropdownButton at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddDropdownButton at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3973,10 +4348,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddDropdownButton at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddDropdownButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -4120,10 +4495,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddHybridButton at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddHybridButton at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4155,10 +4530,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddHybridButton at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddHybridButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -4302,10 +4677,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddToggleButton at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddToggleButton at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4337,10 +4712,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddToggleButton at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddToggleButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -4593,7 +4968,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4605,7 +4980,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4617,8 +4992,8 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxRibbonButtonBar::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4630,9 +5005,9 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxRibbonButtonBar::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxRibbonButtonBar::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -4644,9 +5019,9 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxRibbonButtonBar::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxRibbonButtonBar::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -5215,7 +5590,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1);
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -5226,7 +5601,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1);
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -5237,8 +5612,8 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(pos1);
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 3 argument(s)");
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(pos1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5249,9 +5624,9 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(pos1);
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(size1);
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 4 argument(s)");
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(pos1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 4 argument(s)");
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(size1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -5262,9 +5637,9 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(pos1);
-				((wxRibbonButtonBar_php*) _this)->references.AddReference(size1);
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(parent1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 5 argument(s)");
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(pos1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 5 argument(s)");
+				((wxRibbonButtonBar_php*) _this)->references.AddReference(size1, "wxRibbonButtonBar::wxRibbonButtonBar at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -5542,10 +5917,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -5577,10 +5952,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 5 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonButtonBar::AddButton at call with 5 argument(s)");
 
 				return;
 				break;
@@ -5619,10 +5994,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5654,11 +6029,11 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_small1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 4 argument(s)");
+				references->AddReference(bitmap_small1, "wxRibbonButtonBar::AddButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -5690,12 +6065,12 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 5 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_small1);
-				references->AddReference(bitmap_disabled1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 5 argument(s)");
+				references->AddReference(bitmap_small1, "wxRibbonButtonBar::AddButton at call with 5 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonButtonBar::AddButton at call with 5 argument(s)");
 
 				return;
 				break;
@@ -5727,13 +6102,13 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 6 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_small1);
-				references->AddReference(bitmap_disabled1);
-				references->AddReference(bitmap_small_disabled1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 6 argument(s)");
+				references->AddReference(bitmap_small1, "wxRibbonButtonBar::AddButton at call with 6 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonButtonBar::AddButton at call with 6 argument(s)");
+				references->AddReference(bitmap_small_disabled1, "wxRibbonButtonBar::AddButton at call with 6 argument(s)");
 
 				return;
 				break;
@@ -5765,13 +6140,13 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return7 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 7 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_small1);
-				references->AddReference(bitmap_disabled1);
-				references->AddReference(bitmap_small_disabled1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 7 argument(s)");
+				references->AddReference(bitmap_small1, "wxRibbonButtonBar::AddButton at call with 7 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonButtonBar::AddButton at call with 7 argument(s)");
+				references->AddReference(bitmap_small_disabled1, "wxRibbonButtonBar::AddButton at call with 7 argument(s)");
 
 				return;
 				break;
@@ -5803,13 +6178,13 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return8 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 8 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_small1);
-				references->AddReference(bitmap_disabled1);
-				references->AddReference(bitmap_small_disabled1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 8 argument(s)");
+				references->AddReference(bitmap_small1, "wxRibbonButtonBar::AddButton at call with 8 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonButtonBar::AddButton at call with 8 argument(s)");
+				references->AddReference(bitmap_small_disabled1, "wxRibbonButtonBar::AddButton at call with 8 argument(s)");
 
 				return;
 				break;
@@ -5841,14 +6216,14 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return9 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBar::AddButton at call with 9 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_small1);
-				references->AddReference(bitmap_disabled1);
-				references->AddReference(bitmap_small_disabled1);
-				references->AddReference(client_data1);
+				references->AddReference(bitmap1, "wxRibbonButtonBar::AddButton at call with 9 argument(s)");
+				references->AddReference(bitmap_small1, "wxRibbonButtonBar::AddButton at call with 9 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonButtonBar::AddButton at call with 9 argument(s)");
+				references->AddReference(bitmap_small_disabled1, "wxRibbonButtonBar::AddButton at call with 9 argument(s)");
+				references->AddReference(client_data1, "wxRibbonButtonBar::AddButton at call with 9 argument(s)");
 
 				return;
 				break;
@@ -5899,6 +6274,7 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], direction);
@@ -5909,7 +6285,15 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5927,6 +6311,11 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	}
 	
@@ -5967,6 +6356,7 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], direction);
@@ -5977,7 +6367,15 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5995,6 +6393,11 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	}
 	
@@ -6132,7 +6535,7 @@ PHP_METHOD(php_wxRibbonControl, GetArtProvider)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonControl::GetArtProvider at call with 0 argument(s)");
 				}
 
 
@@ -7016,7 +7419,7 @@ PHP_METHOD(php_wxRibbonControl, SetArtProvider)
 				#endif
 				((wxRibbonControl_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
-				references->AddReference(art0);
+				references->AddReference(art0, "wxRibbonControl::SetArtProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7193,7 +7596,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
-				((wxRibbonControl_php*) _this)->references.AddReference(parent1);
+				((wxRibbonControl_php*) _this)->references.AddReference(parent1, "wxRibbonControl::wxRibbonControl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -7204,8 +7607,8 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
-				((wxRibbonControl_php*) _this)->references.AddReference(parent1);
-				((wxRibbonControl_php*) _this)->references.AddReference(pos1);
+				((wxRibbonControl_php*) _this)->references.AddReference(parent1, "wxRibbonControl::wxRibbonControl at call with 3 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(pos1, "wxRibbonControl::wxRibbonControl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -7216,9 +7619,9 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
-				((wxRibbonControl_php*) _this)->references.AddReference(parent1);
-				((wxRibbonControl_php*) _this)->references.AddReference(pos1);
-				((wxRibbonControl_php*) _this)->references.AddReference(size1);
+				((wxRibbonControl_php*) _this)->references.AddReference(parent1, "wxRibbonControl::wxRibbonControl at call with 4 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(pos1, "wxRibbonControl::wxRibbonControl at call with 4 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(size1, "wxRibbonControl::wxRibbonControl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -7229,9 +7632,9 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
-				((wxRibbonControl_php*) _this)->references.AddReference(parent1);
-				((wxRibbonControl_php*) _this)->references.AddReference(pos1);
-				((wxRibbonControl_php*) _this)->references.AddReference(size1);
+				((wxRibbonControl_php*) _this)->references.AddReference(parent1, "wxRibbonControl::wxRibbonControl at call with 5 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(pos1, "wxRibbonControl::wxRibbonControl at call with 5 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(size1, "wxRibbonControl::wxRibbonControl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -7242,10 +7645,10 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, *(wxValidator*) object_pointer1_5);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
-				((wxRibbonControl_php*) _this)->references.AddReference(parent1);
-				((wxRibbonControl_php*) _this)->references.AddReference(pos1);
-				((wxRibbonControl_php*) _this)->references.AddReference(size1);
-				((wxRibbonControl_php*) _this)->references.AddReference(validator1);
+				((wxRibbonControl_php*) _this)->references.AddReference(parent1, "wxRibbonControl::wxRibbonControl at call with 6 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(pos1, "wxRibbonControl::wxRibbonControl at call with 6 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(size1, "wxRibbonControl::wxRibbonControl at call with 6 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(validator1, "wxRibbonControl::wxRibbonControl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -7256,10 +7659,10 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, *(wxValidator*) object_pointer1_5, wxString(name1, wxConvUTF8));
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
-				((wxRibbonControl_php*) _this)->references.AddReference(parent1);
-				((wxRibbonControl_php*) _this)->references.AddReference(pos1);
-				((wxRibbonControl_php*) _this)->references.AddReference(size1);
-				((wxRibbonControl_php*) _this)->references.AddReference(validator1);
+				((wxRibbonControl_php*) _this)->references.AddReference(parent1, "wxRibbonControl::wxRibbonControl at call with 7 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(pos1, "wxRibbonControl::wxRibbonControl at call with 7 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(size1, "wxRibbonControl::wxRibbonControl at call with 7 argument(s)");
+				((wxRibbonControl_php*) _this)->references.AddReference(validator1, "wxRibbonControl::wxRibbonControl at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -7523,10 +7926,10 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::Append at call with 2 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonGallery::Append at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7565,10 +7968,10 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::Append at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
+				references->AddReference(bitmap1, "wxRibbonGallery::Append at call with 3 argument(s)");
 				ZVAL_STRING(clientData1_ref, (char*) clientData1, 1);
 
 				return;
@@ -7608,11 +8011,11 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::Append at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap2);
-				references->AddReference(clientData2);
+				references->AddReference(bitmap2, "wxRibbonGallery::Append at call with 3 argument(s)");
+				references->AddReference(clientData2, "wxRibbonGallery::Append at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7865,7 +8268,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonGallery::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7877,7 +8280,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonGallery::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7889,8 +8292,8 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxRibbonGallery::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxRibbonGallery::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7902,9 +8305,9 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonGallery::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxRibbonGallery::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxRibbonGallery::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -7916,9 +8319,9 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonGallery::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxRibbonGallery::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxRibbonGallery::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -8037,7 +8440,7 @@ PHP_METHOD(php_wxRibbonGallery, EnsureVisible)
 				#endif
 				((wxRibbonGallery_php*)_this)->EnsureVisible((const wxRibbonGalleryItem*) object_pointer0_0);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxRibbonGallery::EnsureVisible at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8154,7 +8557,7 @@ PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::GetActiveItem at call with 0 argument(s)");
 				}
 
 
@@ -8561,7 +8964,7 @@ PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::GetHoveredItem at call with 0 argument(s)");
 				}
 
 
@@ -8685,7 +9088,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::GetItem at call with 1 argument(s)");
 				}
 
 
@@ -8806,7 +9209,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientData)
 				#endif
 				ZVAL_STRING(return_value, (char*) ((wxRibbonGallery_php*)_this)->GetItemClientData((const wxRibbonGalleryItem*) object_pointer0_0), 1);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxRibbonGallery::GetItemClientData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8945,10 +9348,10 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::GetItemClientObject at call with 1 argument(s)");
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxRibbonGallery::GetItemClientObject at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9065,7 +9468,7 @@ PHP_METHOD(php_wxRibbonGallery, GetSelection)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGallery::GetSelection at call with 0 argument(s)");
 				}
 
 
@@ -9682,7 +10085,7 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientData)
 				#endif
 				((wxRibbonGallery_php*)_this)->SetItemClientData((wxRibbonGalleryItem*) object_pointer0_0, (void*) data0);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxRibbonGallery::SetItemClientData at call with 2 argument(s)");
 				ZVAL_STRING(data0_ref, (char*) data0, 1);
 
 				return;
@@ -9820,8 +10223,8 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientObject)
 				#endif
 				((wxRibbonGallery_php*)_this)->SetItemClientObject((wxRibbonGalleryItem*) object_pointer0_0, (wxClientData*) object_pointer0_1);
 
-				references->AddReference(item0);
-				references->AddReference(data0);
+				references->AddReference(item0, "wxRibbonGallery::SetItemClientObject at call with 2 argument(s)");
+				references->AddReference(data0, "wxRibbonGallery::SetItemClientObject at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9940,7 +10343,7 @@ PHP_METHOD(php_wxRibbonGallery, SetSelection)
 				#endif
 				((wxRibbonGallery_php*)_this)->SetSelection((wxRibbonGalleryItem*) object_pointer0_0);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxRibbonGallery::SetSelection at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10097,7 +10500,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
-				((wxRibbonGallery_php*) _this)->references.AddReference(parent1);
+				((wxRibbonGallery_php*) _this)->references.AddReference(parent1, "wxRibbonGallery::wxRibbonGallery at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -10108,7 +10511,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
-				((wxRibbonGallery_php*) _this)->references.AddReference(parent1);
+				((wxRibbonGallery_php*) _this)->references.AddReference(parent1, "wxRibbonGallery::wxRibbonGallery at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -10119,8 +10522,8 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
-				((wxRibbonGallery_php*) _this)->references.AddReference(parent1);
-				((wxRibbonGallery_php*) _this)->references.AddReference(pos1);
+				((wxRibbonGallery_php*) _this)->references.AddReference(parent1, "wxRibbonGallery::wxRibbonGallery at call with 3 argument(s)");
+				((wxRibbonGallery_php*) _this)->references.AddReference(pos1, "wxRibbonGallery::wxRibbonGallery at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -10131,9 +10534,9 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
-				((wxRibbonGallery_php*) _this)->references.AddReference(parent1);
-				((wxRibbonGallery_php*) _this)->references.AddReference(pos1);
-				((wxRibbonGallery_php*) _this)->references.AddReference(size1);
+				((wxRibbonGallery_php*) _this)->references.AddReference(parent1, "wxRibbonGallery::wxRibbonGallery at call with 4 argument(s)");
+				((wxRibbonGallery_php*) _this)->references.AddReference(pos1, "wxRibbonGallery::wxRibbonGallery at call with 4 argument(s)");
+				((wxRibbonGallery_php*) _this)->references.AddReference(size1, "wxRibbonGallery::wxRibbonGallery at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -10144,9 +10547,9 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
-				((wxRibbonGallery_php*) _this)->references.AddReference(parent1);
-				((wxRibbonGallery_php*) _this)->references.AddReference(pos1);
-				((wxRibbonGallery_php*) _this)->references.AddReference(size1);
+				((wxRibbonGallery_php*) _this)->references.AddReference(parent1, "wxRibbonGallery::wxRibbonGallery at call with 5 argument(s)");
+				((wxRibbonGallery_php*) _this)->references.AddReference(pos1, "wxRibbonGallery::wxRibbonGallery at call with 5 argument(s)");
+				((wxRibbonGallery_php*) _this)->references.AddReference(size1, "wxRibbonGallery::wxRibbonGallery at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -10291,7 +10694,7 @@ PHP_METHOD(php_wxRibbonPage, AdjustRectToIncludeScrollButtons)
 				#endif
 				((wxRibbonPage_php*)_this)->AdjustRectToIncludeScrollButtons((wxRect*) object_pointer0_0);
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxRibbonPage::AdjustRectToIncludeScrollButtons at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10432,7 +10835,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonPage::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10444,7 +10847,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonPage::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -10456,7 +10859,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonPage::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -10468,8 +10871,8 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxRibbonPage::Create at call with 4 argument(s)");
+				references->AddReference(icon0, "wxRibbonPage::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -10481,8 +10884,8 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxRibbonPage::Create at call with 5 argument(s)");
+				references->AddReference(icon0, "wxRibbonPage::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -10692,7 +11095,7 @@ PHP_METHOD(php_wxRibbonPage, GetIcon)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonPage::GetIcon at call with 0 argument(s)");
 				}
 
 
@@ -11207,7 +11610,7 @@ PHP_METHOD(php_wxRibbonPage, SetArtProvider)
 				#endif
 				((wxRibbonPage_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
-				references->AddReference(art0);
+				references->AddReference(art0, "wxRibbonPage::SetArtProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11452,7 +11855,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
-				((wxRibbonPage_php*) _this)->references.AddReference(parent1);
+				((wxRibbonPage_php*) _this)->references.AddReference(parent1, "wxRibbonPage::wxRibbonPage at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -11463,7 +11866,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
-				((wxRibbonPage_php*) _this)->references.AddReference(parent1);
+				((wxRibbonPage_php*) _this)->references.AddReference(parent1, "wxRibbonPage::wxRibbonPage at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -11474,7 +11877,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8));
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
-				((wxRibbonPage_php*) _this)->references.AddReference(parent1);
+				((wxRibbonPage_php*) _this)->references.AddReference(parent1, "wxRibbonPage::wxRibbonPage at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -11485,8 +11888,8 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
-				((wxRibbonPage_php*) _this)->references.AddReference(parent1);
-				((wxRibbonPage_php*) _this)->references.AddReference(icon1);
+				((wxRibbonPage_php*) _this)->references.AddReference(parent1, "wxRibbonPage::wxRibbonPage at call with 4 argument(s)");
+				((wxRibbonPage_php*) _this)->references.AddReference(icon1, "wxRibbonPage::wxRibbonPage at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -11497,8 +11900,8 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, (long) style1);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
-				((wxRibbonPage_php*) _this)->references.AddReference(parent1);
-				((wxRibbonPage_php*) _this)->references.AddReference(icon1);
+				((wxRibbonPage_php*) _this)->references.AddReference(parent1, "wxRibbonPage::wxRibbonPage at call with 5 argument(s)");
+				((wxRibbonPage_php*) _this)->references.AddReference(icon1, "wxRibbonPage::wxRibbonPage at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -11797,7 +12200,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11809,7 +12212,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -11821,7 +12224,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -11833,8 +12236,8 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 4 argument(s)");
+				references->AddReference(icon0, "wxRibbonPanel::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -11846,9 +12249,9 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 5 argument(s)");
+				references->AddReference(icon0, "wxRibbonPanel::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxRibbonPanel::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -11860,10 +12263,10 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 6 argument(s)");
+				references->AddReference(icon0, "wxRibbonPanel::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxRibbonPanel::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxRibbonPanel::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -11875,10 +12278,10 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonPanel::Create at call with 7 argument(s)");
+				references->AddReference(icon0, "wxRibbonPanel::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxRibbonPanel::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxRibbonPanel::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -11995,7 +12398,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonPanel::GetExpandedDummy at call with 0 argument(s)");
 				}
 
 
@@ -12114,7 +12517,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonPanel::GetExpandedPanel at call with 0 argument(s)");
 				}
 
 
@@ -12244,7 +12647,7 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonPanel::GetMinimisedIcon at call with 0 argument(s)");
 				}
 
 
@@ -12282,7 +12685,7 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonPanel::GetMinimisedIcon at call with 0 argument(s)");
 				}
 
 
@@ -12841,7 +13244,7 @@ PHP_METHOD(php_wxRibbonPanel, SetArtProvider)
 				#endif
 				((wxRibbonPanel_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
-				references->AddReference(art0);
+				references->AddReference(art0, "wxRibbonPanel::SetArtProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13114,7 +13517,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -13125,7 +13528,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -13136,7 +13539,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8));
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -13147,8 +13550,8 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 4 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1, "wxRibbonPanel::wxRibbonPanel at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -13159,9 +13562,9 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(pos1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 5 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1, "wxRibbonPanel::wxRibbonPanel at call with 5 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(pos1, "wxRibbonPanel::wxRibbonPanel at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -13172,10 +13575,10 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, *(wxSize*) object_pointer1_5);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(pos1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(size1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 6 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1, "wxRibbonPanel::wxRibbonPanel at call with 6 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(pos1, "wxRibbonPanel::wxRibbonPanel at call with 6 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(size1, "wxRibbonPanel::wxRibbonPanel at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -13186,10 +13589,10 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, *(wxSize*) object_pointer1_5, (long) style1);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
-				((wxRibbonPanel_php*) _this)->references.AddReference(parent1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(pos1);
-				((wxRibbonPanel_php*) _this)->references.AddReference(size1);
+				((wxRibbonPanel_php*) _this)->references.AddReference(parent1, "wxRibbonPanel::wxRibbonPanel at call with 7 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(minimised_icon1, "wxRibbonPanel::wxRibbonPanel at call with 7 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(pos1, "wxRibbonPanel::wxRibbonPanel at call with 7 argument(s)");
+				((wxRibbonPanel_php*) _this)->references.AddReference(size1, "wxRibbonPanel::wxRibbonPanel at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -13357,10 +13760,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddDropdownTool at call with 2 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonToolBar::AddDropdownTool at call with 2 argument(s)");
 
 				return;
 				break;
@@ -13392,10 +13795,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddDropdownTool at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonToolBar::AddDropdownTool at call with 3 argument(s)");
 
 				return;
 				break;
@@ -13537,10 +13940,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddHybridTool at call with 2 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonToolBar::AddHybridTool at call with 2 argument(s)");
 
 				return;
 				break;
@@ -13572,10 +13975,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddHybridTool at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonToolBar::AddHybridTool at call with 3 argument(s)");
 
 				return;
 				break;
@@ -13692,7 +14095,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddSeparator at call with 0 argument(s)");
 				}
 
 
@@ -13913,10 +14316,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonToolBar::AddTool at call with 3 argument(s)");
 
 				return;
 				break;
@@ -13948,10 +14351,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxRibbonToolBar::AddTool at call with 4 argument(s)");
 
 				return;
 				break;
@@ -13990,10 +14393,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 2 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
+				references->AddReference(bitmap1, "wxRibbonToolBar::AddTool at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14025,11 +14428,11 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_disabled1);
+				references->AddReference(bitmap1, "wxRibbonToolBar::AddTool at call with 3 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonToolBar::AddTool at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14061,11 +14464,11 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_disabled1);
+				references->AddReference(bitmap1, "wxRibbonToolBar::AddTool at call with 4 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonToolBar::AddTool at call with 4 argument(s)");
 
 				return;
 				break;
@@ -14097,11 +14500,11 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 5 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_disabled1);
+				references->AddReference(bitmap1, "wxRibbonToolBar::AddTool at call with 5 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonToolBar::AddTool at call with 5 argument(s)");
 
 				return;
 				break;
@@ -14133,12 +14536,12 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonToolBar::AddTool at call with 6 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(bitmap_disabled1);
-				references->AddReference(client_data1);
+				references->AddReference(bitmap1, "wxRibbonToolBar::AddTool at call with 6 argument(s)");
+				references->AddReference(bitmap_disabled1, "wxRibbonToolBar::AddTool at call with 6 argument(s)");
+				references->AddReference(client_data1, "wxRibbonToolBar::AddTool at call with 6 argument(s)");
 
 				return;
 				break;
@@ -14295,7 +14698,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14307,7 +14710,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14319,8 +14722,8 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxRibbonToolBar::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14332,9 +14735,9 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxRibbonToolBar::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxRibbonToolBar::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -14346,9 +14749,9 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxRibbonToolBar::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxRibbonToolBar::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -14618,7 +15021,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
-				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1);
+				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1, "wxRibbonToolBar::wxRibbonToolBar at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -14629,7 +15032,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
-				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1);
+				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1, "wxRibbonToolBar::wxRibbonToolBar at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -14640,8 +15043,8 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
-				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonToolBar_php*) _this)->references.AddReference(pos1);
+				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1, "wxRibbonToolBar::wxRibbonToolBar at call with 3 argument(s)");
+				((wxRibbonToolBar_php*) _this)->references.AddReference(pos1, "wxRibbonToolBar::wxRibbonToolBar at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -14652,9 +15055,9 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
-				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonToolBar_php*) _this)->references.AddReference(pos1);
-				((wxRibbonToolBar_php*) _this)->references.AddReference(size1);
+				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1, "wxRibbonToolBar::wxRibbonToolBar at call with 4 argument(s)");
+				((wxRibbonToolBar_php*) _this)->references.AddReference(pos1, "wxRibbonToolBar::wxRibbonToolBar at call with 4 argument(s)");
+				((wxRibbonToolBar_php*) _this)->references.AddReference(size1, "wxRibbonToolBar::wxRibbonToolBar at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -14665,9 +15068,9 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
-				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1);
-				((wxRibbonToolBar_php*) _this)->references.AddReference(pos1);
-				((wxRibbonToolBar_php*) _this)->references.AddReference(size1);
+				((wxRibbonToolBar_php*) _this)->references.AddReference(parent1, "wxRibbonToolBar::wxRibbonToolBar at call with 5 argument(s)");
+				((wxRibbonToolBar_php*) _this)->references.AddReference(pos1, "wxRibbonToolBar::wxRibbonToolBar at call with 5 argument(s)");
+				((wxRibbonToolBar_php*) _this)->references.AddReference(size1, "wxRibbonToolBar::wxRibbonToolBar at call with 5 argument(s)");
 				break;
 			}
 		}

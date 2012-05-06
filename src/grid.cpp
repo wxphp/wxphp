@@ -118,6 +118,7 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxGrid_entry);
@@ -133,7 +134,15 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<5; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -141,15 +150,21 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellRenderer::GetBestSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -182,6 +197,7 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxGrid_entry);
@@ -200,7 +216,15 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<7; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -208,11 +232,12 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellRenderer::Draw'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -239,6 +264,7 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -246,7 +272,10 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -254,15 +283,21 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellRenderer::Clone'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxGridCellRenderer_php* var = (wxGridCellRenderer_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxGridCellRenderer*) return_object;
 	
 }
@@ -2149,6 +2184,7 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], row);
@@ -2160,7 +2196,15 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2168,11 +2212,12 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellEditor::ApplyEdit'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2204,6 +2249,7 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], row);
@@ -2215,7 +2261,15 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2223,11 +2277,12 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellEditor::BeginEdit'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2254,6 +2309,7 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -2261,7 +2317,10 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2269,15 +2328,21 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellEditor::Clone'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxGridCellEditor_php* var = (wxGridCellEditor_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxGridCellEditor*) return_object;
 	
 }
@@ -2310,6 +2375,7 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -2322,7 +2388,15 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2330,11 +2404,12 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellEditor::Create'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2513,6 +2588,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], row);
@@ -2532,7 +2608,15 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<5; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2540,11 +2624,12 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellEditor::EndEdit'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2702,7 +2787,7 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 					((wxGridCellEditor_php*)_this)->HandleReturn(*(wxKeyEvent*) object_pointer0_0);
 				}
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxGridCellEditor::HandleReturn at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3037,8 +3122,8 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 					((wxGridCellEditor_php*)_this)->PaintBackground(*(wxRect*) object_pointer0_0, (wxGridCellAttr*) object_pointer0_1);
 				}
 
-				references->AddReference(rectCell0);
-				references->AddReference(attr0);
+				references->AddReference(rectCell0, "wxGridCellEditor::PaintBackground at call with 2 argument(s)");
+				references->AddReference(attr0, "wxGridCellEditor::PaintBackground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3208,7 +3293,7 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 					((wxGridCellEditor_php*)_this)->SetSize(*(wxRect*) object_pointer0_0);
 				}
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxGridCellEditor::SetSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3247,6 +3332,7 @@ void wxGridCellEditor_php::Reset()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -3254,7 +3340,10 @@ void wxGridCellEditor_php::Reset()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3262,11 +3351,12 @@ void wxGridCellEditor_php::Reset()
 		
 		wxMessageBox("Failed to call virtual method 'wxGridCellEditor::Reset'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3463,7 +3553,7 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 					((wxGridCellEditor_php*)_this)->Show(show0, (wxGridCellAttr*) object_pointer0_1);
 				}
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxGridCellEditor::Show at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3780,7 +3870,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 					((wxGridCellEditor_php*)_this)->StartingKey(*(wxKeyEvent*) object_pointer0_0);
 				}
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxGridCellEditor::StartingKey at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5552,7 +5642,7 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridCellAttr::Clone at call with 0 argument(s)");
 				}
 
 
@@ -5883,7 +5973,7 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridCellAttr::GetBackgroundColour at call with 0 argument(s)");
 				}
 
 
@@ -6026,10 +6116,10 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridCellAttr::GetEditor at call with 3 argument(s)");
 				}
 
-				references->AddReference(grid0);
+				references->AddReference(grid0, "wxGridCellAttr::GetEditor at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6143,7 +6233,7 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridCellAttr::GetFont at call with 0 argument(s)");
 				}
 
 
@@ -6405,10 +6495,10 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridCellAttr::GetRenderer at call with 3 argument(s)");
 				}
 
-				references->AddReference(grid0);
+				references->AddReference(grid0, "wxGridCellAttr::GetRenderer at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6522,7 +6612,7 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridCellAttr::GetTextColour at call with 0 argument(s)");
 				}
 
 
@@ -7513,7 +7603,7 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 				#endif
 				((wxGridCellAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colBack0);
+				references->AddReference(colBack0, "wxGridCellAttr::SetBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7631,7 +7721,7 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 				#endif
 				((wxGridCellAttr_php*)_this)->SetDefAttr((wxGridCellAttr*) object_pointer0_0);
 
-				references->AddReference(defAttr0);
+				references->AddReference(defAttr0, "wxGridCellAttr::SetDefAttr at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7750,7 +7840,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 				#endif
 				((wxGridCellAttr_php*)_this)->SetEditor((wxGridCellEditor*) object_pointer0_0);
 
-				references->AddReference(editor0);
+				references->AddReference(editor0, "wxGridCellAttr::SetEditor at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7869,7 +7959,7 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 				#endif
 				((wxGridCellAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxGridCellAttr::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8100,7 +8190,7 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 				#endif
 				((wxGridCellAttr_php*)_this)->SetRenderer((wxGridCellRenderer*) object_pointer0_0);
 
-				references->AddReference(renderer0);
+				references->AddReference(renderer0, "wxGridCellAttr::SetRenderer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8219,7 +8309,7 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 				#endif
 				((wxGridCellAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colText0);
+				references->AddReference(colText0, "wxGridCellAttr::SetTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8391,7 +8481,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				_this = new wxGridCellAttr_php((wxGridCellAttr*) object_pointer0_0);
 
 				((wxGridCellAttr_php*) _this)->references.Initialize();
-				((wxGridCellAttr_php*) _this)->references.AddReference(attrDefault0);
+				((wxGridCellAttr_php*) _this)->references.AddReference(attrDefault0, "wxGridCellAttr::wxGridCellAttr at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -8409,9 +8499,9 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				_this = new wxGridCellAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (int) hAlign1, (int) vAlign1);
 
 				((wxGridCellAttr_php*) _this)->references.Initialize();
-				((wxGridCellAttr_php*) _this)->references.AddReference(colText1);
-				((wxGridCellAttr_php*) _this)->references.AddReference(colBack1);
-				((wxGridCellAttr_php*) _this)->references.AddReference(font1);
+				((wxGridCellAttr_php*) _this)->references.AddReference(colText1, "wxGridCellAttr::wxGridCellAttr at call with 5 argument(s)");
+				((wxGridCellAttr_php*) _this)->references.AddReference(colBack1, "wxGridCellAttr::wxGridCellAttr at call with 5 argument(s)");
+				((wxGridCellAttr_php*) _this)->references.AddReference(font1, "wxGridCellAttr::wxGridCellAttr at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -9466,7 +9556,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridTableBase::GetAttr at call with 3 argument(s)");
 				}
 
 
@@ -9585,7 +9675,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridTableBase::GetAttrProvider at call with 0 argument(s)");
 				}
 
 
@@ -9829,6 +9919,7 @@ int wxGridTableBase_php::GetNumberCols()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -9836,7 +9927,10 @@ int wxGridTableBase_php::GetNumberCols()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -9844,11 +9938,12 @@ int wxGridTableBase_php::GetNumberCols()
 		
 		wxMessageBox("Failed to call virtual method 'wxGridTableBase::GetNumberCols'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -9875,6 +9970,7 @@ int wxGridTableBase_php::GetNumberRows()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -9882,7 +9978,10 @@ int wxGridTableBase_php::GetNumberRows()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -9890,11 +9989,12 @@ int wxGridTableBase_php::GetNumberRows()
 		
 		wxMessageBox("Failed to call virtual method 'wxGridTableBase::GetNumberRows'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -10237,6 +10337,7 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], row);
@@ -10246,7 +10347,15 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -10254,11 +10363,12 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 		
 		wxMessageBox("Failed to call virtual method 'wxGridTableBase::GetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -10773,7 +10883,7 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridTableBase::GetView at call with 0 argument(s)");
 				}
 
 
@@ -11246,7 +11356,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 				#endif
 				((wxGridTableBase_php*)_this)->SetAttr((wxGridCellAttr*) object_pointer0_0, (int) row0, (int) col0);
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxGridTableBase::SetAttr at call with 3 argument(s)");
 
 				return;
 				break;
@@ -11365,7 +11475,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 				#endif
 				((wxGridTableBase_php*)_this)->SetAttrProvider((wxGridCellAttrProvider*) object_pointer0_0);
 
-				references->AddReference(attrProvider0);
+				references->AddReference(attrProvider0, "wxGridTableBase::SetAttrProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11485,7 +11595,7 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 				#endif
 				((wxGridTableBase_php*)_this)->SetColAttr((wxGridCellAttr*) object_pointer0_0, (int) col0);
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxGridTableBase::SetColAttr at call with 2 argument(s)");
 
 				return;
 				break;
@@ -11708,7 +11818,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 				#endif
 				((wxGridTableBase_php*)_this)->SetRowAttr((wxGridCellAttr*) object_pointer0_0, (int) row0);
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxGridTableBase::SetRowAttr at call with 2 argument(s)");
 
 				return;
 				break;
@@ -11855,6 +11965,7 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], row);
@@ -11868,7 +11979,15 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -11876,11 +11995,12 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 		
 		wxMessageBox("Failed to call virtual method 'wxGridTableBase::SetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -12407,7 +12527,7 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 				#endif
 				((wxGridTableBase_php*)_this)->SetView((wxGrid*) object_pointer0_0);
 
-				references->AddReference(grid0);
+				references->AddReference(grid0, "wxGridTableBase::SetView at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15317,7 +15437,7 @@ PHP_METHOD(php_wxGrid, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxGrid::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -15329,8 +15449,8 @@ PHP_METHOD(php_wxGrid, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxGrid::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -15342,9 +15462,9 @@ PHP_METHOD(php_wxGrid, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxGrid::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxGrid::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -15356,9 +15476,9 @@ PHP_METHOD(php_wxGrid, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxGrid::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxGrid::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -15370,9 +15490,9 @@ PHP_METHOD(php_wxGrid, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxGrid::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxGrid::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxGrid::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -18060,7 +18180,7 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetCellEditor at call with 2 argument(s)");
 				}
 
 
@@ -18292,7 +18412,7 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetCellRenderer at call with 2 argument(s)");
 				}
 
 
@@ -20385,7 +20505,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetDefaultEditor at call with 0 argument(s)");
 				}
 
 
@@ -20510,7 +20630,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetDefaultEditorForType at call with 1 argument(s)");
 				}
 
 
@@ -20730,7 +20850,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetDefaultRenderer at call with 0 argument(s)");
 				}
 
 
@@ -20855,7 +20975,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetDefaultRendererForCell at call with 2 argument(s)");
 				}
 
 
@@ -20980,7 +21100,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetDefaultRendererForType at call with 1 argument(s)");
 				}
 
 
@@ -21291,7 +21411,7 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetGridColHeader at call with 0 argument(s)");
 				}
 
 
@@ -21410,7 +21530,7 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetGridColLabelWindow at call with 0 argument(s)");
 				}
 
 
@@ -21529,7 +21649,7 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetGridCornerLabelWindow at call with 0 argument(s)");
 				}
 
 
@@ -21941,7 +22061,7 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetGridRowLabelWindow at call with 0 argument(s)");
 				}
 
 
@@ -22060,7 +22180,7 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetGridWindow at call with 0 argument(s)");
 				}
 
 
@@ -22680,7 +22800,7 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetOrCreateCellAttr at call with 2 argument(s)");
 				}
 
 
@@ -24111,7 +24231,7 @@ PHP_METHOD(php_wxGrid, GetTable)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGrid::GetTable at call with 0 argument(s)");
 				}
 
 
@@ -27517,8 +27637,8 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 				#endif
 				((wxGrid_php*)_this)->RegisterDataType(wxString(typeName0, wxConvUTF8), (wxGridCellRenderer*) object_pointer0_1, (wxGridCellEditor*) object_pointer0_2);
 
-				references->AddReference(renderer0);
-				references->AddReference(editor0);
+				references->AddReference(renderer0, "wxGrid::RegisterDataType at call with 3 argument(s)");
+				references->AddReference(editor0, "wxGrid::RegisterDataType at call with 3 argument(s)");
 
 				return;
 				break;
@@ -28412,7 +28532,7 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 				#endif
 				((wxGrid_php*)_this)->SetCellBackgroundColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetCellBackgroundColour at call with 3 argument(s)");
 
 				return;
 				break;
@@ -28533,7 +28653,7 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 				#endif
 				((wxGrid_php*)_this)->SetCellEditor((int) row0, (int) col0, (wxGridCellEditor*) object_pointer0_2);
 
-				references->AddReference(editor0);
+				references->AddReference(editor0, "wxGrid::SetCellEditor at call with 3 argument(s)");
 
 				return;
 				break;
@@ -28654,7 +28774,7 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 				#endif
 				((wxGrid_php*)_this)->SetCellFont((int) row0, (int) col0, *(wxFont*) object_pointer0_2);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxGrid::SetCellFont at call with 3 argument(s)");
 
 				return;
 				break;
@@ -28775,7 +28895,7 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 				#endif
 				((wxGrid_php*)_this)->SetCellRenderer((int) row0, (int) col0, (wxGridCellRenderer*) object_pointer0_2);
 
-				references->AddReference(renderer0);
+				references->AddReference(renderer0, "wxGrid::SetCellRenderer at call with 3 argument(s)");
 
 				return;
 				break;
@@ -29074,7 +29194,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 				#endif
 				((wxGrid_php*)_this)->SetCellTextColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetCellTextColour at call with 3 argument(s)");
 
 				return;
 				break;
@@ -29093,7 +29213,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 				#endif
 				((wxGrid_php*)_this)->SetCellTextColour(*(wxColour*) object_pointer1_0, (int) row1, (int) col1);
 
-				references->AddReference(val1);
+				references->AddReference(val1, "wxGrid::SetCellTextColour at call with 3 argument(s)");
 
 				return;
 				break;
@@ -29112,7 +29232,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 				#endif
 				((wxGrid_php*)_this)->SetCellTextColour(*(wxColour*) object_pointer2_0);
 
-				references->AddReference(colour2);
+				references->AddReference(colour2, "wxGrid::SetCellTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -29376,7 +29496,7 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 				#endif
 				((wxGrid_php*)_this)->SetColAttr((int) col0, (wxGridCellAttr*) object_pointer0_1);
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxGrid::SetColAttr at call with 2 argument(s)");
 
 				return;
 				break;
@@ -30739,7 +30859,7 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 				#endif
 				((wxGrid_php*)_this)->SetColSizes(*(wxGridSizesInfo*) object_pointer0_0);
 
-				references->AddReference(sizeInfo0);
+				references->AddReference(sizeInfo0, "wxGrid::SetColSizes at call with 1 argument(s)");
 
 				return;
 				break;
@@ -30960,7 +31080,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 				#endif
 				((wxGrid_php*)_this)->SetDefaultCellBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetDefaultCellBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -31079,7 +31199,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 				#endif
 				((wxGrid_php*)_this)->SetDefaultCellFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxGrid::SetDefaultCellFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -31198,7 +31318,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 				#endif
 				((wxGrid_php*)_this)->SetDefaultCellTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetDefaultCellTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -31430,7 +31550,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 				#endif
 				((wxGrid_php*)_this)->SetDefaultEditor((wxGridCellEditor*) object_pointer0_0);
 
-				references->AddReference(editor0);
+				references->AddReference(editor0, "wxGrid::SetDefaultEditor at call with 1 argument(s)");
 
 				return;
 				break;
@@ -31549,7 +31669,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 				#endif
 				((wxGrid_php*)_this)->SetDefaultRenderer((wxGridCellRenderer*) object_pointer0_0);
 
-				references->AddReference(renderer0);
+				references->AddReference(renderer0, "wxGrid::SetDefaultRenderer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -31883,7 +32003,7 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 				#endif
 				((wxGrid_php*)_this)->SetGridLineColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetGridLineColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -32002,7 +32122,7 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 				#endif
 				((wxGrid_php*)_this)->SetLabelBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetLabelBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -32121,7 +32241,7 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 				#endif
 				((wxGrid_php*)_this)->SetLabelFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxGrid::SetLabelFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -32240,7 +32360,7 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 				#endif
 				((wxGrid_php*)_this)->SetLabelTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxGrid::SetLabelTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -32576,7 +32696,7 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 				#endif
 				((wxGrid_php*)_this)->SetRowAttr((int) row0, (wxGridCellAttr*) object_pointer0_1);
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxGrid::SetRowAttr at call with 2 argument(s)");
 
 				return;
 				break;
@@ -33306,7 +33426,7 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 				#endif
 				((wxGrid_php*)_this)->SetRowSizes(*(wxGridSizesInfo*) object_pointer0_0);
 
-				references->AddReference(sizeInfo0);
+				references->AddReference(sizeInfo0, "wxGrid::SetRowSizes at call with 1 argument(s)");
 
 				return;
 				break;
@@ -33627,7 +33747,7 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 				#endif
 				((wxGrid_php*)_this)->SetSelectionBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(c0);
+				references->AddReference(c0, "wxGrid::SetSelectionBackground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -33746,7 +33866,7 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 				#endif
 				((wxGrid_php*)_this)->SetSelectionForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(c0);
+				references->AddReference(c0, "wxGrid::SetSelectionForeground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -34081,7 +34201,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->SetTable((wxGridTableBase*) object_pointer0_0));
 
-				references->AddReference(table0);
+				references->AddReference(table0, "wxGrid::SetTable at call with 1 argument(s)");
 
 				return;
 				break;
@@ -34093,7 +34213,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0));
 
-				references->AddReference(table0);
+				references->AddReference(table0, "wxGrid::SetTable at call with 2 argument(s)");
 
 				return;
 				break;
@@ -34105,7 +34225,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0));
 
-				references->AddReference(table0);
+				references->AddReference(table0, "wxGrid::SetTable at call with 3 argument(s)");
 
 				return;
 				break;
@@ -35310,7 +35430,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxGrid_php*) _this)->references.Initialize();
-				((wxGrid_php*) _this)->references.AddReference(parent1);
+				((wxGrid_php*) _this)->references.AddReference(parent1, "wxGrid::wxGrid at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -35321,8 +35441,8 @@ PHP_METHOD(php_wxGrid, __construct)
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxGrid_php*) _this)->references.Initialize();
-				((wxGrid_php*) _this)->references.AddReference(parent1);
-				((wxGrid_php*) _this)->references.AddReference(pos1);
+				((wxGrid_php*) _this)->references.AddReference(parent1, "wxGrid::wxGrid at call with 3 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(pos1, "wxGrid::wxGrid at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -35333,9 +35453,9 @@ PHP_METHOD(php_wxGrid, __construct)
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxGrid_php*) _this)->references.Initialize();
-				((wxGrid_php*) _this)->references.AddReference(parent1);
-				((wxGrid_php*) _this)->references.AddReference(pos1);
-				((wxGrid_php*) _this)->references.AddReference(size1);
+				((wxGrid_php*) _this)->references.AddReference(parent1, "wxGrid::wxGrid at call with 4 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(pos1, "wxGrid::wxGrid at call with 4 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(size1, "wxGrid::wxGrid at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -35346,9 +35466,9 @@ PHP_METHOD(php_wxGrid, __construct)
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxGrid_php*) _this)->references.Initialize();
-				((wxGrid_php*) _this)->references.AddReference(parent1);
-				((wxGrid_php*) _this)->references.AddReference(pos1);
-				((wxGrid_php*) _this)->references.AddReference(size1);
+				((wxGrid_php*) _this)->references.AddReference(parent1, "wxGrid::wxGrid at call with 5 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(pos1, "wxGrid::wxGrid at call with 5 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(size1, "wxGrid::wxGrid at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -35359,9 +35479,9 @@ PHP_METHOD(php_wxGrid, __construct)
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxGrid_php*) _this)->references.Initialize();
-				((wxGrid_php*) _this)->references.AddReference(parent1);
-				((wxGrid_php*) _this)->references.AddReference(pos1);
-				((wxGrid_php*) _this)->references.AddReference(size1);
+				((wxGrid_php*) _this)->references.AddReference(parent1, "wxGrid::wxGrid at call with 6 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(pos1, "wxGrid::wxGrid at call with 6 argument(s)");
+				((wxGrid_php*) _this)->references.AddReference(size1, "wxGrid::wxGrid at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -35539,7 +35659,7 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 				#endif
 				((wxGridUpdateLocker_php*)_this)->Create((wxGrid*) object_pointer0_0);
 
-				references->AddReference(grid0);
+				references->AddReference(grid0, "wxGridUpdateLocker::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -35637,7 +35757,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 				_this = new wxGridUpdateLocker_php((wxGrid*) object_pointer0_0);
 
 				((wxGridUpdateLocker_php*) _this)->references.Initialize();
-				((wxGridUpdateLocker_php*) _this)->references.AddReference(grid0);
+				((wxGridUpdateLocker_php*) _this)->references.AddReference(grid0, "wxGridUpdateLocker::wxGridUpdateLocker at call with 1 argument(s)");
 				break;
 			}
 		}

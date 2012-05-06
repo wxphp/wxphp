@@ -2660,6 +2660,7 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], pos);
@@ -2669,7 +2670,15 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2717,6 +2726,7 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -2724,7 +2734,10 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3009,10 +3022,10 @@ PHP_METHOD(php_wxOutputStream, Write)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxOutputStream::Write at call with 1 argument(s)");
 				}
 
-				references->AddReference(stream_in0);
+				references->AddReference(stream_in0, "wxOutputStream::Write at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4267,10 +4280,10 @@ PHP_METHOD(php_wxInputStream, Read)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxInputStream::Read at call with 1 argument(s)");
 				}
 
-				references->AddReference(stream_out0);
+				references->AddReference(stream_out0, "wxInputStream::Read at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4429,6 +4442,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_STRING(arguments[0], (char*) buffer, 0);
@@ -4438,7 +4452,15 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4446,11 +4468,12 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 		
 		wxMessageBox("Failed to call virtual method 'wxInputStream::OnSysRead'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (size_t) Z_LVAL_P(return_value);
+	return (size_t) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -5163,7 +5186,7 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 				_this = new wxFFileOutputStream_php(*(wxFFile*) object_pointer1_0);
 
 				((wxFFileOutputStream_php*) _this)->references.Initialize();
-				((wxFFileOutputStream_php*) _this)->references.AddReference(file1);
+				((wxFFileOutputStream_php*) _this)->references.AddReference(file1, "wxFFileOutputStream::wxFFileOutputStream at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -5466,7 +5489,7 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 				_this = new wxFileOutputStream_php(*(wxFile*) object_pointer1_0);
 
 				((wxFileOutputStream_php*) _this)->references.Initialize();
-				((wxFileOutputStream_php*) _this)->references.AddReference(file1);
+				((wxFileOutputStream_php*) _this)->references.AddReference(file1, "wxFileOutputStream::wxFileOutputStream at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -5786,7 +5809,7 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 				_this = new wxFileInputStream_php(*(wxFile*) object_pointer1_0);
 
 				((wxFileInputStream_php*) _this)->references.Initialize();
-				((wxFileInputStream_php*) _this)->references.AddReference(file1);
+				((wxFileInputStream_php*) _this)->references.AddReference(file1, "wxFileInputStream::wxFileInputStream at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -5972,7 +5995,7 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 				_this = new wxFFileInputStream_php(*(wxFFile*) object_pointer0_0);
 
 				((wxFFileInputStream_php*) _this)->references.Initialize();
-				((wxFFileInputStream_php*) _this)->references.AddReference(file0);
+				((wxFFileInputStream_php*) _this)->references.AddReference(file0, "wxFFileInputStream::wxFFileInputStream at call with 1 argument(s)");
 				break;
 			}
 		}

@@ -11367,6 +11367,110 @@
 		],
 		"_implements":[
 			"wxControl"
+		],
+		"SetFieldsCount":[
+			{
+				"return_type":"void",
+				"brief_description":"Sets the number of fields, and optionally the field widths.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"const int*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"number",
+					"widths"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"1",
+					"NULL"
+				]
+			}
+		],
+		"SetStatusStyles":[
+			{
+				"return_type":"void",
+				"brief_description":"Sets the styles of the fields in the status line which can make fields appear flat or raised instead of the standard sunken 3D border.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"const int*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"n",
+					"styles"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"SetStatusWidths":[
+			{
+				"return_type":"void",
+				"brief_description":"Sets the widths of the fields in the status line.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"const int*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"n",
+					"widths_field"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
 		]
 	},
 	"wxButton":{

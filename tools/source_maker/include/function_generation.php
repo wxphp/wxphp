@@ -1279,9 +1279,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$parameters_string .= "(".$declaration[$parameter_types][$parameter_index].") object_pointer{$declaration_index}_{$parameter_index}" . ", ";
 								
 								if(!$declaration["static"] && $class_name && !$is_constructor)
-									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name);\n";
+									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								else if($is_constructor)
-									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name);\n";
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								break;
 								
 							case "reference": //object&	
@@ -1289,9 +1289,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$parameters_string .= "*(".$argument_parameter_type."*) object_pointer{$declaration_index}_{$parameter_index}" . ", ";
 								
 								if(!$declaration["static"] && $class_name && !$is_constructor)
-									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name);\n";
+									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								else if($is_constructor)
-									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name);\n";
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								break;
 								
 							case "none": //char
@@ -1617,7 +1617,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								if(!$declaration["static"] && $class_name)
 								{
 									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL && value_to_return{$required_parameters} != _this && return_is_user_initialized){\n";
-									$return_called_overload .= tabs(5) . "references->AddReference(return_value);\n";
+									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
 									
@@ -1665,7 +1665,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								if(!$declaration["static"] && $class_name)
 								{
 									$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters} != _this && return_is_user_initialized){ //Prevent adding references to it self\n";
-									$return_called_overload .= tabs(5) . "references->AddReference(return_value);\n";
+									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
 									

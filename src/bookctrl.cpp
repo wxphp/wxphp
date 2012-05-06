@@ -190,7 +190,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiNotebookEvent::Clone at call with 0 argument(s)");
 				}
 
 
@@ -507,7 +507,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0));
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxBookCtrlBase::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -534,8 +534,8 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2));
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxBookCtrlBase::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxBookCtrlBase::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -562,9 +562,9 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxBookCtrlBase::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxBookCtrlBase::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxBookCtrlBase::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -591,9 +591,9 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxBookCtrlBase::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxBookCtrlBase::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxBookCtrlBase::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -620,9 +620,9 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxBookCtrlBase::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxBookCtrlBase::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxBookCtrlBase::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -788,7 +788,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)));
 				}
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxBookCtrlBase::AddPage at call with 2 argument(s)");
 
 				return;
 				break;
@@ -819,7 +819,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), select0));
 				}
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxBookCtrlBase::AddPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -850,7 +850,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 					ZVAL_BOOL(return_value, ((wxBookCtrlBase_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), select0, (int) imageId0));
 				}
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxBookCtrlBase::AddPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1488,7 +1488,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetCurrentPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxBookCtrlBase::GetCurrentPage at call with 0 argument(s)");
 				}
 
 
@@ -1664,7 +1664,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxBookCtrlBase::GetPage at call with 1 argument(s)");
 				}
 
 
@@ -1984,7 +1984,7 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
 					ZVAL_LONG(return_value, ((wxBookCtrlBase_php*)_this)->HitTest(*(wxPoint*) object_pointer0_0));
 				}
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxBookCtrlBase::HitTest at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2023,7 +2023,7 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
 					ZVAL_LONG(return_value, ((wxBookCtrlBase_php*)_this)->HitTest(*(wxPoint*) object_pointer0_0, (long*) flags0));
 				}
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxBookCtrlBase::HitTest at call with 2 argument(s)");
 				size_t elements_returned0_1 = sizeof(flags0)/sizeof(*flags0);
 				array_init(flags0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
@@ -2073,6 +2073,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], index);
@@ -2089,7 +2090,15 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<5; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2097,11 +2106,12 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::InsertPage'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2281,6 +2291,7 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], page);
@@ -2290,7 +2301,15 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2298,11 +2317,12 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::SetPageImage'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2460,7 +2480,7 @@ PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
 					((wxBookCtrlBase_php*)_this)->SetPageSize(*(wxSize*) object_pointer0_0);
 				}
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxBookCtrlBase::SetPageSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2504,6 +2524,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], page);
@@ -2516,7 +2537,15 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2524,11 +2553,12 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::SetPageText'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2560,6 +2590,7 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], page);
@@ -2568,7 +2599,15 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2576,11 +2615,12 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::SetSelection'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2607,6 +2647,7 @@ int wxBookCtrlBase_php::GetSelection()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -2614,7 +2655,10 @@ int wxBookCtrlBase_php::GetSelection()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2622,11 +2666,12 @@ int wxBookCtrlBase_php::GetSelection()const
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::GetSelection'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2658,6 +2703,7 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], nPage);
@@ -2666,7 +2712,15 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2674,11 +2728,12 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::GetPageText'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -2710,6 +2765,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], nPage);
@@ -2718,7 +2774,15 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2726,11 +2790,12 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::GetPageImage'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2762,6 +2827,7 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], page);
@@ -2770,7 +2836,15 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2778,11 +2852,12 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 		
 		wxMessageBox("Failed to call virtual method 'wxBookCtrlBase::ChangeSelection'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -3476,7 +3551,7 @@ PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxChoicebook::GetChoiceCtrl at call with 0 argument(s)");
 				}
 
 
@@ -3637,7 +3712,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
-				((wxChoicebook_php*) _this)->references.AddReference(parent1);
+				((wxChoicebook_php*) _this)->references.AddReference(parent1, "wxChoicebook::wxChoicebook at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3648,8 +3723,8 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
-				((wxChoicebook_php*) _this)->references.AddReference(parent1);
-				((wxChoicebook_php*) _this)->references.AddReference(pos1);
+				((wxChoicebook_php*) _this)->references.AddReference(parent1, "wxChoicebook::wxChoicebook at call with 3 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(pos1, "wxChoicebook::wxChoicebook at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3660,9 +3735,9 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
-				((wxChoicebook_php*) _this)->references.AddReference(parent1);
-				((wxChoicebook_php*) _this)->references.AddReference(pos1);
-				((wxChoicebook_php*) _this)->references.AddReference(size1);
+				((wxChoicebook_php*) _this)->references.AddReference(parent1, "wxChoicebook::wxChoicebook at call with 4 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(pos1, "wxChoicebook::wxChoicebook at call with 4 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(size1, "wxChoicebook::wxChoicebook at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3673,9 +3748,9 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
-				((wxChoicebook_php*) _this)->references.AddReference(parent1);
-				((wxChoicebook_php*) _this)->references.AddReference(pos1);
-				((wxChoicebook_php*) _this)->references.AddReference(size1);
+				((wxChoicebook_php*) _this)->references.AddReference(parent1, "wxChoicebook::wxChoicebook at call with 5 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(pos1, "wxChoicebook::wxChoicebook at call with 5 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(size1, "wxChoicebook::wxChoicebook at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3686,9 +3761,9 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxChoicebook_php*) _this)->references.Initialize();
-				((wxChoicebook_php*) _this)->references.AddReference(parent1);
-				((wxChoicebook_php*) _this)->references.AddReference(pos1);
-				((wxChoicebook_php*) _this)->references.AddReference(size1);
+				((wxChoicebook_php*) _this)->references.AddReference(parent1, "wxChoicebook::wxChoicebook at call with 6 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(pos1, "wxChoicebook::wxChoicebook at call with 6 argument(s)");
+				((wxChoicebook_php*) _this)->references.AddReference(size1, "wxChoicebook::wxChoicebook at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -3856,7 +3931,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxListbook_php*) _this)->references.Initialize();
-				((wxListbook_php*) _this)->references.AddReference(parent0);
+				((wxListbook_php*) _this)->references.AddReference(parent0, "wxListbook::wxListbook at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3867,8 +3942,8 @@ PHP_METHOD(php_wxListbook, __construct)
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxListbook_php*) _this)->references.Initialize();
-				((wxListbook_php*) _this)->references.AddReference(parent0);
-				((wxListbook_php*) _this)->references.AddReference(pos0);
+				((wxListbook_php*) _this)->references.AddReference(parent0, "wxListbook::wxListbook at call with 3 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(pos0, "wxListbook::wxListbook at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3879,9 +3954,9 @@ PHP_METHOD(php_wxListbook, __construct)
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxListbook_php*) _this)->references.Initialize();
-				((wxListbook_php*) _this)->references.AddReference(parent0);
-				((wxListbook_php*) _this)->references.AddReference(pos0);
-				((wxListbook_php*) _this)->references.AddReference(size0);
+				((wxListbook_php*) _this)->references.AddReference(parent0, "wxListbook::wxListbook at call with 4 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(pos0, "wxListbook::wxListbook at call with 4 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(size0, "wxListbook::wxListbook at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3892,9 +3967,9 @@ PHP_METHOD(php_wxListbook, __construct)
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxListbook_php*) _this)->references.Initialize();
-				((wxListbook_php*) _this)->references.AddReference(parent0);
-				((wxListbook_php*) _this)->references.AddReference(pos0);
-				((wxListbook_php*) _this)->references.AddReference(size0);
+				((wxListbook_php*) _this)->references.AddReference(parent0, "wxListbook::wxListbook at call with 5 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(pos0, "wxListbook::wxListbook at call with 5 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(size0, "wxListbook::wxListbook at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3905,9 +3980,9 @@ PHP_METHOD(php_wxListbook, __construct)
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxListbook_php*) _this)->references.Initialize();
-				((wxListbook_php*) _this)->references.AddReference(parent0);
-				((wxListbook_php*) _this)->references.AddReference(pos0);
-				((wxListbook_php*) _this)->references.AddReference(size0);
+				((wxListbook_php*) _this)->references.AddReference(parent0, "wxListbook::wxListbook at call with 6 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(pos0, "wxListbook::wxListbook at call with 6 argument(s)");
+				((wxListbook_php*) _this)->references.AddReference(size0, "wxListbook::wxListbook at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -4060,7 +4135,7 @@ PHP_METHOD(php_wxListbook, GetListView)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxListbook::GetListView at call with 0 argument(s)");
 				}
 
 
@@ -4329,7 +4404,7 @@ PHP_METHOD(php_wxNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxNotebook::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4341,8 +4416,8 @@ PHP_METHOD(php_wxNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxNotebook::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxNotebook::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4354,9 +4429,9 @@ PHP_METHOD(php_wxNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxNotebook::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxNotebook::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxNotebook::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -4368,9 +4443,9 @@ PHP_METHOD(php_wxNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxNotebook::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxNotebook::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxNotebook::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -4382,9 +4457,9 @@ PHP_METHOD(php_wxNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxNotebook::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxNotebook::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxNotebook::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -5009,7 +5084,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxNotebook::InsertPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5021,7 +5096,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), select0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxNotebook::InsertPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -5033,7 +5108,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), select0, (int) imageId0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxNotebook::InsertPage at call with 5 argument(s)");
 
 				return;
 				break;
@@ -5152,7 +5227,7 @@ PHP_METHOD(php_wxNotebook, SetPadding)
 				#endif
 				((wxNotebook_php*)_this)->SetPadding(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(padding0);
+				references->AddReference(padding0, "wxNotebook::SetPadding at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5617,7 +5692,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxNotebook_php*) _this)->references.Initialize();
-				((wxNotebook_php*) _this)->references.AddReference(parent1);
+				((wxNotebook_php*) _this)->references.AddReference(parent1, "wxNotebook::wxNotebook at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -5628,8 +5703,8 @@ PHP_METHOD(php_wxNotebook, __construct)
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxNotebook_php*) _this)->references.Initialize();
-				((wxNotebook_php*) _this)->references.AddReference(parent1);
-				((wxNotebook_php*) _this)->references.AddReference(pos1);
+				((wxNotebook_php*) _this)->references.AddReference(parent1, "wxNotebook::wxNotebook at call with 3 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(pos1, "wxNotebook::wxNotebook at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5640,9 +5715,9 @@ PHP_METHOD(php_wxNotebook, __construct)
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxNotebook_php*) _this)->references.Initialize();
-				((wxNotebook_php*) _this)->references.AddReference(parent1);
-				((wxNotebook_php*) _this)->references.AddReference(pos1);
-				((wxNotebook_php*) _this)->references.AddReference(size1);
+				((wxNotebook_php*) _this)->references.AddReference(parent1, "wxNotebook::wxNotebook at call with 4 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(pos1, "wxNotebook::wxNotebook at call with 4 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(size1, "wxNotebook::wxNotebook at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -5653,9 +5728,9 @@ PHP_METHOD(php_wxNotebook, __construct)
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxNotebook_php*) _this)->references.Initialize();
-				((wxNotebook_php*) _this)->references.AddReference(parent1);
-				((wxNotebook_php*) _this)->references.AddReference(pos1);
-				((wxNotebook_php*) _this)->references.AddReference(size1);
+				((wxNotebook_php*) _this)->references.AddReference(parent1, "wxNotebook::wxNotebook at call with 5 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(pos1, "wxNotebook::wxNotebook at call with 5 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(size1, "wxNotebook::wxNotebook at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -5666,9 +5741,9 @@ PHP_METHOD(php_wxNotebook, __construct)
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxNotebook_php*) _this)->references.Initialize();
-				((wxNotebook_php*) _this)->references.AddReference(parent1);
-				((wxNotebook_php*) _this)->references.AddReference(pos1);
-				((wxNotebook_php*) _this)->references.AddReference(size1);
+				((wxNotebook_php*) _this)->references.AddReference(parent1, "wxNotebook::wxNotebook at call with 6 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(pos1, "wxNotebook::wxNotebook at call with 6 argument(s)");
+				((wxNotebook_php*) _this)->references.AddReference(size1, "wxNotebook::wxNotebook at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -5853,7 +5928,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxToolbook_php*) _this)->references.Initialize();
-				((wxToolbook_php*) _this)->references.AddReference(parent1);
+				((wxToolbook_php*) _this)->references.AddReference(parent1, "wxToolbook::wxToolbook at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -5864,8 +5939,8 @@ PHP_METHOD(php_wxToolbook, __construct)
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxToolbook_php*) _this)->references.Initialize();
-				((wxToolbook_php*) _this)->references.AddReference(parent1);
-				((wxToolbook_php*) _this)->references.AddReference(pos1);
+				((wxToolbook_php*) _this)->references.AddReference(parent1, "wxToolbook::wxToolbook at call with 3 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(pos1, "wxToolbook::wxToolbook at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5876,9 +5951,9 @@ PHP_METHOD(php_wxToolbook, __construct)
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxToolbook_php*) _this)->references.Initialize();
-				((wxToolbook_php*) _this)->references.AddReference(parent1);
-				((wxToolbook_php*) _this)->references.AddReference(pos1);
-				((wxToolbook_php*) _this)->references.AddReference(size1);
+				((wxToolbook_php*) _this)->references.AddReference(parent1, "wxToolbook::wxToolbook at call with 4 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(pos1, "wxToolbook::wxToolbook at call with 4 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(size1, "wxToolbook::wxToolbook at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -5889,9 +5964,9 @@ PHP_METHOD(php_wxToolbook, __construct)
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxToolbook_php*) _this)->references.Initialize();
-				((wxToolbook_php*) _this)->references.AddReference(parent1);
-				((wxToolbook_php*) _this)->references.AddReference(pos1);
-				((wxToolbook_php*) _this)->references.AddReference(size1);
+				((wxToolbook_php*) _this)->references.AddReference(parent1, "wxToolbook::wxToolbook at call with 5 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(pos1, "wxToolbook::wxToolbook at call with 5 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(size1, "wxToolbook::wxToolbook at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -5902,9 +5977,9 @@ PHP_METHOD(php_wxToolbook, __construct)
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxToolbook_php*) _this)->references.Initialize();
-				((wxToolbook_php*) _this)->references.AddReference(parent1);
-				((wxToolbook_php*) _this)->references.AddReference(pos1);
-				((wxToolbook_php*) _this)->references.AddReference(size1);
+				((wxToolbook_php*) _this)->references.AddReference(parent1, "wxToolbook::wxToolbook at call with 6 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(pos1, "wxToolbook::wxToolbook at call with 6 argument(s)");
+				((wxToolbook_php*) _this)->references.AddReference(size1, "wxToolbook::wxToolbook at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -6040,7 +6115,7 @@ PHP_METHOD(php_wxToolbook, GetToolBar)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxToolbook::GetToolBar at call with 0 argument(s)");
 				}
 
 
@@ -6172,7 +6247,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::AddPage at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6184,7 +6259,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::AddPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6196,7 +6271,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::AddPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -6319,7 +6394,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::AddSubPage at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6331,7 +6406,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::AddSubPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6343,7 +6418,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::AddSubPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -6603,7 +6678,7 @@ PHP_METHOD(php_wxTreebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxTreebook::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6615,8 +6690,8 @@ PHP_METHOD(php_wxTreebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxTreebook::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxTreebook::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6628,9 +6703,9 @@ PHP_METHOD(php_wxTreebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxTreebook::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxTreebook::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxTreebook::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -6642,9 +6717,9 @@ PHP_METHOD(php_wxTreebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxTreebook::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxTreebook::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxTreebook::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -6656,9 +6731,9 @@ PHP_METHOD(php_wxTreebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxTreebook::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxTreebook::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxTreebook::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -7193,7 +7268,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::InsertPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7205,7 +7280,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::InsertPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -7217,7 +7292,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::InsertPage at call with 5 argument(s)");
 
 				return;
 				break;
@@ -7341,7 +7416,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::InsertSubPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7353,7 +7428,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::InsertSubPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -7365,7 +7440,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxTreebook::InsertSubPage at call with 5 argument(s)");
 
 				return;
 				break;
@@ -7625,7 +7700,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxTreebook_php*) _this)->references.Initialize();
-				((wxTreebook_php*) _this)->references.AddReference(parent1);
+				((wxTreebook_php*) _this)->references.AddReference(parent1, "wxTreebook::wxTreebook at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -7636,8 +7711,8 @@ PHP_METHOD(php_wxTreebook, __construct)
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxTreebook_php*) _this)->references.Initialize();
-				((wxTreebook_php*) _this)->references.AddReference(parent1);
-				((wxTreebook_php*) _this)->references.AddReference(pos1);
+				((wxTreebook_php*) _this)->references.AddReference(parent1, "wxTreebook::wxTreebook at call with 3 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(pos1, "wxTreebook::wxTreebook at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -7648,9 +7723,9 @@ PHP_METHOD(php_wxTreebook, __construct)
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxTreebook_php*) _this)->references.Initialize();
-				((wxTreebook_php*) _this)->references.AddReference(parent1);
-				((wxTreebook_php*) _this)->references.AddReference(pos1);
-				((wxTreebook_php*) _this)->references.AddReference(size1);
+				((wxTreebook_php*) _this)->references.AddReference(parent1, "wxTreebook::wxTreebook at call with 4 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(pos1, "wxTreebook::wxTreebook at call with 4 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(size1, "wxTreebook::wxTreebook at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -7661,9 +7736,9 @@ PHP_METHOD(php_wxTreebook, __construct)
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxTreebook_php*) _this)->references.Initialize();
-				((wxTreebook_php*) _this)->references.AddReference(parent1);
-				((wxTreebook_php*) _this)->references.AddReference(pos1);
-				((wxTreebook_php*) _this)->references.AddReference(size1);
+				((wxTreebook_php*) _this)->references.AddReference(parent1, "wxTreebook::wxTreebook at call with 5 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(pos1, "wxTreebook::wxTreebook at call with 5 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(size1, "wxTreebook::wxTreebook at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -7674,9 +7749,9 @@ PHP_METHOD(php_wxTreebook, __construct)
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxTreebook_php*) _this)->references.Initialize();
-				((wxTreebook_php*) _this)->references.AddReference(parent1);
-				((wxTreebook_php*) _this)->references.AddReference(pos1);
-				((wxTreebook_php*) _this)->references.AddReference(size1);
+				((wxTreebook_php*) _this)->references.AddReference(parent1, "wxTreebook::wxTreebook at call with 6 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(pos1, "wxTreebook::wxTreebook at call with 6 argument(s)");
+				((wxTreebook_php*) _this)->references.AddReference(size1, "wxTreebook::wxTreebook at call with 6 argument(s)");
 				break;
 			}
 		}

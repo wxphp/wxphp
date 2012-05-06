@@ -118,6 +118,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxEvent_entry);
@@ -127,7 +128,15 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -135,11 +144,12 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 		
 		wxMessageBox("Failed to call virtual method 'wxEventFilter::FilterEvent'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2177,7 +2187,7 @@ PHP_METHOD(php_wxAuiManagerEvent, SetPane)
 				#endif
 				((wxAuiManagerEvent_php*)_this)->SetPane((wxAuiPaneInfo*) object_pointer0_0);
 
-				references->AddReference(pane0);
+				references->AddReference(pane0, "wxAuiManagerEvent::SetPane at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2296,7 +2306,7 @@ PHP_METHOD(php_wxAuiManagerEvent, SetManager)
 				#endif
 				((wxAuiManagerEvent_php*)_this)->SetManager((wxAuiManager*) object_pointer0_0);
 
-				references->AddReference(manager0);
+				references->AddReference(manager0, "wxAuiManagerEvent::SetManager at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2414,7 +2424,7 @@ PHP_METHOD(php_wxAuiManagerEvent, SetDC)
 				#endif
 				((wxAuiManagerEvent_php*)_this)->SetDC((wxDC*) object_pointer0_0);
 
-				references->AddReference(pdc0);
+				references->AddReference(pdc0, "wxAuiManagerEvent::SetDC at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2827,7 +2837,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetPane)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManagerEvent::GetPane at call with 0 argument(s)");
 				}
 
 
@@ -2945,7 +2955,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetManager)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManagerEvent::GetManager at call with 0 argument(s)");
 				}
 
 
@@ -3063,7 +3073,7 @@ PHP_METHOD(php_wxAuiManagerEvent, GetDC)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManagerEvent::GetDC at call with 0 argument(s)");
 				}
 
 
@@ -3758,7 +3768,7 @@ PHP_METHOD(php_wxColourPickerEvent, SetColour)
 				#endif
 				((wxColourPickerEvent_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(pos0);
+				references->AddReference(pos0, "wxColourPickerEvent::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3865,8 +3875,8 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 				_this = new wxColourPickerEvent_php((wxObject*) object_pointer0_0, (int) id0, *(wxColour*) object_pointer0_2);
 
 				((wxColourPickerEvent_php*) _this)->references.Initialize();
-				((wxColourPickerEvent_php*) _this)->references.AddReference(generator0);
-				((wxColourPickerEvent_php*) _this)->references.AddReference(colour0);
+				((wxColourPickerEvent_php*) _this)->references.AddReference(generator0, "wxColourPickerEvent::wxColourPickerEvent at call with 3 argument(s)");
+				((wxColourPickerEvent_php*) _this)->references.AddReference(colour0, "wxColourPickerEvent::wxColourPickerEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -4212,7 +4222,7 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 				_this = new wxCollapsiblePaneEvent_php((wxObject*) object_pointer0_0, (int) id0, collapsed0);
 
 				((wxCollapsiblePaneEvent_php*) _this)->references.Initialize();
-				((wxCollapsiblePaneEvent_php*) _this)->references.AddReference(generator0);
+				((wxCollapsiblePaneEvent_php*) _this)->references.AddReference(generator0, "wxCollapsiblePaneEvent::wxCollapsiblePaneEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -4969,7 +4979,7 @@ PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewEvent::GetDataViewColumn at call with 0 argument(s)");
 				}
 
 
@@ -5088,7 +5098,7 @@ PHP_METHOD(php_wxDataViewEvent, GetModel)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewEvent::GetModel at call with 0 argument(s)");
 				}
 
 
@@ -5305,7 +5315,7 @@ PHP_METHOD(php_wxDataViewEvent, GetValue)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewEvent::GetValue at call with 0 argument(s)");
 				}
 
 
@@ -5623,7 +5633,7 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 				#endif
 				((wxDataViewEvent_php*)_this)->SetDataObject((wxDataObject*) object_pointer0_0);
 
-				references->AddReference(obj0);
+				references->AddReference(obj0, "wxDataViewEvent::SetDataObject at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5742,7 +5752,7 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 				#endif
 				((wxDataViewEvent_php*)_this)->SetDataViewColumn((wxDataViewColumn*) object_pointer0_0);
 
-				references->AddReference(col0);
+				references->AddReference(col0, "wxDataViewEvent::SetDataViewColumn at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5861,7 +5871,7 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 				#endif
 				((wxDataViewEvent_php*)_this)->SetModel((wxDataViewModel*) object_pointer0_0);
 
-				references->AddReference(model0);
+				references->AddReference(model0, "wxDataViewEvent::SetModel at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5980,7 +5990,7 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 				#endif
 				((wxDataViewEvent_php*)_this)->SetValue(*(wxVariant*) object_pointer0_0);
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxDataViewEvent::SetValue at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7156,7 +7166,7 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxEvent::GetEventObject at call with 0 argument(s)");
 				}
 
 
@@ -9790,7 +9800,7 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 				#endif
 				((wxEvent_php*)_this)->SetEventObject((wxObject*) object_pointer0_0);
 
-				references->AddReference(object0);
+				references->AddReference(object0, "wxEvent::SetEventObject at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12274,6 +12284,7 @@ wxEvent* wxEvent_php::Clone()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -12281,7 +12292,10 @@ wxEvent* wxEvent_php::Clone()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -12289,15 +12303,21 @@ wxEvent* wxEvent_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'wxEvent::Clone'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxEvent_php* var = (wxEvent_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxEvent*) return_object;
 	
 }
@@ -12516,7 +12536,7 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 				_this = new wxEventBlocker_php((wxWindow*) object_pointer0_0);
 
 				((wxEventBlocker_php*) _this)->references.Initialize();
-				((wxEventBlocker_php*) _this)->references.AddReference(win0);
+				((wxEventBlocker_php*) _this)->references.AddReference(win0, "wxEventBlocker::wxEventBlocker at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -12527,7 +12547,7 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 				_this = new wxEventBlocker_php((wxWindow*) object_pointer0_0, (wxEventType) type0);
 
 				((wxEventBlocker_php*) _this)->references.Initialize();
-				((wxEventBlocker_php*) _this)->references.AddReference(win0);
+				((wxEventBlocker_php*) _this)->references.AddReference(win0, "wxEventBlocker::wxEventBlocker at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -14827,7 +14847,7 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 				#endif
 				((wxEvtHandler_php*)_this)->AddPendingEvent(*(wxEvent*) object_pointer0_0);
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxEvtHandler::AddPendingEvent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16696,7 +16716,7 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxEvtHandler::GetNextHandler at call with 0 argument(s)");
 				}
 
 
@@ -17335,7 +17355,7 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxEvtHandler::GetPreviousHandler at call with 0 argument(s)");
 				}
 
 
@@ -18592,7 +18612,7 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 				#endif
 				ZVAL_BOOL(return_value, ((wxEvtHandler_php*)_this)->ProcessEvent(*(wxEvent*) object_pointer0_0));
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxEvtHandler::ProcessEvent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19231,7 +19251,7 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 				#endif
 				ZVAL_BOOL(return_value, ((wxEvtHandler_php*)_this)->ProcessEventLocally(*(wxEvent*) object_pointer0_0));
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxEvtHandler::ProcessEventLocally at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20486,7 +20506,7 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 				#endif
 				((wxEvtHandler_php*)_this)->QueueEvent((wxEvent*) object_pointer0_0);
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxEvtHandler::QueueEvent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21764,7 +21784,7 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 				#endif
 				ZVAL_BOOL(return_value, ((wxEvtHandler_php*)_this)->SafelyProcessEvent(*(wxEvent*) object_pointer0_0));
 
-				references->AddReference(event0);
+				references->AddReference(event0, "wxEvtHandler::SafelyProcessEvent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23024,7 +23044,7 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 				#endif
 				((wxEvtHandler_php*)_this)->SetNextHandler((wxEvtHandler*) object_pointer0_0);
 
-				references->AddReference(handler0);
+				references->AddReference(handler0, "wxEvtHandler::SetNextHandler at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23663,7 +23683,7 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 				#endif
 				((wxEvtHandler_php*)_this)->SetPreviousHandler((wxEvtHandler*) object_pointer0_0);
 
-				references->AddReference(handler0);
+				references->AddReference(handler0, "wxEvtHandler::SetPreviousHandler at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23707,6 +23727,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxEvent_entry);
@@ -23716,7 +23737,15 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -23769,6 +23798,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxEvent_entry);
@@ -23778,7 +23808,15 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -26305,7 +26343,7 @@ PHP_METHOD(php_wxWindowCreateEvent, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWindowCreateEvent::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -26405,7 +26443,7 @@ PHP_METHOD(php_wxWindowCreateEvent, __construct)
 				_this = new wxWindowCreateEvent_php((wxWindow*) object_pointer0_0);
 
 				((wxWindowCreateEvent_php*) _this)->references.Initialize();
-				((wxWindowCreateEvent_php*) _this)->references.AddReference(win0);
+				((wxWindowCreateEvent_php*) _this)->references.AddReference(win0, "wxWindowCreateEvent::wxWindowCreateEvent at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -30441,7 +30479,7 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 				object_init_ex(return_value, php_wxPoint_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxPoint));
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxMouseEvent::GetLogicalPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -35095,7 +35133,7 @@ PHP_METHOD(php_wxContextMenuEvent, GetPosition)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxContextMenuEvent::GetPosition at call with 0 argument(s)");
 				}
 
 
@@ -35216,7 +35254,7 @@ PHP_METHOD(php_wxContextMenuEvent, SetPosition)
 				#endif
 				((wxContextMenuEvent_php*)_this)->SetPosition(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(point0);
+				references->AddReference(point0, "wxContextMenuEvent::SetPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -35336,7 +35374,7 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 				_this = new wxContextMenuEvent_php((wxEventType) type0, (int) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxContextMenuEvent_php*) _this)->references.Initialize();
-				((wxContextMenuEvent_php*) _this)->references.AddReference(pos0);
+				((wxContextMenuEvent_php*) _this)->references.AddReference(pos0, "wxContextMenuEvent::wxContextMenuEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -35512,7 +35550,7 @@ PHP_METHOD(php_wxEraseEvent, GetDC)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxEraseEvent::GetDC at call with 0 argument(s)");
 				}
 
 
@@ -35623,7 +35661,7 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 				_this = new wxEraseEvent_php((int) id0, (wxDC*) object_pointer0_1);
 
 				((wxEraseEvent_php*) _this)->references.Initialize();
-				((wxEraseEvent_php*) _this)->references.AddReference(dc0);
+				((wxEraseEvent_php*) _this)->references.AddReference(dc0, "wxEraseEvent::wxEraseEvent at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -35799,7 +35837,7 @@ PHP_METHOD(php_wxFocusEvent, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFocusEvent::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -35919,7 +35957,7 @@ PHP_METHOD(php_wxFocusEvent, SetWindow)
 				#endif
 				((wxFocusEvent_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(win0);
+				references->AddReference(win0, "wxFocusEvent::SetWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -36186,7 +36224,7 @@ PHP_METHOD(php_wxChildFocusEvent, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxChildFocusEvent::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -36286,7 +36324,7 @@ PHP_METHOD(php_wxChildFocusEvent, __construct)
 				_this = new wxChildFocusEvent_php((wxWindow*) object_pointer0_0);
 
 				((wxChildFocusEvent_php*) _this)->references.Initialize();
-				((wxChildFocusEvent_php*) _this)->references.AddReference(win0);
+				((wxChildFocusEvent_php*) _this)->references.AddReference(win0, "wxChildFocusEvent::wxChildFocusEvent at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -37092,7 +37130,7 @@ PHP_METHOD(php_wxThreadEvent, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxThreadEvent::Clone at call with 0 argument(s)");
 				}
 
 
@@ -38148,7 +38186,7 @@ PHP_METHOD(php_wxHelpEvent, GetPosition)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHelpEvent::GetPosition at call with 0 argument(s)");
 				}
 
 
@@ -38370,7 +38408,7 @@ PHP_METHOD(php_wxHelpEvent, SetPosition)
 				#endif
 				((wxHelpEvent_php*)_this)->SetPosition(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxHelpEvent::SetPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -38491,7 +38529,7 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 				_this = new wxHelpEvent_php((wxEventType) type0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2);
 
 				((wxHelpEvent_php*) _this)->references.Initialize();
-				((wxHelpEvent_php*) _this)->references.AddReference(pt0);
+				((wxHelpEvent_php*) _this)->references.AddReference(pt0, "wxHelpEvent::wxHelpEvent at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -38502,7 +38540,7 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 				_this = new wxHelpEvent_php((wxEventType) type0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, (wxHelpEvent::Origin) origin0);
 
 				((wxHelpEvent_php*) _this)->references.Initialize();
-				((wxHelpEvent_php*) _this)->references.AddReference(pt0);
+				((wxHelpEvent_php*) _this)->references.AddReference(pt0, "wxHelpEvent::wxHelpEvent at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -39912,7 +39950,7 @@ PHP_METHOD(php_wxWindowDestroyEvent, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWindowDestroyEvent::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -40012,7 +40050,7 @@ PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 				_this = new wxWindowDestroyEvent_php((wxWindow*) object_pointer0_0);
 
 				((wxWindowDestroyEvent_php*) _this)->references.Initialize();
-				((wxWindowDestroyEvent_php*) _this)->references.AddReference(win0);
+				((wxWindowDestroyEvent_php*) _this)->references.AddReference(win0, "wxWindowDestroyEvent::wxWindowDestroyEvent at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -40188,7 +40226,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetCurrentFocus)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxNavigationKeyEvent::GetCurrentFocus at call with 0 argument(s)");
 				}
 
 
@@ -40597,7 +40635,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetCurrentFocus)
 				#endif
 				((wxNavigationKeyEvent_php*)_this)->SetCurrentFocus((wxWindow*) object_pointer0_0);
 
-				references->AddReference(currentFocus0);
+				references->AddReference(currentFocus0, "wxNavigationKeyEvent::SetCurrentFocus at call with 1 argument(s)");
 
 				return;
 				break;
@@ -41897,7 +41935,7 @@ PHP_METHOD(php_wxMenuEvent, GetMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuEvent::GetMenu at call with 0 argument(s)");
 				}
 
 
@@ -42211,7 +42249,7 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 				_this = new wxMenuEvent_php((wxEventType) type0, (int) id0, (wxMenu*) object_pointer0_2);
 
 				((wxMenuEvent_php*) _this)->references.Initialize();
-				((wxMenuEvent_php*) _this)->references.AddReference(menu0);
+				((wxMenuEvent_php*) _this)->references.AddReference(menu0, "wxMenuEvent::wxMenuEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -42589,7 +42627,7 @@ PHP_METHOD(php_wxMoveEvent, SetPosition)
 				#endif
 				((wxMoveEvent_php*)_this)->SetPosition(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pos0);
+				references->AddReference(pos0, "wxMoveEvent::SetPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -42707,7 +42745,7 @@ PHP_METHOD(php_wxMoveEvent, SetRect)
 				#endif
 				((wxMoveEvent_php*)_this)->SetRect(*(wxRect*) object_pointer0_0);
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxMoveEvent::SetRect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -42796,7 +42834,7 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 				_this = new wxMoveEvent_php(*(wxPoint*) object_pointer0_0);
 
 				((wxMoveEvent_php*) _this)->references.Initialize();
-				((wxMoveEvent_php*) _this)->references.AddReference(pt0);
+				((wxMoveEvent_php*) _this)->references.AddReference(pt0, "wxMoveEvent::wxMoveEvent at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -42807,7 +42845,7 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 				_this = new wxMoveEvent_php(*(wxPoint*) object_pointer0_0, (int) id0);
 
 				((wxMoveEvent_php*) _this)->references.Initialize();
-				((wxMoveEvent_php*) _this)->references.AddReference(pt0);
+				((wxMoveEvent_php*) _this)->references.AddReference(pt0, "wxMoveEvent::wxMoveEvent at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -43390,7 +43428,7 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 				_this = new wxSizeEvent_php(*(wxSize*) object_pointer0_0);
 
 				((wxSizeEvent_php*) _this)->references.Initialize();
-				((wxSizeEvent_php*) _this)->references.AddReference(sz0);
+				((wxSizeEvent_php*) _this)->references.AddReference(sz0, "wxSizeEvent::wxSizeEvent at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -43401,7 +43439,7 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 				_this = new wxSizeEvent_php(*(wxSize*) object_pointer0_0, (int) id0);
 
 				((wxSizeEvent_php*) _this)->references.Initialize();
-				((wxSizeEvent_php*) _this)->references.AddReference(sz0);
+				((wxSizeEvent_php*) _this)->references.AddReference(sz0, "wxSizeEvent::wxSizeEvent at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -43574,7 +43612,7 @@ PHP_METHOD(php_wxSetCursorEvent, GetCursor)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSetCursorEvent::GetCursor at call with 0 argument(s)");
 				}
 
 
@@ -43983,7 +44021,7 @@ PHP_METHOD(php_wxSetCursorEvent, SetCursor)
 				#endif
 				((wxSetCursorEvent_php*)_this)->SetCursor(*(wxCursor*) object_pointer0_0);
 
-				references->AddReference(cursor0);
+				references->AddReference(cursor0, "wxSetCursorEvent::SetCursor at call with 1 argument(s)");
 
 				return;
 				break;
@@ -44951,7 +44989,7 @@ PHP_METHOD(php_wxFileCtrlEvent, __construct)
 				_this = new wxFileCtrlEvent_php((wxEventType) type0, (wxObject*) object_pointer0_1, (int) id0);
 
 				((wxFileCtrlEvent_php*) _this)->references.Initialize();
-				((wxFileCtrlEvent_php*) _this)->references.AddReference(evtObject0);
+				((wxFileCtrlEvent_php*) _this)->references.AddReference(evtObject0, "wxFileCtrlEvent::wxFileCtrlEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -45306,7 +45344,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 				_this = new wxFileDirPickerEvent_php((wxEventType) type0, (wxObject*) object_pointer0_1, (int) id0, wxString(path0, wxConvUTF8));
 
 				((wxFileDirPickerEvent_php*) _this)->references.Initialize();
-				((wxFileDirPickerEvent_php*) _this)->references.AddReference(generator0);
+				((wxFileDirPickerEvent_php*) _this)->references.AddReference(generator0, "wxFileDirPickerEvent::wxFileDirPickerEvent at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -45585,7 +45623,7 @@ PHP_METHOD(php_wxFontPickerEvent, SetFont)
 				#endif
 				((wxFontPickerEvent_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(f0);
+				references->AddReference(f0, "wxFontPickerEvent::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -45692,8 +45730,8 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 				_this = new wxFontPickerEvent_php((wxObject*) object_pointer0_0, (int) id0, *(wxFont*) object_pointer0_2);
 
 				((wxFontPickerEvent_php*) _this)->references.Initialize();
-				((wxFontPickerEvent_php*) _this)->references.AddReference(generator0);
-				((wxFontPickerEvent_php*) _this)->references.AddReference(font0);
+				((wxFontPickerEvent_php*) _this)->references.AddReference(generator0, "wxFontPickerEvent::wxFontPickerEvent at call with 3 argument(s)");
+				((wxFontPickerEvent_php*) _this)->references.AddReference(font0, "wxFontPickerEvent::wxFontPickerEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -46073,7 +46111,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetNewPath)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFileSystemWatcherEvent::GetNewPath at call with 0 argument(s)");
 				}
 
 
@@ -46192,7 +46230,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetPath)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFileSystemWatcherEvent::GetPath at call with 0 argument(s)");
 				}
 
 
@@ -47355,7 +47393,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -47366,7 +47404,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -47377,7 +47415,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1, (int) col1);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -47388,7 +47426,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1, (int) col1, (int) x1);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -47399,7 +47437,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1, (int) col1, (int) x1, (int) y1);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -47410,7 +47448,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1, (int) col1, (int) x1, (int) y1, sel1);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -47421,8 +47459,8 @@ PHP_METHOD(php_wxGridEvent, __construct)
 				_this = new wxGridEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1, (int) col1, (int) x1, (int) y1, sel1, *(wxKeyboardState*) object_pointer1_8);
 
 				((wxGridEvent_php*) _this)->references.Initialize();
-				((wxGridEvent_php*) _this)->references.AddReference(obj1);
-				((wxGridEvent_php*) _this)->references.AddReference(kbd1);
+				((wxGridEvent_php*) _this)->references.AddReference(obj1, "wxGridEvent::wxGridEvent at call with 9 argument(s)");
+				((wxGridEvent_php*) _this)->references.AddReference(kbd1, "wxGridEvent::wxGridEvent at call with 9 argument(s)");
 				break;
 			}
 		}
@@ -48204,7 +48242,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 				_this = new wxGridSizeEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2);
 
 				((wxGridSizeEvent_php*) _this)->references.Initialize();
-				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1, "wxGridSizeEvent::wxGridSizeEvent at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -48215,7 +48253,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 				_this = new wxGridSizeEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) rowOrCol1);
 
 				((wxGridSizeEvent_php*) _this)->references.Initialize();
-				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1, "wxGridSizeEvent::wxGridSizeEvent at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -48226,7 +48264,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 				_this = new wxGridSizeEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) rowOrCol1, (int) x1);
 
 				((wxGridSizeEvent_php*) _this)->references.Initialize();
-				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1, "wxGridSizeEvent::wxGridSizeEvent at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -48237,7 +48275,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 				_this = new wxGridSizeEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) rowOrCol1, (int) x1, (int) y1);
 
 				((wxGridSizeEvent_php*) _this)->references.Initialize();
-				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1);
+				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1, "wxGridSizeEvent::wxGridSizeEvent at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -48248,8 +48286,8 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 				_this = new wxGridSizeEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) rowOrCol1, (int) x1, (int) y1, *(wxKeyboardState*) object_pointer1_6);
 
 				((wxGridSizeEvent_php*) _this)->references.Initialize();
-				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1);
-				((wxGridSizeEvent_php*) _this)->references.AddReference(kbd1);
+				((wxGridSizeEvent_php*) _this)->references.AddReference(obj1, "wxGridSizeEvent::wxGridSizeEvent at call with 7 argument(s)");
+				((wxGridSizeEvent_php*) _this)->references.AddReference(kbd1, "wxGridSizeEvent::wxGridSizeEvent at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -49509,7 +49547,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetControl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridEditorCreatedEvent::GetControl at call with 0 argument(s)");
 				}
 
 
@@ -49827,7 +49865,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetControl)
 				#endif
 				((wxGridEditorCreatedEvent_php*)_this)->SetControl((wxControl*) object_pointer0_0);
 
-				references->AddReference(ctrl0);
+				references->AddReference(ctrl0, "wxGridEditorCreatedEvent::SetControl at call with 1 argument(s)");
 
 				return;
 				break;
@@ -50069,8 +50107,8 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 				_this = new wxGridEditorCreatedEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, (int) row1, (int) col1, (wxControl*) object_pointer1_5);
 
 				((wxGridEditorCreatedEvent_php*) _this)->references.Initialize();
-				((wxGridEditorCreatedEvent_php*) _this)->references.AddReference(obj1);
-				((wxGridEditorCreatedEvent_php*) _this)->references.AddReference(ctrl1);
+				((wxGridEditorCreatedEvent_php*) _this)->references.AddReference(obj1, "wxGridEditorCreatedEvent::wxGridEditorCreatedEvent at call with 6 argument(s)");
+				((wxGridEditorCreatedEvent_php*) _this)->references.AddReference(ctrl1, "wxGridEditorCreatedEvent::wxGridEditorCreatedEvent at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -50761,7 +50799,7 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
 				_this = new wxHyperlinkEvent_php((wxObject*) object_pointer0_0, (int) id0, wxString(url0, wxConvUTF8));
 
 				((wxHyperlinkEvent_php*) _this)->references.Initialize();
-				((wxHyperlinkEvent_php*) _this)->references.AddReference(generator0);
+				((wxHyperlinkEvent_php*) _this)->references.AddReference(generator0, "wxHyperlinkEvent::wxHyperlinkEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -51828,7 +51866,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetSize)
 				#endif
 				((wxQueryLayoutInfoEvent_php*)_this)->SetSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxQueryLayoutInfoEvent::SetSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -52384,7 +52422,7 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetRect)
 				#endif
 				((wxCalculateLayoutEvent_php*)_this)->SetRect(*(wxRect*) object_pointer0_0);
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxCalculateLayoutEvent::SetRect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -53213,7 +53251,7 @@ PHP_METHOD(php_wxListEvent, GetItem)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxListEvent::GetItem at call with 0 argument(s)");
 				}
 
 
@@ -54077,7 +54115,7 @@ PHP_METHOD(php_wxMouseEventsManager, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMouseEventsManager_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(win0);
+				references->AddReference(win0, "wxMouseEventsManager::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -54121,6 +54159,7 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54129,7 +54168,15 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54182,6 +54229,7 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54190,7 +54238,15 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54243,6 +54299,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54251,7 +54308,15 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54259,11 +54324,12 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 		
 		wxMessageBox("Failed to call virtual method 'wxMouseEventsManager::MouseClicked'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -54295,6 +54361,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54305,7 +54372,15 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54313,11 +54388,12 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'wxMouseEventsManager::MouseDragBegin'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -54349,6 +54425,7 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54357,7 +54434,15 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54365,11 +54450,12 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 		
 		wxMessageBox("Failed to call virtual method 'wxMouseEventsManager::MouseDragCancelled'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -54401,6 +54487,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54411,7 +54498,15 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54419,11 +54514,12 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'wxMouseEventsManager::MouseDragEnd'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -54455,6 +54551,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
@@ -54465,7 +54562,15 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54473,11 +54578,12 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'wxMouseEventsManager::MouseDragging'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -54509,6 +54615,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxPoint_entry);
@@ -54518,7 +54625,15 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -54526,11 +54641,12 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'wxMouseEventsManager::MouseHitTest'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -54637,7 +54753,7 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 				_this = new wxMouseEventsManager_php((wxWindow*) object_pointer1_0);
 
 				((wxMouseEventsManager_php*) _this)->references.Initialize();
-				((wxMouseEventsManager_php*) _this)->references.AddReference(win1);
+				((wxMouseEventsManager_php*) _this)->references.AddReference(win1, "wxMouseEventsManager::wxMouseEventsManager at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -56264,7 +56380,7 @@ PHP_METHOD(php_wxMouseState, SetState)
 				#endif
 				((wxMouseState_php*)_this)->SetState(*(wxMouseState*) object_pointer0_0);
 
-				references->AddReference(state0);
+				references->AddReference(state0, "wxMouseState::SetState at call with 1 argument(s)");
 
 				return;
 				break;
@@ -57066,7 +57182,7 @@ PHP_METHOD(php_wxRibbonBarEvent, GetPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonBarEvent::GetPage at call with 0 argument(s)");
 				}
 
 
@@ -57187,7 +57303,7 @@ PHP_METHOD(php_wxRibbonBarEvent, SetPage)
 				#endif
 				((wxRibbonBarEvent_php*)_this)->SetPage((wxRibbonPage*) object_pointer0_0);
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxRibbonBarEvent::SetPage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -57307,7 +57423,7 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 				_this = new wxRibbonBarEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonPage*) object_pointer0_2);
 
 				((wxRibbonBarEvent_php*) _this)->references.Initialize();
-				((wxRibbonBarEvent_php*) _this)->references.AddReference(page0);
+				((wxRibbonBarEvent_php*) _this)->references.AddReference(page0, "wxRibbonBarEvent::wxRibbonBarEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -57483,7 +57599,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonButtonBarEvent::GetBar at call with 0 argument(s)");
 				}
 
 
@@ -57604,7 +57720,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
 				#endif
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBarEvent_php*)_this)->PopupMenu((wxMenu*) object_pointer0_0));
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxRibbonButtonBarEvent::PopupMenu at call with 1 argument(s)");
 
 				return;
 				break;
@@ -57723,7 +57839,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 				#endif
 				((wxRibbonButtonBarEvent_php*)_this)->SetBar((wxRibbonButtonBar*) object_pointer0_0);
 
-				references->AddReference(bar0);
+				references->AddReference(bar0, "wxRibbonButtonBarEvent::SetBar at call with 1 argument(s)");
 
 				return;
 				break;
@@ -57843,7 +57959,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 				_this = new wxRibbonButtonBarEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2);
 
 				((wxRibbonButtonBarEvent_php*) _this)->references.Initialize();
-				((wxRibbonButtonBarEvent_php*) _this)->references.AddReference(bar0);
+				((wxRibbonButtonBarEvent_php*) _this)->references.AddReference(bar0, "wxRibbonButtonBarEvent::wxRibbonButtonBarEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -58019,7 +58135,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGallery)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGalleryEvent::GetGallery at call with 0 argument(s)");
 				}
 
 
@@ -58138,7 +58254,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGalleryItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxRibbonGalleryEvent::GetGalleryItem at call with 0 argument(s)");
 				}
 
 
@@ -58259,7 +58375,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGallery)
 				#endif
 				((wxRibbonGalleryEvent_php*)_this)->SetGallery((wxRibbonGallery*) object_pointer0_0);
 
-				references->AddReference(gallery0);
+				references->AddReference(gallery0, "wxRibbonGalleryEvent::SetGallery at call with 1 argument(s)");
 
 				return;
 				break;
@@ -58378,7 +58494,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGalleryItem)
 				#endif
 				((wxRibbonGalleryEvent_php*)_this)->SetGalleryItem((wxRibbonGalleryItem*) object_pointer0_0);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxRibbonGalleryEvent::SetGalleryItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -58516,7 +58632,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 				_this = new wxRibbonGalleryEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonGallery*) object_pointer0_2);
 
 				((wxRibbonGalleryEvent_php*) _this)->references.Initialize();
-				((wxRibbonGalleryEvent_php*) _this)->references.AddReference(gallery0);
+				((wxRibbonGalleryEvent_php*) _this)->references.AddReference(gallery0, "wxRibbonGalleryEvent::wxRibbonGalleryEvent at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -58527,8 +58643,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 				_this = new wxRibbonGalleryEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonGallery*) object_pointer0_2, (wxRibbonGalleryItem*) object_pointer0_3);
 
 				((wxRibbonGalleryEvent_php*) _this)->references.Initialize();
-				((wxRibbonGalleryEvent_php*) _this)->references.AddReference(gallery0);
-				((wxRibbonGalleryEvent_php*) _this)->references.AddReference(item0);
+				((wxRibbonGalleryEvent_php*) _this)->references.AddReference(gallery0, "wxRibbonGalleryEvent::wxRibbonGalleryEvent at call with 4 argument(s)");
+				((wxRibbonGalleryEvent_php*) _this)->references.AddReference(item0, "wxRibbonGalleryEvent::wxRibbonGalleryEvent at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -59486,7 +59602,7 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 				_this = new wxSpinDoubleEvent_php(*(wxSpinDoubleEvent*) object_pointer0_0);
 
 				((wxSpinDoubleEvent_php*) _this)->references.Initialize();
-				((wxSpinDoubleEvent_php*) _this)->references.AddReference(event0);
+				((wxSpinDoubleEvent_php*) _this)->references.AddReference(event0, "wxSpinDoubleEvent::wxSpinDoubleEvent at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -60002,7 +60118,7 @@ PHP_METHOD(php_wxSplitterEvent, GetWindowBeingRemoved)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSplitterEvent::GetWindowBeingRemoved at call with 0 argument(s)");
 				}
 
 
@@ -60406,7 +60522,7 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 				_this = new wxSplitterEvent_php((wxEventType) eventType0, (wxSplitterWindow*) object_pointer0_1);
 
 				((wxSplitterEvent_php*) _this)->references.Initialize();
-				((wxSplitterEvent_php*) _this)->references.AddReference(splitter0);
+				((wxSplitterEvent_php*) _this)->references.AddReference(splitter0, "wxSplitterEvent::wxSplitterEvent at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -60610,7 +60726,7 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 				_this = new wxStyledTextEvent_php(*(wxStyledTextEvent*) object_pointer1_0);
 
 				((wxStyledTextEvent_php*) _this)->references.Initialize();
-				((wxStyledTextEvent_php*) _this)->references.AddReference(event1);
+				((wxStyledTextEvent_php*) _this)->references.AddReference(event1, "wxStyledTextEvent::wxStyledTextEvent at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -64957,7 +65073,7 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 				_this = new wxTaskBarIconEvent_php((wxEventType) evtType0, (wxTaskBarIcon*) object_pointer0_1);
 
 				((wxTaskBarIconEvent_php*) _this)->references.Initialize();
-				((wxTaskBarIconEvent_php*) _this)->references.AddReference(tbIcon0);
+				((wxTaskBarIconEvent_php*) _this)->references.AddReference(tbIcon0, "wxTaskBarIconEvent::wxTaskBarIconEvent at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -65230,7 +65346,7 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 				_this = new wxTimerEvent_php(*(wxTimer*) object_pointer1_0);
 
 				((wxTimerEvent_php*) _this)->references.Initialize();
-				((wxTimerEvent_php*) _this)->references.AddReference(timer1);
+				((wxTimerEvent_php*) _this)->references.AddReference(timer1, "wxTimerEvent::wxTimerEvent at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -65600,7 +65716,7 @@ PHP_METHOD(php_wxTreeEvent, GetKeyEvent)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTreeEvent::GetKeyEvent at call with 0 argument(s)");
 				}
 
 
@@ -66211,7 +66327,7 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 				_this = new wxTreeEvent_php((wxEventType) commandType0, (wxTreeCtrl*) object_pointer0_1);
 
 				((wxTreeEvent_php*) _this)->references.Initialize();
-				((wxTreeEvent_php*) _this)->references.AddReference(tree0);
+				((wxTreeEvent_php*) _this)->references.AddReference(tree0, "wxTreeEvent::wxTreeEvent at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -66222,8 +66338,8 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 				_this = new wxTreeEvent_php((wxEventType) commandType0, (wxTreeCtrl*) object_pointer0_1, *(wxTreeItemId*) object_pointer0_2);
 
 				((wxTreeEvent_php*) _this)->references.Initialize();
-				((wxTreeEvent_php*) _this)->references.AddReference(tree0);
-				((wxTreeEvent_php*) _this)->references.AddReference(item0);
+				((wxTreeEvent_php*) _this)->references.AddReference(tree0, "wxTreeEvent::wxTreeEvent at call with 3 argument(s)");
+				((wxTreeEvent_php*) _this)->references.AddReference(item0, "wxTreeEvent::wxTreeEvent at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -66877,7 +66993,7 @@ PHP_METHOD(php_wxWizardEvent, __construct)
 				_this = new wxWizardEvent_php((wxEventType) type0, (int) id0, direction0, (wxWizardPage*) object_pointer0_3);
 
 				((wxWizardEvent_php*) _this)->references.Initialize();
-				((wxWizardEvent_php*) _this)->references.AddReference(page0);
+				((wxWizardEvent_php*) _this)->references.AddReference(page0, "wxWizardEvent::wxWizardEvent at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -67013,7 +67129,7 @@ PHP_METHOD(php_wxWizardEvent, GetPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxWizardEvent::GetPage at call with 0 argument(s)");
 				}
 
 

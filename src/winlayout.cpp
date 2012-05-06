@@ -995,11 +995,11 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 2 argument(s)");
 				}
 
-				references->AddReference(window0);
-				references->AddReference(pos0);
+				references->AddReference(window0, "wxGridBagSizer::Add at call with 2 argument(s)");
+				references->AddReference(pos0, "wxGridBagSizer::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1031,12 +1031,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 3 argument(s)");
 				}
 
-				references->AddReference(window0);
-				references->AddReference(pos0);
-				references->AddReference(span0);
+				references->AddReference(window0, "wxGridBagSizer::Add at call with 3 argument(s)");
+				references->AddReference(pos0, "wxGridBagSizer::Add at call with 3 argument(s)");
+				references->AddReference(span0, "wxGridBagSizer::Add at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1068,12 +1068,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 4 argument(s)");
 				}
 
-				references->AddReference(window0);
-				references->AddReference(pos0);
-				references->AddReference(span0);
+				references->AddReference(window0, "wxGridBagSizer::Add at call with 4 argument(s)");
+				references->AddReference(pos0, "wxGridBagSizer::Add at call with 4 argument(s)");
+				references->AddReference(span0, "wxGridBagSizer::Add at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1105,12 +1105,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 5 argument(s)");
 				}
 
-				references->AddReference(window0);
-				references->AddReference(pos0);
-				references->AddReference(span0);
+				references->AddReference(window0, "wxGridBagSizer::Add at call with 5 argument(s)");
+				references->AddReference(pos0, "wxGridBagSizer::Add at call with 5 argument(s)");
+				references->AddReference(span0, "wxGridBagSizer::Add at call with 5 argument(s)");
 
 				return;
 				break;
@@ -1142,13 +1142,13 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 6 argument(s)");
 				}
 
-				references->AddReference(window0);
-				references->AddReference(pos0);
-				references->AddReference(span0);
-				references->AddReference(userData0);
+				references->AddReference(window0, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(pos0, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(span0, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(userData0, "wxGridBagSizer::Add at call with 6 argument(s)");
 
 				return;
 				break;
@@ -1187,11 +1187,11 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer1);
-				references->AddReference(pos1);
+				references->AddReference(sizer1, "wxGridBagSizer::Add at call with 2 argument(s)");
+				references->AddReference(pos1, "wxGridBagSizer::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1223,12 +1223,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 3 argument(s)");
 				}
 
-				references->AddReference(sizer1);
-				references->AddReference(pos1);
-				references->AddReference(span1);
+				references->AddReference(sizer1, "wxGridBagSizer::Add at call with 3 argument(s)");
+				references->AddReference(pos1, "wxGridBagSizer::Add at call with 3 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::Add at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1260,12 +1260,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 4 argument(s)");
 				}
 
-				references->AddReference(sizer1);
-				references->AddReference(pos1);
-				references->AddReference(span1);
+				references->AddReference(sizer1, "wxGridBagSizer::Add at call with 4 argument(s)");
+				references->AddReference(pos1, "wxGridBagSizer::Add at call with 4 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::Add at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1297,12 +1297,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 5 argument(s)");
 				}
 
-				references->AddReference(sizer1);
-				references->AddReference(pos1);
-				references->AddReference(span1);
+				references->AddReference(sizer1, "wxGridBagSizer::Add at call with 5 argument(s)");
+				references->AddReference(pos1, "wxGridBagSizer::Add at call with 5 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::Add at call with 5 argument(s)");
 
 				return;
 				break;
@@ -1334,13 +1334,13 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 6 argument(s)");
 				}
 
-				references->AddReference(sizer1);
-				references->AddReference(pos1);
-				references->AddReference(span1);
-				references->AddReference(userData1);
+				references->AddReference(sizer1, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(pos1, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(userData1, "wxGridBagSizer::Add at call with 6 argument(s)");
 
 				return;
 				break;
@@ -1379,10 +1379,10 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 3 argument(s)");
 				}
 
-				references->AddReference(pos2);
+				references->AddReference(pos2, "wxGridBagSizer::Add at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1414,11 +1414,11 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 4 argument(s)");
 				}
 
-				references->AddReference(pos2);
-				references->AddReference(span2);
+				references->AddReference(pos2, "wxGridBagSizer::Add at call with 4 argument(s)");
+				references->AddReference(span2, "wxGridBagSizer::Add at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1450,11 +1450,11 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 5 argument(s)");
 				}
 
-				references->AddReference(pos2);
-				references->AddReference(span2);
+				references->AddReference(pos2, "wxGridBagSizer::Add at call with 5 argument(s)");
+				references->AddReference(span2, "wxGridBagSizer::Add at call with 5 argument(s)");
 
 				return;
 				break;
@@ -1486,11 +1486,11 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 6 argument(s)");
 				}
 
-				references->AddReference(pos2);
-				references->AddReference(span2);
+				references->AddReference(pos2, "wxGridBagSizer::Add at call with 6 argument(s)");
+				references->AddReference(span2, "wxGridBagSizer::Add at call with 6 argument(s)");
 
 				return;
 				break;
@@ -1522,12 +1522,12 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return7 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 7 argument(s)");
 				}
 
-				references->AddReference(pos2);
-				references->AddReference(span2);
-				references->AddReference(userData2);
+				references->AddReference(pos2, "wxGridBagSizer::Add at call with 7 argument(s)");
+				references->AddReference(span2, "wxGridBagSizer::Add at call with 7 argument(s)");
+				references->AddReference(userData2, "wxGridBagSizer::Add at call with 7 argument(s)");
 
 				return;
 				break;
@@ -1566,10 +1566,10 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::Add at call with 1 argument(s)");
 				}
 
-				references->AddReference(item3);
+				references->AddReference(item3, "wxGridBagSizer::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1879,7 +1879,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0));
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxGridBagSizer::CheckForIntersection at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1891,8 +1891,8 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0, (wxGBSizerItem*) object_pointer0_1));
 
-				references->AddReference(item0);
-				references->AddReference(excludeItem0);
+				references->AddReference(item0, "wxGridBagSizer::CheckForIntersection at call with 2 argument(s)");
+				references->AddReference(excludeItem0, "wxGridBagSizer::CheckForIntersection at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1911,8 +1911,8 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
 
-				references->AddReference(pos1);
-				references->AddReference(span1);
+				references->AddReference(pos1, "wxGridBagSizer::CheckForIntersection at call with 2 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::CheckForIntersection at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1924,9 +1924,9 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1, (wxGBSizerItem*) object_pointer1_2));
 
-				references->AddReference(pos1);
-				references->AddReference(span1);
-				references->AddReference(excludeItem1);
+				references->AddReference(pos1, "wxGridBagSizer::CheckForIntersection at call with 3 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::CheckForIntersection at call with 3 argument(s)");
+				references->AddReference(excludeItem1, "wxGridBagSizer::CheckForIntersection at call with 3 argument(s)");
 
 				return;
 				break;
@@ -2101,10 +2101,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::FindItem at call with 1 argument(s)");
 				}
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxGridBagSizer::FindItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2143,10 +2143,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::FindItem at call with 1 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxGridBagSizer::FindItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2285,10 +2285,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPoint)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::FindItemAtPoint at call with 1 argument(s)");
 				}
 
-				references->AddReference(pt0);
+				references->AddReference(pt0, "wxGridBagSizer::FindItemAtPoint at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2427,10 +2427,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPosition)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::FindItemAtPosition at call with 1 argument(s)");
 				}
 
-				references->AddReference(pos0);
+				references->AddReference(pos0, "wxGridBagSizer::FindItemAtPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2569,10 +2569,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItemWithData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGridBagSizer::FindItemWithData at call with 1 argument(s)");
 				}
 
-				references->AddReference(userData0);
+				references->AddReference(userData0, "wxGridBagSizer::FindItemWithData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2959,7 +2959,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				object_init_ex(return_value, php_wxGBPosition_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGBPosition));
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxGridBagSizer::GetItemPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2983,7 +2983,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				object_init_ex(return_value, php_wxGBPosition_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGBPosition));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxGridBagSizer::GetItemPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3185,7 +3185,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				object_init_ex(return_value, php_wxGBSpan_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGBSpan));
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxGridBagSizer::GetItemSpan at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3209,7 +3209,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				object_init_ex(return_value, php_wxGBSpan_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGBSpan));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxGridBagSizer::GetItemSpan at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3447,7 +3447,7 @@ PHP_METHOD(php_wxGridBagSizer, SetEmptyCellSize)
 				#endif
 				((wxGridBagSizer_php*)_this)->SetEmptyCellSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(sz0);
+				references->AddReference(sz0, "wxGridBagSizer::SetEmptyCellSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3675,8 +3675,8 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemPosition((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1));
 
-				references->AddReference(window0);
-				references->AddReference(pos0);
+				references->AddReference(window0, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
+				references->AddReference(pos0, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3695,8 +3695,8 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemPosition((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1));
 
-				references->AddReference(sizer1);
-				references->AddReference(pos1);
+				references->AddReference(sizer1, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
+				references->AddReference(pos1, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3715,7 +3715,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemPosition((size_t) index2, *(wxGBPosition*) object_pointer2_1));
 
-				references->AddReference(pos2);
+				references->AddReference(pos2, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3943,8 +3943,8 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemSpan((wxWindow*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
 
-				references->AddReference(window0);
-				references->AddReference(span0);
+				references->AddReference(window0, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
+				references->AddReference(span0, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3963,8 +3963,8 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemSpan((wxSizer*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
 
-				references->AddReference(sizer1);
-				references->AddReference(span1);
+				references->AddReference(sizer1, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
+				references->AddReference(span1, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3983,7 +3983,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemSpan((size_t) index2, *(wxGBSpan*) object_pointer2_1));
 
-				references->AddReference(span2);
+				references->AddReference(span2, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4445,7 +4445,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos0);
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos0, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -4456,8 +4456,8 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos0);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span0);
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos0, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span0, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -4468,8 +4468,8 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos0);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span0);
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos0, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span0, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -4480,8 +4480,8 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0, (int) border0);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos0);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span0);
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos0, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span0, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -4492,9 +4492,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0, (int) border0, (wxObject*) object_pointer0_6);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos0);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span0);
-				((wxGBSizerItem_php*) _this)->references.AddReference(userData0);
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos0, "wxGBSizerItem::wxGBSizerItem at call with 7 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span0, "wxGBSizerItem::wxGBSizerItem at call with 7 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(userData0, "wxGBSizerItem::wxGBSizerItem at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -4512,8 +4512,8 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(window1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos1);
+				((wxGBSizerItem_php*) _this)->references.AddReference(window1, "wxGBSizerItem::wxGBSizerItem at call with 2 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos1, "wxGBSizerItem::wxGBSizerItem at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -4524,9 +4524,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(window1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span1);
+				((wxGBSizerItem_php*) _this)->references.AddReference(window1, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos1, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span1, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -4537,9 +4537,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(window1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span1);
+				((wxGBSizerItem_php*) _this)->references.AddReference(window1, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos1, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span1, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -4550,9 +4550,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(window1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span1);
+				((wxGBSizerItem_php*) _this)->references.AddReference(window1, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos1, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span1, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -4563,10 +4563,10 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(window1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span1);
-				((wxGBSizerItem_php*) _this)->references.AddReference(userData1);
+				((wxGBSizerItem_php*) _this)->references.AddReference(window1, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos1, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span1, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(userData1, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -4584,8 +4584,8 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos2);
+				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2, "wxGBSizerItem::wxGBSizerItem at call with 2 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos2, "wxGBSizerItem::wxGBSizerItem at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -4596,9 +4596,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span2);
+				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos2, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span2, "wxGBSizerItem::wxGBSizerItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -4609,9 +4609,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span2);
+				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos2, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span2, "wxGBSizerItem::wxGBSizerItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -4622,9 +4622,9 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2, (int) border2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span2);
+				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos2, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span2, "wxGBSizerItem::wxGBSizerItem at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -4635,10 +4635,10 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2, (int) border2, (wxObject*) object_pointer2_5);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
-				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(pos2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(span2);
-				((wxGBSizerItem_php*) _this)->references.AddReference(userData2);
+				((wxGBSizerItem_php*) _this)->references.AddReference(sizer2, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(pos2, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(span2, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
+				((wxGBSizerItem_php*) _this)->references.AddReference(userData2, "wxGBSizerItem::wxGBSizerItem at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -4776,7 +4776,7 @@ PHP_METHOD(php_wxGBSizerItem, SetSpan)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->SetSpan(*(wxGBSpan*) object_pointer0_0));
 
-				references->AddReference(span0);
+				references->AddReference(span0, "wxGBSizerItem::SetSpan at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4895,7 +4895,7 @@ PHP_METHOD(php_wxGBSizerItem, SetPos)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->SetPos(*(wxGBPosition*) object_pointer0_0));
 
-				references->AddReference(pos0);
+				references->AddReference(pos0, "wxGBSizerItem::SetPos at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5013,7 +5013,7 @@ PHP_METHOD(php_wxGBSizerItem, SetGBSizer)
 				#endif
 				((wxGBSizerItem_php*)_this)->SetGBSizer((wxGridBagSizer*) object_pointer0_0);
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxGBSizerItem::SetGBSizer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5186,8 +5186,8 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->Intersects(*(wxGBPosition*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
 
-				references->AddReference(pos0);
-				references->AddReference(span0);
+				references->AddReference(pos0, "wxGBSizerItem::Intersects at call with 2 argument(s)");
+				references->AddReference(span0, "wxGBSizerItem::Intersects at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5206,7 +5206,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->Intersects(*(wxGBSizerItem*) object_pointer1_0));
 
-				references->AddReference(other1);
+				references->AddReference(other1, "wxGBSizerItem::Intersects at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5614,7 +5614,7 @@ PHP_METHOD(php_wxGBSizerItem, GetGBSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGBSizerItem::GetGBSizer at call with 0 argument(s)");
 				}
 
 
@@ -6457,7 +6457,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 				#endif
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutFrame((wxFrame*) object_pointer0_0));
 
-				references->AddReference(frame0);
+				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutFrame at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6469,8 +6469,8 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 				#endif
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1));
 
-				references->AddReference(frame0);
-				references->AddReference(mainWindow0);
+				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutFrame at call with 2 argument(s)");
+				references->AddReference(mainWindow0, "wxLayoutAlgorithm::LayoutFrame at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6607,7 +6607,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 				#endif
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0));
 
-				references->AddReference(frame0);
+				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutMDIFrame at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6619,8 +6619,8 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 				#endif
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0, (wxRect*) object_pointer0_1));
 
-				references->AddReference(frame0);
-				references->AddReference(rect0);
+				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutMDIFrame at call with 2 argument(s)");
+				references->AddReference(rect0, "wxLayoutAlgorithm::LayoutMDIFrame at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6757,7 +6757,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 				#endif
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutWindow((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxLayoutAlgorithm::LayoutWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6769,8 +6769,8 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 				#endif
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutWindow((wxWindow*) object_pointer0_0, (wxWindow*) object_pointer0_1));
 
-				references->AddReference(parent0);
-				references->AddReference(mainWindow0);
+				references->AddReference(parent0, "wxLayoutAlgorithm::LayoutWindow at call with 2 argument(s)");
+				references->AddReference(mainWindow0, "wxLayoutAlgorithm::LayoutWindow at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7101,7 +7101,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxSizer*) object_pointer0_0));
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxSizer::Show at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7113,7 +7113,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxSizer*) object_pointer0_0, show0));
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxSizer::Show at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7125,7 +7125,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxSizer*) object_pointer0_0, show0, recursive0));
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxSizer::Show at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7173,7 +7173,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxWindow*) object_pointer2_0));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::Show at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7185,7 +7185,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxWindow*) object_pointer2_0, show2));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::Show at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7197,7 +7197,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxWindow*) object_pointer2_0, show2, recursive2));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::Show at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7428,7 +7428,7 @@ PHP_METHOD(php_wxSizer, SetSizeHints)
 				#endif
 				((wxSizer_php*)_this)->SetSizeHints((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::SetSizeHints at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7575,7 +7575,7 @@ PHP_METHOD(php_wxSizer, SetVirtualSizeHints)
 				#endif
 				((wxSizer_php*)_this)->SetVirtualSizeHints((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::SetVirtualSizeHints at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7760,7 +7760,7 @@ PHP_METHOD(php_wxSizer, SetMinSize)
 				#endif
 				((wxSizer_php*)_this)->SetMinSize(*(wxSize*) object_pointer1_0);
 
-				references->AddReference(size1);
+				references->AddReference(size1, "wxSizer::SetMinSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8113,7 +8113,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((size_t) index0, *(wxSize*) object_pointer0_1));
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxSizer::SetItemMinSize at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8150,8 +8150,8 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxSizer*) object_pointer2_0, *(wxSize*) object_pointer2_1));
 
-				references->AddReference(sizer2);
-				references->AddReference(size2);
+				references->AddReference(sizer2, "wxSizer::SetItemMinSize at call with 2 argument(s)");
+				references->AddReference(size2, "wxSizer::SetItemMinSize at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8170,7 +8170,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxSizer*) object_pointer3_0, (int) width3, (int) height3));
 
-				references->AddReference(sizer3);
+				references->AddReference(sizer3, "wxSizer::SetItemMinSize at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8189,8 +8189,8 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxWindow*) object_pointer4_0, *(wxSize*) object_pointer4_1));
 
-				references->AddReference(window4);
-				references->AddReference(size4);
+				references->AddReference(window4, "wxSizer::SetItemMinSize at call with 2 argument(s)");
+				references->AddReference(size4, "wxSizer::SetItemMinSize at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8209,7 +8209,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxWindow*) object_pointer5_0, (int) width5, (int) height5));
 
-				references->AddReference(window5);
+				references->AddReference(window5, "wxSizer::SetItemMinSize at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8396,8 +8396,8 @@ PHP_METHOD(php_wxSizer, SetDimension)
 				#endif
 				((wxSizer_php*)_this)->SetDimension(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(pos0, "wxSizer::SetDimension at call with 2 argument(s)");
+				references->AddReference(size0, "wxSizer::SetDimension at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8673,8 +8673,8 @@ PHP_METHOD(php_wxSizer, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1));
 
-				references->AddReference(oldsz0);
-				references->AddReference(newsz0);
+				references->AddReference(oldsz0, "wxSizer::Replace at call with 2 argument(s)");
+				references->AddReference(newsz0, "wxSizer::Replace at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8686,8 +8686,8 @@ PHP_METHOD(php_wxSizer, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1, recursive0));
 
-				references->AddReference(oldsz0);
-				references->AddReference(newsz0);
+				references->AddReference(oldsz0, "wxSizer::Replace at call with 3 argument(s)");
+				references->AddReference(newsz0, "wxSizer::Replace at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8706,8 +8706,8 @@ PHP_METHOD(php_wxSizer, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1));
 
-				references->AddReference(oldwin1);
-				references->AddReference(newwin1);
+				references->AddReference(oldwin1, "wxSizer::Replace at call with 2 argument(s)");
+				references->AddReference(newwin1, "wxSizer::Replace at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8719,8 +8719,8 @@ PHP_METHOD(php_wxSizer, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1, recursive1));
 
-				references->AddReference(oldwin1);
-				references->AddReference(newwin1);
+				references->AddReference(oldwin1, "wxSizer::Replace at call with 3 argument(s)");
+				references->AddReference(newwin1, "wxSizer::Replace at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8739,7 +8739,7 @@ PHP_METHOD(php_wxSizer, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((size_t) index2, (wxSizerItem*) object_pointer2_1));
 
-				references->AddReference(newitem2);
+				references->AddReference(newitem2, "wxSizer::Replace at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8923,7 +8923,7 @@ PHP_METHOD(php_wxSizer, Remove)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Remove((wxSizer*) object_pointer1_0));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Remove at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8962,6 +8962,7 @@ void wxSizer_php::RecalcSizes()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -8969,7 +8970,10 @@ void wxSizer_php::RecalcSizes()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -8977,11 +8981,12 @@ void wxSizer_php::RecalcSizes()
 		
 		wxMessageBox("Failed to call virtual method 'wxSizer::RecalcSizes'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -9119,7 +9124,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::PrependStretchSpacer at call with 0 argument(s)");
 				}
 
 
@@ -9153,7 +9158,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::PrependStretchSpacer at call with 1 argument(s)");
 				}
 
 
@@ -9305,7 +9310,7 @@ PHP_METHOD(php_wxSizer, PrependSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::PrependSpacer at call with 1 argument(s)");
 				}
 
 
@@ -9736,10 +9741,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 1 argument(s)");
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxSizer::Prepend at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9778,7 +9783,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 2 argument(s)");
 				}
 
 
@@ -9812,7 +9817,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 3 argument(s)");
 				}
 
 
@@ -9846,7 +9851,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 4 argument(s)");
 				}
 
 
@@ -9880,7 +9885,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 5 argument(s)");
 				}
 
 
@@ -9914,10 +9919,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 6 argument(s)");
 				}
 
-				references->AddReference(userData1);
+				references->AddReference(userData1, "wxSizer::Prepend at call with 6 argument(s)");
 
 				return;
 				break;
@@ -9956,10 +9961,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 1 argument(s)");
 				}
 
-				references->AddReference(sizer2);
+				references->AddReference(sizer2, "wxSizer::Prepend at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9991,10 +9996,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer2);
+				references->AddReference(sizer2, "wxSizer::Prepend at call with 2 argument(s)");
 
 				return;
 				break;
@@ -10026,10 +10031,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 3 argument(s)");
 				}
 
-				references->AddReference(sizer2);
+				references->AddReference(sizer2, "wxSizer::Prepend at call with 3 argument(s)");
 
 				return;
 				break;
@@ -10061,10 +10066,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 4 argument(s)");
 				}
 
-				references->AddReference(sizer2);
+				references->AddReference(sizer2, "wxSizer::Prepend at call with 4 argument(s)");
 
 				return;
 				break;
@@ -10096,11 +10101,11 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 5 argument(s)");
 				}
 
-				references->AddReference(sizer2);
-				references->AddReference(userData2);
+				references->AddReference(sizer2, "wxSizer::Prepend at call with 5 argument(s)");
+				references->AddReference(userData2, "wxSizer::Prepend at call with 5 argument(s)");
 
 				return;
 				break;
@@ -10139,10 +10144,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 1 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Prepend at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10174,10 +10179,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 2 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Prepend at call with 2 argument(s)");
 
 				return;
 				break;
@@ -10209,10 +10214,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 3 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Prepend at call with 3 argument(s)");
 
 				return;
 				break;
@@ -10244,10 +10249,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 4 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Prepend at call with 4 argument(s)");
 
 				return;
 				break;
@@ -10279,11 +10284,11 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 5 argument(s)");
 				}
 
-				references->AddReference(window3);
-				references->AddReference(userData3);
+				references->AddReference(window3, "wxSizer::Prepend at call with 5 argument(s)");
+				references->AddReference(userData3, "wxSizer::Prepend at call with 5 argument(s)");
 
 				return;
 				break;
@@ -10322,11 +10327,11 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 2 argument(s)");
 				}
 
-				references->AddReference(window4);
-				references->AddReference(flags4);
+				references->AddReference(window4, "wxSizer::Prepend at call with 2 argument(s)");
+				references->AddReference(flags4, "wxSizer::Prepend at call with 2 argument(s)");
 
 				return;
 				break;
@@ -10365,11 +10370,11 @@ PHP_METHOD(php_wxSizer, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Prepend at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer5);
-				references->AddReference(flags5);
+				references->AddReference(sizer5, "wxSizer::Prepend at call with 2 argument(s)");
+				references->AddReference(flags5, "wxSizer::Prepend at call with 2 argument(s)");
 
 				return;
 				break;
@@ -10713,7 +10718,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->IsShown((wxSizer*) object_pointer1_0));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::IsShown at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10732,7 +10737,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->IsShown((wxWindow*) object_pointer2_0));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::IsShown at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11007,7 +11012,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::InsertStretchSpacer at call with 1 argument(s)");
 				}
 
 
@@ -11041,7 +11046,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::InsertStretchSpacer at call with 2 argument(s)");
 				}
 
 
@@ -11194,7 +11199,7 @@ PHP_METHOD(php_wxSizer, InsertSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::InsertSpacer at call with 2 argument(s)");
 				}
 
 
@@ -11632,7 +11637,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 3 argument(s)");
 				}
 
 
@@ -11666,7 +11671,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 4 argument(s)");
 				}
 
 
@@ -11700,7 +11705,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 5 argument(s)");
 				}
 
 
@@ -11734,7 +11739,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 6 argument(s)");
 				}
 
 
@@ -11768,10 +11773,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return7 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 7 argument(s)");
 				}
 
-				references->AddReference(userData0);
+				references->AddReference(userData0, "wxSizer::Insert at call with 7 argument(s)");
 
 				return;
 				break;
@@ -11810,10 +11815,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Insert at call with 2 argument(s)");
 
 				return;
 				break;
@@ -11845,10 +11850,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 3 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Insert at call with 3 argument(s)");
 
 				return;
 				break;
@@ -11880,10 +11885,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 4 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Insert at call with 4 argument(s)");
 
 				return;
 				break;
@@ -11915,10 +11920,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 5 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Insert at call with 5 argument(s)");
 
 				return;
 				break;
@@ -11950,11 +11955,11 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 6 argument(s)");
 				}
 
-				references->AddReference(sizer1);
-				references->AddReference(userData1);
+				references->AddReference(sizer1, "wxSizer::Insert at call with 6 argument(s)");
+				references->AddReference(userData1, "wxSizer::Insert at call with 6 argument(s)");
 
 				return;
 				break;
@@ -11993,11 +11998,11 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 3 argument(s)");
 				}
 
-				references->AddReference(sizer2);
-				references->AddReference(flags2);
+				references->AddReference(sizer2, "wxSizer::Insert at call with 3 argument(s)");
+				references->AddReference(flags2, "wxSizer::Insert at call with 3 argument(s)");
 
 				return;
 				break;
@@ -12036,10 +12041,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 2 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Insert at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12071,10 +12076,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 3 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Insert at call with 3 argument(s)");
 
 				return;
 				break;
@@ -12106,10 +12111,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 4 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Insert at call with 4 argument(s)");
 
 				return;
 				break;
@@ -12141,10 +12146,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 5 argument(s)");
 				}
 
-				references->AddReference(window3);
+				references->AddReference(window3, "wxSizer::Insert at call with 5 argument(s)");
 
 				return;
 				break;
@@ -12176,11 +12181,11 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 6 argument(s)");
 				}
 
-				references->AddReference(window3);
-				references->AddReference(userData3);
+				references->AddReference(window3, "wxSizer::Insert at call with 6 argument(s)");
+				references->AddReference(userData3, "wxSizer::Insert at call with 6 argument(s)");
 
 				return;
 				break;
@@ -12219,11 +12224,11 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 3 argument(s)");
 				}
 
-				references->AddReference(window4);
-				references->AddReference(flags4);
+				references->AddReference(window4, "wxSizer::Insert at call with 3 argument(s)");
+				references->AddReference(flags4, "wxSizer::Insert at call with 3 argument(s)");
 
 				return;
 				break;
@@ -12262,10 +12267,10 @@ PHP_METHOD(php_wxSizer, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Insert at call with 2 argument(s)");
 				}
 
-				references->AddReference(item5);
+				references->AddReference(item5, "wxSizer::Insert at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12618,7 +12623,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxSizer*) object_pointer1_0));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Hide at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12630,7 +12635,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxSizer*) object_pointer1_0, recursive1));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Hide at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12649,7 +12654,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxWindow*) object_pointer2_0));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::Hide at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12661,7 +12666,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxWindow*) object_pointer2_0, recursive2));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::Hide at call with 2 argument(s)");
 
 				return;
 				break;
@@ -13319,7 +13324,7 @@ PHP_METHOD(php_wxSizer, FitInside)
 				#endif
 				((wxSizer_php*)_this)->FitInside((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::FitInside at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13471,7 +13476,7 @@ PHP_METHOD(php_wxSizer, Fit)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::Fit at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13691,7 +13696,7 @@ PHP_METHOD(php_wxSizer, Detach)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Detach((wxSizer*) object_pointer1_0));
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::Detach at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13710,7 +13715,7 @@ PHP_METHOD(php_wxSizer, Detach)
 				#endif
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Detach((wxWindow*) object_pointer2_0));
 
-				references->AddReference(window2);
+				references->AddReference(window2, "wxSizer::Detach at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13862,7 +13867,7 @@ PHP_METHOD(php_wxSizer, ComputeFittingWindowSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::ComputeFittingWindowSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14014,7 +14019,7 @@ PHP_METHOD(php_wxSizer, ComputeFittingClientSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::ComputeFittingClientSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14444,11 +14449,11 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 2 argument(s)");
 				}
 
-				references->AddReference(window0);
-				references->AddReference(flags0);
+				references->AddReference(window0, "wxSizer::Add at call with 2 argument(s)");
+				references->AddReference(flags0, "wxSizer::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14487,10 +14492,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 1 argument(s)");
 				}
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxSizer::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14522,10 +14527,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 2 argument(s)");
 				}
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxSizer::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14557,10 +14562,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 3 argument(s)");
 				}
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxSizer::Add at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14592,10 +14597,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 4 argument(s)");
 				}
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxSizer::Add at call with 4 argument(s)");
 
 				return;
 				break;
@@ -14627,11 +14632,11 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 5 argument(s)");
 				}
 
-				references->AddReference(window1);
-				references->AddReference(userData1);
+				references->AddReference(window1, "wxSizer::Add at call with 5 argument(s)");
+				references->AddReference(userData1, "wxSizer::Add at call with 5 argument(s)");
 
 				return;
 				break;
@@ -14670,11 +14675,11 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer2);
-				references->AddReference(flags2);
+				references->AddReference(sizer2, "wxSizer::Add at call with 2 argument(s)");
+				references->AddReference(flags2, "wxSizer::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14713,10 +14718,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 1 argument(s)");
 				}
 
-				references->AddReference(sizer3);
+				references->AddReference(sizer3, "wxSizer::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14748,10 +14753,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer3);
+				references->AddReference(sizer3, "wxSizer::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14783,10 +14788,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 3 argument(s)");
 				}
 
-				references->AddReference(sizer3);
+				references->AddReference(sizer3, "wxSizer::Add at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14818,10 +14823,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 4 argument(s)");
 				}
 
-				references->AddReference(sizer3);
+				references->AddReference(sizer3, "wxSizer::Add at call with 4 argument(s)");
 
 				return;
 				break;
@@ -14853,11 +14858,11 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 5 argument(s)");
 				}
 
-				references->AddReference(sizer3);
-				references->AddReference(userData3);
+				references->AddReference(sizer3, "wxSizer::Add at call with 5 argument(s)");
+				references->AddReference(userData3, "wxSizer::Add at call with 5 argument(s)");
 
 				return;
 				break;
@@ -14896,7 +14901,7 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 2 argument(s)");
 				}
 
 
@@ -14930,7 +14935,7 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 3 argument(s)");
 				}
 
 
@@ -14964,7 +14969,7 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 4 argument(s)");
 				}
 
 
@@ -14998,7 +15003,7 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 5 argument(s)");
 				}
 
 
@@ -15032,10 +15037,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 6 argument(s)");
 				}
 
-				references->AddReference(userData4);
+				references->AddReference(userData4, "wxSizer::Add at call with 6 argument(s)");
 
 				return;
 				break;
@@ -15074,10 +15079,10 @@ PHP_METHOD(php_wxSizer, Add)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::Add at call with 1 argument(s)");
 				}
 
-				references->AddReference(item5);
+				references->AddReference(item5, "wxSizer::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15227,7 +15232,7 @@ PHP_METHOD(php_wxSizer, AddSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::AddSpacer at call with 1 argument(s)");
 				}
 
 
@@ -15379,7 +15384,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::AddStretchSpacer at call with 0 argument(s)");
 				}
 
 
@@ -15413,7 +15418,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::AddStretchSpacer at call with 1 argument(s)");
 				}
 
 
@@ -15454,6 +15459,7 @@ wxSize wxSizer_php::CalcMin()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -15461,7 +15467,10 @@ wxSize wxSizer_php::CalcMin()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -15469,15 +15478,21 @@ wxSize wxSizer_php::CalcMin()
 		
 		wxMessageBox("Failed to call virtual method 'wxSizer::CalcMin'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -15751,7 +15766,7 @@ PHP_METHOD(php_wxSizer, GetContainingWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetContainingWindow at call with 0 argument(s)");
 				}
 
 
@@ -15977,10 +15992,10 @@ PHP_METHOD(php_wxSizer, GetItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItem at call with 1 argument(s)");
 				}
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::GetItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16012,10 +16027,10 @@ PHP_METHOD(php_wxSizer, GetItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItem at call with 2 argument(s)");
 				}
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizer::GetItem at call with 2 argument(s)");
 
 				return;
 				break;
@@ -16054,10 +16069,10 @@ PHP_METHOD(php_wxSizer, GetItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItem at call with 1 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::GetItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16089,10 +16104,10 @@ PHP_METHOD(php_wxSizer, GetItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItem at call with 2 argument(s)");
 				}
 
-				references->AddReference(sizer1);
+				references->AddReference(sizer1, "wxSizer::GetItem at call with 2 argument(s)");
 
 				return;
 				break;
@@ -16131,7 +16146,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItem at call with 1 argument(s)");
 				}
 
 
@@ -16284,7 +16299,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItemById at call with 1 argument(s)");
 				}
 
 
@@ -16318,7 +16333,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizer::GetItemById at call with 2 argument(s)");
 				}
 
 
@@ -16446,7 +16461,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, AddButton)
 				#endif
 				((wxStdDialogButtonSizer_php*)_this)->AddButton((wxButton*) object_pointer0_0);
 
-				references->AddReference(button0);
+				references->AddReference(button0, "wxStdDialogButtonSizer::AddButton at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16858,7 +16873,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetAffirmativeButton)
 				#endif
 				((wxStdDialogButtonSizer_php*)_this)->SetAffirmativeButton((wxButton*) object_pointer0_0);
 
-				references->AddReference(button0);
+				references->AddReference(button0, "wxStdDialogButtonSizer::SetAffirmativeButton at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16977,7 +16992,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetCancelButton)
 				#endif
 				((wxStdDialogButtonSizer_php*)_this)->SetCancelButton((wxButton*) object_pointer0_0);
 
-				references->AddReference(button0);
+				references->AddReference(button0, "wxStdDialogButtonSizer::SetCancelButton at call with 1 argument(s)");
 
 				return;
 				break;
@@ -17096,7 +17111,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetNegativeButton)
 				#endif
 				((wxStdDialogButtonSizer_php*)_this)->SetNegativeButton((wxButton*) object_pointer0_0);
 
-				references->AddReference(button0);
+				references->AddReference(button0, "wxStdDialogButtonSizer::SetNegativeButton at call with 1 argument(s)");
 
 				return;
 				break;
@@ -17535,8 +17550,8 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxWindow*) object_pointer0_0, *(wxSizerFlags*) object_pointer0_1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(window0);
-				((wxSizerItem_php*) _this)->references.AddReference(flags0);
+				((wxSizerItem_php*) _this)->references.AddReference(window0, "wxSizerItem::wxSizerItem at call with 2 argument(s)");
+				((wxSizerItem_php*) _this)->references.AddReference(flags0, "wxSizerItem::wxSizerItem at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -17554,7 +17569,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(window1);
+				((wxSizerItem_php*) _this)->references.AddReference(window1, "wxSizerItem::wxSizerItem at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -17565,7 +17580,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(window1);
+				((wxSizerItem_php*) _this)->references.AddReference(window1, "wxSizerItem::wxSizerItem at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -17576,7 +17591,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(window1);
+				((wxSizerItem_php*) _this)->references.AddReference(window1, "wxSizerItem::wxSizerItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -17587,7 +17602,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(window1);
+				((wxSizerItem_php*) _this)->references.AddReference(window1, "wxSizerItem::wxSizerItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -17598,8 +17613,8 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(window1);
-				((wxSizerItem_php*) _this)->references.AddReference(userData1);
+				((wxSizerItem_php*) _this)->references.AddReference(window1, "wxSizerItem::wxSizerItem at call with 5 argument(s)");
+				((wxSizerItem_php*) _this)->references.AddReference(userData1, "wxSizerItem::wxSizerItem at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -17617,8 +17632,8 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxSizer*) object_pointer2_0, *(wxSizerFlags*) object_pointer2_1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(sizer2);
-				((wxSizerItem_php*) _this)->references.AddReference(flags2);
+				((wxSizerItem_php*) _this)->references.AddReference(sizer2, "wxSizerItem::wxSizerItem at call with 2 argument(s)");
+				((wxSizerItem_php*) _this)->references.AddReference(flags2, "wxSizerItem::wxSizerItem at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -17636,7 +17651,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(sizer3);
+				((wxSizerItem_php*) _this)->references.AddReference(sizer3, "wxSizerItem::wxSizerItem at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -17647,7 +17662,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(sizer3);
+				((wxSizerItem_php*) _this)->references.AddReference(sizer3, "wxSizerItem::wxSizerItem at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -17658,7 +17673,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(sizer3);
+				((wxSizerItem_php*) _this)->references.AddReference(sizer3, "wxSizerItem::wxSizerItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -17669,7 +17684,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(sizer3);
+				((wxSizerItem_php*) _this)->references.AddReference(sizer3, "wxSizerItem::wxSizerItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -17680,8 +17695,8 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(sizer3);
-				((wxSizerItem_php*) _this)->references.AddReference(userData3);
+				((wxSizerItem_php*) _this)->references.AddReference(sizer3, "wxSizerItem::wxSizerItem at call with 5 argument(s)");
+				((wxSizerItem_php*) _this)->references.AddReference(userData3, "wxSizerItem::wxSizerItem at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -17739,7 +17754,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				_this = new wxSizerItem_php((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4, (wxObject*) object_pointer4_5);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
-				((wxSizerItem_php*) _this)->references.AddReference(userData4);
+				((wxSizerItem_php*) _this)->references.AddReference(userData4, "wxSizerItem::wxSizerItem at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -17881,7 +17896,7 @@ PHP_METHOD(php_wxSizerItem, SetWindow)
 				#endif
 				((wxSizerItem_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizerItem::SetWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18108,7 +18123,7 @@ PHP_METHOD(php_wxSizerItem, SetUserData)
 				#endif
 				((wxSizerItem_php*)_this)->SetUserData((wxObject*) object_pointer0_0);
 
-				references->AddReference(userData0);
+				references->AddReference(userData0, "wxSizerItem::SetUserData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18231,7 +18246,7 @@ PHP_METHOD(php_wxSizerItem, SetSpacer)
 				#endif
 				((wxSizerItem_php*)_this)->SetSpacer(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxSizerItem::SetSpacer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18354,7 +18369,7 @@ PHP_METHOD(php_wxSizerItem, SetSizer)
 				#endif
 				((wxSizerItem_php*)_this)->SetSizer((wxSizer*) object_pointer0_0);
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxSizerItem::SetSizer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18817,7 +18832,7 @@ PHP_METHOD(php_wxSizerItem, SetMinSize)
 				#endif
 				((wxSizerItem_php*)_this)->SetMinSize(*(wxSize*) object_pointer1_0);
 
-				references->AddReference(size1);
+				references->AddReference(size1, "wxSizerItem::SetMinSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19273,8 +19288,8 @@ PHP_METHOD(php_wxSizerItem, SetDimension)
 				#endif
 				((wxSizerItem_php*)_this)->SetDimension(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(pos0, "wxSizerItem::SetDimension at call with 2 argument(s)");
+				references->AddReference(size0, "wxSizerItem::SetDimension at call with 2 argument(s)");
 
 				return;
 				break;
@@ -19902,7 +19917,7 @@ PHP_METHOD(php_wxSizerItem, AssignSizer)
 				#endif
 				((wxSizerItem_php*)_this)->AssignSizer((wxSizer*) object_pointer0_0);
 
-				references->AddReference(sizer0);
+				references->AddReference(sizer0, "wxSizerItem::AssignSizer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20045,7 +20060,7 @@ PHP_METHOD(php_wxSizerItem, AssignSpacer)
 				#endif
 				((wxSizerItem_php*)_this)->AssignSpacer(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxSizerItem::AssignSpacer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20186,7 +20201,7 @@ PHP_METHOD(php_wxSizerItem, AssignWindow)
 				#endif
 				((wxSizerItem_php*)_this)->AssignWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxSizerItem::AssignWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21532,7 +21547,7 @@ PHP_METHOD(php_wxSizerItem, GetSizer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerItem::GetSizer at call with 0 argument(s)");
 				}
 
 
@@ -21760,7 +21775,7 @@ PHP_METHOD(php_wxSizerItem, GetUserData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerItem::GetUserData at call with 0 argument(s)");
 				}
 
 
@@ -21883,7 +21898,7 @@ PHP_METHOD(php_wxSizerItem, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerItem::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -22143,7 +22158,7 @@ PHP_METHOD(php_wxSizerFlags, TripleBorder)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::TripleBorder at call with 0 argument(s)");
 				}
 
 
@@ -22174,7 +22189,7 @@ PHP_METHOD(php_wxSizerFlags, TripleBorder)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::TripleBorder at call with 1 argument(s)");
 				}
 
 
@@ -22290,7 +22305,7 @@ PHP_METHOD(php_wxSizerFlags, Top)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Top at call with 0 argument(s)");
 				}
 
 
@@ -22406,7 +22421,7 @@ PHP_METHOD(php_wxSizerFlags, Shaped)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Shaped at call with 0 argument(s)");
 				}
 
 
@@ -22522,7 +22537,7 @@ PHP_METHOD(php_wxSizerFlags, Right)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Right at call with 0 argument(s)");
 				}
 
 
@@ -22638,7 +22653,7 @@ PHP_METHOD(php_wxSizerFlags, ReserveSpaceEvenIfHidden)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::ReserveSpaceEvenIfHidden at call with 0 argument(s)");
 				}
 
 
@@ -22759,7 +22774,7 @@ PHP_METHOD(php_wxSizerFlags, Proportion)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Proportion at call with 1 argument(s)");
 				}
 
 
@@ -22875,7 +22890,7 @@ PHP_METHOD(php_wxSizerFlags, Left)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Left at call with 0 argument(s)");
 				}
 
 
@@ -23088,7 +23103,7 @@ PHP_METHOD(php_wxSizerFlags, FixedMinSize)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::FixedMinSize at call with 0 argument(s)");
 				}
 
 
@@ -23204,7 +23219,7 @@ PHP_METHOD(php_wxSizerFlags, Expand)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Expand at call with 0 argument(s)");
 				}
 
 
@@ -23320,7 +23335,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleHorzBorder)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::DoubleHorzBorder at call with 0 argument(s)");
 				}
 
 
@@ -23441,7 +23456,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::DoubleBorder at call with 0 argument(s)");
 				}
 
 
@@ -23472,7 +23487,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::DoubleBorder at call with 1 argument(s)");
 				}
 
 
@@ -23588,7 +23603,7 @@ PHP_METHOD(php_wxSizerFlags, Centre)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Centre at call with 0 argument(s)");
 				}
 
 
@@ -23704,7 +23719,7 @@ PHP_METHOD(php_wxSizerFlags, Center)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Center at call with 0 argument(s)");
 				}
 
 
@@ -23820,7 +23835,7 @@ PHP_METHOD(php_wxSizerFlags, Bottom)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Bottom at call with 0 argument(s)");
 				}
 
 
@@ -23961,7 +23976,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Border at call with 0 argument(s)");
 				}
 
 
@@ -23992,7 +24007,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Border at call with 1 argument(s)");
 				}
 
 
@@ -24030,7 +24045,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Border at call with 2 argument(s)");
 				}
 
 
@@ -24151,7 +24166,7 @@ PHP_METHOD(php_wxSizerFlags, Align)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxSizerFlags::Align at call with 1 argument(s)");
 				}
 
 
@@ -25626,7 +25641,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				_this = new wxFlexGridSizer_php((int) cols1, *(wxSize*) object_pointer1_1);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
-				((wxFlexGridSizer_php*) _this)->references.AddReference(gap1);
+				((wxFlexGridSizer_php*) _this)->references.AddReference(gap1, "wxFlexGridSizer::wxFlexGridSizer at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -25661,7 +25676,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				_this = new wxFlexGridSizer_php((int) rows3, (int) cols3, *(wxSize*) object_pointer3_2);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
-				((wxFlexGridSizer_php*) _this)->references.AddReference(gap3);
+				((wxFlexGridSizer_php*) _this)->references.AddReference(gap3, "wxFlexGridSizer::wxFlexGridSizer at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -27157,7 +27172,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				_this = new wxGridSizer_php((int) cols1, *(wxSize*) object_pointer1_1);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
-				((wxGridSizer_php*) _this)->references.AddReference(gap1);
+				((wxGridSizer_php*) _this)->references.AddReference(gap1, "wxGridSizer::wxGridSizer at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -27192,7 +27207,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				_this = new wxGridSizer_php((int) rows3, (int) cols3, *(wxSize*) object_pointer3_2);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
-				((wxGridSizer_php*) _this)->references.AddReference(gap3);
+				((wxGridSizer_php*) _this)->references.AddReference(gap3, "wxGridSizer::wxGridSizer at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -27436,7 +27451,7 @@ PHP_METHOD(php_wxStaticBoxSizer, GetStaticBox)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxStaticBoxSizer::GetStaticBox at call with 0 argument(s)");
 				}
 
 
@@ -27662,7 +27677,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 				_this = new wxStaticBoxSizer_php((wxStaticBox*) object_pointer0_0, (int) orient0);
 
 				((wxStaticBoxSizer_php*) _this)->references.Initialize();
-				((wxStaticBoxSizer_php*) _this)->references.AddReference(box0);
+				((wxStaticBoxSizer_php*) _this)->references.AddReference(box0, "wxStaticBoxSizer::wxStaticBoxSizer at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -27680,7 +27695,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 				_this = new wxStaticBoxSizer_php((int) orient1, (wxWindow*) object_pointer1_1);
 
 				((wxStaticBoxSizer_php*) _this)->references.Initialize();
-				((wxStaticBoxSizer_php*) _this)->references.AddReference(parent1);
+				((wxStaticBoxSizer_php*) _this)->references.AddReference(parent1, "wxStaticBoxSizer::wxStaticBoxSizer at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -27691,7 +27706,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 				_this = new wxStaticBoxSizer_php((int) orient1, (wxWindow*) object_pointer1_1, wxString(label1, wxConvUTF8));
 
 				((wxStaticBoxSizer_php*) _this)->references.Initialize();
-				((wxStaticBoxSizer_php*) _this)->references.AddReference(parent1);
+				((wxStaticBoxSizer_php*) _this)->references.AddReference(parent1, "wxStaticBoxSizer::wxStaticBoxSizer at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -28269,7 +28284,7 @@ PHP_METHOD(php_wxBoxSizer, AddSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxBoxSizer::AddSpacer at call with 1 argument(s)");
 				}
 
 
@@ -28528,6 +28543,7 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxSizerItem_entry);
@@ -28537,7 +28553,15 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");

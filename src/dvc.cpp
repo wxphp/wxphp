@@ -616,7 +616,7 @@ PHP_METHOD(php_wxDataViewModel, AddNotifier)
 					((wxDataViewModel_php*)_this)->AddNotifier((wxDataViewModelNotifier*) object_pointer0_0);
 				}
 
-				references->AddReference(notifier0);
+				references->AddReference(notifier0, "wxDataViewModel::AddNotifier at call with 1 argument(s)");
 
 				return;
 				break;
@@ -797,8 +797,8 @@ PHP_METHOD(php_wxDataViewModel, ChangeValue)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->ChangeValue(*(wxVariant*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) col0));
 				}
 
-				references->AddReference(variant0);
-				references->AddReference(item0);
+				references->AddReference(variant0, "wxDataViewModel::ChangeValue at call with 3 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ChangeValue at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1119,8 +1119,8 @@ PHP_METHOD(php_wxDataViewModel, Compare)
 					ZVAL_LONG(return_value, ((wxDataViewModel_php*)_this)->Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0));
 				}
 
-				references->AddReference(item10);
-				references->AddReference(item20);
+				references->AddReference(item10, "wxDataViewModel::Compare at call with 4 argument(s)");
+				references->AddReference(item20, "wxDataViewModel::Compare at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1301,8 +1301,8 @@ PHP_METHOD(php_wxDataViewModel, GetAttr)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->GetAttr(*(wxDataViewItem*) object_pointer0_0, (unsigned int) col0, *(wxDataViewItemAttr*) object_pointer0_2));
 				}
 
-				references->AddReference(item0);
-				references->AddReference(attr0);
+				references->AddReference(item0, "wxDataViewModel::GetAttr at call with 3 argument(s)");
+				references->AddReference(attr0, "wxDataViewModel::GetAttr at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1341,6 +1341,7 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1348,7 +1349,10 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1356,11 +1360,12 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModel::GetColumnCount'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (unsigned int) Z_LVAL_P(return_value);
+	return (unsigned int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1392,6 +1397,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], col);
@@ -1400,7 +1406,15 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1408,11 +1422,12 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModel::GetColumnType'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -1444,6 +1459,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataViewItem_entry);
@@ -1453,7 +1469,15 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1461,15 +1485,21 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModel::GetParent'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxDataViewItem_php* var = (wxDataViewItem_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxDataViewItem*) return_object;
 	
 }
@@ -1502,6 +1532,7 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariant_entry);
@@ -1514,7 +1545,15 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1522,11 +1561,12 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModel::GetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -1676,7 +1716,7 @@ PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->HasContainerColumns(*(wxDataViewItem*) object_pointer0_0));
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewModel::HasContainerColumns at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1978,7 +2018,7 @@ PHP_METHOD(php_wxDataViewModel, HasValue)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->HasValue(*(wxDataViewItem*) object_pointer0_0, (unsigned) col0));
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewModel::HasValue at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2022,6 +2062,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataViewItem_entry);
@@ -2031,7 +2072,15 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2039,11 +2088,12 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModel::IsContainer'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2194,7 +2244,7 @@ PHP_METHOD(php_wxDataViewModel, IsEnabled)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->IsEnabled(*(wxDataViewItem*) object_pointer0_0, (unsigned int) col0));
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewModel::IsEnabled at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2374,8 +2424,8 @@ PHP_METHOD(php_wxDataViewModel, ItemAdded)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->ItemAdded(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1));
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(item0);
+				references->AddReference(parent0, "wxDataViewModel::ItemAdded at call with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ItemAdded at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2537,7 +2587,7 @@ PHP_METHOD(php_wxDataViewModel, ItemChanged)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->ItemChanged(*(wxDataViewItem*) object_pointer0_0));
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewModel::ItemChanged at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2717,8 +2767,8 @@ PHP_METHOD(php_wxDataViewModel, ItemDeleted)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->ItemDeleted(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1));
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(item0);
+				references->AddReference(parent0, "wxDataViewModel::ItemDeleted at call with 2 argument(s)");
+				references->AddReference(item0, "wxDataViewModel::ItemDeleted at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2880,7 +2930,7 @@ PHP_METHOD(php_wxDataViewModel, RemoveNotifier)
 					((wxDataViewModel_php*)_this)->RemoveNotifier((wxDataViewModelNotifier*) object_pointer0_0);
 				}
 
-				references->AddReference(notifier0);
+				references->AddReference(notifier0, "wxDataViewModel::RemoveNotifier at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3063,6 +3113,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariant_entry);
@@ -3075,7 +3126,15 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3083,11 +3142,12 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModel::SetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -3238,7 +3298,7 @@ PHP_METHOD(php_wxDataViewModel, ValueChanged)
 					ZVAL_BOOL(return_value, ((wxDataViewModel_php*)_this)->ValueChanged(*(wxDataViewItem*) object_pointer0_0, (unsigned int) col0));
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewModel::ValueChanged at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3426,7 +3486,7 @@ PHP_METHOD(php_wxDataViewListModel, GetAttrByRow)
 					ZVAL_BOOL(return_value, ((wxDataViewListModel_php*)_this)->GetAttrByRow((unsigned int) row0, (unsigned int) col0, *(wxDataViewItemAttr*) object_pointer0_2));
 				}
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxDataViewListModel::GetAttrByRow at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3695,7 +3755,7 @@ PHP_METHOD(php_wxDataViewListModel, GetRow)
 					ZVAL_LONG(return_value, ((wxDataViewListModel_php*)_this)->GetRow(*(wxDataViewItem*) object_pointer0_0));
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewListModel::GetRow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3739,6 +3799,7 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariant_entry);
@@ -3750,7 +3811,15 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3758,11 +3827,12 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewListModel::GetValueByRow'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3923,6 +3993,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariant_entry);
@@ -3934,7 +4005,15 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3942,11 +4021,12 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewListModel::SetValueByRow'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -4274,7 +4354,7 @@ PHP_METHOD(php_wxDataViewItemAttr, SetColour)
 				#endif
 				((wxDataViewItemAttr_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxDataViewItemAttr::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4834,7 +4914,7 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 				_this = new wxDataViewItem_php(*(wxDataViewItem*) object_pointer1_0);
 
 				((wxDataViewItem_php*) _this)->references.Initialize();
-				((wxDataViewItem_php*) _this)->references.AddReference(item1);
+				((wxDataViewItem_php*) _this)->references.AddReference(item1, "wxDataViewItem::wxDataViewItem at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -4949,6 +5029,7 @@ bool wxDataViewModelNotifier_php::Cleared()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -4956,7 +5037,10 @@ bool wxDataViewModelNotifier_php::Cleared()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4964,11 +5048,12 @@ bool wxDataViewModelNotifier_php::Cleared()
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModelNotifier::Cleared'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -5073,7 +5158,7 @@ PHP_METHOD(php_wxDataViewModelNotifier, GetOwner)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewModelNotifier::GetOwner at call with 0 argument(s)");
 				}
 
 
@@ -5119,6 +5204,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataViewItem_entry);
@@ -5130,7 +5216,15 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5138,11 +5232,12 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModelNotifier::ItemAdded'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -5174,6 +5269,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataViewItem_entry);
@@ -5183,7 +5279,15 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5191,11 +5295,12 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModelNotifier::ItemChanged'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -5227,6 +5332,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataViewItem_entry);
@@ -5238,7 +5344,15 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5246,11 +5360,12 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModelNotifier::ItemDeleted'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -5277,6 +5392,7 @@ void wxDataViewModelNotifier_php::Resort()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -5284,7 +5400,10 @@ void wxDataViewModelNotifier_php::Resort()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5292,11 +5411,12 @@ void wxDataViewModelNotifier_php::Resort()
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModelNotifier::Resort'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -5403,7 +5523,7 @@ PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
 				#endif
 				((wxDataViewModelNotifier_php*)_this)->SetOwner((wxDataViewModel*) object_pointer0_0);
 
-				references->AddReference(owner0);
+				references->AddReference(owner0, "wxDataViewModelNotifier::SetOwner at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5447,6 +5567,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataViewItem_entry);
@@ -5457,7 +5578,15 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5465,11 +5594,12 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewModelNotifier::ValueChanged'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -6692,7 +6822,7 @@ PHP_METHOD(php_wxDataViewRenderer, GetOwner)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewRenderer::GetOwner at call with 0 argument(s)");
 				}
 
 
@@ -6738,6 +6868,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariant_entry);
@@ -6747,7 +6878,15 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6755,11 +6894,12 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewRenderer::GetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -7294,7 +7434,7 @@ PHP_METHOD(php_wxDataViewRenderer, SetOwner)
 					((wxDataViewRenderer_php*)_this)->SetOwner((wxDataViewColumn*) object_pointer0_0);
 				}
 
-				references->AddReference(owner0);
+				references->AddReference(owner0, "wxDataViewRenderer::SetOwner at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7338,6 +7478,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxVariant_entry);
@@ -7347,7 +7488,15 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7355,11 +7504,12 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewRenderer::SetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -7541,7 +7691,7 @@ PHP_METHOD(php_wxDataViewRenderer, Validate)
 					ZVAL_BOOL(return_value, ((wxDataViewRenderer_php*)_this)->Validate(*(wxVariant*) object_pointer0_0));
 				}
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxDataViewRenderer::Validate at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8740,10 +8890,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, ActivateCell)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)_this)->ActivateCell(*(wxRect*) object_pointer0_0, (wxDataViewModel*) object_pointer0_1, *(wxDataViewItem*) object_pointer0_2, (unsigned int) col0, (const wxMouseEvent*) object_pointer0_4));
 				}
 
-				references->AddReference(cell0);
-				references->AddReference(model0);
-				references->AddReference(item0);
-				references->AddReference(mouseEvent0);
+				references->AddReference(cell0, "wxDataViewCustomRenderer::ActivateCell at call with 5 argument(s)");
+				references->AddReference(model0, "wxDataViewCustomRenderer::ActivateCell at call with 5 argument(s)");
+				references->AddReference(item0, "wxDataViewCustomRenderer::ActivateCell at call with 5 argument(s)");
+				references->AddReference(mouseEvent0, "wxDataViewCustomRenderer::ActivateCell at call with 5 argument(s)");
 
 				return;
 				break;
@@ -8930,11 +9080,11 @@ PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewCustomRenderer::CreateEditorCtrl at call with 3 argument(s)");
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(value0);
+				references->AddReference(parent0, "wxDataViewCustomRenderer::CreateEditorCtrl at call with 3 argument(s)");
+				references->AddReference(value0, "wxDataViewCustomRenderer::CreateEditorCtrl at call with 3 argument(s)");
 
 				return;
 				break;
@@ -9060,7 +9210,7 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetAttr)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewCustomRenderer::GetAttr at call with 0 argument(s)");
 				}
 
 
@@ -9101,6 +9251,7 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -9108,7 +9259,10 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -9116,15 +9270,21 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewCustomRenderer::GetSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -9261,8 +9421,8 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)_this)->GetValueFromEditorCtrl((wxWindow*) object_pointer0_0, *(wxVariant*) object_pointer0_1));
 				}
 
-				references->AddReference(editor0);
-				references->AddReference(value0);
+				references->AddReference(editor0, "wxDataViewCustomRenderer::GetValueFromEditorCtrl at call with 2 argument(s)");
+				references->AddReference(value0, "wxDataViewCustomRenderer::GetValueFromEditorCtrl at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9554,10 +9714,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, LeftClick)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)_this)->LeftClick(*(wxPoint*) object_pointer0_0, *(wxRect*) object_pointer0_1, (wxDataViewModel*) object_pointer0_2, *(wxDataViewItem*) object_pointer0_3, (unsigned int) col0));
 				}
 
-				references->AddReference(cursor0);
-				references->AddReference(cell0);
-				references->AddReference(model0);
-				references->AddReference(item0);
+				references->AddReference(cursor0, "wxDataViewCustomRenderer::LeftClick at call with 5 argument(s)");
+				references->AddReference(cell0, "wxDataViewCustomRenderer::LeftClick at call with 5 argument(s)");
+				references->AddReference(model0, "wxDataViewCustomRenderer::LeftClick at call with 5 argument(s)");
+				references->AddReference(item0, "wxDataViewCustomRenderer::LeftClick at call with 5 argument(s)");
 
 				return;
 				break;
@@ -9601,6 +9761,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxRect_entry);
@@ -9613,7 +9774,15 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -9621,11 +9790,12 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 		
 		wxMessageBox("Failed to call virtual method 'wxDataViewCustomRenderer::Render'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -9765,7 +9935,7 @@ PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 					((wxDataViewCustomRenderer_php*)_this)->RenderText(wxString(text0, wxConvUTF8), (int) xoffset0, *(wxRect*) object_pointer0_2, (wxDC*) object_pointer0_3, (int) state0);
 				}
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxDataViewCustomRenderer::RenderText at call with 5 argument(s)");
 
 				return;
 				break;
@@ -9950,10 +10120,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 					ZVAL_BOOL(return_value, ((wxDataViewCustomRenderer_php*)_this)->StartDrag(*(wxPoint*) object_pointer0_0, *(wxRect*) object_pointer0_1, (wxDataViewModel*) object_pointer0_2, *(wxDataViewItem*) object_pointer0_3, (unsigned int) col0));
 				}
 
-				references->AddReference(cursor0);
-				references->AddReference(cell0);
-				references->AddReference(model0);
-				references->AddReference(item0);
+				references->AddReference(cursor0, "wxDataViewCustomRenderer::StartDrag at call with 5 argument(s)");
+				references->AddReference(cell0, "wxDataViewCustomRenderer::StartDrag at call with 5 argument(s)");
+				references->AddReference(model0, "wxDataViewCustomRenderer::StartDrag at call with 5 argument(s)");
+				references->AddReference(item0, "wxDataViewCustomRenderer::StartDrag at call with 5 argument(s)");
 
 				return;
 				break;
@@ -10368,7 +10538,7 @@ PHP_METHOD(php_wxDataViewColumn, GetOwner)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewColumn::GetOwner at call with 0 argument(s)");
 				}
 
 
@@ -10522,7 +10692,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0);
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -10533,7 +10703,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0, (int) width0);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0);
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -10544,7 +10714,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0, (int) width0, (wxAlignment) align0);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0);
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -10555,7 +10725,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(wxString(title0, wxConvUTF8), (wxDataViewRenderer*) object_pointer0_1, (unsigned int) model_column0, (int) width0, (wxAlignment) align0, (int) flags0);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0);
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer0, "wxDataViewColumn::wxDataViewColumn at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -10573,8 +10743,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1);
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1);
+				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call with 3 argument(s)");
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -10585,8 +10755,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1, (int) width1);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1);
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1);
+				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call with 4 argument(s)");
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -10597,8 +10767,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1, (int) width1, (wxAlignment) align1);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1);
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1);
+				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call with 5 argument(s)");
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -10609,8 +10779,8 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 				_this = new wxDataViewColumn_php(*(wxBitmap*) object_pointer1_0, (wxDataViewRenderer*) object_pointer1_1, (unsigned int) model_column1, (int) width1, (wxAlignment) align1, (int) flags1);
 
 				((wxDataViewColumn_php*) _this)->references.Initialize();
-				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1);
-				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1);
+				((wxDataViewColumn_php*) _this)->references.AddReference(bitmap1, "wxDataViewColumn::wxDataViewColumn at call with 6 argument(s)");
+				((wxDataViewColumn_php*) _this)->references.AddReference(renderer1, "wxDataViewColumn::wxDataViewColumn at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -10746,7 +10916,7 @@ PHP_METHOD(php_wxDataViewColumn, GetRenderer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewColumn::GetRenderer at call with 0 argument(s)");
 				}
 
 
@@ -11411,7 +11581,7 @@ PHP_METHOD(php_wxDataViewListStore, GetValueByRow)
 				#endif
 				((wxDataViewListStore_php*)_this)->GetValueByRow(*(wxVariant*) object_pointer0_0, (unsigned int) row0, (unsigned int) col0);
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxDataViewListStore::GetValueByRow at call with 3 argument(s)");
 
 				return;
 				break;
@@ -11737,7 +11907,7 @@ PHP_METHOD(php_wxDataViewListStore, SetValueByRow)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDataViewListStore_php*)_this)->SetValueByRow(*(wxVariant*) object_pointer0_0, (unsigned int) row0, (unsigned int) col0));
 
-				references->AddReference(value0);
+				references->AddReference(value0, "wxDataViewListStore::SetValueByRow at call with 3 argument(s)");
 
 				return;
 				break;
@@ -12041,7 +12211,7 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12058,8 +12228,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 3 argument(s)");
 
 				return;
 				break;
@@ -12076,9 +12246,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(expanded0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
 
 				return;
 				break;
@@ -12095,10 +12265,10 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(expanded0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
 
 				return;
 				break;
@@ -12260,7 +12430,7 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 2 argument(s)");
 
 				return;
 				break;
@@ -12277,8 +12447,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call with 3 argument(s)");
 
 				return;
 				break;
@@ -12295,9 +12465,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
 
 				return;
 				break;
@@ -12512,7 +12682,7 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteChildren)
 				#endif
 				((wxDataViewTreeStore_php*)_this)->DeleteChildren(*(wxDataViewItem*) object_pointer0_0);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewTreeStore::DeleteChildren at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12631,7 +12801,7 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteItem)
 				#endif
 				((wxDataViewTreeStore_php*)_this)->DeleteItem(*(wxDataViewItem*) object_pointer0_0);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewTreeStore::DeleteItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12750,7 +12920,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetChildCount)
 				#endif
 				ZVAL_LONG(return_value, ((wxDataViewTreeStore_php*)_this)->GetChildCount(*(wxDataViewItem*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDataViewTreeStore::GetChildCount at call with 1 argument(s)");
 
 				return;
 				break;
@@ -12889,10 +13059,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewTreeStore::GetItemData at call with 1 argument(s)");
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13028,10 +13198,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewTreeStore::GetItemExpandedIcon at call with 1 argument(s)");
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemExpandedIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13167,10 +13337,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewTreeStore::GetItemIcon at call with 1 argument(s)");
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13295,7 +13465,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 				ZVAL_STRING(return_value, temp_string1, 1);
 				free(temp_string1);
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxDataViewTreeStore::GetItemText at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13420,7 +13590,7 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDataViewTreeStore::GetNthChild at call with 2 argument(s)");
 
 				return;
 				break;
@@ -13618,8 +13788,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 3 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 3 argument(s)");
 
 				return;
 				break;
@@ -13636,9 +13806,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
 
 				return;
 				break;
@@ -13655,10 +13825,10 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
-				references->AddReference(icon0);
-				references->AddReference(expanded0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
 
 				return;
 				break;
@@ -13675,11 +13845,11 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
-				references->AddReference(icon0);
-				references->AddReference(expanded0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
 
 				return;
 				break;
@@ -13859,8 +14029,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 3 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 3 argument(s)");
 
 				return;
 				break;
@@ -13877,9 +14047,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
 
 				return;
 				break;
@@ -13896,10 +14066,10 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(previous0);
-				references->AddReference(icon0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
+				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
 
 				return;
 				break;
@@ -14079,7 +14249,7 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14096,8 +14266,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14114,9 +14284,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(expanded0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
 
 				return;
 				break;
@@ -14133,10 +14303,10 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(expanded0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
+				references->AddReference(expanded0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
 
 				return;
 				break;
@@ -14298,7 +14468,7 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14315,8 +14485,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 3 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14333,9 +14503,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxDataViewItem));
 
-				references->AddReference(parent0);
-				references->AddReference(icon0);
-				references->AddReference(data0);
+				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
 
 				return;
 				break;
@@ -14472,8 +14642,8 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemData)
 				#endif
 				((wxDataViewTreeStore_php*)_this)->SetItemData(*(wxDataViewItem*) object_pointer0_0, (wxClientData*) object_pointer0_1);
 
-				references->AddReference(item0);
-				references->AddReference(data0);
+				references->AddReference(item0, "wxDataViewTreeStore::SetItemData at call with 2 argument(s)");
+				references->AddReference(data0, "wxDataViewTreeStore::SetItemData at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14610,8 +14780,8 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemExpandedIcon)
 				#endif
 				((wxDataViewTreeStore_php*)_this)->SetItemExpandedIcon(*(wxDataViewItem*) object_pointer0_0, *(wxIcon*) object_pointer0_1);
 
-				references->AddReference(item0);
-				references->AddReference(icon0);
+				references->AddReference(item0, "wxDataViewTreeStore::SetItemExpandedIcon at call with 2 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::SetItemExpandedIcon at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14748,8 +14918,8 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemIcon)
 				#endif
 				((wxDataViewTreeStore_php*)_this)->SetItemIcon(*(wxDataViewItem*) object_pointer0_0, *(wxIcon*) object_pointer0_1);
 
-				references->AddReference(item0);
-				references->AddReference(icon0);
+				references->AddReference(item0, "wxDataViewTreeStore::SetItemIcon at call with 2 argument(s)");
+				references->AddReference(icon0, "wxDataViewTreeStore::SetItemIcon at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14987,7 +15157,7 @@ PHP_METHOD(php_wxDataViewIconText, GetIcon)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataViewIconText::GetIcon at call with 0 argument(s)");
 				}
 
 
@@ -15210,7 +15380,7 @@ PHP_METHOD(php_wxDataViewIconText, SetIcon)
 				#endif
 				((wxDataViewIconText_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0);
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxDataViewIconText::SetIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15458,7 +15628,7 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 				_this = new wxDataViewIconText_php(wxString(text0, wxConvUTF8), *(wxIcon*) object_pointer0_1);
 
 				((wxDataViewIconText_php*) _this)->references.Initialize();
-				((wxDataViewIconText_php*) _this)->references.AddReference(icon0);
+				((wxDataViewIconText_php*) _this)->references.AddReference(icon0, "wxDataViewIconText::wxDataViewIconText at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -15476,7 +15646,7 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 				_this = new wxDataViewIconText_php(*(wxDataViewIconText*) object_pointer1_0);
 
 				((wxDataViewIconText_php*) _this)->references.Initialize();
-				((wxDataViewIconText_php*) _this)->references.AddReference(other1);
+				((wxDataViewIconText_php*) _this)->references.AddReference(other1, "wxDataViewIconText::wxDataViewIconText at call with 1 argument(s)");
 				break;
 			}
 		}

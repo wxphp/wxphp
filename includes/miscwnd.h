@@ -1950,6 +1950,9 @@ static zend_function_entry php_wxStatusBar_functions[] = {
 	PHP_ME(php_wxStatusBar, GetStatusWidth, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStatusBar, PopStatusText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStatusBar, PushStatusText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxStatusBar, SetFieldsCount, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxStatusBar, SetStatusStyles, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxStatusBar, SetStatusWidths, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif

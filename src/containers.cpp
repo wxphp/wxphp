@@ -312,7 +312,7 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTreeItemData::GetId at call with 0 argument(s)");
 				}
 
 
@@ -433,7 +433,7 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 				#endif
 				((wxTreeItemData_php*)_this)->SetId(*(wxTreeItemId*) object_pointer0_0);
 
-				references->AddReference(id0);
+				references->AddReference(id0, "wxTreeItemData::SetId at call with 1 argument(s)");
 
 				return;
 				break;

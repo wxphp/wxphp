@@ -233,6 +233,7 @@ bool wxConfigBase_php::DeleteAll()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -240,7 +241,10 @@ bool wxConfigBase_php::DeleteAll()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -248,11 +252,12 @@ bool wxConfigBase_php::DeleteAll()
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteAll'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -284,6 +289,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(key.size()+1));
@@ -296,7 +302,15 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -304,11 +318,12 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteEntry'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -340,6 +355,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(key.size()+1));
@@ -351,7 +367,15 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -359,11 +383,12 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteGroup'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -608,6 +633,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_BOOL(arguments[0], bCurrentOnly);
@@ -616,7 +642,15 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -624,11 +658,12 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::Flush'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1042,6 +1077,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(str.size()+1));
@@ -1054,7 +1090,15 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1062,11 +1106,12 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetFirstEntry'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1098,6 +1143,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(str.size()+1));
@@ -1110,7 +1156,15 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1118,11 +1172,12 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetFirstGroup'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1154,6 +1209,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(str.size()+1));
@@ -1166,7 +1222,15 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1174,11 +1238,12 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNextEntry'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1210,6 +1275,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(str.size()+1));
@@ -1222,7 +1288,15 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1230,11 +1304,12 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNextGroup'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1266,6 +1341,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_BOOL(arguments[0], bRecursive);
@@ -1274,7 +1350,15 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1282,11 +1366,12 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNumberOfEntries'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (size_t) Z_LVAL_P(return_value);
+	return (size_t) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1318,6 +1403,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_BOOL(arguments[0], bRecursive);
@@ -1326,7 +1412,15 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1334,11 +1428,12 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNumberOfGroups'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (size_t) Z_LVAL_P(return_value);
+	return (size_t) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1365,6 +1460,7 @@ const wxString& wxConfigBase_php::GetPath()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -1372,7 +1468,10 @@ const wxString& wxConfigBase_php::GetPath()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1380,11 +1479,12 @@ const wxString& wxConfigBase_php::GetPath()const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetPath'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -1528,6 +1628,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(strName.size()+1));
@@ -1539,7 +1640,15 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1547,11 +1656,12 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::HasEntry'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -1582,6 +1692,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(strName.size()+1));
@@ -1593,7 +1704,15 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1601,11 +1720,12 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::HasGroup'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2884,6 +3004,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(oldName.size()+1));
@@ -2899,7 +3020,15 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2907,11 +3036,12 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::RenameEntry'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2943,6 +3073,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(oldName.size()+1));
@@ -2958,7 +3089,15 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2966,11 +3105,12 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::RenameGroup'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -3274,6 +3414,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(strPath.size()+1));
@@ -3285,7 +3426,15 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3293,11 +3442,12 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 		
 		wxMessageBox("Failed to call virtual method 'wxConfigBase::SetPath'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3838,7 +3988,7 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDisplay_php*)_this)->ChangeMode(*(wxVideoMode*) object_pointer0_0));
 
-				references->AddReference(mode0);
+				references->AddReference(mode0, "wxDisplay::ChangeMode at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8594,7 +8744,7 @@ PHP_METHOD(php_wxFontMapper, SetDialogParent)
 				#endif
 				((wxFontMapper_php*)_this)->SetDialogParent((wxWindow*) object_pointer0_0);
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFontMapper::SetDialogParent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14071,7 +14221,7 @@ PHP_METHOD(php_wxVideoMode, Matches)
 				#endif
 				ZVAL_BOOL(return_value, ((wxVideoMode_php*)_this)->Matches(*(wxVideoMode*) object_pointer0_0));
 
-				references->AddReference(other0);
+				references->AddReference(other0, "wxVideoMode::Matches at call with 1 argument(s)");
 
 				return;
 				break;

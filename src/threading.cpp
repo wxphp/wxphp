@@ -647,7 +647,7 @@ PHP_METHOD(php_wxCondition, __construct)
 				_this = new wxCondition_php(*(wxMutex*) object_pointer0_0);
 
 				((wxCondition_php*) _this)->references.Initialize();
-				((wxCondition_php*) _this)->references.AddReference(mutex0);
+				((wxCondition_php*) _this)->references.AddReference(mutex0, "wxCondition::wxCondition at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -794,7 +794,7 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 				_this = new wxCriticalSectionLocker_php(*(wxCriticalSection*) object_pointer0_0);
 
 				((wxCriticalSectionLocker_php*) _this)->references.Initialize();
-				((wxCriticalSectionLocker_php*) _this)->references.AddReference(criticalsection0);
+				((wxCriticalSectionLocker_php*) _this)->references.AddReference(criticalsection0, "wxCriticalSectionLocker::wxCriticalSectionLocker at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -973,7 +973,7 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxThreadHelper::GetThread at call with 0 argument(s)");
 				}
 
 
@@ -4129,6 +4129,7 @@ void* wxThread_php::Entry()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -4136,7 +4137,10 @@ void* wxThread_php::Entry()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4144,11 +4148,12 @@ void* wxThread_php::Entry()
 		
 		wxMessageBox("Failed to call virtual method 'wxThread::Entry'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (void*) Z_STRVAL_P(return_value);
+	return (void*) Z_STRVAL_P(return_value);
 	
 }
 /* }}} */
@@ -5011,7 +5016,7 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 				_this = new wxMutexLocker_php(*(wxMutex*) object_pointer0_0);
 
 				((wxMutexLocker_php*) _this)->references.Initialize();
-				((wxMutexLocker_php*) _this)->references.AddReference(mutex0);
+				((wxMutexLocker_php*) _this)->references.AddReference(mutex0, "wxMutexLocker::wxMutexLocker at call with 1 argument(s)");
 				break;
 			}
 		}

@@ -4914,7 +4914,7 @@ PHP_METHOD(php_wxFileName, Assign)
 				#endif
 				((wxFileName_php*)_this)->Assign(*(wxFileName*) object_pointer0_0);
 
-				references->AddReference(filepath0);
+				references->AddReference(filepath0, "wxFileName::Assign at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5257,7 +5257,7 @@ PHP_METHOD(php_wxFileName, __construct)
 				_this = new wxFileName_php(*(wxFileName*) object_pointer0_0);
 
 				((wxFileName_php*) _this)->references.Initialize();
-				((wxFileName_php*) _this)->references.AddReference(filename0);
+				((wxFileName_php*) _this)->references.AddReference(filename0, "wxFileName::wxFileName at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -7243,7 +7243,7 @@ PHP_METHOD(php_wxFileName, SameAs)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileName_php*)_this)->SameAs(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(filepath0);
+				references->AddReference(filepath0, "wxFileName::SameAs at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7255,7 +7255,7 @@ PHP_METHOD(php_wxFileName, SameAs)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileName_php*)_this)->SameAs(*(wxFileName*) object_pointer0_0, (wxPathFormat) format0));
 
-				references->AddReference(filepath0);
+				references->AddReference(filepath0, "wxFileName::SameAs at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8477,7 +8477,7 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 				#endif
 				((wxFileName_php*)_this)->AssignTempFileName(wxString(prefix1, wxConvUTF8), (wxFile*) object_pointer1_1);
 
-				references->AddReference(fileTemp1);
+				references->AddReference(fileTemp1, "wxFileName::AssignTempFileName at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8496,7 +8496,7 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 				#endif
 				((wxFileName_php*)_this)->AssignTempFileName(wxString(prefix2, wxConvUTF8), (wxFFile*) object_pointer2_1);
 
-				references->AddReference(fileTemp2);
+				references->AddReference(fileTemp2, "wxFileName::AssignTempFileName at call with 2 argument(s)");
 
 				return;
 				break;
@@ -14289,7 +14289,7 @@ PHP_METHOD(php_wxFSFile, __construct)
 				_this = new wxFSFile_php((wxInputStream*) object_pointer0_0, wxString(location0, wxConvUTF8), wxString(mimetype0, wxConvUTF8), wxString(anchor0, wxConvUTF8), wxDateTime(modif0));
 
 				((wxFSFile_php*) _this)->references.Initialize();
-				((wxFSFile_php*) _this)->references.AddReference(stream0);
+				((wxFSFile_php*) _this)->references.AddReference(stream0, "wxFSFile::wxFSFile at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -14425,7 +14425,7 @@ PHP_METHOD(php_wxFSFile, GetStream)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFSFile::GetStream at call with 0 argument(s)");
 				}
 
 
@@ -14948,7 +14948,7 @@ PHP_METHOD(php_wxFSFile, DetachStream)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFSFile::DetachStream at call with 0 argument(s)");
 				}
 
 
@@ -15110,7 +15110,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->Add(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15122,7 +15122,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->Add(*(wxFileName*) object_pointer0_0, (int) events0));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -15244,7 +15244,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->AddTree(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::AddTree at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15256,7 +15256,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->AddTree(*(wxFileName*) object_pointer0_0, (int) events0));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::AddTree at call with 2 argument(s)");
 
 				return;
 				break;
@@ -15268,7 +15268,7 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->AddTree(*(wxFileName*) object_pointer0_0, (int) events0, wxString(filter0, wxConvUTF8)));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::AddTree at call with 3 argument(s)");
 
 				return;
 				break;
@@ -15483,7 +15483,7 @@ PHP_METHOD(php_wxFileSystemWatcher, Remove)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->Remove(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::Remove at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15698,7 +15698,7 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileSystemWatcher_php*)_this)->RemoveTree(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(path0);
+				references->AddReference(path0, "wxFileSystemWatcher::RemoveTree at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15817,7 +15817,7 @@ PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 				#endif
 				((wxFileSystemWatcher_php*)_this)->SetOwner((wxEvtHandler*) object_pointer0_0);
 
-				references->AddReference(handler0);
+				references->AddReference(handler0, "wxFileSystemWatcher::SetOwner at call with 1 argument(s)");
 
 				return;
 				break;

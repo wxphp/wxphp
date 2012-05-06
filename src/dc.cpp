@@ -857,7 +857,7 @@ PHP_METHOD(php_wxDC, SetTextForeground)
 					((wxDC_php*)_this)->SetTextForeground(*(wxColour*) object_pointer0_0);
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxDC::SetTextForeground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1067,7 +1067,7 @@ PHP_METHOD(php_wxDC, SetTextBackground)
 					((wxDC_php*)_this)->SetTextBackground(*(wxColour*) object_pointer0_0);
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxDC::SetTextBackground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1844,7 +1844,7 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 					((wxDC_php*)_this)->CopyAttributes(*(wxDC*) object_pointer0_0);
 				}
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxDC::CopyAttributes at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2139,7 +2139,7 @@ PHP_METHOD(php_wxDC, CrossHair)
 					((wxDC_php*)_this)->CrossHair(*(wxPoint*) object_pointer1_0);
 				}
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxDC::CrossHair at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3429,9 +3429,9 @@ PHP_METHOD(php_wxDC, DrawArc)
 					((wxDC_php*)_this)->DrawArc(*(wxPoint*) object_pointer1_0, *(wxPoint*) object_pointer1_1, *(wxPoint*) object_pointer1_2);
 				}
 
-				references->AddReference(ptStart1);
-				references->AddReference(ptEnd1);
-				references->AddReference(centre1);
+				references->AddReference(ptStart1, "wxDC::DrawArc at call with 3 argument(s)");
+				references->AddReference(ptEnd1, "wxDC::DrawArc at call with 3 argument(s)");
+				references->AddReference(centre1, "wxDC::DrawArc at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3699,7 +3699,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 					((wxDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0);
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxDC::DrawBitmap at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3758,7 +3758,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 					((wxDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0, useMask0);
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxDC::DrawBitmap at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3824,8 +3824,8 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 					((wxDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer1_0, *(wxPoint*) object_pointer1_1);
 				}
 
-				references->AddReference(bmp1);
-				references->AddReference(pt1);
+				references->AddReference(bmp1, "wxDC::DrawBitmap at call with 2 argument(s)");
+				references->AddReference(pt1, "wxDC::DrawBitmap at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3884,8 +3884,8 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 					((wxDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer1_0, *(wxPoint*) object_pointer1_1, useMask1);
 				}
 
-				references->AddReference(bmp1);
-				references->AddReference(pt1);
+				references->AddReference(bmp1, "wxDC::DrawBitmap at call with 3 argument(s)");
+				references->AddReference(pt1, "wxDC::DrawBitmap at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4182,7 +4182,7 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 					((wxDC_php*)_this)->DrawCheckMark(*(wxRect*) object_pointer1_0);
 				}
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxDC::DrawCheckMark at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4479,7 +4479,7 @@ PHP_METHOD(php_wxDC, DrawCircle)
 					((wxDC_php*)_this)->DrawCircle(*(wxPoint*) object_pointer1_0, (wxCoord) radius1);
 				}
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxDC::DrawCircle at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4830,8 +4830,8 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 					((wxDC_php*)_this)->DrawEllipse(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1);
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(size1);
+				references->AddReference(pt1, "wxDC::DrawEllipse at call with 2 argument(s)");
+				references->AddReference(size1, "wxDC::DrawEllipse at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4897,7 +4897,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 					((wxDC_php*)_this)->DrawEllipse(*(wxRect*) object_pointer2_0);
 				}
 
-				references->AddReference(rect2);
+				references->AddReference(rect2, "wxDC::DrawEllipse at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5216,8 +5216,8 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 					((wxDC_php*)_this)->DrawEllipticArc(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1, sa1, ea1);
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(sz1);
+				references->AddReference(pt1, "wxDC::DrawEllipticArc at call with 4 argument(s)");
+				references->AddReference(sz1, "wxDC::DrawEllipticArc at call with 4 argument(s)");
 
 				return;
 				break;
@@ -5483,7 +5483,7 @@ PHP_METHOD(php_wxDC, DrawIcon)
 					((wxDC_php*)_this)->DrawIcon(*(wxIcon*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0);
 				}
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxDC::DrawIcon at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5549,8 +5549,8 @@ PHP_METHOD(php_wxDC, DrawIcon)
 					((wxDC_php*)_this)->DrawIcon(*(wxIcon*) object_pointer1_0, *(wxPoint*) object_pointer1_1);
 				}
 
-				references->AddReference(icon1);
-				references->AddReference(pt1);
+				references->AddReference(icon1, "wxDC::DrawIcon at call with 2 argument(s)");
+				references->AddReference(pt1, "wxDC::DrawIcon at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5840,8 +5840,8 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 				}
 
-				references->AddReference(bitmap0);
-				references->AddReference(rect0);
+				references->AddReference(bitmap0, "wxDC::DrawLabel at call with 3 argument(s)");
+				references->AddReference(rect0, "wxDC::DrawLabel at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5900,8 +5900,8 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0);
 				}
 
-				references->AddReference(bitmap0);
-				references->AddReference(rect0);
+				references->AddReference(bitmap0, "wxDC::DrawLabel at call with 4 argument(s)");
+				references->AddReference(rect0, "wxDC::DrawLabel at call with 4 argument(s)");
 
 				return;
 				break;
@@ -5960,8 +5960,8 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0, (int) indexAccel0);
 				}
 
-				references->AddReference(bitmap0);
-				references->AddReference(rect0);
+				references->AddReference(bitmap0, "wxDC::DrawLabel at call with 5 argument(s)");
+				references->AddReference(rect0, "wxDC::DrawLabel at call with 5 argument(s)");
 
 				return;
 				break;
@@ -6020,9 +6020,9 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0, (int) indexAccel0, (wxRect*) object_pointer0_5);
 				}
 
-				references->AddReference(bitmap0);
-				references->AddReference(rect0);
-				references->AddReference(rectBounding0);
+				references->AddReference(bitmap0, "wxDC::DrawLabel at call with 6 argument(s)");
+				references->AddReference(rect0, "wxDC::DrawLabel at call with 6 argument(s)");
+				references->AddReference(rectBounding0, "wxDC::DrawLabel at call with 6 argument(s)");
 
 				return;
 				break;
@@ -6088,7 +6088,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1);
 				}
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxDC::DrawLabel at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6147,7 +6147,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1, (int) alignment1);
 				}
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxDC::DrawLabel at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6206,7 +6206,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 					((wxDC_php*)_this)->DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1, (int) alignment1, (int) indexAccel1);
 				}
 
-				references->AddReference(rect1);
+				references->AddReference(rect1, "wxDC::DrawLabel at call with 4 argument(s)");
 
 				return;
 				break;
@@ -6521,8 +6521,8 @@ PHP_METHOD(php_wxDC, DrawLine)
 					((wxDC_php*)_this)->DrawLine(*(wxPoint*) object_pointer1_0, *(wxPoint*) object_pointer1_1);
 				}
 
-				references->AddReference(pt11);
-				references->AddReference(pt21);
+				references->AddReference(pt11, "wxDC::DrawLine at call with 2 argument(s)");
+				references->AddReference(pt21, "wxDC::DrawLine at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6817,7 +6817,7 @@ PHP_METHOD(php_wxDC, DrawPoint)
 					((wxDC_php*)_this)->DrawPoint(*(wxPoint*) object_pointer1_0);
 				}
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxDC::DrawPoint at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7168,8 +7168,8 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 					((wxDC_php*)_this)->DrawRectangle(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1);
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(sz1);
+				references->AddReference(pt1, "wxDC::DrawRectangle at call with 2 argument(s)");
+				references->AddReference(sz1, "wxDC::DrawRectangle at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7235,7 +7235,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 					((wxDC_php*)_this)->DrawRectangle(*(wxRect*) object_pointer2_0);
 				}
 
-				references->AddReference(rect2);
+				references->AddReference(rect2, "wxDC::DrawRectangle at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7536,7 +7536,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 					((wxDC_php*)_this)->DrawRotatedText(wxString(text1, wxConvUTF8), *(wxPoint*) object_pointer1_1, angle1);
 				}
 
-				references->AddReference(point1);
+				references->AddReference(point1, "wxDC::DrawRotatedText at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7890,8 +7890,8 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 					((wxDC_php*)_this)->DrawRoundedRectangle(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1, radius1);
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(sz1);
+				references->AddReference(pt1, "wxDC::DrawRoundedRectangle at call with 3 argument(s)");
+				references->AddReference(sz1, "wxDC::DrawRoundedRectangle at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7957,7 +7957,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 					((wxDC_php*)_this)->DrawRoundedRectangle(*(wxRect*) object_pointer2_0, radius2);
 				}
 
-				references->AddReference(rect2);
+				references->AddReference(rect2, "wxDC::DrawRoundedRectangle at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8453,7 +8453,7 @@ PHP_METHOD(php_wxDC, DrawText)
 					((wxDC_php*)_this)->DrawText(wxString(text1, wxConvUTF8), *(wxPoint*) object_pointer1_1);
 				}
 
-				references->AddReference(pt1);
+				references->AddReference(pt1, "wxDC::DrawText at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9095,7 +9095,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->FloodFill((wxCoord) x0, (wxCoord) y0, *(wxColour*) object_pointer0_2));
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxDC::FloodFill at call with 3 argument(s)");
 
 				return;
 				break;
@@ -9154,7 +9154,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->FloodFill((wxCoord) x0, (wxCoord) y0, *(wxColour*) object_pointer0_2, (wxFloodFillStyle) style0));
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxDC::FloodFill at call with 4 argument(s)");
 
 				return;
 				break;
@@ -9220,8 +9220,8 @@ PHP_METHOD(php_wxDC, FloodFill)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->FloodFill(*(wxPoint*) object_pointer1_0, *(wxColour*) object_pointer1_1));
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(col1);
+				references->AddReference(pt1, "wxDC::FloodFill at call with 2 argument(s)");
+				references->AddReference(col1, "wxDC::FloodFill at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9280,8 +9280,8 @@ PHP_METHOD(php_wxDC, FloodFill)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->FloodFill(*(wxPoint*) object_pointer1_0, *(wxColour*) object_pointer1_1, (wxFloodFillStyle) style1));
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(col1);
+				references->AddReference(pt1, "wxDC::FloodFill at call with 3 argument(s)");
+				references->AddReference(col1, "wxDC::FloodFill at call with 3 argument(s)");
 
 				return;
 				break;
@@ -9497,7 +9497,7 @@ PHP_METHOD(php_wxDC, GetBackground)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDC::GetBackground at call with 0 argument(s)");
 				}
 
 
@@ -9902,7 +9902,7 @@ PHP_METHOD(php_wxDC, GetBrush)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDC::GetBrush at call with 0 argument(s)");
 				}
 
 
@@ -11112,7 +11112,7 @@ PHP_METHOD(php_wxDC, GetFont)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDC::GetFont at call with 0 argument(s)");
 				}
 
 
@@ -12555,7 +12555,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					((wxDC_php*)_this)->GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) heightLine0, (const wxFont*) object_pointer0_4);
 				}
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxDC::GetMultiLineTextExtent at call with 5 argument(s)");
 
 				return;
 				break;
@@ -13121,7 +13121,7 @@ PHP_METHOD(php_wxDC, GetPen)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDC::GetPen at call with 0 argument(s)");
 				}
 
 
@@ -13335,7 +13335,7 @@ PHP_METHOD(php_wxDC, GetPixel)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->GetPixel((wxCoord) x0, (wxCoord) y0, (wxColour*) object_pointer0_2));
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxDC::GetPixel at call with 3 argument(s)");
 
 				return;
 				break;
@@ -14193,7 +14193,7 @@ PHP_METHOD(php_wxDC, GetTextBackground)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDC::GetTextBackground at call with 0 argument(s)");
 				}
 
 
@@ -14605,7 +14605,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					((wxDC_php*)_this)->GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0, (wxCoord*) externalLeading0, (const wxFont*) object_pointer0_5);
 				}
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxDC::GetTextExtent at call with 6 argument(s)");
 
 				return;
 				break;
@@ -14935,7 +14935,7 @@ PHP_METHOD(php_wxDC, GetTextForeground)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDC::GetTextForeground at call with 0 argument(s)");
 				}
 
 
@@ -15483,9 +15483,9 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 					((wxDC_php*)_this)->GradientFillConcentric(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2);
 				}
 
-				references->AddReference(rect0);
-				references->AddReference(initialColour0);
-				references->AddReference(destColour0);
+				references->AddReference(rect0, "wxDC::GradientFillConcentric at call with 3 argument(s)");
+				references->AddReference(initialColour0, "wxDC::GradientFillConcentric at call with 3 argument(s)");
+				references->AddReference(destColour0, "wxDC::GradientFillConcentric at call with 3 argument(s)");
 
 				return;
 				break;
@@ -15551,10 +15551,10 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 					((wxDC_php*)_this)->GradientFillConcentric(*(wxRect*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxPoint*) object_pointer1_3);
 				}
 
-				references->AddReference(rect1);
-				references->AddReference(initialColour1);
-				references->AddReference(destColour1);
-				references->AddReference(circleCenter1);
+				references->AddReference(rect1, "wxDC::GradientFillConcentric at call with 4 argument(s)");
+				references->AddReference(initialColour1, "wxDC::GradientFillConcentric at call with 4 argument(s)");
+				references->AddReference(destColour1, "wxDC::GradientFillConcentric at call with 4 argument(s)");
+				references->AddReference(circleCenter1, "wxDC::GradientFillConcentric at call with 4 argument(s)");
 
 				return;
 				break;
@@ -15801,9 +15801,9 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 					((wxDC_php*)_this)->GradientFillLinear(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2);
 				}
 
-				references->AddReference(rect0);
-				references->AddReference(initialColour0);
-				references->AddReference(destColour0);
+				references->AddReference(rect0, "wxDC::GradientFillLinear at call with 3 argument(s)");
+				references->AddReference(initialColour0, "wxDC::GradientFillLinear at call with 3 argument(s)");
+				references->AddReference(destColour0, "wxDC::GradientFillLinear at call with 3 argument(s)");
 
 				return;
 				break;
@@ -15862,9 +15862,9 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 					((wxDC_php*)_this)->GradientFillLinear(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2, (wxDirection) nDirection0);
 				}
 
-				references->AddReference(rect0);
-				references->AddReference(initialColour0);
-				references->AddReference(destColour0);
+				references->AddReference(rect0, "wxDC::GradientFillLinear at call with 4 argument(s)");
+				references->AddReference(initialColour0, "wxDC::GradientFillLinear at call with 4 argument(s)");
+				references->AddReference(destColour0, "wxDC::GradientFillLinear at call with 4 argument(s)");
 
 				return;
 				break;
@@ -18344,7 +18344,7 @@ PHP_METHOD(php_wxDC, SetBackground)
 					((wxDC_php*)_this)->SetBackground(*(wxBrush*) object_pointer0_0);
 				}
 
-				references->AddReference(brush0);
+				references->AddReference(brush0, "wxDC::SetBackground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18746,7 +18746,7 @@ PHP_METHOD(php_wxDC, SetBrush)
 					((wxDC_php*)_this)->SetBrush(*(wxBrush*) object_pointer0_0);
 				}
 
-				references->AddReference(brush0);
+				references->AddReference(brush0, "wxDC::SetBrush at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19097,8 +19097,8 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 					((wxDC_php*)_this)->SetClippingRegion(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1);
 				}
 
-				references->AddReference(pt1);
-				references->AddReference(sz1);
+				references->AddReference(pt1, "wxDC::SetClippingRegion at call with 2 argument(s)");
+				references->AddReference(sz1, "wxDC::SetClippingRegion at call with 2 argument(s)");
 
 				return;
 				break;
@@ -19164,7 +19164,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 					((wxDC_php*)_this)->SetClippingRegion(*(wxRect*) object_pointer2_0);
 				}
 
-				references->AddReference(rect2);
+				references->AddReference(rect2, "wxDC::SetClippingRegion at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19374,7 +19374,7 @@ PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 					((wxDC_php*)_this)->SetDeviceClippingRegion(*(wxRegion*) object_pointer0_0);
 				}
 
-				references->AddReference(region0);
+				references->AddReference(region0, "wxDC::SetDeviceClippingRegion at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19777,7 +19777,7 @@ PHP_METHOD(php_wxDC, SetFont)
 					((wxDC_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 				}
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxDC::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20947,7 +20947,7 @@ PHP_METHOD(php_wxDC, SetPalette)
 					((wxDC_php*)_this)->SetPalette(*(wxPalette*) object_pointer0_0);
 				}
 
-				references->AddReference(palette0);
+				references->AddReference(palette0, "wxDC::SetPalette at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21157,7 +21157,7 @@ PHP_METHOD(php_wxDC, SetPen)
 					((wxDC_php*)_this)->SetPen(*(wxPen*) object_pointer0_0);
 				}
 
-				references->AddReference(pen0);
+				references->AddReference(pen0, "wxDC::SetPen at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21379,7 +21379,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::StretchBlit at call with 9 argument(s)");
 
 				return;
 				break;
@@ -21438,7 +21438,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::StretchBlit at call with 10 argument(s)");
 
 				return;
 				break;
@@ -21497,7 +21497,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::StretchBlit at call with 11 argument(s)");
 
 				return;
 				break;
@@ -21556,7 +21556,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::StretchBlit at call with 12 argument(s)");
 
 				return;
 				break;
@@ -21615,7 +21615,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0, (wxCoord) ysrcMask0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::StretchBlit at call with 13 argument(s)");
 
 				return;
 				break;
@@ -21835,7 +21835,7 @@ PHP_METHOD(php_wxDC, Blit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::Blit at call with 7 argument(s)");
 
 				return;
 				break;
@@ -21894,7 +21894,7 @@ PHP_METHOD(php_wxDC, Blit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::Blit at call with 8 argument(s)");
 
 				return;
 				break;
@@ -21953,7 +21953,7 @@ PHP_METHOD(php_wxDC, Blit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::Blit at call with 9 argument(s)");
 
 				return;
 				break;
@@ -22012,7 +22012,7 @@ PHP_METHOD(php_wxDC, Blit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::Blit at call with 10 argument(s)");
 
 				return;
 				break;
@@ -22071,7 +22071,7 @@ PHP_METHOD(php_wxDC, Blit)
 					ZVAL_BOOL(return_value, ((wxDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0, (wxCoord) ysrcMask0));
 				}
 
-				references->AddReference(source0);
+				references->AddReference(source0, "wxDC::Blit at call with 11 argument(s)");
 
 				return;
 				break;
@@ -22312,8 +22312,8 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#endif
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
-				references->AddReference(dc0);
-				references->AddReference(area0);
+				references->AddReference(dc0, "wxBufferedDC::Init at call with 2 argument(s)");
+				references->AddReference(area0, "wxBufferedDC::Init at call with 2 argument(s)");
 
 				return;
 				break;
@@ -22325,8 +22325,8 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#endif
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer0_0, *(wxSize*) object_pointer0_1, (int) style0);
 
-				references->AddReference(dc0);
-				references->AddReference(area0);
+				references->AddReference(dc0, "wxBufferedDC::Init at call with 3 argument(s)");
+				references->AddReference(area0, "wxBufferedDC::Init at call with 3 argument(s)");
 
 				return;
 				break;
@@ -22345,7 +22345,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#endif
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer1_0);
 
-				references->AddReference(dc1);
+				references->AddReference(dc1, "wxBufferedDC::Init at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22357,8 +22357,8 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#endif
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer1_0, *(wxBitmap*) object_pointer1_1);
 
-				references->AddReference(dc1);
-				references->AddReference(buffer1);
+				references->AddReference(dc1, "wxBufferedDC::Init at call with 2 argument(s)");
+				references->AddReference(buffer1, "wxBufferedDC::Init at call with 2 argument(s)");
 
 				return;
 				break;
@@ -22370,8 +22370,8 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#endif
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer1_0, *(wxBitmap*) object_pointer1_1, (int) style1);
 
-				references->AddReference(dc1);
-				references->AddReference(buffer1);
+				references->AddReference(dc1, "wxBufferedDC::Init at call with 3 argument(s)");
+				references->AddReference(buffer1, "wxBufferedDC::Init at call with 3 argument(s)");
 
 				return;
 				break;
@@ -22564,8 +22564,8 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				_this = new wxBufferedDC_php((wxDC*) object_pointer1_0, *(wxSize*) object_pointer1_1);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
-				((wxBufferedDC_php*) _this)->references.AddReference(dc1);
-				((wxBufferedDC_php*) _this)->references.AddReference(area1);
+				((wxBufferedDC_php*) _this)->references.AddReference(dc1, "wxBufferedDC::wxBufferedDC at call with 2 argument(s)");
+				((wxBufferedDC_php*) _this)->references.AddReference(area1, "wxBufferedDC::wxBufferedDC at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -22576,8 +22576,8 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				_this = new wxBufferedDC_php((wxDC*) object_pointer1_0, *(wxSize*) object_pointer1_1, (int) style1);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
-				((wxBufferedDC_php*) _this)->references.AddReference(dc1);
-				((wxBufferedDC_php*) _this)->references.AddReference(area1);
+				((wxBufferedDC_php*) _this)->references.AddReference(dc1, "wxBufferedDC::wxBufferedDC at call with 3 argument(s)");
+				((wxBufferedDC_php*) _this)->references.AddReference(area1, "wxBufferedDC::wxBufferedDC at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -22595,7 +22595,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				_this = new wxBufferedDC_php((wxDC*) object_pointer2_0);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
-				((wxBufferedDC_php*) _this)->references.AddReference(dc2);
+				((wxBufferedDC_php*) _this)->references.AddReference(dc2, "wxBufferedDC::wxBufferedDC at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -22606,8 +22606,8 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				_this = new wxBufferedDC_php((wxDC*) object_pointer2_0, *(wxBitmap*) object_pointer2_1);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
-				((wxBufferedDC_php*) _this)->references.AddReference(dc2);
-				((wxBufferedDC_php*) _this)->references.AddReference(buffer2);
+				((wxBufferedDC_php*) _this)->references.AddReference(dc2, "wxBufferedDC::wxBufferedDC at call with 2 argument(s)");
+				((wxBufferedDC_php*) _this)->references.AddReference(buffer2, "wxBufferedDC::wxBufferedDC at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -22618,8 +22618,8 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				_this = new wxBufferedDC_php((wxDC*) object_pointer2_0, *(wxBitmap*) object_pointer2_1, (int) style2);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
-				((wxBufferedDC_php*) _this)->references.AddReference(dc2);
-				((wxBufferedDC_php*) _this)->references.AddReference(buffer2);
+				((wxBufferedDC_php*) _this)->references.AddReference(dc2, "wxBufferedDC::wxBufferedDC at call with 3 argument(s)");
+				((wxBufferedDC_php*) _this)->references.AddReference(buffer2, "wxBufferedDC::wxBufferedDC at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -22766,7 +22766,7 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 				_this = new wxAutoBufferedPaintDC_php((wxWindow*) object_pointer0_0);
 
 				((wxAutoBufferedPaintDC_php*) _this)->references.Initialize();
-				((wxAutoBufferedPaintDC_php*) _this)->references.AddReference(window0);
+				((wxAutoBufferedPaintDC_php*) _this)->references.AddReference(window0, "wxAutoBufferedPaintDC::wxAutoBufferedPaintDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -22969,8 +22969,8 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer0_0, *(wxBitmap*) object_pointer0_1);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
-				((wxBufferedPaintDC_php*) _this)->references.AddReference(window0);
-				((wxBufferedPaintDC_php*) _this)->references.AddReference(buffer0);
+				((wxBufferedPaintDC_php*) _this)->references.AddReference(window0, "wxBufferedPaintDC::wxBufferedPaintDC at call with 2 argument(s)");
+				((wxBufferedPaintDC_php*) _this)->references.AddReference(buffer0, "wxBufferedPaintDC::wxBufferedPaintDC at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -22981,8 +22981,8 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer0_0, *(wxBitmap*) object_pointer0_1, (int) style0);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
-				((wxBufferedPaintDC_php*) _this)->references.AddReference(window0);
-				((wxBufferedPaintDC_php*) _this)->references.AddReference(buffer0);
+				((wxBufferedPaintDC_php*) _this)->references.AddReference(window0, "wxBufferedPaintDC::wxBufferedPaintDC at call with 3 argument(s)");
+				((wxBufferedPaintDC_php*) _this)->references.AddReference(buffer0, "wxBufferedPaintDC::wxBufferedPaintDC at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -23000,7 +23000,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer1_0);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
-				((wxBufferedPaintDC_php*) _this)->references.AddReference(window1);
+				((wxBufferedPaintDC_php*) _this)->references.AddReference(window1, "wxBufferedPaintDC::wxBufferedPaintDC at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -23011,7 +23011,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer1_0, (int) style1);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
-				((wxBufferedPaintDC_php*) _this)->references.AddReference(window1);
+				((wxBufferedPaintDC_php*) _this)->references.AddReference(window1, "wxBufferedPaintDC::wxBufferedPaintDC at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -23158,7 +23158,7 @@ PHP_METHOD(php_wxPaintDC, __construct)
 				_this = new wxPaintDC_php((wxWindow*) object_pointer0_0);
 
 				((wxPaintDC_php*) _this)->references.Initialize();
-				((wxPaintDC_php*) _this)->references.AddReference(window0);
+				((wxPaintDC_php*) _this)->references.AddReference(window0, "wxPaintDC::wxPaintDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23305,7 +23305,7 @@ PHP_METHOD(php_wxClientDC, __construct)
 				_this = new wxClientDC_php((wxWindow*) object_pointer0_0);
 
 				((wxClientDC_php*) _this)->references.Initialize();
-				((wxClientDC_php*) _this)->references.AddReference(window0);
+				((wxClientDC_php*) _this)->references.AddReference(window0, "wxClientDC::wxClientDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23452,7 +23452,7 @@ PHP_METHOD(php_wxWindowDC, __construct)
 				_this = new wxWindowDC_php((wxWindow*) object_pointer0_0);
 
 				((wxWindowDC_php*) _this)->references.Initialize();
-				((wxWindowDC_php*) _this)->references.AddReference(window0);
+				((wxWindowDC_php*) _this)->references.AddReference(window0, "wxWindowDC::wxWindowDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23642,7 +23642,7 @@ PHP_METHOD(php_wxMemoryDC, SelectObject)
 				#endif
 				((wxMemoryDC_php*)_this)->SelectObject(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxMemoryDC::SelectObject at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23773,7 +23773,7 @@ PHP_METHOD(php_wxMemoryDC, SelectObjectAsSource)
 				#endif
 				((wxMemoryDC_php*)_this)->SelectObjectAsSource(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxMemoryDC::SelectObjectAsSource at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23928,7 +23928,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 				_this = new wxMemoryDC_php((wxDC*) object_pointer1_0);
 
 				((wxMemoryDC_php*) _this)->references.Initialize();
-				((wxMemoryDC_php*) _this)->references.AddReference(dc1);
+				((wxMemoryDC_php*) _this)->references.AddReference(dc1, "wxMemoryDC::wxMemoryDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -23946,7 +23946,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 				_this = new wxMemoryDC_php(*(wxBitmap*) object_pointer2_0);
 
 				((wxMemoryDC_php*) _this)->references.Initialize();
-				((wxMemoryDC_php*) _this)->references.AddReference(bitmap2);
+				((wxMemoryDC_php*) _this)->references.AddReference(bitmap2, "wxMemoryDC::wxMemoryDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -24094,7 +24094,7 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 				_this = new wxMirrorDC_php(*(wxDC*) object_pointer0_0, mirror0);
 
 				((wxMirrorDC_php*) _this)->references.Initialize();
-				((wxMirrorDC_php*) _this)->references.AddReference(dc0);
+				((wxMirrorDC_php*) _this)->references.AddReference(dc0, "wxMirrorDC::wxMirrorDC at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -24271,7 +24271,7 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 				_this = new wxPostScriptDC_php(*(wxPrintData*) object_pointer1_0);
 
 				((wxPostScriptDC_php*) _this)->references.Initialize();
-				((wxPostScriptDC_php*) _this)->references.AddReference(printData1);
+				((wxPostScriptDC_php*) _this)->references.AddReference(printData1, "wxPostScriptDC::wxPostScriptDC at call with 1 argument(s)");
 				break;
 			}
 		}

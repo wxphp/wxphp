@@ -191,7 +191,7 @@ PHP_METHOD(php_wxGenericValidator, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGenericValidator::Clone at call with 0 argument(s)");
 				}
 
 
@@ -682,7 +682,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				_this = new wxGenericValidator_php((wxFileName*) object_pointer4_0);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
-				((wxGenericValidator_php*) _this)->references.AddReference(valPtr4);
+				((wxGenericValidator_php*) _this)->references.AddReference(valPtr4, "wxGenericValidator::wxGenericValidator at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -986,7 +986,7 @@ PHP_METHOD(php_wxValidator, Validate)
 				#endif
 				ZVAL_BOOL(return_value, ((wxValidator_php*)_this)->Validate((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxValidator::Validate at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1321,7 +1321,7 @@ PHP_METHOD(php_wxValidator, SetWindow)
 				#endif
 				((wxValidator_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxValidator::SetWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1446,7 +1446,7 @@ PHP_METHOD(php_wxValidator, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxValidator::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -1695,7 +1695,7 @@ PHP_METHOD(php_wxValidator, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxValidator::Clone at call with 0 argument(s)");
 				}
 
 
@@ -1854,7 +1854,7 @@ PHP_METHOD(php_wxTextValidator, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTextValidator::Clone at call with 0 argument(s)");
 				}
 
 
@@ -2309,6 +2309,7 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(val.size()+1));
@@ -2320,7 +2321,15 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3183,7 +3192,7 @@ PHP_METHOD(php_wxTextValidator, Validate)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTextValidator_php*)_this)->Validate((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxTextValidator::Validate at call with 1 argument(s)");
 
 				return;
 				break;

@@ -181,7 +181,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
-				((wxAuiNotebook_php*) _this)->references.AddReference(parent0);
+				((wxAuiNotebook_php*) _this)->references.AddReference(parent0, "wxAuiNotebook::wxAuiNotebook at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -192,7 +192,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
-				((wxAuiNotebook_php*) _this)->references.AddReference(parent0);
+				((wxAuiNotebook_php*) _this)->references.AddReference(parent0, "wxAuiNotebook::wxAuiNotebook at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -203,8 +203,8 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
-				((wxAuiNotebook_php*) _this)->references.AddReference(parent0);
-				((wxAuiNotebook_php*) _this)->references.AddReference(pos0);
+				((wxAuiNotebook_php*) _this)->references.AddReference(parent0, "wxAuiNotebook::wxAuiNotebook at call with 3 argument(s)");
+				((wxAuiNotebook_php*) _this)->references.AddReference(pos0, "wxAuiNotebook::wxAuiNotebook at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -215,9 +215,9 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
-				((wxAuiNotebook_php*) _this)->references.AddReference(parent0);
-				((wxAuiNotebook_php*) _this)->references.AddReference(pos0);
-				((wxAuiNotebook_php*) _this)->references.AddReference(size0);
+				((wxAuiNotebook_php*) _this)->references.AddReference(parent0, "wxAuiNotebook::wxAuiNotebook at call with 4 argument(s)");
+				((wxAuiNotebook_php*) _this)->references.AddReference(pos0, "wxAuiNotebook::wxAuiNotebook at call with 4 argument(s)");
+				((wxAuiNotebook_php*) _this)->references.AddReference(size0, "wxAuiNotebook::wxAuiNotebook at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -228,9 +228,9 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
-				((wxAuiNotebook_php*) _this)->references.AddReference(parent0);
-				((wxAuiNotebook_php*) _this)->references.AddReference(pos0);
-				((wxAuiNotebook_php*) _this)->references.AddReference(size0);
+				((wxAuiNotebook_php*) _this)->references.AddReference(parent0, "wxAuiNotebook::wxAuiNotebook at call with 5 argument(s)");
+				((wxAuiNotebook_php*) _this)->references.AddReference(pos0, "wxAuiNotebook::wxAuiNotebook at call with 5 argument(s)");
+				((wxAuiNotebook_php*) _this)->references.AddReference(size0, "wxAuiNotebook::wxAuiNotebook at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -583,7 +583,7 @@ PHP_METHOD(php_wxAuiNotebook, SetUniformBitmapSize)
 				#endif
 				((wxAuiNotebook_php*)_this)->SetUniformBitmapSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxAuiNotebook::SetUniformBitmapSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -803,7 +803,7 @@ PHP_METHOD(php_wxAuiNotebook, SetSelectedFont)
 				#endif
 				((wxAuiNotebook_php*)_this)->SetSelectedFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxAuiNotebook::SetSelectedFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1128,7 +1128,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->SetPageBitmap((size_t) page0, *(wxBitmap*) object_pointer0_1));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxAuiNotebook::SetPageBitmap at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1247,7 +1247,7 @@ PHP_METHOD(php_wxAuiNotebook, SetNormalFont)
 				#endif
 				((wxAuiNotebook_php*)_this)->SetNormalFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxAuiNotebook::SetNormalFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1366,7 +1366,7 @@ PHP_METHOD(php_wxAuiNotebook, SetMeasuringFont)
 				#endif
 				((wxAuiNotebook_php*)_this)->SetMeasuringFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxAuiNotebook::SetMeasuringFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1485,7 +1485,7 @@ PHP_METHOD(php_wxAuiNotebook, SetFont)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->SetFont(*(wxFont*) object_pointer0_0));
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxAuiNotebook::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1604,7 +1604,7 @@ PHP_METHOD(php_wxAuiNotebook, SetArtProvider)
 				#endif
 				((wxAuiNotebook_php*)_this)->SetArtProvider((wxAuiTabArt*) object_pointer0_0);
 
-				references->AddReference(art0);
+				references->AddReference(art0, "wxAuiNotebook::SetArtProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2123,7 +2123,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
 				#endif
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->GetPageIndex((wxWindow*) object_pointer0_0));
 
-				references->AddReference(page_wnd0);
+				references->AddReference(page_wnd0, "wxAuiNotebook::GetPageIndex at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2447,7 +2447,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiNotebook::GetPage at call with 1 argument(s)");
 				}
 
 
@@ -2667,7 +2667,7 @@ PHP_METHOD(php_wxAuiNotebook, GetCurrentPage)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiNotebook::GetCurrentPage at call with 0 argument(s)");
 				}
 
 
@@ -2786,7 +2786,7 @@ PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiNotebook::GetArtProvider at call with 0 argument(s)");
 				}
 
 
@@ -3142,7 +3142,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxAuiNotebook::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3154,7 +3154,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxAuiNotebook::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3166,8 +3166,8 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxAuiNotebook::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxAuiNotebook::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3179,9 +3179,9 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxAuiNotebook::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxAuiNotebook::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxAuiNotebook::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3193,9 +3193,9 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxAuiNotebook::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxAuiNotebook::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxAuiNotebook::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -3548,7 +3548,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8)));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxAuiNotebook::AddPage at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3560,7 +3560,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0));
 
-				references->AddReference(page0);
+				references->AddReference(page0, "wxAuiNotebook::AddPage at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3572,8 +3572,8 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0, *(wxBitmap*) object_pointer0_3));
 
-				references->AddReference(page0);
-				references->AddReference(bitmap0);
+				references->AddReference(page0, "wxAuiNotebook::AddPage at call with 4 argument(s)");
+				references->AddReference(bitmap0, "wxAuiNotebook::AddPage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3758,6 +3758,7 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxSize_entry);
@@ -3768,7 +3769,15 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3776,11 +3785,12 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetSizingInfo'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3812,6 +3822,7 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFont_entry);
@@ -3821,7 +3832,15 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3829,11 +3848,12 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetSelectedFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3865,6 +3885,7 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFont_entry);
@@ -3874,7 +3895,15 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3882,11 +3911,12 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetNormalFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3918,6 +3948,7 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFont_entry);
@@ -3927,7 +3958,15 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3935,11 +3974,12 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetMeasuringFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -3971,6 +4011,7 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], flags);
@@ -3979,7 +4020,15 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -3987,11 +4036,12 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetFlags'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4023,6 +4073,7 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxColour_entry);
@@ -4032,7 +4083,15 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4040,11 +4099,12 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4076,6 +4136,7 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxColour_entry);
@@ -4085,7 +4146,15 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4093,11 +4162,12 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::SetActiveColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4129,6 +4199,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -4149,7 +4220,15 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<7; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4157,15 +4236,21 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::GetTabSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -4193,6 +4278,7 @@ int wxAuiTabArt_php::GetIndentSize()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -4200,7 +4286,10 @@ int wxAuiTabArt_php::GetIndentSize()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4208,11 +4297,12 @@ int wxAuiTabArt_php::GetIndentSize()
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::GetIndentSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -4244,6 +4334,7 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -4262,7 +4353,15 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<7; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4270,11 +4369,12 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::DrawButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4306,6 +4406,7 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -4319,7 +4420,15 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4327,11 +4436,12 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::DrawBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4358,6 +4468,7 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -4365,7 +4476,10 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4373,15 +4487,21 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiTabArt::Clone'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxAuiTabArt_php* var = (wxAuiTabArt_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxAuiTabArt*) return_object;
 	
 }
@@ -4538,6 +4658,7 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -4547,7 +4668,15 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4555,11 +4684,12 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::SetMetric'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4591,6 +4721,7 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -4601,7 +4732,15 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4609,11 +4748,12 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::SetFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4645,6 +4785,7 @@ int wxAuiDockArt_php::GetMetric(int id)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -4653,7 +4794,15 @@ int wxAuiDockArt_php::GetMetric(int id)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4661,11 +4810,12 @@ int wxAuiDockArt_php::GetMetric(int id)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::GetMetric'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -4697,6 +4847,7 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -4707,7 +4858,15 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4715,11 +4874,12 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::SetColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4751,6 +4911,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -4759,7 +4920,15 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4767,15 +4936,21 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::GetFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxFont_php* var = (wxFont_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxFont*) return_object;
 	
 }
@@ -4808,6 +4983,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
@@ -4816,7 +4992,15 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4824,15 +5008,21 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::GetColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxColour_php* var = (wxColour_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxColour*) return_object;
 	
 }
@@ -4865,6 +5055,7 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -4879,7 +5070,15 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4887,11 +5086,12 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::DrawSash'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4923,6 +5123,7 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -4940,7 +5141,15 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<6; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4948,11 +5157,12 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::DrawPaneButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -4984,6 +5194,7 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -4999,7 +5210,15 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5007,11 +5226,12 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::DrawGripper'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -5043,6 +5263,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -5062,7 +5283,15 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<5; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5070,11 +5299,12 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::DrawCaption'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -5106,6 +5336,7 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -5121,7 +5352,15 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5129,11 +5368,12 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::DrawBorder'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -5165,6 +5405,7 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -5179,7 +5420,15 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5187,11 +5436,12 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiDockArt::DrawBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -5285,7 +5535,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 				_this = new wxAuiManager_php((wxWindow*) object_pointer0_0);
 
 				((wxAuiManager_php*) _this)->references.Initialize();
-				((wxAuiManager_php*) _this)->references.AddReference(managed_wnd0);
+				((wxAuiManager_php*) _this)->references.AddReference(managed_wnd0, "wxAuiManager::wxAuiManager at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -5296,7 +5546,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 				_this = new wxAuiManager_php((wxWindow*) object_pointer0_0, (unsigned int) flags0);
 
 				((wxAuiManager_php*) _this)->references.Initialize();
-				((wxAuiManager_php*) _this)->references.AddReference(managed_wnd0);
+				((wxAuiManager_php*) _this)->references.AddReference(managed_wnd0, "wxAuiManager::wxAuiManager at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -5626,7 +5876,7 @@ PHP_METHOD(php_wxAuiManager, ShowHint)
 				#endif
 				((wxAuiManager_php*)_this)->ShowHint(*(wxRect*) object_pointer0_0);
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxAuiManager::ShowHint at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5745,7 +5995,7 @@ PHP_METHOD(php_wxAuiManager, SetManagedWindow)
 				#endif
 				((wxAuiManager_php*)_this)->SetManagedWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(managed_wnd0);
+				references->AddReference(managed_wnd0, "wxAuiManager::SetManagedWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6067,7 +6317,7 @@ PHP_METHOD(php_wxAuiManager, SetArtProvider)
 				#endif
 				((wxAuiManager_php*)_this)->SetArtProvider((wxAuiDockArt*) object_pointer0_0);
 
-				references->AddReference(art_provider0);
+				references->AddReference(art_provider0, "wxAuiManager::SetArtProvider at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6294,7 +6544,7 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 				ZVAL_STRING(return_value, temp_string1, 1);
 				free(temp_string1);
 
-				references->AddReference(pane0);
+				references->AddReference(pane0, "wxAuiManager::SavePaneInfo at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6338,6 +6588,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxAuiPaneInfo_entry);
@@ -6349,7 +6600,15 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6593,7 +6852,7 @@ PHP_METHOD(php_wxAuiManager, LoadPaneInfo)
 				#endif
 				((wxAuiManager_php*)_this)->LoadPaneInfo(wxString(pane_part0, wxConvUTF8), *(wxAuiPaneInfo*) object_pointer0_1);
 
-				references->AddReference(pane0);
+				references->AddReference(pane0, "wxAuiManager::LoadPaneInfo at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6731,8 +6990,8 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1));
 
-				references->AddReference(window0);
-				references->AddReference(insert_location0);
+				references->AddReference(window0, "wxAuiManager::InsertPane at call with 2 argument(s)");
+				references->AddReference(insert_location0, "wxAuiManager::InsertPane at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6744,8 +7003,8 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, (int) insert_level0));
 
-				references->AddReference(window0);
-				references->AddReference(insert_location0);
+				references->AddReference(window0, "wxAuiManager::InsertPane at call with 3 argument(s)");
+				references->AddReference(insert_location0, "wxAuiManager::InsertPane at call with 3 argument(s)");
 
 				return;
 				break;
@@ -6997,7 +7256,7 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManager::GetPane at call with 1 argument(s)");
 				}
 
 
@@ -7035,10 +7294,10 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManager::GetPane at call with 1 argument(s)");
 				}
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxAuiManager::GetPane at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7293,7 +7552,7 @@ PHP_METHOD(php_wxAuiManager, GetManagedWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManager::GetManagedWindow at call with 0 argument(s)");
 				}
 
 
@@ -7627,7 +7886,7 @@ PHP_METHOD(php_wxAuiManager, GetArtProvider)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiManager::GetArtProvider at call with 0 argument(s)");
 				}
 
 
@@ -7748,7 +8007,7 @@ PHP_METHOD(php_wxAuiManager, DetachPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->DetachPane((wxWindow*) object_pointer0_0));
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxAuiManager::DetachPane at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7996,9 +8255,9 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(window0);
-				references->AddReference(pane_info0);
-				references->AddReference(drop_pos0);
+				references->AddReference(window0, "wxAuiManager::AddPane at call with 3 argument(s)");
+				references->AddReference(pane_info0, "wxAuiManager::AddPane at call with 3 argument(s)");
+				references->AddReference(drop_pos0, "wxAuiManager::AddPane at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8017,7 +8276,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer1_0));
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxAuiManager::AddPane at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8029,7 +8288,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer1_0, (int) direction1));
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxAuiManager::AddPane at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8041,7 +8300,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer1_0, (int) direction1, wxString(caption1, wxConvUTF8)));
 
-				references->AddReference(window1);
+				references->AddReference(window1, "wxAuiManager::AddPane at call with 3 argument(s)");
 
 				return;
 				break;
@@ -8060,8 +8319,8 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer2_0, *(wxAuiPaneInfo*) object_pointer2_1));
 
-				references->AddReference(window2);
-				references->AddReference(pane_info2);
+				references->AddReference(window2, "wxAuiManager::AddPane at call with 2 argument(s)");
+				references->AddReference(pane_info2, "wxAuiManager::AddPane at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8203,7 +8462,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 				_this = new wxAuiPaneInfo_php(*(wxAuiPaneInfo*) object_pointer0_0);
 
 				((wxAuiPaneInfo_php*) _this)->references.Initialize();
-				((wxAuiPaneInfo_php*) _this)->references.AddReference(c0);
+				((wxAuiPaneInfo_php*) _this)->references.AddReference(c0, "wxAuiPaneInfo::wxAuiPaneInfo at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -8375,10 +8634,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Window)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Window at call with 1 argument(s)");
 				}
 
-				references->AddReference(w0);
+				references->AddReference(w0, "wxAuiPaneInfo::Window at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8497,7 +8756,7 @@ PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::TopDockable at call with 0 argument(s)");
 				}
 
 
@@ -8528,7 +8787,7 @@ PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::TopDockable at call with 1 argument(s)");
 				}
 
 
@@ -8644,7 +8903,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Top)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Top at call with 0 argument(s)");
 				}
 
 
@@ -8760,7 +9019,7 @@ PHP_METHOD(php_wxAuiPaneInfo, ToolbarPane)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::ToolbarPane at call with 0 argument(s)");
 				}
 
 
@@ -8881,7 +9140,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Show)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Show at call with 0 argument(s)");
 				}
 
 
@@ -8912,7 +9171,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Show)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Show at call with 1 argument(s)");
 				}
 
 
@@ -9034,7 +9293,7 @@ PHP_METHOD(php_wxAuiPaneInfo, SetFlag)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::SetFlag at call with 2 argument(s)");
 				}
 
 
@@ -9273,7 +9532,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Row)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Row at call with 1 argument(s)");
 				}
 
 
@@ -9394,7 +9653,7 @@ PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::RightDockable at call with 0 argument(s)");
 				}
 
 
@@ -9425,7 +9684,7 @@ PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::RightDockable at call with 1 argument(s)");
 				}
 
 
@@ -9541,7 +9800,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Right)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Right at call with 0 argument(s)");
 				}
 
 
@@ -9662,7 +9921,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Resizable at call with 0 argument(s)");
 				}
 
 
@@ -9693,7 +9952,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Resizable at call with 1 argument(s)");
 				}
 
 
@@ -9814,7 +10073,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Position)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Position at call with 1 argument(s)");
 				}
 
 
@@ -9935,7 +10194,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::PinButton at call with 0 argument(s)");
 				}
 
 
@@ -9966,7 +10225,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::PinButton at call with 1 argument(s)");
 				}
 
 
@@ -10087,7 +10346,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::PaneBorder at call with 0 argument(s)");
 				}
 
 
@@ -10118,7 +10377,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::PaneBorder at call with 1 argument(s)");
 				}
 
 
@@ -10240,7 +10499,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Name)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Name at call with 1 argument(s)");
 				}
 
 
@@ -10361,7 +10620,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Movable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Movable at call with 0 argument(s)");
 				}
 
 
@@ -10392,7 +10651,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Movable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Movable at call with 1 argument(s)");
 				}
 
 
@@ -10513,7 +10772,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MinimizeButton at call with 0 argument(s)");
 				}
 
 
@@ -10544,7 +10803,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MinimizeButton at call with 1 argument(s)");
 				}
 
 
@@ -10702,7 +10961,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MinSize at call with 2 argument(s)");
 				}
 
 
@@ -10740,10 +10999,10 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MinSize at call with 1 argument(s)");
 				}
 
-				references->AddReference(size1);
+				references->AddReference(size1, "wxAuiPaneInfo::MinSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10862,7 +11121,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MaximizeButton at call with 0 argument(s)");
 				}
 
 
@@ -10893,7 +11152,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MaximizeButton at call with 1 argument(s)");
 				}
 
 
@@ -11051,7 +11310,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MaxSize at call with 2 argument(s)");
 				}
 
 
@@ -11089,10 +11348,10 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::MaxSize at call with 1 argument(s)");
 				}
 
-				references->AddReference(size1);
+				references->AddReference(size1, "wxAuiPaneInfo::MaxSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11211,7 +11470,7 @@ PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::LeftDockable at call with 0 argument(s)");
 				}
 
 
@@ -11242,7 +11501,7 @@ PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::LeftDockable at call with 1 argument(s)");
 				}
 
 
@@ -11358,7 +11617,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Left)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Left at call with 0 argument(s)");
 				}
 
 
@@ -11479,7 +11738,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Layer)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Layer at call with 1 argument(s)");
 				}
 
 
@@ -12961,10 +13220,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Icon)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Icon at call with 1 argument(s)");
 				}
 
-				references->AddReference(b0);
+				references->AddReference(b0, "wxAuiPaneInfo::Icon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -13078,7 +13337,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Hide)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Hide at call with 0 argument(s)");
 				}
 
 
@@ -14068,7 +14327,7 @@ PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::GripperTop at call with 0 argument(s)");
 				}
 
 
@@ -14099,7 +14358,7 @@ PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::GripperTop at call with 1 argument(s)");
 				}
 
 
@@ -14220,7 +14479,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Gripper at call with 0 argument(s)");
 				}
 
 
@@ -14251,7 +14510,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Gripper at call with 1 argument(s)");
 				}
 
 
@@ -14409,7 +14668,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::FloatingSize at call with 2 argument(s)");
 				}
 
 
@@ -14447,10 +14706,10 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::FloatingSize at call with 1 argument(s)");
 				}
 
-				references->AddReference(size1);
+				references->AddReference(size1, "wxAuiPaneInfo::FloatingSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14606,7 +14865,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::FloatingPosition at call with 2 argument(s)");
 				}
 
 
@@ -14644,10 +14903,10 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::FloatingPosition at call with 1 argument(s)");
 				}
 
-				references->AddReference(pos1);
+				references->AddReference(pos1, "wxAuiPaneInfo::FloatingPosition at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14766,7 +15025,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Floatable at call with 0 argument(s)");
 				}
 
 
@@ -14797,7 +15056,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Floatable at call with 1 argument(s)");
 				}
 
 
@@ -14913,7 +15172,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Float)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Float at call with 0 argument(s)");
 				}
 
 
@@ -15029,7 +15288,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Fixed)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Fixed at call with 0 argument(s)");
 				}
 
 
@@ -15150,7 +15409,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Dockable at call with 0 argument(s)");
 				}
 
 
@@ -15181,7 +15440,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Dockable at call with 1 argument(s)");
 				}
 
 
@@ -15302,7 +15561,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::DockFixed at call with 0 argument(s)");
 				}
 
 
@@ -15333,7 +15592,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::DockFixed at call with 1 argument(s)");
 				}
 
 
@@ -15449,7 +15708,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dock)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Dock at call with 0 argument(s)");
 				}
 
 
@@ -15570,7 +15829,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Direction)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Direction at call with 1 argument(s)");
 				}
 
 
@@ -15691,7 +15950,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::DestroyOnClose at call with 0 argument(s)");
 				}
 
 
@@ -15722,7 +15981,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::DestroyOnClose at call with 1 argument(s)");
 				}
 
 
@@ -15838,7 +16097,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DefaultPane)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::DefaultPane at call with 0 argument(s)");
 				}
 
 
@@ -15959,7 +16218,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::CloseButton at call with 0 argument(s)");
 				}
 
 
@@ -15990,7 +16249,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::CloseButton at call with 1 argument(s)");
 				}
 
 
@@ -16106,7 +16365,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CentrePane)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::CentrePane at call with 0 argument(s)");
 				}
 
 
@@ -16222,7 +16481,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Centre)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Centre at call with 0 argument(s)");
 				}
 
 
@@ -16338,7 +16597,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CenterPane)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::CenterPane at call with 0 argument(s)");
 				}
 
 
@@ -16454,7 +16713,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Center)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Center at call with 0 argument(s)");
 				}
 
 
@@ -16575,7 +16834,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::CaptionVisible at call with 0 argument(s)");
 				}
 
 
@@ -16606,7 +16865,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::CaptionVisible at call with 1 argument(s)");
 				}
 
 
@@ -16728,7 +16987,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Caption)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Caption at call with 1 argument(s)");
 				}
 
 
@@ -16849,7 +17108,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::BottomDockable at call with 0 argument(s)");
 				}
 
 
@@ -16880,7 +17139,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::BottomDockable at call with 1 argument(s)");
 				}
 
 
@@ -16996,7 +17255,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Bottom)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::Bottom at call with 0 argument(s)");
 				}
 
 
@@ -17154,7 +17413,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::BestSize at call with 2 argument(s)");
 				}
 
 
@@ -17192,10 +17451,10 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiPaneInfo::BestSize at call with 1 argument(s)");
 				}
 
-				references->AddReference(size1);
+				references->AddReference(size1, "wxAuiPaneInfo::BestSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -17778,7 +18037,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 				_this = new wxAuiToolBarItem_php(*(wxAuiToolBarItem*) object_pointer0_0);
 
 				((wxAuiToolBarItem_php*) _this)->references.Initialize();
-				((wxAuiToolBarItem_php*) _this)->references.AddReference(c0);
+				((wxAuiToolBarItem_php*) _this)->references.AddReference(c0, "wxAuiToolBarItem::wxAuiToolBarItem at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -17932,7 +18191,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetWindow)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(w0);
+				references->AddReference(w0, "wxAuiToolBarItem::SetWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18450,7 +18709,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSizerItem)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->SetSizerItem((wxSizerItem*) object_pointer0_0);
 
-				references->AddReference(s0);
+				references->AddReference(s0, "wxAuiToolBarItem::SetSizerItem at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18769,7 +19028,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetMinSize)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->SetMinSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(s0);
+				references->AddReference(s0, "wxAuiToolBarItem::SetMinSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19289,7 +19548,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHoverBitmap)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->SetHoverBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxAuiToolBarItem::SetHoverBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19507,7 +19766,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetDisabledBitmap)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->SetDisabledBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxAuiToolBarItem::SetDisabledBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19625,7 +19884,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetBitmap)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxAuiToolBarItem::SetBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20226,7 +20485,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBarItem::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -20629,7 +20888,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSizerItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBarItem::GetSizerItem at call with 0 argument(s)");
 				}
 
 
@@ -20940,7 +21199,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetMinSize)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBarItem::GetMinSize at call with 0 argument(s)");
 				}
 
 
@@ -21447,7 +21706,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetHoverBitmap)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBarItem::GetHoverBitmap at call with 0 argument(s)");
 				}
 
 
@@ -21562,7 +21821,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetDisabledBitmap)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBarItem::GetDisabledBitmap at call with 0 argument(s)");
 				}
 
 
@@ -21677,7 +21936,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetBitmap)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBarItem::GetBitmap at call with 0 argument(s)");
 				}
 
 
@@ -21892,7 +22151,7 @@ PHP_METHOD(php_wxAuiToolBarItem, Assign)
 				#endif
 				((wxAuiToolBarItem_php*)_this)->Assign(*(wxAuiToolBarItem*) object_pointer0_0);
 
-				references->AddReference(c0);
+				references->AddReference(c0, "wxAuiToolBarItem::Assign at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21970,6 +22229,7 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -21977,7 +22237,10 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -21985,15 +22248,21 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::Clone'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxAuiToolBarArt_php* var = (wxAuiToolBarArt_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxAuiToolBarArt*) return_object;
 	
 }
@@ -22025,6 +22294,7 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22038,7 +22308,15 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22046,11 +22324,12 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawBackground'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22081,6 +22360,7 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22096,7 +22376,15 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22104,11 +22392,12 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22139,6 +22428,7 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22154,7 +22444,15 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22162,11 +22460,12 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawControlLabel'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22197,6 +22496,7 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22212,7 +22512,15 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22220,11 +22528,12 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawDropDownButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22255,6 +22564,7 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22268,7 +22578,15 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22276,11 +22594,12 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawGripper'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22311,6 +22630,7 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22326,7 +22646,15 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22334,11 +22662,12 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawLabel'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22369,6 +22698,7 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22383,7 +22713,15 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22391,11 +22729,12 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawOverflowButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22426,6 +22765,7 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22439,7 +22779,15 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22447,11 +22795,12 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::DrawSeparator'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22482,6 +22831,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], element_id);
@@ -22490,7 +22840,15 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22498,11 +22856,12 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::GetElementSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -22528,6 +22887,7 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -22535,7 +22895,10 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22543,11 +22906,12 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::GetFlags'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (unsigned int) Z_LVAL_P(return_value);
+	return (unsigned int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -22573,6 +22937,7 @@ wxFont wxAuiToolBarArt_php::GetFont()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -22580,7 +22945,10 @@ wxFont wxAuiToolBarArt_php::GetFont()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22588,15 +22956,21 @@ wxFont wxAuiToolBarArt_php::GetFont()
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::GetFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxFont_php* var = (wxFont_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxFont*) return_object;
 	
 }
@@ -22628,6 +23002,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22641,7 +23016,15 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22649,15 +23032,21 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::GetLabelSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -22684,6 +23073,7 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -22691,7 +23081,10 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22699,11 +23092,12 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::GetTextOrientation'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -22734,6 +23128,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDC_entry);
@@ -22747,7 +23142,15 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22755,15 +23158,21 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::GetToolSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -22795,6 +23204,7 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], element_id);
@@ -22804,7 +23214,15 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22812,11 +23230,12 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::SetElementSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22847,6 +23266,7 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], flags);
@@ -22855,7 +23275,15 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22863,11 +23291,12 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::SetFlags'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22898,6 +23327,7 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFont_entry);
@@ -22907,7 +23337,15 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22915,11 +23353,12 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::SetFont'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -22950,6 +23389,7 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], orientation);
@@ -22958,7 +23398,15 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -22966,11 +23414,12 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 		
 		wxMessageBox("Failed to call virtual method 'wxAuiToolBarArt::SetTextOrientation'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -23114,7 +23563,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiDefaultToolBarArt::Clone at call with 0 argument(s)");
 				}
 
 
@@ -23270,9 +23719,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawBackground(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawBackground at call with 3 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawBackground at call with 3 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawBackground at call with 3 argument(s)");
 
 				return;
 				break;
@@ -23444,10 +23893,10 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(item0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawButton at call with 4 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawButton at call with 4 argument(s)");
+				references->AddReference(item0, "wxAuiDefaultToolBarArt::DrawButton at call with 4 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -23619,10 +24068,10 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawControlLabel(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(item0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawControlLabel at call with 4 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawControlLabel at call with 4 argument(s)");
+				references->AddReference(item0, "wxAuiDefaultToolBarArt::DrawControlLabel at call with 4 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawControlLabel at call with 4 argument(s)");
 
 				return;
 				break;
@@ -23794,10 +24243,10 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawDropDownButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(item0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawDropDownButton at call with 4 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawDropDownButton at call with 4 argument(s)");
+				references->AddReference(item0, "wxAuiDefaultToolBarArt::DrawDropDownButton at call with 4 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawDropDownButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -23951,9 +24400,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawGripper(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawGripper at call with 3 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawGripper at call with 3 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawGripper at call with 3 argument(s)");
 
 				return;
 				break;
@@ -24125,10 +24574,10 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawLabel(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(item0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawLabel at call with 4 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawLabel at call with 4 argument(s)");
+				references->AddReference(item0, "wxAuiDefaultToolBarArt::DrawLabel at call with 4 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawLabel at call with 4 argument(s)");
 
 				return;
 				break;
@@ -24283,9 +24732,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawOverflowButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) state0);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawOverflowButton at call with 4 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawOverflowButton at call with 4 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawOverflowButton at call with 4 argument(s)");
 
 				return;
 				break;
@@ -24439,9 +24888,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawSeparator(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(rect0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawSeparator at call with 3 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::DrawSeparator at call with 3 argument(s)");
+				references->AddReference(rect0, "wxAuiDefaultToolBarArt::DrawSeparator at call with 3 argument(s)");
 
 				return;
 				break;
@@ -24895,9 +25344,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(item0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
+				references->AddReference(item0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
 
 				return;
 				break;
@@ -25151,9 +25600,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
 
-				references->AddReference(dc0);
-				references->AddReference(wnd0);
-				references->AddReference(item0);
+				references->AddReference(dc0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
+				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
+				references->AddReference(item0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
 
 				return;
 				break;
@@ -25472,7 +25921,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFont)
 				#endif
 				((wxAuiDefaultToolBarArt_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxAuiDefaultToolBarArt::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25802,10 +26251,10 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddControl at call with 1 argument(s)");
 				}
 
-				references->AddReference(control0);
+				references->AddReference(control0, "wxAuiToolBar::AddControl at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25837,10 +26286,10 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddControl at call with 2 argument(s)");
 				}
 
-				references->AddReference(control0);
+				references->AddReference(control0, "wxAuiToolBar::AddControl at call with 2 argument(s)");
 
 				return;
 				break;
@@ -25964,7 +26413,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddLabel at call with 1 argument(s)");
 				}
 
 
@@ -25998,7 +26447,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddLabel at call with 2 argument(s)");
 				}
 
 
@@ -26032,7 +26481,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddLabel at call with 3 argument(s)");
 				}
 
 
@@ -26150,7 +26599,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSeparator)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddSeparator at call with 0 argument(s)");
 				}
 
 
@@ -26273,7 +26722,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddSpacer at call with 1 argument(s)");
 				}
 
 
@@ -26396,7 +26845,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddStretchSpacer at call with 0 argument(s)");
 				}
 
 
@@ -26430,7 +26879,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddStretchSpacer at call with 1 argument(s)");
 				}
 
 
@@ -27048,7 +27497,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
-				((wxAuiToolBar_php*) _this)->references.AddReference(parent0);
+				((wxAuiToolBar_php*) _this)->references.AddReference(parent0, "wxAuiToolBar::wxAuiToolBar at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -27059,7 +27508,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
-				((wxAuiToolBar_php*) _this)->references.AddReference(parent0);
+				((wxAuiToolBar_php*) _this)->references.AddReference(parent0, "wxAuiToolBar::wxAuiToolBar at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -27070,8 +27519,8 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
-				((wxAuiToolBar_php*) _this)->references.AddReference(parent0);
-				((wxAuiToolBar_php*) _this)->references.AddReference(position0);
+				((wxAuiToolBar_php*) _this)->references.AddReference(parent0, "wxAuiToolBar::wxAuiToolBar at call with 3 argument(s)");
+				((wxAuiToolBar_php*) _this)->references.AddReference(position0, "wxAuiToolBar::wxAuiToolBar at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -27082,9 +27531,9 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
-				((wxAuiToolBar_php*) _this)->references.AddReference(parent0);
-				((wxAuiToolBar_php*) _this)->references.AddReference(position0);
-				((wxAuiToolBar_php*) _this)->references.AddReference(size0);
+				((wxAuiToolBar_php*) _this)->references.AddReference(parent0, "wxAuiToolBar::wxAuiToolBar at call with 4 argument(s)");
+				((wxAuiToolBar_php*) _this)->references.AddReference(position0, "wxAuiToolBar::wxAuiToolBar at call with 4 argument(s)");
+				((wxAuiToolBar_php*) _this)->references.AddReference(size0, "wxAuiToolBar::wxAuiToolBar at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -27095,9 +27544,9 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
-				((wxAuiToolBar_php*) _this)->references.AddReference(parent0);
-				((wxAuiToolBar_php*) _this)->references.AddReference(position0);
-				((wxAuiToolBar_php*) _this)->references.AddReference(size0);
+				((wxAuiToolBar_php*) _this)->references.AddReference(parent0, "wxAuiToolBar::wxAuiToolBar at call with 5 argument(s)");
+				((wxAuiToolBar_php*) _this)->references.AddReference(position0, "wxAuiToolBar::wxAuiToolBar at call with 5 argument(s)");
+				((wxAuiToolBar_php*) _this)->references.AddReference(size0, "wxAuiToolBar::wxAuiToolBar at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -28445,7 +28894,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmapSize)
 				#endif
 				((wxAuiToolBar_php*)_this)->SetToolBitmapSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxAuiToolBar::SetToolBitmapSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -28564,7 +29013,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmap)
 				#endif
 				((wxAuiToolBar_php*)_this)->SetToolBitmap((int) tool_id0, *(wxBitmap*) object_pointer0_1);
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxAuiToolBar::SetToolBitmap at call with 2 argument(s)");
 
 				return;
 				break;
@@ -28860,7 +29309,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 				#endif
 				((wxAuiToolBar_php*)_this)->SetMargins(*(wxSize*) object_pointer2_0);
 
-				references->AddReference(size2);
+				references->AddReference(size2, "wxAuiToolBar::SetMargins at call with 1 argument(s)");
 
 				return;
 				break;
@@ -29079,7 +29528,7 @@ PHP_METHOD(php_wxAuiToolBar, SetFont)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->SetFont(*(wxFont*) object_pointer0_0));
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxAuiToolBar::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -29292,7 +29741,7 @@ PHP_METHOD(php_wxAuiToolBar, IsPaneValid)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->IsPaneValid(*(wxAuiPaneInfo*) object_pointer0_0));
 
-				references->AddReference(pane0);
+				references->AddReference(pane0, "wxAuiToolBar::IsPaneValid at call with 1 argument(s)");
 
 				return;
 				break;
@@ -30005,7 +30454,7 @@ PHP_METHOD(php_wxAuiToolBar, FindControl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::FindControl at call with 1 argument(s)");
 				}
 
 
@@ -30128,7 +30577,7 @@ PHP_METHOD(php_wxAuiToolBar, FindTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::FindTool at call with 1 argument(s)");
 				}
 
 
@@ -30251,7 +30700,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByIndex)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::FindToolByIndex at call with 1 argument(s)");
 				}
 
 
@@ -30375,7 +30824,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByPosition)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::FindToolByPosition at call with 2 argument(s)");
 				}
 
 
@@ -30493,7 +30942,7 @@ PHP_METHOD(php_wxAuiToolBar, GetArtProvider)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::GetArtProvider at call with 0 argument(s)");
 				}
 
 
@@ -32695,10 +33144,10 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxAuiToolBar::AddTool at call with 3 argument(s)");
 
 				return;
 				break;
@@ -32730,10 +33179,10 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxAuiToolBar::AddTool at call with 4 argument(s)");
 
 				return;
 				break;
@@ -32765,10 +33214,10 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 5 argument(s)");
 				}
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxAuiToolBar::AddTool at call with 5 argument(s)");
 
 				return;
 				break;
@@ -32807,12 +33256,12 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return8 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 8 argument(s)");
 				}
 
-				references->AddReference(bitmap1);
-				references->AddReference(disabled_bitmap1);
-				references->AddReference(client_data1);
+				references->AddReference(bitmap1, "wxAuiToolBar::AddTool at call with 8 argument(s)");
+				references->AddReference(disabled_bitmap1, "wxAuiToolBar::AddTool at call with 8 argument(s)");
+				references->AddReference(client_data1, "wxAuiToolBar::AddTool at call with 8 argument(s)");
 
 				return;
 				break;
@@ -32851,11 +33300,11 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 3 argument(s)");
 				}
 
-				references->AddReference(bitmap2);
-				references->AddReference(disabled_bitmap2);
+				references->AddReference(bitmap2, "wxAuiToolBar::AddTool at call with 3 argument(s)");
+				references->AddReference(disabled_bitmap2, "wxAuiToolBar::AddTool at call with 3 argument(s)");
 
 				return;
 				break;
@@ -32887,11 +33336,11 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 4 argument(s)");
 				}
 
-				references->AddReference(bitmap2);
-				references->AddReference(disabled_bitmap2);
+				references->AddReference(bitmap2, "wxAuiToolBar::AddTool at call with 4 argument(s)");
+				references->AddReference(disabled_bitmap2, "wxAuiToolBar::AddTool at call with 4 argument(s)");
 
 				return;
 				break;
@@ -32923,12 +33372,12 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 5 argument(s)");
 				}
 
-				references->AddReference(bitmap2);
-				references->AddReference(disabled_bitmap2);
-				references->AddReference(client_data2);
+				references->AddReference(bitmap2, "wxAuiToolBar::AddTool at call with 5 argument(s)");
+				references->AddReference(disabled_bitmap2, "wxAuiToolBar::AddTool at call with 5 argument(s)");
+				references->AddReference(client_data2, "wxAuiToolBar::AddTool at call with 5 argument(s)");
 
 				return;
 				break;
@@ -32960,12 +33409,12 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 6 argument(s)");
 				}
 
-				references->AddReference(bitmap2);
-				references->AddReference(disabled_bitmap2);
-				references->AddReference(client_data2);
+				references->AddReference(bitmap2, "wxAuiToolBar::AddTool at call with 6 argument(s)");
+				references->AddReference(disabled_bitmap2, "wxAuiToolBar::AddTool at call with 6 argument(s)");
+				references->AddReference(client_data2, "wxAuiToolBar::AddTool at call with 6 argument(s)");
 
 				return;
 				break;
@@ -32997,12 +33446,12 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return7 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxAuiToolBar::AddTool at call with 7 argument(s)");
 				}
 
-				references->AddReference(bitmap2);
-				references->AddReference(disabled_bitmap2);
-				references->AddReference(client_data2);
+				references->AddReference(bitmap2, "wxAuiToolBar::AddTool at call with 7 argument(s)");
+				references->AddReference(disabled_bitmap2, "wxAuiToolBar::AddTool at call with 7 argument(s)");
+				references->AddReference(client_data2, "wxAuiToolBar::AddTool at call with 7 argument(s)");
 
 				return;
 				break;
