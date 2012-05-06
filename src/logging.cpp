@@ -191,7 +191,7 @@ PHP_METHOD(php_wxLogWindow, GetFrame)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxLogWindow::GetFrame at call with 0 argument(s)");
 				}
 
 
@@ -237,6 +237,7 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFrame_entry);
@@ -246,7 +247,15 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -299,6 +308,7 @@ void wxLogWindow_php::OnFrameCreate(wxFrame* frame)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFrame_entry);
@@ -308,7 +318,15 @@ void wxLogWindow_php::OnFrameCreate(wxFrame* frame)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -361,6 +379,7 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFrame_entry);
@@ -370,7 +389,15 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -583,7 +610,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				_this = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8));
 
 				((wxLogWindow_php*) _this)->references.Initialize();
-				((wxLogWindow_php*) _this)->references.AddReference(pParent0);
+				((wxLogWindow_php*) _this)->references.AddReference(pParent0, "wxLogWindow::wxLogWindow at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -594,7 +621,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				_this = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0);
 
 				((wxLogWindow_php*) _this)->references.Initialize();
-				((wxLogWindow_php*) _this)->references.AddReference(pParent0);
+				((wxLogWindow_php*) _this)->references.AddReference(pParent0, "wxLogWindow::wxLogWindow at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -605,7 +632,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				_this = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0, passToOld0);
 
 				((wxLogWindow_php*) _this)->references.Initialize();
-				((wxLogWindow_php*) _this)->references.AddReference(pParent0);
+				((wxLogWindow_php*) _this)->references.AddReference(pParent0, "wxLogWindow::wxLogWindow at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -893,7 +920,7 @@ PHP_METHOD(php_wxLogChain, GetOldLog)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxLogChain::GetOldLog at call with 0 argument(s)");
 				}
 
 
@@ -1235,7 +1262,7 @@ PHP_METHOD(php_wxLogChain, SetLog)
 				#endif
 				((wxLogChain_php*)_this)->SetLog((wxLog*) object_pointer0_0);
 
-				references->AddReference(logger0);
+				references->AddReference(logger0, "wxLogChain::SetLog at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1323,7 +1350,7 @@ PHP_METHOD(php_wxLogChain, __construct)
 				_this = new wxLogChain_php((wxLog*) object_pointer0_0);
 
 				((wxLogChain_php*) _this)->references.Initialize();
-				((wxLogChain_php*) _this)->references.AddReference(logger0);
+				((wxLogChain_php*) _this)->references.AddReference(logger0, "wxLogChain::wxLogChain at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -2214,7 +2241,7 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 				_this = new wxLogTextCtrl_php((wxTextCtrl*) object_pointer0_0);
 
 				((wxLogTextCtrl_php*) _this)->references.Initialize();
-				((wxLogTextCtrl_php*) _this)->references.AddReference(pTextCtrl0);
+				((wxLogTextCtrl_php*) _this)->references.AddReference(pTextCtrl0, "wxLogTextCtrl::wxLogTextCtrl at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -2686,6 +2713,7 @@ void wxLog_php::DoLogText(const wxString& msg)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(msg.size()+1));
@@ -2697,7 +2725,15 @@ void wxLog_php::DoLogText(const wxString& msg)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2750,6 +2786,7 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], level);
@@ -2762,7 +2799,15 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");

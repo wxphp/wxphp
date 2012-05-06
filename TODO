@@ -11,6 +11,10 @@ Short term TODO
 * (FIXED) Methods returning references to its own object return null,
   this was fixed before, but after introducing wxPHPObjectReferences
   it break up.
+  
+* (FIXED) Check for arguments[0] and [1] for example on 
+  wxLogWindow_php::OnFrameClose(wxFrame* frame) since they are possible 
+  memory leaks.
 
 * (DONE) Update config.m4 and configd.w32 to use new wxWidgets 2.9.x
 
@@ -31,10 +35,8 @@ Short term TODO
   we are initliazing the wxPHP library to run applications.
   
 * Replace call_user_function_ex() with zend_call_method[_with_[1-3]_param[s]
-  family of functions from zend_interfaces.h on virtual methods
-  
-* Check for arguments[0] and [1] for example on wxLogWindow_php::OnFrameClose(wxFrame* frame) 
-  since they are possible memory leaks.
+  family of functions from zend_interfaces.h on virtual methods 
+  (Create Custom zend_method_call with arguments array support)
   
 * Use zend_parse_parameters_none() to produce a nicer error on 
   methods/functions that dont accept parameters.

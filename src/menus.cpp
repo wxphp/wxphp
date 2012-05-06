@@ -261,7 +261,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxMenuBar::Append at call with 2 argument(s)");
 
 				return;
 				break;
@@ -379,7 +379,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 				#endif
 				((wxMenuBar_php*)_this)->Attach((wxFrame*) object_pointer0_0);
 
-				references->AddReference(frame0);
+				references->AddReference(frame0, "wxMenuBar::Attach at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1102,7 +1102,7 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuBar::GetFrame at call with 0 argument(s)");
 				}
 
 
@@ -1547,7 +1547,7 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuBar::GetMenu at call with 1 argument(s)");
 				}
 
 
@@ -1981,7 +1981,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxMenuBar::Insert at call with 3 argument(s)");
 
 				return;
 				break;
@@ -2420,7 +2420,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				#endif
 				((wxMenuBar_php*)_this)->Refresh(eraseBackground0, (const wxRect*) object_pointer0_1);
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxMenuBar::Refresh at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2542,7 +2542,7 @@ PHP_METHOD(php_wxMenuBar, Remove)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuBar::Remove at call with 1 argument(s)");
 				}
 
 
@@ -2686,10 +2686,10 @@ PHP_METHOD(php_wxMenuBar, Replace)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuBar::Replace at call with 3 argument(s)");
 				}
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxMenuBar::Replace at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3496,7 +3496,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 				#endif
 				((wxMenu_php*)_this)->SetParent((wxMenu*) object_pointer0_0);
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxMenu::SetParent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3717,7 +3717,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 				#endif
 				((wxMenu_php*)_this)->SetInvokingWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(win0);
+				references->AddReference(win0, "wxMenu::SetInvokingWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3978,10 +3978,10 @@ PHP_METHOD(php_wxMenu, Remove)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Remove at call with 1 argument(s)");
 				}
 
-				references->AddReference(item0);
+				references->AddReference(item0, "wxMenu::Remove at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4020,7 +4020,7 @@ PHP_METHOD(php_wxMenu, Remove)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Remove at call with 1 argument(s)");
 				}
 
 
@@ -4139,7 +4139,7 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::PrependSeparator at call with 0 argument(s)");
 				}
 
 
@@ -4267,7 +4267,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::PrependRadioItem at call with 2 argument(s)");
 				}
 
 
@@ -4301,7 +4301,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::PrependRadioItem at call with 3 argument(s)");
 				}
 
 
@@ -4429,7 +4429,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::PrependCheckItem at call with 2 argument(s)");
 				}
 
 
@@ -4463,7 +4463,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::PrependCheckItem at call with 3 argument(s)");
 				}
 
 
@@ -4628,7 +4628,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Prepend at call with 1 argument(s)");
 				}
 
 
@@ -4662,7 +4662,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Prepend at call with 2 argument(s)");
 				}
 
 
@@ -4696,7 +4696,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Prepend at call with 3 argument(s)");
 				}
 
 
@@ -4730,7 +4730,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Prepend at call with 4 argument(s)");
 				}
 
 
@@ -4771,10 +4771,10 @@ PHP_METHOD(php_wxMenu, Prepend)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Prepend at call with 1 argument(s)");
 				}
 
-				references->AddReference(item1);
+				references->AddReference(item1, "wxMenu::Prepend at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4978,7 +4978,7 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 1 argument(s)");
 				}
 
 
@@ -5012,7 +5012,7 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 2 argument(s)");
 				}
 
 
@@ -5046,7 +5046,7 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 3 argument(s)");
 				}
 
 
@@ -5080,7 +5080,7 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 4 argument(s)");
 				}
 
 
@@ -5121,10 +5121,10 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 3 argument(s)");
 				}
 
-				references->AddReference(subMenu1);
+				references->AddReference(subMenu1, "wxMenu::Append at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5156,10 +5156,10 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 4 argument(s)");
 				}
 
-				references->AddReference(subMenu1);
+				references->AddReference(subMenu1, "wxMenu::Append at call with 4 argument(s)");
 
 				return;
 				break;
@@ -5198,10 +5198,10 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Append at call with 1 argument(s)");
 				}
 
-				references->AddReference(menuItem2);
+				references->AddReference(menuItem2, "wxMenu::Append at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5327,7 +5327,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendCheckItem at call with 2 argument(s)");
 				}
 
 
@@ -5361,7 +5361,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendCheckItem at call with 3 argument(s)");
 				}
 
 
@@ -5489,7 +5489,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendRadioItem at call with 2 argument(s)");
 				}
 
 
@@ -5523,7 +5523,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendRadioItem at call with 3 argument(s)");
 				}
 
 
@@ -5642,7 +5642,7 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendSeparator at call with 0 argument(s)");
 				}
 
 
@@ -5787,10 +5787,10 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendSubMenu at call with 2 argument(s)");
 				}
 
-				references->AddReference(submenu0);
+				references->AddReference(submenu0, "wxMenu::AppendSubMenu at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5822,10 +5822,10 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::AppendSubMenu at call with 3 argument(s)");
 				}
 
-				references->AddReference(submenu0);
+				references->AddReference(submenu0, "wxMenu::AppendSubMenu at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5943,7 +5943,7 @@ PHP_METHOD(php_wxMenu, Attach)
 				#endif
 				((wxMenu_php*)_this)->Attach((wxMenuBar*) object_pointer0_0);
 
-				references->AddReference(menubar0);
+				references->AddReference(menubar0, "wxMenu::Attach at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6297,7 +6297,7 @@ PHP_METHOD(php_wxMenu, Delete)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Delete((wxMenuItem*) object_pointer1_0));
 
-				references->AddReference(item1);
+				references->AddReference(item1, "wxMenu::Delete at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6453,7 +6453,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Destroy((wxMenuItem*) object_pointer1_0));
 
-				references->AddReference(item1);
+				references->AddReference(item1, "wxMenu::Destroy at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6874,7 +6874,7 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::FindItemByPosition at call with 1 argument(s)");
 				}
 
 
@@ -7099,7 +7099,7 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::GetInvokingWindow at call with 0 argument(s)");
 				}
 
 
@@ -7527,7 +7527,7 @@ PHP_METHOD(php_wxMenu, GetParent)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::GetParent at call with 0 argument(s)");
 				}
 
 
@@ -7842,7 +7842,7 @@ PHP_METHOD(php_wxMenu, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::GetWindow at call with 0 argument(s)");
 				}
 
 
@@ -8009,10 +8009,10 @@ PHP_METHOD(php_wxMenu, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Insert at call with 2 argument(s)");
 				}
 
-				references->AddReference(menuItem0);
+				references->AddReference(menuItem0, "wxMenu::Insert at call with 2 argument(s)");
 
 				return;
 				break;
@@ -8051,7 +8051,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Insert at call with 2 argument(s)");
 				}
 
 
@@ -8085,7 +8085,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Insert at call with 3 argument(s)");
 				}
 
 
@@ -8119,7 +8119,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Insert at call with 4 argument(s)");
 				}
 
 
@@ -8153,7 +8153,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::Insert at call with 5 argument(s)");
 				}
 
 
@@ -8282,7 +8282,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::InsertCheckItem at call with 3 argument(s)");
 				}
 
 
@@ -8316,7 +8316,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::InsertCheckItem at call with 4 argument(s)");
 				}
 
 
@@ -8445,7 +8445,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::InsertRadioItem at call with 3 argument(s)");
 				}
 
 
@@ -8479,7 +8479,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::InsertRadioItem at call with 4 argument(s)");
 				}
 
 
@@ -8603,7 +8603,7 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::InsertSeparator at call with 1 argument(s)");
 				}
 
 
@@ -9029,7 +9029,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::FindChildItem at call with 1 argument(s)");
 				}
 
 
@@ -9063,7 +9063,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenu::FindChildItem at call with 2 argument(s)");
 				}
 
 				size_t elements_returned0_1 = sizeof(pos0)/sizeof(*pos0);
@@ -9200,7 +9200,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0);
+				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -9211,7 +9211,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0);
+				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -9222,7 +9222,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8));
 
 				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0);
+				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -9233,7 +9233,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0);
+				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -9244,7 +9244,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0);
+				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -9255,8 +9255,8 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0);
-				((wxMenuItem_php*) _this)->references.AddReference(subMenu0);
+				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 6 argument(s)");
+				((wxMenuItem_php*) _this)->references.AddReference(subMenu0, "wxMenuItem::wxMenuItem at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -9496,7 +9496,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 				#endif
 				((wxMenuItem_php*)_this)->SetSubMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxMenuItem::SetSubMenu at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9615,7 +9615,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 				#endif
 				((wxMenuItem_php*)_this)->SetMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxMenuItem::SetMenu at call with 1 argument(s)");
 
 				return;
 				break;
@@ -11169,7 +11169,7 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuItem::GetMenu at call with 0 argument(s)");
 				}
 
 
@@ -11390,7 +11390,7 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxMenuItem::GetSubMenu at call with 0 argument(s)");
 				}
 
 
@@ -11901,7 +11901,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 				#endif
 				((wxMenuItem_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxMenuItem::SetBitmap at call with 1 argument(s)");
 
 				return;
 				break;

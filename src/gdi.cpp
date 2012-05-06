@@ -188,7 +188,7 @@ PHP_METHOD(php_wxGraphicsGradientStop, GetColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxGraphicsGradientStop::GetColour at call with 0 argument(s)");
 				}
 
 
@@ -405,7 +405,7 @@ PHP_METHOD(php_wxGraphicsGradientStop, SetColour)
 				#endif
 				((wxGraphicsGradientStop_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(col0);
+				references->AddReference(col0, "wxGraphicsGradientStop::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -829,7 +829,7 @@ PHP_METHOD(php_wxGraphicsGradientStops, Add)
 				#endif
 				((wxGraphicsGradientStops_php*)_this)->Add(*(wxGraphicsGradientStop*) object_pointer0_0);
 
-				references->AddReference(stop0);
+				references->AddReference(stop0, "wxGraphicsGradientStops::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2394,7 +2394,7 @@ PHP_METHOD(php_wxAnimation, __construct)
 				_this = new wxAnimation_php(*(wxAnimation*) object_pointer0_0);
 
 				((wxAnimation_php*) _this)->references.Initialize();
-				((wxAnimation_php*) _this)->references.AddReference(anim0);
+				((wxAnimation_php*) _this)->references.AddReference(anim0, "wxAnimation::wxAnimation at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -2560,7 +2560,7 @@ PHP_METHOD(php_wxAnimation, Load)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAnimation_php*)_this)->Load(*(wxInputStream*) object_pointer0_0));
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxAnimation::Load at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2572,7 +2572,7 @@ PHP_METHOD(php_wxAnimation, Load)
 				#endif
 				ZVAL_BOOL(return_value, ((wxAnimation_php*)_this)->Load(*(wxInputStream*) object_pointer0_0, (wxAnimationType) type0));
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxAnimation::Load at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3125,7 +3125,7 @@ PHP_METHOD(php_wxBitmapHandler, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)_this)->LoadFile((wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (int) desiredWidth0, (int) desiredHeight0));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxBitmapHandler::LoadFile at call with 5 argument(s)");
 
 				return;
 				break;
@@ -3565,7 +3565,7 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)_this)->SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxBitmapHandler::SaveFile at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3577,8 +3577,8 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)_this)->SaveFile((const wxBitmap*) object_pointer0_0, wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_3));
 
-				references->AddReference(bitmap0);
-				references->AddReference(palette0);
+				references->AddReference(bitmap0, "wxBitmapHandler::SaveFile at call with 4 argument(s)");
+				references->AddReference(palette0, "wxBitmapHandler::SaveFile at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3703,7 +3703,7 @@ PHP_METHOD(php_wxBitmapHandler, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)_this)->Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxBitmapHandler::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -3715,7 +3715,7 @@ PHP_METHOD(php_wxBitmapHandler, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmapHandler_php*)_this)->Create((wxBitmap*) object_pointer0_0, (const void*) data0, (wxBitmapType) type0, (int) width0, (int) height0, (int) depth0));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxBitmapHandler::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -4328,7 +4328,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 				_this = new wxBitmap_php(*(wxBitmap*) object_pointer1_0);
 
 				((wxBitmap_php*) _this)->references.Initialize();
-				((wxBitmap_php*) _this)->references.AddReference(bitmap1);
+				((wxBitmap_php*) _this)->references.AddReference(bitmap1, "wxBitmap::wxBitmap at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -4373,7 +4373,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 				_this = new wxBitmap_php(*(wxSize*) object_pointer3_0);
 
 				((wxBitmap_php*) _this)->references.Initialize();
-				((wxBitmap_php*) _this)->references.AddReference(sz3);
+				((wxBitmap_php*) _this)->references.AddReference(sz3, "wxBitmap::wxBitmap at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -4384,7 +4384,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 				_this = new wxBitmap_php(*(wxSize*) object_pointer3_0, (int) depth3);
 
 				((wxBitmap_php*) _this)->references.Initialize();
-				((wxBitmap_php*) _this)->references.AddReference(sz3);
+				((wxBitmap_php*) _this)->references.AddReference(sz3, "wxBitmap::wxBitmap at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -4429,7 +4429,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 				_this = new wxBitmap_php(*(wxImage*) object_pointer5_0);
 
 				((wxBitmap_php*) _this)->references.Initialize();
-				((wxBitmap_php*) _this)->references.AddReference(img5);
+				((wxBitmap_php*) _this)->references.AddReference(img5, "wxBitmap::wxBitmap at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -4440,7 +4440,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 				_this = new wxBitmap_php(*(wxImage*) object_pointer5_0, (int) depth5);
 
 				((wxBitmap_php*) _this)->references.Initialize();
-				((wxBitmap_php*) _this)->references.AddReference(img5);
+				((wxBitmap_php*) _this)->references.AddReference(img5, "wxBitmap::wxBitmap at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -4809,7 +4809,7 @@ PHP_METHOD(php_wxBitmap, SaveFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmap_php*)_this)->SaveFile(wxString(name0, wxConvUTF8), (wxBitmapType) type0, (const wxPalette*) object_pointer0_2));
 
-				references->AddReference(palette0);
+				references->AddReference(palette0, "wxBitmap::SaveFile at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5332,7 +5332,7 @@ PHP_METHOD(php_wxBitmap, CopyFromIcon)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmap_php*)_this)->CopyFromIcon(*(wxIcon*) object_pointer0_0));
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxBitmap::CopyFromIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5502,7 +5502,7 @@ PHP_METHOD(php_wxBitmap, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmap_php*)_this)->Create(*(wxSize*) object_pointer1_0));
 
-				references->AddReference(sz1);
+				references->AddReference(sz1, "wxBitmap::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5514,7 +5514,7 @@ PHP_METHOD(php_wxBitmap, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxBitmap_php*)_this)->Create(*(wxSize*) object_pointer1_0, (int) depth1));
 
-				references->AddReference(sz1);
+				references->AddReference(sz1, "wxBitmap::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6061,7 +6061,7 @@ PHP_METHOD(php_wxBitmap, GetMask)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxBitmap::GetMask at call with 0 argument(s)");
 				}
 
 
@@ -6180,7 +6180,7 @@ PHP_METHOD(php_wxBitmap, GetPalette)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxBitmap::GetPalette at call with 0 argument(s)");
 				}
 
 
@@ -6407,7 +6407,7 @@ PHP_METHOD(php_wxBitmap, GetSubBitmap)
 				object_init_ex(return_value, php_wxBitmap_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxBitmap));
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxBitmap::GetSubBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6934,7 +6934,7 @@ PHP_METHOD(php_wxBitmap, SetMask)
 				#endif
 				((wxBitmap_php*)_this)->SetMask((wxMask*) object_pointer0_0);
 
-				references->AddReference(mask0);
+				references->AddReference(mask0, "wxBitmap::SetMask at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7053,7 +7053,7 @@ PHP_METHOD(php_wxBitmap, SetPalette)
 				#endif
 				((wxBitmap_php*)_this)->SetPalette(*(wxPalette*) object_pointer0_0);
 
-				references->AddReference(palette0);
+				references->AddReference(palette0, "wxBitmap::SetPalette at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7303,7 +7303,7 @@ PHP_METHOD(php_wxMask, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMask_php*)_this)->Create(*(wxBitmap*) object_pointer0_0, (int) index0));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxMask::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7322,7 +7322,7 @@ PHP_METHOD(php_wxMask, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMask_php*)_this)->Create(*(wxBitmap*) object_pointer1_0));
 
-				references->AddReference(bitmap1);
+				references->AddReference(bitmap1, "wxMask::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7341,8 +7341,8 @@ PHP_METHOD(php_wxMask, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxMask_php*)_this)->Create(*(wxBitmap*) object_pointer2_0, *(wxColour*) object_pointer2_1));
 
-				references->AddReference(bitmap2);
-				references->AddReference(colour2);
+				references->AddReference(bitmap2, "wxMask::Create at call with 2 argument(s)");
+				references->AddReference(colour2, "wxMask::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7552,7 +7552,7 @@ PHP_METHOD(php_wxMask, __construct)
 				_this = new wxMask_php(*(wxBitmap*) object_pointer1_0, (int) index1);
 
 				((wxMask_php*) _this)->references.Initialize();
-				((wxMask_php*) _this)->references.AddReference(bitmap1);
+				((wxMask_php*) _this)->references.AddReference(bitmap1, "wxMask::wxMask at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -7570,7 +7570,7 @@ PHP_METHOD(php_wxMask, __construct)
 				_this = new wxMask_php(*(wxBitmap*) object_pointer2_0);
 
 				((wxMask_php*) _this)->references.Initialize();
-				((wxMask_php*) _this)->references.AddReference(bitmap2);
+				((wxMask_php*) _this)->references.AddReference(bitmap2, "wxMask::wxMask at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -7588,8 +7588,8 @@ PHP_METHOD(php_wxMask, __construct)
 				_this = new wxMask_php(*(wxBitmap*) object_pointer3_0, *(wxColour*) object_pointer3_1);
 
 				((wxMask_php*) _this)->references.Initialize();
-				((wxMask_php*) _this)->references.AddReference(bitmap3);
-				((wxMask_php*) _this)->references.AddReference(colour3);
+				((wxMask_php*) _this)->references.AddReference(bitmap3, "wxMask::wxMask at call with 2 argument(s)");
+				((wxMask_php*) _this)->references.AddReference(colour3, "wxMask::wxMask at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -7866,7 +7866,7 @@ PHP_METHOD(php_wxBrush, GetStipple)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxBrush::GetStipple at call with 0 argument(s)");
 				}
 
 
@@ -8488,7 +8488,7 @@ PHP_METHOD(php_wxBrush, SetColour)
 				#endif
 				((wxBrush_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxBrush::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8625,7 +8625,7 @@ PHP_METHOD(php_wxBrush, SetStipple)
 				#endif
 				((wxBrush_php*)_this)->SetStipple(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxBrush::SetStipple at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8882,7 +8882,7 @@ PHP_METHOD(php_wxBrush, __construct)
 				_this = new wxBrush_php(*(wxColour*) object_pointer1_0);
 
 				((wxBrush_php*) _this)->references.Initialize();
-				((wxBrush_php*) _this)->references.AddReference(colour1);
+				((wxBrush_php*) _this)->references.AddReference(colour1, "wxBrush::wxBrush at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -8893,7 +8893,7 @@ PHP_METHOD(php_wxBrush, __construct)
 				_this = new wxBrush_php(*(wxColour*) object_pointer1_0, (wxBrushStyle) style1);
 
 				((wxBrush_php*) _this)->references.Initialize();
-				((wxBrush_php*) _this)->references.AddReference(colour1);
+				((wxBrush_php*) _this)->references.AddReference(colour1, "wxBrush::wxBrush at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -8911,7 +8911,7 @@ PHP_METHOD(php_wxBrush, __construct)
 				_this = new wxBrush_php(*(wxBitmap*) object_pointer2_0);
 
 				((wxBrush_php*) _this)->references.Initialize();
-				((wxBrush_php*) _this)->references.AddReference(stippleBitmap2);
+				((wxBrush_php*) _this)->references.AddReference(stippleBitmap2, "wxBrush::wxBrush at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -9193,7 +9193,7 @@ PHP_METHOD(php_wxColour, __construct)
 				_this = new wxColour_php(*(wxColour*) object_pointer3_0);
 
 				((wxColour_php*) _this)->references.Initialize();
-				((wxColour_php*) _this)->references.AddReference(colour3);
+				((wxColour_php*) _this)->references.AddReference(colour3, "wxColour::wxColour at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -10511,7 +10511,7 @@ PHP_METHOD(php_wxCursor, __construct)
 				_this = new wxCursor_php(*(wxImage*) object_pointer1_0);
 
 				((wxCursor_php*) _this)->references.Initialize();
-				((wxCursor_php*) _this)->references.AddReference(image1);
+				((wxCursor_php*) _this)->references.AddReference(image1, "wxCursor::wxCursor at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -10529,7 +10529,7 @@ PHP_METHOD(php_wxCursor, __construct)
 				_this = new wxCursor_php(*(wxCursor*) object_pointer2_0);
 
 				((wxCursor_php*) _this)->references.Initialize();
-				((wxCursor_php*) _this)->references.AddReference(cursor2);
+				((wxCursor_php*) _this)->references.AddReference(cursor2, "wxCursor::wxCursor at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -10835,8 +10835,8 @@ PHP_METHOD(php_wxDCClipper, __construct)
 				_this = new wxDCClipper_php(*(wxDC*) object_pointer0_0, *(wxRegion*) object_pointer0_1);
 
 				((wxDCClipper_php*) _this)->references.Initialize();
-				((wxDCClipper_php*) _this)->references.AddReference(dc0);
-				((wxDCClipper_php*) _this)->references.AddReference(region0);
+				((wxDCClipper_php*) _this)->references.AddReference(dc0, "wxDCClipper::wxDCClipper at call with 2 argument(s)");
+				((wxDCClipper_php*) _this)->references.AddReference(region0, "wxDCClipper::wxDCClipper at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -10854,8 +10854,8 @@ PHP_METHOD(php_wxDCClipper, __construct)
 				_this = new wxDCClipper_php(*(wxDC*) object_pointer1_0, *(wxRect*) object_pointer1_1);
 
 				((wxDCClipper_php*) _this)->references.Initialize();
-				((wxDCClipper_php*) _this)->references.AddReference(dc1);
-				((wxDCClipper_php*) _this)->references.AddReference(rect1);
+				((wxDCClipper_php*) _this)->references.AddReference(dc1, "wxDCClipper::wxDCClipper at call with 2 argument(s)");
+				((wxDCClipper_php*) _this)->references.AddReference(rect1, "wxDCClipper::wxDCClipper at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -10873,7 +10873,7 @@ PHP_METHOD(php_wxDCClipper, __construct)
 				_this = new wxDCClipper_php(*(wxDC*) object_pointer2_0, (wxCoord) x2, (wxCoord) y2, (wxCoord) w2, (wxCoord) h2);
 
 				((wxDCClipper_php*) _this)->references.Initialize();
-				((wxDCClipper_php*) _this)->references.AddReference(dc2);
+				((wxDCClipper_php*) _this)->references.AddReference(dc2, "wxDCClipper::wxDCClipper at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -11176,7 +11176,7 @@ PHP_METHOD(php_wxFont, __construct)
 				_this = new wxFont_php(*(wxFont*) object_pointer1_0);
 
 				((wxFont_php*) _this)->references.Initialize();
-				((wxFont_php*) _this)->references.AddReference(font1);
+				((wxFont_php*) _this)->references.AddReference(font1, "wxFont::wxFont at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -11241,7 +11241,7 @@ PHP_METHOD(php_wxFont, __construct)
 				_this = new wxFont_php(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (wxFontStyle) style3, (wxFontWeight) weight3);
 
 				((wxFont_php*) _this)->references.Initialize();
-				((wxFont_php*) _this)->references.AddReference(pixelSize3);
+				((wxFont_php*) _this)->references.AddReference(pixelSize3, "wxFont::wxFont at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -11252,7 +11252,7 @@ PHP_METHOD(php_wxFont, __construct)
 				_this = new wxFont_php(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (wxFontStyle) style3, (wxFontWeight) weight3, underline3);
 
 				((wxFont_php*) _this)->references.Initialize();
-				((wxFont_php*) _this)->references.AddReference(pixelSize3);
+				((wxFont_php*) _this)->references.AddReference(pixelSize3, "wxFont::wxFont at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -11263,7 +11263,7 @@ PHP_METHOD(php_wxFont, __construct)
 				_this = new wxFont_php(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (wxFontStyle) style3, (wxFontWeight) weight3, underline3, wxString(faceName3, wxConvUTF8));
 
 				((wxFont_php*) _this)->references.Initialize();
-				((wxFont_php*) _this)->references.AddReference(pixelSize3);
+				((wxFont_php*) _this)->references.AddReference(pixelSize3, "wxFont::wxFont at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -11274,7 +11274,7 @@ PHP_METHOD(php_wxFont, __construct)
 				_this = new wxFont_php(*(wxSize*) object_pointer3_0, (wxFontFamily) family3, (wxFontStyle) style3, (wxFontWeight) weight3, underline3, wxString(faceName3, wxConvUTF8), (wxFontEncoding) encoding3);
 
 				((wxFont_php*) _this)->references.Initialize();
-				((wxFont_php*) _this)->references.AddReference(pixelSize3);
+				((wxFont_php*) _this)->references.AddReference(pixelSize3, "wxFont::wxFont at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -11309,7 +11309,7 @@ PHP_METHOD(php_wxFont, __construct)
 				_this = new wxFont_php(*(wxNativeFontInfo*) object_pointer5_0);
 
 				((wxFont_php*) _this)->references.Initialize();
-				((wxFont_php*) _this)->references.AddReference(nativeInfo5);
+				((wxFont_php*) _this)->references.AddReference(nativeInfo5, "wxFont::wxFont at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -13017,7 +13017,7 @@ PHP_METHOD(php_wxFont, MakeBold)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::MakeBold at call with 0 argument(s)");
 				}
 
 
@@ -13133,7 +13133,7 @@ PHP_METHOD(php_wxFont, MakeItalic)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::MakeItalic at call with 0 argument(s)");
 				}
 
 
@@ -13249,7 +13249,7 @@ PHP_METHOD(php_wxFont, MakeLarger)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::MakeLarger at call with 0 argument(s)");
 				}
 
 
@@ -13365,7 +13365,7 @@ PHP_METHOD(php_wxFont, MakeSmaller)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::MakeSmaller at call with 0 argument(s)");
 				}
 
 
@@ -13481,7 +13481,7 @@ PHP_METHOD(php_wxFont, MakeUnderlined)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::MakeUnderlined at call with 0 argument(s)");
 				}
 
 
@@ -14456,7 +14456,7 @@ PHP_METHOD(php_wxFont, Scale)
 				}
 
 				if(value_to_return1 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::Scale at call with 1 argument(s)");
 				}
 
 
@@ -15127,7 +15127,7 @@ PHP_METHOD(php_wxFont, SetNativeFontInfo)
 				#endif
 				((wxFont_php*)_this)->SetNativeFontInfo(*(wxNativeFontInfo*) object_pointer1_0);
 
-				references->AddReference(info1);
+				references->AddReference(info1, "wxFont::SetNativeFontInfo at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15348,7 +15348,7 @@ PHP_METHOD(php_wxFont, SetPixelSize)
 				#endif
 				((wxFont_php*)_this)->SetPixelSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(pixelSize0);
+				references->AddReference(pixelSize0, "wxFont::SetPixelSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -16274,7 +16274,7 @@ PHP_METHOD(php_wxFont, GetNativeFontInfo)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFont::GetNativeFontInfo at call with 0 argument(s)");
 				}
 
 
@@ -16529,7 +16529,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontList::FindOrCreateFont at call with 4 argument(s)");
 				}
 
 
@@ -16563,7 +16563,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontList::FindOrCreateFont at call with 5 argument(s)");
 				}
 
 
@@ -16597,7 +16597,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return6 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontList::FindOrCreateFont at call with 6 argument(s)");
 				}
 
 
@@ -16631,7 +16631,7 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return7 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxFontList::FindOrCreateFont at call with 7 argument(s)");
 				}
 
 
@@ -16717,6 +16717,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(font.size()+1));
@@ -16732,7 +16733,15 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -16785,6 +16794,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(font.size()+1));
@@ -16796,7 +16806,15 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -17610,7 +17628,7 @@ PHP_METHOD(php_wxNativeFontInfo, __construct)
 				_this = new wxNativeFontInfo_php(*(wxNativeFontInfo*) object_pointer1_0);
 
 				((wxNativeFontInfo_php*) _this)->references.Initialize();
-				((wxNativeFontInfo_php*) _this)->references.AddReference(info1);
+				((wxNativeFontInfo_php*) _this)->references.AddReference(info1, "wxNativeFontInfo::wxNativeFontInfo at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -18815,7 +18833,7 @@ PHP_METHOD(php_wxNativeFontInfo, InitFromFont)
 				#endif
 				((wxNativeFontInfo_php*)_this)->InitFromFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxNativeFontInfo::InitFromFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -19289,7 +19307,7 @@ PHP_METHOD(php_wxNativeFontInfo, SetPixelSize)
 				#endif
 				((wxNativeFontInfo_php*)_this)->SetPixelSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(pixelSize0);
+				references->AddReference(pixelSize0, "wxNativeFontInfo::SetPixelSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20052,7 +20070,7 @@ PHP_METHOD(php_wxColourDatabase, AddColour)
 				#endif
 				((wxColourDatabase_php*)_this)->AddColour(wxString(colourName0, wxConvUTF8), *(wxColour*) object_pointer0_1);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxColourDatabase::AddColour at call with 2 argument(s)");
 
 				return;
 				break;
@@ -20284,7 +20302,7 @@ PHP_METHOD(php_wxColourDatabase, FindName)
 				ZVAL_STRING(return_value, temp_string1, 1);
 				free(temp_string1);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxColourDatabase::FindName at call with 1 argument(s)");
 
 				return;
 				break;
@@ -20700,7 +20718,7 @@ PHP_METHOD(php_wxIcon, __construct)
 				_this = new wxIcon_php(*(wxIcon*) object_pointer1_0);
 
 				((wxIcon_php*) _this)->references.Initialize();
-				((wxIcon_php*) _this)->references.AddReference(icon1);
+				((wxIcon_php*) _this)->references.AddReference(icon1, "wxIcon::wxIcon at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -21697,7 +21715,7 @@ PHP_METHOD(php_wxIcon, CopyFromBitmap)
 				#endif
 				((wxIcon_php*)_this)->CopyFromBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxIcon::CopyFromBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21977,7 +21995,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 				_this = new wxIconBundle_php(*(wxIcon*) object_pointer2_0);
 
 				((wxIconBundle_php*) _this)->references.Initialize();
-				((wxIconBundle_php*) _this)->references.AddReference(icon2);
+				((wxIconBundle_php*) _this)->references.AddReference(icon2, "wxIconBundle::wxIconBundle at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -21995,7 +22013,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 				_this = new wxIconBundle_php(*(wxIconBundle*) object_pointer3_0);
 
 				((wxIconBundle_php*) _this)->references.Initialize();
-				((wxIconBundle_php*) _this)->references.AddReference(ic3);
+				((wxIconBundle_php*) _this)->references.AddReference(ic3, "wxIconBundle::wxIconBundle at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -22013,7 +22031,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 				_this = new wxIconBundle_php(*(wxInputStream*) object_pointer4_0);
 
 				((wxIconBundle_php*) _this)->references.Initialize();
-				((wxIconBundle_php*) _this)->references.AddReference(stream4);
+				((wxIconBundle_php*) _this)->references.AddReference(stream4, "wxIconBundle::wxIconBundle at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -22024,7 +22042,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 				_this = new wxIconBundle_php(*(wxInputStream*) object_pointer4_0, (wxBitmapType) type4);
 
 				((wxIconBundle_php*) _this)->references.Initialize();
-				((wxIconBundle_php*) _this)->references.AddReference(stream4);
+				((wxIconBundle_php*) _this)->references.AddReference(stream4, "wxIconBundle::wxIconBundle at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -22263,7 +22281,7 @@ PHP_METHOD(php_wxIconBundle, GetIconOfExactSize)
 				object_init_ex(return_value, php_wxIcon_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxIcon));
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxIconBundle::GetIconOfExactSize at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22642,7 +22660,7 @@ PHP_METHOD(php_wxIconBundle, AddIcon)
 				#endif
 				((wxIconBundle_php*)_this)->AddIcon(*(wxIcon*) object_pointer0_0);
 
-				references->AddReference(icon0);
+				references->AddReference(icon0, "wxIconBundle::AddIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22690,7 +22708,7 @@ PHP_METHOD(php_wxIconBundle, AddIcon)
 				#endif
 				((wxIconBundle_php*)_this)->AddIcon(*(wxInputStream*) object_pointer2_0);
 
-				references->AddReference(stream2);
+				references->AddReference(stream2, "wxIconBundle::AddIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22702,7 +22720,7 @@ PHP_METHOD(php_wxIconBundle, AddIcon)
 				#endif
 				((wxIconBundle_php*)_this)->AddIcon(*(wxInputStream*) object_pointer2_0, (wxBitmapType) type2);
 
-				references->AddReference(stream2);
+				references->AddReference(stream2, "wxIconBundle::AddIcon at call with 2 argument(s)");
 
 				return;
 				break;
@@ -22847,7 +22865,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				object_init_ex(return_value, php_wxIcon_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxIcon));
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxIconBundle::GetIcon at call with 1 argument(s)");
 
 				return;
 				break;
@@ -22864,7 +22882,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				object_init_ex(return_value, php_wxIcon_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxIcon));
 
-				references->AddReference(size0);
+				references->AddReference(size0, "wxIconBundle::GetIcon at call with 2 argument(s)");
 
 				return;
 				break;
@@ -23101,7 +23119,7 @@ PHP_METHOD(php_wxImageHandler, CanRead)
 					ZVAL_BOOL(return_value, ((wxImageHandler_php*)_this)->CanRead(*(wxInputStream*) object_pointer0_0));
 				}
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxImageHandler::CanRead at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23458,7 +23476,7 @@ PHP_METHOD(php_wxImageHandler, GetImageCount)
 					ZVAL_LONG(return_value, ((wxImageHandler_php*)_this)->GetImageCount(*(wxInputStream*) object_pointer0_0));
 				}
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxImageHandler::GetImageCount at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23909,8 +23927,8 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 					ZVAL_BOOL(return_value, ((wxImageHandler_php*)_this)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1));
 				}
 
-				references->AddReference(image0);
-				references->AddReference(stream0);
+				references->AddReference(image0, "wxImageHandler::LoadFile at call with 2 argument(s)");
+				references->AddReference(stream0, "wxImageHandler::LoadFile at call with 2 argument(s)");
 
 				return;
 				break;
@@ -23925,8 +23943,8 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 					ZVAL_BOOL(return_value, ((wxImageHandler_php*)_this)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1, verbose0));
 				}
 
-				references->AddReference(image0);
-				references->AddReference(stream0);
+				references->AddReference(image0, "wxImageHandler::LoadFile at call with 3 argument(s)");
+				references->AddReference(stream0, "wxImageHandler::LoadFile at call with 3 argument(s)");
 
 				return;
 				break;
@@ -23941,8 +23959,8 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 					ZVAL_BOOL(return_value, ((wxImageHandler_php*)_this)->LoadFile((wxImage*) object_pointer0_0, *(wxInputStream*) object_pointer0_1, verbose0, (int) index0));
 				}
 
-				references->AddReference(image0);
-				references->AddReference(stream0);
+				references->AddReference(image0, "wxImageHandler::LoadFile at call with 4 argument(s)");
+				references->AddReference(stream0, "wxImageHandler::LoadFile at call with 4 argument(s)");
 
 				return;
 				break;
@@ -24083,8 +24101,8 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 					ZVAL_BOOL(return_value, ((wxImageHandler_php*)_this)->SaveFile((wxImage*) object_pointer0_0, *(wxOutputStream*) object_pointer0_1));
 				}
 
-				references->AddReference(image0);
-				references->AddReference(stream0);
+				references->AddReference(image0, "wxImageHandler::SaveFile at call with 2 argument(s)");
+				references->AddReference(stream0, "wxImageHandler::SaveFile at call with 2 argument(s)");
 
 				return;
 				break;
@@ -24099,8 +24117,8 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 					ZVAL_BOOL(return_value, ((wxImageHandler_php*)_this)->SaveFile((wxImage*) object_pointer0_0, *(wxOutputStream*) object_pointer0_1, verbose0));
 				}
 
-				references->AddReference(image0);
-				references->AddReference(stream0);
+				references->AddReference(image0, "wxImageHandler::SaveFile at call with 3 argument(s)");
+				references->AddReference(stream0, "wxImageHandler::SaveFile at call with 3 argument(s)");
 
 				return;
 				break;
@@ -25007,7 +25025,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxSize*) object_pointer2_0);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(sz2);
+				((wxImage_php*) _this)->references.AddReference(sz2, "wxImage::wxImage at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -25018,7 +25036,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxSize*) object_pointer2_0, clear2);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(sz2);
+				((wxImage_php*) _this)->references.AddReference(sz2, "wxImage::wxImage at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -25100,7 +25118,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxInputStream*) object_pointer5_0);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(stream5);
+				((wxImage_php*) _this)->references.AddReference(stream5, "wxImage::wxImage at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -25111,7 +25129,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxInputStream*) object_pointer5_0, (wxBitmapType) type5);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(stream5);
+				((wxImage_php*) _this)->references.AddReference(stream5, "wxImage::wxImage at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -25122,7 +25140,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxInputStream*) object_pointer5_0, (wxBitmapType) type5, (int) index5);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(stream5);
+				((wxImage_php*) _this)->references.AddReference(stream5, "wxImage::wxImage at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -25140,7 +25158,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxInputStream*) object_pointer6_0, wxString(mimetype6, wxConvUTF8));
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(stream6);
+				((wxImage_php*) _this)->references.AddReference(stream6, "wxImage::wxImage at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -25151,7 +25169,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxInputStream*) object_pointer6_0, wxString(mimetype6, wxConvUTF8), (int) index6);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(stream6);
+				((wxImage_php*) _this)->references.AddReference(stream6, "wxImage::wxImage at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -25169,7 +25187,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxSize*) object_pointer7_0, (unsigned char*) data7, (unsigned char*) alpha7);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(sz7);
+				((wxImage_php*) _this)->references.AddReference(sz7, "wxImage::wxImage at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -25180,7 +25198,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxSize*) object_pointer7_0, (unsigned char*) data7, (unsigned char*) alpha7, static_data7);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(sz7);
+				((wxImage_php*) _this)->references.AddReference(sz7, "wxImage::wxImage at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -25225,7 +25243,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxSize*) object_pointer9_0, (unsigned char*) data9);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(sz9);
+				((wxImage_php*) _this)->references.AddReference(sz9, "wxImage::wxImage at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -25236,7 +25254,7 @@ PHP_METHOD(php_wxImage, __construct)
 				_this = new wxImage_php(*(wxSize*) object_pointer9_0, (unsigned char*) data9, static_data9);
 
 				((wxImage_php*) _this)->references.Initialize();
-				((wxImage_php*) _this)->references.AddReference(sz9);
+				((wxImage_php*) _this)->references.AddReference(sz9, "wxImage::wxImage at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -25505,7 +25523,7 @@ PHP_METHOD(php_wxImage, SetRGB)
 				#endif
 				((wxImage_php*)_this)->SetRGB(*(wxRect*) object_pointer0_0, (unsigned char) red0, (unsigned char) green0, (unsigned char) blue0);
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxImage::SetRGB at call with 4 argument(s)");
 
 				return;
 				break;
@@ -25624,7 +25642,7 @@ PHP_METHOD(php_wxImage, SetPalette)
 				#endif
 				((wxImage_php*)_this)->SetPalette(*(wxPalette*) object_pointer0_0);
 
-				references->AddReference(palette0);
+				references->AddReference(palette0, "wxImage::SetPalette at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25889,7 +25907,7 @@ PHP_METHOD(php_wxImage, SetMaskFromImage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->SetMaskFromImage(*(wxImage*) object_pointer0_0, (unsigned char) mr0, (unsigned char) mg0, (unsigned char) mb0));
 
-				references->AddReference(mask0);
+				references->AddReference(mask0, "wxImage::SetMaskFromImage at call with 4 argument(s)");
 
 				return;
 				break;
@@ -26824,7 +26842,7 @@ PHP_METHOD(php_wxImage, SaveFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->SaveFile(*(wxOutputStream*) object_pointer0_0, (wxBitmapType) type0));
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxImage::SaveFile at call with 2 argument(s)");
 
 				return;
 				break;
@@ -26879,7 +26897,7 @@ PHP_METHOD(php_wxImage, SaveFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->SaveFile(*(wxOutputStream*) object_pointer3_0, wxString(mimetype3, wxConvUTF8)));
 
-				references->AddReference(stream3);
+				references->AddReference(stream3, "wxImage::SaveFile at call with 2 argument(s)");
 
 				return;
 				break;
@@ -27365,7 +27383,7 @@ PHP_METHOD(php_wxImage, Rotate)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(rotationCentre0);
+				references->AddReference(rotationCentre0, "wxImage::Rotate at call with 2 argument(s)");
 
 				return;
 				break;
@@ -27382,7 +27400,7 @@ PHP_METHOD(php_wxImage, Rotate)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(rotationCentre0);
+				references->AddReference(rotationCentre0, "wxImage::Rotate at call with 3 argument(s)");
 
 				return;
 				break;
@@ -27399,8 +27417,8 @@ PHP_METHOD(php_wxImage, Rotate)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(rotationCentre0);
-				references->AddReference(offsetAfterRotation0);
+				references->AddReference(rotationCentre0, "wxImage::Rotate at call with 4 argument(s)");
+				references->AddReference(offsetAfterRotation0, "wxImage::Rotate at call with 4 argument(s)");
 
 				return;
 				break;
@@ -27557,11 +27575,11 @@ PHP_METHOD(php_wxImage, Resize)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::Resize at call with 2 argument(s)");
 				}
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Resize at call with 2 argument(s)");
+				references->AddReference(pos0, "wxImage::Resize at call with 2 argument(s)");
 
 				return;
 				break;
@@ -27590,11 +27608,11 @@ PHP_METHOD(php_wxImage, Resize)
 				}
 
 				if(value_to_return3 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::Resize at call with 3 argument(s)");
 				}
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Resize at call with 3 argument(s)");
+				references->AddReference(pos0, "wxImage::Resize at call with 3 argument(s)");
 
 				return;
 				break;
@@ -27623,11 +27641,11 @@ PHP_METHOD(php_wxImage, Resize)
 				}
 
 				if(value_to_return4 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::Resize at call with 4 argument(s)");
 				}
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Resize at call with 4 argument(s)");
+				references->AddReference(pos0, "wxImage::Resize at call with 4 argument(s)");
 
 				return;
 				break;
@@ -27656,11 +27674,11 @@ PHP_METHOD(php_wxImage, Resize)
 				}
 
 				if(value_to_return5 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::Resize at call with 5 argument(s)");
 				}
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Resize at call with 5 argument(s)");
+				references->AddReference(pos0, "wxImage::Resize at call with 5 argument(s)");
 
 				return;
 				break;
@@ -27781,7 +27799,7 @@ PHP_METHOD(php_wxImage, Rescale)
 				}
 
 				if(value_to_return2 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::Rescale at call with 2 argument(s)");
 				}
 
 
@@ -27812,7 +27830,7 @@ PHP_METHOD(php_wxImage, Rescale)
 				}
 
 				if(value_to_return3 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::Rescale at call with 3 argument(s)");
 				}
 
 
@@ -28144,7 +28162,7 @@ PHP_METHOD(php_wxImage, Paste)
 				#endif
 				((wxImage_php*)_this)->Paste(*(wxImage*) object_pointer0_0, (int) x0, (int) y0);
 
-				references->AddReference(image0);
+				references->AddReference(image0, "wxImage::Paste at call with 3 argument(s)");
 
 				return;
 				break;
@@ -28471,7 +28489,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8)));
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxImage::LoadFile at call with 2 argument(s)");
 
 				return;
 				break;
@@ -28483,7 +28501,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->LoadFile(*(wxInputStream*) object_pointer0_0, wxString(mimetype0, wxConvUTF8), (int) index0));
 
-				references->AddReference(stream0);
+				references->AddReference(stream0, "wxImage::LoadFile at call with 3 argument(s)");
 
 				return;
 				break;
@@ -28571,7 +28589,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->LoadFile(*(wxInputStream*) object_pointer3_0));
 
-				references->AddReference(stream3);
+				references->AddReference(stream3, "wxImage::LoadFile at call with 1 argument(s)");
 
 				return;
 				break;
@@ -28583,7 +28601,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3));
 
-				references->AddReference(stream3);
+				references->AddReference(stream3, "wxImage::LoadFile at call with 2 argument(s)");
 
 				return;
 				break;
@@ -28595,7 +28613,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->LoadFile(*(wxInputStream*) object_pointer3_0, (wxBitmapType) type3, (int) index3));
 
-				references->AddReference(stream3);
+				references->AddReference(stream3, "wxImage::LoadFile at call with 3 argument(s)");
 
 				return;
 				break;
@@ -29727,7 +29745,7 @@ PHP_METHOD(php_wxImage, GetSubImage)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(rect0);
+				references->AddReference(rect0, "wxImage::GetSubImage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -30044,7 +30062,7 @@ PHP_METHOD(php_wxImage, GetPalette)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxImage::GetPalette at call with 0 argument(s)");
 				}
 
 
@@ -32442,7 +32460,7 @@ PHP_METHOD(php_wxImage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0));
 
-				references->AddReference(sz0);
+				references->AddReference(sz0, "wxImage::Create at call with 3 argument(s)");
 				size_t elements_returned0_1 = sizeof(data0)/sizeof(*data0);
 				array_init(data0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
@@ -32466,7 +32484,7 @@ PHP_METHOD(php_wxImage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->Create(*(wxSize*) object_pointer0_0, (unsigned char*) data0, (unsigned char*) alpha0, static_data0));
 
-				references->AddReference(sz0);
+				references->AddReference(sz0, "wxImage::Create at call with 4 argument(s)");
 				size_t elements_returned0_1 = sizeof(data0)/sizeof(*data0);
 				array_init(data0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
@@ -32550,7 +32568,7 @@ PHP_METHOD(php_wxImage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2));
 
-				references->AddReference(sz2);
+				references->AddReference(sz2, "wxImage::Create at call with 2 argument(s)");
 				size_t elements_returned2_1 = sizeof(data2)/sizeof(*data2);
 				array_init(data2_ref);
 				for(size_t i=0; i<elements_returned2_1; i++)
@@ -32568,7 +32586,7 @@ PHP_METHOD(php_wxImage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->Create(*(wxSize*) object_pointer2_0, (unsigned char*) data2, static_data2));
 
-				references->AddReference(sz2);
+				references->AddReference(sz2, "wxImage::Create at call with 3 argument(s)");
 				size_t elements_returned2_1 = sizeof(data2)/sizeof(*data2);
 				array_init(data2_ref);
 				for(size_t i=0; i<elements_returned2_1; i++)
@@ -32634,7 +32652,7 @@ PHP_METHOD(php_wxImage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->Create(*(wxSize*) object_pointer4_0));
 
-				references->AddReference(sz4);
+				references->AddReference(sz4, "wxImage::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -32646,7 +32664,7 @@ PHP_METHOD(php_wxImage, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImage_php*)_this)->Create(*(wxSize*) object_pointer4_0, clear4));
 
-				references->AddReference(sz4);
+				references->AddReference(sz4, "wxImage::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -34359,8 +34377,8 @@ PHP_METHOD(php_wxImage, Size)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Size at call with 2 argument(s)");
+				references->AddReference(pos0, "wxImage::Size at call with 2 argument(s)");
 
 				return;
 				break;
@@ -34377,8 +34395,8 @@ PHP_METHOD(php_wxImage, Size)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Size at call with 3 argument(s)");
+				references->AddReference(pos0, "wxImage::Size at call with 3 argument(s)");
 
 				return;
 				break;
@@ -34395,8 +34413,8 @@ PHP_METHOD(php_wxImage, Size)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Size at call with 4 argument(s)");
+				references->AddReference(pos0, "wxImage::Size at call with 4 argument(s)");
 
 				return;
 				break;
@@ -34413,8 +34431,8 @@ PHP_METHOD(php_wxImage, Size)
 				object_init_ex(return_value, php_wxImage_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxImage));
 
-				references->AddReference(size0);
-				references->AddReference(pos0);
+				references->AddReference(size0, "wxImage::Size at call with 5 argument(s)");
+				references->AddReference(pos0, "wxImage::Size at call with 5 argument(s)");
 
 				return;
 				break;
@@ -34645,7 +34663,7 @@ PHP_METHOD(php_wxImageList, Add)
 				#endif
 				ZVAL_LONG(return_value, ((wxImageList_php*)_this)->Add(*(wxBitmap*) object_pointer0_0));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxImageList::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -34657,8 +34675,8 @@ PHP_METHOD(php_wxImageList, Add)
 				#endif
 				ZVAL_LONG(return_value, ((wxImageList_php*)_this)->Add(*(wxBitmap*) object_pointer0_0, *(wxBitmap*) object_pointer0_1));
 
-				references->AddReference(bitmap0);
-				references->AddReference(mask0);
+				references->AddReference(bitmap0, "wxImageList::Add at call with 2 argument(s)");
+				references->AddReference(mask0, "wxImageList::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -34677,8 +34695,8 @@ PHP_METHOD(php_wxImageList, Add)
 				#endif
 				ZVAL_LONG(return_value, ((wxImageList_php*)_this)->Add(*(wxBitmap*) object_pointer1_0, *(wxColour*) object_pointer1_1));
 
-				references->AddReference(bitmap1);
-				references->AddReference(maskColour1);
+				references->AddReference(bitmap1, "wxImageList::Add at call with 2 argument(s)");
+				references->AddReference(maskColour1, "wxImageList::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -35557,7 +35575,7 @@ PHP_METHOD(php_wxImageList, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImageList_php*)_this)->Replace((int) index0, *(wxBitmap*) object_pointer0_1));
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxImageList::Replace at call with 2 argument(s)");
 
 				return;
 				break;
@@ -35569,8 +35587,8 @@ PHP_METHOD(php_wxImageList, Replace)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImageList_php*)_this)->Replace((int) index0, *(wxBitmap*) object_pointer0_1, *(wxBitmap*) object_pointer0_2));
 
-				references->AddReference(bitmap0);
-				references->AddReference(mask0);
+				references->AddReference(bitmap0, "wxImageList::Replace at call with 3 argument(s)");
+				references->AddReference(mask0, "wxImageList::Replace at call with 3 argument(s)");
 
 				return;
 				break;
@@ -35837,7 +35855,7 @@ PHP_METHOD(php_wxImageList, Draw)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImageList_php*)_this)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0));
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxImageList::Draw at call with 4 argument(s)");
 
 				return;
 				break;
@@ -35849,7 +35867,7 @@ PHP_METHOD(php_wxImageList, Draw)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImageList_php*)_this)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0));
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxImageList::Draw at call with 5 argument(s)");
 
 				return;
 				break;
@@ -35861,7 +35879,7 @@ PHP_METHOD(php_wxImageList, Draw)
 				#endif
 				ZVAL_BOOL(return_value, ((wxImageList_php*)_this)->Draw((int) index0, *(wxDC*) object_pointer0_1, (int) x0, (int) y0, (int) flags0, solidBackground0));
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxImageList::Draw at call with 6 argument(s)");
 
 				return;
 				break;
@@ -36042,7 +36060,7 @@ PHP_METHOD(php_wxPalette, __construct)
 				_this = new wxPalette_php(*(wxPalette*) object_pointer1_0);
 
 				((wxPalette_php*) _this)->references.Initialize();
-				((wxPalette_php*) _this)->references.AddReference(palette1);
+				((wxPalette_php*) _this)->references.AddReference(palette1, "wxPalette::wxPalette at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -36919,7 +36937,7 @@ PHP_METHOD(php_wxPen, __construct)
 				_this = new wxPen_php(*(wxColour*) object_pointer1_0);
 
 				((wxPen_php*) _this)->references.Initialize();
-				((wxPen_php*) _this)->references.AddReference(colour1);
+				((wxPen_php*) _this)->references.AddReference(colour1, "wxPen::wxPen at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -36930,7 +36948,7 @@ PHP_METHOD(php_wxPen, __construct)
 				_this = new wxPen_php(*(wxColour*) object_pointer1_0, (int) width1);
 
 				((wxPen_php*) _this)->references.Initialize();
-				((wxPen_php*) _this)->references.AddReference(colour1);
+				((wxPen_php*) _this)->references.AddReference(colour1, "wxPen::wxPen at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -36941,7 +36959,7 @@ PHP_METHOD(php_wxPen, __construct)
 				_this = new wxPen_php(*(wxColour*) object_pointer1_0, (int) width1, (wxPenStyle) style1);
 
 				((wxPen_php*) _this)->references.Initialize();
-				((wxPen_php*) _this)->references.AddReference(colour1);
+				((wxPen_php*) _this)->references.AddReference(colour1, "wxPen::wxPen at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -37557,7 +37575,7 @@ PHP_METHOD(php_wxPen, GetStipple)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPen::GetStipple at call with 0 argument(s)");
 				}
 
 
@@ -37992,7 +38010,7 @@ PHP_METHOD(php_wxPen, SetColour)
 				#endif
 				((wxPen_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxPen::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -38230,7 +38248,7 @@ PHP_METHOD(php_wxPen, SetStipple)
 				#endif
 				((wxPen_php*)_this)->SetStipple(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(stipple0);
+				references->AddReference(stipple0, "wxPen::SetStipple at call with 1 argument(s)");
 
 				return;
 				break;
@@ -38714,10 +38732,10 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPenList::FindOrCreatePen at call with 1 argument(s)");
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxPenList::FindOrCreatePen at call with 1 argument(s)");
 
 				return;
 				break;
@@ -38749,10 +38767,10 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPenList::FindOrCreatePen at call with 2 argument(s)");
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxPenList::FindOrCreatePen at call with 2 argument(s)");
 
 				return;
 				break;
@@ -38784,10 +38802,10 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPenList::FindOrCreatePen at call with 3 argument(s)");
 				}
 
-				references->AddReference(colour0);
+				references->AddReference(colour0, "wxPenList::FindOrCreatePen at call with 3 argument(s)");
 
 				return;
 				break;
@@ -38955,6 +38973,7 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -38969,7 +38988,15 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -38977,11 +39004,12 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawCheckBox'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39013,6 +39041,7 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39027,7 +39056,15 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39035,11 +39072,12 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawChoice'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39071,6 +39109,7 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39085,7 +39124,15 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39093,11 +39140,12 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawComboBox'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39129,6 +39177,7 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39143,7 +39192,15 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39151,11 +39208,12 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawComboBoxDropButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39187,6 +39245,7 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39201,7 +39260,15 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39209,11 +39276,12 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawDropArrow'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39245,6 +39313,7 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39259,7 +39328,15 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39267,11 +39344,12 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawFocusRect'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39303,6 +39381,7 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39317,7 +39396,15 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39325,11 +39412,12 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawPushButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39361,6 +39449,7 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39375,7 +39464,15 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39383,11 +39480,12 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawItemSelectionRect'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39419,6 +39517,7 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39433,7 +39532,15 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39441,11 +39548,12 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawRadioBitmap'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39477,6 +39585,7 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39491,7 +39600,15 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39499,11 +39616,12 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawSplitterBorder'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39535,6 +39653,7 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39551,7 +39670,15 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<6; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39559,11 +39686,12 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawSplitterSash'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39595,6 +39723,7 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39609,7 +39738,15 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39617,11 +39754,12 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawTextCtrl'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39653,6 +39791,7 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39667,7 +39806,15 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39675,11 +39822,12 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::DrawTreeItemButton'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -39824,6 +39972,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -39833,7 +39982,15 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -39841,15 +39998,21 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::GetCheckBoxSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxSize_php* var = (wxSize_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxSize*) return_object;
 	
 }
@@ -40108,6 +40271,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -40117,7 +40281,15 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -40125,11 +40297,12 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::GetHeaderButtonHeight'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -40161,6 +40334,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
@@ -40170,7 +40344,15 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -40178,11 +40360,12 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 		
 		wxMessageBox("Failed to call virtual method 'wxRendererNative::GetHeaderButtonMargin'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (int) Z_LVAL_P(return_value);
+	return (int) Z_LVAL_P(return_value);
 	
 }
 /* }}} */

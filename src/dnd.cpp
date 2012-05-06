@@ -193,7 +193,7 @@ PHP_METHOD(php_wxClipboard, AddData)
 				#endif
 				ZVAL_BOOL(return_value, ((wxClipboard_php*)_this)->AddData((wxDataObject*) object_pointer0_0));
 
-				references->AddReference(data0);
+				references->AddReference(data0, "wxClipboard::AddData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -600,7 +600,7 @@ PHP_METHOD(php_wxClipboard, GetData)
 				#endif
 				ZVAL_BOOL(return_value, ((wxClipboard_php*)_this)->GetData(*(wxDataObject*) object_pointer0_0));
 
-				references->AddReference(data0);
+				references->AddReference(data0, "wxClipboard::GetData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -815,7 +815,7 @@ PHP_METHOD(php_wxClipboard, IsSupported)
 				#endif
 				ZVAL_BOOL(return_value, ((wxClipboard_php*)_this)->IsSupported(*(wxDataFormat*) object_pointer0_0));
 
-				references->AddReference(format0);
+				references->AddReference(format0, "wxClipboard::IsSupported at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1126,7 +1126,7 @@ PHP_METHOD(php_wxClipboard, SetData)
 				#endif
 				ZVAL_BOOL(return_value, ((wxClipboard_php*)_this)->SetData((wxDataObject*) object_pointer0_0));
 
-				references->AddReference(data0);
+				references->AddReference(data0, "wxClipboard::SetData at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1983,6 +1983,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
@@ -1993,7 +1994,15 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2001,11 +2010,12 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataObject::GetAllFormats'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -2037,6 +2047,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
@@ -2047,7 +2058,15 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2055,11 +2074,12 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataObject::GetDataHere'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2091,6 +2111,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
@@ -2100,7 +2121,15 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2108,11 +2137,12 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataObject::GetDataSize'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (size_t) Z_LVAL_P(return_value);
+	return (size_t) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2144,6 +2174,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], dir);
@@ -2152,7 +2183,15 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2160,11 +2199,12 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataObject::GetFormatCount'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (size_t) Z_LVAL_P(return_value);
+	return (size_t) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -2196,6 +2236,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], dir);
@@ -2204,7 +2245,15 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -2212,15 +2261,21 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 		
 		wxMessageBox("Failed to call virtual method 'wxDataObject::GetPreferredFormat'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxDataFormat_php* var = (wxDataFormat_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxDataFormat*) return_object;
 	
 }
@@ -2357,7 +2412,7 @@ PHP_METHOD(php_wxDataObject, IsSupported)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDataObject_php*)_this)->IsSupported(*(wxDataFormat*) object_pointer0_0));
 
-				references->AddReference(format0);
+				references->AddReference(format0, "wxDataObject::IsSupported at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2369,7 +2424,7 @@ PHP_METHOD(php_wxDataObject, IsSupported)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDataObject_php*)_this)->IsSupported(*(wxDataFormat*) object_pointer0_0, (wxDataObject::Direction) dir0));
 
-				references->AddReference(format0);
+				references->AddReference(format0, "wxDataObject::IsSupported at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2519,7 +2574,7 @@ PHP_METHOD(php_wxDataObject, SetData)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDataObject_php*)_this)->SetData(*(wxDataFormat*) object_pointer0_0, (size_t) len0, (const void*) buf0));
 
-				references->AddReference(format0);
+				references->AddReference(format0, "wxDataObject::SetData at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3341,7 +3396,7 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 				_this = new wxCustomDataObject_php(*(wxDataFormat*) object_pointer0_0);
 
 				((wxCustomDataObject_php*) _this)->references.Initialize();
-				((wxCustomDataObject_php*) _this)->references.AddReference(format0);
+				((wxCustomDataObject_php*) _this)->references.AddReference(format0, "wxCustomDataObject::wxCustomDataObject at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -3520,7 +3575,7 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 				#endif
 				((wxDataObjectComposite_php*)_this)->Add((wxDataObjectSimple*) object_pointer0_0);
 
-				references->AddReference(dataObject0);
+				references->AddReference(dataObject0, "wxDataObjectComposite::Add at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3532,7 +3587,7 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 				#endif
 				((wxDataObjectComposite_php*)_this)->Add((wxDataObjectSimple*) object_pointer0_0, preferred0);
 
-				references->AddReference(dataObject0);
+				references->AddReference(dataObject0, "wxDataObjectComposite::Add at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4134,7 +4189,7 @@ PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxDataObjectSimple::GetFormat at call with 0 argument(s)");
 				}
 
 
@@ -4398,7 +4453,7 @@ PHP_METHOD(php_wxDataObjectSimple, SetFormat)
 				#endif
 				((wxDataObjectSimple_php*)_this)->SetFormat(*(wxDataFormat*) object_pointer0_0);
 
-				references->AddReference(format0);
+				references->AddReference(format0, "wxDataObjectSimple::SetFormat at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4496,7 +4551,7 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 				_this = new wxDataObjectSimple_php(*(wxDataFormat*) object_pointer0_0);
 
 				((wxDataObjectSimple_php*) _this)->references.Initialize();
-				((wxDataObjectSimple_php*) _this)->references.AddReference(format0);
+				((wxDataObjectSimple_php*) _this)->references.AddReference(format0, "wxDataObjectSimple::wxDataObjectSimple at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -4775,7 +4830,7 @@ PHP_METHOD(php_wxBitmapDataObject, SetBitmap)
 				#endif
 				((wxBitmapDataObject_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
-				references->AddReference(bitmap0);
+				references->AddReference(bitmap0, "wxBitmapDataObject::SetBitmap at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4873,7 +4928,7 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 				_this = new wxBitmapDataObject_php(*(wxBitmap*) object_pointer0_0);
 
 				((wxBitmapDataObject_php*) _this)->references.Initialize();
-				((wxBitmapDataObject_php*) _this)->references.AddReference(bitmap0);
+				((wxBitmapDataObject_php*) _this)->references.AddReference(bitmap0, "wxBitmapDataObject::wxBitmapDataObject at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -5320,6 +5375,7 @@ void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)co
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
@@ -5330,7 +5386,15 @@ void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)co
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5338,11 +5402,12 @@ void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)co
 		
 		wxMessageBox("Failed to call virtual method 'wxTextDataObject::GetAllFormats'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -5448,7 +5513,7 @@ PHP_METHOD(php_wxTextDataObject, GetFormat)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTextDataObject::GetFormat at call with 0 argument(s)");
 				}
 
 
@@ -6389,6 +6454,7 @@ void wxDropTarget_php::OnLeave()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -6396,7 +6462,10 @@ void wxDropTarget_php::OnLeave()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6503,7 +6572,7 @@ PHP_METHOD(php_wxDropTarget, __construct)
 				_this = new wxDropTarget_php((wxDataObject*) object_pointer0_0);
 
 				((wxDropTarget_php*) _this)->references.Initialize();
-				((wxDropTarget_php*) _this)->references.AddReference(data0);
+				((wxDropTarget_php*) _this)->references.AddReference(data0, "wxDropTarget::wxDropTarget at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -6649,7 +6718,7 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 				#endif
 				((wxDropTarget_php*)_this)->SetDataObject((wxDataObject*) object_pointer0_0);
 
-				references->AddReference(data0);
+				references->AddReference(data0, "wxDropTarget::SetDataObject at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6693,6 +6762,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -6703,7 +6773,15 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6756,6 +6834,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -6766,7 +6845,15 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6923,6 +7010,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -6933,7 +7021,15 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6941,11 +7037,12 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 		
 		wxMessageBox("Failed to call virtual method 'wxDropTarget::OnData'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return (wxDragResult) Z_LVAL_P(return_value);
+	return (wxDragResult) Z_LVAL_P(return_value);
 	
 }
 /* }}} */
@@ -6977,6 +7074,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -6986,7 +7084,15 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7163,6 +7269,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -7176,7 +7283,15 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7184,11 +7299,12 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 		
 		wxMessageBox("Failed to call virtual method 'wxTextDropTarget::OnDropText'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -7220,6 +7336,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -7229,7 +7346,15 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7406,6 +7531,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -7413,17 +7539,25 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 	array_init(arguments[2]);
 	for(int i=0; i<filenames.GetCount(); i++)
 	{
-	temp_string = (char*)malloc(sizeof(wxChar)*(filenames[i].size()+1));
-	strcpy(temp_string, (const char *) filenames[i].char_str());
-	add_next_index_string(arguments[2], temp_string, 1);
-	free(temp_string);
+		temp_string = (char*)malloc(sizeof(wxChar)*(filenames[i].size()+1));
+		strcpy(temp_string, (const char *) filenames[i].char_str());
+		add_next_index_string(arguments[2], temp_string, 1);
+		free(temp_string);
 	}
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7431,11 +7565,12 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 		
 		wxMessageBox("Failed to call virtual method 'wxFileDropTarget::OnDropFiles'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -7467,6 +7602,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
@@ -7476,7 +7612,15 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");

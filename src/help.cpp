@@ -689,7 +689,7 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxToolTip::GetWindow at call with 0 argument(s)");
 				}
 
 

@@ -628,7 +628,7 @@ PHP_METHOD(php_wxObject, __construct)
 				_this = new wxObject_php(*(wxObject*) object_pointer0_0);
 
 				((wxObject_php*) _this)->references.Initialize();
-				((wxObject_php*) _this)->references.AddReference(other0);
+				((wxObject_php*) _this)->references.AddReference(other0, "wxObject::wxObject at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -4575,7 +4575,7 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				#endif
 				ZVAL_BOOL(return_value, ((wxObject_php*)_this)->IsSameAs(*(wxObject*) object_pointer0_0));
 
-				references->AddReference(obj0);
+				references->AddReference(obj0, "wxObject::IsSameAs at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5874,7 +5874,7 @@ PHP_METHOD(php_wxObject, Ref)
 				#endif
 				((wxObject_php*)_this)->Ref(*(wxObject*) object_pointer0_0);
 
-				references->AddReference(clone0);
+				references->AddReference(clone0, "wxObject::Ref at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7171,7 +7171,7 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxObject::GetClassInfo at call with 0 argument(s)");
 				}
 
 
@@ -8472,7 +8472,7 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				#endif
 				ZVAL_BOOL(return_value, ((wxObject_php*)_this)->IsKindOf((const wxClassInfo*) object_pointer0_0));
 
-				references->AddReference(info0);
+				references->AddReference(info0, "wxObject::IsKindOf at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8632,7 +8632,7 @@ PHP_METHOD(php_wxClassInfo, CreateObject)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxClassInfo::CreateObject at call with 0 argument(s)");
 				}
 
 
@@ -9076,7 +9076,7 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 					ZVAL_BOOL(return_value, ((wxClassInfo_php*)_this)->IsKindOf((const wxClassInfo*) object_pointer0_0));
 				}
 
-				references->AddReference(info0);
+				references->AddReference(info0, "wxClassInfo::IsKindOf at call with 1 argument(s)");
 
 				return;
 				break;

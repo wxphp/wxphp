@@ -169,7 +169,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0);
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -180,7 +180,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0);
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -191,8 +191,8 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0);
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 3 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -203,9 +203,9 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(size0);
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 4 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 4 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(size0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -216,9 +216,9 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(size0);
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 5 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 5 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(size0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -229,9 +229,9 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0);
-				((wxStyledTextCtrl_php*) _this)->references.AddReference(size0);
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(parent0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 6 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(pos0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 6 argument(s)");
+				((wxStyledTextCtrl_php*) _this)->references.AddReference(size0, "wxStyledTextCtrl::wxStyledTextCtrl at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -6029,7 +6029,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->CallTipSetBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::CallTipSetBackground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6148,7 +6148,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->CallTipSetForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::CallTipSetForeground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6267,7 +6267,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->CallTipSetForegroundHighlight(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::CallTipSetForegroundHighlight at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9473,7 +9473,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9485,7 +9485,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9497,8 +9497,8 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -9510,9 +9510,9 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxStyledTextCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -9524,9 +9524,9 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxStyledTextCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -9538,9 +9538,9 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxStyledTextCtrl::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxStyledTextCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -12076,8 +12076,8 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 				#endif
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6));
 
-				references->AddReference(draw0);
-				references->AddReference(target0);
+				references->AddReference(draw0, "wxStyledTextCtrl::FormatRange at call with 7 argument(s)");
+				references->AddReference(target0, "wxStyledTextCtrl::FormatRange at call with 7 argument(s)");
 
 				return;
 				break;
@@ -25896,7 +25896,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->IndicatorSetForeground((int) indic0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::IndicatorSetForeground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -30199,7 +30199,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2);
 
-				references->AddReference(foreground0);
+				references->AddReference(foreground0, "wxStyledTextCtrl::MarkerDefine at call with 3 argument(s)");
 
 				return;
 				break;
@@ -30211,8 +30211,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2, *(wxColour*) object_pointer0_3);
 
-				references->AddReference(foreground0);
-				references->AddReference(background0);
+				references->AddReference(foreground0, "wxStyledTextCtrl::MarkerDefine at call with 4 argument(s)");
+				references->AddReference(background0, "wxStyledTextCtrl::MarkerDefine at call with 4 argument(s)");
 
 				return;
 				break;
@@ -30332,7 +30332,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->MarkerDefineBitmap((int) markerNumber0, *(wxBitmap*) object_pointer0_1);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxStyledTextCtrl::MarkerDefineBitmap at call with 2 argument(s)");
 
 				return;
 				break;
@@ -31264,7 +31264,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->MarkerSetBackground((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::MarkerSetBackground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -31384,7 +31384,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->MarkerSetForeground((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::MarkerSetForeground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -33474,7 +33474,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->RegisterImage((int) type0, *(wxBitmap*) object_pointer0_1);
 
-				references->AddReference(bmp0);
+				references->AddReference(bmp0, "wxStyledTextCtrl::RegisterImage at call with 2 argument(s)");
 
 				return;
 				break;
@@ -35014,7 +35014,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalCaretForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetAdditionalCaretForeground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -35436,7 +35436,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalSelBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::SetAdditionalSelBackground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -35555,7 +35555,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalSelForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetAdditionalSelForeground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -36078,7 +36078,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetCaretForeground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetCaretForeground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -36298,7 +36298,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetCaretLineBackground(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::SetCaretLineBackground at call with 1 argument(s)");
 
 				return;
 				break;
@@ -37321,7 +37321,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetEdgeColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(edgeColour0);
+				references->AddReference(edgeColour0, "wxStyledTextCtrl::SetEdgeColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -38352,7 +38352,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetFoldMarginColour(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::SetFoldMarginColour at call with 2 argument(s)");
 
 				return;
 				break;
@@ -38471,7 +38471,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetFoldMarginHiColour(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetFoldMarginHiColour at call with 2 argument(s)");
 
 				return;
 				break;
@@ -38590,7 +38590,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetHScrollBar((wxScrollBar*) object_pointer0_0);
 
-				references->AddReference(bar0);
+				references->AddReference(bar0, "wxStyledTextCtrl::SetHScrollBar at call with 1 argument(s)");
 
 				return;
 				break;
@@ -38811,7 +38811,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetHotspotActiveBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::SetHotspotActiveBackground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -38931,7 +38931,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetHotspotActiveForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetHotspotActiveForeground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -43296,7 +43296,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetSelBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::SetSelBackground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -43416,7 +43416,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetSelForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetSelForeground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -46066,7 +46066,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetVScrollBar((wxScrollBar*) object_pointer0_0);
 
-				references->AddReference(bar0);
+				references->AddReference(bar0, "wxStyledTextCtrl::SetVScrollBar at call with 1 argument(s)");
 
 				return;
 				break;
@@ -46590,7 +46590,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetWhitespaceBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::SetWhitespaceBackground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -46812,7 +46812,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->SetWhitespaceForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::SetWhitespaceForeground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -49018,7 +49018,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->StyleSetBackground((int) style0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(back0);
+				references->AddReference(back0, "wxStyledTextCtrl::StyleSetBackground at call with 2 argument(s)");
 
 				return;
 				break;
@@ -49751,7 +49751,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->StyleSetFont((int) styleNum0, *(wxFont*) object_pointer0_1);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxStyledTextCtrl::StyleSetFont at call with 2 argument(s)");
 
 				return;
 				break;
@@ -50092,7 +50092,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 				#endif
 				((wxStyledTextCtrl_php*)_this)->StyleSetForeground((int) style0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(fore0);
+				references->AddReference(fore0, "wxStyledTextCtrl::StyleSetForeground at call with 2 argument(s)");
 
 				return;
 				break;

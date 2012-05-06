@@ -233,7 +233,7 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 				#endif
 				((wxXmlNode_php*)_this)->AddAttribute((wxXmlAttribute*) object_pointer1_0);
 
-				references->AddReference(attr1);
+				references->AddReference(attr1, "wxXmlNode::AddAttribute at call with 1 argument(s)");
 
 				return;
 				break;
@@ -352,7 +352,7 @@ PHP_METHOD(php_wxXmlNode, AddChild)
 				#endif
 				((wxXmlNode_php*)_this)->AddChild((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(child0);
+				references->AddReference(child0, "wxXmlNode::AddChild at call with 1 argument(s)");
 
 				return;
 				break;
@@ -749,7 +749,7 @@ PHP_METHOD(php_wxXmlNode, GetAttributes)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlNode::GetAttributes at call with 0 argument(s)");
 				}
 
 
@@ -868,7 +868,7 @@ PHP_METHOD(php_wxXmlNode, GetChildren)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlNode::GetChildren at call with 0 argument(s)");
 				}
 
 
@@ -1102,7 +1102,7 @@ PHP_METHOD(php_wxXmlNode, GetDepth)
 				#endif
 				ZVAL_LONG(return_value, ((wxXmlNode_php*)_this)->GetDepth((wxXmlNode*) object_pointer0_0));
 
-				references->AddReference(grandparent0);
+				references->AddReference(grandparent0, "wxXmlNode::GetDepth at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1417,7 +1417,7 @@ PHP_METHOD(php_wxXmlNode, GetNext)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlNode::GetNext at call with 0 argument(s)");
 				}
 
 
@@ -1734,7 +1734,7 @@ PHP_METHOD(php_wxXmlNode, GetParent)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlNode::GetParent at call with 0 argument(s)");
 				}
 
 
@@ -2071,8 +2071,8 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlNode_php*)_this)->InsertChild((wxXmlNode*) object_pointer0_0, (wxXmlNode*) object_pointer0_1));
 
-				references->AddReference(child0);
-				references->AddReference(followingNode0);
+				references->AddReference(child0, "wxXmlNode::InsertChild at call with 2 argument(s)");
+				references->AddReference(followingNode0, "wxXmlNode::InsertChild at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2209,8 +2209,8 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlNode_php*)_this)->InsertChildAfter((wxXmlNode*) object_pointer0_0, (wxXmlNode*) object_pointer0_1));
 
-				references->AddReference(child0);
-				references->AddReference(precedingNode0);
+				references->AddReference(child0, "wxXmlNode::InsertChildAfter at call with 2 argument(s)");
+				references->AddReference(precedingNode0, "wxXmlNode::InsertChildAfter at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2425,7 +2425,7 @@ PHP_METHOD(php_wxXmlNode, RemoveChild)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlNode_php*)_this)->RemoveChild((wxXmlNode*) object_pointer0_0));
 
-				references->AddReference(child0);
+				references->AddReference(child0, "wxXmlNode::RemoveChild at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2544,7 +2544,7 @@ PHP_METHOD(php_wxXmlNode, SetAttributes)
 				#endif
 				((wxXmlNode_php*)_this)->SetAttributes((wxXmlAttribute*) object_pointer0_0);
 
-				references->AddReference(attr0);
+				references->AddReference(attr0, "wxXmlNode::SetAttributes at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2663,7 +2663,7 @@ PHP_METHOD(php_wxXmlNode, SetChildren)
 				#endif
 				((wxXmlNode_php*)_this)->SetChildren((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(child0);
+				references->AddReference(child0, "wxXmlNode::SetChildren at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2986,7 +2986,7 @@ PHP_METHOD(php_wxXmlNode, SetNext)
 				#endif
 				((wxXmlNode_php*)_this)->SetNext((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(next0);
+				references->AddReference(next0, "wxXmlNode::SetNext at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3206,7 +3206,7 @@ PHP_METHOD(php_wxXmlNode, SetParent)
 				#endif
 				((wxXmlNode_php*)_this)->SetParent((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlNode::SetParent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3497,7 +3497,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 				_this = new wxXmlNode_php((wxXmlNode*) object_pointer0_0, (wxXmlNodeType) type0, wxString(name0, wxConvUTF8));
 
 				((wxXmlNode_php*) _this)->references.Initialize();
-				((wxXmlNode_php*) _this)->references.AddReference(parent0);
+				((wxXmlNode_php*) _this)->references.AddReference(parent0, "wxXmlNode::wxXmlNode at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3508,7 +3508,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 				_this = new wxXmlNode_php((wxXmlNode*) object_pointer0_0, (wxXmlNodeType) type0, wxString(name0, wxConvUTF8), wxString(content0, wxConvUTF8));
 
 				((wxXmlNode_php*) _this)->references.Initialize();
-				((wxXmlNode_php*) _this)->references.AddReference(parent0);
+				((wxXmlNode_php*) _this)->references.AddReference(parent0, "wxXmlNode::wxXmlNode at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3519,8 +3519,8 @@ PHP_METHOD(php_wxXmlNode, __construct)
 				_this = new wxXmlNode_php((wxXmlNode*) object_pointer0_0, (wxXmlNodeType) type0, wxString(name0, wxConvUTF8), wxString(content0, wxConvUTF8), (wxXmlAttribute*) object_pointer0_4);
 
 				((wxXmlNode_php*) _this)->references.Initialize();
-				((wxXmlNode_php*) _this)->references.AddReference(parent0);
-				((wxXmlNode_php*) _this)->references.AddReference(attrs0);
+				((wxXmlNode_php*) _this)->references.AddReference(parent0, "wxXmlNode::wxXmlNode at call with 5 argument(s)");
+				((wxXmlNode_php*) _this)->references.AddReference(attrs0, "wxXmlNode::wxXmlNode at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3531,9 +3531,9 @@ PHP_METHOD(php_wxXmlNode, __construct)
 				_this = new wxXmlNode_php((wxXmlNode*) object_pointer0_0, (wxXmlNodeType) type0, wxString(name0, wxConvUTF8), wxString(content0, wxConvUTF8), (wxXmlAttribute*) object_pointer0_4, (wxXmlNode*) object_pointer0_5);
 
 				((wxXmlNode_php*) _this)->references.Initialize();
-				((wxXmlNode_php*) _this)->references.AddReference(parent0);
-				((wxXmlNode_php*) _this)->references.AddReference(attrs0);
-				((wxXmlNode_php*) _this)->references.AddReference(next0);
+				((wxXmlNode_php*) _this)->references.AddReference(parent0, "wxXmlNode::wxXmlNode at call with 6 argument(s)");
+				((wxXmlNode_php*) _this)->references.AddReference(attrs0, "wxXmlNode::wxXmlNode at call with 6 argument(s)");
+				((wxXmlNode_php*) _this)->references.AddReference(next0, "wxXmlNode::wxXmlNode at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -3544,9 +3544,9 @@ PHP_METHOD(php_wxXmlNode, __construct)
 				_this = new wxXmlNode_php((wxXmlNode*) object_pointer0_0, (wxXmlNodeType) type0, wxString(name0, wxConvUTF8), wxString(content0, wxConvUTF8), (wxXmlAttribute*) object_pointer0_4, (wxXmlNode*) object_pointer0_5, (int) lineNo0);
 
 				((wxXmlNode_php*) _this)->references.Initialize();
-				((wxXmlNode_php*) _this)->references.AddReference(parent0);
-				((wxXmlNode_php*) _this)->references.AddReference(attrs0);
-				((wxXmlNode_php*) _this)->references.AddReference(next0);
+				((wxXmlNode_php*) _this)->references.AddReference(parent0, "wxXmlNode::wxXmlNode at call with 7 argument(s)");
+				((wxXmlNode_php*) _this)->references.AddReference(attrs0, "wxXmlNode::wxXmlNode at call with 7 argument(s)");
+				((wxXmlNode_php*) _this)->references.AddReference(next0, "wxXmlNode::wxXmlNode at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -3601,7 +3601,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 				_this = new wxXmlNode_php(*(wxXmlNode*) object_pointer2_0);
 
 				((wxXmlNode_php*) _this)->references.Initialize();
-				((wxXmlNode_php*) _this)->references.AddReference(node2);
+				((wxXmlNode_php*) _this)->references.AddReference(node2, "wxXmlNode::wxXmlNode at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -3879,7 +3879,7 @@ PHP_METHOD(php_wxXmlAttribute, GetNext)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlAttribute::GetNext at call with 0 argument(s)");
 				}
 
 
@@ -4204,7 +4204,7 @@ PHP_METHOD(php_wxXmlAttribute, SetNext)
 				#endif
 				((wxXmlAttribute_php*)_this)->SetNext((wxXmlAttribute*) object_pointer0_0);
 
-				references->AddReference(next0);
+				references->AddReference(next0, "wxXmlAttribute::SetNext at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4439,7 +4439,7 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 				_this = new wxXmlAttribute_php(wxString(name1, wxConvUTF8), wxString(value1, wxConvUTF8), (wxXmlAttribute*) object_pointer1_2);
 
 				((wxXmlAttribute_php*) _this)->references.Initialize();
-				((wxXmlAttribute_php*) _this)->references.AddReference(next1);
+				((wxXmlAttribute_php*) _this)->references.AddReference(next1, "wxXmlAttribute::wxXmlAttribute at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -4617,7 +4617,7 @@ PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 				#endif
 				((wxXmlDocument_php*)_this)->AppendToProlog((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(node0);
+				references->AddReference(node0, "wxXmlDocument::AppendToProlog at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4734,7 +4734,7 @@ PHP_METHOD(php_wxXmlDocument, DetachDocumentNode)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlDocument::DetachDocumentNode at call with 0 argument(s)");
 				}
 
 
@@ -4853,7 +4853,7 @@ PHP_METHOD(php_wxXmlDocument, DetachRoot)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlDocument::DetachRoot at call with 0 argument(s)");
 				}
 
 
@@ -4972,7 +4972,7 @@ PHP_METHOD(php_wxXmlDocument, GetDocumentNode)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlDocument::GetDocumentNode at call with 0 argument(s)");
 				}
 
 
@@ -5299,7 +5299,7 @@ PHP_METHOD(php_wxXmlDocument, GetRoot)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlDocument::GetRoot at call with 0 argument(s)");
 				}
 
 
@@ -5684,7 +5684,7 @@ PHP_METHOD(php_wxXmlDocument, Load)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlDocument_php*)_this)->Load(*(wxInputStream*) object_pointer1_0));
 
-				references->AddReference(stream1);
+				references->AddReference(stream1, "wxXmlDocument::Load at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5696,7 +5696,7 @@ PHP_METHOD(php_wxXmlDocument, Load)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlDocument_php*)_this)->Load(*(wxInputStream*) object_pointer1_0, wxString(encoding1, wxConvUTF8)));
 
-				references->AddReference(stream1);
+				references->AddReference(stream1, "wxXmlDocument::Load at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5708,7 +5708,7 @@ PHP_METHOD(php_wxXmlDocument, Load)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlDocument_php*)_this)->Load(*(wxInputStream*) object_pointer1_0, wxString(encoding1, wxConvUTF8), (int) flags1));
 
-				references->AddReference(stream1);
+				references->AddReference(stream1, "wxXmlDocument::Load at call with 3 argument(s)");
 
 				return;
 				break;
@@ -5878,7 +5878,7 @@ PHP_METHOD(php_wxXmlDocument, Save)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlDocument_php*)_this)->Save(*(wxOutputStream*) object_pointer1_0));
 
-				references->AddReference(stream1);
+				references->AddReference(stream1, "wxXmlDocument::Save at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5890,7 +5890,7 @@ PHP_METHOD(php_wxXmlDocument, Save)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlDocument_php*)_this)->Save(*(wxOutputStream*) object_pointer1_0, (int) indentstep1));
 
-				references->AddReference(stream1);
+				references->AddReference(stream1, "wxXmlDocument::Save at call with 2 argument(s)");
 
 				return;
 				break;
@@ -6009,7 +6009,7 @@ PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 				#endif
 				((wxXmlDocument_php*)_this)->SetDocumentNode((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(node0);
+				references->AddReference(node0, "wxXmlDocument::SetDocumentNode at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6230,7 +6230,7 @@ PHP_METHOD(php_wxXmlDocument, SetRoot)
 				#endif
 				((wxXmlDocument_php*)_this)->SetRoot((wxXmlNode*) object_pointer0_0);
 
-				references->AddReference(node0);
+				references->AddReference(node0, "wxXmlDocument::SetRoot at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6511,7 +6511,7 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 				_this = new wxXmlDocument_php(*(wxXmlDocument*) object_pointer1_0);
 
 				((wxXmlDocument_php*) _this)->references.Initialize();
-				((wxXmlDocument_php*) _this)->references.AddReference(doc1);
+				((wxXmlDocument_php*) _this)->references.AddReference(doc1, "wxXmlDocument::wxXmlDocument at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -6556,7 +6556,7 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 				_this = new wxXmlDocument_php(*(wxInputStream*) object_pointer3_0);
 
 				((wxXmlDocument_php*) _this)->references.Initialize();
-				((wxXmlDocument_php*) _this)->references.AddReference(stream3);
+				((wxXmlDocument_php*) _this)->references.AddReference(stream3, "wxXmlDocument::wxXmlDocument at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -6567,7 +6567,7 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 				_this = new wxXmlDocument_php(*(wxInputStream*) object_pointer3_0, wxString(encoding3, wxConvUTF8));
 
 				((wxXmlDocument_php*) _this)->references.Initialize();
-				((wxXmlDocument_php*) _this)->references.AddReference(stream3);
+				((wxXmlDocument_php*) _this)->references.AddReference(stream3, "wxXmlDocument::wxXmlDocument at call with 2 argument(s)");
 				break;
 			}
 		}

@@ -215,7 +215,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->AddBook(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(bookFile0);
+				references->AddReference(bookFile0, "wxHtmlHelpController::AddBook at call with 1 argument(s)");
 
 				return;
 				break;
@@ -227,7 +227,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->AddBook(*(wxFileName*) object_pointer0_0, showWaitMsg0));
 
-				references->AddReference(bookFile0);
+				references->AddReference(bookFile0, "wxHtmlHelpController::AddBook at call with 2 argument(s)");
 
 				return;
 				break;
@@ -300,6 +300,7 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxHtmlHelpData_entry);
@@ -309,7 +310,15 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -327,6 +336,11 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxHtmlHelpDialog_php* var = (wxHtmlHelpDialog_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxHtmlHelpDialog*) return_object;
 	}
 	
@@ -367,6 +381,7 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxHtmlHelpData_entry);
@@ -376,7 +391,15 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -394,6 +417,11 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxHtmlHelpFrame_php* var = (wxHtmlHelpFrame_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxHtmlHelpFrame*) return_object;
 	}
 	
@@ -956,7 +984,7 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 				#endif
 				((wxHtmlHelpController_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpController::ReadCustomization at call with 1 argument(s)");
 
 				return;
 				break;
@@ -968,7 +996,7 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 				#endif
 				((wxHtmlHelpController_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpController::ReadCustomization at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1394,7 +1422,7 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 				#endif
 				((wxHtmlHelpController_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(config0);
+				references->AddReference(config0, "wxHtmlHelpController::UseConfig at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1406,7 +1434,7 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 				#endif
 				((wxHtmlHelpController_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0, wxString(rootpath0, wxConvUTF8));
 
-				references->AddReference(config0);
+				references->AddReference(config0, "wxHtmlHelpController::UseConfig at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1527,7 +1555,7 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 				#endif
 				((wxHtmlHelpController_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpController::WriteCustomization at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1539,7 +1567,7 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 				#endif
 				((wxHtmlHelpController_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpController::WriteCustomization at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1648,7 +1676,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 				_this = new wxHtmlHelpController_php((int) style0, (wxWindow*) object_pointer0_1);
 
 				((wxHtmlHelpController_php*) _this)->references.Initialize();
-				((wxHtmlHelpController_php*) _this)->references.AddReference(parentWindow0);
+				((wxHtmlHelpController_php*) _this)->references.AddReference(parentWindow0, "wxHtmlHelpController::wxHtmlHelpController at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -1800,7 +1828,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 				_this = new wxHtmlModalHelp_php((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8));
 
 				((wxHtmlModalHelp_php*) _this)->references.Initialize();
-				((wxHtmlModalHelp_php*) _this)->references.AddReference(parent0);
+				((wxHtmlModalHelp_php*) _this)->references.AddReference(parent0, "wxHtmlModalHelp::wxHtmlModalHelp at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -1811,7 +1839,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 				_this = new wxHtmlModalHelp_php((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8), wxString(topic0, wxConvUTF8));
 
 				((wxHtmlModalHelp_php*) _this)->references.Initialize();
-				((wxHtmlModalHelp_php*) _this)->references.AddReference(parent0);
+				((wxHtmlModalHelp_php*) _this)->references.AddReference(parent0, "wxHtmlModalHelp::wxHtmlModalHelp at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -1822,7 +1850,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 				_this = new wxHtmlModalHelp_php((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8), wxString(topic0, wxConvUTF8), (int) style0);
 
 				((wxHtmlModalHelp_php*) _this)->references.Initialize();
-				((wxHtmlModalHelp_php*) _this)->references.AddReference(parent0);
+				((wxHtmlModalHelp_php*) _this)->references.AddReference(parent0, "wxHtmlModalHelp::wxHtmlModalHelp at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -2508,7 +2536,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, AddToolbarButtons)
 				#endif
 				((wxHtmlHelpDialog_php*)_this)->AddToolbarButtons((wxToolBar*) object_pointer0_0, (int) style0);
 
-				references->AddReference(toolBar0);
+				references->AddReference(toolBar0, "wxHtmlHelpDialog::AddToolbarButtons at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2631,7 +2659,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpDialog::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2643,7 +2671,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpDialog::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -2655,7 +2683,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpDialog::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -2772,7 +2800,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, GetController)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlHelpDialog::GetController at call with 0 argument(s)");
 				}
 
 
@@ -2893,7 +2921,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetController)
 				#endif
 				((wxHtmlHelpDialog_php*)_this)->SetController((wxHtmlHelpController*) object_pointer0_0);
 
-				references->AddReference(controller0);
+				references->AddReference(controller0, "wxHtmlHelpDialog::SetController at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3150,7 +3178,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				_this = new wxHtmlHelpDialog_php((wxHtmlHelpData*) object_pointer0_0);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
-				((wxHtmlHelpDialog_php*) _this)->references.AddReference(data0);
+				((wxHtmlHelpDialog_php*) _this)->references.AddReference(data0, "wxHtmlHelpDialog::wxHtmlHelpDialog at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -3168,7 +3196,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
-				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1, "wxHtmlHelpDialog::wxHtmlHelpDialog at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3179,7 +3207,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8));
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
-				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1, "wxHtmlHelpDialog::wxHtmlHelpDialog at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3190,7 +3218,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
-				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1, "wxHtmlHelpDialog::wxHtmlHelpDialog at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3201,8 +3229,8 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
-				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpDialog_php*) _this)->references.AddReference(data1);
+				((wxHtmlHelpDialog_php*) _this)->references.AddReference(parent1, "wxHtmlHelpDialog::wxHtmlHelpDialog at call with 5 argument(s)");
+				((wxHtmlHelpDialog_php*) _this)->references.AddReference(data1, "wxHtmlHelpDialog::wxHtmlHelpDialog at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -3345,7 +3373,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, AddToolbarButtons)
 				#endif
 				((wxHtmlHelpFrame_php*)_this)->AddToolbarButtons((wxToolBar*) object_pointer0_0, (int) style0);
 
-				references->AddReference(toolBar0);
+				references->AddReference(toolBar0, "wxHtmlHelpFrame::AddToolbarButtons at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3488,7 +3516,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3500,7 +3528,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3512,7 +3540,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3524,8 +3552,8 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(config0);
+				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 5 argument(s)");
+				references->AddReference(config0, "wxHtmlHelpFrame::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -3537,8 +3565,8 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4, wxString(rootpath0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(config0);
+				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 6 argument(s)");
+				references->AddReference(config0, "wxHtmlHelpFrame::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -3655,7 +3683,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, GetController)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlHelpFrame::GetController at call with 0 argument(s)");
 				}
 
 
@@ -3776,7 +3804,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetController)
 				#endif
 				((wxHtmlHelpFrame_php*)_this)->SetController((wxHtmlHelpController*) object_pointer0_0);
 
-				references->AddReference(controller0);
+				references->AddReference(controller0, "wxHtmlHelpFrame::SetController at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4053,7 +4081,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxHtmlHelpData*) object_pointer0_0);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data0);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data0, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -4071,7 +4099,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -4082,7 +4110,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8));
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -4093,7 +4121,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -4104,8 +4132,8 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data1);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 5 argument(s)");
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -4116,9 +4144,9 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4, (wxConfigBase*) object_pointer1_5);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data1);
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(config1);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 6 argument(s)");
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 6 argument(s)");
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(config1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -4129,9 +4157,9 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4, (wxConfigBase*) object_pointer1_5, wxString(rootpath1, wxConvUTF8));
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data1);
-				((wxHtmlHelpFrame_php*) _this)->references.AddReference(config1);
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(parent1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 7 argument(s)");
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(data1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 7 argument(s)");
+				((wxHtmlHelpFrame_php*) _this)->references.AddReference(config1, "wxHtmlHelpFrame::wxHtmlHelpFrame at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -4235,6 +4263,7 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxToolBar_entry);
@@ -4245,7 +4274,15 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -4412,7 +4449,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4424,8 +4461,8 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 3 argument(s)");
+				references->AddReference(pos0, "wxHtmlHelpWindow::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4437,9 +4474,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxHtmlHelpWindow::Create at call with 4 argument(s)");
+				references->AddReference(size0, "wxHtmlHelpWindow::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -4451,9 +4488,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxHtmlHelpWindow::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxHtmlHelpWindow::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -4465,9 +4502,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0, (int) helpStyle0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxHtmlHelpWindow::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxHtmlHelpWindow::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -4819,7 +4856,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, GetData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlHelpWindow::GetData at call with 0 argument(s)");
 				}
 
 
@@ -5152,7 +5189,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 				#endif
 				((wxHtmlHelpWindow_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpWindow::ReadCustomization at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5164,7 +5201,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 				#endif
 				((wxHtmlHelpWindow_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpWindow::ReadCustomization at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5381,7 +5418,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 				#endif
 				((wxHtmlHelpWindow_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(config0);
+				references->AddReference(config0, "wxHtmlHelpWindow::UseConfig at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5393,7 +5430,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 				#endif
 				((wxHtmlHelpWindow_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0, wxString(rootpath0, wxConvUTF8));
 
-				references->AddReference(config0);
+				references->AddReference(config0, "wxHtmlHelpWindow::UseConfig at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5514,7 +5551,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 				#endif
 				((wxHtmlHelpWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpWindow::WriteCustomization at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5526,7 +5563,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 				#endif
 				((wxHtmlHelpWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlHelpWindow::WriteCustomization at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5716,7 +5753,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxHtmlHelpData*) object_pointer0_0);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(data0);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(data0, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -5734,7 +5771,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -5745,8 +5782,8 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 3 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5757,9 +5794,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 4 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 4 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -5770,9 +5807,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 5 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 5 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -5783,9 +5820,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1, (int) helpStyle1);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 6 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 6 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -5796,10 +5833,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1, (int) helpStyle1, (wxHtmlHelpData*) object_pointer1_6);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1);
-				((wxHtmlHelpWindow_php*) _this)->references.AddReference(data1);
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(parent1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 7 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(pos1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 7 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(size1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 7 argument(s)");
+				((wxHtmlHelpWindow_php*) _this)->references.AddReference(data1, "wxHtmlHelpWindow::wxHtmlHelpWindow at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -5902,6 +5939,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxColour_entry);
@@ -5911,7 +5949,15 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5919,15 +5965,21 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 		
 		wxMessageBox("Failed to call virtual method 'wxHtmlRenderingStyle::GetSelectedTextBgColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxColour_php* var = (wxColour_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxColour*) return_object;
 	
 }
@@ -5960,6 +6012,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxColour_entry);
@@ -5969,7 +6022,15 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -5977,15 +6038,21 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 		
 		wxMessageBox("Failed to call virtual method 'wxHtmlRenderingStyle::GetSelectedTextColour'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxColour_php* var = (wxColour_php*) return_object;
+		var->references.UnInitialize();
+
 		return *(wxColour*) return_object;
 	
 }
@@ -6128,7 +6195,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlRenderingInfo::GetStyle at call with 0 argument(s)");
 				}
 
 
@@ -6249,7 +6316,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, SetStyle)
 				#endif
 				((wxHtmlRenderingInfo_php*)_this)->SetStyle((wxHtmlRenderingStyle*) object_pointer0_0);
 
-				references->AddReference(style0);
+				references->AddReference(style0, "wxHtmlRenderingInfo::SetStyle at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6610,7 +6677,7 @@ PHP_METHOD(php_wxHtmlCell, GetFirstChild)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::GetFirstChild at call with 0 argument(s)");
 				}
 
 
@@ -6969,7 +7036,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::GetLink at call with 0 argument(s)");
 				}
 
 
@@ -7003,7 +7070,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::GetLink at call with 1 argument(s)");
 				}
 
 
@@ -7037,7 +7104,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::GetLink at call with 2 argument(s)");
 				}
 
 
@@ -7168,7 +7235,7 @@ PHP_METHOD(php_wxHtmlCell, GetNext)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::GetNext at call with 0 argument(s)");
 				}
 
 
@@ -7299,7 +7366,7 @@ PHP_METHOD(php_wxHtmlCell, GetParent)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::GetParent at call with 0 argument(s)");
 				}
 
 
@@ -7983,7 +8050,7 @@ PHP_METHOD(php_wxHtmlCell, SetLink)
 				#endif
 				((wxHtmlCell_php*)_this)->SetLink(*(wxHtmlLinkInfo*) object_pointer0_0);
 
-				references->AddReference(link0);
+				references->AddReference(link0, "wxHtmlCell::SetLink at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8114,7 +8181,7 @@ PHP_METHOD(php_wxHtmlCell, SetNext)
 				#endif
 				((wxHtmlCell_php*)_this)->SetNext((wxHtmlCell*) object_pointer0_0);
 
-				references->AddReference(cell0);
+				references->AddReference(cell0, "wxHtmlCell::SetNext at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8245,7 +8312,7 @@ PHP_METHOD(php_wxHtmlCell, SetParent)
 				#endif
 				((wxHtmlCell_php*)_this)->SetParent((wxHtmlContainerCell*) object_pointer0_0);
 
-				references->AddReference(p0);
+				references->AddReference(p0, "wxHtmlCell::SetParent at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8579,7 +8646,7 @@ PHP_METHOD(php_wxHtmlCell, Find)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCell::Find at call with 2 argument(s)");
 				}
 
 
@@ -8709,7 +8776,7 @@ PHP_METHOD(php_wxHtmlContainerCell, __construct)
 				_this = new wxHtmlContainerCell_php((wxHtmlContainerCell*) object_pointer0_0);
 
 				((wxHtmlContainerCell_php*) _this)->references.Initialize();
-				((wxHtmlContainerCell_php*) _this)->references.AddReference(parent0);
+				((wxHtmlContainerCell_php*) _this)->references.AddReference(parent0, "wxHtmlContainerCell::wxHtmlContainerCell at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -8868,7 +8935,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->SetWidthFloat(*(wxHtmlTag*) object_pointer0_0);
 
-				references->AddReference(tag0);
+				references->AddReference(tag0, "wxHtmlContainerCell::SetWidthFloat at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8880,7 +8947,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->SetWidthFloat(*(wxHtmlTag*) object_pointer0_0, pixel_scale0);
 
-				references->AddReference(tag0);
+				references->AddReference(tag0, "wxHtmlContainerCell::SetWidthFloat at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9263,8 +9330,8 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->SetBorder(*(wxColour*) object_pointer0_0, *(wxColour*) object_pointer0_1);
 
-				references->AddReference(clr10);
-				references->AddReference(clr20);
+				references->AddReference(clr10, "wxHtmlContainerCell::SetBorder at call with 2 argument(s)");
+				references->AddReference(clr20, "wxHtmlContainerCell::SetBorder at call with 2 argument(s)");
 
 				return;
 				break;
@@ -9276,8 +9343,8 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->SetBorder(*(wxColour*) object_pointer0_0, *(wxColour*) object_pointer0_1, (int) border0);
 
-				references->AddReference(clr10);
-				references->AddReference(clr20);
+				references->AddReference(clr10, "wxHtmlContainerCell::SetBorder at call with 3 argument(s)");
+				references->AddReference(clr20, "wxHtmlContainerCell::SetBorder at call with 3 argument(s)");
 
 				return;
 				break;
@@ -9396,7 +9463,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBackgroundColour)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(clr0);
+				references->AddReference(clr0, "wxHtmlContainerCell::SetBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9717,7 +9784,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlign)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->SetAlign(*(wxHtmlTag*) object_pointer0_0);
 
-				references->AddReference(tag0);
+				references->AddReference(tag0, "wxHtmlContainerCell::SetAlign at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9836,7 +9903,7 @@ PHP_METHOD(php_wxHtmlContainerCell, InsertCell)
 				#endif
 				((wxHtmlContainerCell_php*)_this)->InsertCell((wxHtmlCell*) object_pointer0_0);
 
-				references->AddReference(cell0);
+				references->AddReference(cell0, "wxHtmlContainerCell::InsertCell at call with 1 argument(s)");
 
 				return;
 				break;
@@ -10488,7 +10555,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlLinkInfo::GetEvent at call with 0 argument(s)");
 				}
 
 
@@ -10709,7 +10776,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlLinkInfo::GetHtmlCell at call with 0 argument(s)");
 				}
 
 
@@ -11075,7 +11142,7 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 				_this = new wxHtmlColourCell_php(*(wxColour*) object_pointer0_0);
 
 				((wxHtmlColourCell_php*) _this)->references.Initialize();
-				((wxHtmlColourCell_php*) _this)->references.AddReference(clr0);
+				((wxHtmlColourCell_php*) _this)->references.AddReference(clr0, "wxHtmlColourCell::wxHtmlColourCell at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -11086,7 +11153,7 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 				_this = new wxHtmlColourCell_php(*(wxColour*) object_pointer0_0, (int) flags0);
 
 				((wxHtmlColourCell_php*) _this)->references.Initialize();
-				((wxHtmlColourCell_php*) _this)->references.AddReference(clr0);
+				((wxHtmlColourCell_php*) _this)->references.AddReference(clr0, "wxHtmlColourCell::wxHtmlColourCell at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -11234,7 +11301,7 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 				_this = new wxHtmlWidgetCell_php((wxWindow*) object_pointer0_0);
 
 				((wxHtmlWidgetCell_php*) _this)->references.Initialize();
-				((wxHtmlWidgetCell_php*) _this)->references.AddReference(wnd0);
+				((wxHtmlWidgetCell_php*) _this)->references.AddReference(wnd0, "wxHtmlWidgetCell::wxHtmlWidgetCell at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -11245,7 +11312,7 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 				_this = new wxHtmlWidgetCell_php((wxWindow*) object_pointer0_0, (int) w0);
 
 				((wxHtmlWidgetCell_php*) _this)->references.Initialize();
-				((wxHtmlWidgetCell_php*) _this)->references.AddReference(wnd0);
+				((wxHtmlWidgetCell_php*) _this)->references.AddReference(wnd0, "wxHtmlWidgetCell::wxHtmlWidgetCell at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -11348,6 +11415,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFSFile_entry);
@@ -11357,7 +11425,15 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -11365,11 +11441,12 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 		
 		wxMessageBox("Failed to call virtual method 'wxHtmlFilter::CanRead'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -11401,6 +11478,7 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFSFile_entry);
@@ -11410,7 +11488,15 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -11418,11 +11504,12 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 		
 		wxMessageBox("Failed to call virtual method 'wxHtmlFilter::ReadFile'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -11573,6 +11660,7 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -11580,7 +11668,10 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -11588,11 +11679,12 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 		
 		wxMessageBox("Failed to call virtual method 'wxHtmlTagHandler::GetSupportedTags'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
+	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
 /* }}} */
@@ -11624,6 +11716,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxHtmlTag_entry);
@@ -11633,7 +11726,15 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -11641,11 +11742,12 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 		
 		wxMessageBox("Failed to call virtual method 'wxHtmlTagHandler::HandleTag'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -12580,7 +12682,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 					ZVAL_BOOL(return_value, ((wxHtmlTag_php*)_this)->GetParamAsColour(wxString(par0, wxConvUTF8), (wxColour*) object_pointer0_1));
 				}
 
-				references->AddReference(clr0);
+				references->AddReference(clr0, "wxHtmlTag::GetParamAsColour at call with 2 argument(s)");
 
 				return;
 				break;
@@ -13667,7 +13769,7 @@ PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWindow::GetRelatedFrame at call with 0 argument(s)");
 				}
 
 
@@ -14370,7 +14472,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->LoadFile(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(filename0);
+				references->AddReference(filename0, "wxHtmlWindow::LoadFile at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14414,6 +14516,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxHtmlCell_entry);
@@ -14427,7 +14530,15 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -14480,6 +14591,7 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxHtmlCell_entry);
@@ -14491,7 +14603,15 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -14544,6 +14664,7 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxHtmlLinkInfo_entry);
@@ -14553,7 +14674,15 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -14606,6 +14735,7 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(title.size()+1));
@@ -14617,7 +14747,15 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -14841,7 +14979,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectLine)
 				#endif
 				((wxHtmlWindow_php*)_this)->SelectLine(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pos0);
+				references->AddReference(pos0, "wxHtmlWindow::SelectLine at call with 1 argument(s)");
 
 				return;
 				break;
@@ -14960,7 +15098,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectWord)
 				#endif
 				((wxHtmlWindow_php*)_this)->SelectWord(*(wxPoint*) object_pointer0_0);
 
-				references->AddReference(pos0);
+				references->AddReference(pos0, "wxHtmlWindow::SelectWord at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15386,7 +15524,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedFrame)
 				#endif
 				((wxHtmlWindow_php*)_this)->SetRelatedFrame((wxFrame*) object_pointer0_0, wxString(format0, wxConvUTF8));
 
-				references->AddReference(frame0);
+				references->AddReference(frame0, "wxHtmlWindow::SetRelatedFrame at call with 2 argument(s)");
 
 				return;
 				break;
@@ -15543,7 +15681,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 				#endif
 				((wxHtmlWindow_php*)_this)->SetRelatedStatusBar((wxStatusBar*) object_pointer1_0);
 
-				references->AddReference(statusbar1);
+				references->AddReference(statusbar1, "wxHtmlWindow::SetRelatedStatusBar at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15555,7 +15693,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 				#endif
 				((wxHtmlWindow_php*)_this)->SetRelatedStatusBar((wxStatusBar*) object_pointer1_0, (int) index1);
 
-				references->AddReference(statusbar1);
+				references->AddReference(statusbar1, "wxHtmlWindow::SetRelatedStatusBar at call with 2 argument(s)");
 
 				return;
 				break;
@@ -15916,7 +16054,7 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 				#endif
 				((wxHtmlWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlWindow::WriteCustomization at call with 1 argument(s)");
 
 				return;
 				break;
@@ -15928,7 +16066,7 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 				#endif
 				((wxHtmlWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
-				references->AddReference(cfg0);
+				references->AddReference(cfg0, "wxHtmlWindow::WriteCustomization at call with 2 argument(s)");
 
 				return;
 				break;
@@ -16087,7 +16225,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
-				((wxHtmlWindow_php*) _this)->references.AddReference(parent1);
+				((wxHtmlWindow_php*) _this)->references.AddReference(parent1, "wxHtmlWindow::wxHtmlWindow at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -16098,7 +16236,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
-				((wxHtmlWindow_php*) _this)->references.AddReference(parent1);
+				((wxHtmlWindow_php*) _this)->references.AddReference(parent1, "wxHtmlWindow::wxHtmlWindow at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -16109,8 +16247,8 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
-				((wxHtmlWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(pos1);
+				((wxHtmlWindow_php*) _this)->references.AddReference(parent1, "wxHtmlWindow::wxHtmlWindow at call with 3 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(pos1, "wxHtmlWindow::wxHtmlWindow at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -16121,9 +16259,9 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
-				((wxHtmlWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(size1);
+				((wxHtmlWindow_php*) _this)->references.AddReference(parent1, "wxHtmlWindow::wxHtmlWindow at call with 4 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(pos1, "wxHtmlWindow::wxHtmlWindow at call with 4 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(size1, "wxHtmlWindow::wxHtmlWindow at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -16134,9 +16272,9 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
-				((wxHtmlWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(size1);
+				((wxHtmlWindow_php*) _this)->references.AddReference(parent1, "wxHtmlWindow::wxHtmlWindow at call with 5 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(pos1, "wxHtmlWindow::wxHtmlWindow at call with 5 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(size1, "wxHtmlWindow::wxHtmlWindow at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -16147,9 +16285,9 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
-				((wxHtmlWindow_php*) _this)->references.AddReference(parent1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(pos1);
-				((wxHtmlWindow_php*) _this)->references.AddReference(size1);
+				((wxHtmlWindow_php*) _this)->references.AddReference(parent1, "wxHtmlWindow::wxHtmlWindow at call with 6 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(pos1, "wxHtmlWindow::wxHtmlWindow at call with 6 argument(s)");
+				((wxHtmlWindow_php*) _this)->references.AddReference(size1, "wxHtmlWindow::wxHtmlWindow at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -16285,7 +16423,7 @@ PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWindow::GetInternalRepresentation at call with 0 argument(s)");
 				}
 
 
@@ -16702,7 +16840,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlLinkEvent::GetLinkInfo at call with 0 argument(s)");
 				}
 
 
@@ -16793,7 +16931,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 				_this = new wxHtmlLinkEvent_php((int) id0, *(wxHtmlLinkInfo*) object_pointer0_1);
 
 				((wxHtmlLinkEvent_php*) _this)->references.Initialize();
-				((wxHtmlLinkEvent_php*) _this)->references.AddReference(linkinfo0);
+				((wxHtmlLinkEvent_php*) _this)->references.AddReference(linkinfo0, "wxHtmlLinkEvent::wxHtmlLinkEvent at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -16969,7 +17107,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetCell)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlCellEvent::GetCell at call with 0 argument(s)");
 				}
 
 
@@ -17395,9 +17533,9 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 				_this = new wxHtmlCellEvent_php((wxEventType) commandType0, (int) id0, (wxHtmlCell*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxMouseEvent*) object_pointer0_4);
 
 				((wxHtmlCellEvent_php*) _this)->references.Initialize();
-				((wxHtmlCellEvent_php*) _this)->references.AddReference(cell0);
-				((wxHtmlCellEvent_php*) _this)->references.AddReference(point0);
-				((wxHtmlCellEvent_php*) _this)->references.AddReference(ev0);
+				((wxHtmlCellEvent_php*) _this)->references.AddReference(cell0, "wxHtmlCellEvent::wxHtmlCellEvent at call with 5 argument(s)");
+				((wxHtmlCellEvent_php*) _this)->references.AddReference(point0, "wxHtmlCellEvent::wxHtmlCellEvent at call with 5 argument(s)");
+				((wxHtmlCellEvent_php*) _this)->references.AddReference(ev0, "wxHtmlCellEvent::wxHtmlCellEvent at call with 5 argument(s)");
 				break;
 			}
 		}
@@ -18361,7 +18499,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 				#endif
 				((wxHtmlDCRenderer_php*)_this)->SetDC((wxDC*) object_pointer0_0);
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxHtmlDCRenderer::SetDC at call with 1 argument(s)");
 
 				return;
 				break;
@@ -18373,7 +18511,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 				#endif
 				((wxHtmlDCRenderer_php*)_this)->SetDC((wxDC*) object_pointer0_0, pixel_scale0);
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxHtmlDCRenderer::SetDC at call with 2 argument(s)");
 
 				return;
 				break;
@@ -18632,7 +18770,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlEasyPrinting::GetPageSetupData at call with 0 argument(s)");
 				}
 
 
@@ -18751,7 +18889,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlEasyPrinting::GetParentWindow at call with 0 argument(s)");
 				}
 
 
@@ -18870,7 +19008,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlEasyPrinting::GetPrintData at call with 0 argument(s)");
 				}
 
 
@@ -19740,7 +19878,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 				_this = new wxHtmlEasyPrinting_php(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1);
 
 				((wxHtmlEasyPrinting_php*) _this)->references.Initialize();
-				((wxHtmlEasyPrinting_php*) _this)->references.AddReference(parentWindow0);
+				((wxHtmlEasyPrinting_php*) _this)->references.AddReference(parentWindow0, "wxHtmlEasyPrinting::wxHtmlEasyPrinting at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -20016,7 +20154,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetParentWindow)
 				#endif
 				((wxHtmlEasyPrinting_php*)_this)->SetParentWindow((wxWindow*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxHtmlEasyPrinting::SetParentWindow at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21440,7 +21578,7 @@ PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
 					((wxHtmlTagsModule_php*)_this)->FillHandlersTable((wxHtmlWinParser*) object_pointer0_0);
 				}
 
-				references->AddReference(parser0);
+				references->AddReference(parser0, "wxHtmlTagsModule::FillHandlersTable at call with 1 argument(s)");
 
 				return;
 				break;
@@ -21759,7 +21897,7 @@ PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::CloseContainer at call with 0 argument(s)");
 				}
 
 
@@ -21881,7 +22019,7 @@ PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::CreateCurrentFont at call with 0 argument(s)");
 				}
 
 
@@ -22000,7 +22138,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetActualColor)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::GetActualColor at call with 0 argument(s)");
 				}
 
 
@@ -22419,7 +22557,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::GetContainer at call with 0 argument(s)");
 				}
 
 
@@ -22541,7 +22679,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetDC)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::GetDC at call with 0 argument(s)");
 				}
 
 
@@ -23260,7 +23398,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetLink)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::GetLink at call with 0 argument(s)");
 				}
 
 
@@ -23379,7 +23517,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetLinkColor)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::GetLinkColor at call with 0 argument(s)");
 				}
 
 
@@ -23503,7 +23641,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetActualColor)
 					((wxHtmlWinParser_php*)_this)->SetActualColor(*(wxColour*) object_pointer0_0);
 				}
 
-				references->AddReference(clr0);
+				references->AddReference(clr0, "wxHtmlWinParser::SetActualColor at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23749,10 +23887,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::SetContainer at call with 1 argument(s)");
 				}
 
-				references->AddReference(c0);
+				references->AddReference(c0, "wxHtmlWinParser::SetContainer at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23875,7 +24013,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetDC)
 					((wxHtmlWinParser_php*)_this)->SetDC((wxDC*) object_pointer0_0);
 				}
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxHtmlWinParser::SetDC at call with 1 argument(s)");
 
 				return;
 				break;
@@ -23890,7 +24028,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetDC)
 					((wxHtmlWinParser_php*)_this)->SetDC((wxDC*) object_pointer0_0, pixel_scale0);
 				}
 
-				references->AddReference(dc0);
+				references->AddReference(dc0, "wxHtmlWinParser::SetDC at call with 2 argument(s)");
 
 				return;
 				break;
@@ -24010,7 +24148,7 @@ PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxHtmlWinParser::OpenContainer at call with 0 argument(s)");
 				}
 
 
@@ -24907,7 +25045,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetLink)
 					((wxHtmlWinParser_php*)_this)->SetLink(*(wxHtmlLinkInfo*) object_pointer0_0);
 				}
 
-				references->AddReference(link0);
+				references->AddReference(link0, "wxHtmlWinParser::SetLink at call with 1 argument(s)");
 
 				return;
 				break;
@@ -25029,7 +25167,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetLinkColor)
 					((wxHtmlWinParser_php*)_this)->SetLinkColor(*(wxColour*) object_pointer0_0);
 				}
 
-				references->AddReference(clr0);
+				references->AddReference(clr0, "wxHtmlWinParser::SetLinkColor at call with 1 argument(s)");
 
 				return;
 				break;

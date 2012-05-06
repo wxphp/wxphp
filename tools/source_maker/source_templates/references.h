@@ -12,6 +12,7 @@
 
 #include "common.h"
 #include <vector>
+#include <string>
 
 /**
  * Used internally by each php wrapper class to keep track of
@@ -33,6 +34,14 @@ class wxPHPObjectReferences
 	void Initialize();
 	
 	/**
+	 * To turn off the flag that indicates that the php class using
+	 * this object was initialized by the php user. Needed to implement
+	 * this since virtual methods returning php objects caused a segfault
+	 * when returned value was garbage collected by php.
+	 */
+	void UnInitialize();
+	
+	/**
 	 * Checks if the class using this object was initialized by the php
 	 * user space.
 	 * 
@@ -47,7 +56,7 @@ class wxPHPObjectReferences
 	 * 
 	 * @param var Pointer of zval to increment its refcount
 	 */
-	void AddReference(zval* var);
+	void AddReference(zval* var, std::string class_and_method);
 	
 	/**
 	 * Decreases the refcount of all registered zvals on the internal

@@ -29,6 +29,7 @@
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	<?=class_virtual_method_parameters_to_zvals($method_definition, $method_name, $class_name)?>
 	
@@ -36,7 +37,17 @@
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, <?=count($method_definition["parameters_type"])?>, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, <?=count($method_definition["parameters_type"])?>, arguments TSRMLS_CC);
+	
+<? if(count($method_definition["parameters_type"])>0){ ?>
+	//Delete already used parameters from memory
+	for(int i=0; i<<?=count($method_definition["parameters_type"])?>; i++)
+	{
+		efree(arguments[i]);
+	}
+<? } ?>
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -49,14 +60,19 @@
 <? if(!$method_definition["pure_virtual"]){ ?>
 	else
 	{
-<? } ?>
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		<?=class_virtual_method_return($method_definition, $method_name, $class_name)?>
-<? if(!$method_definition["pure_virtual"]){ ?>
 	}
+<? }else{ ?>
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
+		
+	<?=class_virtual_method_return($method_definition, $method_name, $class_name)?>
 <? } ?>
 	
 <? if(!$method_definition["pure_virtual"]){ ?>

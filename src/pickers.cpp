@@ -236,7 +236,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -248,8 +248,8 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(colour0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 3 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -261,9 +261,9 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(colour0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 4 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -275,10 +275,10 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(colour0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -290,10 +290,10 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(colour0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -305,11 +305,11 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(parent0);
-				references->AddReference(colour0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(validator0, "wxColourPickerCtrl::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -321,11 +321,11 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(colour0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(colour0, "wxColourPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxColourPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxColourPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(validator0, "wxColourPickerCtrl::Create at call with 8 argument(s)");
 
 				return;
 				break;
@@ -565,7 +565,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 				#endif
 				((wxColourPickerCtrl_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(col0);
+				references->AddReference(col0, "wxColourPickerCtrl::SetColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -747,7 +747,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -758,8 +758,8 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 3 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -770,9 +770,9 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 4 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 4 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -783,10 +783,10 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 5 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 5 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 5 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -797,10 +797,10 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 6 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 6 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 6 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -811,11 +811,11 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 7 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 7 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 7 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 7 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -826,11 +826,11 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxColourPickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(parent0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 8 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(colour0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 8 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(pos0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 8 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(size0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 8 argument(s)");
+				((wxColourPickerCtrl_php*) _this)->references.AddReference(validator0, "wxColourPickerCtrl::wxColourPickerCtrl at call with 8 argument(s)");
 				break;
 			}
 		}
@@ -1003,7 +1003,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -1014,7 +1014,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -1025,8 +1025,8 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 4 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -1037,9 +1037,9 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 5 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 5 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -1050,9 +1050,9 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 6 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 6 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -1063,10 +1063,10 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 7 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 7 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 7 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -1077,10 +1077,10 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxDatePickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(parent0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 8 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(pos0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 8 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(size0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 8 argument(s)");
+				((wxDatePickerCtrl_php*) _this)->references.AddReference(validator0, "wxDatePickerCtrl::wxDatePickerCtrl at call with 8 argument(s)");
 				break;
 			}
 		}
@@ -1277,7 +1277,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1289,7 +1289,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1301,8 +1301,8 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1314,9 +1314,9 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -1328,9 +1328,9 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -1342,10 +1342,10 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(validator0, "wxDatePickerCtrl::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -1357,10 +1357,10 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxDatePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxDatePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(validator0, "wxDatePickerCtrl::Create at call with 8 argument(s)");
 
 				return;
 				break;
@@ -1962,7 +1962,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -1974,7 +1974,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1986,7 +1986,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -1998,7 +1998,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -2010,8 +2010,8 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -2023,9 +2023,9 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -2037,9 +2037,9 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call with 8 argument(s)");
 
 				return;
 				break;
@@ -2051,10 +2051,10 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 9 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call with 9 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call with 9 argument(s)");
+				references->AddReference(validator0, "wxFilePickerCtrl::Create at call with 9 argument(s)");
 
 				return;
 				break;
@@ -2066,10 +2066,10 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 10 argument(s)");
+				references->AddReference(pos0, "wxFilePickerCtrl::Create at call with 10 argument(s)");
+				references->AddReference(size0, "wxFilePickerCtrl::Create at call with 10 argument(s)");
+				references->AddReference(validator0, "wxFilePickerCtrl::Create at call with 10 argument(s)");
 
 				return;
 				break;
@@ -2290,7 +2290,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 				#endif
 				((wxFilePickerCtrl_php*)_this)->SetFileName(*(wxFileName*) object_pointer0_0);
 
-				references->AddReference(filename0);
+				references->AddReference(filename0, "wxFilePickerCtrl::SetFileName at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2544,7 +2544,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -2555,7 +2555,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -2566,7 +2566,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -2577,7 +2577,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -2588,8 +2588,8 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 6 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -2600,9 +2600,9 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 7 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 7 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -2613,9 +2613,9 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 8 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 8 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -2626,10 +2626,10 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 9 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 9 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 9 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 9 argument(s)");
 				break;
 			}
 			case 10:
@@ -2640,10 +2640,10 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxFilePickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(parent0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 10 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(pos0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 10 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(size0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 10 argument(s)");
+				((wxFilePickerCtrl_php*) _this)->references.AddReference(validator0, "wxFilePickerCtrl::wxFilePickerCtrl at call with 10 argument(s)");
 				break;
 			}
 		}
@@ -2951,7 +2951,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2963,7 +2963,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -2975,7 +2975,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -2987,8 +2987,8 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -3000,9 +3000,9 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -3014,9 +3014,9 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -3028,10 +3028,10 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(validator0, "wxDirPickerCtrl::Create at call with 8 argument(s)");
 
 				return;
 				break;
@@ -3043,10 +3043,10 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 9 argument(s)");
+				references->AddReference(pos0, "wxDirPickerCtrl::Create at call with 9 argument(s)");
+				references->AddReference(size0, "wxDirPickerCtrl::Create at call with 9 argument(s)");
+				references->AddReference(validator0, "wxDirPickerCtrl::Create at call with 9 argument(s)");
 
 				return;
 				break;
@@ -3368,7 +3368,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 				#endif
 				((wxDirPickerCtrl_php*)_this)->SetDirName(*(wxFileName*) object_pointer0_0);
 
-				references->AddReference(dirname0);
+				references->AddReference(dirname0, "wxDirPickerCtrl::SetDirName at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3620,7 +3620,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3631,7 +3631,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -3642,7 +3642,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -3653,8 +3653,8 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 5 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -3665,9 +3665,9 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 6 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 6 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -3678,9 +3678,9 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 7 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 7 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -3691,10 +3691,10 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 8 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 8 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 8 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 8 argument(s)");
 				break;
 			}
 			case 9:
@@ -3705,10 +3705,10 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8));
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxDirPickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(parent0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 9 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(pos0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 9 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(size0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 9 argument(s)");
+				((wxDirPickerCtrl_php*) _this)->references.AddReference(validator0, "wxDirPickerCtrl::wxDirPickerCtrl at call with 9 argument(s)");
 				break;
 			}
 		}
@@ -3929,7 +3929,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3941,8 +3941,8 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
 
-				references->AddReference(parent0);
-				references->AddReference(font0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 3 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3954,9 +3954,9 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(font0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 4 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3968,10 +3968,10 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(font0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -3983,10 +3983,10 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(font0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -3998,11 +3998,11 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(parent0);
-				references->AddReference(font0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(validator0, "wxFontPickerCtrl::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -4014,11 +4014,11 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(font0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(font0, "wxFontPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxFontPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxFontPickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(validator0, "wxFontPickerCtrl::Create at call with 8 argument(s)");
 
 				return;
 				break;
@@ -4435,7 +4435,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 				#endif
 				((wxFontPickerCtrl_php*)_this)->SetSelectedFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxFontPickerCtrl::SetSelectedFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4599,7 +4599,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -4610,8 +4610,8 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 3 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -4622,9 +4622,9 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 4 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 4 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -4635,10 +4635,10 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 5 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 5 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 5 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -4649,10 +4649,10 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 6 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 6 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 6 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -4663,11 +4663,11 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 7 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 7 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 7 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 7 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -4678,11 +4678,11 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxFontPickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(parent0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 8 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(font0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 8 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(pos0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 8 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(size0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 8 argument(s)");
+				((wxFontPickerCtrl_php*) _this)->references.AddReference(validator0, "wxFontPickerCtrl::wxFontPickerCtrl at call with 8 argument(s)");
 				break;
 			}
 		}
@@ -4995,7 +4995,7 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPickerBase::GetPickerCtrl at call with 0 argument(s)");
 				}
 
 
@@ -5284,7 +5284,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPickerBase::GetTextCtrl at call with 0 argument(s)");
 				}
 
 
@@ -6704,7 +6704,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -6715,7 +6715,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -6726,8 +6726,8 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 4 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -6738,9 +6738,9 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 5 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 5 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -6751,9 +6751,9 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 6 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 6 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -6764,10 +6764,10 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 7 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 7 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 7 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -6778,10 +6778,10 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0);
-				((wxTimePickerCtrl_php*) _this)->references.AddReference(validator0);
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(parent0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 8 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(pos0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 8 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(size0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 8 argument(s)");
+				((wxTimePickerCtrl_php*) _this)->references.AddReference(validator0, "wxTimePickerCtrl::wxTimePickerCtrl at call with 8 argument(s)");
 				break;
 			}
 		}
@@ -6844,6 +6844,7 @@ void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], dt.GetTicks());
@@ -6852,7 +6853,15 @@ void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6860,11 +6869,12 @@ void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
 		
 		wxMessageBox("Failed to call virtual method 'wxTimePickerCtrl::SetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return;
+	return;
 	
 }
 /* }}} */
@@ -6891,6 +6901,7 @@ wxDateTime wxTimePickerCtrl_php::GetValue()const
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -6898,7 +6909,10 @@ wxDateTime wxTimePickerCtrl_php::GetValue()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -6906,11 +6920,12 @@ wxDateTime wxTimePickerCtrl_php::GetValue()const
 		
 		wxMessageBox("Failed to call virtual method 'wxTimePickerCtrl::GetValue'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return wxDateTime(Z_LVAL_P(return_value));
+	return wxDateTime(Z_LVAL_P(return_value));
 	
 }
 /* }}} */
@@ -7076,7 +7091,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 2 argument(s)");
 
 				return;
 				break;
@@ -7088,7 +7103,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 3 argument(s)");
 
 				return;
 				break;
@@ -7100,8 +7115,8 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call with 4 argument(s)");
 
 				return;
 				break;
@@ -7113,9 +7128,9 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call with 5 argument(s)");
 
 				return;
 				break;
@@ -7127,9 +7142,9 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call with 6 argument(s)");
 
 				return;
 				break;
@@ -7141,10 +7156,10 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call with 7 argument(s)");
+				references->AddReference(validator0, "wxTimePickerCtrl::Create at call with 7 argument(s)");
 
 				return;
 				break;
@@ -7156,10 +7171,10 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0);
-				references->AddReference(pos0);
-				references->AddReference(size0);
-				references->AddReference(validator0);
+				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(pos0, "wxTimePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(size0, "wxTimePickerCtrl::Create at call with 8 argument(s)");
+				references->AddReference(validator0, "wxTimePickerCtrl::Create at call with 8 argument(s)");
 
 				return;
 				break;

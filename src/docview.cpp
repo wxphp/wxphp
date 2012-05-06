@@ -327,7 +327,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 				#endif
 				((wxFileHistory_php*)_this)->AddFilesToMenu((wxMenu*) object_pointer1_0);
 
-				references->AddReference(menu1);
+				references->AddReference(menu1, "wxFileHistory::AddFilesToMenu at call with 1 argument(s)");
 
 				return;
 				break;
@@ -841,7 +841,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 				#endif
 				((wxFileHistory_php*)_this)->Load(*(wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(config0);
+				references->AddReference(config0, "wxFileHistory::Load at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1061,7 +1061,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 				#endif
 				((wxFileHistory_php*)_this)->RemoveMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxFileHistory::RemoveMenu at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1180,7 +1180,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 				#endif
 				((wxFileHistory_php*)_this)->Save(*(wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(config0);
+				references->AddReference(config0, "wxFileHistory::Save at call with 1 argument(s)");
 
 				return;
 				break;
@@ -1400,7 +1400,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 				#endif
 				((wxFileHistory_php*)_this)->UseMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0);
+				references->AddReference(menu0, "wxFileHistory::UseMenu at call with 1 argument(s)");
 
 				return;
 				break;

@@ -118,6 +118,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxXmlNode_entry);
@@ -127,7 +128,15 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -135,11 +144,12 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 		
 		wxMessageBox("Failed to call virtual method 'wxXmlResourceHandler::CanHandle'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -302,12 +312,12 @@ PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResourceHandler::CreateResource at call with 3 argument(s)");
 				}
 
-				references->AddReference(node0);
-				references->AddReference(parent0);
-				references->AddReference(instance0);
+				references->AddReference(node0, "wxXmlResourceHandler::CreateResource at call with 3 argument(s)");
+				references->AddReference(parent0, "wxXmlResourceHandler::CreateResource at call with 3 argument(s)");
+				references->AddReference(instance0, "wxXmlResourceHandler::CreateResource at call with 3 argument(s)");
 
 				return;
 				break;
@@ -346,6 +356,7 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -353,7 +364,10 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -361,15 +375,21 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 		
 		wxMessageBox("Failed to call virtual method 'wxXmlResourceHandler::DoCreateResource'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
+
+		//Threat it as a normal object on the calling function and not a php user space intiialized one
+		wxObject_php* var = (wxObject_php*) return_object;
+		var->references.UnInitialize();
+
 		return (wxObject*) return_object;
 	
 }
@@ -477,7 +497,7 @@ PHP_METHOD(php_wxXmlResourceHandler, SetParentResource)
 				#endif
 				((wxXmlResourceHandler_php*)_this)->SetParentResource((wxXmlResource*) object_pointer0_0);
 
-				references->AddReference(res0);
+				references->AddReference(res0, "wxXmlResourceHandler::SetParentResource at call with 1 argument(s)");
 
 				return;
 				break;
@@ -720,7 +740,7 @@ PHP_METHOD(php_wxXmlResource, AddHandler)
 				#endif
 				((wxXmlResource_php*)_this)->AddHandler((wxXmlResourceHandler*) object_pointer0_0);
 
-				references->AddReference(handler0);
+				references->AddReference(handler0, "wxXmlResource::AddHandler at call with 1 argument(s)");
 
 				return;
 				break;
@@ -859,7 +879,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1));
 
-				references->AddReference(control0);
+				references->AddReference(control0, "wxXmlResource::AttachUnknownControl at call with 2 argument(s)");
 
 				return;
 				break;
@@ -871,8 +891,8 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1, (wxWindow*) object_pointer0_2));
 
-				references->AddReference(control0);
-				references->AddReference(parent0);
+				references->AddReference(control0, "wxXmlResource::AttachUnknownControl at call with 3 argument(s)");
+				references->AddReference(parent0, "wxXmlResource::AttachUnknownControl at call with 3 argument(s)");
 
 				return;
 				break;
@@ -1116,6 +1136,7 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	temp_string = (char*)malloc(sizeof(wxChar)*(xrcFile.size()+1));
@@ -1133,7 +1154,15 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -1687,7 +1716,7 @@ PHP_METHOD(php_wxXmlResource, GetResourceNode)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::GetResourceNode at call with 1 argument(s)");
 				}
 
 
@@ -2505,10 +2534,10 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadDialog at call with 2 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlResource::LoadDialog at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2527,8 +2556,8 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadDialog((wxDialog*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
 
-				references->AddReference(dlg1);
-				references->AddReference(parent1);
+				references->AddReference(dlg1, "wxXmlResource::LoadDialog at call with 3 argument(s)");
+				references->AddReference(parent1, "wxXmlResource::LoadDialog at call with 3 argument(s)");
 
 				return;
 				break;
@@ -2647,7 +2676,7 @@ PHP_METHOD(php_wxXmlResource, LoadFile)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadFile(*(wxFileName*) object_pointer0_0));
 
-				references->AddReference(file0);
+				references->AddReference(file0, "wxXmlResource::LoadFile at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2786,8 +2815,8 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(frame0);
-				references->AddReference(parent0);
+				references->AddReference(frame0, "wxXmlResource::LoadFrame at call with 3 argument(s)");
+				references->AddReference(parent0, "wxXmlResource::LoadFrame at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3017,7 +3046,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenu)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadMenu at call with 1 argument(s)");
 				}
 
 
@@ -3180,10 +3209,10 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadMenuBar at call with 2 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlResource::LoadMenuBar at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3222,7 +3251,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadMenuBar at call with 1 argument(s)");
 				}
 
 
@@ -3425,10 +3454,10 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadObject at call with 3 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlResource::LoadObject at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3447,8 +3476,8 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadObject((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
 
-				references->AddReference(instance1);
-				references->AddReference(parent1);
+				references->AddReference(instance1, "wxXmlResource::LoadObject at call with 4 argument(s)");
+				references->AddReference(parent1, "wxXmlResource::LoadObject at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3649,10 +3678,10 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadObjectRecursively at call with 3 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlResource::LoadObjectRecursively at call with 3 argument(s)");
 
 				return;
 				break;
@@ -3671,8 +3700,8 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadObjectRecursively((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
 
-				references->AddReference(instance1);
-				references->AddReference(parent1);
+				references->AddReference(instance1, "wxXmlResource::LoadObjectRecursively at call with 4 argument(s)");
+				references->AddReference(parent1, "wxXmlResource::LoadObjectRecursively at call with 4 argument(s)");
 
 				return;
 				break;
@@ -3869,10 +3898,10 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadPanel at call with 2 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlResource::LoadPanel at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3891,8 +3920,8 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 				#endif
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadPanel((wxPanel*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
 
-				references->AddReference(panel1);
-				references->AddReference(parent1);
+				references->AddReference(panel1, "wxXmlResource::LoadPanel at call with 3 argument(s)");
+				references->AddReference(parent1, "wxXmlResource::LoadPanel at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4033,10 +4062,10 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxXmlResource::LoadToolBar at call with 2 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxXmlResource::LoadToolBar at call with 2 argument(s)");
 
 				return;
 				break;

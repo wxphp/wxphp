@@ -263,7 +263,7 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 				_this = new wxPrinterDC_php(*(wxPrintData*) object_pointer0_0);
 
 				((wxPrinterDC_php*) _this)->references.Initialize();
-				((wxPrinterDC_php*) _this)->references.AddReference(printData0);
+				((wxPrinterDC_php*) _this)->references.AddReference(printData0, "wxPrinterDC::wxPrinterDC at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -728,8 +728,8 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				_this = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2);
 
 				((wxPreviewControlBar_php*) _this)->references.Initialize();
-				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0);
+				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 3 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -740,9 +740,9 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				_this = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				((wxPreviewControlBar_php*) _this)->references.Initialize();
-				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0);
+				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 4 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 4 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -753,10 +753,10 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				_this = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxPreviewControlBar_php*) _this)->references.Initialize();
-				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(size0);
+				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(size0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -767,10 +767,10 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				_this = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxPreviewControlBar_php*) _this)->references.Initialize();
-				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(size0);
+				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(size0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -781,10 +781,10 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				_this = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxPreviewControlBar_php*) _this)->references.Initialize();
-				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0);
-				((wxPreviewControlBar_php*) _this)->references.AddReference(size0);
+				((wxPreviewControlBar_php*) _this)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
+				((wxPreviewControlBar_php*) _this)->references.AddReference(size0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -955,8 +955,8 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				_this = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1);
 
 				((wxPreviewCanvas_php*) _this)->references.Initialize();
-				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0);
+				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 2 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -967,9 +967,9 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				_this = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2);
 
 				((wxPreviewCanvas_php*) _this)->references.Initialize();
-				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0);
+				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 3 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 3 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -980,10 +980,10 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				_this = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxPreviewCanvas_php*) _this)->references.Initialize();
-				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(size0);
+				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(size0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -994,10 +994,10 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				_this = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxPreviewCanvas_php*) _this)->references.Initialize();
-				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(size0);
+				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(size0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -1008,10 +1008,10 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				_this = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxPreviewCanvas_php*) _this)->references.Initialize();
-				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0);
-				((wxPreviewCanvas_php*) _this)->references.AddReference(size0);
+				((wxPreviewCanvas_php*) _this)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
+				((wxPreviewCanvas_php*) _this)->references.AddReference(size0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -1592,7 +1592,7 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintPreview::GetCanvas at call with 0 argument(s)");
 				}
 
 
@@ -1807,7 +1807,7 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintPreview::GetFrame at call with 0 argument(s)");
 				}
 
 
@@ -2118,7 +2118,7 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintPreview::GetPrintout at call with 0 argument(s)");
 				}
 
 
@@ -2237,7 +2237,7 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintPreview::GetPrintoutForPrinting at call with 0 argument(s)");
 				}
 
 
@@ -2472,8 +2472,8 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 				#endif
 				ZVAL_BOOL(return_value, ((wxPrintPreview_php*)_this)->PaintPage((wxPreviewCanvas*) object_pointer0_0, *(wxDC*) object_pointer0_1));
 
-				references->AddReference(canvas0);
-				references->AddReference(dc0);
+				references->AddReference(canvas0, "wxPrintPreview::PaintPage at call with 2 argument(s)");
+				references->AddReference(dc0, "wxPrintPreview::PaintPage at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2794,7 +2794,7 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 				#endif
 				((wxPrintPreview_php*)_this)->SetCanvas((wxPreviewCanvas*) object_pointer0_0);
 
-				references->AddReference(window0);
+				references->AddReference(window0, "wxPrintPreview::SetCanvas at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3014,7 +3014,7 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 				#endif
 				((wxPrintPreview_php*)_this)->SetFrame((wxFrame*) object_pointer0_0);
 
-				references->AddReference(frame0);
+				references->AddReference(frame0, "wxPrintPreview::SetFrame at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3133,7 +3133,7 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 				#endif
 				((wxPrintPreview_php*)_this)->SetPrintout((wxPrintout*) object_pointer0_0);
 
-				references->AddReference(printout0);
+				references->AddReference(printout0, "wxPrintPreview::SetPrintout at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3358,7 +3358,7 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 				_this = new wxPrintPreview_php((wxPrintout*) object_pointer0_0);
 
 				((wxPrintPreview_php*) _this)->references.Initialize();
-				((wxPrintPreview_php*) _this)->references.AddReference(printout0);
+				((wxPrintPreview_php*) _this)->references.AddReference(printout0, "wxPrintPreview::wxPrintPreview at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -3369,8 +3369,8 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 				_this = new wxPrintPreview_php((wxPrintout*) object_pointer0_0, (wxPrintout*) object_pointer0_1);
 
 				((wxPrintPreview_php*) _this)->references.Initialize();
-				((wxPrintPreview_php*) _this)->references.AddReference(printout0);
-				((wxPrintPreview_php*) _this)->references.AddReference(printoutForPrinting0);
+				((wxPrintPreview_php*) _this)->references.AddReference(printout0, "wxPrintPreview::wxPrintPreview at call with 2 argument(s)");
+				((wxPrintPreview_php*) _this)->references.AddReference(printoutForPrinting0, "wxPrintPreview::wxPrintPreview at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3381,9 +3381,9 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 				_this = new wxPrintPreview_php((wxPrintout*) object_pointer0_0, (wxPrintout*) object_pointer0_1, (wxPrintDialogData*) object_pointer0_2);
 
 				((wxPrintPreview_php*) _this)->references.Initialize();
-				((wxPrintPreview_php*) _this)->references.AddReference(printout0);
-				((wxPrintPreview_php*) _this)->references.AddReference(printoutForPrinting0);
-				((wxPrintPreview_php*) _this)->references.AddReference(data0);
+				((wxPrintPreview_php*) _this)->references.AddReference(printout0, "wxPrintPreview::wxPrintPreview at call with 3 argument(s)");
+				((wxPrintPreview_php*) _this)->references.AddReference(printoutForPrinting0, "wxPrintPreview::wxPrintPreview at call with 3 argument(s)");
+				((wxPrintPreview_php*) _this)->references.AddReference(data0, "wxPrintPreview::wxPrintPreview at call with 3 argument(s)");
 				break;
 			}
 		}
@@ -3599,11 +3599,11 @@ PHP_METHOD(php_wxPrinter, CreateAbortWindow)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrinter::CreateAbortWindow at call with 2 argument(s)");
 				}
 
-				references->AddReference(parent0);
-				references->AddReference(printout0);
+				references->AddReference(parent0, "wxPrinter::CreateAbortWindow at call with 2 argument(s)");
+				references->AddReference(printout0, "wxPrinter::CreateAbortWindow at call with 2 argument(s)");
 
 				return;
 				break;
@@ -3910,7 +3910,7 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrinter::GetPrintDialogData at call with 0 argument(s)");
 				}
 
 
@@ -4050,8 +4050,8 @@ PHP_METHOD(php_wxPrinter, Print)
 				#endif
 				ZVAL_BOOL(return_value, ((wxPrinter_php*)_this)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1));
 
-				references->AddReference(parent0);
-				references->AddReference(printout0);
+				references->AddReference(parent0, "wxPrinter::Print at call with 2 argument(s)");
+				references->AddReference(printout0, "wxPrinter::Print at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4063,8 +4063,8 @@ PHP_METHOD(php_wxPrinter, Print)
 				#endif
 				ZVAL_BOOL(return_value, ((wxPrinter_php*)_this)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, prompt0));
 
-				references->AddReference(parent0);
-				references->AddReference(printout0);
+				references->AddReference(parent0, "wxPrinter::Print at call with 3 argument(s)");
+				references->AddReference(printout0, "wxPrinter::Print at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4203,10 +4203,10 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrinter::PrintDialog at call with 1 argument(s)");
 				}
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxPrinter::PrintDialog at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4345,8 +4345,8 @@ PHP_METHOD(php_wxPrinter, ReportError)
 				#endif
 				((wxPrinter_php*)_this)->ReportError((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, wxString(message0, wxConvUTF8));
 
-				references->AddReference(parent0);
-				references->AddReference(printout0);
+				references->AddReference(parent0, "wxPrinter::ReportError at call with 3 argument(s)");
+				references->AddReference(printout0, "wxPrinter::ReportError at call with 3 argument(s)");
 
 				return;
 				break;
@@ -4465,7 +4465,7 @@ PHP_METHOD(php_wxPrinter, Setup)
 				#endif
 				ZVAL_BOOL(return_value, ((wxPrinter_php*)_this)->Setup((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0);
+				references->AddReference(parent0, "wxPrinter::Setup at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4563,7 +4563,7 @@ PHP_METHOD(php_wxPrinter, __construct)
 				_this = new wxPrinter_php((wxPrintDialogData*) object_pointer0_0);
 
 				((wxPrinter_php*) _this)->references.Initialize();
-				((wxPrinter_php*) _this)->references.AddReference(data0);
+				((wxPrinter_php*) _this)->references.AddReference(data0, "wxPrinter::wxPrinter at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -4745,7 +4745,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 				#endif
 				((wxPrintout_php*)_this)->FitThisSizeToPage(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(imageSize0);
+				references->AddReference(imageSize0, "wxPrintout::FitThisSizeToPage at call with 1 argument(s)");
 
 				return;
 				break;
@@ -4886,8 +4886,8 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 				#endif
 				((wxPrintout_php*)_this)->FitThisSizeToPageMargins(*(wxSize*) object_pointer0_0, *(wxPageSetupDialogData*) object_pointer0_1);
 
-				references->AddReference(imageSize0);
-				references->AddReference(pageSetupData0);
+				references->AddReference(imageSize0, "wxPrintout::FitThisSizeToPageMargins at call with 2 argument(s)");
+				references->AddReference(pageSetupData0, "wxPrintout::FitThisSizeToPageMargins at call with 2 argument(s)");
 
 				return;
 				break;
@@ -5010,7 +5010,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 				#endif
 				((wxPrintout_php*)_this)->FitThisSizeToPaper(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(imageSize0);
+				references->AddReference(imageSize0, "wxPrintout::FitThisSizeToPaper at call with 1 argument(s)");
 
 				return;
 				break;
@@ -5131,7 +5131,7 @@ PHP_METHOD(php_wxPrintout, GetDC)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintout::GetDC at call with 0 argument(s)");
 				}
 
 
@@ -5261,7 +5261,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-				references->AddReference(pageSetupData0);
+				references->AddReference(pageSetupData0, "wxPrintout::GetLogicalPageMarginsRect at call with 1 argument(s)");
 
 				return;
 				break;
@@ -6328,7 +6328,7 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintout::GetPreview at call with 0 argument(s)");
 				}
 
 
@@ -6964,7 +6964,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 				#endif
 				((wxPrintout_php*)_this)->MapScreenSizeToPageMargins(*(wxPageSetupDialogData*) object_pointer0_0);
 
-				references->AddReference(pageSetupData0);
+				references->AddReference(pageSetupData0, "wxPrintout::MapScreenSizeToPageMargins at call with 1 argument(s)");
 
 				return;
 				break;
@@ -7214,6 +7214,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], startPage);
@@ -7223,7 +7224,15 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7271,6 +7280,7 @@ void wxPrintout_php::OnBeginPrinting()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -7278,7 +7288,10 @@ void wxPrintout_php::OnBeginPrinting()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7326,6 +7339,7 @@ void wxPrintout_php::OnEndDocument()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -7333,7 +7347,10 @@ void wxPrintout_php::OnEndDocument()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7381,6 +7398,7 @@ void wxPrintout_php::OnEndPrinting()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -7388,7 +7406,10 @@ void wxPrintout_php::OnEndPrinting()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7436,6 +7457,7 @@ void wxPrintout_php::OnPreparePrinting()
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 		
@@ -7443,7 +7465,10 @@ void wxPrintout_php::OnPreparePrinting()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7496,6 +7521,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 	int id_to_find;
 	void* return_object;
 	int rsrc_type;
+	int function_called;
 	
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], pageNum);
@@ -7504,7 +7530,15 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC) == FAILURE)
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
@@ -7512,11 +7546,12 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 		
 		wxMessageBox("Failed to call virtual method 'wxPrintout::OnPrintPage'!", "Error");
 	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
 		
-		return Z_BVAL_P(return_value);
+	return Z_BVAL_P(return_value);
 	
 }
 /* }}} */
@@ -7831,7 +7866,7 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintDialog::GetPrintDC at call with 0 argument(s)");
 				}
 
 
@@ -7947,7 +7982,7 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPrintDialog::GetPrintDialogData at call with 0 argument(s)");
 				}
 
 
@@ -8151,7 +8186,7 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 				_this = new wxPrintDialog_php((wxWindow*) object_pointer0_0);
 
 				((wxPrintDialog_php*) _this)->references.Initialize();
-				((wxPrintDialog_php*) _this)->references.AddReference(parent0);
+				((wxPrintDialog_php*) _this)->references.AddReference(parent0, "wxPrintDialog::wxPrintDialog at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -8162,8 +8197,8 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 				_this = new wxPrintDialog_php((wxWindow*) object_pointer0_0, (wxPrintDialogData*) object_pointer0_1);
 
 				((wxPrintDialog_php*) _this)->references.Initialize();
-				((wxPrintDialog_php*) _this)->references.AddReference(parent0);
-				((wxPrintDialog_php*) _this)->references.AddReference(data0);
+				((wxPrintDialog_php*) _this)->references.AddReference(parent0, "wxPrintDialog::wxPrintDialog at call with 2 argument(s)");
+				((wxPrintDialog_php*) _this)->references.AddReference(data0, "wxPrintDialog::wxPrintDialog at call with 2 argument(s)");
 				break;
 			}
 		}
@@ -8300,7 +8335,7 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxPageSetupDialog::GetPageSetupData at call with 0 argument(s)");
 				}
 
 
@@ -8408,7 +8443,7 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 				_this = new wxPageSetupDialog_php((wxWindow*) object_pointer0_0);
 
 				((wxPageSetupDialog_php*) _this)->references.Initialize();
-				((wxPageSetupDialog_php*) _this)->references.AddReference(parent0);
+				((wxPageSetupDialog_php*) _this)->references.AddReference(parent0, "wxPageSetupDialog::wxPageSetupDialog at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -8419,8 +8454,8 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 				_this = new wxPageSetupDialog_php((wxWindow*) object_pointer0_0, (wxPageSetupDialogData*) object_pointer0_1);
 
 				((wxPageSetupDialog_php*) _this)->references.Initialize();
-				((wxPageSetupDialog_php*) _this)->references.AddReference(parent0);
-				((wxPageSetupDialog_php*) _this)->references.AddReference(data0);
+				((wxPageSetupDialog_php*) _this)->references.AddReference(parent0, "wxPageSetupDialog::wxPageSetupDialog at call with 2 argument(s)");
+				((wxPageSetupDialog_php*) _this)->references.AddReference(data0, "wxPageSetupDialog::wxPageSetupDialog at call with 2 argument(s)");
 				break;
 			}
 		}

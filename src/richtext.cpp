@@ -249,7 +249,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				_this = new wxTextAttr_php(*(wxTextAttr*) object_pointer0_0);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(attr0);
+				((wxTextAttr_php*) _this)->references.AddReference(attr0, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -267,7 +267,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1);
+				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -278,8 +278,8 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1);
-				((wxTextAttr_php*) _this)->references.AddReference(colBack1);
+				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
+				((wxTextAttr_php*) _this)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -290,9 +290,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1);
-				((wxTextAttr_php*) _this)->references.AddReference(colBack1);
-				((wxTextAttr_php*) _this)->references.AddReference(font1);
+				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
+				((wxTextAttr_php*) _this)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
+				((wxTextAttr_php*) _this)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -303,9 +303,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1);
-				((wxTextAttr_php*) _this)->references.AddReference(colBack1);
-				((wxTextAttr_php*) _this)->references.AddReference(font1);
+				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
+				((wxTextAttr_php*) _this)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
+				((wxTextAttr_php*) _this)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -764,7 +764,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 				#endif
 				((wxTextAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colText0);
+				references->AddReference(colText0, "wxTextAttr::SetTextColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2127,7 +2127,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->Apply(*(wxTextAttr*) object_pointer0_0));
 
-				references->AddReference(style0);
+				references->AddReference(style0, "wxTextAttr::Apply at call with 1 argument(s)");
 
 				return;
 				break;
@@ -2139,8 +2139,8 @@ PHP_METHOD(php_wxTextAttr, Apply)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
 
-				references->AddReference(style0);
-				references->AddReference(compareWith0);
+				references->AddReference(style0, "wxTextAttr::Apply at call with 2 argument(s)");
+				references->AddReference(compareWith0, "wxTextAttr::Apply at call with 2 argument(s)");
 
 				return;
 				break;
@@ -2350,7 +2350,7 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTextAttr::GetBackgroundColour at call with 0 argument(s)");
 				}
 
 
@@ -3269,7 +3269,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontAttributes(*(wxFont*) object_pointer0_0));
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 1 argument(s)");
 
 				return;
 				break;
@@ -3281,7 +3281,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 				#endif
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 2 argument(s)");
 
 				return;
 				break;
@@ -4949,7 +4949,7 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 				}
 
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
+					references->AddReference(return_value, "wxTextAttr::GetTextColour at call with 0 argument(s)");
 				}
 
 
@@ -8495,7 +8495,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				#endif
 				((wxTextAttr_php*)_this)->Merge(*(wxTextAttr*) object_pointer0_0);
 
-				references->AddReference(overlay0);
+				references->AddReference(overlay0, "wxTextAttr::Merge at call with 1 argument(s)");
 
 				return;
 				break;
@@ -8743,7 +8743,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 				#endif
 				((wxTextAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colBack0);
+				references->AddReference(colBack0, "wxTextAttr::SetBackgroundColour at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9574,7 +9574,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 				#endif
 				((wxTextAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxTextAttr::SetFont at call with 1 argument(s)");
 
 				return;
 				break;
@@ -9586,7 +9586,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 				#endif
 				((wxTextAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
 
-				references->AddReference(font0);
+				references->AddReference(font0, "wxTextAttr::SetFont at call with 2 argument(s)");
 
 				return;
 				break;

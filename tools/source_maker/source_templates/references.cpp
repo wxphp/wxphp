@@ -23,20 +23,26 @@ void wxPHPObjectReferences::Initialize()
 	m_userInitialized = 0xAAEECC;
 }
 
+void wxPHPObjectReferences::UnInitialize()
+{
+	m_userInitialized = 0;
+}
+
 bool wxPHPObjectReferences::IsUserInitialized()
 {
 	return (m_userInitialized == 0xAAEECC); 
 }
 	
-void wxPHPObjectReferences::AddReference(zval* var)
+void wxPHPObjectReferences::AddReference(zval* var, std::string class_and_method)
 {
 	if(IsUserInitialized())
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Adding Reference\n");
+		php_printf("Adding Reference on %s\n", class_and_method.c_str());
 		#endif
 		
 		Z_ADDREF_P(var);
+		
 		m_references.push_back(var); 
 	}
 }
