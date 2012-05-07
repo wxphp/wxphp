@@ -5927,6 +5927,7 @@ PHP_METHOD(php_wxWebView, GetSelectedText);
 PHP_METHOD(php_wxWebView, GetZoom);
 PHP_METHOD(php_wxWebView, GetZoomType);
 PHP_METHOD(php_wxWebView, Connect);
+PHP_METHOD(php_wxTextCompleterSimple, GetCompletions);
 // <--- entries
 
 
