@@ -333,7 +333,7 @@ for ($i = 0; $i < $entries->length; $i++)
 			{
 				$enum_name = $class_xpath->evaluate("name", $class_member->item($member))->item(0)->nodeValue;
 				
-				//Skip badly referenced enums
+				//Skip unnamed enums TODO: implement them
 				if($enum_name{0} == "@")
 					continue;
 				
@@ -433,20 +433,30 @@ for ($i = 0; $i < $entries->length; $i++)
 			{
 				$enum_name = $file_xpath->evaluate("name", $file_members->item($member))->item(0)->nodeValue;
 				
-				//Skip badly referenced enums
-				if($enum_name{0} == "@")
-					continue;
-				
-				if(!isset($enums[1]))
-					$enums[1] = array();
-				
-				$enums[1][$enum_name] = array();
+				//If unnamed enum store on consts.json
+				if($enum_name{0} != "@")
+				{
+					if(!isset($enums[1]))
+						$enums[1] = array();
+					
+					$enums[1][$enum_name] = array();
+				}
 				
 				$enum_values = $file_xpath->evaluate("enumvalue", $file_members->item($member));
 				
-				for($enum_value=0; $enum_value<$enum_values->length; $enum_value++)
+				if($enum_name{0} != "@")
 				{
-					$enums[1][$enum_name][] = $file_xpath->evaluate("name", $enum_values->item($enum_value))->item(0)->nodeValue;
+					for($enum_value=0; $enum_value<$enum_values->length; $enum_value++)
+					{
+						$enums[1][$enum_name][] = $file_xpath->evaluate("name", $enum_values->item($enum_value))->item(0)->nodeValue;
+					}
+				}
+				else
+				{
+					for($enum_value=0; $enum_value<$enum_values->length; $enum_value++)
+					{
+						$defines[$file_xpath->evaluate("name", $enum_values->item($enum_value))->item(0)->nodeValue] = true;
+					}
 				}
 			}
 			
