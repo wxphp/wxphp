@@ -25,7 +25,7 @@ class wxAppWrapper : public wxApp
 		void ***tsrm_ls;
 };
 
-static function_entry php_wxApp_functions[] = {
+static zend_function_entry php_wxApp_functions[] = {
 	PHP_ME(php_wxApp, SetInstance ,NULL,ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxApp, Yield ,NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
