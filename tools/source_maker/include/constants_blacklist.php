@@ -12,6 +12,26 @@
  * 
 */
 
+//Constants that need opengl support
+unset($defConsts['WX_GL_AUX_BUFFERS']);
+unset($defConsts['WX_GL_BUFFER_SIZE']);
+unset($defConsts['WX_GL_DEPTH_SIZE']);
+unset($defConsts['WX_GL_DOUBLEBUFFER']);
+unset($defConsts['WX_GL_LEVEL']);
+unset($defConsts['WX_GL_MIN_ACCUM_ALPHA']);
+unset($defConsts['WX_GL_MIN_ACCUM_BLUE']);
+unset($defConsts['WX_GL_MIN_ACCUM_GREEN']);
+unset($defConsts['WX_GL_MIN_ACCUM_RED']);
+unset($defConsts['WX_GL_MIN_ALPHA']);
+unset($defConsts['WX_GL_MIN_BLUE']);
+unset($defConsts['WX_GL_MIN_GREEN']);
+unset($defConsts['WX_GL_MIN_RED']);
+unset($defConsts['WX_GL_RGBA']);
+unset($defConsts['WX_GL_SAMPLES']);
+unset($defConsts['WX_GL_SAMPLE_BUFFERS']);
+unset($defConsts['WX_GL_STENCIL_SIZE']);
+unset($defConsts['WX_GL_STEREO']);
+
 unset($defConsts['wxHTTP_GET']);
 unset($defConsts['wxHTTP_POST']);
 unset($defConsts['wxHTTP_HEAD']);

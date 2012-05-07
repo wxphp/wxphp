@@ -212733,5 +212733,45 @@
 				]
 			}
 		]
+	},
+	"wxTextCompleterSimple":{
+		"GetCompletions":[
+			{
+				"return_type":"void",
+				"brief_description":"Pure virtual method returning all possible completions for the given prefix.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&",
+					"wxArrayString&"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"prefix",
+					"res"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"_implements":[
+			"wxTextCompleter"
+		]
 	}
 }

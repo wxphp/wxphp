@@ -13984,3 +13984,116 @@ PHP_METHOD(php_wxToolBarToolBase, SetClientData)
 }
 /* }}} */
 
+void php_wxTextCompleterSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxTextCompleterSimple_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	
+	wxTextCompleterSimple_php* object = static_cast<wxTextCompleterSimple_php*>(rsrc->ptr);
+	
+	if(rsrc->ptr != NULL)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Pointer not null\n");
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		#endif
+		
+		if(object->references.IsUserInitialized())
+		{	
+			#ifdef USE_WXPHP_DEBUG
+			php_printf("Deleting pointer with delete\n");
+			#endif
+			
+			delete object;
+			
+			rsrc->ptr = NULL;
+		}
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Deletion of wxTextCompleterSimple done\n");
+		php_printf("===========================================\n\n");
+		#endif
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Not user space initialized\n");
+		#endif
+	}
+}
+/* {{{ proto  wxTextCompleterSimple::GetCompletions(string prefix, array &res)
+   Pure virtual method returning all possible completions for the given prefix. */
+void wxTextCompleterSimple_php::GetCompletions(const wxString& prefix, wxArrayString& res)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxTextCompleterSimple::GetCompletions\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *arguments[2];
+	
+	//Initilize arguments array
+	for(int i=0; i<2; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "GetCompletions", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	int function_called;
+	
+	//Parameters for conversion
+	temp_string = (char*)malloc(sizeof(wxChar)*(prefix.size()+1));
+	strcpy(temp_string, (const char *) prefix.char_str());
+	ZVAL_STRING(arguments[0], temp_string, 1);
+	free(temp_string);
+	array_init(arguments[1]);
+	for(int i=0; i<res.GetCount(); i++)
+	{
+		temp_string = (char*)malloc(sizeof(wxChar)*(res[i].size()+1));
+		strcpy(temp_string, (const char *) res[i].char_str());
+		add_next_index_string(arguments[1], temp_string, 1);
+		free(temp_string);
+	}
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	
+	//Delete already used parameters from memory
+	for(int i=0; i<2; i++)
+	{
+		efree(arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+		wxMessageBox("Failed to call virtual method 'wxTextCompleterSimple::GetCompletions'!", "Error");
+	}
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Returning userspace value.\n");
+	#endif
+		
+	return;
+	
+}
+/* }}} */
+

@@ -1925,4 +1925,31 @@ static zend_function_entry php_wxToolBarToolBase_functions[] = {
 };
 #endif
 
+extern int le_wxTextCompleterSimple;
+extern zend_class_entry *php_wxTextCompleterSimple_entry;
+void php_wxTextCompleterSimple_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+class wxTextCompleterSimple_php: public wxTextCompleterSimple{
+	public:
+	
+		
+	void GetCompletions(const wxString& prefix, wxArrayString& res);
+		
+	void InitProperties(){
+	}
+	
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
+static zend_function_entry php_wxTextCompleterSimple_functions[] = {
+	PHP_FE_END
+};
+#endif
+
 #endif //WXPHP_OTHERS_H_GUARD

@@ -100708,7 +100708,7 @@ PHP_METHOD(php_wxTextEntry, AutoComplete)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (rsrc_type != le_wxTextCompleterSimple))
 					{
 						goto overload1;
 					}
