@@ -35,9 +35,13 @@ class wxPHPObjectReferences
 	
 	/**
 	 * To turn off the flag that indicates that the php class using
-	 * this object was initialized by the php user. Needed to implement
-	 * this since virtual methods returning php objects caused a segfault
-	 * when returned value was garbage collected by php.
+	 * this object was initialized by the php user.
+	 * 
+	 * Needed to implement this since virtual methods returning php 
+	 * objects caused a segfault when returned value was garbage 
+	 * collected by php. Should always be called when an object shouldn't
+	 * automatically be garbage collected like for example global objects 
+	 * initialized on the RINIT function.
 	 */
 	void UnInitialize();
 	

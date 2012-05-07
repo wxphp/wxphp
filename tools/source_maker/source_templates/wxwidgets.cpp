@@ -145,19 +145,15 @@ PHP_MINFO_FUNCTION(php_wxWidgets)
  * Declaration of wxWidgets module
  */
 zend_module_entry wxWidgets_module_entry = {
-#if ZEND_MODULE_API_NO >= 20010901
-     STANDARD_MODULE_HEADER,
-#endif
+    STANDARD_MODULE_HEADER,
     PHP_WXWIDGETS_EXTNAME,
     php_wxWidgets_functions, 	/* Functions (module functions) */
     PHP_MINIT(php_wxWidgets), 	/* MINIT (module initialization function) */
     NULL, 						/* MSHUTDOWN (module shutdown function) */
     PHP_RINIT(php_wxWidgets),	/* RINIT (request initialization function) */
     NULL, 						/* RSHUTDOWN (request shutdown function) */
-    NULL, 						/* MINFO (module information function) */
-#if ZEND_MODULE_API_NO >= 20010901
+    PHP_MINFO(php_wxWidgets),	/* MINFO (module information function) */
     PHP_WXWIDGETS_EXTVER,
-#endif
     STANDARD_MODULE_PROPERTIES
 };
 

@@ -1688,244 +1688,364 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
 	 
 		void* wxNullBitmap_copy = malloc(sizeof(wxBitmap_php));
 		memcpy(wxNullBitmap_copy, &wxNullBitmap, sizeof(wxBitmap));
+		wxBitmap_php* wxNullBitmap_ptr = (wxBitmap_php*) wxNullBitmap_copy;
+		wxNullBitmap_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBitmap", (void*) wxNullBitmap_copy, php_wxBitmap_entry, le_wxBitmap, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullFont_copy = malloc(sizeof(wxFont_php));
 		memcpy(wxNullFont_copy, &wxNullFont, sizeof(wxFont));
+		wxFont_php* wxNullFont_ptr = (wxFont_php*) wxNullFont_copy;
+		wxNullFont_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullFont", (void*) wxNullFont_copy, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNORMAL_FONT_copy = malloc(sizeof(wxFont_php));
 		memcpy(wxNORMAL_FONT_copy, wxNORMAL_FONT, sizeof(wxFont));
+		wxFont_php* wxNORMAL_FONT_ptr = (wxFont_php*) wxNORMAL_FONT_copy;
+		wxNORMAL_FONT_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNORMAL_FONT", (void*) wxNORMAL_FONT_copy, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
 
 		void* wxSMALL_FONT_copy = malloc(sizeof(wxFont_php));
 		memcpy(wxSMALL_FONT_copy, wxSMALL_FONT, sizeof(wxFont));
+		wxFont_php* wxSMALL_FONT_ptr = (wxFont_php*) wxSMALL_FONT_copy;
+		wxSMALL_FONT_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSMALL_FONT", (void*) wxSMALL_FONT_copy, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
 
 		void* wxITALIC_FONT_copy = malloc(sizeof(wxFont_php));
 		memcpy(wxITALIC_FONT_copy, wxITALIC_FONT, sizeof(wxFont));
+		wxFont_php* wxITALIC_FONT_ptr = (wxFont_php*) wxITALIC_FONT_copy;
+		wxITALIC_FONT_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxITALIC_FONT", (void*) wxITALIC_FONT_copy, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
 
 		void* wxSWISS_FONT_copy = malloc(sizeof(wxFont_php));
 		memcpy(wxSWISS_FONT_copy, wxSWISS_FONT, sizeof(wxFont));
+		wxFont_php* wxSWISS_FONT_ptr = (wxFont_php*) wxSWISS_FONT_copy;
+		wxSWISS_FONT_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSWISS_FONT", (void*) wxSWISS_FONT_copy, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
 
 		void* wxTheFontList_copy = malloc(sizeof(wxFontList_php));
 		memcpy(wxTheFontList_copy, wxTheFontList, sizeof(wxFontList));
+		wxFontList_php* wxTheFontList_ptr = (wxFontList_php*) wxTheFontList_copy;
+		wxTheFontList_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheFontList", (void*) wxTheFontList_copy, php_wxFontList_entry, le_wxFontList, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullAnimation_copy = malloc(sizeof(wxAnimation_php));
 		memcpy(wxNullAnimation_copy, &wxNullAnimation, sizeof(wxAnimation));
+		wxAnimation_php* wxNullAnimation_ptr = (wxAnimation_php*) wxNullAnimation_copy;
+		wxNullAnimation_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullAnimation", (void*) wxNullAnimation_copy, php_wxAnimation_entry, le_wxAnimation, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullBrush_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxNullBrush_copy, &wxNullBrush, sizeof(wxBrush));
+		wxBrush_php* wxNullBrush_ptr = (wxBrush_php*) wxNullBrush_copy;
+		wxNullBrush_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBrush", (void*) wxNullBrush_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxBLUE_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxBLUE_BRUSH_copy, wxBLUE_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxBLUE_BRUSH_ptr = (wxBrush_php*) wxBLUE_BRUSH_copy;
+		wxBLUE_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_BRUSH", (void*) wxBLUE_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxGREEN_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxGREEN_BRUSH_copy, wxGREEN_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxGREEN_BRUSH_ptr = (wxBrush_php*) wxGREEN_BRUSH_copy;
+		wxGREEN_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_BRUSH", (void*) wxGREEN_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxYELLOW_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxYELLOW_BRUSH_copy, wxYELLOW_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxYELLOW_BRUSH_ptr = (wxBrush_php*) wxYELLOW_BRUSH_copy;
+		wxYELLOW_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_BRUSH", (void*) wxYELLOW_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxWHITE_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxWHITE_BRUSH_copy, wxWHITE_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxWHITE_BRUSH_ptr = (wxBrush_php*) wxWHITE_BRUSH_copy;
+		wxWHITE_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_BRUSH", (void*) wxWHITE_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxBLACK_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxBLACK_BRUSH_copy, wxBLACK_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxBLACK_BRUSH_ptr = (wxBrush_php*) wxBLACK_BRUSH_copy;
+		wxBLACK_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_BRUSH", (void*) wxBLACK_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxGREY_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxGREY_BRUSH_copy, wxGREY_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxGREY_BRUSH_ptr = (wxBrush_php*) wxGREY_BRUSH_copy;
+		wxGREY_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_BRUSH", (void*) wxGREY_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxMEDIUM_GREY_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxMEDIUM_GREY_BRUSH_copy, wxMEDIUM_GREY_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxMEDIUM_GREY_BRUSH_ptr = (wxBrush_php*) wxMEDIUM_GREY_BRUSH_copy;
+		wxMEDIUM_GREY_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_BRUSH", (void*) wxMEDIUM_GREY_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxLIGHT_GREY_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxLIGHT_GREY_BRUSH_copy, wxLIGHT_GREY_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxLIGHT_GREY_BRUSH_ptr = (wxBrush_php*) wxLIGHT_GREY_BRUSH_copy;
+		wxLIGHT_GREY_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_BRUSH", (void*) wxLIGHT_GREY_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxTRANSPARENT_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxTRANSPARENT_BRUSH_copy, wxTRANSPARENT_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxTRANSPARENT_BRUSH_ptr = (wxBrush_php*) wxTRANSPARENT_BRUSH_copy;
+		wxTRANSPARENT_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_BRUSH", (void*) wxTRANSPARENT_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxCYAN_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxCYAN_BRUSH_copy, wxCYAN_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxCYAN_BRUSH_ptr = (wxBrush_php*) wxCYAN_BRUSH_copy;
+		wxCYAN_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_BRUSH", (void*) wxCYAN_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxRED_BRUSH_copy = malloc(sizeof(wxBrush_php));
 		memcpy(wxRED_BRUSH_copy, wxRED_BRUSH, sizeof(wxBrush));
+		wxBrush_php* wxRED_BRUSH_ptr = (wxBrush_php*) wxRED_BRUSH_copy;
+		wxRED_BRUSH_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_BRUSH", (void*) wxRED_BRUSH_copy, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullColour_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxNullColour_copy, &wxNullColour, sizeof(wxColour));
+		wxColour_php* wxNullColour_ptr = (wxColour_php*) wxNullColour_copy;
+		wxNullColour_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullColour", (void*) wxNullColour_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTransparentColour", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 		void* wxBLACK_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxBLACK_copy, wxBLACK, sizeof(wxColour));
+		wxColour_php* wxBLACK_ptr = (wxColour_php*) wxBLACK_copy;
+		wxBLACK_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK", (void*) wxBLACK_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxBLUE_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxBLUE_copy, wxBLUE, sizeof(wxColour));
+		wxColour_php* wxBLUE_ptr = (wxColour_php*) wxBLUE_copy;
+		wxBLUE_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE", (void*) wxBLUE_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxCYAN_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxCYAN_copy, wxCYAN, sizeof(wxColour));
+		wxColour_php* wxCYAN_ptr = (wxColour_php*) wxCYAN_copy;
+		wxCYAN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN", (void*) wxCYAN_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxGREEN_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxGREEN_copy, wxGREEN, sizeof(wxColour));
+		wxColour_php* wxGREEN_ptr = (wxColour_php*) wxGREEN_copy;
+		wxGREEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN", (void*) wxGREEN_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxYELLOW_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxYELLOW_copy, wxYELLOW, sizeof(wxColour));
+		wxColour_php* wxYELLOW_ptr = (wxColour_php*) wxYELLOW_copy;
+		wxYELLOW_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW", (void*) wxYELLOW_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxLIGHT_GREY_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxLIGHT_GREY_copy, wxLIGHT_GREY, sizeof(wxColour));
+		wxColour_php* wxLIGHT_GREY_ptr = (wxColour_php*) wxLIGHT_GREY_copy;
+		wxLIGHT_GREY_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY", (void*) wxLIGHT_GREY_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxRED_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxRED_copy, wxRED, sizeof(wxColour));
+		wxColour_php* wxRED_ptr = (wxColour_php*) wxRED_copy;
+		wxRED_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED", (void*) wxRED_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxWHITE_copy = malloc(sizeof(wxColour_php));
 		memcpy(wxWHITE_copy, wxWHITE, sizeof(wxColour));
+		wxColour_php* wxWHITE_ptr = (wxColour_php*) wxWHITE_copy;
+		wxWHITE_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE", (void*) wxWHITE_copy, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullCursor_copy = malloc(sizeof(wxCursor_php));
 		memcpy(wxNullCursor_copy, &wxNullCursor, sizeof(wxCursor));
+		wxCursor_php* wxNullCursor_ptr = (wxCursor_php*) wxNullCursor_copy;
+		wxNullCursor_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullCursor", (void*) wxNullCursor_copy, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
 
 		void* wxSTANDARD_CURSOR_copy = malloc(sizeof(wxCursor_php));
 		memcpy(wxSTANDARD_CURSOR_copy, wxSTANDARD_CURSOR, sizeof(wxCursor));
+		wxCursor_php* wxSTANDARD_CURSOR_ptr = (wxCursor_php*) wxSTANDARD_CURSOR_copy;
+		wxSTANDARD_CURSOR_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSTANDARD_CURSOR", (void*) wxSTANDARD_CURSOR_copy, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
 
 		void* wxHOURGLASS_CURSOR_copy = malloc(sizeof(wxCursor_php));
 		memcpy(wxHOURGLASS_CURSOR_copy, wxHOURGLASS_CURSOR, sizeof(wxCursor));
+		wxCursor_php* wxHOURGLASS_CURSOR_ptr = (wxCursor_php*) wxHOURGLASS_CURSOR_copy;
+		wxHOURGLASS_CURSOR_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxHOURGLASS_CURSOR", (void*) wxHOURGLASS_CURSOR_copy, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
 
 		void* wxCROSS_CURSOR_copy = malloc(sizeof(wxCursor_php));
 		memcpy(wxCROSS_CURSOR_copy, wxCROSS_CURSOR, sizeof(wxCursor));
+		wxCursor_php* wxCROSS_CURSOR_ptr = (wxCursor_php*) wxCROSS_CURSOR_copy;
+		wxCROSS_CURSOR_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCROSS_CURSOR", (void*) wxCROSS_CURSOR_copy, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
 
 		void* wxDefaultSpan_copy = malloc(sizeof(wxGBSpan_php));
 		memcpy(wxDefaultSpan_copy, &wxDefaultSpan, sizeof(wxGBSpan));
+		wxGBSpan_php* wxDefaultSpan_ptr = (wxGBSpan_php*) wxDefaultSpan_copy;
+		wxDefaultSpan_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSpan", (void*) wxDefaultSpan_copy, php_wxGBSpan_entry, le_wxGBSpan, CONST_CS | CONST_PERSISTENT);
 
 		void* wxDefaultPosition_copy = malloc(sizeof(wxPoint_php));
 		memcpy(wxDefaultPosition_copy, &wxDefaultPosition, sizeof(wxPoint));
+		wxPoint_php* wxDefaultPosition_ptr = (wxPoint_php*) wxDefaultPosition_copy;
+		wxDefaultPosition_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultPosition", (void*) wxDefaultPosition_copy, php_wxPoint_entry, le_wxPoint, CONST_CS | CONST_PERSISTENT);
 
 		void* wxTheColourDatabase_copy = malloc(sizeof(wxColourDatabase_php));
 		memcpy(wxTheColourDatabase_copy, wxTheColourDatabase, sizeof(wxColourDatabase));
+		wxColourDatabase_php* wxTheColourDatabase_ptr = (wxColourDatabase_php*) wxTheColourDatabase_copy;
+		wxTheColourDatabase_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheColourDatabase", (void*) wxTheColourDatabase_copy, php_wxColourDatabase_entry, le_wxColourDatabase, CONST_CS | CONST_PERSISTENT);
 
 		void* wxDefaultSize_copy = malloc(sizeof(wxSize_php));
 		memcpy(wxDefaultSize_copy, &wxDefaultSize, sizeof(wxSize));
+		wxSize_php* wxDefaultSize_ptr = (wxSize_php*) wxDefaultSize_copy;
+		wxDefaultSize_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSize", (void*) wxDefaultSize_copy, php_wxSize_entry, le_wxSize, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullGraphicsMatrix_copy = malloc(sizeof(wxGraphicsMatrix_php));
 		memcpy(wxNullGraphicsMatrix_copy, &wxNullGraphicsMatrix, sizeof(wxGraphicsMatrix));
+		wxGraphicsMatrix_php* wxNullGraphicsMatrix_ptr = (wxGraphicsMatrix_php*) wxNullGraphicsMatrix_copy;
+		wxNullGraphicsMatrix_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullGraphicsMatrix", (void*) wxNullGraphicsMatrix_copy, php_wxGraphicsMatrix_entry, le_wxGraphicsMatrix, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullIcon_copy = malloc(sizeof(wxIcon_php));
 		memcpy(wxNullIcon_copy, &wxNullIcon, sizeof(wxIcon));
+		wxIcon_php* wxNullIcon_ptr = (wxIcon_php*) wxNullIcon_copy;
+		wxNullIcon_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIcon", (void*) wxNullIcon_copy, php_wxIcon_entry, le_wxIcon, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullIconBundle_copy = malloc(sizeof(wxIconBundle_php));
 		memcpy(wxNullIconBundle_copy, &wxNullIconBundle, sizeof(wxIconBundle));
+		wxIconBundle_php* wxNullIconBundle_ptr = (wxIconBundle_php*) wxNullIconBundle_copy;
+		wxNullIconBundle_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIconBundle", (void*) wxNullIconBundle_copy, php_wxIconBundle_entry, le_wxIconBundle, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullImage_copy = malloc(sizeof(wxImage_php));
 		memcpy(wxNullImage_copy, &wxNullImage, sizeof(wxImage));
+		wxImage_php* wxNullImage_ptr = (wxImage_php*) wxNullImage_copy;
+		wxNullImage_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullImage", (void*) wxNullImage_copy, php_wxImage_entry, le_wxImage, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullPalette_copy = malloc(sizeof(wxPalette_php));
 		memcpy(wxNullPalette_copy, &wxNullPalette, sizeof(wxPalette));
+		wxPalette_php* wxNullPalette_ptr = (wxPalette_php*) wxNullPalette_copy;
+		wxNullPalette_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPalette", (void*) wxNullPalette_copy, php_wxPalette_entry, le_wxPalette, CONST_CS | CONST_PERSISTENT);
 
 		void* wxNullPen_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxNullPen_copy, &wxNullPen, sizeof(wxPen));
+		wxPen_php* wxNullPen_ptr = (wxPen_php*) wxNullPen_copy;
+		wxNullPen_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPen", (void*) wxNullPen_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxRED_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxRED_PEN_copy, wxRED_PEN, sizeof(wxPen));
+		wxPen_php* wxRED_PEN_ptr = (wxPen_php*) wxRED_PEN_copy;
+		wxRED_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_PEN", (void*) wxRED_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxBLUE_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxBLUE_PEN_copy, wxBLUE_PEN, sizeof(wxPen));
+		wxPen_php* wxBLUE_PEN_ptr = (wxPen_php*) wxBLUE_PEN_copy;
+		wxBLUE_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_PEN", (void*) wxBLUE_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxCYAN_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxCYAN_PEN_copy, wxCYAN_PEN, sizeof(wxPen));
+		wxPen_php* wxCYAN_PEN_ptr = (wxPen_php*) wxCYAN_PEN_copy;
+		wxCYAN_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_PEN", (void*) wxCYAN_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxGREEN_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxGREEN_PEN_copy, wxGREEN_PEN, sizeof(wxPen));
+		wxPen_php* wxGREEN_PEN_ptr = (wxPen_php*) wxGREEN_PEN_copy;
+		wxGREEN_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_PEN", (void*) wxGREEN_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxYELLOW_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxYELLOW_PEN_copy, wxYELLOW_PEN, sizeof(wxPen));
+		wxPen_php* wxYELLOW_PEN_ptr = (wxPen_php*) wxYELLOW_PEN_copy;
+		wxYELLOW_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_PEN", (void*) wxYELLOW_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxBLACK_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxBLACK_PEN_copy, wxBLACK_PEN, sizeof(wxPen));
+		wxPen_php* wxBLACK_PEN_ptr = (wxPen_php*) wxBLACK_PEN_copy;
+		wxBLACK_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_PEN", (void*) wxBLACK_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxWHITE_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxWHITE_PEN_copy, wxWHITE_PEN, sizeof(wxPen));
+		wxPen_php* wxWHITE_PEN_ptr = (wxPen_php*) wxWHITE_PEN_copy;
+		wxWHITE_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_PEN", (void*) wxWHITE_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxTRANSPARENT_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxTRANSPARENT_PEN_copy, wxTRANSPARENT_PEN, sizeof(wxPen));
+		wxPen_php* wxTRANSPARENT_PEN_ptr = (wxPen_php*) wxTRANSPARENT_PEN_copy;
+		wxTRANSPARENT_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_PEN", (void*) wxTRANSPARENT_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxBLACK_DASHED_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxBLACK_DASHED_PEN_copy, wxBLACK_DASHED_PEN, sizeof(wxPen));
+		wxPen_php* wxBLACK_DASHED_PEN_ptr = (wxPen_php*) wxBLACK_DASHED_PEN_copy;
+		wxBLACK_DASHED_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_DASHED_PEN", (void*) wxBLACK_DASHED_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxGREY_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxGREY_PEN_copy, wxGREY_PEN, sizeof(wxPen));
+		wxPen_php* wxGREY_PEN_ptr = (wxPen_php*) wxGREY_PEN_copy;
+		wxGREY_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_PEN", (void*) wxGREY_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxMEDIUM_GREY_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxMEDIUM_GREY_PEN_copy, wxMEDIUM_GREY_PEN, sizeof(wxPen));
+		wxPen_php* wxMEDIUM_GREY_PEN_ptr = (wxPen_php*) wxMEDIUM_GREY_PEN_copy;
+		wxMEDIUM_GREY_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_PEN", (void*) wxMEDIUM_GREY_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxLIGHT_GREY_PEN_copy = malloc(sizeof(wxPen_php));
 		memcpy(wxLIGHT_GREY_PEN_copy, wxLIGHT_GREY_PEN, sizeof(wxPen));
+		wxPen_php* wxLIGHT_GREY_PEN_ptr = (wxPen_php*) wxLIGHT_GREY_PEN_copy;
+		wxLIGHT_GREY_PEN_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_PEN", (void*) wxLIGHT_GREY_PEN_copy, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
 
 		void* wxThePenList_copy = malloc(sizeof(wxPenList_php));
 		memcpy(wxThePenList_copy, wxThePenList, sizeof(wxPenList));
+		wxPenList_php* wxThePenList_ptr = (wxPenList_php*) wxThePenList_copy;
+		wxThePenList_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxThePenList", (void*) wxThePenList_copy, php_wxPenList_entry, le_wxPenList, CONST_CS | CONST_PERSISTENT);
 
 		void* wxTLI_FIRST_copy = malloc(sizeof(wxTreeListItem_php));
 		memcpy(wxTLI_FIRST_copy, &wxTLI_FIRST, sizeof(wxTreeListItem));
+		wxTreeListItem_php* wxTLI_FIRST_ptr = (wxTreeListItem_php*) wxTLI_FIRST_copy;
+		wxTLI_FIRST_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_FIRST", (void*) wxTLI_FIRST_copy, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
 
 		void* wxTLI_LAST_copy = malloc(sizeof(wxTreeListItem_php));
 		memcpy(wxTLI_LAST_copy, &wxTLI_LAST, sizeof(wxTreeListItem));
+		wxTreeListItem_php* wxTLI_LAST_ptr = (wxTreeListItem_php*) wxTLI_LAST_copy;
+		wxTLI_LAST_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_LAST", (void*) wxTLI_LAST_copy, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
 
 		void* wxDefaultValidator_copy = malloc(sizeof(wxValidator_php));
 		memcpy(wxDefaultValidator_copy, &wxDefaultValidator, sizeof(wxValidator));
+		wxValidator_php* wxDefaultValidator_ptr = (wxValidator_php*) wxDefaultValidator_copy;
+		wxDefaultValidator_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultValidator", (void*) wxDefaultValidator_copy, php_wxValidator_entry, le_wxValidator, CONST_CS | CONST_PERSISTENT);
 
 		void* wxDefaultVideoMode_copy = malloc(sizeof(wxVideoMode_php));
 		memcpy(wxDefaultVideoMode_copy, &wxDefaultVideoMode, sizeof(wxVideoMode));
+		wxVideoMode_php* wxDefaultVideoMode_ptr = (wxVideoMode_php*) wxDefaultVideoMode_copy;
+		wxDefaultVideoMode_ptr->references.UnInitialize();
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultVideoMode", (void*) wxDefaultVideoMode_copy, php_wxVideoMode_entry, le_wxVideoMode, CONST_CS | CONST_PERSISTENT);
 
 	
@@ -7416,19 +7536,15 @@ PHP_MINFO_FUNCTION(php_wxWidgets)
  * Declaration of wxWidgets module
  */
 zend_module_entry wxWidgets_module_entry = {
-#if ZEND_MODULE_API_NO >= 20010901
-     STANDARD_MODULE_HEADER,
-#endif
+    STANDARD_MODULE_HEADER,
     PHP_WXWIDGETS_EXTNAME,
     php_wxWidgets_functions, 	/* Functions (module functions) */
     PHP_MINIT(php_wxWidgets), 	/* MINIT (module initialization function) */
     NULL, 						/* MSHUTDOWN (module shutdown function) */
     PHP_RINIT(php_wxWidgets),	/* RINIT (request initialization function) */
     NULL, 						/* RSHUTDOWN (request shutdown function) */
-    NULL, 						/* MINFO (module information function) */
-#if ZEND_MODULE_API_NO >= 20010901
+    PHP_MINFO(php_wxWidgets),	/* MINFO (module information function) */
     PHP_WXWIDGETS_EXTVER,
-#endif
     STANDARD_MODULE_PROPERTIES
 };
 
