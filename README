@@ -160,6 +160,13 @@ Building and Installing on Linux/Unix Environments
 
 . Compile wxWidgets library and development packages, currently we have
   tested with latest 2.9.4 svn revisions.
+  
+	NOTE: wxWebView, a web browser like control, was enabled on the
+	wrapper, in order to compile wxWidgets with wxWebView support you
+	will need to have libwebkitgtk development files and library. On ubuntu
+	and debian based distros this could be done with:
+	
+		sudo apt-get install libwebkitgtk-dev
 
 	Download wxWidgets tar file and uncompress it on your
 	directory of choice or svn checkout with:
