@@ -75,6 +75,9 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FE_END //Equivalent to { NULL, NULL, NULL, 0, 0 } at time of writing on PHP 5.4
 };
 
+/**
+ * Initialize global objects and wxWidgets resources
+ */
 PHP_RINIT_FUNCTION(php_wxWidgets)
 {
 	static int objects_intialized = 0;
@@ -96,8 +99,6 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
 		wxInitialize();
 	 
 <?php print $object_constants ?>
-	
-		wxUninitialize();
 		
 		objects_intialized = 1;
 	}
@@ -128,6 +129,16 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 }
 
 /**
+ * UnInitialize wxWidgets resources
+ */
+PHP_MSHUTDOWN_FUNCTION(php_wxWidgets)
+{
+    wxUninitialize();
+	
+    return SUCCESS;
+}
+
+/**
  * TODO: Automate the process of updating versions number
  * Show version information to phpinfo()
  */
@@ -147,12 +158,12 @@ PHP_MINFO_FUNCTION(php_wxWidgets)
 zend_module_entry wxWidgets_module_entry = {
     STANDARD_MODULE_HEADER,
     PHP_WXWIDGETS_EXTNAME,
-    php_wxWidgets_functions, 	/* Functions (module functions) */
-    PHP_MINIT(php_wxWidgets), 	/* MINIT (module initialization function) */
-    NULL, 						/* MSHUTDOWN (module shutdown function) */
-    PHP_RINIT(php_wxWidgets),	/* RINIT (request initialization function) */
-    NULL, 						/* RSHUTDOWN (request shutdown function) */
-    PHP_MINFO(php_wxWidgets),	/* MINFO (module information function) */
+    php_wxWidgets_functions, 		/* Functions (module functions) */
+    PHP_MINIT(php_wxWidgets), 		/* MINIT (module initialization function) */
+    PHP_MSHUTDOWN(php_wxWidgets),	/* MSHUTDOWN (module shutdown function) */
+    PHP_RINIT(php_wxWidgets),		/* RINIT (request initialization function) */
+    NULL, 							/* RSHUTDOWN (request shutdown function) */
+    PHP_MINFO(php_wxWidgets),		/* MINFO (module information function) */
     PHP_WXWIDGETS_EXTVER,
     STANDARD_MODULE_PROPERTIES
 };
