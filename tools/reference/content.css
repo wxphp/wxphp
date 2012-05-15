@@ -79,6 +79,19 @@ p, p *
 	margin: 5px 0 5px 0;
 }
 
+.function_description_top
+{
+	margin-bottom: 8px;
+	font-size: 13px;
+}
+
+.function_description_bottom
+{
+	color: green;
+	margin-bottom: 8px;
+	font-size: 13px;
+}
+
 .footer
 {
 	text-align: center;

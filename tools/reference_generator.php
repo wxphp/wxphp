@@ -29,10 +29,10 @@ else
 	chdir(getcwd() . "/" . str_replace($_SERVER["SCRIPT_NAME"] , "", $_SERVER["PHP_SELF"]));
 }
 
-include("../source_maker/include/functions.php");
-include("../source_maker/include/function_generation.php");
-include("../source_maker/include/class_header_generation.php");
-include("../source_maker/include/class_virtual_source_generation.php");
+include("source_maker/include/functions.php");
+include("source_maker/include/function_generation.php");
+include("source_maker/include/class_header_generation.php");
+include("source_maker/include/class_virtual_source_generation.php");
 
 //Initialize class enums
 $defEnums = array();
@@ -54,67 +54,65 @@ $defIni = array();
 
 
 //Load functions parsed by the xml_parser
-if(file_exists("../source_maker/dumps/functions.json"))
+if(file_exists("../json/functions.json"))
 {
-	$defFunctions = unserialize_json(file_get_contents("../source_maker/dumps/functions.json"));
+	$defFunctions = unserialize_json(file_get_contents("../json/functions.json"));
 	
 	//Manually defined as a template
-	$defFunctions["wxDynamicCast"] = array();
+	$defFunctions["wxDynamicCast"] = array( array(
+			"brief_description"=>"Converts a given object from one type to another",
+			"return_type"=>"wxObject", 
+			"parameters_type"=>array("wxObject", "wxString"),
+			"parameters_name"=>array("object", "type")
+		)
+	);
 	
 	//blacklist functions
-	include("../source_maker/include/functions_blacklist.php");
+	include("source_maker/include/functions_blacklist.php");
 }
 
 //Load classes parsed by the xml_parser
-if(file_exists("../source_maker/dumps/classes.json"))
+if(file_exists("../json/classes.json"))
 {
-	$defIni = unserialize_json(file_get_contents("../source_maker/dumps/classes.json"));
+	$defIni = unserialize_json(file_get_contents("../json/classes.json"));
 	
 	//Blacklist classes
 	unset($defIni['wxArrayString']);
 }
 
 //Load class and global enums parsed by the xml_parser
-if(file_exists("../source_maker/dumps/enums.json"))
+if(file_exists("../json/enums.json"))
 {
-	$defEnums = unserialize_json(file_get_contents("../source_maker/dumps/enums.json"));
+	$defEnums = unserialize_json(file_get_contents("../json/enums.json"));
 }
 
 //Import all constants defined by hand
-include("../source_maker/include/constants.php");
+include("source_maker/include/constants.php");
 	
 //Load constants found by the xml parser
-if(file_exists("../source_maker/dumps/consts.json"))
+if(file_exists("../json/consts.json"))
 {	
-	$temp = unserialize_json(file_get_contents("../source_maker/dumps/consts.json"));
+	$temp = unserialize_json(file_get_contents("../json/consts.json"));
 	$defConsts = array_merge($temp, $defConsts);
 
 	//blacklist constants
-	include("../source_maker/include/constants_blacklist.php");
+	include("source_maker/include/constants_blacklist.php");
 }
 
 //Load global variables parsed by the xml_parser
-if(file_exists("../source_maker/dumps/global_variables.json"))
+if(file_exists("../json/global_variables.json"))
 {
-	$defGlobals = unserialize_json(file_get_contents("../source_maker/dumps/global_variables.json"));
+	$defGlobals = unserialize_json(file_get_contents("../json/global_variables.json"));
 	
 	//Temporary black list
 	unset($defGlobals['wxEVT_HOTKEY']);
 	unset($defGlobals['wxNullRegion']);
-	
-	//(we need to compile with wxWebView support)
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_NAVIGATING']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_NAVIGATED']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_LOADED']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_ERROR']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_NEWWINDOW']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED']);
 }
 
 //Load typedef parsed by the xml_parser
-if(file_exists("../source_maker/dumps/typedef.json"))
+if(file_exists("../json/typedef.json"))
 {
-	$defTypedef = unserialize_json(file_get_contents("../source_maker/dumps/typedef.json"));
+	$defTypedef = unserialize_json(file_get_contents("../json/typedef.json"));
 }
 
 //Empty the discarded log
@@ -330,7 +328,16 @@ fwrite($functions, "<h1>Functions</h1>\n");
 fwrite($functions, "<ul>\n");
 foreach($defFunctions as $function_name=>$function_definitions)
 {
-	fwrite($functions, "\t<li><a href=\"#$function_name\" target=\"content\">$function_name</a></li>\n");
+	$functions_menu_list = "\t<li><a href=\"#$function_name\" target=\"content\">$function_name</a>";
+	
+	if($function_definitions[0]["brief_description"])
+	{
+		$functions_menu_list .= "<div class=\"function_description_top\">".$function_definitions[0]["brief_description"]."</div>";
+	}
+	
+	$functions_menu_list .= "</li>\n";
+	
+	fwrite($functions, $functions_menu_list);
 }
 fwrite($functions, "</ul>\n");
 $function_content = "";
@@ -369,7 +376,16 @@ foreach($defFunctions as $function_name=>$function_definitions)
 		
 		$parameters .= " )";
 		
-		$function_content .= "<span class=\"return-type\">$return_type</span> <span class=\"method\">$function_name<span> $parameters<br />\n";
+		$function_content .= "<span class=\"return-type\">$return_type</span> <span class=\"method\">$function_name<span> $parameters\n";
+		
+		if($function_definition["brief_description"])
+		{
+			$function_content .= "<div class=\"function_description_bottom\">".$function_definition["brief_description"]."</div>";
+		}
+		else
+		{
+			$function_content .= "<br />";
+		}
 	}
 	
 	$function_content .= "</ul>\n";
@@ -452,9 +468,18 @@ foreach($defIni as $class_name=>$class_methods)
 	foreach($class_methods as $method_name=>$method_definitions)
 	{
 		if($method_name{0} != "_" && !$method_definitions[0]["static"])
-			$content .= "\t<li><a href=\"#$method_name\" target=\"content\">$method_name</a></li>\n";
+		{
+			$content .= "\t<li><a href=\"#$method_name\" target=\"content\">$method_name</a>";
+			if($method_definitions[0]["brief_description"])
+			{
+				$content .= "<div class=\"function_description_top\">".$method_definitions[0]["brief_description"]."</div>";
+			}
+			$content .= "</li>\n";
+		}
 		else if($method_definitions[0]["static"])
+		{
 			$static_found = true;
+		}
 	}
 	
 	$content .= "</ul>\n";
@@ -469,7 +494,14 @@ foreach($defIni as $class_name=>$class_methods)
 		foreach($class_methods as $method_name=>$method_definitions)
 		{
 			if($method_name{0} != "_" && $method_definitions[0]["static"])
-				$content .= "\t<li><a href=\"#$method_name\" target=\"content\">$method_name</a></li>\n";
+			{
+				$content .= "\t<li><a href=\"#$method_name\" target=\"content\">$method_name</a>";
+				if($method_definitions[0]["brief_description"])
+				{
+					$content .= "<div class=\"function_description_top\">".$method_definitions[0]["brief_description"]."</div>";
+				}
+				$content .= "</li>\n";
+			}
 		}
 		
 		$content .= "</ul>\n";
@@ -519,6 +551,11 @@ foreach($defIni as $class_name=>$class_methods)
 				$parameters .= " )";
 				
 				$content .= "$static<span class=\"return-type\">$return_type</span> <span class=\"method\">$method_name<span> $parameters<br />\n";
+				
+				if($method_definition["brief_description"])
+				{
+					$content .= "<div class=\"function_description_bottom\">".$method_definition["brief_description"]."</div>";
+				}
 			}
 			
 			$content .= "</ul>\n";
@@ -588,9 +625,9 @@ else
 $intro_content .= '	<h1>wxPHP Class Reference</h1>
 	
 	<p>
-		<a target="_top" href="' . $home_page . '">wxPHP</a> is a binding to the popular framework to develop crossplatform GUI desktop applications
-		named <a href="http://wxwidgets.org/">wxWidgets</a>. In this way we can combine the powerful features 
-		that php brings to develop desktop applications more easier than with compiled languages.
+		<a target="_top" href="' . $home_page . '">wxPHP</a> is a binding to the popular framework <a href="http://wxwidgets.org/">wxWidgets</a>
+		with the purpose of bringing crossplatform GUI desktop applications development for <a href="http://php.net/">PHP</a>.
+		In other words <strong>wxPHP</strong> stands for "wxwidgets for PHP".
 	</p>
 	
 	<p>
@@ -601,8 +638,8 @@ $intro_content .= '	<h1>wxPHP Class Reference</h1>
 	
 	<p>
 		This pages are not a tutorial on how to use wxWidgets. It is just a reference auto-generated from
-		the wxPHP code generator mapping file (classes.out), to keep track of the classes implemented
-		on the binding, and help you know what you can, and can not do with wxPHP at the moment. For a complete
+		the json files used by the code generator to keep track of the classes implemented
+		on the binding, to let you know what you can, and can not do with wxPHP at the moment. For a complete
 		reference of <strong>wxWidgets</strong> please refer to the official documentation site at 
 		<a href="http://www.wxwidgets.org/docs/">http://www.wxwidgets.org/docs</a>
 	</p>
