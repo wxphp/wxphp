@@ -1,0 +1,2 @@
+debian/wxwidgets.ini /etc/php5/conf.d/
+debian/wxwidgets-php /opt/

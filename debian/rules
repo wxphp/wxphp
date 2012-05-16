@@ -1,0 +1,63 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+CFLAGS = -O2 -Wall -fno-strict-aliasing
+
+# Enable IEEE-conformant floating point math on alphas (not the default)
+ifeq (alpha-linux-gnu,$(DEB_HOST_GNU_TYPE))
+  CFLAGS += -mieee
+endif
+
+ifeq ($(DEB_HOST_GNU_TYPE), $(findstring $(DEB_HOST_GNU_TYPE), ia64-linux-gnu powerpc64-linux-gnu))
+  CFLAGS += -g
+else
+  CFLAGS += -gstabs
+endif
+
+build: build-stamp
+
+build-stamp: 
+	dh build
+	touch $@
+
+override_dh_auto_configure:
+	php tools/reference_generator.php
+	phpize5 --clean
+	phpize5
+	dh_auto_configure -- \
+		--with-php-config=/usr/bin/php-config5 \
+		--with-wxwidgets=/opt/wxwidgets-php \
+		--enable-wxwidgets-monolithic
+	
+override_dh_auto_clean:
+	dh_auto_clean
+	phpize5 --clean
+
+clean:
+	dh clean
+
+override_dh_auto_install:
+	$(MAKE) install INSTALL_ROOT=debian/php5-wxwidgets
+
+override_dh_fixperms:
+	dh_fixperms
+	find debian/php5-wxwidgets/usr/share/doc/php5-wxwidgets -type f -print0 | xargs -0 chmod 644
+
+install: build
+	dh install
+
+# Build architecture-independent files here.
+binary-indep:
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-wxwidgets.substvars
+	LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):/opt/wxwidgets-php/lib dh_shlibdeps
+	strip "debian/php5-wxwidgets`php-config5 --extension-dir`/wxwidgets.so"
+	dh binary-arch
+
+binary: binary-arch binary-indep
+.PHONY: build clean binary-indep binary-arch binary install configure
