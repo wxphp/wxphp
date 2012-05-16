@@ -20,7 +20,7 @@ manual_changes.txt:
 Registry of manual changes done to full_classes_set.json.
 Note that if you make changes to methods on full_classes_set.json
 and they are enabled on the classes.json you will have to manually 
-apply those changes also to classes.json since the GUI utility doesnt 
+apply those changes also to classes.json since the GUI utility doesn't 
 detects this and garbage would be left hanging, producing compilation 
 errors. (duplicated methods with different definitions)
 

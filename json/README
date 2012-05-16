@@ -45,8 +45,8 @@ Things manually added/changed to files
 ......................................
 
 This file serves as a registry of manual changes made to the generated
-files by xml_parser.php. So if we need to regenarate again these files
-we dont have to go to the whole process of inspecting everything
+files by xml_parser.php. So if we need to regenerate again these files
+we don't have to go to the whole process of inspecting everything
 and just focus on the changes stored here.
 
 These changes are done in order to generate the correct code

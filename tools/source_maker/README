@@ -58,13 +58,13 @@ Source Templates
 The source_templates directory has the files that serve as the skeleton
 of the wxWidgets php extension. These files have some comment tags or 
 php variables inserted that the code generator uses to insert the 
-neccesary source code to declare classes, constants and functions.
+necessary source code to declare classes, constants and functions.
 
 		
 Templates
 ------------------------
 The templates directory holds files with parts of the skeleton that are 
-goind to be inserted by the code generator on the classes.cpp and classes.h
+going to be inserted by the code generator on the classes.cpp and classes.h
 files. The templates files are used in combination of some functions 
 declared on the include directory. The idea is to make edition of output
 code much easier.
