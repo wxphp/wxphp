@@ -1,0 +1,6 @@
+php5-wxwidgets (2.9.4.0) precise; urgency=low
+
+  * Initial debianization
+
+ -- Jefferson González <jgmdev@gmail.com>  Wed, 16 May 2012 01:22:09 +0400
+

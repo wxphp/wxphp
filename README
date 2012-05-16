@@ -5,6 +5,7 @@ Table of Contents
  * Introduction
  * Building on Windows
  * Building and Installing on Linux/Unix Environments
+ * Creating a DEB Package
  * Building on MacOSX Lion
  * Running the examples
  * Third Party Tools
@@ -42,11 +43,15 @@ Building on Windows
 
 	Windows SDK 6.1 download links:
 		
-		Web Setup - http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11310
-		
-		or
-		
-		DVD ISO - http://www.microsoft.com/downloads/details.aspx?FamilyId=F26B1AA4-741A-433A-9BE5-FA919850BDBF&displaylang=en
+		Web Setup
+			
+			http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11310
+			
+			or
+			
+		DVD ISO
+			
+			http://www.microsoft.com/downloads/details.aspx?FamilyId=F26B1AA4-741A-433A-9BE5-FA919850BDBF&displaylang=en
 		
 	Visual Studio 2008 Express Edition download links:
 	
@@ -222,6 +227,32 @@ Building and Installing on Linux/Unix Environments
 
 
 
+Creating a DEB Package
+========================================================================
+
+First ensure you are able to build with the linux building instructions.
+Then in order to create a debian package you would need to first
+compile wxWidgets with configure as:
+	
+		./configure --prefix=/opt/wxwidgets-php --enable-monolithic
+		
+		make 
+		
+		make install
+		
+After that, copy /opt/wxwidgets-php into the debian directory on the 
+wxphp source tree, and at the wxphp source tree root execute:
+
+		dpkg-buildpackage
+		
+That should take care of building and creating a deb package. We aren't
+using upstream wxWidgets packages since they are sometimes compiled 
+with less features and there aren't 2.9.4 packages of wxWidgets available
+on ubuntu or debian repositories.
+
+
+
+
 Building on MacOSX Lion
 ========================================================================
 
@@ -231,8 +262,11 @@ needed. We tested with the php version available on mac ports.
 
 . Requirements
     
-    Xcode (for working compiling environment) - https://developer.apple.com/technologies/tools/
-    Mac Ports (for PHP development environment and binaries) - http://www.macports.org/
+    Xcode (for working compiling environment)
+		https://developer.apple.com/technologies/tools/
+    
+    Mac Ports (for PHP development environment and binaries)
+		http://www.macports.org/
 
 . Install PHP from Mac Ports
 

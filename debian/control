@@ -1,0 +1,22 @@
+Source: php5-wxwidgets
+Section: php
+Priority: optional
+Maintainer: Jefferson González <jgmdev@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), php5-dev, libwebkitgtk-dev
+Standards-Version: 3.9.2
+Homepage: http://wxphp.org/
+
+Package: php5-wxwidgets
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${php:Depends}
+Description: PHP bindings for the GUI Cross-platform framework wxWidgets
+ wxPHP is a binding for the great cross-platform library wxWidgets used 
+ to develop GUI applications. Combining the power and flexibility that 
+ we have grow used to while developing for the web with PHP, and the great
+ wxWidgets framework, we are striking for simpler, easier, faster and fun
+ experience when programing for the desktop.
+ .
+ PHP5 is an HTML-embedded scripting language. Much of its syntax is borrowed
+ from C, Java and Perl with a couple of unique PHP-specific features thrown
+ in. The goal of the language is to allow web developers to write
+ dynamically generated pages quickly.
