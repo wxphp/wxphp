@@ -17,7 +17,7 @@ Introduction
 
 wxPHP is a binding of wxWidgets (http://wxwidgets.org/) with the purpose 
 of bringing all the rapid application development tools available on PHP 
-to assist on the development of applications as the crossplatform
+to assist on the development of applications as the cross-platform
 beauty of wxWidgets to create great Graphical User Interfaces. The 
 syntax used is very similar to the one used on original implementation 
 of wxWidgets C++, making it easier for people already familiar with
@@ -384,7 +384,7 @@ all ;)
 	Then it populates the files on source_templates directory with
 	all the code needed to initialize each binded class, function, global
 	variable, etc... At the final stage, it uses the config_templates
-	directory to retreive the configuration files skeleton and populate it
+	directory to retrieve the configuration files skeleton and populate it
 	with the list of files that need to be compiled.
 	
 	Use the go.sh/bat utility script to automate some of the steps necessary

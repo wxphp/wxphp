@@ -1,7 +1,7 @@
 Inno Setup Script
 ========================================================================
 
-This directory contains an Inno Setup script file as basic neccesary 
+This directory contains an Inno Setup script file as basic necessary 
 files to generate a windows setup which includes wxphp and the php 
 interpreter.
 
@@ -16,7 +16,7 @@ The script file creates file associations for .wxphp and .wxphpd where
 is for running them with the cli version of php in order to debug. The 
 .wxphp extension is opened with wxphp-win.exe and .wxphpd with wxphp.exe
 You would need to place the php directory on this directory as make some
-other neccesary changes depending on your environment.
+other necessary changes depending on your environment.
 
 The setup.php is included on the installation file and the purpose of 
 this script is to generate the php.ini with correct extensions directory
