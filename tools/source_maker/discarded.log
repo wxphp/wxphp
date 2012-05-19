@@ -85,7 +85,6 @@ wxDataViewListCtrl::AppendColumn
 wxDataViewListCtrl::InsertColumn
 wxDataViewListCtrl::PrependColumn
 wxToolBarToolBase::Toggle
-wxWebView::SetPage
 
 
 

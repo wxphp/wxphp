@@ -115639,1502 +115639,2967 @@ void php_wxWebView_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 }
 /* {{{ proto bool wxWebView::CanCopy()
    Returns true if the current selection can be copied. */
-bool wxWebView_php::CanCopy()const
+PHP_METHOD(php_wxWebView, CanCopy)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanCopy\n");
+	php_printf("Invoking wxWebView::CanCopy\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanCopy", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanCopy\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanCopy'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanCopy())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanCopy());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanCopy\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanCut()
    Returns true if the current selection can be cut. */
-bool wxWebView_php::CanCut()const
+PHP_METHOD(php_wxWebView, CanCut)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanCut\n");
+	php_printf("Invoking wxWebView::CanCut\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanCut", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanCut\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanCut'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanCut())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanCut());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanCut\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanGoBack()
    Returns true if it is possible to navigate backward in the history of visited pages. */
-bool wxWebView_php::CanGoBack()const
+PHP_METHOD(php_wxWebView, CanGoBack)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanGoBack\n");
+	php_printf("Invoking wxWebView::CanGoBack\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanGoBack", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanGoBack\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanGoBack'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanGoBack())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanGoBack());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanGoBack\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanGoForward()
    Returns true if it is possible to navigate forward in the history of visited pages. */
-bool wxWebView_php::CanGoForward()const
+PHP_METHOD(php_wxWebView, CanGoForward)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanGoForward\n");
+	php_printf("Invoking wxWebView::CanGoForward\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanGoForward", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanGoForward\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanGoForward'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanGoForward())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanGoForward());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanGoForward\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanPaste()
    Returns true if data can be pasted. */
-bool wxWebView_php::CanPaste()const
+PHP_METHOD(php_wxWebView, CanPaste)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanPaste\n");
+	php_printf("Invoking wxWebView::CanPaste\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanPaste", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanPaste\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanPaste'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanPaste())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanPaste());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanPaste\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanRedo()
    Returns true if there is an action to redo. */
-bool wxWebView_php::CanRedo()const
+PHP_METHOD(php_wxWebView, CanRedo)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanRedo\n");
+	php_printf("Invoking wxWebView::CanRedo\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanRedo", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanRedo\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanRedo'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanRedo())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanRedo());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanRedo\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanSetZoomType(wxWebViewZoomType type)
    Retrieve whether the current HTML engine supports a zoom type. */
-bool wxWebView_php::CanSetZoomType(wxWebViewZoomType type)const
+PHP_METHOD(php_wxWebView, CanSetZoomType)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanSetZoomType\n");
+	php_printf("Invoking wxWebView::CanSetZoomType\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanSetZoomType", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], type);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanSetZoomType\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	long type0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&type0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanSetZoomType'!", "Error");
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanSetZoomType((wxWebViewZoomType) type0))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanSetZoomType((wxWebViewZoomType) type0));
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanSetZoomType\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::CanUndo()
    Returns true if there is an action to undo. */
-bool wxWebView_php::CanUndo()const
+PHP_METHOD(php_wxWebView, CanUndo)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::CanUndo\n");
+	php_printf("Invoking wxWebView::CanUndo\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "CanUndo", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::CanUndo\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::CanUndo'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::CanUndo())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->CanUndo());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::CanUndo\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::ClearHistory()
    Clear the history, this will also remove the visible page. */
-void wxWebView_php::ClearHistory()
+PHP_METHOD(php_wxWebView, ClearHistory)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::ClearHistory\n");
+	php_printf("Invoking wxWebView::ClearHistory\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "ClearHistory", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::ClearHistory\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::ClearHistory'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::ClearHistory()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->ClearHistory();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::ClearHistory\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::ClearSelection()
    Clears the current selection. */
-void wxWebView_php::ClearSelection()
+PHP_METHOD(php_wxWebView, ClearSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::ClearSelection\n");
+	php_printf("Invoking wxWebView::ClearSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "ClearSelection", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::ClearSelection\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::ClearSelection'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::ClearSelection()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->ClearSelection();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::ClearSelection\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Copy()
    Copies the current selection. */
-void wxWebView_php::Copy()
+PHP_METHOD(php_wxWebView, Copy)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Copy\n");
+	php_printf("Invoking wxWebView::Copy\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Copy", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Copy\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Copy'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Copy()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Copy();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Copy\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::Create(wxWindow &parent, int id, string url, wxPoint pos, wxSize size, int style, string name)
    Creation function for two-step creation. */
-bool wxWebView_php::Create(wxWindow* parent, wxWindowID id, const wxString& url, const wxPoint& pos, const wxSize& size, long style, const wxString& name)
+PHP_METHOD(php_wxWebView, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Create\n");
+	php_printf("Invoking wxWebView::Create\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[7];
-	
-	//Initilize arguments array
-	for(int i=0; i<7; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Create", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	object_init_ex(arguments[0], php_wxWindow_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)parent, le_wxWindow));
-	ZVAL_LONG(arguments[1], id);
-	temp_string = (char*)malloc(sizeof(wxChar)*(url.size()+1));
-	strcpy(temp_string, (const char *) url.char_str());
-	ZVAL_STRING(arguments[2], temp_string, 1);
-	free(temp_string);
-	object_init_ex(arguments[3], php_wxPoint_entry);
-	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&pos, le_wxPoint));
-	object_init_ex(arguments[4], php_wxSize_entry);
-	add_property_resource(arguments[4], _wxResource, zend_list_insert((void*)&size, le_wxSize));
-	ZVAL_LONG(arguments[5], style);
-	temp_string = (char*)malloc(sizeof(wxChar)*(name.size()+1));
-	strcpy(temp_string, (const char *) name.char_str());
-	ZVAL_STRING(arguments[6], temp_string, 1);
-	free(temp_string);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Create\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<7; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	zval* parent0 = 0;
+	void* object_pointer0_0 = 0;
+	long id0;
+	char* url0;
+	long url_len0;
+	zval* pos0 = 0;
+	void* object_pointer0_3 = 0;
+	zval* size0 = 0;
+	void* object_pointer0_4 = 0;
+	long style0;
+	char* name0;
+	long name_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 2  && arguments_received <= 7)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'zl|sOOls' (&parent0, &id0, &url0, &url_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Create'!", "Error");
+		char parse_parameters_string[] = "zl|sOOls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &url0, &url_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
+		{
+			if(arguments_received >= 1){
+				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				{
+					id_to_find = Z_RESVAL_P(*tmp);
+					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxWebView && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					{
+						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(parent0) != IS_NULL)
+				{
+						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 4){
+				if(Z_TYPE_P(pos0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				{
+					id_to_find = Z_RESVAL_P(*tmp);
+					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
+					if (!object_pointer0_3 )
+					{
+						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(pos0) != IS_NULL)
+				{
+						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 5){
+				if(Z_TYPE_P(size0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(size0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				{
+					id_to_find = Z_RESVAL_P(*tmp);
+					object_pointer0_4 = zend_list_find(id_to_find, &rsrc_type);
+					if (!object_pointer0_4 )
+					{
+						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(size0) != IS_NULL)
+				{
+						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
+				}
+
+				references->AddReference(parent0, "wxWebView::Create at call with 2 argument(s)");
+
+				return;
+				break;
+			}
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8)))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8)));
+				}
+
+				references->AddReference(parent0, "wxWebView::Create at call with 3 argument(s)");
+
+				return;
+				break;
+			}
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
+				}
+
+				references->AddReference(parent0, "wxWebView::Create at call with 4 argument(s)");
+				references->AddReference(pos0, "wxWebView::Create at call with 4 argument(s)");
+
+				return;
+				break;
+			}
+			case 5:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
+				}
+
+				references->AddReference(parent0, "wxWebView::Create at call with 5 argument(s)");
+				references->AddReference(pos0, "wxWebView::Create at call with 5 argument(s)");
+				references->AddReference(size0, "wxWebView::Create at call with 5 argument(s)");
+
+				return;
+				break;
+			}
+			case 6:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
+				}
+
+				references->AddReference(parent0, "wxWebView::Create at call with 6 argument(s)");
+				references->AddReference(pos0, "wxWebView::Create at call with 6 argument(s)");
+				references->AddReference(size0, "wxWebView::Create at call with 6 argument(s)");
+
+				return;
+				break;
+			}
+			case 7:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(url0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
+				}
+
+				references->AddReference(parent0, "wxWebView::Create at call with 7 argument(s)");
+				references->AddReference(pos0, "wxWebView::Create at call with 7 argument(s)");
+				references->AddReference(size0, "wxWebView::Create at call with 7 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Create\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Cut()
    Cuts the current selection. */
-void wxWebView_php::Cut()
+PHP_METHOD(php_wxWebView, Cut)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Cut\n");
+	php_printf("Invoking wxWebView::Cut\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Cut", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Cut\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Cut'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Cut()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Cut();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Cut\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::DeleteSelection()
    Deletes the current selection. */
-void wxWebView_php::DeleteSelection()
+PHP_METHOD(php_wxWebView, DeleteSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::DeleteSelection\n");
+	php_printf("Invoking wxWebView::DeleteSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "DeleteSelection", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::DeleteSelection\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::DeleteSelection'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::DeleteSelection()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->DeleteSelection();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::DeleteSelection\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::EnableHistory(bool enable)
    Enable or disable the history. */
-void wxWebView_php::EnableHistory(bool enable)
+PHP_METHOD(php_wxWebView, EnableHistory)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::EnableHistory\n");
+	php_printf("Invoking wxWebView::EnableHistory\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "EnableHistory", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	ZVAL_BOOL(arguments[0], enable);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::EnableHistory\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool enable0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::EnableHistory'!", "Error");
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::EnableHistory()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->EnableHistory();
+				}
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::EnableHistory(enable0)\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->EnableHistory(enable0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::EnableHistory\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Undo()
    Undos the last action. */
-void wxWebView_php::Undo()
+PHP_METHOD(php_wxWebView, Undo)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Undo\n");
+	php_printf("Invoking wxWebView::Undo\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Undo", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Undo\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Undo'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Undo()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Undo();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Undo\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Stop()
    Stop the current page loading process, if any. */
-void wxWebView_php::Stop()
+PHP_METHOD(php_wxWebView, Stop)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Stop\n");
+	php_printf("Invoking wxWebView::Stop\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Stop", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Stop\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Stop'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Stop()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Stop();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Stop\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::SetZoomType(wxWebViewZoomType zoomType)
    Set how to interpret the zoom factor. */
-void wxWebView_php::SetZoomType(wxWebViewZoomType zoomType)
+PHP_METHOD(php_wxWebView, SetZoomType)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::SetZoomType\n");
+	php_printf("Invoking wxWebView::SetZoomType\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "SetZoomType", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], zoomType);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::SetZoomType\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	long zoomType0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&zoomType0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::SetZoomType'!", "Error");
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &zoomType0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SetZoomType((wxWebViewZoomType) zoomType0)\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SetZoomType((wxWebViewZoomType) zoomType0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::SetZoomType\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::SetZoom(wxWebViewZoom zoom)
    Set the zoom factor of the page. */
-void wxWebView_php::SetZoom(wxWebViewZoom zoom)
+PHP_METHOD(php_wxWebView, SetZoom)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::SetZoom\n");
+	php_printf("Invoking wxWebView::SetZoom\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "SetZoom", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], zoom);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::SetZoom\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	long zoom0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&zoom0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::SetZoom'!", "Error");
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &zoom0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SetZoom((wxWebViewZoom) zoom0)\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SetZoom((wxWebViewZoom) zoom0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::SetZoom\n");
+	}
 }
 /* }}} */
 
-/* {{{ proto  wxWebView::SetPage(string html, string baseUrl)
-   Set the displayed page source to the contents of the given string. */
-void wxWebView_php::SetPage(const wxString& html, const wxString& baseUrl)
+/* {{{ proto  wxWebView::SetPage(wxInputStream &html, string baseUrl)
+   Set the displayed page source to the contents of the given stream. */
+PHP_METHOD(php_wxWebView, SetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::SetPage\n");
+	php_printf("Invoking wxWebView::SetPage\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[2];
-	
-	//Initilize arguments array
-	for(int i=0; i<2; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "SetPage", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	temp_string = (char*)malloc(sizeof(wxChar)*(html.size()+1));
-	strcpy(temp_string, (const char *) html.char_str());
-	ZVAL_STRING(arguments[0], temp_string, 1);
-	free(temp_string);
-	temp_string = (char*)malloc(sizeof(wxChar)*(baseUrl.size()+1));
-	strcpy(temp_string, (const char *) baseUrl.char_str());
-	ZVAL_STRING(arguments[1], temp_string, 1);
-	free(temp_string);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::SetPage\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<2; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	zval* html0 = 0;
+	void* object_pointer0_0 = 0;
+	char* baseUrl0;
+	long baseUrl_len0;
+	bool overload0_called = false;
+	//Parameters for overload 1
+	char* html1;
+	long html_len1;
+	char* baseUrl1;
+	long baseUrl_len1;
+	bool overload1_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'Os' (&html0, php_wxInputStream_entry, &baseUrl0, &baseUrl_len0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::SetPage'!", "Error");
+		char parse_parameters_string[] = "Os";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &html0, php_wxInputStream_entry, &baseUrl0, &baseUrl_len0 ) == SUCCESS)
+		{
+			if(arguments_received >= 1){
+				if(Z_TYPE_P(html0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(html0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				{
+					id_to_find = Z_RESVAL_P(*tmp);
+					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					if (!object_pointer0_0 )
+					{
+						goto overload1;
+					}
+				}
+				else if(Z_TYPE_P(html0) != IS_NULL)
+				{
+						goto overload1;
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'ss' (&html1, &html_len1, &baseUrl1, &baseUrl_len1)\n");
+		#endif
+		char parse_parameters_string[] = "ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &html1, &html_len1, &baseUrl1, &baseUrl_len1 ) == SUCCESS)
+		{
+			overload1_called = true;
+			already_called = true;
+		}
+	}
+
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SetPage(*(wxInputStream*) object_pointer0_0, wxString(baseUrl0, wxConvUTF8))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SetPage(*(wxInputStream*) object_pointer0_0, wxString(baseUrl0, wxConvUTF8));
+				}
+
+				references->AddReference(html0, "wxWebView::SetPage at call with 2 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SetPage(wxString(html1, wxConvUTF8), wxString(baseUrl1, wxConvUTF8))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SetPage(wxString(html1, wxConvUTF8), wxString(baseUrl1, wxConvUTF8));
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::SetPage\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::SetEditable(bool enable)
    Set the editable property of the web control. */
-void wxWebView_php::SetEditable(bool enable)
+PHP_METHOD(php_wxWebView, SetEditable)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::SetEditable\n");
+	php_printf("Invoking wxWebView::SetEditable\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "SetEditable", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	ZVAL_BOOL(arguments[0], enable);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::SetEditable\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool enable0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::SetEditable'!", "Error");
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SetEditable()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SetEditable();
+				}
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SetEditable(enable0)\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SetEditable(enable0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::SetEditable\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::SelectAll()
    Selects the entire page. */
-void wxWebView_php::SelectAll()
+PHP_METHOD(php_wxWebView, SelectAll)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::SelectAll\n");
+	php_printf("Invoking wxWebView::SelectAll\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "SelectAll", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::SelectAll\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::SelectAll'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::SelectAll()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->SelectAll();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::SelectAll\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::RunScript(string javascript)
    Runs the given javascript code. */
-void wxWebView_php::RunScript(const wxString& javascript)
+PHP_METHOD(php_wxWebView, RunScript)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::RunScript\n");
+	php_printf("Invoking wxWebView::RunScript\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "RunScript", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	temp_string = (char*)malloc(sizeof(wxChar)*(javascript.size()+1));
-	strcpy(temp_string, (const char *) javascript.char_str());
-	ZVAL_STRING(arguments[0], temp_string, 1);
-	free(temp_string);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::RunScript\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	char* javascript0;
+	long javascript_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's' (&javascript0, &javascript_len0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::RunScript'!", "Error");
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &javascript0, &javascript_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::RunScript(wxString(javascript0, wxConvUTF8))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->RunScript(wxString(javascript0, wxConvUTF8));
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::RunScript\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Reload(wxWebViewReloadFlags flags)
    Reload the currently displayed URL. */
-void wxWebView_php::Reload(wxWebViewReloadFlags flags)
+PHP_METHOD(php_wxWebView, Reload)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Reload\n");
+	php_printf("Invoking wxWebView::Reload\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Reload", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], flags);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Reload\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	long flags0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|l' (&flags0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Reload'!", "Error");
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Reload()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Reload();
+				}
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Reload((wxWebViewReloadFlags) flags0)\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Reload((wxWebViewReloadFlags) flags0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Reload\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Redo()
    Redos the last action. */
-void wxWebView_php::Redo()
+PHP_METHOD(php_wxWebView, Redo)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Redo\n");
+	php_printf("Invoking wxWebView::Redo\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Redo", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Redo\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Redo'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Redo()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Redo();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Redo\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Print()
    Opens a print dialog so that the user may print the currently displayed page. */
-void wxWebView_php::Print()
+PHP_METHOD(php_wxWebView, Print)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Print\n");
+	php_printf("Invoking wxWebView::Print\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Print", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Print\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Print'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Print()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Print();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Print\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::Paste()
    Pastes the current data. */
-void wxWebView_php::Paste()
+PHP_METHOD(php_wxWebView, Paste)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::Paste\n");
+	php_printf("Invoking wxWebView::Paste\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Paste", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::Paste\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::Paste'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::Paste()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->Paste();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::Paste\n");
+	}
 }
 /* }}} */
 
@@ -117595,729 +119060,1429 @@ PHP_METHOD(php_wxWebView, NewObject)
 
 /* {{{ proto  wxWebView::LoadURL(string url)
    Load a web page from a URL. */
-void wxWebView_php::LoadURL(const wxString& url)
+PHP_METHOD(php_wxWebView, LoadURL)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::LoadURL\n");
+	php_printf("Invoking wxWebView::LoadURL\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "LoadURL", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-	temp_string = (char*)malloc(sizeof(wxChar)*(url.size()+1));
-	strcpy(temp_string, (const char *) url.char_str());
-	ZVAL_STRING(arguments[0], temp_string, 1);
-	free(temp_string);
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::LoadURL\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	char* url0;
+	long url_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's' (&url0, &url_len0)\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::LoadURL'!", "Error");
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::LoadURL(wxString(url0, wxConvUTF8))\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->LoadURL(wxString(url0, wxConvUTF8));
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::LoadURL\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::IsEditable()
    Returns whether the web control is currently editable. */
-bool wxWebView_php::IsEditable()const
+PHP_METHOD(php_wxWebView, IsEditable)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::IsEditable\n");
+	php_printf("Invoking wxWebView::IsEditable\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "IsEditable", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::IsEditable\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::IsEditable'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::IsEditable())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->IsEditable());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::IsEditable\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::IsBusy()
    Returns whether the web control is currently busy (e.g. */
-bool wxWebView_php::IsBusy()const
+PHP_METHOD(php_wxWebView, IsBusy)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::IsBusy\n");
+	php_printf("Invoking wxWebView::IsBusy\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "IsBusy", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::IsBusy\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::IsBusy'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::IsBusy())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->IsBusy());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::IsBusy\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto bool wxWebView::HasSelection()
    Returns true if there is a current selection. */
-bool wxWebView_php::HasSelection()const
+PHP_METHOD(php_wxWebView, HasSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::HasSelection\n");
+	php_printf("Invoking wxWebView::HasSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "HasSelection", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::HasSelection\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::HasSelection'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return Z_BVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxWebView::HasSelection())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_BOOL(return_value, ((wxWebView_php*)_this)->HasSelection());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::HasSelection\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::GoForward()
    Navigate forward in the history of visited pages. */
-void wxWebView_php::GoForward()
+PHP_METHOD(php_wxWebView, GoForward)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GoForward\n");
+	php_printf("Invoking wxWebView::GoForward\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GoForward", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GoForward\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GoForward'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::GoForward()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->GoForward();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GoForward\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto  wxWebView::GoBack()
    Navigate back in the history of visited pages. */
-void wxWebView_php::GoBack()
+PHP_METHOD(php_wxWebView, GoBack)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GoBack\n");
+	php_printf("Invoking wxWebView::GoBack\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GoBack", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GoBack\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GoBack'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return;
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxWebView::GoBack()\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					((wxWebView_php*)_this)->GoBack();
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GoBack\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto string wxWebView::GetCurrentTitle()
    Get the title of the current web page, or its URL/path if title is not available. */
-wxString wxWebView_php::GetCurrentTitle()const
+PHP_METHOD(php_wxWebView, GetCurrentTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetCurrentTitle\n");
+	php_printf("Invoking wxWebView::GetCurrentTitle\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetCurrentTitle", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetCurrentTitle\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetCurrentTitle'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxWebView::GetCurrentTitle().fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return0;
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					value_to_return0 = ((wxWebView_php*)_this)->GetCurrentTitle();
+				}
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetCurrentTitle\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto string wxWebView::GetCurrentURL()
    Get the URL of the currently displayed document. */
-wxString wxWebView_php::GetCurrentURL()const
+PHP_METHOD(php_wxWebView, GetCurrentURL)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetCurrentURL\n");
+	php_printf("Invoking wxWebView::GetCurrentURL\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetCurrentURL", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetCurrentURL\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetCurrentURL'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxWebView::GetCurrentURL().fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return0;
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					value_to_return0 = ((wxWebView_php*)_this)->GetCurrentURL();
+				}
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetCurrentURL\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto string wxWebView::GetPageSource()
    Get the HTML source code of the currently displayed document. */
-wxString wxWebView_php::GetPageSource()const
+PHP_METHOD(php_wxWebView, GetPageSource)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetPageSource\n");
+	php_printf("Invoking wxWebView::GetPageSource\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetPageSource", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetPageSource\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetPageSource'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxWebView::GetPageSource().fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return0;
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					value_to_return0 = ((wxWebView_php*)_this)->GetPageSource();
+				}
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetPageSource\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto string wxWebView::GetPageText()
    Get the text of the current page. */
-wxString wxWebView_php::GetPageText()const
+PHP_METHOD(php_wxWebView, GetPageText)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetPageText\n");
+	php_printf("Invoking wxWebView::GetPageText\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetPageText", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetPageText\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetPageText'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxWebView::GetPageText().fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return0;
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					value_to_return0 = ((wxWebView_php*)_this)->GetPageText();
+				}
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetPageText\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto string wxWebView::GetSelectedSource()
    Returns the currently selected source, if any. */
-wxString wxWebView_php::GetSelectedSource()const
+PHP_METHOD(php_wxWebView, GetSelectedSource)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetSelectedSource\n");
+	php_printf("Invoking wxWebView::GetSelectedSource\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetSelectedSource", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetSelectedSource\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetSelectedSource'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxWebView::GetSelectedSource().fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return0;
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					value_to_return0 = ((wxWebView_php*)_this)->GetSelectedSource();
+				}
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetSelectedSource\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto string wxWebView::GetSelectedText()
    Returns the currently selected text, if any. */
-wxString wxWebView_php::GetSelectedText()const
+PHP_METHOD(php_wxWebView, GetSelectedText)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetSelectedText\n");
+	php_printf("Invoking wxWebView::GetSelectedText\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetSelectedText", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetSelectedText\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetSelectedText'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxWebView::GetSelectedText().fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return0;
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					value_to_return0 = ((wxWebView_php*)_this)->GetSelectedText();
+				}
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetSelectedText\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto wxWebViewZoom wxWebView::GetZoom()
    Get the zoom factor of the page. */
-wxWebViewZoom wxWebView_php::GetZoom()const
+PHP_METHOD(php_wxWebView, GetZoom)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetZoom\n");
+	php_printf("Invoking wxWebView::GetZoom\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetZoom", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetZoom\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetZoom'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return (wxWebViewZoom) Z_LVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxWebView::GetZoom())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_LONG(return_value, ((wxWebView_php*)_this)->GetZoom());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetZoom\n");
+	}
 }
 /* }}} */
 
 /* {{{ proto wxWebViewZoomType wxWebView::GetZoomType()
    Get how the zoom factor is currently interpreted. */
-wxWebViewZoomType wxWebView_php::GetZoomType()const
+PHP_METHOD(php_wxWebView, GetZoomType)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxWebView::GetZoomType\n");
+	php_printf("Invoking wxWebView::GetZoomType\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetZoomType", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
+	//In case the constructor uses objects
 	zval **tmp;
-	int id_to_find;
-	void* return_object;
 	int rsrc_type;
-	int function_called;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
 	
-	//Parameters for conversion
-		
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxWebView::GetZoomType\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWebView){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
-	
-	
-	if(function_called == FAILURE)
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
 	{
 		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
 		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxWebView::GetZoomType'!", "Error");
+		overload0_called = true;
+		already_called = true;
 	}
 
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
 		
-	return (wxWebViewZoomType) Z_LVAL_P(return_value);
-	
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxWebView::GetZoomType())\n\n");
+				#endif
+				if(parent_rsrc_type == le_wxWebView)
+				{
+					ZVAL_LONG(return_value, ((wxWebView_php*)_this)->GetZoomType());
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebView::GetZoomType\n");
+	}
 }
 /* }}} */
 

@@ -13309,47 +13309,6 @@ class wxWebView_php: public wxWebView{
 	public:
 	
 		
-	bool CanCopy() const;
-	bool CanCut() const;
-	bool CanGoBack() const;
-	bool CanGoForward() const;
-	bool CanPaste() const;
-	bool CanRedo() const;
-	bool CanSetZoomType(wxWebViewZoomType type) const;
-	bool CanUndo() const;
-	void ClearHistory();
-	void ClearSelection();
-	void Copy();
-	bool Create(wxWindow* parent, wxWindowID id, const wxString& url=wxWebViewDefaultURLStr, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxWebViewNameStr);
-	void Cut();
-	void DeleteSelection();
-	void EnableHistory(bool enable=true);
-	void Undo();
-	void Stop();
-	void SetZoomType(wxWebViewZoomType zoomType);
-	void SetZoom(wxWebViewZoom zoom);
-	void SetPage(const wxString& html, const wxString& baseUrl);
-	void SetEditable(bool enable=true);
-	void SelectAll();
-	void RunScript(const wxString& javascript);
-	void Reload(wxWebViewReloadFlags flags=wxWEB_VIEW_RELOAD_DEFAULT);
-	void Redo();
-	void Print();
-	void Paste();
-	void LoadURL(const wxString& url);
-	bool IsEditable() const;
-	bool IsBusy() const;
-	bool HasSelection() const;
-	void GoForward();
-	void GoBack();
-	wxString GetCurrentTitle() const;
-	wxString GetCurrentURL() const;
-	wxString GetPageSource() const;
-	wxString GetPageText() const;
-	wxString GetSelectedSource() const;
-	wxString GetSelectedText() const;
-	wxWebViewZoom GetZoom() const;
-	wxWebViewZoomType GetZoomType() const;
 		
 	void InitProperties(){
 	}
@@ -13593,7 +13552,6 @@ static zend_function_entry php_wxWebView_functions[] = {
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetWindowVariant, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxControl, GetLabelText, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxControl, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxControl, SetLabelMarkup, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxControl, SetLabelText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxControl, RemoveMnemonics, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -13601,7 +13559,48 @@ static zend_function_entry php_wxWebView_functions[] = {
 	PHP_ME(php_wxControl, GetLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxControl, EscapeMnemonics, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxControl, Command, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanCopy, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanCut, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanGoBack, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanGoForward, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanPaste, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanRedo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanSetZoomType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, CanUndo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, ClearHistory, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, ClearSelection, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Copy, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Create, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Cut, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, DeleteSelection, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, EnableHistory, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Undo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Stop, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, SetZoomType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, SetZoom, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, SetPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, SetEditable, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, SelectAll, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, RunScript, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Reload, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Redo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Print, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, Paste, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWebView, NewObject, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, LoadURL, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, IsEditable, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, IsBusy, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, HasSelection, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GoForward, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GoBack, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetCurrentTitle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetCurrentURL, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetPageSource, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetPageText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetSelectedSource, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetSelectedText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetZoom, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWebView, GetZoomType, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif

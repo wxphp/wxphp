@@ -84,6 +84,22 @@ if(file_exists("./../../json/classes.json"))
 {
 	$defIni = unserialize_json(file_get_contents("./../../json/classes.json"));
 	
+	//Unmark webview methods as pure virtual since they can be used
+	foreach($defIni["wxWebView"] as $method_name=>$method_definitions)
+	{
+		if($method_name{0} != "_")
+		{
+			foreach($defIni["wxWebView"][$method_name] as $method_index=>$method_data)
+			{
+				if($defIni["wxWebView"][$method_name][$method_index]["pure_virtual"])
+				{
+					$defIni["wxWebView"][$method_name][$method_index]["pure_virtual"] = false;
+					$defIni["wxWebView"][$method_name][$method_index]["virtual"] = true;
+				}
+			}
+		}
+	}
+	
 	//Blacklist classes
 	unset($defIni['wxArrayString']); //Dont implement this class since it is interpreted as php native array()
 }
