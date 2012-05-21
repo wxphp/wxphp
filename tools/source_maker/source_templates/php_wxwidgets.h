@@ -53,6 +53,12 @@ BEGIN_EXTERN_C()
 void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC);
 END_EXTERN_C()
 
+/**
+ * Custom zend_method_call function to call methods with more than 2 parameters
+ */
+BEGIN_EXTERN_C()
+int wxphp_call_method(zval **object_pp, zend_class_entry *obj_ce, zend_function **fn_proxy, const char *function_name, int function_name_len, zval **retval_ptr_ptr, int param_count, zval*** params TSRMLS_DC);
+END_EXTERN_C()
 
 class wxPhpClientData : public wxClientData
 {

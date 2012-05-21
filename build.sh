@@ -55,7 +55,7 @@ CPU_CORES=`grep -i processor /proc/cpuinfo | wc -l`
 make -j $[(($CPU_CORES / 2) + 1)]
 
 # Strip debugging symbols for smaller file
-strip modules/wxwidgets.so
+# strip modules/wxwidgets.so
 
 # Copy dynamic library to php extensions/modules directory
 echo "Input root password to install the extension"

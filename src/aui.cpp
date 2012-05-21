@@ -3735,11 +3735,15 @@ void php_wxAuiTabArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
    Sets sizing information. */
 void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_count)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetSizingInfo\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -3765,11 +3769,24 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&tab_ctrl_size, le_wxSize));
 	ZVAL_LONG(arguments[1], tab_count);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetSizingInfo", 13, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -3779,6 +3796,8 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -3799,11 +3818,15 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
    Sets the font for drawing text for selected UI elements. */
 void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetSelectedFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -3828,11 +3851,24 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	object_init_ex(arguments[0], php_wxFont_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&font, le_wxFont));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetSelectedFont", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -3842,6 +3878,8 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -3862,11 +3900,15 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
    Sets the normal font for drawing labels. */
 void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetNormalFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -3891,11 +3933,24 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	object_init_ex(arguments[0], php_wxFont_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&font, le_wxFont));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetNormalFont", 13, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -3905,6 +3960,8 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -3925,11 +3982,15 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
    Sets the font used for calculating measurements. */
 void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetMeasuringFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -3954,11 +4015,24 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	object_init_ex(arguments[0], php_wxFont_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&font, le_wxFont));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetMeasuringFont", 16, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -3968,6 +4042,8 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -3988,11 +4064,15 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
    Sets flags. */
 void wxAuiTabArt_php::SetFlags(unsigned int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetFlags\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -4016,11 +4096,24 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], flags);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetFlags", 8, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -4030,6 +4123,8 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4050,11 +4145,15 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
    Sets the colour of the inactive tabs. */
 void wxAuiTabArt_php::SetColour(const wxColour& colour)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetColour\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -4079,11 +4178,24 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	object_init_ex(arguments[0], php_wxColour_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&colour, le_wxColour));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetColour", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -4093,6 +4205,8 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4113,11 +4227,15 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
    Sets the colour of the selected tab. */
 void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::SetActiveColour\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -4142,11 +4260,24 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	object_init_ex(arguments[0], php_wxColour_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&colour, le_wxColour));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetActiveColour", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -4156,6 +4287,8 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4176,11 +4309,15 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
    Returns the tab size for the given caption, bitmap and state. */
 wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& caption, const wxBitmap& bitmap, bool active, int close_button_state, int* x_extent)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::GetTabSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[7];
 	zval *arguments[7];
 	
 	//Initilize arguments array
@@ -4216,11 +4353,24 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	ZVAL_LONG(arguments[5], close_button_state);
 	ZVAL_LONG(arguments[6], *x_extent);
 		
+	for(int i=0; i<7; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetTabSize", 10, &return_value, 7, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
@@ -4230,6 +4380,8 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4260,13 +4412,18 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
    Returns the indent size. */
 int wxAuiTabArt_php::GetIndentSize()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::GetIndentSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -4282,15 +4439,26 @@ int wxAuiTabArt_php::GetIndentSize()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetIndentSize", 13, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4311,11 +4479,15 @@ int wxAuiTabArt_php::GetIndentSize()
    Draws a button. */
 void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect, int bitmap_id, int button_state, int orientation, wxRect* out_rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::DrawButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[7];
 	zval *arguments[7];
 	
 	//Initilize arguments array
@@ -4349,11 +4521,24 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	object_init_ex(arguments[6], php_wxRect_entry);
 	add_property_resource(arguments[6], _wxResource, zend_list_insert((void*)out_rect, le_wxRect));
 		
+	for(int i=0; i<7; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 7, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawButton", 10, &return_value, 7, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
@@ -4363,6 +4548,8 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4383,11 +4570,15 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
    Draws a background on the given area. */
 void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::DrawBackground\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -4416,11 +4607,24 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	object_init_ex(arguments[2], php_wxRect_entry);
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawBackground", 14, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -4430,6 +4634,8 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4450,13 +4656,18 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
    Clones the art object. */
 wxAuiTabArt* wxAuiTabArt_php::Clone()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiTabArt::Clone\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -4472,15 +4683,26 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Clone", 5, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4635,11 +4857,15 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
    Set a certain setting with the value new_val. */
 void wxAuiDockArt_php::SetMetric(int id, int new_val)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::SetMetric\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -4664,11 +4890,24 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	ZVAL_LONG(arguments[0], id);
 	ZVAL_LONG(arguments[1], new_val);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetMetric", 9, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -4678,6 +4917,8 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4698,11 +4939,15 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
    Set a font setting. */
 void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::SetFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -4728,11 +4973,24 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	object_init_ex(arguments[1], php_wxFont_entry);
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&font, le_wxFont));
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetFont", 7, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -4742,6 +5000,8 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4762,11 +5022,15 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
    Get the value of a certain setting. */
 int wxAuiDockArt_php::GetMetric(int id)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::GetMetric\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -4790,11 +5054,24 @@ int wxAuiDockArt_php::GetMetric(int id)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetMetric", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -4804,6 +5081,8 @@ int wxAuiDockArt_php::GetMetric(int id)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4824,11 +5103,15 @@ int wxAuiDockArt_php::GetMetric(int id)
    Set a certain setting with the value colour. */
 void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::SetColour\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -4854,11 +5137,24 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	object_init_ex(arguments[1], php_wxColour_entry);
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&colour, le_wxColour));
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetColour", 9, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -4868,6 +5164,8 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4888,11 +5186,15 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
    Get a font setting. */
 wxFont wxAuiDockArt_php::GetFont(int id)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::GetFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -4916,11 +5218,24 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFont", 7, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -4930,6 +5245,8 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4960,11 +5277,15 @@ wxFont wxAuiDockArt_php::GetFont(int id)
    Get the colour of a certain setting. */
 wxColour wxAuiDockArt_php::GetColour(int id)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::GetColour\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -4988,11 +5309,24 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], id);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetColour", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -5002,6 +5336,8 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -5032,11 +5368,15 @@ wxColour wxAuiDockArt_php::GetColour(int id)
    Draws a sash between two windows. */
 void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::DrawSash\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -5066,11 +5406,24 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	object_init_ex(arguments[3], php_wxRect_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawSash", 8, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -5080,6 +5433,8 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -5100,11 +5455,15 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
    Draws a button in the pane's title bar. */
 void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, int button_state, const wxRect& rect, wxAuiPaneInfo& pane)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::DrawPaneButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[6];
 	zval *arguments[6];
 	
 	//Initilize arguments array
@@ -5137,11 +5496,24 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	object_init_ex(arguments[5], php_wxAuiPaneInfo_entry);
 	add_property_resource(arguments[5], _wxResource, zend_list_insert((void*)&pane, le_wxAuiPaneInfo));
 		
+	for(int i=0; i<6; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawPaneButton", 14, &return_value, 6, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
@@ -5151,6 +5523,8 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -5171,11 +5545,15 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
    Draws a gripper. */
 void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::DrawGripper\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -5206,11 +5584,24 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	object_init_ex(arguments[3], php_wxAuiPaneInfo_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&pane, le_wxAuiPaneInfo));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawGripper", 11, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -5220,6 +5611,8 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -5240,11 +5633,15 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
    Draws a caption. */
 void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& text, const wxRect& rect, wxAuiPaneInfo& pane)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::DrawCaption\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[5];
 	zval *arguments[5];
 	
 	//Initilize arguments array
@@ -5279,11 +5676,24 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	object_init_ex(arguments[4], php_wxAuiPaneInfo_entry);
 	add_property_resource(arguments[4], _wxResource, zend_list_insert((void*)&pane, le_wxAuiPaneInfo));
 		
+	for(int i=0; i<5; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawCaption", 11, &return_value, 5, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
@@ -5293,6 +5703,8 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -5313,11 +5725,15 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
    Draws a border. */
 void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::DrawBorder\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -5348,11 +5764,24 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	object_init_ex(arguments[3], php_wxAuiPaneInfo_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&pane, le_wxAuiPaneInfo));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawBorder", 10, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -5362,6 +5791,8 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -5382,11 +5813,15 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
    Draws a background. */
 void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiDockArt::DrawBackground\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -5416,11 +5851,24 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	object_init_ex(arguments[3], php_wxRect_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawBackground", 14, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -5430,6 +5878,8 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -6565,11 +7015,15 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
    ProcessDockResult() is a protected member of the wxAUI layout manager. */
 bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneInfo& new_pos)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiManager::ProcessDockResult\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -6596,11 +7050,24 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	object_init_ex(arguments[1], php_wxAuiPaneInfo_entry);
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&new_pos, le_wxAuiPaneInfo));
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "ProcessDockResult", 17, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -6610,6 +7077,8 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22211,13 +22680,18 @@ void php_wxAuiToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 /* {{{ proto wxAuiToolBarArt wxAuiToolBarArt::Clone() */
 wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::Clone\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -22233,15 +22707,26 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Clone", 5, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22271,11 +22756,15 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 /* {{{ proto  wxAuiToolBarArt::DrawBackground(wxDC &dc, wxWindow &wnd, wxRect rect) */
 void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawBackground\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -22304,11 +22793,24 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	object_init_ex(arguments[2], php_wxRect_entry);
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawBackground", 14, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -22318,6 +22820,8 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22337,11 +22841,15 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 /* {{{ proto  wxAuiToolBarArt::DrawButton(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -22372,11 +22880,24 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	object_init_ex(arguments[3], php_wxRect_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawButton", 10, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -22386,6 +22907,8 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22405,11 +22928,15 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 /* {{{ proto  wxAuiToolBarArt::DrawControlLabel(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawControlLabel\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -22440,11 +22967,24 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	object_init_ex(arguments[3], php_wxRect_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawControlLabel", 16, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -22454,6 +22994,8 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22473,11 +23015,15 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 /* {{{ proto  wxAuiToolBarArt::DrawDropDownButton(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawDropDownButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -22508,11 +23054,24 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	object_init_ex(arguments[3], php_wxRect_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawDropDownButton", 18, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -22522,6 +23081,8 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22541,11 +23102,15 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 /* {{{ proto  wxAuiToolBarArt::DrawGripper(wxDC &dc, wxWindow &wnd, wxRect rect) */
 void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawGripper\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -22574,11 +23139,24 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	object_init_ex(arguments[2], php_wxRect_entry);
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawGripper", 11, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -22588,6 +23166,8 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22607,11 +23187,15 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 /* {{{ proto  wxAuiToolBarArt::DrawLabel(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawLabel\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -22642,11 +23226,24 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	object_init_ex(arguments[3], php_wxRect_entry);
 	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawLabel", 9, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -22656,6 +23253,8 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22675,11 +23274,15 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 /* {{{ proto  wxAuiToolBarArt::DrawOverflowButton(wxDC &dc, wxWindow &wnd, wxRect rect, int state) */
 void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, int state)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawOverflowButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -22709,11 +23312,24 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], state);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawOverflowButton", 18, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -22723,6 +23339,8 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22742,11 +23360,15 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 /* {{{ proto  wxAuiToolBarArt::DrawSeparator(wxDC &dc, wxWindow &wnd, wxRect rect) */
 void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::DrawSeparator\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -22775,11 +23397,24 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	object_init_ex(arguments[2], php_wxRect_entry);
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawSeparator", 13, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -22789,6 +23424,8 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22808,11 +23445,15 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 /* {{{ proto int wxAuiToolBarArt::GetElementSize(int element_id) */
 int wxAuiToolBarArt_php::GetElementSize(int element_id)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::GetElementSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -22836,11 +23477,24 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], element_id);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetElementSize", 14, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -22850,6 +23504,8 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22869,13 +23525,18 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 /* {{{ proto int wxAuiToolBarArt::GetFlags() */
 unsigned int wxAuiToolBarArt_php::GetFlags()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::GetFlags\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -22891,15 +23552,26 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFlags", 8, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22919,13 +23591,18 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 /* {{{ proto wxFont wxAuiToolBarArt::GetFont() */
 wxFont wxAuiToolBarArt_php::GetFont()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::GetFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -22941,15 +23618,26 @@ wxFont wxAuiToolBarArt_php::GetFont()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFont", 7, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -22979,11 +23667,15 @@ wxFont wxAuiToolBarArt_php::GetFont()
 /* {{{ proto wxSize wxAuiToolBarArt::GetLabelSize(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item) */
 wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::GetLabelSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -23012,11 +23704,24 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	object_init_ex(arguments[2], php_wxAuiToolBarItem_entry);
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&item, le_wxAuiToolBarItem));
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetLabelSize", 12, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -23026,6 +23731,8 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23055,13 +23762,18 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 /* {{{ proto int wxAuiToolBarArt::GetTextOrientation() */
 int wxAuiToolBarArt_php::GetTextOrientation()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::GetTextOrientation\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -23077,15 +23789,26 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetTextOrientation", 18, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23105,11 +23828,15 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 /* {{{ proto wxSize wxAuiToolBarArt::GetToolSize(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item) */
 wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::GetToolSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -23138,11 +23865,24 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	object_init_ex(arguments[2], php_wxAuiToolBarItem_entry);
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&item, le_wxAuiToolBarItem));
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetToolSize", 11, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -23152,6 +23892,8 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23181,11 +23923,15 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 /* {{{ proto  wxAuiToolBarArt::SetElementSize(int element_id, int size) */
 void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::SetElementSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -23210,11 +23956,24 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	ZVAL_LONG(arguments[0], element_id);
 	ZVAL_LONG(arguments[1], size);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetElementSize", 14, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -23224,6 +23983,8 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23243,11 +24004,15 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 /* {{{ proto  wxAuiToolBarArt::SetFlags(int flags) */
 void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::SetFlags\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -23271,11 +24036,24 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], flags);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetFlags", 8, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -23285,6 +24063,8 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23304,11 +24084,15 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 /* {{{ proto  wxAuiToolBarArt::SetFont(wxFont font) */
 void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::SetFont\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -23333,11 +24117,24 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	object_init_ex(arguments[0], php_wxFont_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&font, le_wxFont));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetFont", 7, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -23347,6 +24144,8 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23366,11 +24165,15 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 /* {{{ proto  wxAuiToolBarArt::SetTextOrientation(int orientation) */
 void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxAuiToolBarArt::SetTextOrientation\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -23394,11 +24197,24 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], orientation);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetTextOrientation", 18, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -23408,6 +24224,8 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

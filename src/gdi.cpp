@@ -16694,11 +16694,15 @@ void php_wxFontEnumerator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
    Called by EnumerateEncodings() for each match. */
 bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& encoding)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxFontEnumerator::OnFontEncoding\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -16729,11 +16733,24 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	ZVAL_STRING(arguments[1], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnFontEncoding", 14, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -16743,6 +16760,8 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -16771,11 +16790,15 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
    Called by EnumerateFacenames() for each match. */
 bool wxFontEnumerator_php::OnFacename(const wxString& font)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxFontEnumerator::OnFacename\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -16802,11 +16825,24 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	ZVAL_STRING(arguments[0], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnFacename", 10, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -16816,6 +16852,8 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -38950,11 +38988,15 @@ void php_wxRendererNative_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
    Draw a check box. */
 void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawCheckBox\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -38984,11 +39026,24 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawCheckBox", 12, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -38998,6 +39053,8 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39018,11 +39075,15 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
    Draw a native wxChoice. */
 void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawChoice\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39052,11 +39113,24 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawChoice", 10, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39066,6 +39140,8 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39086,11 +39162,15 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
    Draw a native wxComboBox. */
 void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawComboBox\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39120,11 +39200,24 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawComboBox", 12, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39134,6 +39227,8 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39154,11 +39249,15 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
    Draw a button like the one used by wxComboBox to show a drop down window. */
 void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawComboBoxDropButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39188,11 +39287,24 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawComboBoxDropButton", 22, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39202,6 +39314,8 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39222,11 +39336,15 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
    Draw a drop down arrow that is suitable for use outside a combo box. */
 void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawDropArrow\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39256,11 +39374,24 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawDropArrow", 13, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39270,6 +39401,8 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39290,11 +39423,15 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
    Draw a focus rectangle using the specified rectangle. */
 void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawFocusRect\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39324,11 +39461,24 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawFocusRect", 13, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39338,6 +39488,8 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39358,11 +39510,15 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
    Draw a blank push button that looks very similar to wxButton. */
 void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawPushButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39392,11 +39548,24 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawPushButton", 14, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39406,6 +39575,8 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39426,11 +39597,15 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
    Draw a selection rectangle underneath the text as used e.g. */
 void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawItemSelectionRect\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39460,11 +39635,24 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawItemSelectionRect", 21, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39474,6 +39662,8 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39494,11 +39684,15 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
    Draw a native wxRadioButton bitmap. */
 void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawRadioBitmap\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39528,11 +39722,24 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawRadioBitmap", 15, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39542,6 +39749,8 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39562,11 +39771,15 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
    Draw the border for sash window: this border must be such that the sash drawn by DrawSplitterSash() blends into it well. */
 void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawSplitterBorder\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39596,11 +39809,24 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawSplitterBorder", 18, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39610,6 +39836,8 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39630,11 +39858,15 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
    Draw a sash. */
 void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSize& size, wxCoord position, wxOrientation orient, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawSplitterSash\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[6];
 	zval *arguments[6];
 	
 	//Initilize arguments array
@@ -39666,11 +39898,24 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	ZVAL_LONG(arguments[4], orient);
 	ZVAL_LONG(arguments[5], flags);
 		
+	for(int i=0; i<6; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 6, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawSplitterSash", 16, &return_value, 6, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
@@ -39680,6 +39925,8 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39700,11 +39947,15 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
    Draw a native wxTextCtrl frame. */
 void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawTextCtrl\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39734,11 +39985,24 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawTextCtrl", 12, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39748,6 +40012,8 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39768,11 +40034,15 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
    Draw the expanded/collapsed icon for a tree control item. */
 void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::DrawTreeItemButton\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[4];
 	zval *arguments[4];
 	
 	//Initilize arguments array
@@ -39802,11 +40072,24 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[3], flags);
 		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 4, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DrawTreeItemButton", 18, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
@@ -39816,6 +40099,8 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -39949,11 +40234,15 @@ PHP_METHOD(php_wxRendererNative, Get)
    Returns the size of a check box. */
 wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::GetCheckBoxSize\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -39978,11 +40267,24 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	object_init_ex(arguments[0], php_wxWindow_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)win, le_wxWindow));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetCheckBoxSize", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -39992,6 +40294,8 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -40248,11 +40552,15 @@ PHP_METHOD(php_wxRendererNative, GetGeneric)
    Returns the height of a header button, either a fixed platform height if available, or a generic height based on the win window's font. */
 int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::GetHeaderButtonHeight\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -40277,11 +40585,24 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	object_init_ex(arguments[0], php_wxWindow_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)win, le_wxWindow));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetHeaderButtonHeight", 21, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -40291,6 +40612,8 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -40311,11 +40634,15 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
    Returns the horizontal margin on the left and right sides of header button's label. */
 int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxRendererNative::GetHeaderButtonMargin\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -40340,11 +40667,24 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	object_init_ex(arguments[0], php_wxWindow_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)win, le_wxWindow));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetHeaderButtonMargin", 21, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -40354,6 +40694,8 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

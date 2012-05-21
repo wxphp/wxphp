@@ -56,6 +56,109 @@ void wxphp_register_resource_constant(const char *name, uint name_len, void* res
 END_EXTERN_C()
 
 /**
+ * Custom zend_method_call function to call methods with more than 2 parameters
+ */
+BEGIN_EXTERN_C()
+int wxphp_call_method(zval **object_pp, zend_class_entry *obj_ce, zend_function **fn_proxy, const char *function_name, int function_name_len, zval **retval_ptr_ptr, int param_count, zval*** params TSRMLS_DC)
+{
+	/*First check the method is callable*/
+	zval* method_to_call;
+	zend_fcall_info_cache fcc;
+	int is_callable = SUCCESS;
+	
+	if(!*fn_proxy)
+	{
+		MAKE_STD_ZVAL(method_to_call);
+	
+		array_init(method_to_call);
+		add_next_index_zval(method_to_call, *object_pp);
+		add_next_index_stringl(method_to_call, (char*) function_name, function_name_len, 0);
+	
+		if(!zend_is_callable_ex(method_to_call, NULL, 0, NULL, NULL, &fcc, NULL TSRMLS_CC))
+		{
+			is_callable = FAILURE;
+		}
+		
+		efree(method_to_call);
+		
+		if(is_callable == FAILURE)
+			return FAILURE;
+	}
+	
+	int result;
+	zend_fcall_info fci;
+	zval z_fname;
+	zval *retval;
+	HashTable *function_table;
+
+	fci.size = sizeof(fci);
+	/*fci.function_table = NULL; will be read form zend_class_entry of object if needed */
+	fci.object_ptr = object_pp ? *object_pp : NULL;
+	fci.function_name = &z_fname;
+	fci.retval_ptr_ptr = retval_ptr_ptr ? retval_ptr_ptr : &retval;
+	fci.param_count = param_count;
+	fci.params = params;
+	fci.no_separation = 1;
+	fci.symbol_table = NULL;
+
+	if (!fn_proxy && !obj_ce) {
+		/* no interest in caching and no information already present that is
+		 * needed later inside zend_call_function. */
+		ZVAL_STRINGL(&z_fname, function_name, function_name_len, 0);
+		fci.function_table = !object_pp ? EG(function_table) : NULL;
+		result = zend_call_function(&fci, NULL TSRMLS_CC);
+	} else {
+		zend_fcall_info_cache fcic = fcc;
+
+		fcic.initialized = 1;
+		if (!obj_ce) {
+			obj_ce = object_pp ? Z_OBJCE_PP(object_pp) : NULL;
+		}
+		if (obj_ce) {
+			function_table = &obj_ce->function_table;
+		} else {
+			function_table = EG(function_table);
+		}
+		if (!fn_proxy || !*fn_proxy) {
+			if (fn_proxy) {
+				*fn_proxy = fcic.function_handler;
+			}
+		} else {
+			fcic.function_handler = *fn_proxy;
+		}
+		fcic.calling_scope = obj_ce;
+		if (object_pp) {
+			fcic.called_scope = Z_OBJCE_PP(object_pp);
+		} else if (obj_ce &&
+		           !(EG(called_scope) &&
+		             instanceof_function(EG(called_scope), obj_ce TSRMLS_CC))) {
+			fcic.called_scope = obj_ce;
+		} else {
+			fcic.called_scope = EG(called_scope);
+		}
+		fcic.object_ptr = object_pp ? *object_pp : NULL;
+		result = zend_call_function(&fci, &fcic TSRMLS_CC);
+	}
+	if (result == FAILURE) {
+		/* error at c-level */
+		if (!obj_ce) {
+			obj_ce = object_pp ? Z_OBJCE_PP(object_pp) : NULL;
+		}
+		if (!EG(exception)) {
+			zend_error(E_CORE_ERROR, "Couldn't execute method %s%s%s", obj_ce ? obj_ce->name : "", obj_ce ? "::" : "", function_name);
+		}
+	}
+	if (!retval_ptr_ptr) {
+		if (retval) {
+			zval_ptr_dtor(&retval);
+		}
+		return FAILURE;
+	}
+	return SUCCESS;
+}
+END_EXTERN_C()
+
+/**
  * Global functions table entry used on the module initialization code
  */
 static zend_function_entry php_wxWidgets_functions[] = {
