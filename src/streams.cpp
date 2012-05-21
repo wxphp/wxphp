@@ -2637,11 +2637,15 @@ PHP_METHOD(php_wxStreamBase, GetLastError)
    Internal function. */
 wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxStreamBase::OnSysSeek\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -2666,11 +2670,24 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	ZVAL_LONG(arguments[0], pos);
 	ZVAL_LONG(arguments[1], mode);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnSysSeek", 9, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -2680,6 +2697,8 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2708,13 +2727,18 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
    Internal function. */
 wxFileOffset wxStreamBase_php::OnSysTell()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxStreamBase::OnSysTell\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -2730,15 +2754,26 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnSysTell", 9, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -4419,11 +4454,15 @@ PHP_METHOD(php_wxInputStream, Peek)
    Internal function. */
 size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxInputStream::OnSysRead\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -4448,11 +4487,24 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	ZVAL_STRING(arguments[0], (char*) buffer, 0);
 	ZVAL_LONG(arguments[1], bufsize);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnSysRead", 9, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -4462,6 +4514,8 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

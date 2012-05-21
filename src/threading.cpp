@@ -4111,13 +4111,18 @@ PHP_METHOD(php_wxThread, Delete)
    This is the entry point of the thread. */
 void* wxThread_php::Entry()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxThread::Entry\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -4133,15 +4138,26 @@ void* wxThread_php::Entry()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Entry", 5, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

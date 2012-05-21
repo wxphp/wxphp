@@ -2050,11 +2050,15 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
    Inserts a new page at the specified position. */
 bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString& text, bool select, int imageId)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::InsertPage\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[5];
 	zval *arguments[5];
 	
 	//Initilize arguments array
@@ -2086,11 +2090,24 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 	ZVAL_BOOL(arguments[3], select);
 	ZVAL_LONG(arguments[4], imageId);
 		
+	for(int i=0; i<5; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 5, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "InsertPage", 10, &return_value, 5, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
@@ -2100,6 +2117,8 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2268,11 +2287,15 @@ PHP_METHOD(php_wxBookCtrlBase, RemovePage)
    Sets the image index for the given page. */
 bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::SetPageImage\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -2297,11 +2320,24 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 	ZVAL_LONG(arguments[0], page);
 	ZVAL_LONG(arguments[1], image);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetPageImage", 12, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -2311,6 +2347,8 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2501,11 +2539,15 @@ PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
    Sets the text for the given page. */
 bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::SetPageText\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -2533,11 +2575,24 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 	ZVAL_STRING(arguments[1], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetPageText", 11, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -2547,6 +2602,8 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2567,11 +2624,15 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
    Sets the selection for the given page, returning the previous selection. */
 int wxBookCtrlBase_php::SetSelection(size_t page)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::SetSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -2595,11 +2656,24 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], page);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetSelection", 12, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -2609,6 +2683,8 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2629,13 +2705,18 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
    Returns the currently selected page, or wxNOT_FOUND if none was selected. */
 int wxBookCtrlBase_php::GetSelection()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::GetSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -2651,15 +2732,26 @@ int wxBookCtrlBase_php::GetSelection()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetSelection", 12, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2680,11 +2772,15 @@ int wxBookCtrlBase_php::GetSelection()const
    Returns the string for the given page. */
 wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::GetPageText\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -2708,11 +2804,24 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], nPage);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetPageText", 11, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -2722,6 +2831,8 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2742,11 +2853,15 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
    Returns the image index for the given page. */
 int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::GetPageImage\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -2770,11 +2885,24 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], nPage);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetPageImage", 12, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -2784,6 +2912,8 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -2804,11 +2934,15 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
    Changes the selection for the given page, returning the previous selection. */
 int wxBookCtrlBase_php::ChangeSelection(size_t page)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxBookCtrlBase::ChangeSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -2832,11 +2966,24 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], page);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "ChangeSelection", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -2846,6 +2993,8 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

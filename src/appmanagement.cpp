@@ -95,13 +95,18 @@ void php_wxEventLoopBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
    Dispatches the next event in the windowing system event queue. */
 bool wxEventLoopBase_php::Dispatch()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::Dispatch\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -117,15 +122,26 @@ bool wxEventLoopBase_php::Dispatch()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Dispatch", 8, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -146,11 +162,15 @@ bool wxEventLoopBase_php::Dispatch()
    Dispatch an event but not wait longer than the specified timeout for it. */
 int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::DispatchTimeout\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -174,11 +194,24 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], timeout);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DispatchTimeout", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -188,6 +221,8 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -208,11 +243,15 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
    Exit from the loop with the given exit code. */
 void wxEventLoopBase_php::Exit(int rc)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::Exit\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -236,11 +275,24 @@ void wxEventLoopBase_php::Exit(int rc)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], rc);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Exit", 4, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -250,6 +302,8 @@ void wxEventLoopBase_php::Exit(int rc)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -886,13 +940,18 @@ PHP_METHOD(php_wxEventLoopBase, IsYielding)
    This function is called before the event loop terminates, whether this happens normally (because of Exit() call) or abnormally (because of an exception thrown from inside the loop). */
 void wxEventLoopBase_php::OnExit()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::OnExit\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -908,15 +967,26 @@ void wxEventLoopBase_php::OnExit()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnExit", 6, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -945,13 +1015,18 @@ void wxEventLoopBase_php::OnExit()
    Return true if any events are available. */
 bool wxEventLoopBase_php::Pending()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::Pending\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -967,15 +1042,26 @@ bool wxEventLoopBase_php::Pending()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Pending", 7, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -1095,13 +1181,18 @@ PHP_METHOD(php_wxEventLoopBase, ProcessIdle)
    Start the event loop, return the exit code when it is finished. */
 int wxEventLoopBase_php::Run()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::Run\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -1117,15 +1208,26 @@ int wxEventLoopBase_php::Run()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Run", 3, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -1265,13 +1367,18 @@ PHP_METHOD(php_wxEventLoopBase, SetActive)
    Called by wxWidgets to wake up the event loop even if it is currently blocked inside Dispatch(). */
 void wxEventLoopBase_php::WakeUp()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxEventLoopBase::WakeUp\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -1287,15 +1394,26 @@ void wxEventLoopBase_php::WakeUp()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "WakeUp", 6, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -1824,13 +1942,18 @@ void php_wxModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
    Provide this function with appropriate cleanup for your module. */
 void wxModule_php::OnExit()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxModule::OnExit\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -1846,15 +1969,26 @@ void wxModule_php::OnExit()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnExit", 6, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -1875,13 +2009,18 @@ void wxModule_php::OnExit()
    Provide this function with appropriate initialization for your module. */
 bool wxModule_php::OnInit()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxModule::OnInit\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -1897,15 +2036,26 @@ bool wxModule_php::OnInit()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnInit", 6, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -3213,11 +3363,15 @@ PHP_METHOD(php_wxProcess, IsInputAvailable)
    It is called when the process with the pid pid finishes. */
 void wxProcess_php::OnTerminate(int pid, int status)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxProcess::OnTerminate\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -3242,11 +3396,24 @@ void wxProcess_php::OnTerminate(int pid, int status)
 	ZVAL_LONG(arguments[0], pid);
 	ZVAL_LONG(arguments[1], status);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnTerminate", 11, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -3256,6 +3423,8 @@ void wxProcess_php::OnTerminate(int pid, int status)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

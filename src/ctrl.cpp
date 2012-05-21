@@ -19305,13 +19305,18 @@ PHP_METHOD(php_wxComboPopup, PaintComboControl)
    The derived class may implement this to do special processing when popup is shown. */
 void wxComboPopup_php::OnPopup()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::OnPopup\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -19327,15 +19332,26 @@ void wxComboPopup_php::OnPopup()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnPopup", 7, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -19364,13 +19380,18 @@ void wxComboPopup_php::OnPopup()
    The derived class may implement this to do special processing when popup is hidden. */
 void wxComboPopup_php::OnDismiss()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::OnDismiss\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -19386,15 +19407,26 @@ void wxComboPopup_php::OnDismiss()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnDismiss", 9, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -19423,11 +19455,15 @@ void wxComboPopup_php::OnDismiss()
    The derived class may implement this to receive key events from the parent wxComboCtrl. */
 void wxComboPopup_php::OnComboKeyEvent(wxKeyEvent& event)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::OnComboKeyEvent\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -19452,11 +19488,24 @@ void wxComboPopup_php::OnComboKeyEvent(wxKeyEvent& event)
 	object_init_ex(arguments[0], php_wxKeyEvent_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&event, le_wxKeyEvent));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnComboKeyEvent", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -19466,6 +19515,8 @@ void wxComboPopup_php::OnComboKeyEvent(wxKeyEvent& event)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -19494,13 +19545,18 @@ void wxComboPopup_php::OnComboKeyEvent(wxKeyEvent& event)
    The derived class may implement this to do something when the parent wxComboCtrl gets double-clicked. */
 void wxComboPopup_php::OnComboDoubleClick()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::OnComboDoubleClick\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -19516,15 +19572,26 @@ void wxComboPopup_php::OnComboDoubleClick()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnComboDoubleClick", 18, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -19841,13 +19908,18 @@ PHP_METHOD(php_wxComboPopup, Init)
    The derived class must implement this to return string representation of the value. */
 wxString wxComboPopup_php::GetStringValue()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::GetStringValue\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -19863,15 +19935,26 @@ wxString wxComboPopup_php::GetStringValue()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetStringValue", 14, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -19892,13 +19975,18 @@ wxString wxComboPopup_php::GetStringValue()const
    The derived class must implement this to return pointer to the associated control created in Create(). */
 wxWindow* wxComboPopup_php::GetControl()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::GetControl\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -19914,15 +20002,26 @@ wxWindow* wxComboPopup_php::GetControl()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetControl", 10, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -20498,11 +20597,15 @@ PHP_METHOD(php_wxComboPopup, DestroyPopup)
    The derived class must implement this to create the popup control. */
 bool wxComboPopup_php::Create(wxWindow* parent)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboPopup::Create\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -20527,11 +20630,24 @@ bool wxComboPopup_php::Create(wxWindow* parent)
 	object_init_ex(arguments[0], php_wxWindow_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)parent, le_wxWindow));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Create", 6, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -20541,6 +20657,8 @@ bool wxComboPopup_php::Create(wxWindow* parent)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -23430,13 +23548,18 @@ PHP_METHOD(php_wxComboCtrl, Paste)
    Implement in a derived class to define what happens on dropdown button click. */
 void wxComboCtrl_php::OnButtonClick()
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboCtrl::OnButtonClick\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -23452,15 +23575,26 @@ void wxComboCtrl_php::OnButtonClick()
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnButtonClick", 13, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -25734,11 +25868,15 @@ PHP_METHOD(php_wxComboCtrl, EnablePopupAnimation)
    This member function is not normally called in application code. */
 void wxComboCtrl_php::DoShowPopup(const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboCtrl::DoShowPopup\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -25764,11 +25902,24 @@ void wxComboCtrl_php::DoShowPopup(const wxRect& rect, int flags)
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[1], flags);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DoShowPopup", 11, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -25778,6 +25929,8 @@ void wxComboCtrl_php::DoShowPopup(const wxRect& rect, int flags)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -25806,11 +25959,15 @@ void wxComboCtrl_php::DoShowPopup(const wxRect& rect, int flags)
    This member function is not normally called in application code. */
 void wxComboCtrl_php::DoSetPopupControl(wxComboPopup* popup)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboCtrl::DoSetPopupControl\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -25835,11 +25992,24 @@ void wxComboCtrl_php::DoSetPopupControl(wxComboPopup* popup)
 	object_init_ex(arguments[0], php_wxComboPopup_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)popup, le_wxComboPopup));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DoSetPopupControl", 17, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -25849,6 +26019,8 @@ void wxComboCtrl_php::DoSetPopupControl(wxComboPopup* popup)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -26439,11 +26611,15 @@ PHP_METHOD(php_wxComboCtrl, Copy)
    This member function is not normally called in application code. */
 bool wxComboCtrl_php::AnimateShow(const wxRect& rect, int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxComboCtrl::AnimateShow\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -26469,11 +26645,24 @@ bool wxComboCtrl_php::AnimateShow(const wxRect& rect, int flags)
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[1], flags);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "AnimateShow", 11, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -26483,6 +26672,8 @@ bool wxComboCtrl_php::AnimateShow(const wxRect& rect, int flags)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -33216,11 +33407,15 @@ PHP_METHOD(php_wxItemContainerImmutable, FindString)
    Returns the label of the item with the given index. */
 wxString wxItemContainerImmutable_php::GetString(unsigned int n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxItemContainerImmutable::GetString\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -33244,11 +33439,24 @@ wxString wxItemContainerImmutable_php::GetString(unsigned int n)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], n);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetString", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -33258,6 +33466,8 @@ wxString wxItemContainerImmutable_php::GetString(unsigned int n)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -33278,13 +33488,18 @@ wxString wxItemContainerImmutable_php::GetString(unsigned int n)const
    Returns the number of items in the control. */
 unsigned int wxItemContainerImmutable_php::GetCount()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxItemContainerImmutable::GetCount\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -33300,15 +33515,26 @@ unsigned int wxItemContainerImmutable_php::GetCount()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetCount", 8, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -33329,13 +33555,18 @@ unsigned int wxItemContainerImmutable_php::GetCount()const
    Returns the index of the selected item or wxNOT_FOUND if no item is selected. */
 int wxItemContainerImmutable_php::GetSelection()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxItemContainerImmutable::GetSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -33351,15 +33582,26 @@ int wxItemContainerImmutable_php::GetSelection()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetSelection", 12, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -33746,11 +33988,15 @@ PHP_METHOD(php_wxItemContainerImmutable, GetStrings)
    Sets the selection to the given item n or removes the selection entirely if n == wxNOT_FOUND. */
 void wxItemContainerImmutable_php::SetSelection(int n)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxItemContainerImmutable::SetSelection\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -33774,11 +34020,24 @@ void wxItemContainerImmutable_php::SetSelection(int n)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], n);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetSelection", 12, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -33788,6 +34047,8 @@ void wxItemContainerImmutable_php::SetSelection(int n)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -33808,11 +34069,15 @@ void wxItemContainerImmutable_php::SetSelection(int n)
    Sets the label for the given item. */
 void wxItemContainerImmutable_php::SetString(unsigned int n, const wxString& string)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxItemContainerImmutable::SetString\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -33840,11 +34105,24 @@ void wxItemContainerImmutable_php::SetString(unsigned int n, const wxString& str
 	ZVAL_STRING(arguments[1], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetString", 9, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -33854,6 +34132,8 @@ void wxItemContainerImmutable_php::SetString(unsigned int n, const wxString& str
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -57090,13 +57370,18 @@ void php_wxHeaderColumn_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
    Returns the current column alignment. */
 wxAlignment wxHeaderColumn_php::GetAlignment()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::GetAlignment\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -57112,15 +57397,26 @@ wxAlignment wxHeaderColumn_php::GetAlignment()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetAlignment", 12, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -57141,13 +57437,18 @@ wxAlignment wxHeaderColumn_php::GetAlignment()const
    Returns the bitmap in the header of the column, if any. */
 wxBitmap wxHeaderColumn_php::GetBitmap()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::GetBitmap\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -57163,15 +57464,26 @@ wxBitmap wxHeaderColumn_php::GetBitmap()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetBitmap", 9, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -57202,13 +57514,18 @@ wxBitmap wxHeaderColumn_php::GetBitmap()const
    Get the column flags. */
 int wxHeaderColumn_php::GetFlags()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::GetFlags\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -57224,15 +57541,26 @@ int wxHeaderColumn_php::GetFlags()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFlags", 8, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -57253,13 +57581,18 @@ int wxHeaderColumn_php::GetFlags()const
    Return the minimal column width. */
 int wxHeaderColumn_php::GetMinWidth()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::GetMinWidth\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -57275,15 +57608,26 @@ int wxHeaderColumn_php::GetMinWidth()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetMinWidth", 11, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -57304,13 +57648,18 @@ int wxHeaderColumn_php::GetMinWidth()const
    Get the text shown in the column header. */
 wxString wxHeaderColumn_php::GetTitle()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::GetTitle\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -57326,15 +57675,26 @@ wxString wxHeaderColumn_php::GetTitle()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetTitle", 8, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -57355,13 +57715,18 @@ wxString wxHeaderColumn_php::GetTitle()const
    Returns the current width of the column. */
 int wxHeaderColumn_php::GetWidth()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::GetWidth\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -57377,15 +57742,26 @@ int wxHeaderColumn_php::GetWidth()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetWidth", 8, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -58026,13 +58402,18 @@ PHP_METHOD(php_wxHeaderColumn, IsShown)
    Returns true if the column is currently used for sorting. */
 bool wxHeaderColumn_php::IsSortKey()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::IsSortKey\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -58048,15 +58429,26 @@ bool wxHeaderColumn_php::IsSortKey()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "IsSortKey", 9, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -58077,13 +58469,18 @@ bool wxHeaderColumn_php::IsSortKey()const
    Returns true, if the sort order is ascending. */
 bool wxHeaderColumn_php::IsSortOrderAscending()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderColumn::IsSortOrderAscending\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -58099,15 +58496,26 @@ bool wxHeaderColumn_php::IsSortOrderAscending()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "IsSortOrderAscending", 20, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -58641,11 +59049,15 @@ PHP_METHOD(php_wxSettableHeaderColumn, ToggleFlag)
    Set the column width. */
 void wxSettableHeaderColumn_php::SetWidth(int width)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetWidth\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -58669,11 +59081,24 @@ void wxSettableHeaderColumn_php::SetWidth(int width)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], width);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetWidth", 8, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -58683,6 +59108,8 @@ void wxSettableHeaderColumn_php::SetWidth(int width)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -58703,11 +59130,15 @@ void wxSettableHeaderColumn_php::SetWidth(int width)
    Set the text to display in the column header. */
 void wxSettableHeaderColumn_php::SetTitle(const wxString& title)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetTitle\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -58734,11 +59165,24 @@ void wxSettableHeaderColumn_php::SetTitle(const wxString& title)
 	ZVAL_STRING(arguments[0], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetTitle", 8, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -58748,6 +59192,8 @@ void wxSettableHeaderColumn_php::SetTitle(const wxString& title)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -58888,11 +59334,15 @@ PHP_METHOD(php_wxSettableHeaderColumn, SetSortable)
    Sets this column as the sort key for the associated control. */
 void wxSettableHeaderColumn_php::SetSortOrder(bool ascending)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetSortOrder\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -58916,11 +59366,24 @@ void wxSettableHeaderColumn_php::SetSortOrder(bool ascending)
 	//Parameters for conversion
 	ZVAL_BOOL(arguments[0], ascending);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetSortOrder", 12, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -58930,6 +59393,8 @@ void wxSettableHeaderColumn_php::SetSortOrder(bool ascending)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -59190,11 +59655,15 @@ PHP_METHOD(php_wxSettableHeaderColumn, SetReorderable)
    Set the minimal column width. */
 void wxSettableHeaderColumn_php::SetMinWidth(int minWidth)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetMinWidth\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -59218,11 +59687,24 @@ void wxSettableHeaderColumn_php::SetMinWidth(int minWidth)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], minWidth);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetMinWidth", 11, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -59232,6 +59714,8 @@ void wxSettableHeaderColumn_php::SetMinWidth(int minWidth)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -59372,11 +59856,15 @@ PHP_METHOD(php_wxSettableHeaderColumn, SetHidden)
    Set the column flags. */
 void wxSettableHeaderColumn_php::SetFlags(int flags)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetFlags\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -59400,11 +59888,24 @@ void wxSettableHeaderColumn_php::SetFlags(int flags)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], flags);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetFlags", 8, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -59414,6 +59915,8 @@ void wxSettableHeaderColumn_php::SetFlags(int flags)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -59554,11 +60057,15 @@ PHP_METHOD(php_wxSettableHeaderColumn, SetFlag)
    Set the bitmap to be displayed in the column header. */
 void wxSettableHeaderColumn_php::SetBitmap(const wxBitmap& bitmap)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetBitmap\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -59583,11 +60090,24 @@ void wxSettableHeaderColumn_php::SetBitmap(const wxBitmap& bitmap)
 	object_init_ex(arguments[0], php_wxBitmap_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&bitmap, le_wxBitmap));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetBitmap", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -59597,6 +60117,8 @@ void wxSettableHeaderColumn_php::SetBitmap(const wxBitmap& bitmap)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -59617,11 +60139,15 @@ void wxSettableHeaderColumn_php::SetBitmap(const wxBitmap& bitmap)
    Set the alignment of the column header. */
 void wxSettableHeaderColumn_php::SetAlignment(wxAlignment align)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxSettableHeaderColumn::SetAlignment\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -59645,11 +60171,24 @@ void wxSettableHeaderColumn_php::SetAlignment(wxAlignment align)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], align);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetAlignment", 12, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -59659,6 +60198,8 @@ void wxSettableHeaderColumn_php::SetAlignment(wxAlignment align)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -62051,11 +62592,15 @@ PHP_METHOD(php_wxHeaderCtrl, Create)
    Method to be implemented by the derived classes to return the information for the given column. */
 const wxHeaderColumn& wxHeaderCtrl_php::GetColumn(unsigned int idx)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderCtrl::GetColumn\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -62079,11 +62624,24 @@ const wxHeaderColumn& wxHeaderCtrl_php::GetColumn(unsigned int idx)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], idx);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetColumn", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -62093,6 +62651,8 @@ const wxHeaderColumn& wxHeaderCtrl_php::GetColumn(unsigned int idx)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -62533,11 +63093,15 @@ PHP_METHOD(php_wxHeaderCtrl, IsEmpty)
    Can be overridden in the derived class to update internal data structures when the number of the columns in the control changes. */
 void wxHeaderCtrl_php::OnColumnCountChanging(unsigned int count)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderCtrl::OnColumnCountChanging\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -62561,11 +63125,24 @@ void wxHeaderCtrl_php::OnColumnCountChanging(unsigned int count)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], count);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnColumnCountChanging", 21, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -62575,6 +63152,8 @@ void wxHeaderCtrl_php::OnColumnCountChanging(unsigned int count)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -63150,11 +63729,15 @@ PHP_METHOD(php_wxHeaderCtrl, UpdateColumn)
    Method called when the column visibility is changed by the user. */
 void wxHeaderCtrl_php::UpdateColumnVisibility(unsigned int idx, bool show)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderCtrl::UpdateColumnVisibility\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -63179,11 +63762,24 @@ void wxHeaderCtrl_php::UpdateColumnVisibility(unsigned int idx, bool show)
 	ZVAL_LONG(arguments[0], idx);
 	ZVAL_BOOL(arguments[1], show);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "UpdateColumnVisibility", 22, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -63193,6 +63789,8 @@ void wxHeaderCtrl_php::UpdateColumnVisibility(unsigned int idx, bool show)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -63221,11 +63819,15 @@ void wxHeaderCtrl_php::UpdateColumnVisibility(unsigned int idx, bool show)
    Method which may be implemented by the derived classes to allow double clicking the column separator to resize the column to fit its contents. */
 bool wxHeaderCtrl_php::UpdateColumnWidthToFit(unsigned int idx, int widthTitle)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderCtrl::UpdateColumnWidthToFit\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -63250,11 +63852,24 @@ bool wxHeaderCtrl_php::UpdateColumnWidthToFit(unsigned int idx, int widthTitle)
 	ZVAL_LONG(arguments[0], idx);
 	ZVAL_LONG(arguments[1], widthTitle);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "UpdateColumnWidthToFit", 22, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -63264,6 +63879,8 @@ bool wxHeaderCtrl_php::UpdateColumnWidthToFit(unsigned int idx, int widthTitle)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -63759,11 +64376,15 @@ PHP_METHOD(php_wxHeaderCtrlSimple, DeleteColumn)
    This function can be overridden in the classes deriving from this control instead of overriding UpdateColumnWidthToFit(). */
 int wxHeaderCtrlSimple_php::GetBestFittingWidth(unsigned int idx)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHeaderCtrlSimple::GetBestFittingWidth\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -63787,11 +64408,24 @@ int wxHeaderCtrlSimple_php::GetBestFittingWidth(unsigned int idx)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], idx);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetBestFittingWidth", 19, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -63801,6 +64435,8 @@ int wxHeaderCtrlSimple_php::GetBestFittingWidth(unsigned int idx)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -64892,11 +65528,15 @@ PHP_METHOD(php_wxHtmlListBox, __construct)
    Called when the user clicks on hypertext link. */
 void wxHtmlListBox_php::OnLinkClicked(size_t n, const wxHtmlLinkInfo& link)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHtmlListBox::OnLinkClicked\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -64922,11 +65562,24 @@ void wxHtmlListBox_php::OnLinkClicked(size_t n, const wxHtmlLinkInfo& link)
 	object_init_ex(arguments[1], php_wxHtmlLinkInfo_entry);
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&link, le_wxHtmlLinkInfo));
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnLinkClicked", 13, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -64936,6 +65589,8 @@ void wxHtmlListBox_php::OnLinkClicked(size_t n, const wxHtmlLinkInfo& link)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -64964,11 +65619,15 @@ void wxHtmlListBox_php::OnLinkClicked(size_t n, const wxHtmlLinkInfo& link)
    This virtual function may be overridden to customize the appearance of the selected cells. */
 wxColour wxHtmlListBox_php::GetSelectedTextColour(const wxColour& colFg)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHtmlListBox::GetSelectedTextColour\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -64993,11 +65652,24 @@ wxColour wxHtmlListBox_php::GetSelectedTextColour(const wxColour& colFg)const
 	object_init_ex(arguments[0], php_wxColour_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&colFg, le_wxColour));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetSelectedTextColour", 21, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -65007,6 +65679,8 @@ wxColour wxHtmlListBox_php::GetSelectedTextColour(const wxColour& colFg)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -65045,11 +65719,15 @@ wxColour wxHtmlListBox_php::GetSelectedTextColour(const wxColour& colFg)const
    This virtual function may be overridden to change the appearance of the background of the selected cells in the same way as GetSelectedTextColour(). */
 wxColour wxHtmlListBox_php::GetSelectedTextBgColour(const wxColour& colBg)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHtmlListBox::GetSelectedTextBgColour\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -65074,11 +65752,24 @@ wxColour wxHtmlListBox_php::GetSelectedTextBgColour(const wxColour& colBg)const
 	object_init_ex(arguments[0], php_wxColour_entry);
 	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&colBg, le_wxColour));
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetSelectedTextBgColour", 23, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -65088,6 +65779,8 @@ wxColour wxHtmlListBox_php::GetSelectedTextBgColour(const wxColour& colBg)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -65126,11 +65819,15 @@ wxColour wxHtmlListBox_php::GetSelectedTextBgColour(const wxColour& colBg)const
    This function may be overridden to decorate HTML returned by OnGetItem(). */
 wxString wxHtmlListBox_php::OnGetItemMarkup(size_t n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHtmlListBox::OnGetItemMarkup\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -65154,11 +65851,24 @@ wxString wxHtmlListBox_php::OnGetItemMarkup(size_t n)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], n);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnGetItemMarkup", 15, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -65168,6 +65878,8 @@ wxString wxHtmlListBox_php::OnGetItemMarkup(size_t n)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -65196,11 +65908,15 @@ wxString wxHtmlListBox_php::OnGetItemMarkup(size_t n)const
    This method must be implemented in the derived class and should return the body (i.e. */
 wxString wxHtmlListBox_php::OnGetItem(size_t n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHtmlListBox::OnGetItem\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -65224,11 +65940,24 @@ wxString wxHtmlListBox_php::OnGetItem(size_t n)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], n);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnGetItem", 9, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -65238,6 +65967,8 @@ wxString wxHtmlListBox_php::OnGetItem(size_t n)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -66935,13 +67666,18 @@ PHP_METHOD(php_wxHyperlinkCtrl, GetURL)
    Returns true if the hyperlink has already been clicked by the user at least one time. */
 bool wxHyperlinkCtrl_php::GetVisited()const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHyperlinkCtrl::GetVisited\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval* arguments[1];
 	arguments[0] = NULL;
+	params[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -66957,15 +67693,26 @@ bool wxHyperlinkCtrl_php::GetVisited()const
 	
 	//Parameters for conversion
 		
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetVisited", 10, &return_value, 0, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -67427,11 +68174,15 @@ PHP_METHOD(php_wxHyperlinkCtrl, SetURL)
    Marks the hyperlink as visited (see wxHyperlinkCtrl::SetVisitedColour). */
 void wxHyperlinkCtrl_php::SetVisited(bool visited)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxHyperlinkCtrl::SetVisited\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -67455,11 +68206,24 @@ void wxHyperlinkCtrl_php::SetVisited(bool visited)
 	//Parameters for conversion
 	ZVAL_BOOL(arguments[0], visited);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetVisited", 10, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -67469,6 +68233,8 @@ void wxHyperlinkCtrl_php::SetVisited(bool visited)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -72894,11 +73660,15 @@ PHP_METHOD(php_wxListCtrl, RefreshItems)
    This function must be overridden in the derived class for a control with wxLC_VIRTUAL style. */
 wxString wxListCtrl_php::OnGetItemText(long item, long column)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxListCtrl::OnGetItemText\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -72923,11 +73693,24 @@ wxString wxListCtrl_php::OnGetItemText(long item, long column)const
 	ZVAL_LONG(arguments[0], item);
 	ZVAL_LONG(arguments[1], column);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnGetItemText", 13, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -72937,6 +73720,8 @@ wxString wxListCtrl_php::OnGetItemText(long item, long column)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -73070,11 +73855,15 @@ PHP_METHOD(php_wxListCtrl, RefreshItem)
    This function must be overridden in the derived class for a control with wxLC_VIRTUAL style having an "image list" (see SetImageList(); if the control doesn't have an image list, it is not necessary to override it). */
 int wxListCtrl_php::OnGetItemImage(long item)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxListCtrl::OnGetItemImage\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -73098,11 +73887,24 @@ int wxListCtrl_php::OnGetItemImage(long item)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnGetItemImage", 14, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -73112,6 +73914,8 @@ int wxListCtrl_php::OnGetItemImage(long item)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -73140,11 +73944,15 @@ int wxListCtrl_php::OnGetItemImage(long item)const
    Override this function in the derived class for a control with wxLC_VIRTUAL and wxLC_REPORT styles in order to specify the image index for the given line and column. */
 int wxListCtrl_php::OnGetItemColumnImage(long item, long column)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxListCtrl::OnGetItemColumnImage\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -73169,11 +73977,24 @@ int wxListCtrl_php::OnGetItemColumnImage(long item, long column)const
 	ZVAL_LONG(arguments[0], item);
 	ZVAL_LONG(arguments[1], column);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnGetItemColumnImage", 20, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -73183,6 +74004,8 @@ int wxListCtrl_php::OnGetItemColumnImage(long item, long column)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -73211,11 +74034,15 @@ int wxListCtrl_php::OnGetItemColumnImage(long item, long column)const
    This function may be overridden in the derived class for a control with wxLC_VIRTUAL style. */
 wxListItemAttr* wxListCtrl_php::OnGetItemAttr(long item)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxListCtrl::OnGetItemAttr\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -73239,11 +74066,24 @@ wxListItemAttr* wxListCtrl_php::OnGetItemAttr(long item)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnGetItemAttr", 13, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -73253,6 +74093,8 @@ wxListItemAttr* wxListCtrl_php::OnGetItemAttr(long item)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -113707,11 +114549,15 @@ PHP_METHOD(php_wxVListBox, Select)
    The derived class must implement this method to return the height of the specified item (in pixels). */
 wxCoord wxVListBox_php::OnMeasureItem(size_t n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxVListBox::OnMeasureItem\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -113735,11 +114581,24 @@ wxCoord wxVListBox_php::OnMeasureItem(size_t n)const
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], n);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnMeasureItem", 13, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -113749,6 +114608,8 @@ wxCoord wxVListBox_php::OnMeasureItem(size_t n)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -113769,11 +114630,15 @@ wxCoord wxVListBox_php::OnMeasureItem(size_t n)const
    This method may be used to draw separators between the lines. */
 void wxVListBox_php::OnDrawSeparator(wxDC& dc, wxRect& rect, size_t n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxVListBox::OnDrawSeparator\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -113801,11 +114666,24 @@ void wxVListBox_php::OnDrawSeparator(wxDC& dc, wxRect& rect, size_t n)const
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[2], n);
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnDrawSeparator", 15, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -113815,6 +114693,8 @@ void wxVListBox_php::OnDrawSeparator(wxDC& dc, wxRect& rect, size_t n)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -113843,11 +114723,15 @@ void wxVListBox_php::OnDrawSeparator(wxDC& dc, wxRect& rect, size_t n)const
    The derived class must implement this function to actually draw the item with the given index on the provided DC. */
 void wxVListBox_php::OnDrawItem(wxDC& dc, const wxRect& rect, size_t n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxVListBox::OnDrawItem\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -113875,11 +114759,24 @@ void wxVListBox_php::OnDrawItem(wxDC& dc, const wxRect& rect, size_t n)const
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[2], n);
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnDrawItem", 10, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -113889,6 +114786,8 @@ void wxVListBox_php::OnDrawItem(wxDC& dc, const wxRect& rect, size_t n)const
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -113909,11 +114808,15 @@ void wxVListBox_php::OnDrawItem(wxDC& dc, const wxRect& rect, size_t n)const
    This method is used to draw the items background and, maybe, a border around it. */
 void wxVListBox_php::OnDrawBackground(wxDC& dc, const wxRect& rect, size_t n)const
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxVListBox::OnDrawBackground\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[3];
 	zval *arguments[3];
 	
 	//Initilize arguments array
@@ -113941,11 +114844,24 @@ void wxVListBox_php::OnDrawBackground(wxDC& dc, const wxRect& rect, size_t n)con
 	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[2], n);
 		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnDrawBackground", 16, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
@@ -113955,6 +114871,8 @@ void wxVListBox_php::OnDrawBackground(wxDC& dc, const wxRect& rect, size_t n)con
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif

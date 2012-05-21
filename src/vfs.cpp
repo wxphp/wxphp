@@ -1399,11 +1399,15 @@ void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
    Returns true if the handler is able to open this file. */
 bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxFileSystemHandler::CanOpen\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[1];
 	zval *arguments[1];
 	
 	//Initilize arguments array
@@ -1430,11 +1434,24 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	ZVAL_STRING(arguments[0], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "CanOpen", 7, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
@@ -1444,6 +1461,8 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
@@ -1801,11 +1820,15 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
    Opens the file and returns wxFSFile pointer or NULL if failed. */
 wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& location)
 {
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxFileSystemHandler::OpenFile\n");
 	php_printf("===========================================\n");
 	#endif
 	
+	zval** params[2];
 	zval *arguments[2];
 	
 	//Initilize arguments array
@@ -1834,11 +1857,24 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	ZVAL_STRING(arguments[1], temp_string, 1);
 	free(temp_string);
 		
+	for(int i=0; i<2; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OpenFile", 8, &return_value, 2, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
 	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
@@ -1848,6 +1884,8 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	
 	if(function_called == FAILURE)
 	{
+		is_php_user_space_implemented = false;
+		
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
