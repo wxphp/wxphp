@@ -127,6 +127,7 @@ if(file_exists("./../../json/enums.json"))
 
 //Import all constants defined by hand
 include("include/constants.php");
+include("include/stc_constants.php");
 	
 //Load constants found by the xml parser
 if(file_exists("./../../json/consts.json"))
