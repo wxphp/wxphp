@@ -853,8 +853,6 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxSize));
 				((wxSize_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxSize_php*) ptr)->evnArray);
-				array_init(((wxSize_php*) ptr)->evnArray);
 				((wxSize_php*)ptr)->InitProperties();
 
 
@@ -874,8 +872,6 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxSize));
 				((wxSize_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxSize_php*) ptr)->evnArray);
-				array_init(((wxSize_php*) ptr)->evnArray);
 				((wxSize_php*)ptr)->InitProperties();
 
 
@@ -986,8 +982,6 @@ PHP_METHOD(php_wxArtProvider, GetNativeSizeHint)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxSize));
 				((wxSize_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxSize_php*) ptr)->evnArray);
-				array_init(((wxSize_php*) ptr)->evnArray);
 				((wxSize_php*)ptr)->InitProperties();
 
 
@@ -1100,8 +1094,6 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 				object_init_ex(return_value, php_wxIconBundle_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxIconBundle));
 				((wxIconBundle_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxIconBundle_php*) ptr)->evnArray);
-				array_init(((wxIconBundle_php*) ptr)->evnArray);
 				((wxIconBundle_php*)ptr)->InitProperties();
 
 
@@ -1121,8 +1113,6 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 				object_init_ex(return_value, php_wxIconBundle_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxIconBundle));
 				((wxIconBundle_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxIconBundle_php*) ptr)->evnArray);
-				array_init(((wxIconBundle_php*) ptr)->evnArray);
 				((wxIconBundle_php*)ptr)->InitProperties();
 
 
@@ -1253,8 +1243,6 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 				object_init_ex(return_value, php_wxIcon_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxIcon));
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxIcon_php*) ptr)->evnArray);
-				array_init(((wxIcon_php*) ptr)->evnArray);
 				((wxIcon_php*)ptr)->InitProperties();
 
 
@@ -1274,8 +1262,6 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 				object_init_ex(return_value, php_wxIcon_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxIcon));
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxIcon_php*) ptr)->evnArray);
-				array_init(((wxIcon_php*) ptr)->evnArray);
 				((wxIcon_php*)ptr)->InitProperties();
 
 
@@ -1295,8 +1281,6 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 				object_init_ex(return_value, php_wxIcon_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxIcon));
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxIcon_php*) ptr)->evnArray);
-				array_init(((wxIcon_php*) ptr)->evnArray);
 				((wxIcon_php*)ptr)->InitProperties();
 
 
@@ -1427,8 +1411,6 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 				object_init_ex(return_value, php_wxBitmap_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxBitmap));
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxBitmap_php*) ptr)->evnArray);
-				array_init(((wxBitmap_php*) ptr)->evnArray);
 				((wxBitmap_php*)ptr)->InitProperties();
 
 
@@ -1448,8 +1430,6 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 				object_init_ex(return_value, php_wxBitmap_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxBitmap));
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxBitmap_php*) ptr)->evnArray);
-				array_init(((wxBitmap_php*) ptr)->evnArray);
 				((wxBitmap_php*)ptr)->InitProperties();
 
 
@@ -1469,8 +1449,6 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 				object_init_ex(return_value, php_wxBitmap_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxBitmap));
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxBitmap_php*) ptr)->evnArray);
-				array_init(((wxBitmap_php*) ptr)->evnArray);
 				((wxBitmap_php*)ptr)->InitProperties();
 
 
@@ -1764,10 +1742,6 @@ PHP_METHOD(php_wxCaret, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxCaret);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxCaret_php*) _this)->evnArray);
-		
-		array_init(((wxCaret_php*) _this)->evnArray);
 		
 		((wxCaret_php*) _this)->phpObj = getThis();
 		
@@ -3955,10 +3929,6 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxNotificationMessage_php*) _this)->evnArray);
-		
-		array_init(((wxNotificationMessage_php*) _this)->evnArray);
-		
 		((wxNotificationMessage_php*) _this)->phpObj = getThis();
 		
 		((wxNotificationMessage_php*) _this)->InitProperties();
@@ -4078,10 +4048,6 @@ PHP_METHOD(php_wxStopWatch, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxStopWatch);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxStopWatch_php*) _this)->evnArray);
-		
-		array_init(((wxStopWatch_php*) _this)->evnArray);
 		
 		((wxStopWatch_php*) _this)->phpObj = getThis();
 		
@@ -5436,10 +5402,6 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxTaskBarIcon_php*) _this)->evnArray);
-		
-		array_init(((wxTaskBarIcon_php*) _this)->evnArray);
-		
 		((wxTaskBarIcon_php*) _this)->phpObj = getThis();
 		
 		((wxTaskBarIcon_php*) _this)->InitProperties();
@@ -6577,10 +6539,6 @@ PHP_METHOD(php_wxTimer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxTimer_php*) _this)->evnArray);
-		
-		array_init(((wxTimer_php*) _this)->evnArray);
-		
 		((wxTimer_php*) _this)->phpObj = getThis();
 		
 		((wxTimer_php*) _this)->InitProperties();
@@ -6770,10 +6728,6 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxWindowDisabler_php*) _this)->evnArray);
-		
-		array_init(((wxWindowDisabler_php*) _this)->evnArray);
-		
 		((wxWindowDisabler_php*) _this)->phpObj = getThis();
 		
 		((wxWindowDisabler_php*) _this)->InitProperties();
@@ -6926,10 +6880,6 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxBusyCursor);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxBusyCursor_php*) _this)->evnArray);
-		
-		array_init(((wxBusyCursor_php*) _this)->evnArray);
 		
 		((wxBusyCursor_php*) _this)->phpObj = getThis();
 		

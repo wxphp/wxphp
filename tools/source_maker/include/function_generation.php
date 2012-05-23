@@ -1700,8 +1700,6 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 									$return_called_overload .= tabs(4) . "add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_{$return_type}));\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
-									$return_called_overload .= tabs(4) . "MAKE_STD_ZVAL((({$return_type}_php*) ptr)->evnArray);\n";
-									$return_called_overload .= tabs(4) . "array_init((({$return_type}_php*) ptr)->evnArray);\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
 								}
 								break;

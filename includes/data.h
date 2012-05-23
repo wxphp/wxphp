@@ -32,8 +32,6 @@ class wxAcceleratorEntry_php: public wxAcceleratorEntry{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -68,8 +66,6 @@ class wxAcceleratorTable_php: public wxAcceleratorTable{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -104,8 +100,6 @@ class wxCalendarDateAttr_php: public wxCalendarDateAttr{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -152,8 +146,6 @@ class wxPageSetupDialogData_php: public wxPageSetupDialogData{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -215,8 +207,6 @@ class wxPrintData_php: public wxPrintData{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -279,8 +269,6 @@ class wxRealPoint_php: public wxRealPoint{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -319,8 +307,6 @@ class wxRect_php: public wxRect{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -384,8 +370,6 @@ class wxPoint_php: public wxPoint{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -415,8 +399,6 @@ class wxSize_php: public wxSize{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -454,8 +436,6 @@ class wxListItemAttr_php: public wxListItemAttr{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -491,8 +471,6 @@ class wxListItem_php: public wxListItem{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -544,8 +522,6 @@ class wxFileType_php: public wxFileType{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -578,8 +554,6 @@ class wxPosition_php: public wxPosition{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -619,8 +593,6 @@ class wxRegion_php: public wxRegion{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -664,8 +636,6 @@ class wxStatusBarPane_php: public wxStatusBarPane{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -695,8 +665,6 @@ class wxTreeItemId_php: public wxTreeItemId{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -732,8 +700,6 @@ class wxVariant_php: public wxVariant{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -794,8 +760,6 @@ class wxVariantData_php: public wxVariantData{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -828,8 +792,6 @@ class wxVersionInfo_php: public wxVersionInfo{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

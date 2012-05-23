@@ -3614,10 +3614,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxXmlNode_php*) _this)->evnArray);
-		
-		array_init(((wxXmlNode_php*) _this)->evnArray);
-		
 		((wxXmlNode_php*) _this)->phpObj = getThis();
 		
 		((wxXmlNode_php*) _this)->InitProperties();
@@ -4452,10 +4448,6 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxXmlAttribute_php*) _this)->evnArray);
-		
-		array_init(((wxXmlAttribute_php*) _this)->evnArray);
-		
 		((wxXmlAttribute_php*) _this)->phpObj = getThis();
 		
 		((wxXmlAttribute_php*) _this)->InitProperties();
@@ -5179,8 +5171,6 @@ PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 				object_init_ex(return_value, php_wxVersionInfo_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxVersionInfo));
 				((wxVersionInfo_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxVersionInfo_php*) ptr)->evnArray);
-				array_init(((wxVersionInfo_php*) ptr)->evnArray);
 				((wxVersionInfo_php*)ptr)->InitProperties();
 
 
@@ -6579,10 +6569,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxXmlDocument);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxXmlDocument_php*) _this)->evnArray);
-		
-		array_init(((wxXmlDocument_php*) _this)->evnArray);
 		
 		((wxXmlDocument_php*) _this)->phpObj = getThis();
 		

@@ -37,8 +37,6 @@ class wxGenericValidator_php: public wxGenericValidator{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -96,8 +94,6 @@ class wxValidator_php: public wxValidator{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -156,8 +152,6 @@ class wxTextValidator_php: public wxTextValidator{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

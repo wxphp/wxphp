@@ -42,8 +42,20 @@ cp tools/source_maker/class_selector/classes.json json
 # Enter code generator directory
 cd tools/source_maker/
 
-# Start the code generator
-./go.sh
+# Run the code generator
+cp class_selector/classes.json ./../../json/
+php code_generator.php
+
+# Copy non dynamic template files
+if [ ! -e "./../../src/app.cpp" ]; then
+	cp source_templates/app.h ./../../includes/
+	cp source_templates/app.cpp ./../../src/
+fi
+
+if [ ! -e "./../../src/references.cpp" ]; then
+	cp source_templates/references.h ./../../includes/
+	cp source_templates/references.cpp ./../../src/
+fi
 
 # Return to main source directory
 cd ../../

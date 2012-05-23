@@ -31,8 +31,6 @@ class wxWebViewHistoryItem_php: public wxWebViewHistoryItem{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -62,8 +60,6 @@ class wxWebViewHandler_php: public wxWebViewHandler{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -91,8 +87,6 @@ class wxWebViewArchiveHandler_php: public wxWebViewArchiveHandler{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

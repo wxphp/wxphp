@@ -263,10 +263,6 @@ PHP_METHOD(php_wxFrame, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFrame_php*) _this)->evnArray);
-		
-		array_init(((wxFrame_php*) _this)->evnArray);
-		
 		((wxFrame_php*) _this)->phpObj = getThis();
 		
 		((wxFrame_php*) _this)->InitProperties();
@@ -3501,10 +3497,6 @@ PHP_METHOD(php_wxMDIClientWindow, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxMDIClientWindow_php*) _this)->evnArray);
-		
-		array_init(((wxMDIClientWindow_php*) _this)->evnArray);
-		
 		((wxMDIClientWindow_php*) _this)->phpObj = getThis();
 		
 		((wxMDIClientWindow_php*) _this)->InitProperties();
@@ -5119,10 +5111,6 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxMDIParentFrame_php*) _this)->evnArray);
-		
-		array_init(((wxMDIParentFrame_php*) _this)->evnArray);
-		
 		((wxMDIParentFrame_php*) _this)->phpObj = getThis();
 		
 		((wxMDIParentFrame_php*) _this)->InitProperties();
@@ -5353,10 +5341,6 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMDIChildFrame);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMDIChildFrame_php*) _this)->evnArray);
-		
-		array_init(((wxMDIChildFrame_php*) _this)->evnArray);
 		
 		((wxMDIChildFrame_php*) _this)->phpObj = getThis();
 		
@@ -6540,10 +6524,6 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxMiniFrame_php*) _this)->evnArray);
-		
-		array_init(((wxMiniFrame_php*) _this)->evnArray);
-		
 		((wxMiniFrame_php*) _this)->phpObj = getThis();
 		
 		((wxMiniFrame_php*) _this)->InitProperties();
@@ -6977,10 +6957,6 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPopupWindow);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPopupWindow_php*) _this)->evnArray);
-		
-		array_init(((wxPopupWindow_php*) _this)->evnArray);
 		
 		((wxPopupWindow_php*) _this)->phpObj = getThis();
 		
@@ -7482,10 +7458,6 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPopupTransientWindow);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPopupTransientWindow_php*) _this)->evnArray);
-		
-		array_init(((wxPopupTransientWindow_php*) _this)->evnArray);
 		
 		((wxPopupTransientWindow_php*) _this)->phpObj = getThis();
 		
@@ -8919,10 +8891,6 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPropertySheetDialog_php*) _this)->evnArray);
-		
-		array_init(((wxPropertySheetDialog_php*) _this)->evnArray);
-		
 		((wxPropertySheetDialog_php*) _this)->phpObj = getThis();
 		
 		((wxPropertySheetDialog_php*) _this)->InitProperties();
@@ -9322,10 +9290,6 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxSplashScreen_php*) _this)->evnArray);
-		
-		array_init(((wxSplashScreen_php*) _this)->evnArray);
-		
 		((wxSplashScreen_php*) _this)->phpObj = getThis();
 		
 		((wxSplashScreen_php*) _this)->InitProperties();
@@ -9593,10 +9557,6 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTopLevelWindow);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTopLevelWindow_php*) _this)->evnArray);
-		
-		array_init(((wxTopLevelWindow_php*) _this)->evnArray);
 		
 		((wxTopLevelWindow_php*) _this)->phpObj = getThis();
 		
@@ -12191,8 +12151,6 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxSize));
 				((wxSize_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxSize_php*) ptr)->evnArray);
-				array_init(((wxSize_php*) ptr)->evnArray);
 				((wxSize_php*)ptr)->InitProperties();
 
 

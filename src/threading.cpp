@@ -660,10 +660,6 @@ PHP_METHOD(php_wxCondition, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxCondition_php*) _this)->evnArray);
-		
-		array_init(((wxCondition_php*) _this)->evnArray);
-		
 		((wxCondition_php*) _this)->phpObj = getThis();
 		
 		((wxCondition_php*) _this)->InitProperties();
@@ -806,10 +802,6 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxCriticalSectionLocker);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxCriticalSectionLocker_php*) _this)->evnArray);
-		
-		array_init(((wxCriticalSectionLocker_php*) _this)->evnArray);
 		
 		((wxCriticalSectionLocker_php*) _this)->phpObj = getThis();
 		
@@ -1646,10 +1638,6 @@ PHP_METHOD(php_wxCriticalSection, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxCriticalSection_php*) _this)->evnArray);
-		
-		array_init(((wxCriticalSection_php*) _this)->evnArray);
-		
 		((wxCriticalSection_php*) _this)->phpObj = getThis();
 		
 		((wxCriticalSection_php*) _this)->InitProperties();
@@ -1784,10 +1772,6 @@ PHP_METHOD(php_wxThread, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxThread);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxThread_php*) _this)->evnArray);
-		
-		array_init(((wxThread_php*) _this)->evnArray);
 		
 		((wxThread_php*) _this)->phpObj = getThis();
 		
@@ -4802,10 +4786,6 @@ PHP_METHOD(php_wxSemaphore, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxSemaphore_php*) _this)->evnArray);
-		
-		array_init(((wxSemaphore_php*) _this)->evnArray);
-		
 		((wxSemaphore_php*) _this)->phpObj = getThis();
 		
 		((wxSemaphore_php*) _this)->InitProperties();
@@ -5044,10 +5024,6 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMutexLocker);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMutexLocker_php*) _this)->evnArray);
-		
-		array_init(((wxMutexLocker_php*) _this)->evnArray);
 		
 		((wxMutexLocker_php*) _this)->phpObj = getThis();
 		
@@ -5572,10 +5548,6 @@ PHP_METHOD(php_wxMutex, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMutex);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMutex_php*) _this)->evnArray);
-		
-		array_init(((wxMutex_php*) _this)->evnArray);
 		
 		((wxMutex_php*) _this)->phpObj = getThis();
 		

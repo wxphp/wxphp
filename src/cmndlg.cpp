@@ -152,10 +152,6 @@ PHP_METHOD(php_wxAboutDialogInfo, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAboutDialogInfo_php*) _this)->evnArray);
-		
-		array_init(((wxAboutDialogInfo_php*) _this)->evnArray);
-		
 		((wxAboutDialogInfo_php*) _this)->phpObj = getThis();
 		
 		((wxAboutDialogInfo_php*) _this)->InitProperties();
@@ -2552,10 +2548,6 @@ PHP_METHOD(php_wxBusyInfo, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxBusyInfo_php*) _this)->evnArray);
-		
-		array_init(((wxBusyInfo_php*) _this)->evnArray);
-		
 		((wxBusyInfo_php*) _this)->phpObj = getThis();
 		
 		((wxBusyInfo_php*) _this)->InitProperties();
@@ -3373,10 +3365,6 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxSingleChoiceDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxSingleChoiceDialog_php*) _this)->evnArray);
-		
-		array_init(((wxSingleChoiceDialog_php*) _this)->evnArray);
 		
 		((wxSingleChoiceDialog_php*) _this)->phpObj = getThis();
 		
@@ -6055,10 +6043,6 @@ PHP_METHOD(php_wxPrintDialogData, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPrintDialogData_php*) _this)->evnArray);
-		
-		array_init(((wxPrintDialogData_php*) _this)->evnArray);
-		
 		((wxPrintDialogData_php*) _this)->phpObj = getThis();
 		
 		((wxPrintDialogData_php*) _this)->InitProperties();
@@ -6195,10 +6179,6 @@ PHP_METHOD(php_wxColourDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxColourDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxColourDialog_php*) _this)->evnArray);
-		
-		array_init(((wxColourDialog_php*) _this)->evnArray);
 		
 		((wxColourDialog_php*) _this)->phpObj = getThis();
 		
@@ -6681,10 +6661,6 @@ PHP_METHOD(php_wxColourData, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxColourData);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxColourData_php*) _this)->evnArray);
-		
-		array_init(((wxColourData_php*) _this)->evnArray);
 		
 		((wxColourData_php*) _this)->phpObj = getThis();
 		
@@ -10659,10 +10635,6 @@ PHP_METHOD(php_wxDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDialog_php*) _this)->evnArray);
-		
-		array_init(((wxDialog_php*) _this)->evnArray);
-		
 		((wxDialog_php*) _this)->phpObj = getThis();
 		
 		((wxDialog_php*) _this)->InitProperties();
@@ -14042,10 +14014,6 @@ PHP_METHOD(php_wxDirDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDirDialog_php*) _this)->evnArray);
-		
-		array_init(((wxDirDialog_php*) _this)->evnArray);
-		
 		((wxDirDialog_php*) _this)->phpObj = getThis();
 		
 		((wxDirDialog_php*) _this)->InitProperties();
@@ -14786,10 +14754,6 @@ PHP_METHOD(php_wxFindReplaceData, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFindReplaceData_php*) _this)->evnArray);
-		
-		array_init(((wxFindReplaceData_php*) _this)->evnArray);
-		
 		((wxFindReplaceData_php*) _this)->phpObj = getThis();
 		
 		((wxFindReplaceData_php*) _this)->InitProperties();
@@ -15235,10 +15199,6 @@ PHP_METHOD(php_wxFindReplaceDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFindReplaceDialog_php*) _this)->evnArray);
-		
-		array_init(((wxFindReplaceDialog_php*) _this)->evnArray);
-		
 		((wxFindReplaceDialog_php*) _this)->phpObj = getThis();
 		
 		((wxFindReplaceDialog_php*) _this)->InitProperties();
@@ -15485,10 +15445,6 @@ PHP_METHOD(php_wxFileDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFileDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFileDialog_php*) _this)->evnArray);
-		
-		array_init(((wxFileDialog_php*) _this)->evnArray);
 		
 		((wxFileDialog_php*) _this)->phpObj = getThis();
 		
@@ -17301,10 +17257,6 @@ PHP_METHOD(php_wxFontData, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFontData);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFontData_php*) _this)->evnArray);
-		
-		array_init(((wxFontData_php*) _this)->evnArray);
 		
 		((wxFontData_php*) _this)->phpObj = getThis();
 		
@@ -19342,10 +19294,6 @@ PHP_METHOD(php_wxFontDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFontDialog_php*) _this)->evnArray);
-		
-		array_init(((wxFontDialog_php*) _this)->evnArray);
-		
 		((wxFontDialog_php*) _this)->phpObj = getThis();
 		
 		((wxFontDialog_php*) _this)->InitProperties();
@@ -20704,10 +20652,6 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMessageDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMessageDialog_php*) _this)->evnArray);
-		
-		array_init(((wxMessageDialog_php*) _this)->evnArray);
 		
 		((wxMessageDialog_php*) _this)->phpObj = getThis();
 		
@@ -22559,10 +22503,6 @@ PHP_METHOD(php_wxGenericProgressDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGenericProgressDialog_php*) _this)->evnArray);
-		
-		array_init(((wxGenericProgressDialog_php*) _this)->evnArray);
-		
 		((wxGenericProgressDialog_php*) _this)->phpObj = getThis();
 		
 		((wxGenericProgressDialog_php*) _this)->InitProperties();
@@ -22920,10 +22860,6 @@ PHP_METHOD(php_wxRearrangeDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRearrangeDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRearrangeDialog_php*) _this)->evnArray);
-		
-		array_init(((wxRearrangeDialog_php*) _this)->evnArray);
 		
 		((wxRearrangeDialog_php*) _this)->phpObj = getThis();
 		
@@ -24597,10 +24533,6 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxSymbolPickerDialog_php*) _this)->evnArray);
-		
-		array_init(((wxSymbolPickerDialog_php*) _this)->evnArray);
-		
 		((wxSymbolPickerDialog_php*) _this)->phpObj = getThis();
 		
 		((wxSymbolPickerDialog_php*) _this)->InitProperties();
@@ -24777,10 +24709,6 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPasswordEntryDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPasswordEntryDialog_php*) _this)->evnArray);
-		
-		array_init(((wxPasswordEntryDialog_php*) _this)->evnArray);
 		
 		((wxPasswordEntryDialog_php*) _this)->phpObj = getThis();
 		
@@ -25270,10 +25198,6 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTextEntryDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTextEntryDialog_php*) _this)->evnArray);
-		
-		array_init(((wxTextEntryDialog_php*) _this)->evnArray);
 		
 		((wxTextEntryDialog_php*) _this)->phpObj = getThis();
 		
@@ -27516,10 +27440,6 @@ PHP_METHOD(php_wxWizard, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxWizard);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxWizard_php*) _this)->evnArray);
-		
-		array_init(((wxWizard_php*) _this)->evnArray);
 		
 		((wxWizard_php*) _this)->phpObj = getThis();
 		

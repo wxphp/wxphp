@@ -22632,10 +22632,6 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxBufferedDC_php*) _this)->evnArray);
-		
-		array_init(((wxBufferedDC_php*) _this)->evnArray);
-		
 		((wxBufferedDC_php*) _this)->phpObj = getThis();
 		
 		((wxBufferedDC_php*) _this)->InitProperties();
@@ -22778,10 +22774,6 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxAutoBufferedPaintDC);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxAutoBufferedPaintDC_php*) _this)->evnArray);
-		
-		array_init(((wxAutoBufferedPaintDC_php*) _this)->evnArray);
 		
 		((wxAutoBufferedPaintDC_php*) _this)->phpObj = getThis();
 		
@@ -23024,10 +23016,6 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxBufferedPaintDC_php*) _this)->evnArray);
-		
-		array_init(((wxBufferedPaintDC_php*) _this)->evnArray);
-		
 		((wxBufferedPaintDC_php*) _this)->phpObj = getThis();
 		
 		((wxBufferedPaintDC_php*) _this)->InitProperties();
@@ -23170,10 +23158,6 @@ PHP_METHOD(php_wxPaintDC, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPaintDC);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPaintDC_php*) _this)->evnArray);
-		
-		array_init(((wxPaintDC_php*) _this)->evnArray);
 		
 		((wxPaintDC_php*) _this)->phpObj = getThis();
 		
@@ -23318,10 +23302,6 @@ PHP_METHOD(php_wxClientDC, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxClientDC_php*) _this)->evnArray);
-		
-		array_init(((wxClientDC_php*) _this)->evnArray);
-		
 		((wxClientDC_php*) _this)->phpObj = getThis();
 		
 		((wxClientDC_php*) _this)->InitProperties();
@@ -23464,10 +23444,6 @@ PHP_METHOD(php_wxWindowDC, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxWindowDC);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxWindowDC_php*) _this)->evnArray);
-		
-		array_init(((wxWindowDC_php*) _this)->evnArray);
 		
 		((wxWindowDC_php*) _this)->phpObj = getThis();
 		
@@ -23959,10 +23935,6 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxMemoryDC_php*) _this)->evnArray);
-		
-		array_init(((wxMemoryDC_php*) _this)->evnArray);
-		
 		((wxMemoryDC_php*) _this)->phpObj = getThis();
 		
 		((wxMemoryDC_php*) _this)->InitProperties();
@@ -24106,10 +24078,6 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMirrorDC);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMirrorDC_php*) _this)->evnArray);
-		
-		array_init(((wxMirrorDC_php*) _this)->evnArray);
 		
 		((wxMirrorDC_php*) _this)->phpObj = getThis();
 		
@@ -24283,10 +24251,6 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPostScriptDC);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPostScriptDC_php*) _this)->evnArray);
-		
-		array_init(((wxPostScriptDC_php*) _this)->evnArray);
 		
 		((wxPostScriptDC_php*) _this)->phpObj = getThis();
 		
@@ -24690,10 +24654,6 @@ PHP_METHOD(php_wxScreenDC, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxScreenDC);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxScreenDC_php*) _this)->evnArray);
-		
-		array_init(((wxScreenDC_php*) _this)->evnArray);
 		
 		((wxScreenDC_php*) _this)->phpObj = getThis();
 		

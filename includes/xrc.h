@@ -33,8 +33,6 @@ class wxXmlResourceHandler_php: public wxXmlResourceHandler{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -71,8 +69,6 @@ class wxXmlResource_php: public wxXmlResource{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

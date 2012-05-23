@@ -31,8 +31,6 @@ class wxColourPickerCtrl_php: public wxColourPickerCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -311,8 +309,6 @@ class wxDatePickerCtrl_php: public wxDatePickerCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -580,8 +576,6 @@ class wxFilePickerCtrl_php: public wxFilePickerCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -862,8 +856,6 @@ class wxDirPickerCtrl_php: public wxDirPickerCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1144,8 +1136,6 @@ class wxFontPickerCtrl_php: public wxFontPickerCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1425,8 +1415,6 @@ class wxPickerBase_php: public wxPickerBase{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1704,8 +1692,6 @@ class wxTimePickerCtrl_php: public wxTimePickerCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

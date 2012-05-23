@@ -458,10 +458,6 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellAutoWrapStringRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellAutoWrapStringRenderer_php*) _this)->evnArray);
-		
 		((wxGridCellAutoWrapStringRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellAutoWrapStringRenderer_php*) _this)->InitProperties();
@@ -581,10 +577,6 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridCellBoolRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridCellBoolRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellBoolRenderer_php*) _this)->evnArray);
 		
 		((wxGridCellBoolRenderer_php*) _this)->phpObj = getThis();
 		
@@ -836,10 +828,6 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellDateTimeRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellDateTimeRenderer_php*) _this)->evnArray);
-		
 		((wxGridCellDateTimeRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellDateTimeRenderer_php*) _this)->InitProperties();
@@ -1077,10 +1065,6 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridCellEnumRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridCellEnumRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellEnumRenderer_php*) _this)->evnArray);
 		
 		((wxGridCellEnumRenderer_php*) _this)->phpObj = getThis();
 		
@@ -1932,10 +1916,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellFloatRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellFloatRenderer_php*) _this)->evnArray);
-		
 		((wxGridCellFloatRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellFloatRenderer_php*) _this)->InitProperties();
@@ -2056,10 +2036,6 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellNumberRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellNumberRenderer_php*) _this)->evnArray);
-		
 		((wxGridCellNumberRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellNumberRenderer_php*) _this)->InitProperties();
@@ -2179,10 +2155,6 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridCellStringRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridCellStringRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellStringRenderer_php*) _this)->evnArray);
 		
 		((wxGridCellStringRenderer_php*) _this)->phpObj = getThis();
 		
@@ -4149,10 +4121,6 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellAutoWrapStringEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellAutoWrapStringEditor_php*) _this)->evnArray);
-		
 		((wxGridCellAutoWrapStringEditor_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellAutoWrapStringEditor_php*) _this)->InitProperties();
@@ -4505,10 +4473,6 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellBoolEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellBoolEditor_php*) _this)->evnArray);
-		
 		((wxGridCellBoolEditor_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellBoolEditor_php*) _this)->InitProperties();
@@ -4784,10 +4748,6 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellChoiceEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellChoiceEditor_php*) _this)->evnArray);
-		
 		((wxGridCellChoiceEditor_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellChoiceEditor_php*) _this)->InitProperties();
@@ -4924,10 +4884,6 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellEnumEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellEnumEditor_php*) _this)->evnArray);
-		
 		((wxGridCellEnumEditor_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellEnumEditor_php*) _this)->InitProperties();
@@ -5047,10 +5003,6 @@ PHP_METHOD(php_wxGridCellTextEditor, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridCellTextEditor);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridCellTextEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellTextEditor_php*) _this)->evnArray);
 		
 		((wxGridCellTextEditor_php*) _this)->phpObj = getThis();
 		
@@ -5319,10 +5271,6 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridCellFloatEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellFloatEditor_php*) _this)->evnArray);
-		
 		((wxGridCellFloatEditor_php*) _this)->phpObj = getThis();
 		
 		((wxGridCellFloatEditor_php*) _this)->InitProperties();
@@ -5570,10 +5518,6 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridCellNumberEditor);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridCellNumberEditor_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellNumberEditor_php*) _this)->evnArray);
 		
 		((wxGridCellNumberEditor_php*) _this)->phpObj = getThis();
 		
@@ -8675,10 +8619,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridCellAttr);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridCellAttr_php*) _this)->evnArray);
-		
-		array_init(((wxGridCellAttr_php*) _this)->evnArray);
 		
 		((wxGridCellAttr_php*) _this)->phpObj = getThis();
 		
@@ -12837,10 +12777,6 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridTableBase_php*) _this)->evnArray);
-		
-		array_init(((wxGridTableBase_php*) _this)->evnArray);
-		
 		((wxGridTableBase_php*) _this)->phpObj = getThis();
 		
 		((wxGridTableBase_php*) _this)->InitProperties();
@@ -12960,10 +12896,6 @@ PHP_METHOD(php_wxGridSizesInfo, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridSizesInfo);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridSizesInfo_php*) _this)->evnArray);
-		
-		array_init(((wxGridSizesInfo_php*) _this)->evnArray);
 		
 		((wxGridSizesInfo_php*) _this)->phpObj = getThis();
 		
@@ -35726,10 +35658,6 @@ PHP_METHOD(php_wxGrid, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGrid_php*) _this)->evnArray);
-		
-		array_init(((wxGrid_php*) _this)->evnArray);
-		
 		((wxGrid_php*) _this)->phpObj = getThis();
 		
 		((wxGrid_php*) _this)->InitProperties();
@@ -36001,10 +35929,6 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGridUpdateLocker);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGridUpdateLocker_php*) _this)->evnArray);
-		
-		array_init(((wxGridUpdateLocker_php*) _this)->evnArray);
 		
 		((wxGridUpdateLocker_php*) _this)->phpObj = getThis();
 		

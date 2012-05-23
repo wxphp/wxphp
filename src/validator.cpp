@@ -729,10 +729,6 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGenericValidator_php*) _this)->evnArray);
-		
-		array_init(((wxGenericValidator_php*) _this)->evnArray);
-		
 		((wxGenericValidator_php*) _this)->phpObj = getThis();
 		
 		((wxGenericValidator_php*) _this)->InitProperties();
@@ -852,10 +848,6 @@ PHP_METHOD(php_wxValidator, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxValidator);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxValidator_php*) _this)->evnArray);
-		
-		array_init(((wxValidator_php*) _this)->evnArray);
 		
 		((wxValidator_php*) _this)->phpObj = getThis();
 		
@@ -3320,10 +3312,6 @@ PHP_METHOD(php_wxTextValidator, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTextValidator);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTextValidator_php*) _this)->evnArray);
-		
-		array_init(((wxTextValidator_php*) _this)->evnArray);
 		
 		((wxTextValidator_php*) _this)->phpObj = getThis();
 		

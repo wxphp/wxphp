@@ -843,10 +843,6 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxColourPickerCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxColourPickerCtrl_php*) _this)->evnArray);
-		
 		((wxColourPickerCtrl_php*) _this)->phpObj = getThis();
 		
 		((wxColourPickerCtrl_php*) _this)->InitProperties();
@@ -1092,10 +1088,6 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDatePickerCtrl);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDatePickerCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxDatePickerCtrl_php*) _this)->evnArray);
 		
 		((wxDatePickerCtrl_php*) _this)->phpObj = getThis();
 		
@@ -2656,10 +2648,6 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFilePickerCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxFilePickerCtrl_php*) _this)->evnArray);
-		
 		((wxFilePickerCtrl_php*) _this)->phpObj = getThis();
 		
 		((wxFilePickerCtrl_php*) _this)->InitProperties();
@@ -3721,10 +3709,6 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDirPickerCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxDirPickerCtrl_php*) _this)->evnArray);
-		
 		((wxDirPickerCtrl_php*) _this)->phpObj = getThis();
 		
 		((wxDirPickerCtrl_php*) _this)->InitProperties();
@@ -4694,10 +4678,6 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFontPickerCtrl);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFontPickerCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxFontPickerCtrl_php*) _this)->evnArray);
 		
 		((wxFontPickerCtrl_php*) _this)->phpObj = getThis();
 		
@@ -6793,10 +6773,6 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTimePickerCtrl);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTimePickerCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxTimePickerCtrl_php*) _this)->evnArray);
 		
 		((wxTimePickerCtrl_php*) _this)->phpObj = getThis();
 		

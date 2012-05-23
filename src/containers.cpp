@@ -152,10 +152,6 @@ PHP_METHOD(php_wxClientData, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxClientData_php*) _this)->evnArray);
-		
-		array_init(((wxClientData_php*) _this)->evnArray);
-		
 		((wxClientData_php*) _this)->phpObj = getThis();
 		
 		((wxClientData_php*) _this)->InitProperties();
@@ -510,10 +506,6 @@ PHP_METHOD(php_wxTreeItemData, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTreeItemData);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTreeItemData_php*) _this)->evnArray);
-		
-		array_init(((wxTreeItemData_php*) _this)->evnArray);
 		
 		((wxTreeItemData_php*) _this)->phpObj = getThis();
 		

@@ -702,10 +702,6 @@ PHP_METHOD(php_wxLogWindow, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxLogWindow_php*) _this)->evnArray);
-		
-		array_init(((wxLogWindow_php*) _this)->evnArray);
-		
 		((wxLogWindow_php*) _this)->phpObj = getThis();
 		
 		((wxLogWindow_php*) _this)->InitProperties();
@@ -1420,10 +1416,6 @@ PHP_METHOD(php_wxLogChain, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxLogChain_php*) _this)->evnArray);
-		
-		array_init(((wxLogChain_php*) _this)->evnArray);
-		
 		((wxLogChain_php*) _this)->phpObj = getThis();
 		
 		((wxLogChain_php*) _this)->InitProperties();
@@ -1639,10 +1631,6 @@ PHP_METHOD(php_wxLogGui, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxLogGui);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxLogGui_php*) _this)->evnArray);
-		
-		array_init(((wxLogGui_php*) _this)->evnArray);
 		
 		((wxLogGui_php*) _this)->phpObj = getThis();
 		
@@ -2040,10 +2028,6 @@ PHP_METHOD(php_wxLogBuffer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxLogBuffer_php*) _this)->evnArray);
-		
-		array_init(((wxLogBuffer_php*) _this)->evnArray);
-		
 		((wxLogBuffer_php*) _this)->phpObj = getThis();
 		
 		((wxLogBuffer_php*) _this)->InitProperties();
@@ -2163,10 +2147,6 @@ PHP_METHOD(php_wxLogInterposer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxLogInterposer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxLogInterposer_php*) _this)->evnArray);
-		
-		array_init(((wxLogInterposer_php*) _this)->evnArray);
 		
 		((wxLogInterposer_php*) _this)->phpObj = getThis();
 		
@@ -2310,10 +2290,6 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxLogTextCtrl);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxLogTextCtrl_php*) _this)->evnArray);
-		
-		array_init(((wxLogTextCtrl_php*) _this)->evnArray);
 		
 		((wxLogTextCtrl_php*) _this)->phpObj = getThis();
 		

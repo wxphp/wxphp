@@ -272,10 +272,6 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAcceleratorEntry_php*) _this)->evnArray);
-		
-		array_init(((wxAcceleratorEntry_php*) _this)->evnArray);
-		
 		((wxAcceleratorEntry_php*) _this)->phpObj = getThis();
 		
 		((wxAcceleratorEntry_php*) _this)->InitProperties();
@@ -1332,10 +1328,6 @@ PHP_METHOD(php_wxAcceleratorTable, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAcceleratorTable_php*) _this)->evnArray);
-		
-		array_init(((wxAcceleratorTable_php*) _this)->evnArray);
-		
 		((wxAcceleratorTable_php*) _this)->phpObj = getThis();
 		
 		((wxAcceleratorTable_php*) _this)->InitProperties();
@@ -1661,10 +1653,6 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxCalendarDateAttr);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxCalendarDateAttr_php*) _this)->evnArray);
-		
-		array_init(((wxCalendarDateAttr_php*) _this)->evnArray);
 		
 		((wxCalendarDateAttr_php*) _this)->phpObj = getThis();
 		
@@ -6945,10 +6933,6 @@ PHP_METHOD(php_wxPageSetupDialogData, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPageSetupDialogData_php*) _this)->evnArray);
-		
-		array_init(((wxPageSetupDialogData_php*) _this)->evnArray);
-		
 		((wxPageSetupDialogData_php*) _this)->phpObj = getThis();
 		
 		((wxPageSetupDialogData_php*) _this)->InitProperties();
@@ -9342,10 +9326,6 @@ PHP_METHOD(php_wxPrintData, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPrintData_php*) _this)->evnArray);
-		
-		array_init(((wxPrintData_php*) _this)->evnArray);
-		
 		((wxPrintData_php*) _this)->phpObj = getThis();
 		
 		((wxPrintData_php*) _this)->InitProperties();
@@ -9556,10 +9536,6 @@ PHP_METHOD(php_wxRealPoint, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRealPoint);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRealPoint_php*) _this)->evnArray);
-		
-		array_init(((wxRealPoint_php*) _this)->evnArray);
 		
 		((wxRealPoint_php*) _this)->phpObj = getThis();
 		
@@ -9984,10 +9960,6 @@ PHP_METHOD(php_wxRect, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRect);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRect_php*) _this)->evnArray);
-		
-		array_init(((wxRect_php*) _this)->evnArray);
 		
 		((wxRect_php*) _this)->phpObj = getThis();
 		
@@ -13970,10 +13942,6 @@ PHP_METHOD(php_wxPoint, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPoint_php*) _this)->evnArray);
-		
-		array_init(((wxPoint_php*) _this)->evnArray);
-		
 		((wxPoint_php*) _this)->phpObj = getThis();
 		
 		((wxPoint_php*) _this)->InitProperties();
@@ -14291,10 +14259,6 @@ PHP_METHOD(php_wxSize, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxSize);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxSize_php*) _this)->evnArray);
-		
-		array_init(((wxSize_php*) _this)->evnArray);
 		
 		((wxSize_php*) _this)->phpObj = getThis();
 		
@@ -15695,10 +15659,6 @@ PHP_METHOD(php_wxListItemAttr, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxListItemAttr_php*) _this)->evnArray);
-		
-		array_init(((wxListItemAttr_php*) _this)->evnArray);
-		
 		((wxListItemAttr_php*) _this)->phpObj = getThis();
 		
 		((wxListItemAttr_php*) _this)->InitProperties();
@@ -16791,10 +16751,6 @@ PHP_METHOD(php_wxListItem, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxListItem);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxListItem_php*) _this)->evnArray);
-		
-		array_init(((wxListItem_php*) _this)->evnArray);
 		
 		((wxListItem_php*) _this)->phpObj = getThis();
 		
@@ -19978,10 +19934,6 @@ PHP_METHOD(php_wxFileType, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFileType_php*) _this)->evnArray);
-		
-		array_init(((wxFileType_php*) _this)->evnArray);
-		
 		((wxFileType_php*) _this)->phpObj = getThis();
 		
 		((wxFileType_php*) _this)->InitProperties();
@@ -20729,10 +20681,6 @@ PHP_METHOD(php_wxPosition, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPosition);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPosition_php*) _this)->evnArray);
-		
-		array_init(((wxPosition_php*) _this)->evnArray);
 		
 		((wxPosition_php*) _this)->phpObj = getThis();
 		
@@ -23202,10 +23150,6 @@ PHP_METHOD(php_wxRegion, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxRegion_php*) _this)->evnArray);
-		
-		array_init(((wxRegion_php*) _this)->evnArray);
-		
 		((wxRegion_php*) _this)->phpObj = getThis();
 		
 		((wxRegion_php*) _this)->InitProperties();
@@ -23646,10 +23590,6 @@ PHP_METHOD(php_wxStatusBarPane, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxStatusBarPane_php*) _this)->evnArray);
-		
-		array_init(((wxStatusBarPane_php*) _this)->evnArray);
-		
 		((wxStatusBarPane_php*) _this)->phpObj = getThis();
 		
 		((wxStatusBarPane_php*) _this)->InitProperties();
@@ -23769,10 +23709,6 @@ PHP_METHOD(php_wxTreeItemId, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTreeItemId);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTreeItemId_php*) _this)->evnArray);
-		
-		array_init(((wxTreeItemId_php*) _this)->evnArray);
 		
 		((wxTreeItemId_php*) _this)->phpObj = getThis();
 		
@@ -27360,10 +27296,6 @@ PHP_METHOD(php_wxVariant, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxVariant_php*) _this)->evnArray);
-		
-		array_init(((wxVariant_php*) _this)->evnArray);
-		
 		((wxVariant_php*) _this)->phpObj = getThis();
 		
 		((wxVariant_php*) _this)->InitProperties();
@@ -28256,10 +28188,6 @@ PHP_METHOD(php_wxVariantData, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxVariantData);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxVariantData_php*) _this)->evnArray);
-		
-		array_init(((wxVariantData_php*) _this)->evnArray);
 		
 		((wxVariantData_php*) _this)->phpObj = getThis();
 		
@@ -29347,10 +29275,6 @@ PHP_METHOD(php_wxVersionInfo, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxVersionInfo);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxVersionInfo_php*) _this)->evnArray);
-		
-		array_init(((wxVersionInfo_php*) _this)->evnArray);
 		
 		((wxVersionInfo_php*) _this)->phpObj = getThis();
 		

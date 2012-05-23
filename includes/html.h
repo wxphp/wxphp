@@ -33,8 +33,6 @@ class wxHtmlHelpController_php: public wxHtmlHelpController{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -72,8 +70,6 @@ class wxHtmlModalHelp_php: public wxHtmlModalHelp{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -100,8 +96,6 @@ class wxHtmlHelpData_php: public wxHtmlHelpData{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -139,8 +133,6 @@ class wxHtmlHelpDialog_php: public wxHtmlHelpDialog{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -441,8 +433,6 @@ class wxHtmlHelpFrame_php: public wxHtmlHelpFrame{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -744,8 +734,6 @@ class wxHtmlHelpWindow_php: public wxHtmlHelpWindow{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1013,8 +1001,6 @@ class wxHtmlRenderingStyle_php: public wxHtmlRenderingStyle{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1040,8 +1026,6 @@ class wxHtmlRenderingInfo_php: public wxHtmlRenderingInfo{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1070,8 +1054,6 @@ class wxHtmlCell_php: public wxHtmlCell{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1121,8 +1103,6 @@ class wxHtmlContainerCell_php: public wxHtmlContainerCell{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1187,8 +1167,6 @@ class wxHtmlLinkInfo_php: public wxHtmlLinkInfo{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1225,8 +1203,6 @@ class wxHtmlColourCell_php: public wxHtmlColourCell{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1276,8 +1252,6 @@ class wxHtmlWidgetCell_php: public wxHtmlWidgetCell{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1329,8 +1303,6 @@ class wxHtmlFilter_php: public wxHtmlFilter{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1369,8 +1341,6 @@ class wxHtmlTagHandler_php: public wxHtmlTagHandler{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1403,8 +1373,6 @@ class wxHtmlTag_php: public wxHtmlTag{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1447,8 +1415,6 @@ class wxHtmlWindow_php: public wxHtmlWindow{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1732,8 +1698,6 @@ class wxHtmlLinkEvent_php: public wxHtmlLinkEvent{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1791,8 +1755,6 @@ class wxHtmlCellEvent_php: public wxHtmlCellEvent{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1853,8 +1815,6 @@ class wxHtmlDCRenderer_php: public wxHtmlDCRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1894,8 +1854,6 @@ class wxHtmlEasyPrinting_php: public wxHtmlEasyPrinting{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1943,8 +1901,6 @@ class wxHtmlPrintout_php: public wxHtmlPrintout{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -2006,8 +1962,6 @@ class wxHtmlTagsModule_php: public wxHtmlTagsModule{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -2043,8 +1997,6 @@ class wxHtmlWinTagHandler_php: public wxHtmlWinTagHandler{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -2075,8 +2027,6 @@ class wxHtmlWinParser_php: public wxHtmlWinParser{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

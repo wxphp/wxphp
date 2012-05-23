@@ -480,10 +480,6 @@ PHP_METHOD(php_wxRefCounter, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxRefCounter_php*) _this)->evnArray);
-		
-		array_init(((wxRefCounter_php*) _this)->evnArray);
-		
 		((wxRefCounter_php*) _this)->phpObj = getThis();
 		
 		((wxRefCounter_php*) _this)->InitProperties();
@@ -657,10 +653,6 @@ PHP_METHOD(php_wxObject, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxObject);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxObject_php*) _this)->evnArray);
-		
-		array_init(((wxObject_php*) _this)->evnArray);
 		
 		((wxObject_php*) _this)->phpObj = getThis();
 		

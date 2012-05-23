@@ -33,8 +33,6 @@ class wxTextAttr_php: public wxTextAttr{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

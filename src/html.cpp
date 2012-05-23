@@ -1727,10 +1727,6 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlHelpController_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlHelpController_php*) _this)->evnArray);
-		
 		((wxHtmlHelpController_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlHelpController_php*) _this)->InitProperties();
@@ -1900,10 +1896,6 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlModalHelp);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlModalHelp_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlModalHelp_php*) _this)->evnArray);
 		
 		((wxHtmlModalHelp_php*) _this)->phpObj = getThis();
 		
@@ -2443,10 +2435,6 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlHelpData);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlHelpData_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlHelpData_php*) _this)->evnArray);
 		
 		((wxHtmlHelpData_php*) _this)->phpObj = getThis();
 		
@@ -3280,10 +3268,6 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlHelpDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlHelpDialog_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlHelpDialog_php*) _this)->evnArray);
 		
 		((wxHtmlHelpDialog_php*) _this)->phpObj = getThis();
 		
@@ -4209,10 +4193,6 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlHelpFrame);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlHelpFrame_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlHelpFrame_php*) _this)->evnArray);
 		
 		((wxHtmlHelpFrame_php*) _this)->phpObj = getThis();
 		
@@ -5906,10 +5886,6 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlHelpWindow_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlHelpWindow_php*) _this)->evnArray);
-		
 		((wxHtmlHelpWindow_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlHelpWindow_php*) _this)->InitProperties();
@@ -6488,10 +6464,6 @@ PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlRenderingInfo);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlRenderingInfo_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlRenderingInfo_php*) _this)->evnArray);
 		
 		((wxHtmlRenderingInfo_php*) _this)->phpObj = getThis();
 		
@@ -8599,10 +8571,6 @@ PHP_METHOD(php_wxHtmlCell, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlCell_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlCell_php*) _this)->evnArray);
-		
 		((wxHtmlCell_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlCell_php*) _this)->InitProperties();
@@ -8883,10 +8851,6 @@ PHP_METHOD(php_wxHtmlContainerCell, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlContainerCell);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlContainerCell_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlContainerCell_php*) _this)->evnArray);
 		
 		((wxHtmlContainerCell_php*) _this)->phpObj = getThis();
 		
@@ -11102,10 +11066,6 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlLinkInfo_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlLinkInfo_php*) _this)->evnArray);
-		
 		((wxHtmlLinkInfo_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlLinkInfo_php*) _this)->InitProperties();
@@ -11261,10 +11221,6 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlColourCell_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlColourCell_php*) _this)->evnArray);
-		
 		((wxHtmlColourCell_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlColourCell_php*) _this)->InitProperties();
@@ -11419,10 +11375,6 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlWidgetCell);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlWidgetCell_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlWidgetCell_php*) _this)->evnArray);
 		
 		((wxHtmlWidgetCell_php*) _this)->phpObj = getThis();
 		
@@ -11708,10 +11660,6 @@ PHP_METHOD(php_wxHtmlFilter, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlFilter_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlFilter_php*) _this)->evnArray);
-		
 		((wxHtmlFilter_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlFilter_php*) _this)->InitProperties();
@@ -11980,10 +11928,6 @@ PHP_METHOD(php_wxHtmlTagHandler, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlTagHandler);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlTagHandler_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlTagHandler_php*) _this)->evnArray);
 		
 		((wxHtmlTagHandler_php*) _this)->phpObj = getThis();
 		
@@ -16544,10 +16488,6 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlWindow_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlWindow_php*) _this)->evnArray);
-		
 		((wxHtmlWindow_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlWindow_php*) _this)->InitProperties();
@@ -17188,10 +17128,6 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlLinkEvent_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlLinkEvent_php*) _this)->evnArray);
-		
 		((wxHtmlLinkEvent_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlLinkEvent_php*) _this)->InitProperties();
@@ -17792,10 +17728,6 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlCellEvent_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlCellEvent_php*) _this)->evnArray);
-		
 		((wxHtmlCellEvent_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlCellEvent_php*) _this)->InitProperties();
@@ -18107,10 +18039,6 @@ PHP_METHOD(php_wxHtmlDCRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlDCRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlDCRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlDCRenderer_php*) _this)->evnArray);
 		
 		((wxHtmlDCRenderer_php*) _this)->phpObj = getThis();
 		
@@ -20135,10 +20063,6 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxHtmlEasyPrinting_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlEasyPrinting_php*) _this)->evnArray);
-		
 		((wxHtmlEasyPrinting_php*) _this)->phpObj = getThis();
 		
 		((wxHtmlEasyPrinting_php*) _this)->InitProperties();
@@ -20775,10 +20699,6 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxHtmlPrintout);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxHtmlPrintout_php*) _this)->evnArray);
-		
-		array_init(((wxHtmlPrintout_php*) _this)->evnArray);
 		
 		((wxHtmlPrintout_php*) _this)->phpObj = getThis();
 		

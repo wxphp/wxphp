@@ -30,8 +30,6 @@ class wxScrolledWindow_php: public wxScrolledWindow{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -288,8 +286,6 @@ class wxRibbonButtonBarButtonBase_php{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -314,8 +310,6 @@ class wxRibbonGalleryItem_php{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -340,8 +334,6 @@ class wxRibbonToolBarToolBase_php{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -366,8 +358,6 @@ class wxNonOwnedWindow_php: public wxNonOwnedWindow{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -624,8 +614,6 @@ class wxAnyButton_php: public wxAnyButton{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -904,8 +892,6 @@ class wxWithImages_php: public wxWithImages{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -936,8 +922,6 @@ class wxTextCompleter_php: public wxTextCompleter{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -963,8 +947,6 @@ class wxWindowModalDialogEvent_php: public wxWindowModalDialogEvent{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1033,8 +1015,6 @@ class wxPoint2DDouble_php: public wxPoint2DDouble{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1081,8 +1061,6 @@ class wxPoint2DInt_php: public wxPoint2DInt{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1121,8 +1099,6 @@ class wxProgressDialog_php: public wxProgressDialog{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1447,8 +1423,6 @@ class wxLayoutConstraints_php: public wxLayoutConstraints{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1484,8 +1458,6 @@ class wxGridCellAttrProvider_php: public wxGridCellAttrProvider{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1518,8 +1490,6 @@ class wxGridColumnHeaderRenderer_php: public wxGridColumnHeaderRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1545,8 +1515,6 @@ class wxGridColumnHeaderRendererDefault_php: public wxGridColumnHeaderRendererDe
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1574,8 +1542,6 @@ class wxGridCornerHeaderRenderer_php: public wxGridCornerHeaderRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1600,8 +1566,6 @@ class wxGridCornerHeaderRendererDefault_php: public wxGridCornerHeaderRendererDe
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1627,8 +1591,6 @@ class wxGridHeaderLabelsRenderer_php: public wxGridHeaderLabelsRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1654,8 +1616,6 @@ class wxGridRowHeaderRenderer_php: public wxGridRowHeaderRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1681,8 +1641,6 @@ class wxGridRowHeaderRendererDefault_php: public wxGridRowHeaderRendererDefault{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1710,8 +1668,6 @@ class wxPaletteChangedEvent_php: public wxPaletteChangedEvent{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1762,8 +1718,6 @@ class wxFileTypeInfo_php: public wxFileTypeInfo{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1795,8 +1749,6 @@ class wxDisplayChangedEvent_php: public wxDisplayChangedEvent{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1845,8 +1797,6 @@ class wxTimerRunner_php: public wxTimerRunner{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1873,8 +1823,6 @@ class wxToolBarToolBase_php: public wxToolBarToolBase{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1938,8 +1886,6 @@ class wxTextCompleterSimple_php: public wxTextCompleterSimple{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

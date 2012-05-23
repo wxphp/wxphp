@@ -16,8 +16,9 @@ class <?=$class_name?>_php<?if(!$class_methods["_forward_declaration"]){?>: publ
 <?}?>
 	}
 	
-	zval *evnArray;
+<?if($class_name == "wxEvtHandler"){?>
 	void onEvent(wxEvent& evnt);
+<? } ?>
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

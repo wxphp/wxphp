@@ -440,10 +440,6 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewChoiceRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewChoiceRenderer_php*) _this)->evnArray);
-		
 		((wxDataViewChoiceRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewChoiceRenderer_php*) _this)->InitProperties();
@@ -4682,10 +4678,6 @@ PHP_METHOD(php_wxDataViewItemAttr, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewItemAttr_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewItemAttr_php*) _this)->evnArray);
-		
 		((wxDataViewItemAttr_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewItemAttr_php*) _this)->InitProperties();
@@ -5092,10 +5084,6 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewItem);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewItem_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewItem_php*) _this)->evnArray);
 		
 		((wxDataViewItem_php*) _this)->phpObj = getThis();
 		
@@ -5921,10 +5909,6 @@ PHP_METHOD(php_wxDataViewModelNotifier, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewModelNotifier);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewModelNotifier_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewModelNotifier_php*) _this)->evnArray);
 		
 		((wxDataViewModelNotifier_php*) _this)->phpObj = getThis();
 		
@@ -8142,10 +8126,6 @@ PHP_METHOD(php_wxDataViewTextRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewTextRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewTextRenderer_php*) _this)->evnArray);
-		
 		((wxDataViewTextRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewTextRenderer_php*) _this)->InitProperties();
@@ -8303,10 +8283,6 @@ PHP_METHOD(php_wxDataViewIconTextRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewIconTextRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewIconTextRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewIconTextRenderer_php*) _this)->evnArray);
 		
 		((wxDataViewIconTextRenderer_php*) _this)->phpObj = getThis();
 		
@@ -8478,10 +8454,6 @@ PHP_METHOD(php_wxDataViewProgressRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewProgressRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewProgressRenderer_php*) _this)->evnArray);
-		
 		((wxDataViewProgressRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewProgressRenderer_php*) _this)->InitProperties();
@@ -8629,10 +8601,6 @@ PHP_METHOD(php_wxDataViewSpinRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewSpinRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewSpinRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewSpinRenderer_php*) _this)->evnArray);
 		
 		((wxDataViewSpinRenderer_php*) _this)->phpObj = getThis();
 		
@@ -8792,10 +8760,6 @@ PHP_METHOD(php_wxDataViewToggleRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewToggleRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewToggleRenderer_php*) _this)->evnArray);
-		
 		((wxDataViewToggleRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewToggleRenderer_php*) _this)->InitProperties();
@@ -8953,10 +8917,6 @@ PHP_METHOD(php_wxDataViewDateRenderer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewDateRenderer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewDateRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewDateRenderer_php*) _this)->evnArray);
 		
 		((wxDataViewDateRenderer_php*) _this)->phpObj = getThis();
 		
@@ -10609,10 +10569,6 @@ PHP_METHOD(php_wxDataViewBitmapRenderer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewBitmapRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewBitmapRenderer_php*) _this)->evnArray);
-		
 		((wxDataViewBitmapRenderer_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewBitmapRenderer_php*) _this)->InitProperties();
@@ -11122,10 +11078,6 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewColumn);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewColumn_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewColumn_php*) _this)->evnArray);
 		
 		((wxDataViewColumn_php*) _this)->phpObj = getThis();
 		
@@ -12314,10 +12266,6 @@ PHP_METHOD(php_wxDataViewListStore, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewListStore);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewListStore_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewListStore_php*) _this)->evnArray);
 		
 		((wxDataViewListStore_php*) _this)->phpObj = getThis();
 		
@@ -15327,10 +15275,6 @@ PHP_METHOD(php_wxDataViewTreeStore, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxDataViewTreeStore_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewTreeStore_php*) _this)->evnArray);
-		
 		((wxDataViewTreeStore_php*) _this)->phpObj = getThis();
 		
 		((wxDataViewTreeStore_php*) _this)->InitProperties();
@@ -15988,10 +15932,6 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDataViewIconText);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewIconText_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewIconText_php*) _this)->evnArray);
 		
 		((wxDataViewIconText_php*) _this)->phpObj = getThis();
 		
