@@ -709,10 +709,6 @@ PHP_METHOD(php_wxSound, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxSound_php*) _this)->evnArray);
-		
-		array_init(((wxSound_php*) _this)->evnArray);
-		
 		((wxSound_php*) _this)->phpObj = getThis();
 		
 		((wxSound_php*) _this)->InitProperties();

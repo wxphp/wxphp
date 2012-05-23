@@ -4777,10 +4777,6 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxRibbonBar_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonBar_php*) _this)->evnArray);
-		
 		((wxRibbonBar_php*) _this)->phpObj = getThis();
 		
 		((wxRibbonBar_php*) _this)->InitProperties();
@@ -6272,10 +6268,6 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRibbonButtonBar);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRibbonButtonBar_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonButtonBar_php*) _this)->evnArray);
 		
 		((wxRibbonButtonBar_php*) _this)->phpObj = getThis();
 		
@@ -8333,10 +8325,6 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRibbonControl);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRibbonControl_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonControl_php*) _this)->evnArray);
 		
 		((wxRibbonControl_php*) _this)->phpObj = getThis();
 		
@@ -11221,10 +11209,6 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxRibbonGallery_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonGallery_php*) _this)->evnArray);
-		
 		((wxRibbonGallery_php*) _this)->phpObj = getThis();
 		
 		((wxRibbonGallery_php*) _this)->InitProperties();
@@ -12572,10 +12556,6 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRibbonPage);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRibbonPage_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonPage_php*) _this)->evnArray);
 		
 		((wxRibbonPage_php*) _this)->phpObj = getThis();
 		
@@ -14264,10 +14244,6 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxRibbonPanel_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonPanel_php*) _this)->evnArray);
-		
 		((wxRibbonPanel_php*) _this)->phpObj = getThis();
 		
 		((wxRibbonPanel_php*) _this)->InitProperties();
@@ -15741,10 +15717,6 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxRibbonToolBar);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxRibbonToolBar_php*) _this)->evnArray);
-		
-		array_init(((wxRibbonToolBar_php*) _this)->evnArray);
 		
 		((wxRibbonToolBar_php*) _this)->phpObj = getThis();
 		

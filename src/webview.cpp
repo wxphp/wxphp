@@ -160,10 +160,6 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxWebViewHistoryItem_php*) _this)->evnArray);
-		
-		array_init(((wxWebViewHistoryItem_php*) _this)->evnArray);
-		
 		((wxWebViewHistoryItem_php*) _this)->phpObj = getThis();
 		
 		((wxWebViewHistoryItem_php*) _this)->InitProperties();
@@ -492,10 +488,6 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxWebViewHandler_php*) _this)->evnArray);
-		
-		array_init(((wxWebViewHandler_php*) _this)->evnArray);
-		
 		((wxWebViewHandler_php*) _this)->phpObj = getThis();
 		
 		((wxWebViewHandler_php*) _this)->InitProperties();
@@ -819,10 +811,6 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxWebViewArchiveHandler);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxWebViewArchiveHandler_php*) _this)->evnArray);
-		
-		array_init(((wxWebViewArchiveHandler_php*) _this)->evnArray);
 		
 		((wxWebViewArchiveHandler_php*) _this)->phpObj = getThis();
 		

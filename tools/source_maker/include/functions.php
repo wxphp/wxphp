@@ -876,6 +876,84 @@ function remove_methods_implementing_unhandled_arguments(&$classes)
 }
 
 /**
+ * Remove obsolete source and header files
+ * 
+ * For example: if wxWebView is disabled webview.h/webview.cpp aren't
+ * needed anymore.
+ */
+function remove_old_src_and_headers()
+{
+	global $defClassGroups;
+	
+	
+	//Remove unneeded cpp files
+	$src_dir = opendir("./../../src");
+	
+    while (false !== ($current_file = readdir($src_dir))) 
+    {
+		if("".strpos($current_file, ".cpp")."" != "")
+		{
+			$valid_src = false;
+			foreach($defClassGroups as $file_name => $class_list)
+			{
+				//Strip group_class_
+				$file_name = str_replace("group_class_", "", $file_name) . ".cpp";
+				
+				if($file_name == $current_file)
+				{
+					$valid_src = true;
+					break;
+				}
+			}
+			
+			if(!$valid_src)
+			{
+				if(!file_exists("source_templates/$current_file"))
+				{
+					print "Removing: " . $current_file . "\n";
+					unlink("./../../src/$current_file");
+				}
+			}
+		}
+    }
+    
+    closedir($src_dir);
+    
+    //Remove unneeded h files
+	$include_dir = opendir("./../../includes");
+	
+    while (false !== ($current_file = readdir($include_dir))) 
+    {
+		if("".strpos($current_file, ".h")."" != "")
+		{
+			$valid_include = false;
+			foreach($defClassGroups as $file_name => $class_list)
+			{
+				//Strip group_class_
+				$file_name = str_replace("group_class_", "", $file_name) . ".h";
+				
+				if($file_name == $current_file)
+				{
+					$valid_include = true;
+					break;
+				}
+			}
+			
+			if(!$valid_include)
+			{
+				if(!file_exists("source_templates/$current_file"))
+				{
+					print "Removing: " . $current_file . "\n";
+					unlink("./../../includes/$current_file");
+				}
+			}
+		}
+    }
+    
+    closedir($include_dir);
+}
+
+/**
  * Fixes the class_groups.json for correct functioning by 
  * adding classes without a group to a group called others, removing
  * empty groups and class repetitions.
@@ -1600,6 +1678,28 @@ function get_proto_php_type($type, $type_name, $function_name, $class_name=null)
 	}
 	
 	return $method_type;
+}
+
+/**
+ * Only saves content to a file if the new content is not the same
+ * as the original.
+ */
+function file_put_contents_if_different($file, $contents)
+{
+	$actual_file_content = "";
+	
+	if(file_exists($file))
+		$actual_file_content = file_get_contents($file);
+	
+	if(crc32($actual_file_content) != crc32($contents))
+	{
+		print "Updated\n\n";
+		file_put_contents($file, $contents);
+		
+		return;
+	}
+	
+	print "No changes\n\n";
 }
 
 /**

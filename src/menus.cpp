@@ -134,10 +134,6 @@ PHP_METHOD(php_wxMenuBar, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxMenuBar_php*) _this)->evnArray);
-		
-		array_init(((wxMenuBar_php*) _this)->evnArray);
-		
 		((wxMenuBar_php*) _this)->phpObj = getThis();
 		
 		((wxMenuBar_php*) _this)->InitProperties();
@@ -3269,10 +3265,6 @@ PHP_METHOD(php_wxMenu, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMenu);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMenu_php*) _this)->evnArray);
-		
-		array_init(((wxMenu_php*) _this)->evnArray);
 		
 		((wxMenu_php*) _this)->phpObj = getThis();
 		
@@ -9268,10 +9260,6 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxMenuItem);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMenuItem_php*) _this)->evnArray);
-		
-		array_init(((wxMenuItem_php*) _this)->evnArray);
 		
 		((wxMenuItem_php*) _this)->phpObj = getThis();
 		

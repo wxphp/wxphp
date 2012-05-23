@@ -33,8 +33,6 @@ class wxGridCellRenderer_php: public wxGridCellRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -60,8 +58,6 @@ class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRende
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -88,8 +84,6 @@ class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -116,8 +110,6 @@ class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -145,8 +137,6 @@ class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -174,8 +164,6 @@ class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -209,8 +197,6 @@ class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -237,8 +223,6 @@ class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -270,8 +254,6 @@ class wxGridCellEditor_php: public wxGridCellEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -305,8 +287,6 @@ class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -342,8 +322,6 @@ class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -380,8 +358,6 @@ class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -417,8 +393,6 @@ class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -454,8 +428,6 @@ class wxGridCellTextEditor_php: public wxGridCellTextEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -491,8 +463,6 @@ class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -520,8 +490,6 @@ class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -558,8 +526,6 @@ class wxGridCellAttr_php: public wxGridCellAttr{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -615,8 +581,6 @@ class wxGridTableBase_php: public wxGridTableBase{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -688,8 +652,6 @@ class wxGridSizesInfo_php: public wxGridSizesInfo{
 		
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -719,8 +681,6 @@ class wxGrid_php: public wxGrid{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -1184,8 +1144,6 @@ class wxGridUpdateLocker_php: public wxGridUpdateLocker{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

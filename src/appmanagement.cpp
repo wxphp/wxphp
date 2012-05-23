@@ -1875,10 +1875,6 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxEventLoopActivator_php*) _this)->evnArray);
-		
-		array_init(((wxEventLoopActivator_php*) _this)->evnArray);
-		
 		((wxEventLoopActivator_php*) _this)->phpObj = getThis();
 		
 		((wxEventLoopActivator_php*) _this)->InitProperties();
@@ -2132,10 +2128,6 @@ PHP_METHOD(php_wxModule, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxModule);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxModule_php*) _this)->evnArray);
-		
-		array_init(((wxModule_php*) _this)->evnArray);
 		
 		((wxModule_php*) _this)->phpObj = getThis();
 		
@@ -3841,10 +3833,6 @@ PHP_METHOD(php_wxProcess, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxProcess_php*) _this)->evnArray);
-		
-		array_init(((wxProcess_php*) _this)->evnArray);
-		
 		((wxProcess_php*) _this)->phpObj = getThis();
 		
 		((wxProcess_php*) _this)->InitProperties();
@@ -4320,10 +4308,6 @@ PHP_METHOD(php_wxSingleInstanceChecker, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxSingleInstanceChecker);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxSingleInstanceChecker_php*) _this)->evnArray);
-		
-		array_init(((wxSingleInstanceChecker_php*) _this)->evnArray);
 		
 		((wxSingleInstanceChecker_php*) _this)->phpObj = getThis();
 		

@@ -31,8 +31,6 @@ class wxFileSystem_php: public wxFileSystem{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -77,8 +75,6 @@ class wxFileSystemHandler_php: public wxFileSystemHandler{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

@@ -296,10 +296,6 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAuiNotebookEvent_php*) _this)->evnArray);
-		
-		array_init(((wxAuiNotebookEvent_php*) _this)->evnArray);
-		
 		((wxAuiNotebookEvent_php*) _this)->phpObj = getThis();
 		
 		((wxAuiNotebookEvent_php*) _this)->InitProperties();
@@ -3570,10 +3566,6 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxBookCtrlEvent_php*) _this)->evnArray);
-		
-		array_init(((wxBookCtrlEvent_php*) _this)->evnArray);
-		
 		((wxBookCtrlEvent_php*) _this)->phpObj = getThis();
 		
 		((wxBookCtrlEvent_php*) _this)->InitProperties();
@@ -3925,10 +3917,6 @@ PHP_METHOD(php_wxChoicebook, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxChoicebook_php*) _this)->evnArray);
-		
-		array_init(((wxChoicebook_php*) _this)->evnArray);
-		
 		((wxChoicebook_php*) _this)->phpObj = getThis();
 		
 		((wxChoicebook_php*) _this)->InitProperties();
@@ -4160,10 +4148,6 @@ PHP_METHOD(php_wxListbook, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxListbook);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxListbook_php*) _this)->evnArray);
-		
-		array_init(((wxListbook_php*) _this)->evnArray);
 		
 		((wxListbook_php*) _this)->phpObj = getThis();
 		
@@ -5905,10 +5889,6 @@ PHP_METHOD(php_wxNotebook, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxNotebook_php*) _this)->evnArray);
-		
-		array_init(((wxNotebook_php*) _this)->evnArray);
-		
 		((wxNotebook_php*) _this)->phpObj = getThis();
 		
 		((wxNotebook_php*) _this)->InitProperties();
@@ -6140,10 +6120,6 @@ PHP_METHOD(php_wxToolbook, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxToolbook);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxToolbook_php*) _this)->evnArray);
-		
-		array_init(((wxToolbook_php*) _this)->evnArray);
 		
 		((wxToolbook_php*) _this)->phpObj = getThis();
 		
@@ -7912,10 +7888,6 @@ PHP_METHOD(php_wxTreebook, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxTreebook);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTreebook_php*) _this)->evnArray);
-		
-		array_init(((wxTreebook_php*) _this)->evnArray);
 		
 		((wxTreebook_php*) _this)->phpObj = getThis();
 		

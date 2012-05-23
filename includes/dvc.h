@@ -31,8 +31,6 @@ class wxDataViewChoiceRenderer_php: public wxDataViewChoiceRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -82,8 +80,6 @@ class wxDataViewModel_php: public wxDataViewModel{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -128,8 +124,6 @@ class wxDataViewListModel_php: public wxDataViewListModel{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -176,8 +170,6 @@ class wxDataViewIndexListModel_php: public wxDataViewIndexListModel{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -224,8 +216,6 @@ class wxDataViewVirtualListModel_php: public wxDataViewVirtualListModel{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -273,8 +263,6 @@ class wxDataViewItemAttr_php: public wxDataViewItemAttr{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -306,8 +294,6 @@ class wxDataViewItem_php: public wxDataViewItem{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -342,8 +328,6 @@ class wxDataViewModelNotifier_php: public wxDataViewModelNotifier{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -373,8 +357,6 @@ class wxDataViewRenderer_php: public wxDataViewRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -416,8 +398,6 @@ class wxDataViewTextRenderer_php: public wxDataViewTextRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -460,8 +440,6 @@ class wxDataViewIconTextRenderer_php: public wxDataViewIconTextRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -504,8 +482,6 @@ class wxDataViewProgressRenderer_php: public wxDataViewProgressRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -548,8 +524,6 @@ class wxDataViewSpinRenderer_php: public wxDataViewSpinRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -600,8 +574,6 @@ class wxDataViewToggleRenderer_php: public wxDataViewToggleRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -644,8 +616,6 @@ class wxDataViewDateRenderer_php: public wxDataViewDateRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -689,8 +659,6 @@ class wxDataViewCustomRenderer_php: public wxDataViewCustomRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -740,8 +708,6 @@ class wxDataViewBitmapRenderer_php: public wxDataViewBitmapRenderer{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -785,8 +751,6 @@ class wxDataViewColumn_php: public wxDataViewColumn{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -832,8 +796,6 @@ class wxDataViewListStore_php: public wxDataViewListStore{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -891,8 +853,6 @@ class wxDataViewTreeStore_php: public wxDataViewTreeStore{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;
@@ -956,8 +916,6 @@ class wxDataViewIconText_php: public wxDataViewIconText{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

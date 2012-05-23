@@ -31,8 +31,6 @@ class wxStyledTextCtrl_php: public wxStyledTextCtrl{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

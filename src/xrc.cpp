@@ -610,10 +610,6 @@ PHP_METHOD(php_wxXmlResourceHandler, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxXmlResourceHandler_php*) _this)->evnArray);
-		
-		array_init(((wxXmlResourceHandler_php*) _this)->evnArray);
-		
 		((wxXmlResourceHandler_php*) _this)->phpObj = getThis();
 		
 		((wxXmlResourceHandler_php*) _this)->InitProperties();
@@ -4726,10 +4722,6 @@ PHP_METHOD(php_wxXmlResource, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxXmlResource);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxXmlResource_php*) _this)->evnArray);
-		
-		array_init(((wxXmlResource_php*) _this)->evnArray);
 		
 		((wxXmlResource_php*) _this)->phpObj = getThis();
 		

@@ -276,10 +276,6 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPrinterDC_php*) _this)->evnArray);
-		
-		array_init(((wxPrinterDC_php*) _this)->evnArray);
-		
 		((wxPrinterDC_php*) _this)->phpObj = getThis();
 		
 		((wxPrinterDC_php*) _this)->InitProperties();
@@ -797,10 +793,6 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPreviewControlBar_php*) _this)->evnArray);
-		
-		array_init(((wxPreviewControlBar_php*) _this)->evnArray);
-		
 		((wxPreviewControlBar_php*) _this)->phpObj = getThis();
 		
 		((wxPreviewControlBar_php*) _this)->InitProperties();
@@ -1023,10 +1015,6 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPreviewCanvas);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPreviewCanvas_php*) _this)->evnArray);
-		
-		array_init(((wxPreviewCanvas_php*) _this)->evnArray);
 		
 		((wxPreviewCanvas_php*) _this)->phpObj = getThis();
 		
@@ -3396,10 +3384,6 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPrintPreview_php*) _this)->evnArray);
-		
-		array_init(((wxPrintPreview_php*) _this)->evnArray);
-		
 		((wxPrintPreview_php*) _this)->phpObj = getThis();
 		
 		((wxPrintPreview_php*) _this)->InitProperties();
@@ -4575,10 +4559,6 @@ PHP_METHOD(php_wxPrinter, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPrinter);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPrinter_php*) _this)->evnArray);
-		
-		array_init(((wxPrinter_php*) _this)->evnArray);
 		
 		((wxPrinter_php*) _this)->phpObj = getThis();
 		
@@ -7841,10 +7821,6 @@ PHP_METHOD(php_wxPrintout, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPrintout_php*) _this)->evnArray);
-		
-		array_init(((wxPrintout_php*) _this)->evnArray);
-		
 		((wxPrintout_php*) _this)->phpObj = getThis();
 		
 		((wxPrintout_php*) _this)->InitProperties();
@@ -8313,10 +8289,6 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxPrintDialog_php*) _this)->evnArray);
-		
-		array_init(((wxPrintDialog_php*) _this)->evnArray);
-		
 		((wxPrintDialog_php*) _this)->phpObj = getThis();
 		
 		((wxPrintDialog_php*) _this)->InitProperties();
@@ -8569,10 +8541,6 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPageSetupDialog);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPageSetupDialog_php*) _this)->evnArray);
-		
-		array_init(((wxPageSetupDialog_php*) _this)->evnArray);
 		
 		((wxPageSetupDialog_php*) _this)->phpObj = getThis();
 		

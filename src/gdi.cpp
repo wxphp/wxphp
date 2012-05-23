@@ -627,10 +627,6 @@ PHP_METHOD(php_wxGraphicsGradientStop, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGraphicsGradientStop_php*) _this)->evnArray);
-		
-		array_init(((wxGraphicsGradientStop_php*) _this)->evnArray);
-		
 		((wxGraphicsGradientStop_php*) _this)->phpObj = getThis();
 		
 		((wxGraphicsGradientStop_php*) _this)->InitProperties();
@@ -1625,10 +1621,6 @@ PHP_METHOD(php_wxGraphicsGradientStops, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGraphicsGradientStops_php*) _this)->evnArray);
-		
-		array_init(((wxGraphicsGradientStops_php*) _this)->evnArray);
-		
 		((wxGraphicsGradientStops_php*) _this)->phpObj = getThis();
 		
 		((wxGraphicsGradientStops_php*) _this)->InitProperties();
@@ -2434,10 +2426,6 @@ PHP_METHOD(php_wxAnimation, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAnimation_php*) _this)->evnArray);
-		
-		array_init(((wxAnimation_php*) _this)->evnArray);
-		
 		((wxAnimation_php*) _this)->phpObj = getThis();
 		
 		((wxAnimation_php*) _this)->InitProperties();
@@ -2689,10 +2677,6 @@ PHP_METHOD(php_wxBitmapHandler, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxBitmapHandler);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxBitmapHandler_php*) _this)->evnArray);
-		
-		array_init(((wxBitmapHandler_php*) _this)->evnArray);
 		
 		((wxBitmapHandler_php*) _this)->phpObj = getThis();
 		
@@ -4452,10 +4436,6 @@ PHP_METHOD(php_wxBitmap, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxBitmap);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxBitmap_php*) _this)->evnArray);
-		
-		array_init(((wxBitmap_php*) _this)->evnArray);
 		
 		((wxBitmap_php*) _this)->phpObj = getThis();
 		
@@ -7602,10 +7582,6 @@ PHP_METHOD(php_wxMask, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxMask_php*) _this)->evnArray);
-		
-		array_init(((wxMask_php*) _this)->evnArray);
-		
 		((wxMask_php*) _this)->phpObj = getThis();
 		
 		((wxMask_php*) _this)->InitProperties();
@@ -8924,10 +8900,6 @@ PHP_METHOD(php_wxBrush, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxBrush_php*) _this)->evnArray);
-		
-		array_init(((wxBrush_php*) _this)->evnArray);
-		
 		((wxBrush_php*) _this)->phpObj = getThis();
 		
 		((wxBrush_php*) _this)->InitProperties();
@@ -9222,10 +9194,6 @@ PHP_METHOD(php_wxColour, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxColour);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxColour_php*) _this)->evnArray);
-		
-		array_init(((wxColour_php*) _this)->evnArray);
 		
 		((wxColour_php*) _this)->phpObj = getThis();
 		
@@ -10589,10 +10557,6 @@ PHP_METHOD(php_wxCursor, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxCursor_php*) _this)->evnArray);
-		
-		array_init(((wxCursor_php*) _this)->evnArray);
-		
 		((wxCursor_php*) _this)->phpObj = getThis();
 		
 		((wxCursor_php*) _this)->InitProperties();
@@ -10885,10 +10849,6 @@ PHP_METHOD(php_wxDCClipper, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxDCClipper);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDCClipper_php*) _this)->evnArray);
-		
-		array_init(((wxDCClipper_php*) _this)->evnArray);
 		
 		((wxDCClipper_php*) _this)->phpObj = getThis();
 		
@@ -11321,10 +11281,6 @@ PHP_METHOD(php_wxFont, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFont);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFont_php*) _this)->evnArray);
-		
-		array_init(((wxFont_php*) _this)->evnArray);
 		
 		((wxFont_php*) _this)->phpObj = getThis();
 		
@@ -16394,10 +16350,6 @@ PHP_METHOD(php_wxFontList, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFontList_php*) _this)->evnArray);
-		
-		array_init(((wxFontList_php*) _this)->evnArray);
-		
 		((wxFontList_php*) _this)->phpObj = getThis();
 		
 		((wxFontList_php*) _this)->InitProperties();
@@ -17678,10 +17630,6 @@ PHP_METHOD(php_wxNativeFontInfo, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxNativeFontInfo);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxNativeFontInfo_php*) _this)->evnArray);
-		
-		array_init(((wxNativeFontInfo_php*) _this)->evnArray);
 		
 		((wxNativeFontInfo_php*) _this)->phpObj = getThis();
 		
@@ -20418,10 +20366,6 @@ PHP_METHOD(php_wxColourDatabase, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxColourDatabase_php*) _this)->evnArray);
-		
-		array_init(((wxColourDatabase_php*) _this)->evnArray);
-		
 		((wxColourDatabase_php*) _this)->phpObj = getThis();
 		
 		((wxColourDatabase_php*) _this)->InitProperties();
@@ -20785,10 +20729,6 @@ PHP_METHOD(php_wxIcon, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxIcon);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxIcon_php*) _this)->evnArray);
-		
-		array_init(((wxIcon_php*) _this)->evnArray);
 		
 		((wxIcon_php*) _this)->phpObj = getThis();
 		
@@ -22092,10 +22032,6 @@ PHP_METHOD(php_wxIconBundle, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxIconBundle);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxIconBundle_php*) _this)->evnArray);
-		
-		array_init(((wxIconBundle_php*) _this)->evnArray);
 		
 		((wxIconBundle_php*) _this)->phpObj = getThis();
 		
@@ -25331,10 +25267,6 @@ PHP_METHOD(php_wxImage, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxImage);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxImage_php*) _this)->evnArray);
-		
-		array_init(((wxImage_php*) _this)->evnArray);
 		
 		((wxImage_php*) _this)->phpObj = getThis();
 		
@@ -35763,10 +35695,6 @@ PHP_METHOD(php_wxImageList, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxImageList_php*) _this)->evnArray);
-		
-		array_init(((wxImageList_php*) _this)->evnArray);
-		
 		((wxImageList_php*) _this)->phpObj = getThis();
 		
 		((wxImageList_php*) _this)->InitProperties();
@@ -36202,10 +36130,6 @@ PHP_METHOD(php_wxPalette, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPalette);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPalette_php*) _this)->evnArray);
-		
-		array_init(((wxPalette_php*) _this)->evnArray);
 		
 		((wxPalette_php*) _this)->phpObj = getThis();
 		
@@ -37009,10 +36933,6 @@ PHP_METHOD(php_wxPen, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPen);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPen_php*) _this)->evnArray);
-		
-		array_init(((wxPen_php*) _this)->evnArray);
 		
 		((wxPen_php*) _this)->phpObj = getThis();
 		
@@ -38920,10 +38840,6 @@ PHP_METHOD(php_wxPenList, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxPenList);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxPenList_php*) _this)->evnArray);
-		
-		array_init(((wxPenList_php*) _this)->evnArray);
 		
 		((wxPenList_php*) _this)->phpObj = getThis();
 		

@@ -260,10 +260,6 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAuiNotebook_php*) _this)->evnArray);
-		
-		array_init(((wxAuiNotebook_php*) _this)->evnArray);
-		
 		((wxAuiNotebook_php*) _this)->phpObj = getThis();
 		
 		((wxAuiNotebook_php*) _this)->InitProperties();
@@ -4830,10 +4826,6 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAuiDockArt_php*) _this)->evnArray);
-		
-		array_init(((wxAuiDockArt_php*) _this)->evnArray);
-		
 		((wxAuiDockArt_php*) _this)->phpObj = getThis();
 		
 		((wxAuiDockArt_php*) _this)->InitProperties();
@@ -6008,10 +6000,6 @@ PHP_METHOD(php_wxAuiManager, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxAuiManager);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxAuiManager_php*) _this)->evnArray);
-		
-		array_init(((wxAuiManager_php*) _this)->evnArray);
 		
 		((wxAuiManager_php*) _this)->phpObj = getThis();
 		
@@ -8960,10 +8948,6 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxAuiPaneInfo);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxAuiPaneInfo_php*) _this)->evnArray);
-		
-		array_init(((wxAuiPaneInfo_php*) _this)->evnArray);
 		
 		((wxAuiPaneInfo_php*) _this)->phpObj = getThis();
 		
@@ -18536,10 +18520,6 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAuiToolBarItem_php*) _this)->evnArray);
-		
-		array_init(((wxAuiToolBarItem_php*) _this)->evnArray);
-		
 		((wxAuiToolBarItem_php*) _this)->phpObj = getThis();
 		
 		((wxAuiToolBarItem_php*) _this)->InitProperties();
@@ -26916,10 +26896,6 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxAuiDefaultToolBarArt_php*) _this)->evnArray);
-		
-		array_init(((wxAuiDefaultToolBarArt_php*) _this)->evnArray);
-		
 		((wxAuiDefaultToolBarArt_php*) _this)->phpObj = getThis();
 		
 		((wxAuiDefaultToolBarArt_php*) _this)->InitProperties();
@@ -28376,10 +28352,6 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxAuiToolBar);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxAuiToolBar_php*) _this)->evnArray);
-		
-		array_init(((wxAuiToolBar_php*) _this)->evnArray);
 		
 		((wxAuiToolBar_php*) _this)->phpObj = getThis();
 		

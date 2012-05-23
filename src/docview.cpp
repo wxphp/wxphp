@@ -1504,10 +1504,6 @@ PHP_METHOD(php_wxFileHistory, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFileHistory_php*) _this)->evnArray);
-		
-		array_init(((wxFileHistory_php*) _this)->evnArray);
-		
 		((wxFileHistory_php*) _this)->phpObj = getThis();
 		
 		((wxFileHistory_php*) _this)->InitProperties();

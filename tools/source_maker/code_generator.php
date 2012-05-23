@@ -225,6 +225,10 @@ remove_classes_and_methods_not_crossplatform($defIni);
 //wxRichTextCtrl::PrepareContent(wxRichTextParagraphLayoutBox &WXUNUSED(container))
 remove_methods_implementing_unhandled_arguments($defIni);
 
+//Remove obsolete .cpp and .h files
+remove_old_src_and_headers();
+
+print "\n";
 
 //Merges method overloads from parents to child classes
 //classes_method_merger($defIni); //This is provoking compilation errors on some classes
@@ -334,7 +338,7 @@ foreach($defClassGroups as $file_name => $class_list)
 		}
 	}
 
-	file_put_contents("./../../src/".$file_name.".cpp", $classes_source_code);
+	file_put_contents_if_different("./../../src/".$file_name.".cpp", $classes_source_code);
 	
 	//Generate header file that holds class declarations
 	echo "Generating $file_name.h ...\n";
@@ -365,7 +369,7 @@ foreach($defClassGroups as $file_name => $class_list)
 	
 	$classes_header_code .= "#endif //WXPHP_".strtoupper($file_name)."_H_GUARD\n";
 
-	file_put_contents("./../../includes/".$file_name.".h", $classes_header_code);
+	file_put_contents_if_different("./../../includes/".$file_name.".h", $classes_header_code);
 
 } //Ends foreach($defClassGroups as $file_name => $class_list)
 
@@ -400,7 +404,7 @@ ob_start();
 	$functions_h_source .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents("./../../includes/functions.h", $functions_h_source);
+file_put_contents_if_different("./../../includes/functions.h", $functions_h_source);
 
 echo "Generating functions.cpp\n";
 ob_start();
@@ -408,7 +412,7 @@ ob_start();
 	$functions_cpp_source .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents("./../../src/functions.cpp", $functions_cpp_source);
+file_put_contents_if_different("./../../src/functions.cpp", $functions_cpp_source);
 
 
 //Update wxwidgets.cpp by just upgrading the code betewen 
@@ -767,13 +771,17 @@ foreach($defClassGroups as $group_name=>$class_list)
 
 $source_files = trim($source_files);
 
+echo "Generating config.m4...\n";
+
 $unix_config = "";
 ob_start();
 	include("config_templates/config.m4");
 	$unix_config .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents("./../../config.m4", $unix_config);
+file_put_contents_if_different("./../../config.m4", $unix_config);
+
+echo "Generating config.w32...\n";
 
 $win_config = "";
 ob_start();
@@ -781,7 +789,7 @@ ob_start();
 	$win_config .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents("./../../config.w32", $win_config);
+file_put_contents_if_different("./../../config.w32", $win_config);
 
 
 die("Done!\n");

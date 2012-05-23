@@ -30,10 +30,6 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((<?=$class_name?>_php*) _this)->evnArray);
-		
-		array_init(((<?=$class_name?>_php*) _this)->evnArray);
-		
 		((<?=$class_name?>_php*) _this)->phpObj = getThis();
 		
 		((<?=$class_name?>_php*) _this)->InitProperties();

@@ -1826,10 +1826,6 @@ PHP_METHOD(php_wxStreamBase, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxStreamBase_php*) _this)->evnArray);
-		
-		array_init(((wxStreamBase_php*) _this)->evnArray);
-		
 		((wxStreamBase_php*) _this)->phpObj = getThis();
 		
 		((wxStreamBase_php*) _this)->InitProperties();
@@ -2899,10 +2895,6 @@ PHP_METHOD(php_wxOutputStream, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxOutputStream_php*) _this)->evnArray);
-		
-		array_init(((wxOutputStream_php*) _this)->evnArray);
-		
 		((wxOutputStream_php*) _this)->phpObj = getThis();
 		
 		((wxOutputStream_php*) _this)->InitProperties();
@@ -3759,10 +3751,6 @@ PHP_METHOD(php_wxInputStream, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxInputStream);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxInputStream_php*) _this)->evnArray);
-		
-		array_init(((wxInputStream_php*) _this)->evnArray);
 		
 		((wxInputStream_php*) _this)->phpObj = getThis();
 		
@@ -5253,10 +5241,6 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFFileOutputStream_php*) _this)->evnArray);
-		
-		array_init(((wxFFileOutputStream_php*) _this)->evnArray);
-		
 		((wxFFileOutputStream_php*) _this)->phpObj = getThis();
 		
 		((wxFFileOutputStream_php*) _this)->InitProperties();
@@ -5572,10 +5556,6 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFileOutputStream);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFileOutputStream_php*) _this)->evnArray);
-		
-		array_init(((wxFileOutputStream_php*) _this)->evnArray);
 		
 		((wxFileOutputStream_php*) _this)->phpObj = getThis();
 		
@@ -5893,10 +5873,6 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFileInputStream_php*) _this)->evnArray);
-		
-		array_init(((wxFileInputStream_php*) _this)->evnArray);
-		
 		((wxFileInputStream_php*) _this)->phpObj = getThis();
 		
 		((wxFileInputStream_php*) _this)->InitProperties();
@@ -6088,10 +6064,6 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFFileInputStream);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFFileInputStream_php*) _this)->evnArray);
-		
-		array_init(((wxFFileInputStream_php*) _this)->evnArray);
 		
 		((wxFFileInputStream_php*) _this)->phpObj = getThis();
 		
@@ -6427,10 +6399,6 @@ PHP_METHOD(php_wxFFileStream, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFFileStream_php*) _this)->evnArray);
-		
-		array_init(((wxFFileStream_php*) _this)->evnArray);
-		
 		((wxFFileStream_php*) _this)->phpObj = getThis();
 		
 		((wxFFileStream_php*) _this)->InitProperties();
@@ -6652,10 +6620,6 @@ PHP_METHOD(php_wxFileStream, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxFileStream);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxFileStream_php*) _this)->evnArray);
-		
-		array_init(((wxFileStream_php*) _this)->evnArray);
 		
 		((wxFileStream_php*) _this)->phpObj = getThis();
 		

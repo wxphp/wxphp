@@ -335,10 +335,6 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxTextAttr_php*) _this)->evnArray);
-		
-		array_init(((wxTextAttr_php*) _this)->evnArray);
-		
 		((wxTextAttr_php*) _this)->phpObj = getThis();
 		
 		((wxTextAttr_php*) _this)->InitProperties();
@@ -8520,8 +8516,6 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				object_init_ex(return_value, php_wxTextAttr_entry);
 				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxTextAttr));
 				((wxTextAttr_php*)ptr)->phpObj = return_value;
-				MAKE_STD_ZVAL(((wxTextAttr_php*) ptr)->evnArray);
-				array_init(((wxTextAttr_php*) ptr)->evnArray);
 				((wxTextAttr_php*)ptr)->InitProperties();
 
 

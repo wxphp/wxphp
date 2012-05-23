@@ -158,10 +158,6 @@ PHP_METHOD(php_wxToolTip, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxToolTip_php*) _this)->evnArray);
-		
-		array_init(((wxToolTip_php*) _this)->evnArray);
-		
 		((wxToolTip_php*) _this)->phpObj = getThis();
 		
 		((wxToolTip_php*) _this)->InitProperties();

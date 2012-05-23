@@ -31,8 +31,6 @@ class wxFileHistory_php: public wxFileHistory{
 	void InitProperties(){
 	}
 	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
 	void** properties;

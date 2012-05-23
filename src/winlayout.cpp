@@ -583,10 +583,6 @@ PHP_METHOD(php_wxGBPosition, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGBPosition_php*) _this)->evnArray);
-		
-		array_init(((wxGBPosition_php*) _this)->evnArray);
-		
 		((wxGBPosition_php*) _this)->phpObj = getThis();
 		
 		((wxGBPosition_php*) _this)->InitProperties();
@@ -4087,10 +4083,6 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridBagSizer_php*) _this)->evnArray);
-		
-		array_init(((wxGridBagSizer_php*) _this)->evnArray);
-		
 		((wxGridBagSizer_php*) _this)->phpObj = getThis();
 		
 		((wxGridBagSizer_php*) _this)->InitProperties();
@@ -4650,10 +4642,6 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxGBSizerItem);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxGBSizerItem_php*) _this)->evnArray);
-		
-		array_init(((wxGBSizerItem_php*) _this)->evnArray);
 		
 		((wxGBSizerItem_php*) _this)->phpObj = getThis();
 		
@@ -6274,10 +6262,6 @@ PHP_METHOD(php_wxGBSpan, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGBSpan_php*) _this)->evnArray);
-		
-		array_init(((wxGBSpan_php*) _this)->evnArray);
-		
 		((wxGBSpan_php*) _this)->phpObj = getThis();
 		
 		((wxGBSpan_php*) _this)->InitProperties();
@@ -6848,10 +6832,6 @@ PHP_METHOD(php_wxLayoutAlgorithm, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxLayoutAlgorithm_php*) _this)->evnArray);
-		
-		array_init(((wxLayoutAlgorithm_php*) _this)->evnArray);
-		
 		((wxLayoutAlgorithm_php*) _this)->phpObj = getThis();
 		
 		((wxLayoutAlgorithm_php*) _this)->InitProperties();
@@ -7274,10 +7254,6 @@ PHP_METHOD(php_wxSizer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxSizer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxSizer_php*) _this)->evnArray);
-		
-		array_init(((wxSizer_php*) _this)->evnArray);
 		
 		((wxSizer_php*) _this)->phpObj = getThis();
 		
@@ -17221,10 +17197,6 @@ PHP_METHOD(php_wxStdDialogButtonSizer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxStdDialogButtonSizer_php*) _this)->evnArray);
-		
-		array_init(((wxStdDialogButtonSizer_php*) _this)->evnArray);
-		
 		((wxStdDialogButtonSizer_php*) _this)->phpObj = getThis();
 		
 		((wxStdDialogButtonSizer_php*) _this)->InitProperties();
@@ -17798,10 +17770,6 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxSizerItem);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxSizerItem_php*) _this)->evnArray);
-		
-		array_init(((wxSizerItem_php*) _this)->evnArray);
 		
 		((wxSizerItem_php*) _this)->phpObj = getThis();
 		
@@ -22065,10 +22033,6 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxSizerFlags_php*) _this)->evnArray);
-		
-		array_init(((wxSizerFlags_php*) _this)->evnArray);
-		
 		((wxSizerFlags_php*) _this)->phpObj = getThis();
 		
 		((wxSizerFlags_php*) _this)->InitProperties();
@@ -25721,10 +25685,6 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxFlexGridSizer_php*) _this)->evnArray);
-		
-		array_init(((wxFlexGridSizer_php*) _this)->evnArray);
-		
 		((wxFlexGridSizer_php*) _this)->phpObj = getThis();
 		
 		((wxFlexGridSizer_php*) _this)->InitProperties();
@@ -27252,10 +27212,6 @@ PHP_METHOD(php_wxGridSizer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxGridSizer_php*) _this)->evnArray);
-		
-		array_init(((wxGridSizer_php*) _this)->evnArray);
-		
 		((wxGridSizer_php*) _this)->phpObj = getThis();
 		
 		((wxGridSizer_php*) _this)->InitProperties();
@@ -27751,10 +27707,6 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		MAKE_STD_ZVAL(((wxStaticBoxSizer_php*) _this)->evnArray);
-		
-		array_init(((wxStaticBoxSizer_php*) _this)->evnArray);
-		
 		((wxStaticBoxSizer_php*) _this)->phpObj = getThis();
 		
 		((wxStaticBoxSizer_php*) _this)->InitProperties();
@@ -27846,10 +27798,6 @@ PHP_METHOD(php_wxBoxSizer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxBoxSizer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxBoxSizer_php*) _this)->evnArray);
-		
-		array_init(((wxBoxSizer_php*) _this)->evnArray);
 		
 		((wxBoxSizer_php*) _this)->phpObj = getThis();
 		
@@ -28428,10 +28376,6 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 		long id_to_find = zend_list_insert(_this, le_wxWrapSizer);
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxWrapSizer_php*) _this)->evnArray);
-		
-		array_init(((wxWrapSizer_php*) _this)->evnArray);
 		
 		((wxWrapSizer_php*) _this)->phpObj = getThis();
 		

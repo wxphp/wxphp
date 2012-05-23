@@ -56,13 +56,10 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 
 	MAKE_STD_ZVAL(fc_name);
 	
-	wxname = (char*)malloc(sizeof(wxChar)*(ce->GetString().size()+1));
+	wxname = (char*)emalloc(sizeof(wxChar)*(ce->GetString().size()+1));
 	strcpy(wxname, (const char *) ce->GetString().char_str());
 	
 	ZVAL_STRING(fc_name, wxname, 1);
-	
-	//Free allocated memory since ZVAL_STRING does a copy of it
-	free(wxname);
 
 	if(call_user_function(NULL, &(co->phpObj), fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE)
 	{
@@ -73,6 +70,10 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		wxMessageBox(errorMessage);
 	}
 	
+	efree(arg[0]);
+	efree(wxname);
+	zval_ptr_dtor(&fc_name);
+	
 }
 PHP_METHOD(php_<?=$class_name?>, Connect)
 {
@@ -82,12 +83,12 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 	php_printf("Parameters received: %d\n", ZEND_NUM_ARGS());
 	#endif
 	
-	zval **tmp;
+	zval** tmp;
 	int rsrc_type;
 	int id_to_find;
 	int valid = 1;
 	char _wxResource[] = "wxResource";
-	wxEvtHandler *_this;
+	wxEvtHandler* _this;
 
 	if(getThis())
 	{
@@ -153,11 +154,11 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			zend_error(E_ERROR, "Wrong amount of parameters");
 	}
 	
-	zend_hash_index_find(HASH_OF(fc), 0, (void**)&fc_obj);
-	zend_hash_index_find(HASH_OF(fc), 1, (void**)&fc_name);
+	zend_hash_index_find(Z_ARRVAL_P(fc), 0, (void**)&fc_obj);
+	zend_hash_index_find(Z_ARRVAL_P(fc), 1, (void**)&fc_name);
 	Z_ADDREF_P(*fc_obj);
 	
-	ct = (*fc_name)->value.str.val;
+	ct = Z_STRVAL_PP(fc_name);
 
 	wxCommandEvent* ce = new wxCommandEvent();
 	ce->SetString(wxString::Format(wxT("%s"), ct));
