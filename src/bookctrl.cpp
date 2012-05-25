@@ -91,6 +91,7 @@ void php_wxAuiNotebookEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+
 /* {{{ proto wxEvent wxAuiNotebookEvent::Clone() */
 PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 {
@@ -154,6 +155,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -168,6 +170,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebookEvent::Clone() to return object pointer\n\n");
 				#endif
+
 				wxEvent_php* value_to_return0;
 				value_to_return0 = (wxEvent_php*) ((wxAuiNotebookEvent_php*)_this)->Clone();
 
@@ -243,6 +246,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&command_type0, &win_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command_type0, &win_id0 ) == SUCCESS)
 		{
@@ -261,6 +265,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiNotebookEvent_php();
 
 				((wxAuiNotebookEvent_php*) _this)->references.Initialize();
@@ -271,6 +276,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) command_type0)\n");
 				#endif
+
 				_this = new wxAuiNotebookEvent_php((wxEventType) command_type0);
 
 				((wxAuiNotebookEvent_php*) _this)->references.Initialize();
@@ -281,6 +287,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) command_type0, (int) win_id0)\n");
 				#endif
+
 				_this = new wxAuiNotebookEvent_php((wxEventType) command_type0, (int) win_id0);
 
 				((wxAuiNotebookEvent_php*) _this)->references.Initialize();
@@ -306,7 +313,7 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiNotebookEvent::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiNotebookEvent::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -322,6 +329,7 @@ void php_wxBookCtrlBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxBookCtrlBase::Create(wxWindow &parent, int winid, wxPoint pos, wxSize size, int style, string name)
    Constructs the book control with the given parameters. */
 PHP_METHOD(php_wxBookCtrlBase, Create)
@@ -420,6 +428,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent0, &winid0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &winid0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -486,6 +495,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0));
@@ -513,6 +523,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2));
@@ -541,6 +552,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
@@ -570,6 +582,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
@@ -599,6 +612,7 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) winid0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
@@ -729,6 +743,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|bl' (&page0, &text0, &text_len0, &select0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &text0, &text_len0, &select0, &imageId0 ) == SUCCESS)
 		{
@@ -763,6 +778,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)));
@@ -794,6 +810,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), select0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), select0));
@@ -825,6 +842,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), select0, (int) imageId0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), select0, (int) imageId0));
@@ -952,6 +970,7 @@ PHP_METHOD(php_wxBookCtrlBase, AdvanceSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&forward0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &forward0 ) == SUCCESS)
 		{
@@ -970,6 +989,7 @@ PHP_METHOD(php_wxBookCtrlBase, AdvanceSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlBase::AdvanceSelection()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					((wxListbook_php*)_this)->AdvanceSelection();
@@ -1004,6 +1024,7 @@ PHP_METHOD(php_wxBookCtrlBase, AdvanceSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlBase::AdvanceSelection(forward0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					((wxListbook_php*)_this)->AdvanceSelection(forward0);
@@ -1133,6 +1154,7 @@ PHP_METHOD(php_wxBookCtrlBase, DeleteAllPages)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1147,6 +1169,7 @@ PHP_METHOD(php_wxBookCtrlBase, DeleteAllPages)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::DeleteAllPages())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->DeleteAllPages());
@@ -1277,6 +1300,7 @@ PHP_METHOD(php_wxBookCtrlBase, DeletePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -1295,6 +1319,7 @@ PHP_METHOD(php_wxBookCtrlBase, DeletePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::DeletePage((size_t) page0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->DeletePage((size_t) page0));
@@ -1420,6 +1445,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetCurrentPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1434,6 +1460,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetCurrentPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlBase::GetCurrentPage() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				if(parent_rsrc_type == le_wxListbook)
 				{
@@ -1592,6 +1619,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -1610,6 +1638,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlBase::GetPage((size_t) page0) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				if(parent_rsrc_type == le_wxListbook)
 				{
@@ -1767,6 +1796,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPageCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1781,6 +1811,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPageCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxBookCtrlBase::GetPageCount())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_LONG(return_value, ((wxListbook_php*)_this)->GetPageCount());
@@ -1914,6 +1945,7 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&pt0, php_wxPoint_entry, flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry, flags0 ) == SUCCESS)
 		{
@@ -1951,6 +1983,7 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxBookCtrlBase::HitTest(*(wxPoint*) object_pointer0_0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxAuiNotebook)
 				{
 					ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->HitTest(*(wxPoint*) object_pointer0_0));
@@ -1990,6 +2023,7 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxBookCtrlBase::HitTest(*(wxPoint*) object_pointer0_0, (long*) flags0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxAuiNotebook)
 				{
 					ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->HitTest(*(wxPoint*) object_pointer0_0, (long*) flags0));
@@ -2220,6 +2254,7 @@ PHP_METHOD(php_wxBookCtrlBase, RemovePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -2238,6 +2273,7 @@ PHP_METHOD(php_wxBookCtrlBase, RemovePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxBookCtrlBase::RemovePage((size_t) page0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxListbook)
 				{
 					ZVAL_BOOL(return_value, ((wxListbook_php*)_this)->RemovePage((size_t) page0));
@@ -2451,6 +2487,7 @@ PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -2485,6 +2522,7 @@ PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlBase::SetPageSize(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxAuiNotebook)
 				{
 					((wxAuiNotebook_php*)_this)->SetPageSize(*(wxSize*) object_pointer0_0);
@@ -3047,6 +3085,7 @@ void php_wxBookCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto int wxBookCtrlEvent::GetOldSelection()
    Returns the page that was selected before the change, wxNOT_FOUND if none was selected. */
 PHP_METHOD(php_wxBookCtrlEvent, GetOldSelection)
@@ -3115,6 +3154,7 @@ PHP_METHOD(php_wxBookCtrlEvent, GetOldSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3129,6 +3169,7 @@ PHP_METHOD(php_wxBookCtrlEvent, GetOldSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxBookCtrlEvent::GetOldSelection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxBookCtrlEvent_php*)_this)->GetOldSelection());
 
 
@@ -3215,6 +3256,7 @@ PHP_METHOD(php_wxBookCtrlEvent, GetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3229,6 +3271,7 @@ PHP_METHOD(php_wxBookCtrlEvent, GetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxBookCtrlEvent::GetSelection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxBookCtrlEvent_php*)_this)->GetSelection());
 
 
@@ -3316,6 +3359,7 @@ PHP_METHOD(php_wxBookCtrlEvent, SetOldSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -3334,6 +3378,7 @@ PHP_METHOD(php_wxBookCtrlEvent, SetOldSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlEvent::SetOldSelection((int) page0)\n\n");
 				#endif
+
 				((wxBookCtrlEvent_php*)_this)->SetOldSelection((int) page0);
 
 
@@ -3421,6 +3466,7 @@ PHP_METHOD(php_wxBookCtrlEvent, SetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -3439,6 +3485,7 @@ PHP_METHOD(php_wxBookCtrlEvent, SetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBookCtrlEvent::SetSelection((int) page0)\n\n");
 				#endif
+
 				((wxBookCtrlEvent_php*)_this)->SetSelection((int) page0);
 
 
@@ -3493,6 +3540,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llll' (&eventType0, &id0, &sel0, &oldSel0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &id0, &sel0, &oldSel0 ) == SUCCESS)
 		{
@@ -3511,6 +3559,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxBookCtrlEvent_php();
 
 				((wxBookCtrlEvent_php*) _this)->references.Initialize();
@@ -3521,6 +3570,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) eventType0)\n");
 				#endif
+
 				_this = new wxBookCtrlEvent_php((wxEventType) eventType0);
 
 				((wxBookCtrlEvent_php*) _this)->references.Initialize();
@@ -3531,6 +3581,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) eventType0, (int) id0)\n");
 				#endif
+
 				_this = new wxBookCtrlEvent_php((wxEventType) eventType0, (int) id0);
 
 				((wxBookCtrlEvent_php*) _this)->references.Initialize();
@@ -3541,6 +3592,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) eventType0, (int) id0, (int) sel0)\n");
 				#endif
+
 				_this = new wxBookCtrlEvent_php((wxEventType) eventType0, (int) id0, (int) sel0);
 
 				((wxBookCtrlEvent_php*) _this)->references.Initialize();
@@ -3551,6 +3603,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) eventType0, (int) id0, (int) sel0, (int) oldSel0)\n");
 				#endif
+
 				_this = new wxBookCtrlEvent_php((wxEventType) eventType0, (int) id0, (int) sel0, (int) oldSel0);
 
 				((wxBookCtrlEvent_php*) _this)->references.Initialize();
@@ -3576,7 +3629,7 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBookCtrlEvent::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBookCtrlEvent::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -3592,6 +3645,7 @@ void php_wxChoicebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxChoice wxChoicebook::GetChoiceCtrl()
    Returns the wxChoice associated with the control. */
 PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
@@ -3656,6 +3710,7 @@ PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3670,6 +3725,7 @@ PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxChoicebook::GetChoiceCtrl() to return object pointer\n\n");
 				#endif
+
 				wxChoice_php* value_to_return0;
 				value_to_return0 = (wxChoice_php*) ((wxChoicebook_php*)_this)->GetChoiceCtrl();
 
@@ -3755,6 +3811,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3767,6 +3824,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -3833,6 +3891,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxChoicebook_php();
 
 				((wxChoicebook_php*) _this)->references.Initialize();
@@ -3850,6 +3909,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
@@ -3861,6 +3921,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
@@ -3873,6 +3934,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
@@ -3886,6 +3948,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxChoicebook_php*) _this)->references.Initialize();
@@ -3899,6 +3962,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxChoicebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxChoicebook_php*) _this)->references.Initialize();
@@ -3927,7 +3991,7 @@ PHP_METHOD(php_wxChoicebook, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxChoicebook::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxChoicebook::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -3943,6 +4007,7 @@ void php_wxListbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxListbook::wxListbook(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
    Constructs a listbook control. */
 PHP_METHOD(php_wxListbook, __construct)
@@ -3987,6 +4052,7 @@ PHP_METHOD(php_wxListbook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -4051,6 +4117,7 @@ PHP_METHOD(php_wxListbook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -4065,6 +4132,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxListbook_php*) _this)->references.Initialize();
@@ -4076,6 +4144,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxListbook_php*) _this)->references.Initialize();
@@ -4088,6 +4157,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxListbook_php*) _this)->references.Initialize();
@@ -4101,6 +4171,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0)\n");
 				#endif
+
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxListbook_php*) _this)->references.Initialize();
@@ -4114,6 +4185,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxListbook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxListbook_php*) _this)->references.Initialize();
@@ -4134,6 +4206,7 @@ PHP_METHOD(php_wxListbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxListbook_php();
 
 				((wxListbook_php*) _this)->references.Initialize();
@@ -4159,7 +4232,7 @@ PHP_METHOD(php_wxListbook, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxListbook::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxListbook::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4232,6 +4305,7 @@ PHP_METHOD(php_wxListbook, GetListView)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4246,6 +4320,7 @@ PHP_METHOD(php_wxListbook, GetListView)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxListbook::GetListView() to return object pointer\n\n");
 				#endif
+
 				wxListView_php* value_to_return0;
 				value_to_return0 = (wxListView_php*) ((wxListbook_php*)_this)->GetListView();
 
@@ -4294,6 +4369,7 @@ void php_wxNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto int wxNotebook::ChangeSelection(int page)
    Changes the selection for the given page, returning the previous selection. */
 PHP_METHOD(php_wxNotebook, ChangeSelection)
@@ -4359,6 +4435,7 @@ PHP_METHOD(php_wxNotebook, ChangeSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -4377,6 +4454,7 @@ PHP_METHOD(php_wxNotebook, ChangeSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxNotebook::ChangeSelection((size_t) page0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxNotebook_php*)_this)->ChangeSelection((size_t) page0));
 
 
@@ -4469,6 +4547,7 @@ PHP_METHOD(php_wxNotebook, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -4535,6 +4614,7 @@ PHP_METHOD(php_wxNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxNotebook::Create at call with 2 argument(s)");
@@ -4547,6 +4627,7 @@ PHP_METHOD(php_wxNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxNotebook::Create at call with 3 argument(s)");
@@ -4560,6 +4641,7 @@ PHP_METHOD(php_wxNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxNotebook::Create at call with 4 argument(s)");
@@ -4574,6 +4656,7 @@ PHP_METHOD(php_wxNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxNotebook::Create at call with 5 argument(s)");
@@ -4588,6 +4671,7 @@ PHP_METHOD(php_wxNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxNotebook::Create at call with 6 argument(s)");
@@ -4674,6 +4758,7 @@ PHP_METHOD(php_wxNotebook, GetPageImage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&nPage0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &nPage0 ) == SUCCESS)
 		{
@@ -4692,6 +4777,7 @@ PHP_METHOD(php_wxNotebook, GetPageImage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxNotebook::GetPageImage((size_t) nPage0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxNotebook_php*)_this)->GetPageImage((size_t) nPage0));
 
 
@@ -4775,6 +4861,7 @@ PHP_METHOD(php_wxNotebook, GetPageText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&nPage0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &nPage0 ) == SUCCESS)
 		{
@@ -4793,6 +4880,7 @@ PHP_METHOD(php_wxNotebook, GetPageText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxNotebook::GetPageText((size_t) nPage0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxNotebook_php*)_this)->GetPageText((size_t) nPage0);
 				char* temp_string1;
@@ -4881,6 +4969,7 @@ PHP_METHOD(php_wxNotebook, GetRowCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4895,6 +4984,7 @@ PHP_METHOD(php_wxNotebook, GetRowCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxNotebook::GetRowCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxNotebook_php*)_this)->GetRowCount());
 
 
@@ -4977,6 +5067,7 @@ PHP_METHOD(php_wxNotebook, GetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4991,6 +5082,7 @@ PHP_METHOD(php_wxNotebook, GetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxNotebook::GetSelection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxNotebook_php*)_this)->GetSelection());
 
 
@@ -5073,6 +5165,7 @@ PHP_METHOD(php_wxNotebook, GetThemeBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5087,6 +5180,7 @@ PHP_METHOD(php_wxNotebook, GetThemeBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxNotebook::GetThemeBackgroundColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxNotebook_php*)_this)->GetThemeBackgroundColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -5181,6 +5275,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs|bl' (&index0, &page0, &text0, &text_len0, &select0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzs|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &page0, &text0, &text_len0, &select0, &imageId0 ) == SUCCESS)
 		{
@@ -5215,6 +5310,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)));
 
 				references->AddReference(page0, "wxNotebook::InsertPage at call with 3 argument(s)");
@@ -5227,6 +5323,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), select0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), select0));
 
 				references->AddReference(page0, "wxNotebook::InsertPage at call with 4 argument(s)");
@@ -5239,6 +5336,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), select0, (int) imageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->InsertPage((size_t) index0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), select0, (int) imageId0));
 
 				references->AddReference(page0, "wxNotebook::InsertPage at call with 5 argument(s)");
@@ -5324,6 +5422,7 @@ PHP_METHOD(php_wxNotebook, SetPadding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&padding0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &padding0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -5358,6 +5457,7 @@ PHP_METHOD(php_wxNotebook, SetPadding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxNotebook::SetPadding(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxNotebook_php*)_this)->SetPadding(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(padding0, "wxNotebook::SetPadding at call with 1 argument(s)");
@@ -5443,6 +5543,7 @@ PHP_METHOD(php_wxNotebook, SetPageImage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&page0, &image0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &image0 ) == SUCCESS)
 		{
@@ -5461,6 +5562,7 @@ PHP_METHOD(php_wxNotebook, SetPageImage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::SetPageImage((size_t) page0, (int) image0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->SetPageImage((size_t) page0, (int) image0));
 
 
@@ -5546,6 +5648,7 @@ PHP_METHOD(php_wxNotebook, SetPageText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&page0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -5564,6 +5667,7 @@ PHP_METHOD(php_wxNotebook, SetPageText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotebook::SetPageText((size_t) page0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotebook_php*)_this)->SetPageText((size_t) page0, wxString(text0, wxConvUTF8)));
 
 
@@ -5647,6 +5751,7 @@ PHP_METHOD(php_wxNotebook, SetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -5665,6 +5770,7 @@ PHP_METHOD(php_wxNotebook, SetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxNotebook::SetSelection((size_t) page0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxNotebook_php*)_this)->SetSelection((size_t) page0));
 
 
@@ -5727,6 +5833,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5739,6 +5846,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -5805,6 +5913,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxNotebook_php();
 
 				((wxNotebook_php*) _this)->references.Initialize();
@@ -5822,6 +5931,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxNotebook_php*) _this)->references.Initialize();
@@ -5833,6 +5943,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxNotebook_php*) _this)->references.Initialize();
@@ -5845,6 +5956,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxNotebook_php*) _this)->references.Initialize();
@@ -5858,6 +5970,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxNotebook_php*) _this)->references.Initialize();
@@ -5871,6 +5984,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxNotebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxNotebook_php*) _this)->references.Initialize();
@@ -5899,7 +6013,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxNotebook::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxNotebook::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5915,6 +6029,7 @@ void php_wxToolbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxToolbook::wxToolbook()
    Constructs a choicebook control. */
 PHP_METHOD(php_wxToolbook, __construct)
@@ -5959,6 +6074,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5971,6 +6087,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -6037,6 +6154,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxToolbook_php();
 
 				((wxToolbook_php*) _this)->references.Initialize();
@@ -6054,6 +6172,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxToolbook_php*) _this)->references.Initialize();
@@ -6065,6 +6184,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxToolbook_php*) _this)->references.Initialize();
@@ -6077,6 +6197,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxToolbook_php*) _this)->references.Initialize();
@@ -6090,6 +6211,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxToolbook_php*) _this)->references.Initialize();
@@ -6103,6 +6225,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxToolbook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxToolbook_php*) _this)->references.Initialize();
@@ -6131,7 +6254,7 @@ PHP_METHOD(php_wxToolbook, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxToolbook::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxToolbook::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6204,6 +6327,7 @@ PHP_METHOD(php_wxToolbook, GetToolBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6218,6 +6342,7 @@ PHP_METHOD(php_wxToolbook, GetToolBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxToolbook::GetToolBar() to return object pointer\n\n");
 				#endif
+
 				wxToolBar_php* value_to_return0;
 				value_to_return0 = (wxToolBar_php*) ((wxToolbook_php*)_this)->GetToolBar();
 
@@ -6266,6 +6391,7 @@ void php_wxTreebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxTreebook::AddPage(wxWindow &page, string text, bool bSelect, int imageId)
    Adds a new page. */
 PHP_METHOD(php_wxTreebook, AddPage)
@@ -6336,6 +6462,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|bl' (&page0, &text0, &text_len0, &bSelect0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &text0, &text_len0, &bSelect0, &imageId0 ) == SUCCESS)
 		{
@@ -6370,6 +6497,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)));
 
 				references->AddReference(page0, "wxTreebook::AddPage at call with 2 argument(s)");
@@ -6382,6 +6510,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0));
 
 				references->AddReference(page0, "wxTreebook::AddPage at call with 3 argument(s)");
@@ -6394,6 +6523,7 @@ PHP_METHOD(php_wxTreebook, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
 				references->AddReference(page0, "wxTreebook::AddPage at call with 4 argument(s)");
@@ -6483,6 +6613,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|bl' (&page0, &text0, &text_len0, &bSelect0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &text0, &text_len0, &bSelect0, &imageId0 ) == SUCCESS)
 		{
@@ -6517,6 +6648,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8)));
 
 				references->AddReference(page0, "wxTreebook::AddSubPage at call with 2 argument(s)");
@@ -6529,6 +6661,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0));
 
 				references->AddReference(page0, "wxTreebook::AddSubPage at call with 3 argument(s)");
@@ -6541,6 +6674,7 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->AddSubPage((wxWindow*) object_pointer0_0, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
 				references->AddReference(page0, "wxTreebook::AddSubPage at call with 4 argument(s)");
@@ -6625,6 +6759,7 @@ PHP_METHOD(php_wxTreebook, CollapseNode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageId0 ) == SUCCESS)
 		{
@@ -6643,6 +6778,7 @@ PHP_METHOD(php_wxTreebook, CollapseNode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::CollapseNode((size_t) pageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->CollapseNode((size_t) pageId0));
 
 
@@ -6735,6 +6871,7 @@ PHP_METHOD(php_wxTreebook, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -6801,6 +6938,7 @@ PHP_METHOD(php_wxTreebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxTreebook::Create at call with 2 argument(s)");
@@ -6813,6 +6951,7 @@ PHP_METHOD(php_wxTreebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxTreebook::Create at call with 3 argument(s)");
@@ -6826,6 +6965,7 @@ PHP_METHOD(php_wxTreebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxTreebook::Create at call with 4 argument(s)");
@@ -6840,6 +6980,7 @@ PHP_METHOD(php_wxTreebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxTreebook::Create at call with 5 argument(s)");
@@ -6854,6 +6995,7 @@ PHP_METHOD(php_wxTreebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxTreebook::Create at call with 6 argument(s)");
@@ -6940,6 +7082,7 @@ PHP_METHOD(php_wxTreebook, DeletePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pagePos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pagePos0 ) == SUCCESS)
 		{
@@ -6958,6 +7101,7 @@ PHP_METHOD(php_wxTreebook, DeletePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::DeletePage((size_t) pagePos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->DeletePage((size_t) pagePos0));
 
 
@@ -7042,6 +7186,7 @@ PHP_METHOD(php_wxTreebook, ExpandNode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&pageId0, &expand0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageId0, &expand0 ) == SUCCESS)
 		{
@@ -7060,6 +7205,7 @@ PHP_METHOD(php_wxTreebook, ExpandNode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::ExpandNode((size_t) pageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->ExpandNode((size_t) pageId0));
 
 
@@ -7071,6 +7217,7 @@ PHP_METHOD(php_wxTreebook, ExpandNode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::ExpandNode((size_t) pageId0, expand0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->ExpandNode((size_t) pageId0, expand0));
 
 
@@ -7154,6 +7301,7 @@ PHP_METHOD(php_wxTreebook, GetPageParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -7172,6 +7320,7 @@ PHP_METHOD(php_wxTreebook, GetPageParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTreebook::GetPageParent((size_t) page0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTreebook_php*)_this)->GetPageParent((size_t) page0));
 
 
@@ -7254,6 +7403,7 @@ PHP_METHOD(php_wxTreebook, GetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7268,6 +7418,7 @@ PHP_METHOD(php_wxTreebook, GetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTreebook::GetSelection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTreebook_php*)_this)->GetSelection());
 
 
@@ -7357,6 +7508,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs|bl' (&pagePos0, &page0, &text0, &text_len0, &bSelect0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzs|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pagePos0, &page0, &text0, &text_len0, &bSelect0, &imageId0 ) == SUCCESS)
 		{
@@ -7391,6 +7543,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)));
 
 				references->AddReference(page0, "wxTreebook::InsertPage at call with 3 argument(s)");
@@ -7403,6 +7556,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0));
 
 				references->AddReference(page0, "wxTreebook::InsertPage at call with 4 argument(s)");
@@ -7415,6 +7569,7 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
 				references->AddReference(page0, "wxTreebook::InsertPage at call with 5 argument(s)");
@@ -7505,6 +7660,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs|bl' (&pagePos0, &page0, &text0, &text_len0, &bSelect0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzs|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pagePos0, &page0, &text0, &text_len0, &bSelect0, &imageId0 ) == SUCCESS)
 		{
@@ -7539,6 +7695,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8)));
 
 				references->AddReference(page0, "wxTreebook::InsertSubPage at call with 3 argument(s)");
@@ -7551,6 +7708,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0));
 
 				references->AddReference(page0, "wxTreebook::InsertSubPage at call with 4 argument(s)");
@@ -7563,6 +7721,7 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->InsertSubPage((size_t) pagePos0, (wxWindow*) object_pointer0_1, wxString(text0, wxConvUTF8), bSelect0, (int) imageId0));
 
 				references->AddReference(page0, "wxTreebook::InsertSubPage at call with 5 argument(s)");
@@ -7647,6 +7806,7 @@ PHP_METHOD(php_wxTreebook, IsNodeExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageId0 ) == SUCCESS)
 		{
@@ -7665,6 +7825,7 @@ PHP_METHOD(php_wxTreebook, IsNodeExpanded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTreebook::IsNodeExpanded((size_t) pageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTreebook_php*)_this)->IsNodeExpanded((size_t) pageId0));
 
 
@@ -7727,6 +7888,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7739,6 +7901,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -7805,6 +7968,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxTreebook_php();
 
 				((wxTreebook_php*) _this)->references.Initialize();
@@ -7822,6 +7986,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxTreebook_php*) _this)->references.Initialize();
@@ -7833,6 +7998,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxTreebook_php*) _this)->references.Initialize();
@@ -7845,6 +8011,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxTreebook_php*) _this)->references.Initialize();
@@ -7858,6 +8025,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxTreebook_php*) _this)->references.Initialize();
@@ -7871,6 +8039,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxTreebook_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxTreebook_php*) _this)->references.Initialize();
@@ -7899,7 +8068,7 @@ PHP_METHOD(php_wxTreebook, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTreebook::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTreebook::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

@@ -662,7 +662,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 		$called_overload .= "\t\t#ifdef USE_WXPHP_DEBUG\n";
 		$called_overload .= "\t\tphp_printf(\"Parameters received %d\\n\", arguments_received);\n";
 		$called_overload .= "\t\tphp_printf(\"Parsing parameters with '$zend_parse_parameters_string' (".trim($zend_parse_parameters, ", ").")\\n\");\n";
-		$called_overload .= "\t\t#endif\n";
+		$called_overload .= "\t\t#endif\n\n";
 		
 		if($required_parameters == 0 && $parameters_count < 1)
 		{
@@ -1323,7 +1323,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_BOOL($class_name::$method_name($parameters_string))\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1359,7 +1359,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_LONG($class_name::$method_name($parameters_string))\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1393,7 +1393,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_LONG($class_name::$method_name($parameters_string))\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1427,7 +1427,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_STRING($class_name::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						$return_called_overload .= "\t\t\t\t" . $return_type . "* value_to_return{$required_parameters};\n";
 						
@@ -1454,7 +1454,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string)\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1478,7 +1478,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return timestamp\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						$return_type = "long";
 						
@@ -1507,7 +1507,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_STRING($class_name::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						$return_called_overload .= "\t\t\t\t" . $return_type . " value_to_return{$required_parameters};\n";
 						
@@ -1538,7 +1538,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 						}
 						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return strings array\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n";
+						$return_called_overload .= "\t\t\t\t#endif\n\n";
 						
 						$return_type = str_replace(array("const", " ", "&"), "", $declaration[$function_return_types]);
 						
@@ -1580,7 +1580,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 								}
 								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return object pointer\\n\\n\");\n";
-								$return_called_overload .= "\t\t\t\t#endif\n";
+								$return_called_overload .= "\t\t\t\t#endif\n\n";
 								
 								$return_called_overload .= "\t\t\t\t" . $return_type . "_php* value_to_return{$required_parameters};\n";
 								
@@ -1631,7 +1631,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 								}
 								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return object reference\\n\\n\");\n";
-								$return_called_overload .= "\t\t\t\t#endif\n";
+								$return_called_overload .= "\t\t\t\t#endif\n\n";
 								
 								$return_called_overload .= "\t\t\t\t" . $return_type . "_php* value_to_return{$required_parameters};\n";
 								
@@ -1679,7 +1679,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
 								}
 								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return new object\\n\\n\");\n";
-								$return_called_overload .= "\t\t\t\t#endif\n";
+								$return_called_overload .= "\t\t\t\t#endif\n\n";
 								
 								$return_called_overload .= "\t\t\t\t" . $return_type . " value_to_return{$required_parameters};\n";
 								
@@ -1715,7 +1715,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 			{
 				$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
 				$return_called_overload .= "\t\t\t\tphp_printf(\"Executing __construct($parameters_string)\\n\");\n";
-				$return_called_overload .= "\t\t\t\t#endif\n";
+				$return_called_overload .= "\t\t\t\t#endif\n\n";
 				$return_called_overload .= "\t\t\t\t_this = new {$method_name}_php($parameters_string);\n\n";
 				$return_called_overload .= tabs(4) . "(({$class_name}_php*) _this)->references.Initialize();\n";
 				$return_called_overload .= $after_constructor_called;

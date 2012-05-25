@@ -91,6 +91,7 @@ void php_wxGenericValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+
 /* {{{ proto wxObject wxGenericValidator::Clone()
    Clones the generic validator using the copy constructor. */
 PHP_METHOD(php_wxGenericValidator, Clone)
@@ -155,6 +156,7 @@ PHP_METHOD(php_wxGenericValidator, Clone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -169,6 +171,7 @@ PHP_METHOD(php_wxGenericValidator, Clone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGenericValidator::Clone() to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return0;
 				value_to_return0 = (wxObject_php*) ((wxGenericValidator_php*)_this)->Clone();
 
@@ -274,6 +277,7 @@ PHP_METHOD(php_wxGenericValidator, TransferFromWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -288,6 +292,7 @@ PHP_METHOD(php_wxGenericValidator, TransferFromWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGenericValidator::TransferFromWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGenericValidator_php*)_this)->TransferFromWindow());
 
 
@@ -370,6 +375,7 @@ PHP_METHOD(php_wxGenericValidator, TransferToWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -384,6 +390,7 @@ PHP_METHOD(php_wxGenericValidator, TransferToWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGenericValidator::TransferToWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGenericValidator_php*)_this)->TransferToWindow());
 
 
@@ -461,6 +468,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (valPtr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, valPtr0 ) == SUCCESS)
 		{
@@ -480,6 +488,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&valPtr1, &valPtr_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valPtr1, &valPtr_len1 ) == SUCCESS)
 		{
@@ -499,6 +508,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (valPtr2)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, valPtr2 ) == SUCCESS)
 		{
@@ -518,6 +528,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&valPtr3)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valPtr3 ) == SUCCESS)
 		{
@@ -537,6 +548,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&valPtr4)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valPtr4 ) == SUCCESS)
 		{
@@ -569,6 +581,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (valPtr5)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, valPtr5 ) == SUCCESS)
 		{
@@ -588,6 +601,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (valPtr6)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, valPtr6 ) == SUCCESS)
 		{
@@ -609,6 +623,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(valPtr0)\n");
 				#endif
+
 				_this = new wxGenericValidator_php(valPtr0);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -627,6 +642,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(&string_arg1_0)\n");
 				#endif
+
 				_this = new wxGenericValidator_php(&string_arg1_0);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -644,6 +660,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int*) valPtr2)\n");
 				#endif
+
 				_this = new wxGenericValidator_php((int*) valPtr2);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -662,6 +679,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(&date_time3_0)\n");
 				#endif
+
 				_this = new wxGenericValidator_php(&date_time3_0);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -679,6 +697,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxFileName*) object_pointer4_0)\n");
 				#endif
+
 				_this = new wxGenericValidator_php((wxFileName*) object_pointer4_0);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -697,6 +716,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(valPtr5)\n");
 				#endif
+
 				_this = new wxGenericValidator_php(valPtr5);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -714,6 +734,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(valPtr6)\n");
 				#endif
+
 				_this = new wxGenericValidator_php(valPtr6);
 
 				((wxGenericValidator_php*) _this)->references.Initialize();
@@ -739,7 +760,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGenericValidator::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGenericValidator::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -788,6 +809,7 @@ void php_wxValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxValidator::wxValidator()
    Constructor. */
 PHP_METHOD(php_wxValidator, __construct)
@@ -820,6 +842,7 @@ PHP_METHOD(php_wxValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -834,6 +857,7 @@ PHP_METHOD(php_wxValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxValidator_php();
 
 				((wxValidator_php*) _this)->references.Initialize();
@@ -859,7 +883,7 @@ PHP_METHOD(php_wxValidator, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxValidator::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxValidator::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -942,6 +966,7 @@ PHP_METHOD(php_wxValidator, Validate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
@@ -976,6 +1001,7 @@ PHP_METHOD(php_wxValidator, Validate)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxValidator::Validate((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxValidator_php*)_this)->Validate((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxValidator::Validate at call with 1 argument(s)");
@@ -1067,6 +1093,7 @@ PHP_METHOD(php_wxValidator, TransferToWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1081,6 +1108,7 @@ PHP_METHOD(php_wxValidator, TransferToWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxValidator::TransferToWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxValidator_php*)_this)->TransferToWindow());
 
 
@@ -1171,6 +1199,7 @@ PHP_METHOD(php_wxValidator, TransferFromWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1185,6 +1214,7 @@ PHP_METHOD(php_wxValidator, TransferFromWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxValidator::TransferFromWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxValidator_php*)_this)->TransferFromWindow());
 
 
@@ -1277,6 +1307,7 @@ PHP_METHOD(php_wxValidator, SetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -1311,6 +1342,7 @@ PHP_METHOD(php_wxValidator, SetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxValidator::SetWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxValidator_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxValidator::SetWindow at call with 1 argument(s)");
@@ -1402,6 +1434,7 @@ PHP_METHOD(php_wxValidator, GetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1416,6 +1449,7 @@ PHP_METHOD(php_wxValidator, GetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxValidator::GetWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxValidator_php*)_this)->GetWindow();
 
@@ -1530,6 +1564,7 @@ PHP_METHOD(php_wxValidator, SuppressBellOnError)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&suppress0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &suppress0 ) == SUCCESS)
 		{
@@ -1549,6 +1584,7 @@ PHP_METHOD(php_wxValidator, SuppressBellOnError)
 				php_printf("Static ");
 				php_printf("Executing wxValidator::SuppressBellOnError()\n\n");
 				#endif
+
 				wxValidator::SuppressBellOnError();
 
 
@@ -1561,6 +1597,7 @@ PHP_METHOD(php_wxValidator, SuppressBellOnError)
 				php_printf("Static ");
 				php_printf("Executing wxValidator::SuppressBellOnError(suppress0)\n\n");
 				#endif
+
 				wxValidator::SuppressBellOnError(suppress0);
 
 
@@ -1651,6 +1688,7 @@ PHP_METHOD(php_wxValidator, Clone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1665,6 +1703,7 @@ PHP_METHOD(php_wxValidator, Clone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxValidator::Clone() to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return0;
 				value_to_return0 = (wxObject_php*) ((wxValidator_php*)_this)->Clone();
 
@@ -1746,6 +1785,7 @@ void php_wxTextValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto wxObject wxTextValidator::Clone()
    Clones the text validator using the copy constructor. */
 PHP_METHOD(php_wxTextValidator, Clone)
@@ -1810,6 +1850,7 @@ PHP_METHOD(php_wxTextValidator, Clone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1824,6 +1865,7 @@ PHP_METHOD(php_wxTextValidator, Clone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::Clone() to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return0;
 				value_to_return0 = (wxObject_php*) ((wxTextValidator_php*)_this)->Clone();
 
@@ -1929,6 +1971,7 @@ PHP_METHOD(php_wxTextValidator, GetExcludes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1943,6 +1986,7 @@ PHP_METHOD(php_wxTextValidator, GetExcludes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::GetExcludes() to return strings array\n\n");
 				#endif
+
 				wxArrayString value_to_return0;
 				value_to_return0 = ((wxTextValidator_php*)_this)->GetExcludes();
 				char* temp_string0;
@@ -2035,6 +2079,7 @@ PHP_METHOD(php_wxTextValidator, GetIncludes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2049,6 +2094,7 @@ PHP_METHOD(php_wxTextValidator, GetIncludes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::GetIncludes() to return strings array\n\n");
 				#endif
+
 				wxArrayString value_to_return0;
 				value_to_return0 = ((wxTextValidator_php*)_this)->GetIncludes();
 				char* temp_string0;
@@ -2141,6 +2187,7 @@ PHP_METHOD(php_wxTextValidator, GetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2155,6 +2202,7 @@ PHP_METHOD(php_wxTextValidator, GetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextValidator::GetStyle())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextValidator_php*)_this)->GetStyle());
 
 
@@ -2238,6 +2286,7 @@ PHP_METHOD(php_wxTextValidator, HasFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -2256,6 +2305,7 @@ PHP_METHOD(php_wxTextValidator, HasFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextValidator::HasFlag((wxTextValidatorStyle) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextValidator_php*)_this)->HasFlag((wxTextValidatorStyle) style0));
 
 
@@ -2432,6 +2482,7 @@ PHP_METHOD(php_wxTextValidator, SetCharExcludes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&chars0, &chars_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &chars0, &chars_len0 ) == SUCCESS)
 		{
@@ -2450,6 +2501,7 @@ PHP_METHOD(php_wxTextValidator, SetCharExcludes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::SetCharExcludes(wxString(chars0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextValidator_php*)_this)->SetCharExcludes(wxString(chars0, wxConvUTF8));
 
 
@@ -2534,6 +2586,7 @@ PHP_METHOD(php_wxTextValidator, SetCharIncludes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&chars0, &chars_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &chars0, &chars_len0 ) == SUCCESS)
 		{
@@ -2552,6 +2605,7 @@ PHP_METHOD(php_wxTextValidator, SetCharIncludes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::SetCharIncludes(wxString(chars0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextValidator_php*)_this)->SetCharIncludes(wxString(chars0, wxConvUTF8));
 
 
@@ -2635,6 +2689,7 @@ PHP_METHOD(php_wxTextValidator, SetExcludes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'a' (&stringList0)\n");
 		#endif
+
 		char parse_parameters_string[] = "a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stringList0 ) == SUCCESS)
 		{
@@ -2671,6 +2726,7 @@ PHP_METHOD(php_wxTextValidator, SetExcludes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::SetExcludes(strings_array0_0)\n\n");
 				#endif
+
 				((wxTextValidator_php*)_this)->SetExcludes(strings_array0_0);
 
 
@@ -2754,6 +2810,7 @@ PHP_METHOD(php_wxTextValidator, SetIncludes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'a' (&stringList0)\n");
 		#endif
+
 		char parse_parameters_string[] = "a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stringList0 ) == SUCCESS)
 		{
@@ -2790,6 +2847,7 @@ PHP_METHOD(php_wxTextValidator, SetIncludes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::SetIncludes(strings_array0_0)\n\n");
 				#endif
+
 				((wxTextValidator_php*)_this)->SetIncludes(strings_array0_0);
 
 
@@ -2873,6 +2931,7 @@ PHP_METHOD(php_wxTextValidator, SetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -2891,6 +2950,7 @@ PHP_METHOD(php_wxTextValidator, SetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextValidator::SetStyle((long) style0)\n\n");
 				#endif
+
 				((wxTextValidator_php*)_this)->SetStyle((long) style0);
 
 
@@ -2973,6 +3033,7 @@ PHP_METHOD(php_wxTextValidator, TransferFromWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2987,6 +3048,7 @@ PHP_METHOD(php_wxTextValidator, TransferFromWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextValidator::TransferFromWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextValidator_php*)_this)->TransferFromWindow());
 
 
@@ -3069,6 +3131,7 @@ PHP_METHOD(php_wxTextValidator, TransferToWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3083,6 +3146,7 @@ PHP_METHOD(php_wxTextValidator, TransferToWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextValidator::TransferToWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextValidator_php*)_this)->TransferToWindow());
 
 
@@ -3167,6 +3231,7 @@ PHP_METHOD(php_wxTextValidator, Validate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
@@ -3201,6 +3266,7 @@ PHP_METHOD(php_wxTextValidator, Validate)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextValidator::Validate((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextValidator_php*)_this)->Validate((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxTextValidator::Validate at call with 1 argument(s)");
@@ -3256,6 +3322,7 @@ PHP_METHOD(php_wxTextValidator, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ls' (&style0, &valPtr0, &valPtr_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &valPtr0, &valPtr_len0 ) == SUCCESS)
 		{
@@ -3277,6 +3344,7 @@ PHP_METHOD(php_wxTextValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxTextValidator_php();
 
 				((wxTextValidator_php*) _this)->references.Initialize();
@@ -3287,6 +3355,7 @@ PHP_METHOD(php_wxTextValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((long) style0)\n");
 				#endif
+
 				_this = new wxTextValidator_php((long) style0);
 
 				((wxTextValidator_php*) _this)->references.Initialize();
@@ -3298,6 +3367,7 @@ PHP_METHOD(php_wxTextValidator, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((long) style0, &string_arg0_1)\n");
 				#endif
+
 				_this = new wxTextValidator_php((long) style0, &string_arg0_1);
 
 				((wxTextValidator_php*) _this)->references.Initialize();
@@ -3323,7 +3393,7 @@ PHP_METHOD(php_wxTextValidator, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTextValidator::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTextValidator::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

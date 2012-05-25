@@ -91,6 +91,7 @@ void php_wxClientData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxClientData::wxClientData()
    Constructor. */
 PHP_METHOD(php_wxClientData, __construct)
@@ -123,6 +124,7 @@ PHP_METHOD(php_wxClientData, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -137,6 +139,7 @@ PHP_METHOD(php_wxClientData, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxClientData_php();
 
 				((wxClientData_php*) _this)->references.Initialize();
@@ -162,7 +165,7 @@ PHP_METHOD(php_wxClientData, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxClientData::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxClientData::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -211,6 +214,7 @@ void php_wxTreeItemData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+
 /* {{{ proto wxTreeItemId wxTreeItemData::GetId()
    Returns the item associated with this node. */
 PHP_METHOD(php_wxTreeItemData, GetId)
@@ -275,6 +279,7 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -289,6 +294,7 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTreeItemData::GetId() to return object reference\n\n");
 				#endif
+
 				wxTreeItemId_php* value_to_return0;
 				value_to_return0 = (wxTreeItemId_php*) &((wxTreeItemData_php*)_this)->GetId();
 
@@ -393,6 +399,7 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&id0, php_wxTreeItemId_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, php_wxTreeItemId_entry ) == SUCCESS)
 		{
@@ -427,6 +434,7 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTreeItemData::SetId(*(wxTreeItemId*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxTreeItemData_php*)_this)->SetId(*(wxTreeItemId*) object_pointer0_0);
 
 				references->AddReference(id0, "wxTreeItemData::SetId at call with 1 argument(s)");
@@ -478,6 +486,7 @@ PHP_METHOD(php_wxTreeItemData, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -492,6 +501,7 @@ PHP_METHOD(php_wxTreeItemData, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxTreeItemData_php();
 
 				((wxTreeItemData_php*) _this)->references.Initialize();
@@ -517,7 +527,7 @@ PHP_METHOD(php_wxTreeItemData, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTreeItemData::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTreeItemData::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

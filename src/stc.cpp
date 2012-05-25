@@ -58,6 +58,7 @@ void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxStyledTextCtrl::wxStyledTextCtrl(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
    Ctor. */
 PHP_METHOD(php_wxStyledTextCtrl, __construct)
@@ -100,6 +101,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -166,6 +168,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
@@ -177,6 +180,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
@@ -188,6 +192,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
@@ -200,6 +205,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
@@ -213,6 +219,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0)\n");
 				#endif
+
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
@@ -226,6 +233,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxStyledTextCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				((wxStyledTextCtrl_php*) _this)->references.Initialize();
@@ -254,7 +262,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStyledTextCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStyledTextCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -327,6 +335,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomOut)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -341,6 +350,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomOut)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ZoomOut()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ZoomOut();
 
 
@@ -423,6 +433,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomIn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -437,6 +448,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomIn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ZoomIn()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ZoomIn();
 
 
@@ -521,6 +533,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -539,6 +552,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AddText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AddText(wxString(text0, wxConvUTF8));
 
 
@@ -623,6 +637,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&caret0, &anchor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caret0, &anchor0 ) == SUCCESS)
 		{
@@ -641,6 +656,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AddSelection((int) caret0, (int) anchor0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AddSelection((int) caret0, (int) anchor0));
 
 
@@ -724,6 +740,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -742,6 +759,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::WrapCount((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->WrapCount((int) line0));
 
 
@@ -826,6 +844,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&pos0, &onlyWordCharacters0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &onlyWordCharacters0 ) == SUCCESS)
 		{
@@ -844,6 +863,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::WordStartPosition((int) pos0, onlyWordCharacters0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->WordStartPosition((int) pos0, onlyWordCharacters0));
 
 
@@ -926,6 +946,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -940,6 +961,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordRightExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordRightExtend();
 
 
@@ -1024,6 +1046,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddUndoAction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&token0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &token0, &flags0 ) == SUCCESS)
 		{
@@ -1042,6 +1065,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddUndoAction)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AddUndoAction((int) token0, (int) flags0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AddUndoAction((int) token0, (int) flags0);
 
 
@@ -1125,6 +1149,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Allocate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&bytes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bytes0 ) == SUCCESS)
 		{
@@ -1143,6 +1168,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Allocate)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Allocate((int) bytes0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Allocate((int) bytes0);
 
 
@@ -1225,6 +1251,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationClearAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1239,6 +1266,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationClearAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AnnotationClearAll()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AnnotationClearAll();
 
 
@@ -1322,6 +1350,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -1340,6 +1369,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetLines((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AnnotationGetLines((int) line0));
 
 
@@ -1423,6 +1453,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -1441,6 +1472,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetStyle((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AnnotationGetStyle((int) line0));
 
 
@@ -1523,6 +1555,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyleOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1537,6 +1570,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyleOffset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetStyleOffset())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AnnotationGetStyleOffset());
 
 
@@ -1620,6 +1654,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -1638,6 +1673,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::AnnotationGetStyles((int) line0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->AnnotationGetStyles((int) line0);
 				char* temp_string1;
@@ -1727,6 +1763,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -1745,6 +1782,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::AnnotationGetText((int) line0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->AnnotationGetText((int) line0);
 				char* temp_string1;
@@ -1833,6 +1871,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1847,6 +1886,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AnnotationGetVisible())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AnnotationGetVisible());
 
 
@@ -1931,6 +1971,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &style0 ) == SUCCESS)
 		{
@@ -1949,6 +1990,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AnnotationSetStyle((int) line0, (int) style0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AnnotationSetStyle((int) line0, (int) style0);
 
 
@@ -2032,6 +2074,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyleOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -2050,6 +2093,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyleOffset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AnnotationSetStyleOffset((int) style0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AnnotationSetStyleOffset((int) style0);
 
 
@@ -2135,6 +2179,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &styles0, &styles_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &styles0, &styles_len0 ) == SUCCESS)
 		{
@@ -2153,6 +2198,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AnnotationSetStyles((int) line0, wxString(styles0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AnnotationSetStyles((int) line0, wxString(styles0, wxConvUTF8));
 
 
@@ -2238,6 +2284,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -2256,6 +2303,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AnnotationSetText((int) line0, wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AnnotationSetText((int) line0, wxString(text0, wxConvUTF8));
 
 
@@ -2339,6 +2387,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -2357,6 +2406,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AnnotationSetVisible((int) visible0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AnnotationSetVisible((int) visible0);
 
 
@@ -2441,6 +2491,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -2459,6 +2510,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AppendText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AppendText(wxString(text0, wxConvUTF8));
 
 
@@ -2541,6 +2593,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompActive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2555,6 +2608,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompActive)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompActive())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompActive());
 
 
@@ -2637,6 +2691,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompCancel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2651,6 +2706,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompCancel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompCancel()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompCancel();
 
 
@@ -2733,6 +2789,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompComplete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2747,6 +2804,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompComplete)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompComplete()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompComplete();
 
 
@@ -2829,6 +2887,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetAutoHide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2843,6 +2902,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetAutoHide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetAutoHide())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetAutoHide());
 
 
@@ -2925,6 +2985,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCancelAtStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2939,6 +3000,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCancelAtStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetCancelAtStart())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetCancelAtStart());
 
 
@@ -3021,6 +3083,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetChooseSingle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3035,6 +3098,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetChooseSingle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetChooseSingle())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetChooseSingle());
 
 
@@ -3117,6 +3181,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCurrent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3131,6 +3196,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCurrent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetCurrent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetCurrent());
 
 
@@ -3213,6 +3279,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetDropRestOfWord)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3227,6 +3294,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetDropRestOfWord)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetDropRestOfWord())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetDropRestOfWord());
 
 
@@ -3309,6 +3377,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetIgnoreCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3323,6 +3392,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetIgnoreCase)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::AutoCompGetIgnoreCase())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetIgnoreCase());
 
 
@@ -3405,6 +3475,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3419,6 +3490,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetMaxHeight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetMaxHeight());
 
 
@@ -3501,6 +3573,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3515,6 +3588,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetMaxWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetMaxWidth());
 
 
@@ -3597,6 +3671,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3611,6 +3686,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetSeparator())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetSeparator());
 
 
@@ -3693,6 +3769,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetTypeSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3707,6 +3784,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetTypeSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetTypeSeparator())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompGetTypeSeparator());
 
 
@@ -3789,6 +3867,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompPosStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3803,6 +3882,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompPosStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompPosStart())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->AutoCompPosStart());
 
 
@@ -3887,6 +3967,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -3905,6 +3986,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSelect(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSelect(wxString(text0, wxConvUTF8));
 
 
@@ -3988,6 +4070,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetAutoHide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&autoHide0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &autoHide0 ) == SUCCESS)
 		{
@@ -4006,6 +4089,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetAutoHide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetAutoHide(autoHide0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetAutoHide(autoHide0);
 
 
@@ -4089,6 +4173,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCancelAtStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&cancel0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cancel0 ) == SUCCESS)
 		{
@@ -4107,6 +4192,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCancelAtStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetCancelAtStart(cancel0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetCancelAtStart(cancel0);
 
 
@@ -4190,6 +4276,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetChooseSingle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&chooseSingle0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &chooseSingle0 ) == SUCCESS)
 		{
@@ -4208,6 +4295,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetChooseSingle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetChooseSingle(chooseSingle0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetChooseSingle(chooseSingle0);
 
 
@@ -4291,6 +4379,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetDropRestOfWord)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&dropRestOfWord0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dropRestOfWord0 ) == SUCCESS)
 		{
@@ -4309,6 +4398,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetDropRestOfWord)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetDropRestOfWord(dropRestOfWord0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetDropRestOfWord(dropRestOfWord0);
 
 
@@ -4393,6 +4483,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characterSet0, &characterSet_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characterSet0, &characterSet_len0 ) == SUCCESS)
 		{
@@ -4411,6 +4502,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetFillUps(wxString(characterSet0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetFillUps(wxString(characterSet0, wxConvUTF8));
 
 
@@ -4494,6 +4586,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetIgnoreCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&ignoreCase0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ignoreCase0 ) == SUCCESS)
 		{
@@ -4512,6 +4605,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetIgnoreCase)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetIgnoreCase(ignoreCase0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetIgnoreCase(ignoreCase0);
 
 
@@ -4595,6 +4689,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&rowCount0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rowCount0 ) == SUCCESS)
 		{
@@ -4613,6 +4708,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetMaxHeight((int) rowCount0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetMaxHeight((int) rowCount0);
 
 
@@ -4696,6 +4792,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&characterCount0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characterCount0 ) == SUCCESS)
 		{
@@ -4714,6 +4811,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetMaxWidth((int) characterCount0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetMaxWidth((int) characterCount0);
 
 
@@ -4797,6 +4895,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&separatorCharacter0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &separatorCharacter0 ) == SUCCESS)
 		{
@@ -4815,6 +4914,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetSeparator((int) separatorCharacter0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetSeparator((int) separatorCharacter0);
 
 
@@ -4898,6 +4998,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetTypeSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&separatorCharacter0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &separatorCharacter0 ) == SUCCESS)
 		{
@@ -4916,6 +5017,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetTypeSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompSetTypeSeparator((int) separatorCharacter0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompSetTypeSeparator((int) separatorCharacter0);
 
 
@@ -5001,6 +5103,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&lenEntered0, &itemList0, &itemList_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lenEntered0, &itemList0, &itemList_len0 ) == SUCCESS)
 		{
@@ -5019,6 +5122,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompShow((int) lenEntered0, wxString(itemList0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompShow((int) lenEntered0, wxString(itemList0, wxConvUTF8));
 
 
@@ -5103,6 +5207,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characterSet0, &characterSet_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characterSet0, &characterSet_len0 ) == SUCCESS)
 		{
@@ -5121,6 +5226,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AutoCompStops(wxString(characterSet0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AutoCompStops(wxString(characterSet0, wxConvUTF8));
 
 
@@ -5203,6 +5309,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BackTab)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5217,6 +5324,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BackTab)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::BackTab()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->BackTab();
 
 
@@ -5299,6 +5407,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BeginUndoAction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5313,6 +5422,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BeginUndoAction)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::BeginUndoAction()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->BeginUndoAction();
 
 
@@ -5396,6 +5506,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceBadLight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -5414,6 +5525,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceBadLight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::BraceBadLight((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->BraceBadLight((int) pos0);
 
 
@@ -5498,6 +5610,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceHighlight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&pos10, &pos20)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos10, &pos20 ) == SUCCESS)
 		{
@@ -5516,6 +5629,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceHighlight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::BraceHighlight((int) pos10, (int) pos20)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->BraceHighlight((int) pos10, (int) pos20);
 
 
@@ -5599,6 +5713,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -5617,6 +5732,7 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::BraceMatch((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->BraceMatch((int) pos0));
 
 
@@ -5699,6 +5815,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5713,6 +5830,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CallTipActive())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->CallTipActive());
 
 
@@ -5795,6 +5913,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipCancel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5809,6 +5928,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipCancel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipCancel()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipCancel();
 
 
@@ -5891,6 +6011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipPosAtStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5905,6 +6026,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipPosAtStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CallTipPosAtStart())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->CallTipPosAtStart());
 
 
@@ -5989,6 +6111,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -6023,6 +6146,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipSetBackground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipSetBackground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(back0, "wxStyledTextCtrl::CallTipSetBackground at call with 1 argument(s)");
@@ -6108,6 +6232,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -6142,6 +6267,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipSetForeground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipSetForeground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::CallTipSetForeground at call with 1 argument(s)");
@@ -6227,6 +6353,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -6261,6 +6388,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipSetForegroundHighlight(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipSetForegroundHighlight(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::CallTipSetForegroundHighlight at call with 1 argument(s)");
@@ -6346,6 +6474,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetHighlight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
 		{
@@ -6364,6 +6493,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetHighlight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipSetHighlight((int) start0, (int) end0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipSetHighlight((int) start0, (int) end0);
 
 
@@ -6449,6 +6579,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &definition0, &definition_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &definition0, &definition_len0 ) == SUCCESS)
 		{
@@ -6467,6 +6598,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipShow((int) pos0, wxString(definition0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipShow((int) pos0, wxString(definition0, wxConvUTF8));
 
 
@@ -6550,6 +6682,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipUseStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tabSize0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tabSize0 ) == SUCCESS)
 		{
@@ -6568,6 +6701,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipUseStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CallTipUseStyle((int) tabSize0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CallTipUseStyle((int) tabSize0);
 
 
@@ -6650,6 +6784,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanPaste)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6664,6 +6799,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanPaste)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CanPaste())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->CanPaste());
 
 
@@ -6746,6 +6882,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanRedo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6760,6 +6897,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanRedo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CanRedo())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->CanRedo());
 
 
@@ -6842,6 +6980,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanUndo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6856,6 +6995,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CanUndo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CanUndo())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->CanUndo());
 
 
@@ -6938,6 +7078,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Cancel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6952,6 +7093,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Cancel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Cancel()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Cancel();
 
 
@@ -7034,6 +7176,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7048,6 +7191,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CharLeft()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CharLeft();
 
 
@@ -7130,6 +7274,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7144,6 +7289,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CharLeftExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CharLeftExtend();
 
 
@@ -7226,6 +7372,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7240,6 +7387,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CharLeftRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CharLeftRectExtend();
 
 
@@ -7324,6 +7472,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -7342,6 +7491,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CharPositionFromPoint((int) x0, (int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->CharPositionFromPoint((int) x0, (int) y0));
 
 
@@ -7426,6 +7576,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -7444,6 +7595,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CharPositionFromPointClose((int) x0, (int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->CharPositionFromPointClose((int) x0, (int) y0));
 
 
@@ -7526,6 +7678,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7540,6 +7693,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CharRight()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CharRight();
 
 
@@ -7622,6 +7776,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7636,6 +7791,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CharRightExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CharRightExtend();
 
 
@@ -7718,6 +7874,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7732,6 +7889,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CharRightRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CharRightRectExtend();
 
 
@@ -7814,6 +7972,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ChooseCaretX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7828,6 +7987,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ChooseCaretX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ChooseCaretX()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ChooseCaretX();
 
 
@@ -7910,6 +8070,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Clear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7924,6 +8085,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Clear()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Clear();
 
 
@@ -8006,6 +8168,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8020,6 +8183,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ClearAll()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ClearAll();
 
 
@@ -8102,6 +8266,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearDocumentStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8116,6 +8281,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearDocumentStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ClearDocumentStyle()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ClearDocumentStyle();
 
 
@@ -8198,6 +8364,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearRegisteredImages)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8212,6 +8379,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearRegisteredImages)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ClearRegisteredImages()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ClearRegisteredImages();
 
 
@@ -8294,6 +8462,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearSelections)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8308,6 +8477,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearSelections)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ClearSelections()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ClearSelections();
 
 
@@ -8393,6 +8563,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyAssign)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&key0, &modifiers0, &cmd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &modifiers0, &cmd0 ) == SUCCESS)
 		{
@@ -8411,6 +8582,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyAssign)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CmdKeyAssign((int) key0, (int) modifiers0, (int) cmd0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CmdKeyAssign((int) key0, (int) modifiers0, (int) cmd0);
 
 
@@ -8495,6 +8667,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&key0, &modifiers0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &modifiers0 ) == SUCCESS)
 		{
@@ -8513,6 +8686,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CmdKeyClear((int) key0, (int) modifiers0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CmdKeyClear((int) key0, (int) modifiers0);
 
 
@@ -8595,6 +8769,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClearAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8609,6 +8784,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClearAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CmdKeyClearAll()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CmdKeyClearAll();
 
 
@@ -8692,6 +8868,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyExecute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&cmd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cmd0 ) == SUCCESS)
 		{
@@ -8710,6 +8887,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyExecute)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CmdKeyExecute((int) cmd0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CmdKeyExecute((int) cmd0);
 
 
@@ -8794,6 +8972,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Colourise)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
 		{
@@ -8812,6 +8991,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Colourise)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Colourise((int) start0, (int) end0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Colourise((int) start0, (int) end0);
 
 
@@ -8895,6 +9075,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ConvertEOLs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&eolMode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eolMode0 ) == SUCCESS)
 		{
@@ -8913,6 +9094,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ConvertEOLs)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ConvertEOLs((int) eolMode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ConvertEOLs((int) eolMode0);
 
 
@@ -8995,6 +9177,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Copy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9009,6 +9192,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Copy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Copy()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Copy();
 
 
@@ -9091,6 +9275,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyAllowLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9105,6 +9290,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyAllowLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CopyAllowLine()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CopyAllowLine();
 
 
@@ -9189,6 +9375,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
 		{
@@ -9207,6 +9394,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyRange)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CopyRange((int) start0, (int) end0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CopyRange((int) start0, (int) end0);
 
 
@@ -9292,6 +9480,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&length0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &length0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -9310,6 +9499,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CopyText((int) length0, wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->CopyText((int) length0, wxString(text0, wxConvUTF8));
 
 
@@ -9401,6 +9591,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -9467,6 +9658,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 1 argument(s)");
@@ -9479,6 +9671,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 2 argument(s)");
@@ -9491,6 +9684,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 3 argument(s)");
@@ -9504,6 +9698,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 4 argument(s)");
@@ -9518,6 +9713,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 5 argument(s)");
@@ -9532,6 +9728,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxStyledTextCtrl::Create at call with 6 argument(s)");
@@ -9617,6 +9814,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CreateDocument)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9631,6 +9829,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CreateDocument)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::CreateDocument()\n\n");
 				#endif
+
 				ZVAL_STRING(return_value, (char*) ((wxStyledTextCtrl_php*)_this)->CreateDocument(), 1);
 
 
@@ -9713,6 +9912,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Cut)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9727,6 +9927,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Cut)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Cut()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Cut();
 
 
@@ -9809,6 +10010,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9823,6 +10025,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DelLineLeft()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DelLineLeft();
 
 
@@ -9905,6 +10108,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9919,6 +10123,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DelLineRight()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DelLineRight();
 
 
@@ -10001,6 +10206,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10015,6 +10221,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DelWordLeft()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DelWordLeft();
 
 
@@ -10097,6 +10304,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10111,6 +10319,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DelWordRight()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DelWordRight();
 
 
@@ -10193,6 +10402,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBack)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10207,6 +10417,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBack)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DeleteBack()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DeleteBack();
 
 
@@ -10289,6 +10500,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBackNotLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10303,6 +10515,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBackNotLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DeleteBackNotLine()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DeleteBackNotLine();
 
 
@@ -10388,6 +10601,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&x0, &y0, &def0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &def0 ) == SUCCESS)
 		{
@@ -10406,6 +10620,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::DoDragOver((wxCoord) x0, (wxCoord) y0, (wxDragResult) def0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->DoDragOver((wxCoord) x0, (wxCoord) y0, (wxDragResult) def0));
 
 
@@ -10492,6 +10707,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&x0, &y0, &data0, &data_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &data0, &data_len0 ) == SUCCESS)
 		{
@@ -10510,6 +10726,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::DoDropText((long) x0, (long) y0, wxString(data0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->DoDropText((long) x0, (long) y0, wxString(data0, wxConvUTF8)));
 
 
@@ -10593,6 +10810,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lineDisplay0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineDisplay0 ) == SUCCESS)
 		{
@@ -10611,6 +10829,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::DocLineFromVisible((int) lineDisplay0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->DocLineFromVisible((int) lineDisplay0));
 
 
@@ -10693,6 +10912,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10707,6 +10927,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DocumentEnd()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DocumentEnd();
 
 
@@ -10789,6 +11010,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEndExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10803,6 +11025,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEndExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DocumentEndExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DocumentEndExtend();
 
 
@@ -10885,6 +11108,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10899,6 +11123,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DocumentStart()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DocumentStart();
 
 
@@ -10981,6 +11206,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStartExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10995,6 +11221,7 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStartExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::DocumentStartExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->DocumentStartExtend();
 
 
@@ -11077,6 +11304,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EditToggleOvertype)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11091,6 +11319,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EditToggleOvertype)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::EditToggleOvertype()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->EditToggleOvertype();
 
 
@@ -11173,6 +11402,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EmptyUndoBuffer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11187,6 +11417,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EmptyUndoBuffer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::EmptyUndoBuffer()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->EmptyUndoBuffer();
 
 
@@ -11269,6 +11500,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EndUndoAction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11283,6 +11515,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EndUndoAction)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::EndUndoAction()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->EndUndoAction();
 
 
@@ -11365,6 +11598,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureCaretVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11379,6 +11613,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureCaretVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::EnsureCaretVisible()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->EnsureCaretVisible();
 
 
@@ -11462,6 +11697,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -11480,6 +11716,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::EnsureVisible((int) line0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->EnsureVisible((int) line0);
 
 
@@ -11563,6 +11800,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisibleEnforcePolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -11581,6 +11819,7 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisibleEnforcePolicy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::EnsureVisibleEnforcePolicy((int) line0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->EnsureVisibleEnforcePolicy((int) line0);
 
 
@@ -11665,6 +11904,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &column0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &column0 ) == SUCCESS)
 		{
@@ -11683,6 +11923,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FindColumn((int) line0, (int) column0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->FindColumn((int) line0, (int) column0));
 
 
@@ -11770,6 +12011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls|l' (&minPos0, &maxPos0, &text0, &text_len0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &minPos0, &maxPos0, &text0, &text_len0, &flags0 ) == SUCCESS)
 		{
@@ -11788,6 +12030,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8)));
 
 
@@ -11799,6 +12042,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8), (int) flags0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->FindText((int) minPos0, (int) maxPos0, wxString(text0, wxConvUTF8), (int) flags0));
 
 
@@ -11881,6 +12125,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FormFeed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11895,6 +12140,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FormFeed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::FormFeed()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->FormFeed();
 
 
@@ -11988,6 +12234,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bllzzOO' (&doDraw0, &startPos0, &endPos0, &draw0, &target0, &renderRect0, php_wxRect_entry, &pageRect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bllzzOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &doDraw0, &startPos0, &endPos0, &draw0, &target0, &renderRect0, php_wxRect_entry, &pageRect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -12070,6 +12317,7 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->FormatRange(doDraw0, (int) startPos0, (int) endPos0, (wxDC*) object_pointer0_3, (wxDC*) object_pointer0_4, *(wxRect*) object_pointer0_5, *(wxRect*) object_pointer0_6));
 
 				references->AddReference(draw0, "wxStyledTextCtrl::FormatRange at call with 7 argument(s)");
@@ -12154,6 +12402,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12168,6 +12417,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::GetAdditionalCaretForeground() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetAdditionalCaretForeground();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -12255,6 +12505,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsBlink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12269,6 +12520,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsBlink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAdditionalCaretsBlink())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetAdditionalCaretsBlink());
 
 
@@ -12351,6 +12603,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12365,6 +12618,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAdditionalCaretsVisible())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetAdditionalCaretsVisible());
 
 
@@ -12447,6 +12701,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12461,6 +12716,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetAdditionalSelAlpha())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetAdditionalSelAlpha());
 
 
@@ -12543,6 +12799,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelectionTyping)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12557,6 +12814,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelectionTyping)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAdditionalSelectionTyping())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetAdditionalSelectionTyping());
 
 
@@ -12639,6 +12897,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12653,6 +12912,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetAnchor())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetAnchor());
 
 
@@ -12735,6 +12995,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBackSpaceUnIndents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12749,6 +13010,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBackSpaceUnIndents)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetBackSpaceUnIndents())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetBackSpaceUnIndents());
 
 
@@ -12831,6 +13093,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBufferedDraw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12845,6 +13108,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBufferedDraw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetBufferedDraw())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetBufferedDraw());
 
 
@@ -12927,6 +13191,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12941,6 +13206,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::GetCaretForeground() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetCaretForeground();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -13028,6 +13294,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13042,6 +13309,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretLineBackAlpha())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCaretLineBackAlpha());
 
 
@@ -13124,6 +13392,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13138,6 +13407,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::GetCaretLineBackground() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetCaretLineBackground();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -13225,6 +13495,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13239,6 +13510,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetCaretLineVisible())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetCaretLineVisible());
 
 
@@ -13321,6 +13593,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretPeriod)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13335,6 +13608,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretPeriod)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretPeriod())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCaretPeriod());
 
 
@@ -13417,6 +13691,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13431,6 +13706,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetCaretSticky())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetCaretSticky());
 
 
@@ -13513,6 +13789,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13527,6 +13804,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCaretWidth());
 
 
@@ -13610,6 +13888,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -13628,6 +13907,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCharAt((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCharAt((int) pos0));
 
 
@@ -13710,6 +13990,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13724,6 +14005,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetCharacterPointer().fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return0;
 				value_to_return0 = (char*) ((wxStyledTextCtrl_php*)_this)->GetCharacterPointer();
 				ZVAL_STRING(return_value, value_to_return0, 1);
@@ -13808,6 +14090,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCodePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13822,6 +14105,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCodePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCodePage())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCodePage());
 
 
@@ -13905,6 +14189,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -13923,6 +14208,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetColumn((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetColumn((int) pos0));
 
 
@@ -14005,6 +14291,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetControlCharSymbol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14019,6 +14306,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetControlCharSymbol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetControlCharSymbol())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetControlCharSymbol());
 
 
@@ -14101,6 +14389,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14115,6 +14404,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCurrentLine())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCurrentLine());
 
 
@@ -14197,6 +14487,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14211,6 +14502,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCurrentPos())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetCurrentPos());
 
 
@@ -14293,6 +14585,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEOLMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14307,6 +14600,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEOLMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEOLMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetEOLMode());
 
 
@@ -14389,6 +14683,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14403,6 +14698,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::GetEdgeColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetEdgeColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -14490,6 +14786,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14504,6 +14801,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEdgeColumn())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetEdgeColumn());
 
 
@@ -14586,6 +14884,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14600,6 +14899,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEdgeMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetEdgeMode());
 
 
@@ -14682,6 +14982,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndAtLastLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14696,6 +14997,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndAtLastLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetEndAtLastLine())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetEndAtLastLine());
 
 
@@ -14778,6 +15080,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndStyled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14792,6 +15095,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndStyled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetEndStyled())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetEndStyled());
 
 
@@ -14874,6 +15178,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraAscent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14888,6 +15193,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraAscent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetExtraAscent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetExtraAscent());
 
 
@@ -14970,6 +15276,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraDescent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14984,6 +15291,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraDescent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetExtraDescent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetExtraDescent());
 
 
@@ -15066,6 +15374,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFirstVisibleLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15080,6 +15389,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFirstVisibleLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetFirstVisibleLine())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetFirstVisibleLine());
 
 
@@ -15163,6 +15473,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -15181,6 +15492,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetFoldExpanded((int) line0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetFoldExpanded((int) line0));
 
 
@@ -15264,6 +15576,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -15282,6 +15595,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetFoldLevel((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetFoldLevel((int) line0));
 
 
@@ -15365,6 +15679,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -15383,6 +15698,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetFoldParent((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetFoldParent((int) line0));
 
 
@@ -15465,6 +15781,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHighlightGuide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15479,6 +15796,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHighlightGuide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetHighlightGuide())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetHighlightGuide());
 
 
@@ -15561,6 +15879,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15575,6 +15894,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetIndent());
 
 
@@ -15657,6 +15977,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndentationGuides)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15671,6 +15992,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndentationGuides)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndentationGuides())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetIndentationGuides());
 
 
@@ -15753,6 +16075,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetKeysUnicode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15767,6 +16090,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetKeysUnicode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetKeysUnicode())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetKeysUnicode());
 
 
@@ -15851,6 +16175,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &level0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &level0 ) == SUCCESS)
 		{
@@ -15869,6 +16194,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLastChild((int) line0, (int) level0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLastChild((int) line0, (int) level0));
 
 
@@ -15951,6 +16277,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastKeydownProcessed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15965,6 +16292,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastKeydownProcessed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetLastKeydownProcessed())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetLastKeydownProcessed());
 
 
@@ -16047,6 +16375,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLayoutCache)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16061,6 +16390,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLayoutCache)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLayoutCache())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLayoutCache());
 
 
@@ -16143,6 +16473,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLength)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16157,6 +16488,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLength)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLength())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLength());
 
 
@@ -16239,6 +16571,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLexer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16253,6 +16586,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLexer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLexer())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLexer());
 
 
@@ -16335,6 +16669,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16350,6 +16685,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 				php_printf("Static ");
 				php_printf("Executing wxStyledTextCtrl::GetLibraryVersionInfo() to return new object\n\n");
 				#endif
+
 				wxVersionInfo value_to_return0;
 				value_to_return0 = wxStyledTextCtrl::GetLibraryVersionInfo();
 				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
@@ -16440,6 +16776,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -16458,6 +16795,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetLine((int) line0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->GetLine((int) line0);
 				char* temp_string1;
@@ -16546,6 +16884,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16560,6 +16899,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineCount());
 
 
@@ -16643,6 +16983,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -16661,6 +17002,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineEndPosition((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineEndPosition((int) line0));
 
 
@@ -16744,6 +17086,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -16762,6 +17105,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineIndentPosition((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineIndentPosition((int) line0));
 
 
@@ -16845,6 +17189,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -16863,6 +17208,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineIndentation((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineIndentation((int) line0));
 
 
@@ -16946,6 +17292,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -16964,6 +17311,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineSelEndPosition((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineSelEndPosition((int) line0));
 
 
@@ -17047,6 +17395,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -17065,6 +17414,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineSelStartPosition((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineSelStartPosition((int) line0));
 
 
@@ -17148,6 +17498,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -17166,6 +17517,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineState((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineState((int) line0));
 
 
@@ -17249,6 +17601,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -17267,6 +17620,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetLineVisible((int) line0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetLineVisible((int) line0));
 
 
@@ -17349,6 +17703,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMainSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17363,6 +17718,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMainSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMainSelection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMainSelection());
 
 
@@ -17445,6 +17801,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17459,6 +17816,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginLeft())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarginLeft());
 
 
@@ -17542,6 +17900,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
@@ -17560,6 +17919,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginMask((int) margin0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarginMask((int) margin0));
 
 
@@ -17642,6 +18002,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17656,6 +18017,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginRight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarginRight());
 
 
@@ -17739,6 +18101,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
@@ -17757,6 +18120,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetMarginSensitive((int) margin0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarginSensitive((int) margin0));
 
 
@@ -17840,6 +18204,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
@@ -17858,6 +18223,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginType((int) margin0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarginType((int) margin0));
 
 
@@ -17941,6 +18307,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
@@ -17959,6 +18326,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginWidth((int) margin0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarginWidth((int) margin0));
 
 
@@ -18042,6 +18410,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&markerNumber0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0 ) == SUCCESS)
 		{
@@ -18060,6 +18429,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarkerSymbolDefined((int) markerNumber0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMarkerSymbolDefined((int) markerNumber0));
 
 
@@ -18142,6 +18512,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMaxLineState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18156,6 +18527,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMaxLineState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMaxLineState())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMaxLineState());
 
 
@@ -18238,6 +18610,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModEventMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18252,6 +18625,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModEventMask)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetModEventMask())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetModEventMask());
 
 
@@ -18334,6 +18708,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModify)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18348,6 +18723,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModify)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetModify())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetModify());
 
 
@@ -18430,6 +18806,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDownCaptures)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18444,6 +18821,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDownCaptures)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetMouseDownCaptures())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetMouseDownCaptures());
 
 
@@ -18526,6 +18904,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDwellTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18540,6 +18919,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDwellTime)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMouseDwellTime())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetMouseDwellTime());
 
 
@@ -18622,6 +19002,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMultipleSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18636,6 +19017,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMultipleSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetMultipleSelection())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetMultipleSelection());
 
 
@@ -18718,6 +19100,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetOvertype)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18732,6 +19115,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetOvertype)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetOvertype())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetOvertype());
 
 
@@ -18814,6 +19198,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPasteConvertEndings)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18828,6 +19213,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPasteConvertEndings)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetPasteConvertEndings())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetPasteConvertEndings());
 
 
@@ -18910,6 +19296,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintColourMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18924,6 +19311,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintColourMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPrintColourMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetPrintColourMode());
 
 
@@ -19006,6 +19394,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintMagnification)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19020,6 +19409,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintMagnification)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPrintMagnification())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetPrintMagnification());
 
 
@@ -19102,6 +19492,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintWrapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19116,6 +19507,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintWrapMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPrintWrapMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetPrintWrapMode());
 
 
@@ -19200,6 +19592,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&key0, &key_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0 ) == SUCCESS)
 		{
@@ -19218,6 +19611,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetProperty(wxString(key0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->GetProperty(wxString(key0, wxConvUTF8));
 				char* temp_string1;
@@ -19308,6 +19702,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&key0, &key_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0 ) == SUCCESS)
 		{
@@ -19326,6 +19721,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetPropertyExpanded(wxString(key0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->GetPropertyExpanded(wxString(key0, wxConvUTF8));
 				char* temp_string1;
@@ -19416,6 +19812,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&key0, &key_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0 ) == SUCCESS)
 		{
@@ -19434,6 +19831,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPropertyInt(wxString(key0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetPropertyInt(wxString(key0, wxConvUTF8)));
 
 
@@ -19516,6 +19914,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19530,6 +19929,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetReadOnly())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetReadOnly());
 
 
@@ -19611,6 +20011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19625,6 +20026,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionAnchor())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetRectangularSelectionAnchor());
 
 
@@ -19706,6 +20108,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19720,6 +20123,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchorVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionAnchorVirtualSpace())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetRectangularSelectionAnchorVirtualSpace());
 
 
@@ -19801,6 +20205,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19815,6 +20220,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaret)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionCaret())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetRectangularSelectionCaret());
 
 
@@ -19896,6 +20302,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19910,6 +20317,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaretVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionCaretVirtualSpace())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetRectangularSelectionCaretVirtualSpace());
 
 
@@ -19992,6 +20400,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionModifier)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20006,6 +20415,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionModifier)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetRectangularSelectionModifier())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetRectangularSelectionModifier());
 
 
@@ -20088,6 +20498,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20102,6 +20513,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSTCCursor())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSTCCursor());
 
 
@@ -20184,6 +20596,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCFocus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20198,6 +20611,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCFocus)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetSTCFocus())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetSTCFocus());
 
 
@@ -20280,6 +20694,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20294,6 +20709,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetScrollWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetScrollWidth());
 
 
@@ -20376,6 +20792,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSearchFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20390,6 +20807,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSearchFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSearchFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSearchFlags());
 
 
@@ -20472,6 +20890,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20486,6 +20905,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelAlpha())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelAlpha());
 
 
@@ -20568,6 +20988,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20582,6 +21003,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetSelectedText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetSelectedText();
 				char* temp_string0;
@@ -20670,6 +21092,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20684,6 +21107,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionEnd())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionEnd());
 
 
@@ -20766,6 +21190,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20780,6 +21205,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionMode());
 
 
@@ -20862,6 +21288,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -20880,6 +21307,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNAnchor((int) selection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionNAnchor((int) selection0));
 
 
@@ -20962,6 +21390,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -20980,6 +21409,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNAnchorVirtualSpace((int) selection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionNAnchorVirtualSpace((int) selection0));
 
 
@@ -21062,6 +21492,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -21080,6 +21511,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNCaret((int) selection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionNCaret((int) selection0));
 
 
@@ -21162,6 +21594,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -21180,6 +21613,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNCaretVirtualSpace((int) selection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionNCaretVirtualSpace((int) selection0));
 
 
@@ -21263,6 +21697,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -21281,6 +21716,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNEnd((int) selection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionNEnd((int) selection0));
 
 
@@ -21364,6 +21800,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -21382,6 +21819,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionNStart((int) selection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionNStart((int) selection0));
 
 
@@ -21464,6 +21902,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21478,6 +21917,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelectionStart())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelectionStart());
 
 
@@ -21560,6 +22000,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelections)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21574,6 +22015,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelections)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetSelections())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetSelections());
 
 
@@ -21656,6 +22098,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStatus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21670,6 +22113,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStatus)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStatus())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetStatus());
 
 
@@ -21753,6 +22197,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -21771,6 +22216,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStyleAt((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetStyleAt((int) pos0));
 
 
@@ -21853,6 +22299,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBits)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21867,6 +22314,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBits)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStyleBits())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetStyleBits());
 
 
@@ -21949,6 +22397,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBitsNeeded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21963,6 +22412,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBitsNeeded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetStyleBitsNeeded())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetStyleBitsNeeded());
 
 
@@ -22045,6 +22495,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabIndents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22059,6 +22510,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabIndents)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetTabIndents())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetTabIndents());
 
 
@@ -22141,6 +22593,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22155,6 +22608,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTabWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetTabWidth());
 
 
@@ -22237,6 +22691,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22251,6 +22706,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTargetEnd())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetTargetEnd());
 
 
@@ -22333,6 +22789,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22347,6 +22804,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTargetStart())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetTargetStart());
 
 
@@ -22429,6 +22887,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22443,6 +22902,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetText();
 				char* temp_string0;
@@ -22531,6 +22991,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextLength)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22545,6 +23006,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextLength)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTextLength())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetTextLength());
 
 
@@ -22629,6 +23091,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&startPos0, &endPos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &startPos0, &endPos0 ) == SUCCESS)
 		{
@@ -22647,6 +23110,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetTextRange((int) startPos0, (int) endPos0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = ((wxStyledTextCtrl_php*)_this)->GetTextRange((int) startPos0, (int) endPos0);
 				char* temp_string2;
@@ -22735,6 +23199,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTwoPhaseDraw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22749,6 +23214,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTwoPhaseDraw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetTwoPhaseDraw())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetTwoPhaseDraw());
 
 
@@ -22831,6 +23297,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUndoCollection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22845,6 +23312,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUndoCollection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUndoCollection())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetUndoCollection());
 
 
@@ -22927,6 +23395,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseAntiAliasing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22941,6 +23410,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseAntiAliasing)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseAntiAliasing())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetUseAntiAliasing());
 
 
@@ -23023,6 +23493,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseHorizontalScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23037,6 +23508,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseHorizontalScrollBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseHorizontalScrollBar())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetUseHorizontalScrollBar());
 
 
@@ -23119,6 +23591,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseTabs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23133,6 +23606,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseTabs)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseTabs())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetUseTabs());
 
 
@@ -23215,6 +23689,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseVerticalScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23229,6 +23704,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseVerticalScrollBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetUseVerticalScrollBar())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetUseVerticalScrollBar());
 
 
@@ -23311,6 +23787,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewEOL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23325,6 +23802,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewEOL)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetViewEOL())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->GetViewEOL());
 
 
@@ -23407,6 +23885,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewWhiteSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23421,6 +23900,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewWhiteSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetViewWhiteSpace())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetViewWhiteSpace());
 
 
@@ -23502,6 +23982,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetVirtualSpaceOptions)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23516,6 +23997,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetVirtualSpaceOptions)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetVirtualSpaceOptions())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetVirtualSpaceOptions());
 
 
@@ -23598,6 +24080,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23612,6 +24095,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWhitespaceSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetWhitespaceSize());
 
 
@@ -23694,6 +24178,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapIndentMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23708,6 +24193,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapIndentMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapIndentMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetWrapIndentMode());
 
 
@@ -23790,6 +24276,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23804,6 +24291,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetWrapMode());
 
 
@@ -23886,6 +24374,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapStartIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23900,6 +24389,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapStartIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapStartIndent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetWrapStartIndent());
 
 
@@ -23982,6 +24472,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23996,6 +24487,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapVisualFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetWrapVisualFlags());
 
 
@@ -24078,6 +24570,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlagsLocation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24092,6 +24585,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlagsLocation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetWrapVisualFlagsLocation())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetWrapVisualFlagsLocation());
 
 
@@ -24173,6 +24667,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetXOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24187,6 +24682,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetXOffset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetXOffset())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetXOffset());
 
 
@@ -24269,6 +24765,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetZoom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24283,6 +24780,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetZoom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetZoom())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->GetZoom());
 
 
@@ -24366,6 +24864,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -24384,6 +24883,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::GotoLine((int) line0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->GotoLine((int) line0);
 
 
@@ -24467,6 +24967,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -24485,6 +24986,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::GotoPos((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->GotoPos((int) pos0);
 
 
@@ -24569,6 +25071,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HideLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &lineEnd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &lineEnd0 ) == SUCCESS)
 		{
@@ -24587,6 +25090,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HideLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HideLines((int) lineStart0, (int) lineEnd0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HideLines((int) lineStart0, (int) lineEnd0);
 
 
@@ -24670,6 +25174,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HideSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&normal0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal0 ) == SUCCESS)
 		{
@@ -24688,6 +25193,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HideSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HideSelection(normal0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HideSelection(normal0);
 
 
@@ -24770,6 +25276,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Home)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24784,6 +25291,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Home)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Home()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Home();
 
 
@@ -24866,6 +25374,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplay)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24880,6 +25389,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplay)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HomeDisplay()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HomeDisplay();
 
 
@@ -24962,6 +25472,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplayExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24976,6 +25487,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplayExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HomeDisplayExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HomeDisplayExtend();
 
 
@@ -25058,6 +25570,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25072,6 +25585,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HomeExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HomeExtend();
 
 
@@ -25154,6 +25668,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25168,6 +25683,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HomeRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HomeRectExtend();
 
 
@@ -25250,6 +25766,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25264,6 +25781,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HomeWrap()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HomeWrap();
 
 
@@ -25345,6 +25863,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrapExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25359,6 +25878,7 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrapExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::HomeWrapExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->HomeWrapExtend();
 
 
@@ -25442,6 +25962,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indicator0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0 ) == SUCCESS)
 		{
@@ -25460,6 +25981,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorGetAlpha((int) indicator0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->IndicatorGetAlpha((int) indicator0));
 
 
@@ -25543,6 +26065,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indic0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0 ) == SUCCESS)
 		{
@@ -25561,6 +26084,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::IndicatorGetForeground((int) indic0) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->IndicatorGetForeground((int) indic0);
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -25649,6 +26173,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indic0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0 ) == SUCCESS)
 		{
@@ -25667,6 +26192,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorGetStyle((int) indic0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->IndicatorGetStyle((int) indic0));
 
 
@@ -25751,6 +26277,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&indicator0, &alpha0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0, &alpha0 ) == SUCCESS)
 		{
@@ -25769,6 +26296,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::IndicatorSetAlpha((int) indicator0, (int) alpha0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->IndicatorSetAlpha((int) indicator0, (int) alpha0);
 
 
@@ -25854,6 +26382,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&indic0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -25888,6 +26417,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::IndicatorSetForeground((int) indic0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->IndicatorSetForeground((int) indic0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::IndicatorSetForeground at call with 2 argument(s)");
@@ -25973,6 +26503,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&indic0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0, &style0 ) == SUCCESS)
 		{
@@ -25991,6 +26522,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::IndicatorSetStyle((int) indic0, (int) style0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->IndicatorSetStyle((int) indic0, (int) style0);
 
 
@@ -26076,6 +26608,7 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -26094,6 +26627,7 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::InsertText((int) pos0, wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->InsertText((int) pos0, wxString(text0, wxConvUTF8));
 
 
@@ -26179,6 +26713,7 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -26197,6 +26732,7 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::InsertTextRaw((int) pos0, text0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->InsertTextRaw((int) pos0, text0);
 
 
@@ -26279,6 +26815,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCopy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26293,6 +26830,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCopy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineCopy()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineCopy();
 
 
@@ -26375,6 +26913,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCut)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26389,6 +26928,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCut)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineCut()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineCut();
 
 
@@ -26471,6 +27011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDelete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26485,6 +27026,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDelete)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineDelete()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineDelete();
 
 
@@ -26567,6 +27109,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26581,6 +27124,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineDown()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineDown();
 
 
@@ -26663,6 +27207,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26677,6 +27222,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineDownExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineDownExtend();
 
 
@@ -26759,6 +27305,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26773,6 +27320,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineDownRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineDownRectExtend();
 
 
@@ -26855,6 +27403,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDuplicate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26869,6 +27418,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDuplicate)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineDuplicate()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineDuplicate();
 
 
@@ -26951,6 +27501,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26965,6 +27516,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEnd()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEnd();
 
 
@@ -27047,6 +27599,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplay)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27061,6 +27614,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplay)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEndDisplay()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEndDisplay();
 
 
@@ -27143,6 +27697,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplayExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27157,6 +27712,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplayExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEndDisplayExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEndDisplayExtend();
 
 
@@ -27239,6 +27795,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27253,6 +27810,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEndExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEndExtend();
 
 
@@ -27335,6 +27893,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27349,6 +27908,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEndRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEndRectExtend();
 
 
@@ -27430,6 +27990,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27444,6 +28005,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEndWrap()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEndWrap();
 
 
@@ -27525,6 +28087,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrapExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27539,6 +28102,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrapExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineEndWrapExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineEndWrapExtend();
 
 
@@ -27622,6 +28186,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -27640,6 +28205,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::LineFromPosition((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->LineFromPosition((int) pos0));
 
 
@@ -27723,6 +28289,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineLength)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -27741,6 +28308,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineLength)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::LineLength((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->LineLength((int) line0));
 
 
@@ -27825,6 +28393,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScroll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&columns0, &lines0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &columns0, &lines0 ) == SUCCESS)
 		{
@@ -27843,6 +28412,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScroll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineScroll((int) columns0, (int) lines0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineScroll((int) columns0, (int) lines0);
 
 
@@ -27925,6 +28495,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27939,6 +28510,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineScrollDown()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineScrollDown();
 
 
@@ -28021,6 +28593,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28035,6 +28608,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineScrollUp()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineScrollUp();
 
 
@@ -28117,6 +28691,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineTranspose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28131,6 +28706,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineTranspose)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineTranspose()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineTranspose();
 
 
@@ -28213,6 +28789,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28227,6 +28804,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineUp()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineUp();
 
 
@@ -28309,6 +28887,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28323,6 +28902,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineUpExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineUpExtend();
 
 
@@ -28405,6 +28985,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28419,6 +29000,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LineUpRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LineUpRectExtend();
 
 
@@ -28501,6 +29083,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesJoin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28515,6 +29098,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesJoin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LinesJoin()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LinesJoin();
 
 
@@ -28597,6 +29181,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesOnScreen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28611,6 +29196,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesOnScreen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::LinesOnScreen())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->LinesOnScreen());
 
 
@@ -28694,6 +29280,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesSplit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
@@ -28712,6 +29299,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesSplit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LinesSplit((int) pixelWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LinesSplit((int) pixelWidth0);
 
 
@@ -28797,6 +29385,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&file0, &file_len0, &fileType0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0, &fileType0 ) == SUCCESS)
 		{
@@ -28815,6 +29404,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::LoadFile(wxString(file0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->LoadFile(wxString(file0, wxConvUTF8)));
 
 
@@ -28826,6 +29416,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::LoadFile(wxString(file0, wxConvUTF8), (int) fileType0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->LoadFile(wxString(file0, wxConvUTF8), (int) fileType0));
 
 
@@ -28908,6 +29499,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LowerCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28922,6 +29514,7 @@ PHP_METHOD(php_wxStyledTextCtrl, LowerCase)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::LowerCase()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->LowerCase();
 
 
@@ -29005,6 +29598,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -29023,6 +29617,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarginGetStyle((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarginGetStyle((int) line0));
 
 
@@ -29105,6 +29700,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyleOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -29119,6 +29715,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyleOffset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarginGetStyleOffset())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarginGetStyleOffset());
 
 
@@ -29202,6 +29799,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -29220,6 +29818,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::MarginGetStyles((int) line0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->MarginGetStyles((int) line0);
 				char* temp_string1;
@@ -29309,6 +29908,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -29327,6 +29927,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::MarginGetText((int) line0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->MarginGetText((int) line0);
 				char* temp_string1;
@@ -29417,6 +30018,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &style0 ) == SUCCESS)
 		{
@@ -29435,6 +30037,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarginSetStyle((int) line0, (int) style0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarginSetStyle((int) line0, (int) style0);
 
 
@@ -29518,6 +30121,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyleOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -29536,6 +30140,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyleOffset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarginSetStyleOffset((int) style0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarginSetStyleOffset((int) style0);
 
 
@@ -29621,6 +30226,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &styles0, &styles_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &styles0, &styles_len0 ) == SUCCESS)
 		{
@@ -29639,6 +30245,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarginSetStyles((int) line0, wxString(styles0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarginSetStyles((int) line0, wxString(styles0, wxConvUTF8));
 
 
@@ -29724,6 +30331,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -29742,6 +30350,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarginSetText((int) line0, wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarginSetText((int) line0, wxString(text0, wxConvUTF8));
 
 
@@ -29824,6 +30433,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginTextClearAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -29838,6 +30448,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginTextClearAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarginTextClearAll()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarginTextClearAll();
 
 
@@ -29922,6 +30533,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &markerNumber0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &markerNumber0 ) == SUCCESS)
 		{
@@ -29940,6 +30552,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerAdd((int) line0, (int) markerNumber0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarkerAdd((int) line0, (int) markerNumber0));
 
 
@@ -30024,6 +30637,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAddSet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &set0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &set0 ) == SUCCESS)
 		{
@@ -30042,6 +30656,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAddSet)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerAddSet((int) line0, (int) set0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerAddSet((int) line0, (int) set0);
 
 
@@ -30130,6 +30745,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|OO' (&markerNumber0, &markerSymbol0, &foreground0, php_wxColour_entry, &background0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &markerSymbol0, &foreground0, php_wxColour_entry, &background0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -30180,6 +30796,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDefine((int) markerNumber0, (int) markerSymbol0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDefine((int) markerNumber0, (int) markerSymbol0);
 
 
@@ -30191,6 +30808,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2);
 
 				references->AddReference(foreground0, "wxStyledTextCtrl::MarkerDefine at call with 3 argument(s)");
@@ -30203,6 +30821,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2, *(wxColour*) object_pointer0_3)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDefine((int) markerNumber0, (int) markerSymbol0, *(wxColour*) object_pointer0_2, *(wxColour*) object_pointer0_3);
 
 				references->AddReference(foreground0, "wxStyledTextCtrl::MarkerDefine at call with 4 argument(s)");
@@ -30290,6 +30909,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&markerNumber0, &bmp0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -30324,6 +30944,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDefineBitmap((int) markerNumber0, *(wxBitmap*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDefineBitmap((int) markerNumber0, *(wxBitmap*) object_pointer0_1);
 
 				references->AddReference(bmp0, "wxStyledTextCtrl::MarkerDefineBitmap at call with 2 argument(s)");
@@ -30409,6 +31030,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDelete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &markerNumber0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &markerNumber0 ) == SUCCESS)
 		{
@@ -30427,6 +31049,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDelete)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDelete((int) line0, (int) markerNumber0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDelete((int) line0, (int) markerNumber0);
 
 
@@ -30510,6 +31133,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&markerNumber0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0 ) == SUCCESS)
 		{
@@ -30528,6 +31152,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDeleteAll((int) markerNumber0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDeleteAll((int) markerNumber0);
 
 
@@ -30611,6 +31236,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteHandle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&handle0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handle0 ) == SUCCESS)
 		{
@@ -30629,6 +31255,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteHandle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerDeleteHandle((int) handle0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerDeleteHandle((int) handle0);
 
 
@@ -30712,6 +31339,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -30730,6 +31358,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerGet((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarkerGet((int) line0));
 
 
@@ -30813,6 +31442,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&handle0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handle0 ) == SUCCESS)
 		{
@@ -30831,6 +31461,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerLineFromHandle((int) handle0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarkerLineFromHandle((int) handle0));
 
 
@@ -30915,6 +31546,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &markerMask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &markerMask0 ) == SUCCESS)
 		{
@@ -30933,6 +31565,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerNext((int) lineStart0, (int) markerMask0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarkerNext((int) lineStart0, (int) markerMask0));
 
 
@@ -31017,6 +31650,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &markerMask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &markerMask0 ) == SUCCESS)
 		{
@@ -31035,6 +31669,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::MarkerPrevious((int) lineStart0, (int) markerMask0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->MarkerPrevious((int) lineStart0, (int) markerMask0));
 
 
@@ -31119,6 +31754,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&markerNumber0, &alpha0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &alpha0 ) == SUCCESS)
 		{
@@ -31137,6 +31773,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerSetAlpha((int) markerNumber0, (int) alpha0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerSetAlpha((int) markerNumber0, (int) alpha0);
 
 
@@ -31222,6 +31859,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&markerNumber0, &back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -31256,6 +31894,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerSetBackground((int) markerNumber0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerSetBackground((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(back0, "wxStyledTextCtrl::MarkerSetBackground at call with 2 argument(s)");
@@ -31342,6 +31981,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&markerNumber0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -31376,6 +32016,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MarkerSetForeground((int) markerNumber0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MarkerSetForeground((int) markerNumber0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::MarkerSetForeground at call with 2 argument(s)");
@@ -31459,6 +32100,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MoveCaretInsideView)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31473,6 +32115,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MoveCaretInsideView)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::MoveCaretInsideView()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->MoveCaretInsideView();
 
 
@@ -31555,6 +32198,7 @@ PHP_METHOD(php_wxStyledTextCtrl, NewLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31569,6 +32213,7 @@ PHP_METHOD(php_wxStyledTextCtrl, NewLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::NewLine()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->NewLine();
 
 
@@ -31651,6 +32296,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31665,6 +32311,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PageDown()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->PageDown();
 
 
@@ -31747,6 +32394,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31761,6 +32409,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PageDownExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->PageDownExtend();
 
 
@@ -31843,6 +32492,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31857,6 +32507,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PageDownRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->PageDownRectExtend();
 
 
@@ -31939,6 +32590,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31953,6 +32605,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PageUp()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->PageUp();
 
 
@@ -32035,6 +32688,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32049,6 +32703,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PageUpExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->PageUpExtend();
 
 
@@ -32131,6 +32786,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32145,6 +32801,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PageUpRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->PageUpRectExtend();
 
 
@@ -32227,6 +32884,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32241,6 +32899,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ParaDown()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ParaDown();
 
 
@@ -32322,6 +32981,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDownExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32336,6 +32996,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDownExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ParaDownExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ParaDownExtend();
 
 
@@ -32417,6 +33078,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32431,6 +33093,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ParaUp()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ParaUp();
 
 
@@ -32512,6 +33175,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUpExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32526,6 +33190,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUpExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ParaUpExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ParaUpExtend();
 
 
@@ -32608,6 +33273,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Paste)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32622,6 +33288,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Paste)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Paste()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Paste();
 
 
@@ -32705,6 +33372,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -32723,6 +33391,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::PointFromPosition((int) pos0) to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)_this)->PointFromPosition((int) pos0);
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
@@ -32811,6 +33480,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -32829,6 +33499,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionAfter((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->PositionAfter((int) pos0));
 
 
@@ -32912,6 +33583,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -32930,6 +33602,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionBefore((int) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->PositionBefore((int) pos0));
 
 
@@ -33013,6 +33686,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -33031,6 +33705,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionFromLine((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->PositionFromLine((int) line0));
 
 
@@ -33115,6 +33790,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -33149,6 +33825,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionFromPoint(*(wxPoint*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->PositionFromPoint(*(wxPoint*) object_pointer0_0));
 
 
@@ -33233,6 +33910,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -33251,6 +33929,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PositionFromPointClose((int) x0, (int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->PositionFromPointClose((int) x0, (int) y0));
 
 
@@ -33333,6 +34012,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Redo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -33347,6 +34027,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Redo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Redo()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Redo();
 
 
@@ -33432,6 +34113,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&type0, &bmp0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -33466,6 +34148,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::RegisterImage((int) type0, *(wxBitmap*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->RegisterImage((int) type0, *(wxBitmap*) object_pointer0_1);
 
 				references->AddReference(bmp0, "wxStyledTextCtrl::RegisterImage at call with 2 argument(s)");
@@ -33551,6 +34234,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -33569,6 +34253,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ReplaceSelection(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ReplaceSelection(wxString(text0, wxConvUTF8));
 
 
@@ -33653,6 +34338,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -33671,6 +34357,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ReplaceTarget(wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->ReplaceTarget(wxString(text0, wxConvUTF8)));
 
 
@@ -33755,6 +34442,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -33773,6 +34461,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ReplaceTargetRE(wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->ReplaceTargetRE(wxString(text0, wxConvUTF8)));
 
 
@@ -33855,6 +34544,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RotateSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -33869,6 +34559,7 @@ PHP_METHOD(php_wxStyledTextCtrl, RotateSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::RotateSelection()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->RotateSelection();
 
 
@@ -33954,6 +34645,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|sl' (&file0, &file_len0, &fileType0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0, &fileType0 ) == SUCCESS)
 		{
@@ -33972,6 +34664,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SaveFile())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->SaveFile());
 
 
@@ -33983,6 +34676,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SaveFile(wxString(file0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->SaveFile(wxString(file0, wxConvUTF8)));
 
 
@@ -33994,6 +34688,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SaveFile(wxString(file0, wxConvUTF8), (int) fileType0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->SaveFile(wxString(file0, wxConvUTF8), (int) fileType0));
 
 
@@ -34077,6 +34772,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&column0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &column0 ) == SUCCESS)
 		{
@@ -34095,6 +34791,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ScrollToColumn((int) column0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ScrollToColumn((int) column0);
 
 
@@ -34178,6 +34875,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -34196,6 +34894,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ScrollToLine((int) line0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ScrollToLine((int) line0);
 
 
@@ -34278,6 +34977,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -34292,6 +34992,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SearchAnchor()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SearchAnchor();
 
 
@@ -34376,6 +35077,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -34394,6 +35096,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::SearchInTarget(wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->SearchInTarget(wxString(text0, wxConvUTF8)));
 
 
@@ -34479,6 +35182,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&flags0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -34497,6 +35201,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::SearchNext((int) flags0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->SearchNext((int) flags0, wxString(text0, wxConvUTF8)));
 
 
@@ -34582,6 +35287,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&flags0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -34600,6 +35306,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::SearchPrev((int) flags0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->SearchPrev((int) flags0, wxString(text0, wxConvUTF8)));
 
 
@@ -34682,6 +35389,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -34696,6 +35404,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SelectAll()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SelectAll();
 
 
@@ -34778,6 +35487,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionDuplicate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -34792,6 +35502,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionDuplicate)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SelectionDuplicate()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SelectionDuplicate();
 
 
@@ -34874,6 +35585,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionIsRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -34888,6 +35600,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionIsRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SelectionIsRectangle())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->SelectionIsRectangle());
 
 
@@ -34972,6 +35685,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -35006,6 +35720,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalCaretForeground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalCaretForeground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetAdditionalCaretForeground at call with 1 argument(s)");
@@ -35090,6 +35805,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsBlink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&additionalCaretsBlink0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &additionalCaretsBlink0 ) == SUCCESS)
 		{
@@ -35108,6 +35824,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsBlink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalCaretsBlink(additionalCaretsBlink0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalCaretsBlink(additionalCaretsBlink0);
 
 
@@ -35191,6 +35908,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&additionalCaretsBlink0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &additionalCaretsBlink0 ) == SUCCESS)
 		{
@@ -35209,6 +35927,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalCaretsVisible(additionalCaretsBlink0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalCaretsVisible(additionalCaretsBlink0);
 
 
@@ -35292,6 +36011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alpha0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alpha0 ) == SUCCESS)
 		{
@@ -35310,6 +36030,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalSelAlpha((int) alpha0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalSelAlpha((int) alpha0);
 
 
@@ -35394,6 +36115,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -35428,6 +36150,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalSelBackground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalSelBackground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(back0, "wxStyledTextCtrl::SetAdditionalSelBackground at call with 1 argument(s)");
@@ -35513,6 +36236,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -35547,6 +36271,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalSelForeground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalSelForeground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetAdditionalSelForeground at call with 1 argument(s)");
@@ -35631,6 +36356,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelectionTyping)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&additionalSelectionTyping0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &additionalSelectionTyping0 ) == SUCCESS)
 		{
@@ -35649,6 +36375,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelectionTyping)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAdditionalSelectionTyping(additionalSelectionTyping0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAdditionalSelectionTyping(additionalSelectionTyping0);
 
 
@@ -35732,6 +36459,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&posAnchor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &posAnchor0 ) == SUCCESS)
 		{
@@ -35750,6 +36478,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetAnchor((int) posAnchor0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetAnchor((int) posAnchor0);
 
 
@@ -35833,6 +36562,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBackSpaceUnIndents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&bsUnIndents0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bsUnIndents0 ) == SUCCESS)
 		{
@@ -35851,6 +36581,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBackSpaceUnIndents)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetBackSpaceUnIndents(bsUnIndents0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetBackSpaceUnIndents(bsUnIndents0);
 
 
@@ -35934,6 +36665,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBufferedDraw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&buffered0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffered0 ) == SUCCESS)
 		{
@@ -35952,6 +36684,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBufferedDraw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetBufferedDraw(buffered0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetBufferedDraw(buffered0);
 
 
@@ -36036,6 +36769,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -36070,6 +36804,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretForeground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretForeground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetCaretForeground at call with 1 argument(s)");
@@ -36154,6 +36889,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alpha0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alpha0 ) == SUCCESS)
 		{
@@ -36172,6 +36908,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretLineBackAlpha((int) alpha0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretLineBackAlpha((int) alpha0);
 
 
@@ -36256,6 +36993,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -36290,6 +37028,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretLineBackground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretLineBackground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(back0, "wxStyledTextCtrl::SetCaretLineBackground at call with 1 argument(s)");
@@ -36374,6 +37113,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -36392,6 +37132,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretLineVisible(show0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretLineVisible(show0);
 
 
@@ -36475,6 +37216,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretPeriod)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&periodMilliseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &periodMilliseconds0 ) == SUCCESS)
 		{
@@ -36493,6 +37235,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretPeriod)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretPeriod((int) periodMilliseconds0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretPeriod((int) periodMilliseconds0);
 
 
@@ -36576,6 +37319,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&useCaretStickyBehaviour0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useCaretStickyBehaviour0 ) == SUCCESS)
 		{
@@ -36594,6 +37338,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretSticky(useCaretStickyBehaviour0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretSticky(useCaretStickyBehaviour0);
 
 
@@ -36677,6 +37422,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
@@ -36695,6 +37441,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCaretWidth((int) pixelWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCaretWidth((int) pixelWidth0);
 
 
@@ -36777,6 +37524,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCharsDefault)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -36791,6 +37539,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCharsDefault)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCharsDefault()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCharsDefault();
 
 
@@ -36874,6 +37623,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCodePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&codePage0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &codePage0 ) == SUCCESS)
 		{
@@ -36892,6 +37642,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCodePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCodePage((int) codePage0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCodePage((int) codePage0);
 
 
@@ -36975,6 +37726,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetControlCharSymbol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&symbol0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &symbol0 ) == SUCCESS)
 		{
@@ -36993,6 +37745,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetControlCharSymbol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetControlCharSymbol((int) symbol0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetControlCharSymbol((int) symbol0);
 
 
@@ -37076,6 +37829,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCurrentPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -37094,6 +37848,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCurrentPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetCurrentPos((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetCurrentPos((int) pos0);
 
 
@@ -37177,6 +37932,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEOLMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&eolMode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eolMode0 ) == SUCCESS)
 		{
@@ -37195,6 +37951,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEOLMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetEOLMode((int) eolMode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetEOLMode((int) eolMode0);
 
 
@@ -37279,6 +38036,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&edgeColour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &edgeColour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -37313,6 +38071,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetEdgeColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetEdgeColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(edgeColour0, "wxStyledTextCtrl::SetEdgeColour at call with 1 argument(s)");
@@ -37397,6 +38156,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&column0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &column0 ) == SUCCESS)
 		{
@@ -37415,6 +38175,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetEdgeColumn((int) column0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetEdgeColumn((int) column0);
 
 
@@ -37498,6 +38259,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -37516,6 +38278,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetEdgeMode((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetEdgeMode((int) mode0);
 
 
@@ -37599,6 +38362,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEndAtLastLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&endAtLastLine0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &endAtLastLine0 ) == SUCCESS)
 		{
@@ -37617,6 +38381,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEndAtLastLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetEndAtLastLine(endAtLastLine0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetEndAtLastLine(endAtLastLine0);
 
 
@@ -37700,6 +38465,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraAscent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&extraAscent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraAscent0 ) == SUCCESS)
 		{
@@ -37718,6 +38484,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraAscent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetExtraAscent((int) extraAscent0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetExtraAscent((int) extraAscent0);
 
 
@@ -37801,6 +38568,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraDescent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&extraDescent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraDescent0 ) == SUCCESS)
 		{
@@ -37819,6 +38587,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraDescent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetExtraDescent((int) extraDescent0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetExtraDescent((int) extraDescent0);
 
 
@@ -37902,6 +38671,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFirstVisibleLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lineDisplay0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineDisplay0 ) == SUCCESS)
 		{
@@ -37920,6 +38690,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFirstVisibleLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetFirstVisibleLine((int) lineDisplay0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetFirstVisibleLine((int) lineDisplay0);
 
 
@@ -38004,6 +38775,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&line0, &expanded0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &expanded0 ) == SUCCESS)
 		{
@@ -38022,6 +38794,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldExpanded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetFoldExpanded((int) line0, expanded0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetFoldExpanded((int) line0, expanded0);
 
 
@@ -38105,6 +38878,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -38123,6 +38897,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetFoldFlags((int) flags0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetFoldFlags((int) flags0);
 
 
@@ -38207,6 +38982,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &level0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &level0 ) == SUCCESS)
 		{
@@ -38225,6 +39001,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldLevel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetFoldLevel((int) line0, (int) level0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetFoldLevel((int) line0, (int) level0);
 
 
@@ -38310,6 +39087,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -38344,6 +39122,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetFoldMarginColour(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetFoldMarginColour(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(back0, "wxStyledTextCtrl::SetFoldMarginColour at call with 2 argument(s)");
@@ -38429,6 +39208,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -38463,6 +39243,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetFoldMarginHiColour(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetFoldMarginHiColour(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetFoldMarginHiColour at call with 2 argument(s)");
@@ -38548,6 +39329,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&bar0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
@@ -38582,6 +39364,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetHScrollBar((wxScrollBar*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetHScrollBar((wxScrollBar*) object_pointer0_0);
 
 				references->AddReference(bar0, "wxStyledTextCtrl::SetHScrollBar at call with 1 argument(s)");
@@ -38666,6 +39449,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHighlightGuide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&column0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &column0 ) == SUCCESS)
 		{
@@ -38684,6 +39468,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHighlightGuide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetHighlightGuide((int) column0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetHighlightGuide((int) column0);
 
 
@@ -38769,6 +39554,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -38803,6 +39589,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetHotspotActiveBackground(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetHotspotActiveBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(back0, "wxStyledTextCtrl::SetHotspotActiveBackground at call with 2 argument(s)");
@@ -38889,6 +39676,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -38923,6 +39711,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetHotspotActiveForeground(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetHotspotActiveForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetHotspotActiveForeground at call with 2 argument(s)");
@@ -39007,6 +39796,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveUnderline)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&underline0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &underline0 ) == SUCCESS)
 		{
@@ -39025,6 +39815,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveUnderline)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetHotspotActiveUnderline(underline0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetHotspotActiveUnderline(underline0);
 
 
@@ -39108,6 +39899,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotSingleLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&singleLine0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &singleLine0 ) == SUCCESS)
 		{
@@ -39126,6 +39918,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotSingleLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetHotspotSingleLine(singleLine0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetHotspotSingleLine(singleLine0);
 
 
@@ -39209,6 +40002,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indentSize0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indentSize0 ) == SUCCESS)
 		{
@@ -39227,6 +40021,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetIndent((int) indentSize0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetIndent((int) indentSize0);
 
 
@@ -39310,6 +40105,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndentationGuides)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indentView0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indentView0 ) == SUCCESS)
 		{
@@ -39328,6 +40124,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndentationGuides)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetIndentationGuides((int) indentView0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetIndentationGuides((int) indentView0);
 
 
@@ -39413,6 +40210,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&keywordSet0, &keyWords0, &keyWords_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keywordSet0, &keyWords0, &keyWords_len0 ) == SUCCESS)
 		{
@@ -39431,6 +40229,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetKeyWords((int) keywordSet0, wxString(keyWords0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetKeyWords((int) keywordSet0, wxString(keyWords0, wxConvUTF8));
 
 
@@ -39514,6 +40313,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeysUnicode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&keysUnicode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keysUnicode0 ) == SUCCESS)
 		{
@@ -39532,6 +40332,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeysUnicode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetKeysUnicode(keysUnicode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetKeysUnicode(keysUnicode0);
 
 
@@ -39614,6 +40415,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLastKeydownProcessed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&val0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
@@ -39632,6 +40434,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLastKeydownProcessed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetLastKeydownProcessed(val0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetLastKeydownProcessed(val0);
 
 
@@ -39715,6 +40518,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLayoutCache)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -39733,6 +40537,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLayoutCache)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetLayoutCache((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetLayoutCache((int) mode0);
 
 
@@ -39816,6 +40621,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lexer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lexer0 ) == SUCCESS)
 		{
@@ -39834,6 +40640,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetLexer((int) lexer0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetLexer((int) lexer0);
 
 
@@ -39918,6 +40725,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&language0, &language_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &language0, &language_len0 ) == SUCCESS)
 		{
@@ -39936,6 +40744,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetLexerLanguage(wxString(language0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetLexerLanguage(wxString(language0, wxConvUTF8));
 
 
@@ -40020,6 +40829,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineIndentation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &indentSize0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &indentSize0 ) == SUCCESS)
 		{
@@ -40038,6 +40848,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineIndentation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetLineIndentation((int) line0, (int) indentSize0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetLineIndentation((int) line0, (int) indentSize0);
 
 
@@ -40122,6 +40933,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &state0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &state0 ) == SUCCESS)
 		{
@@ -40140,6 +40952,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetLineState((int) line0, (int) state0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetLineState((int) line0, (int) state0);
 
 
@@ -40223,6 +41036,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMainSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
@@ -40241,6 +41055,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMainSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMainSelection((int) selection0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMainSelection((int) selection0);
 
 
@@ -40324,6 +41139,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
@@ -40342,6 +41158,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMarginLeft((int) pixelWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMarginLeft((int) pixelWidth0);
 
 
@@ -40426,6 +41243,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&margin0, &mask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &mask0 ) == SUCCESS)
 		{
@@ -40444,6 +41262,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginMask)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMarginMask((int) margin0, (int) mask0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMarginMask((int) margin0, (int) mask0);
 
 
@@ -40527,6 +41346,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
@@ -40545,6 +41365,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMarginRight((int) pixelWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMarginRight((int) pixelWidth0);
 
 
@@ -40629,6 +41450,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginSensitive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&margin0, &sensitive0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &sensitive0 ) == SUCCESS)
 		{
@@ -40647,6 +41469,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginSensitive)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMarginSensitive((int) margin0, sensitive0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMarginSensitive((int) margin0, sensitive0);
 
 
@@ -40731,6 +41554,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&margin0, &marginType0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &marginType0 ) == SUCCESS)
 		{
@@ -40749,6 +41573,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMarginType((int) margin0, (int) marginType0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMarginType((int) margin0, (int) marginType0);
 
 
@@ -40833,6 +41658,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&margin0, &pixelWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &pixelWidth0 ) == SUCCESS)
 		{
@@ -40851,6 +41677,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMarginWidth((int) margin0, (int) pixelWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMarginWidth((int) margin0, (int) pixelWidth0);
 
 
@@ -40935,6 +41762,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&left0, &right0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &left0, &right0 ) == SUCCESS)
 		{
@@ -40953,6 +41781,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMargins((int) left0, (int) right0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMargins((int) left0, (int) right0);
 
 
@@ -41036,6 +41865,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetModEventMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mask0 ) == SUCCESS)
 		{
@@ -41054,6 +41884,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetModEventMask)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetModEventMask((int) mask0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetModEventMask((int) mask0);
 
 
@@ -41137,6 +41968,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDownCaptures)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&captures0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &captures0 ) == SUCCESS)
 		{
@@ -41155,6 +41987,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDownCaptures)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMouseDownCaptures(captures0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMouseDownCaptures(captures0);
 
 
@@ -41238,6 +42071,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDwellTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&periodMilliseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &periodMilliseconds0 ) == SUCCESS)
 		{
@@ -41256,6 +42090,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDwellTime)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMouseDwellTime((int) periodMilliseconds0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMouseDwellTime((int) periodMilliseconds0);
 
 
@@ -41339,6 +42174,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMultipleSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&multipleSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &multipleSelection0 ) == SUCCESS)
 		{
@@ -41357,6 +42193,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMultipleSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetMultipleSelection(multipleSelection0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetMultipleSelection(multipleSelection0);
 
 
@@ -41440,6 +42277,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetOvertype)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&overtype0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &overtype0 ) == SUCCESS)
 		{
@@ -41458,6 +42296,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetOvertype)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetOvertype(overtype0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetOvertype(overtype0);
 
 
@@ -41541,6 +42380,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPasteConvertEndings)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&convert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &convert0 ) == SUCCESS)
 		{
@@ -41559,6 +42399,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPasteConvertEndings)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetPasteConvertEndings(convert0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetPasteConvertEndings(convert0);
 
 
@@ -41642,6 +42483,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintColourMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -41660,6 +42502,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintColourMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetPrintColourMode((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetPrintColourMode((int) mode0);
 
 
@@ -41743,6 +42586,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintMagnification)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&magnification0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &magnification0 ) == SUCCESS)
 		{
@@ -41761,6 +42605,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintMagnification)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetPrintMagnification((int) magnification0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetPrintMagnification((int) magnification0);
 
 
@@ -41844,6 +42689,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintWrapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -41862,6 +42708,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintWrapMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetPrintWrapMode((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetPrintWrapMode((int) mode0);
 
 
@@ -41948,6 +42795,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&key0, &key_len0, &value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -41966,6 +42814,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetProperty(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetProperty(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8));
 
 
@@ -42049,6 +42898,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&readOnly0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &readOnly0 ) == SUCCESS)
 		{
@@ -42067,6 +42917,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetReadOnly(readOnly0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetReadOnly(readOnly0);
 
 
@@ -42149,6 +43000,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&posAnchor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &posAnchor0 ) == SUCCESS)
 		{
@@ -42167,6 +43019,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetRectangularSelectionAnchor((int) posAnchor0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetRectangularSelectionAnchor((int) posAnchor0);
 
 
@@ -42249,6 +43102,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&space0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &space0 ) == SUCCESS)
 		{
@@ -42267,6 +43121,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchorVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetRectangularSelectionAnchorVirtualSpace((int) space0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetRectangularSelectionAnchorVirtualSpace((int) space0);
 
 
@@ -42349,6 +43204,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -42367,6 +43223,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaret)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetRectangularSelectionCaret((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetRectangularSelectionCaret((int) pos0);
 
 
@@ -42449,6 +43306,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&space0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &space0 ) == SUCCESS)
 		{
@@ -42467,6 +43325,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaretVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetRectangularSelectionCaretVirtualSpace((int) space0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetRectangularSelectionCaretVirtualSpace((int) space0);
 
 
@@ -42550,6 +43409,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionModifier)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&modifier0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &modifier0 ) == SUCCESS)
 		{
@@ -42568,6 +43428,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionModifier)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetRectangularSelectionModifier((int) modifier0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetRectangularSelectionModifier((int) modifier0);
 
 
@@ -42651,6 +43512,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&cursorType0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursorType0 ) == SUCCESS)
 		{
@@ -42669,6 +43531,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSTCCursor((int) cursorType0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSTCCursor((int) cursorType0);
 
 
@@ -42752,6 +43615,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCFocus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&focus0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &focus0 ) == SUCCESS)
 		{
@@ -42770,6 +43634,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCFocus)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSTCFocus(focus0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSTCFocus(focus0);
 
 
@@ -42852,6 +43717,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSavePoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -42866,6 +43732,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSavePoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSavePoint()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSavePoint();
 
 
@@ -42949,6 +43816,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetScrollWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
@@ -42967,6 +43835,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetScrollWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetScrollWidth((int) pixelWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetScrollWidth((int) pixelWidth0);
 
 
@@ -43050,6 +43919,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSearchFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -43068,6 +43938,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSearchFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSearchFlags((int) flags0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSearchFlags((int) flags0);
 
 
@@ -43151,6 +44022,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alpha0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alpha0 ) == SUCCESS)
 		{
@@ -43169,6 +44041,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelAlpha)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelAlpha((int) alpha0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelAlpha((int) alpha0);
 
 
@@ -43254,6 +44127,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -43288,6 +44162,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelBackground(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(back0, "wxStyledTextCtrl::SetSelBackground at call with 2 argument(s)");
@@ -43374,6 +44249,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -43408,6 +44284,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelForeground(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetSelForeground at call with 2 argument(s)");
@@ -43493,6 +44370,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&from0, &to0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &from0, &to0 ) == SUCCESS)
 		{
@@ -43511,6 +44389,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelection((long) from0, (long) to0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelection((long) from0, (long) to0);
 
 
@@ -43594,6 +44473,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -43612,6 +44492,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionEnd((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionEnd((int) pos0);
 
 
@@ -43695,6 +44576,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -43713,6 +44595,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionMode((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionMode((int) mode0);
 
 
@@ -43796,6 +44679,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &posAnchor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &posAnchor0 ) == SUCCESS)
 		{
@@ -43814,6 +44698,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionNAnchor((int) selection0, (int) posAnchor0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionNAnchor((int) selection0, (int) posAnchor0);
 
 
@@ -43897,6 +44782,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &space0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &space0 ) == SUCCESS)
 		{
@@ -43915,6 +44801,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchorVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionNAnchorVirtualSpace((int) selection0, (int) space0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionNAnchorVirtualSpace((int) selection0, (int) space0);
 
 
@@ -43998,6 +44885,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &pos0 ) == SUCCESS)
 		{
@@ -44016,6 +44904,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaret)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionNCaret((int) selection0, (int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionNCaret((int) selection0, (int) pos0);
 
 
@@ -44099,6 +44988,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &space0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &space0 ) == SUCCESS)
 		{
@@ -44117,6 +45007,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaretVirtualSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionNCaretVirtualSpace((int) selection0, (int) space0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionNCaretVirtualSpace((int) selection0, (int) space0);
 
 
@@ -44201,6 +45092,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &pos0 ) == SUCCESS)
 		{
@@ -44219,6 +45111,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionNEnd((int) selection0, (int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionNEnd((int) selection0, (int) pos0);
 
 
@@ -44303,6 +45196,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &pos0 ) == SUCCESS)
 		{
@@ -44321,6 +45215,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionNStart((int) selection0, (int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionNStart((int) selection0, (int) pos0);
 
 
@@ -44404,6 +45299,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -44422,6 +45318,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetSelectionStart((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetSelectionStart((int) pos0);
 
 
@@ -44505,6 +45402,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStatus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&statusCode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &statusCode0 ) == SUCCESS)
 		{
@@ -44523,6 +45421,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStatus)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetStatus((int) statusCode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetStatus((int) statusCode0);
 
 
@@ -44606,6 +45505,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyleBits)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&bits0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bits0 ) == SUCCESS)
 		{
@@ -44624,6 +45524,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyleBits)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetStyleBits((int) bits0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetStyleBits((int) bits0);
 
 
@@ -44708,6 +45609,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyling)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&length0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &length0, &style0 ) == SUCCESS)
 		{
@@ -44726,6 +45628,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyling)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetStyling((int) length0, (int) style0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetStyling((int) length0, (int) style0);
 
 
@@ -44809,6 +45712,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabIndents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&tabIndents0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tabIndents0 ) == SUCCESS)
 		{
@@ -44827,6 +45731,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabIndents)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetTabIndents(tabIndents0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetTabIndents(tabIndents0);
 
 
@@ -44910,6 +45815,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tabWidth0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tabWidth0 ) == SUCCESS)
 		{
@@ -44928,6 +45834,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetTabWidth((int) tabWidth0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetTabWidth((int) tabWidth0);
 
 
@@ -45011,6 +45918,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -45029,6 +45937,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetTargetEnd((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetTargetEnd((int) pos0);
 
 
@@ -45112,6 +46021,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -45130,6 +46040,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetStart)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetTargetStart((int) pos0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetTargetStart((int) pos0);
 
 
@@ -45214,6 +46125,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -45232,6 +46144,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetText(wxString(text0, wxConvUTF8));
 
 
@@ -45316,6 +46229,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -45334,6 +46248,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetTextRaw(text0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetTextRaw(text0);
 
 
@@ -45417,6 +46332,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTwoPhaseDraw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&twoPhase0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &twoPhase0 ) == SUCCESS)
 		{
@@ -45435,6 +46351,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTwoPhaseDraw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetTwoPhaseDraw(twoPhase0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetTwoPhaseDraw(twoPhase0);
 
 
@@ -45518,6 +46435,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUndoCollection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&collectUndo0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &collectUndo0 ) == SUCCESS)
 		{
@@ -45536,6 +46454,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUndoCollection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetUndoCollection(collectUndo0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetUndoCollection(collectUndo0);
 
 
@@ -45619,6 +46538,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseAntiAliasing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&useAA0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useAA0 ) == SUCCESS)
 		{
@@ -45637,6 +46557,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseAntiAliasing)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetUseAntiAliasing(useAA0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetUseAntiAliasing(useAA0);
 
 
@@ -45720,6 +46641,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseHorizontalScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -45738,6 +46660,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseHorizontalScrollBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetUseHorizontalScrollBar(show0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetUseHorizontalScrollBar(show0);
 
 
@@ -45821,6 +46744,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseTabs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&useTabs0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useTabs0 ) == SUCCESS)
 		{
@@ -45839,6 +46763,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseTabs)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetUseTabs(useTabs0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetUseTabs(useTabs0);
 
 
@@ -45922,6 +46847,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseVerticalScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -45940,6 +46866,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseVerticalScrollBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetUseVerticalScrollBar(show0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetUseVerticalScrollBar(show0);
 
 
@@ -46024,6 +46951,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&bar0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
@@ -46058,6 +46986,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetVScrollBar((wxScrollBar*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetVScrollBar((wxScrollBar*) object_pointer0_0);
 
 				references->AddReference(bar0, "wxStyledTextCtrl::SetVScrollBar at call with 1 argument(s)");
@@ -46142,6 +47071,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewEOL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -46160,6 +47090,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewEOL)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetViewEOL(visible0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetViewEOL(visible0);
 
 
@@ -46243,6 +47174,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewWhiteSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&viewWS0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &viewWS0 ) == SUCCESS)
 		{
@@ -46261,6 +47193,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewWhiteSpace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetViewWhiteSpace((int) viewWS0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetViewWhiteSpace((int) viewWS0);
 
 
@@ -46343,6 +47276,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVirtualSpaceOptions)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&virtualSpaceOptions0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &virtualSpaceOptions0 ) == SUCCESS)
 		{
@@ -46361,6 +47295,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVirtualSpaceOptions)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetVirtualSpaceOptions((int) virtualSpaceOptions0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetVirtualSpaceOptions((int) virtualSpaceOptions0);
 
 
@@ -46445,6 +47380,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVisiblePolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&visiblePolicy0, &visibleSlop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visiblePolicy0, &visibleSlop0 ) == SUCCESS)
 		{
@@ -46463,6 +47399,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVisiblePolicy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetVisiblePolicy((int) visiblePolicy0, (int) visibleSlop0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetVisiblePolicy((int) visiblePolicy0, (int) visibleSlop0);
 
 
@@ -46548,6 +47485,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -46582,6 +47520,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWhitespaceBackground(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWhitespaceBackground(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(back0, "wxStyledTextCtrl::SetWhitespaceBackground at call with 2 argument(s)");
@@ -46667,6 +47606,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characters0, &characters_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characters0, &characters_len0 ) == SUCCESS)
 		{
@@ -46685,6 +47625,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWhitespaceChars(wxString(characters0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWhitespaceChars(wxString(characters0, wxConvUTF8));
 
 
@@ -46770,6 +47711,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -46804,6 +47746,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWhitespaceForeground(useSetting0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWhitespaceForeground(useSetting0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::SetWhitespaceForeground at call with 2 argument(s)");
@@ -46888,6 +47831,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
@@ -46906,6 +47850,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWhitespaceSize((int) size0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWhitespaceSize((int) size0);
 
 
@@ -46990,6 +47935,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characters0, &characters_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characters0, &characters_len0 ) == SUCCESS)
 		{
@@ -47008,6 +47954,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWordChars(wxString(characters0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWordChars(wxString(characters0, wxConvUTF8));
 
 
@@ -47091,6 +48038,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapIndentMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -47109,6 +48057,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapIndentMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWrapIndentMode((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWrapIndentMode((int) mode0);
 
 
@@ -47192,6 +48141,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -47210,6 +48160,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWrapMode((int) mode0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWrapMode((int) mode0);
 
 
@@ -47293,6 +48244,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapStartIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indent0 ) == SUCCESS)
 		{
@@ -47311,6 +48263,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapStartIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWrapStartIndent((int) indent0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWrapStartIndent((int) indent0);
 
 
@@ -47394,6 +48347,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&wrapVisualFlags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wrapVisualFlags0 ) == SUCCESS)
 		{
@@ -47412,6 +48366,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWrapVisualFlags((int) wrapVisualFlags0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWrapVisualFlags((int) wrapVisualFlags0);
 
 
@@ -47495,6 +48450,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlagsLocation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&wrapVisualFlagsLocation0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wrapVisualFlagsLocation0 ) == SUCCESS)
 		{
@@ -47513,6 +48469,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlagsLocation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetWrapVisualFlagsLocation((int) wrapVisualFlagsLocation0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetWrapVisualFlagsLocation((int) wrapVisualFlagsLocation0);
 
 
@@ -47597,6 +48554,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXCaretPolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&caretPolicy0, &caretSlop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caretPolicy0, &caretSlop0 ) == SUCCESS)
 		{
@@ -47615,6 +48573,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXCaretPolicy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetXCaretPolicy((int) caretPolicy0, (int) caretSlop0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetXCaretPolicy((int) caretPolicy0, (int) caretSlop0);
 
 
@@ -47698,6 +48657,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&newOffset0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &newOffset0 ) == SUCCESS)
 		{
@@ -47716,6 +48676,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXOffset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetXOffset((int) newOffset0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetXOffset((int) newOffset0);
 
 
@@ -47800,6 +48761,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetYCaretPolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&caretPolicy0, &caretSlop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caretPolicy0, &caretSlop0 ) == SUCCESS)
 		{
@@ -47818,6 +48780,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetYCaretPolicy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetYCaretPolicy((int) caretPolicy0, (int) caretSlop0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetYCaretPolicy((int) caretPolicy0, (int) caretSlop0);
 
 
@@ -47901,6 +48864,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetZoom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&zoom0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &zoom0 ) == SUCCESS)
 		{
@@ -47919,6 +48883,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetZoom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SetZoom((int) zoom0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SetZoom((int) zoom0);
 
 
@@ -48003,6 +48968,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ShowLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &lineEnd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &lineEnd0 ) == SUCCESS)
 		{
@@ -48021,6 +48987,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ShowLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ShowLines((int) lineStart0, (int) lineEnd0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ShowLines((int) lineStart0, (int) lineEnd0);
 
 
@@ -48103,6 +49070,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StartRecord)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48117,6 +49085,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StartRecord)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StartRecord()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StartRecord();
 
 
@@ -48201,6 +49170,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StartStyling)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&pos0, &mask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &mask0 ) == SUCCESS)
 		{
@@ -48219,6 +49189,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StartStyling)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StartStyling((int) pos0, (int) mask0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StartStyling((int) pos0, (int) mask0);
 
 
@@ -48301,6 +49272,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StopRecord)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48315,6 +49287,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StopRecord)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StopRecord()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StopRecord();
 
 
@@ -48397,6 +49370,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48411,6 +49385,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StutteredPageDown()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StutteredPageDown();
 
 
@@ -48493,6 +49468,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDownExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48507,6 +49483,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDownExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StutteredPageDownExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StutteredPageDownExtend();
 
 
@@ -48589,6 +49566,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48603,6 +49581,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StutteredPageUp()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StutteredPageUp();
 
 
@@ -48685,6 +49664,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUpExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48699,6 +49679,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUpExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StutteredPageUpExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StutteredPageUpExtend();
 
 
@@ -48781,6 +49762,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleClearAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48795,6 +49777,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleClearAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleClearAll()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleClearAll();
 
 
@@ -48877,6 +49860,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleResetDefault)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -48891,6 +49875,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleResetDefault)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleResetDefault()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleResetDefault();
 
 
@@ -48976,6 +49961,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&style0, &back0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -49010,6 +49996,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetBackground((int) style0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetBackground((int) style0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(back0, "wxStyledTextCtrl::StyleSetBackground at call with 2 argument(s)");
@@ -49095,6 +50082,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBold)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &bold0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &bold0 ) == SUCCESS)
 		{
@@ -49113,6 +50101,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBold)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetBold((int) style0, bold0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetBold((int) style0, bold0);
 
 
@@ -49197,6 +50186,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &caseForce0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &caseForce0 ) == SUCCESS)
 		{
@@ -49215,6 +50205,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCase)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetCase((int) style0, (int) caseForce0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetCase((int) style0, (int) caseForce0);
 
 
@@ -49299,6 +50290,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetChangeable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &changeable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &changeable0 ) == SUCCESS)
 		{
@@ -49317,6 +50309,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetChangeable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetChangeable((int) style0, changeable0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetChangeable((int) style0, changeable0);
 
 
@@ -49401,6 +50394,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCharacterSet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &characterSet0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &characterSet0 ) == SUCCESS)
 		{
@@ -49419,6 +50413,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCharacterSet)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetCharacterSet((int) style0, (int) characterSet0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetCharacterSet((int) style0, (int) characterSet0);
 
 
@@ -49503,6 +50498,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetEOLFilled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &filled0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &filled0 ) == SUCCESS)
 		{
@@ -49521,6 +50517,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetEOLFilled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetEOLFilled((int) style0, filled0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetEOLFilled((int) style0, filled0);
 
 
@@ -49606,6 +50603,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&style0, &fontName0, &fontName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &fontName0, &fontName_len0 ) == SUCCESS)
 		{
@@ -49624,6 +50622,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetFaceName((int) style0, wxString(fontName0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetFaceName((int) style0, wxString(fontName0, wxConvUTF8));
 
 
@@ -49709,6 +50708,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&styleNum0, &font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -49743,6 +50743,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetFont((int) styleNum0, *(wxFont*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetFont((int) styleNum0, *(wxFont*) object_pointer0_1);
 
 				references->AddReference(font0, "wxStyledTextCtrl::StyleSetFont at call with 2 argument(s)");
@@ -49834,6 +50835,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llsbbb|l' (&styleNum0, &size0, &faceName0, &faceName_len0, &bold0, &italic0, &underline0, &encoding0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llsbbb|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &size0, &faceName0, &faceName_len0, &bold0, &italic0, &underline0, &encoding0 ) == SUCCESS)
 		{
@@ -49852,6 +50854,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetFontAttr((int) styleNum0, (int) size0, wxString(faceName0, wxConvUTF8), bold0, italic0, underline0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetFontAttr((int) styleNum0, (int) size0, wxString(faceName0, wxConvUTF8), bold0, italic0, underline0);
 
 
@@ -49863,6 +50866,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetFontAttr((int) styleNum0, (int) size0, wxString(faceName0, wxConvUTF8), bold0, italic0, underline0, (wxFontEncoding) encoding0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetFontAttr((int) styleNum0, (int) size0, wxString(faceName0, wxConvUTF8), bold0, italic0, underline0, (wxFontEncoding) encoding0);
 
 
@@ -49947,6 +50951,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontEncoding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &encoding0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &encoding0 ) == SUCCESS)
 		{
@@ -49965,6 +50970,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontEncoding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetFontEncoding((int) style0, (wxFontEncoding) encoding0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetFontEncoding((int) style0, (wxFontEncoding) encoding0);
 
 
@@ -50050,6 +51056,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&style0, &fore0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -50084,6 +51091,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetForeground((int) style0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetForeground((int) style0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(fore0, "wxStyledTextCtrl::StyleSetForeground at call with 2 argument(s)");
@@ -50169,6 +51177,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetHotSpot)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &hotspot0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &hotspot0 ) == SUCCESS)
 		{
@@ -50187,6 +51196,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetHotSpot)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetHotSpot((int) style0, hotspot0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetHotSpot((int) style0, hotspot0);
 
 
@@ -50271,6 +51281,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetItalic)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &italic0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &italic0 ) == SUCCESS)
 		{
@@ -50289,6 +51300,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetItalic)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetItalic((int) style0, italic0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetItalic((int) style0, italic0);
 
 
@@ -50373,6 +51385,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &sizePoints0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &sizePoints0 ) == SUCCESS)
 		{
@@ -50391,6 +51404,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetSize((int) style0, (int) sizePoints0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetSize((int) style0, (int) sizePoints0);
 
 
@@ -50476,6 +51490,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&styleNum0, &spec0, &spec_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &spec0, &spec_len0 ) == SUCCESS)
 		{
@@ -50494,6 +51509,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetSpec((int) styleNum0, wxString(spec0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetSpec((int) styleNum0, wxString(spec0, wxConvUTF8));
 
 
@@ -50578,6 +51594,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetUnderline)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &underline0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &underline0 ) == SUCCESS)
 		{
@@ -50596,6 +51613,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetUnderline)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetUnderline((int) style0, underline0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetUnderline((int) style0, underline0);
 
 
@@ -50680,6 +51698,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &visible0 ) == SUCCESS)
 		{
@@ -50698,6 +51717,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::StyleSetVisible((int) style0, visible0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->StyleSetVisible((int) style0, visible0);
 
 
@@ -50780,6 +51800,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SwapMainAnchorCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -50794,6 +51815,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SwapMainAnchorCaret)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::SwapMainAnchorCaret()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->SwapMainAnchorCaret();
 
 
@@ -50876,6 +51898,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Tab)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -50890,6 +51913,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Tab)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Tab()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Tab();
 
 
@@ -50972,6 +51996,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TargetFromSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -50986,6 +52011,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TargetFromSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::TargetFromSelection()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->TargetFromSelection();
 
 
@@ -51069,6 +52095,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -51087,6 +52114,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::TextHeight((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->TextHeight((int) line0));
 
 
@@ -51172,6 +52200,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&style0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -51190,6 +52219,7 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::TextWidth((int) style0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->TextWidth((int) style0, wxString(text0, wxConvUTF8)));
 
 
@@ -51272,6 +52302,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleCaretSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -51286,6 +52317,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleCaretSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ToggleCaretSticky()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ToggleCaretSticky();
 
 
@@ -51369,6 +52401,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleFold)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -51387,6 +52420,7 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleFold)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::ToggleFold((int) line0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->ToggleFold((int) line0);
 
 
@@ -51469,6 +52503,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Undo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -51483,6 +52518,7 @@ PHP_METHOD(php_wxStyledTextCtrl, Undo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::Undo()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->Undo();
 
 
@@ -51565,6 +52601,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UpperCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -51579,6 +52616,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UpperCase)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::UpperCase()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->UpperCase();
 
 
@@ -51662,6 +52700,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UsePopUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&allowPopUp0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &allowPopUp0 ) == SUCCESS)
 		{
@@ -51680,6 +52719,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UsePopUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::UsePopUp(allowPopUp0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->UsePopUp(allowPopUp0);
 
 
@@ -51765,6 +52805,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&listType0, &itemList0, &itemList_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &listType0, &itemList0, &itemList_len0 ) == SUCCESS)
 		{
@@ -51783,6 +52824,7 @@ PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::UserListShow((int) listType0, wxString(itemList0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->UserListShow((int) listType0, wxString(itemList0, wxConvUTF8));
 
 
@@ -51865,6 +52907,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHome)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -51879,6 +52922,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHome)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::VCHome()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->VCHome();
 
 
@@ -51961,6 +53005,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -51975,6 +53020,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::VCHomeExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->VCHomeExtend();
 
 
@@ -52057,6 +53103,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeRectExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52071,6 +53118,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeRectExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::VCHomeRectExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->VCHomeRectExtend();
 
 
@@ -52152,6 +53200,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52166,6 +53215,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::VCHomeWrap()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->VCHomeWrap();
 
 
@@ -52247,6 +53297,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrapExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52261,6 +53312,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrapExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::VCHomeWrapExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->VCHomeWrapExtend();
 
 
@@ -52344,6 +53396,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
@@ -52362,6 +53415,7 @@ PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::VisibleFromDocLine((int) line0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->VisibleFromDocLine((int) line0));
 
 
@@ -52446,6 +53500,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&pos0, &onlyWordCharacters0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &onlyWordCharacters0 ) == SUCCESS)
 		{
@@ -52464,6 +53519,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::WordEndPosition((int) pos0, onlyWordCharacters0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)_this)->WordEndPosition((int) pos0, onlyWordCharacters0));
 
 
@@ -52546,6 +53602,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52560,6 +53617,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordLeft()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordLeft();
 
 
@@ -52642,6 +53700,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52656,6 +53715,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordLeftEnd()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordLeftEnd();
 
 
@@ -52738,6 +53798,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEndExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52752,6 +53813,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEndExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordLeftEndExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordLeftEndExtend();
 
 
@@ -52834,6 +53896,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52848,6 +53911,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordLeftExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordLeftExtend();
 
 
@@ -52930,6 +53994,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -52944,6 +54009,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordPartLeft()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordPartLeft();
 
 
@@ -53026,6 +54092,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeftExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -53040,6 +54107,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeftExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordPartLeftExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordPartLeftExtend();
 
 
@@ -53122,6 +54190,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -53136,6 +54205,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordPartRight()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordPartRight();
 
 
@@ -53218,6 +54288,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRightExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -53232,6 +54303,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRightExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordPartRightExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordPartRightExtend();
 
 
@@ -53314,6 +54386,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -53328,6 +54401,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordRight()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordRight();
 
 
@@ -53410,6 +54484,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -53424,6 +54499,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEnd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordRightEnd()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordRightEnd();
 
 
@@ -53506,6 +54582,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEndExtend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -53520,6 +54597,7 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEndExtend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::WordRightEndExtend()\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->WordRightEndExtend();
 
 
@@ -53605,6 +54683,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&text0, &text_len0, &length0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &length0 ) == SUCCESS)
 		{
@@ -53623,6 +54702,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AppendTextRaw(text0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AppendTextRaw(text0);
 
 
@@ -53634,6 +54714,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AppendTextRaw(text0, (int) length0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AppendTextRaw(text0, (int) length0);
 
 
@@ -53719,6 +54800,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&text0, &text_len0, &length0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &length0 ) == SUCCESS)
 		{
@@ -53737,6 +54819,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AddTextRaw(text0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AddTextRaw(text0);
 
 
@@ -53748,6 +54831,7 @@ PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStyledTextCtrl::AddTextRaw(text0, (int) length0)\n\n");
 				#endif
+
 				((wxStyledTextCtrl_php*)_this)->AddTextRaw(text0, (int) length0);
 
 

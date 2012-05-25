@@ -91,6 +91,7 @@ void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+
 /* {{{ proto wxSize wxGridCellRenderer::GetBestSize(wxGrid &grid, wxGridCellAttr &attr, wxDC &dc, int row, int col)
    Get the preferred size of the cell for its contents. */
 wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, int row, int col)
@@ -397,6 +398,7 @@ void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_ent
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellAutoWrapStringRenderer::wxGridCellAutoWrapStringRenderer()
    Default constructor. */
 PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
@@ -429,6 +431,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -443,6 +446,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellAutoWrapStringRenderer_php();
 
 				((wxGridCellAutoWrapStringRenderer_php*) _this)->references.Initialize();
@@ -468,7 +472,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellAutoWrapStringRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellAutoWrapStringRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -517,6 +521,7 @@ void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellBoolRenderer::wxGridCellBoolRenderer()
    Default constructor. */
 PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
@@ -549,6 +554,7 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -563,6 +569,7 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellBoolRenderer_php();
 
 				((wxGridCellBoolRenderer_php*) _this)->references.Initialize();
@@ -588,7 +595,7 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellBoolRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellBoolRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -637,6 +644,7 @@ void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry *rs
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellDateTimeRenderer::SetParameters(string params)
    Sets the strptime()-like format string which will be used to parse the date/time. */
 PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
@@ -703,6 +711,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -721,6 +730,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellDateTimeRenderer::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellDateTimeRenderer_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -775,6 +785,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ss' (&outformat0, &outformat_len0, &informat0, &informat_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &outformat0, &outformat_len0, &informat0, &informat_len0 ) == SUCCESS)
 		{
@@ -793,6 +804,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellDateTimeRenderer_php();
 
 				((wxGridCellDateTimeRenderer_php*) _this)->references.Initialize();
@@ -803,6 +815,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(outformat0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxGridCellDateTimeRenderer_php(wxString(outformat0, wxConvUTF8));
 
 				((wxGridCellDateTimeRenderer_php*) _this)->references.Initialize();
@@ -813,6 +826,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(outformat0, wxConvUTF8), wxString(informat0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxGridCellDateTimeRenderer_php(wxString(outformat0, wxConvUTF8), wxString(informat0, wxConvUTF8));
 
 				((wxGridCellDateTimeRenderer_php*) _this)->references.Initialize();
@@ -838,7 +852,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellDateTimeRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellDateTimeRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -887,6 +901,7 @@ void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellEnumRenderer::SetParameters(string params)
    Sets the comma separated string content of the enum. */
 PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
@@ -953,6 +968,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -971,6 +987,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEnumRenderer::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellEnumRenderer_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -1023,6 +1040,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&choices0, &choices_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &choices_len0 ) == SUCCESS)
 		{
@@ -1041,6 +1059,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellEnumRenderer_php();
 
 				((wxGridCellEnumRenderer_php*) _this)->references.Initialize();
@@ -1051,6 +1070,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(choices0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxGridCellEnumRenderer_php(wxString(choices0, wxConvUTF8));
 
 				((wxGridCellEnumRenderer_php*) _this)->references.Initialize();
@@ -1076,7 +1096,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellEnumRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellEnumRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1125,6 +1145,7 @@ void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+
 /* {{{ proto int wxGridCellFloatRenderer::GetFormat()
    Returns the specifier used to format the data to string. */
 PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
@@ -1189,6 +1210,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1203,6 +1225,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridCellFloatRenderer::GetFormat())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridCellFloatRenderer_php*)_this)->GetFormat());
 
 
@@ -1285,6 +1308,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetPrecision)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1299,6 +1323,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetPrecision)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridCellFloatRenderer::GetPrecision())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridCellFloatRenderer_php*)_this)->GetPrecision());
 
 
@@ -1381,6 +1406,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1395,6 +1421,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridCellFloatRenderer::GetWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridCellFloatRenderer_php*)_this)->GetWidth());
 
 
@@ -1478,6 +1505,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&format0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0 ) == SUCCESS)
 		{
@@ -1496,6 +1524,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetFormat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellFloatRenderer::SetFormat((int) format0)\n\n");
 				#endif
+
 				((wxGridCellFloatRenderer_php*)_this)->SetFormat((int) format0);
 
 
@@ -1580,6 +1609,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -1598,6 +1628,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellFloatRenderer::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellFloatRenderer_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -1681,6 +1712,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetPrecision)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&precision0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &precision0 ) == SUCCESS)
 		{
@@ -1699,6 +1731,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetPrecision)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellFloatRenderer::SetPrecision((int) precision0)\n\n");
 				#endif
+
 				((wxGridCellFloatRenderer_php*)_this)->SetPrecision((int) precision0);
 
 
@@ -1782,6 +1815,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&width0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
 		{
@@ -1800,6 +1834,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellFloatRenderer::SetWidth((int) width0)\n\n");
 				#endif
+
 				((wxGridCellFloatRenderer_php*)_this)->SetWidth((int) width0);
 
 
@@ -1853,6 +1888,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lll' (&width0, &precision0, &format0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &precision0, &format0 ) == SUCCESS)
 		{
@@ -1871,6 +1907,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellFloatRenderer_php();
 
 				((wxGridCellFloatRenderer_php*) _this)->references.Initialize();
@@ -1881,6 +1918,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0)\n");
 				#endif
+
 				_this = new wxGridCellFloatRenderer_php((int) width0);
 
 				((wxGridCellFloatRenderer_php*) _this)->references.Initialize();
@@ -1891,6 +1929,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) precision0)\n");
 				#endif
+
 				_this = new wxGridCellFloatRenderer_php((int) width0, (int) precision0);
 
 				((wxGridCellFloatRenderer_php*) _this)->references.Initialize();
@@ -1901,6 +1940,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) precision0, (int) format0)\n");
 				#endif
+
 				_this = new wxGridCellFloatRenderer_php((int) width0, (int) precision0, (int) format0);
 
 				((wxGridCellFloatRenderer_php*) _this)->references.Initialize();
@@ -1926,7 +1966,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellFloatRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellFloatRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1975,6 +2015,7 @@ void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellNumberRenderer::wxGridCellNumberRenderer()
    Default constructor. */
 PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
@@ -2007,6 +2048,7 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2021,6 +2063,7 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellNumberRenderer_php();
 
 				((wxGridCellNumberRenderer_php*) _this)->references.Initialize();
@@ -2046,7 +2089,7 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellNumberRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellNumberRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2095,6 +2138,7 @@ void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellStringRenderer::wxGridCellStringRenderer()
    Default constructor. */
 PHP_METHOD(php_wxGridCellStringRenderer, __construct)
@@ -2127,6 +2171,7 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2141,6 +2186,7 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellStringRenderer_php();
 
 				((wxGridCellStringRenderer_php*) _this)->references.Initialize();
@@ -2166,7 +2212,7 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellStringRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellStringRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2183,6 +2229,7 @@ void php_wxGridCellEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 }
+
 /* {{{ proto  wxGridCellEditor::ApplyEdit(int row, int col, wxGrid &grid)
    Effectively save the changes in the grid. */
 void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
@@ -2601,6 +2648,7 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2615,6 +2663,7 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::Destroy()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->Destroy();
@@ -2842,6 +2891,7 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxKeyEvent_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxKeyEvent_entry ) == SUCCESS)
 		{
@@ -2876,6 +2926,7 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::HandleReturn(*(wxKeyEvent*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->HandleReturn(*(wxKeyEvent*) object_pointer0_0);
@@ -3010,6 +3061,7 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3024,6 +3076,7 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellEditor::IsCreated())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					ZVAL_BOOL(return_value, ((wxGridCellBoolEditor_php*)_this)->IsCreated());
@@ -3161,6 +3214,7 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Oz' (&rectCell0, php_wxRect_entry, &attr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "Oz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rectCell0, php_wxRect_entry, &attr0 ) == SUCCESS)
 		{
@@ -3211,6 +3265,7 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::PaintBackground(*(wxRect*) object_pointer0_0, (wxGridCellAttr*) object_pointer0_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->PaintBackground(*(wxRect*) object_pointer0_0, (wxGridCellAttr*) object_pointer0_1);
@@ -3348,6 +3403,7 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -3382,6 +3438,7 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::SetSize(*(wxRect*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->SetSize(*(wxRect*) object_pointer0_0);
@@ -3586,6 +3643,7 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b|z' (&show0, &attr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0, &attr0 ) == SUCCESS)
 		{
@@ -3620,6 +3678,7 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::Show(show0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->Show(show0);
@@ -3658,6 +3717,7 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::Show(show0, (wxGridCellAttr*) object_pointer0_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->Show(show0, (wxGridCellAttr*) object_pointer0_1);
@@ -3792,6 +3852,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingClick)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3806,6 +3867,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingClick)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::StartingClick()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->StartingClick();
@@ -3941,6 +4003,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxKeyEvent_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxKeyEvent_entry ) == SUCCESS)
 		{
@@ -3975,6 +4038,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellEditor::StartingKey(*(wxKeyEvent*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxGridCellBoolEditor)
 				{
 					((wxGridCellBoolEditor_php*)_this)->StartingKey(*(wxKeyEvent*) object_pointer0_0);
@@ -4061,6 +4125,7 @@ void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellAutoWrapStringEditor::wxGridCellAutoWrapStringEditor() */
 PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 {
@@ -4092,6 +4157,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4106,6 +4172,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellAutoWrapStringEditor_php();
 
 				((wxGridCellAutoWrapStringEditor_php*) _this)->references.Initialize();
@@ -4131,7 +4198,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellAutoWrapStringEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellAutoWrapStringEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4180,6 +4247,7 @@ void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto bool wxGridCellBoolEditor::IsTrueValue(string value)
    Returns true if the given value is equal to the string representation of the truth value we currently use (see UseStringValues()). */
 PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
@@ -4246,6 +4314,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -4265,6 +4334,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxGridCellBoolEditor::IsTrueValue(wxString(value0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxGridCellBoolEditor::IsTrueValue(wxString(value0, wxConvUTF8)));
 
 
@@ -4351,6 +4421,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ss' (&valueTrue0, &valueTrue_len0, &valueFalse0, &valueFalse_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valueTrue0, &valueTrue_len0, &valueFalse0, &valueFalse_len0 ) == SUCCESS)
 		{
@@ -4370,6 +4441,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 				php_printf("Static ");
 				php_printf("Executing wxGridCellBoolEditor::UseStringValues()\n\n");
 				#endif
+
 				wxGridCellBoolEditor::UseStringValues();
 
 
@@ -4382,6 +4454,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 				php_printf("Static ");
 				php_printf("Executing wxGridCellBoolEditor::UseStringValues(wxString(valueTrue0, wxConvUTF8))\n\n");
 				#endif
+
 				wxGridCellBoolEditor::UseStringValues(wxString(valueTrue0, wxConvUTF8));
 
 
@@ -4394,6 +4467,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 				php_printf("Static ");
 				php_printf("Executing wxGridCellBoolEditor::UseStringValues(wxString(valueTrue0, wxConvUTF8), wxString(valueFalse0, wxConvUTF8))\n\n");
 				#endif
+
 				wxGridCellBoolEditor::UseStringValues(wxString(valueTrue0, wxConvUTF8), wxString(valueFalse0, wxConvUTF8));
 
 
@@ -4444,6 +4518,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4458,6 +4533,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellBoolEditor_php();
 
 				((wxGridCellBoolEditor_php*) _this)->references.Initialize();
@@ -4483,7 +4559,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellBoolEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellBoolEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4532,6 +4608,7 @@ void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellChoiceEditor::SetParameters(string params)
    Parameters string format is "item1[,item2[...,itemN]]". */
 PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
@@ -4602,6 +4679,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -4620,6 +4698,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellChoiceEditor::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellChoiceEditor_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -4672,6 +4751,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'a|b' (&choices0, &allowOthers0)\n");
 		#endif
+
 		char parse_parameters_string[] = "a|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &allowOthers0 ) == SUCCESS)
 		{
@@ -4708,6 +4788,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(strings_array0_0)\n");
 				#endif
+
 				_this = new wxGridCellChoiceEditor_php(strings_array0_0);
 
 				((wxGridCellChoiceEditor_php*) _this)->references.Initialize();
@@ -4733,6 +4814,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(strings_array0_0, allowOthers0)\n");
 				#endif
+
 				_this = new wxGridCellChoiceEditor_php(strings_array0_0, allowOthers0);
 
 				((wxGridCellChoiceEditor_php*) _this)->references.Initialize();
@@ -4758,7 +4840,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellChoiceEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellChoiceEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4807,6 +4889,7 @@ void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellEnumEditor::wxGridCellEnumEditor(string choices)
    Enum cell editor ctor. */
 PHP_METHOD(php_wxGridCellEnumEditor, __construct)
@@ -4841,6 +4924,7 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&choices0, &choices_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &choices_len0 ) == SUCCESS)
 		{
@@ -4859,6 +4943,7 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellEnumEditor_php();
 
 				((wxGridCellEnumEditor_php*) _this)->references.Initialize();
@@ -4869,6 +4954,7 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(choices0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxGridCellEnumEditor_php(wxString(choices0, wxConvUTF8));
 
 				((wxGridCellEnumEditor_php*) _this)->references.Initialize();
@@ -4894,7 +4980,7 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellEnumEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellEnumEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4943,6 +5029,7 @@ void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellTextEditor::wxGridCellTextEditor()
    Default constructor. */
 PHP_METHOD(php_wxGridCellTextEditor, __construct)
@@ -4975,6 +5062,7 @@ PHP_METHOD(php_wxGridCellTextEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4989,6 +5077,7 @@ PHP_METHOD(php_wxGridCellTextEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellTextEditor_php();
 
 				((wxGridCellTextEditor_php*) _this)->references.Initialize();
@@ -5014,7 +5103,7 @@ PHP_METHOD(php_wxGridCellTextEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellTextEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellTextEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5097,6 +5186,7 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -5115,6 +5205,7 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellTextEditor::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellTextEditor_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -5173,6 +5264,7 @@ void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellFloatEditor::wxGridCellFloatEditor(int width, int precision, int format)
    Float cell editor ctor. */
 PHP_METHOD(php_wxGridCellFloatEditor, __construct)
@@ -5208,6 +5300,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lll' (&width0, &precision0, &format0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &precision0, &format0 ) == SUCCESS)
 		{
@@ -5226,6 +5319,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellFloatEditor_php();
 
 				((wxGridCellFloatEditor_php*) _this)->references.Initialize();
@@ -5236,6 +5330,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0)\n");
 				#endif
+
 				_this = new wxGridCellFloatEditor_php((int) width0);
 
 				((wxGridCellFloatEditor_php*) _this)->references.Initialize();
@@ -5246,6 +5341,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) precision0)\n");
 				#endif
+
 				_this = new wxGridCellFloatEditor_php((int) width0, (int) precision0);
 
 				((wxGridCellFloatEditor_php*) _this)->references.Initialize();
@@ -5256,6 +5352,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) precision0, (int) format0)\n");
 				#endif
+
 				_this = new wxGridCellFloatEditor_php((int) width0, (int) precision0, (int) format0);
 
 				((wxGridCellFloatEditor_php*) _this)->references.Initialize();
@@ -5281,7 +5378,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellFloatEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellFloatEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5356,6 +5453,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -5374,6 +5472,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellFloatEditor::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellFloatEditor_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -5432,6 +5531,7 @@ void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridCellNumberEditor::wxGridCellNumberEditor(int min, int max)
    Allows you to specify the range for acceptable data. */
 PHP_METHOD(php_wxGridCellNumberEditor, __construct)
@@ -5466,6 +5566,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&min0, &max0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &min0, &max0 ) == SUCCESS)
 		{
@@ -5484,6 +5585,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellNumberEditor_php();
 
 				((wxGridCellNumberEditor_php*) _this)->references.Initialize();
@@ -5494,6 +5596,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) min0)\n");
 				#endif
+
 				_this = new wxGridCellNumberEditor_php((int) min0);
 
 				((wxGridCellNumberEditor_php*) _this)->references.Initialize();
@@ -5504,6 +5607,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) min0, (int) max0)\n");
 				#endif
+
 				_this = new wxGridCellNumberEditor_php((int) min0, (int) max0);
 
 				((wxGridCellNumberEditor_php*) _this)->references.Initialize();
@@ -5529,7 +5633,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellNumberEditor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellNumberEditor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5604,6 +5708,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
@@ -5622,6 +5727,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellNumberEditor::SetParameters(wxString(params0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridCellNumberEditor_php*)_this)->SetParameters(wxString(params0, wxConvUTF8));
 
 
@@ -5648,6 +5754,7 @@ void php_wxGridCellAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 }
+
 /* {{{ proto wxGridCellAttr wxGridCellAttr::Clone()
    Creates a new copy of this object. */
 PHP_METHOD(php_wxGridCellAttr, Clone)
@@ -5712,6 +5819,7 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5726,6 +5834,7 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::Clone() to return object pointer\n\n");
 				#endif
+
 				wxGridCellAttr_php* value_to_return0;
 				value_to_return0 = (wxGridCellAttr_php*) ((wxGridCellAttr_php*)_this)->Clone();
 
@@ -5831,6 +5940,7 @@ PHP_METHOD(php_wxGridCellAttr, DecRef)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5845,6 +5955,7 @@ PHP_METHOD(php_wxGridCellAttr, DecRef)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::DecRef()\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->DecRef();
 
 
@@ -5931,6 +6042,7 @@ PHP_METHOD(php_wxGridCellAttr, GetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (hAlign0, vAlign0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, hAlign0, vAlign0 ) == SUCCESS)
 		{
@@ -5952,6 +6064,7 @@ PHP_METHOD(php_wxGridCellAttr, GetAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetAlignment((int*) hAlign0, (int*) vAlign0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->GetAlignment((int*) hAlign0, (int*) vAlign0);
 
 				size_t elements_returned0_0 = sizeof(hAlign0)/sizeof(*hAlign0);
@@ -6046,6 +6159,7 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6060,6 +6174,7 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetBackgroundColour() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				value_to_return0 = (wxColour_php*) &((wxGridCellAttr_php*)_this)->GetBackgroundColour();
 
@@ -6166,6 +6281,7 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&grid0, &row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, &row0, &col0 ) == SUCCESS)
 		{
@@ -6200,6 +6316,7 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetEditor((const wxGrid*) object_pointer0_0, (int) row0, (int) col0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellEditor_php* value_to_return3;
 				value_to_return3 = (wxGridCellEditor_php*) ((wxGridCellAttr_php*)_this)->GetEditor((const wxGrid*) object_pointer0_0, (int) row0, (int) col0);
 
@@ -6306,6 +6423,7 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6320,6 +6438,7 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetFont() to return object reference\n\n");
 				#endif
+
 				wxFont_php* value_to_return0;
 				value_to_return0 = (wxFont_php*) &((wxGridCellAttr_php*)_this)->GetFont();
 
@@ -6426,6 +6545,7 @@ PHP_METHOD(php_wxGridCellAttr, GetNonDefaultAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (hAlign0, vAlign0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, hAlign0, vAlign0 ) == SUCCESS)
 		{
@@ -6447,6 +6567,7 @@ PHP_METHOD(php_wxGridCellAttr, GetNonDefaultAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetNonDefaultAlignment((int*) hAlign0, (int*) vAlign0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->GetNonDefaultAlignment((int*) hAlign0, (int*) vAlign0);
 
 				size_t elements_returned0_0 = sizeof(hAlign0)/sizeof(*hAlign0);
@@ -6545,6 +6666,7 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&grid0, &row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, &row0, &col0 ) == SUCCESS)
 		{
@@ -6579,6 +6701,7 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetRenderer((const wxGrid*) object_pointer0_0, (int) row0, (int) col0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellRenderer_php* value_to_return3;
 				value_to_return3 = (wxGridCellRenderer_php*) ((wxGridCellAttr_php*)_this)->GetRenderer((const wxGrid*) object_pointer0_0, (int) row0, (int) col0);
 
@@ -6685,6 +6808,7 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6699,6 +6823,7 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::GetTextColour() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				value_to_return0 = (wxColour_php*) &((wxGridCellAttr_php*)_this)->GetTextColour();
 
@@ -6801,6 +6926,7 @@ PHP_METHOD(php_wxGridCellAttr, HasAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6815,6 +6941,7 @@ PHP_METHOD(php_wxGridCellAttr, HasAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasAlignment())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->HasAlignment());
 
 
@@ -6897,6 +7024,7 @@ PHP_METHOD(php_wxGridCellAttr, HasBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6911,6 +7039,7 @@ PHP_METHOD(php_wxGridCellAttr, HasBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasBackgroundColour())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->HasBackgroundColour());
 
 
@@ -6993,6 +7122,7 @@ PHP_METHOD(php_wxGridCellAttr, HasEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7007,6 +7137,7 @@ PHP_METHOD(php_wxGridCellAttr, HasEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasEditor())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->HasEditor());
 
 
@@ -7089,6 +7220,7 @@ PHP_METHOD(php_wxGridCellAttr, HasFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7103,6 +7235,7 @@ PHP_METHOD(php_wxGridCellAttr, HasFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasFont())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->HasFont());
 
 
@@ -7185,6 +7318,7 @@ PHP_METHOD(php_wxGridCellAttr, HasRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7199,6 +7333,7 @@ PHP_METHOD(php_wxGridCellAttr, HasRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasRenderer())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->HasRenderer());
 
 
@@ -7281,6 +7416,7 @@ PHP_METHOD(php_wxGridCellAttr, HasTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7295,6 +7431,7 @@ PHP_METHOD(php_wxGridCellAttr, HasTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::HasTextColour())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->HasTextColour());
 
 
@@ -7377,6 +7514,7 @@ PHP_METHOD(php_wxGridCellAttr, IncRef)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7391,6 +7529,7 @@ PHP_METHOD(php_wxGridCellAttr, IncRef)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::IncRef()\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->IncRef();
 
 
@@ -7473,6 +7612,7 @@ PHP_METHOD(php_wxGridCellAttr, IsReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7487,6 +7627,7 @@ PHP_METHOD(php_wxGridCellAttr, IsReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridCellAttr::IsReadOnly())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridCellAttr_php*)_this)->IsReadOnly());
 
 
@@ -7571,6 +7712,7 @@ PHP_METHOD(php_wxGridCellAttr, SetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&hAlign0, &vAlign0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &hAlign0, &vAlign0 ) == SUCCESS)
 		{
@@ -7589,6 +7731,7 @@ PHP_METHOD(php_wxGridCellAttr, SetAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetAlignment((int) hAlign0, (int) vAlign0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetAlignment((int) hAlign0, (int) vAlign0);
 
 
@@ -7673,6 +7816,7 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colBack0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -7707,6 +7851,7 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetBackgroundColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colBack0, "wxGridCellAttr::SetBackgroundColour at call with 1 argument(s)");
@@ -7791,6 +7936,7 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&defAttr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &defAttr0 ) == SUCCESS)
 		{
@@ -7825,6 +7971,7 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetDefAttr((wxGridCellAttr*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetDefAttr((wxGridCellAttr*) object_pointer0_0);
 
 				references->AddReference(defAttr0, "wxGridCellAttr::SetDefAttr at call with 1 argument(s)");
@@ -7910,6 +8057,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&editor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0 ) == SUCCESS)
 		{
@@ -7944,6 +8092,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetEditor((wxGridCellEditor*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetEditor((wxGridCellEditor*) object_pointer0_0);
 
 				references->AddReference(editor0, "wxGridCellAttr::SetEditor at call with 1 argument(s)");
@@ -8029,6 +8178,7 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -8063,6 +8213,7 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxGridCellAttr::SetFont at call with 1 argument(s)");
@@ -8147,6 +8298,7 @@ PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&isReadOnly0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &isReadOnly0 ) == SUCCESS)
 		{
@@ -8165,6 +8317,7 @@ PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetReadOnly()\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetReadOnly();
 
 
@@ -8176,6 +8329,7 @@ PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetReadOnly(isReadOnly0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetReadOnly(isReadOnly0);
 
 
@@ -8260,6 +8414,7 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&renderer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &renderer0 ) == SUCCESS)
 		{
@@ -8294,6 +8449,7 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetRenderer((wxGridCellRenderer*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetRenderer((wxGridCellRenderer*) object_pointer0_0);
 
 				references->AddReference(renderer0, "wxGridCellAttr::SetRenderer at call with 1 argument(s)");
@@ -8379,6 +8535,7 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colText0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -8413,6 +8570,7 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridCellAttr::SetTextColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridCellAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colText0, "wxGridCellAttr::SetTextColour at call with 1 argument(s)");
@@ -8476,6 +8634,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&attrDefault0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrDefault0 ) == SUCCESS)
 		{
@@ -8508,6 +8667,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOOll' (&colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &hAlign1, &vAlign1)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOOll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &hAlign1, &vAlign1 ) == SUCCESS)
 		{
@@ -8574,6 +8734,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridCellAttr_php();
 
 				((wxGridCellAttr_php*) _this)->references.Initialize();
@@ -8584,6 +8745,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxGridCellAttr*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxGridCellAttr_php((wxGridCellAttr*) object_pointer0_0);
 
 				((wxGridCellAttr_php*) _this)->references.Initialize();
@@ -8602,6 +8764,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (int) hAlign1, (int) vAlign1)\n");
 				#endif
+
 				_this = new wxGridCellAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (int) hAlign1, (int) vAlign1);
 
 				((wxGridCellAttr_php*) _this)->references.Initialize();
@@ -8630,7 +8793,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellAttr::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellAttr::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -8679,6 +8842,7 @@ void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto bool wxGridTableBase::AppendCols(int numCols)
    Exactly the same as AppendRows() but for columns. */
 PHP_METHOD(php_wxGridTableBase, AppendCols)
@@ -8744,6 +8908,7 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&numCols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numCols0 ) == SUCCESS)
 		{
@@ -8762,6 +8927,7 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendCols())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->AppendCols());
 
 
@@ -8773,6 +8939,7 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendCols((size_t) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->AppendCols((size_t) numCols0));
 
 
@@ -8856,6 +9023,7 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&numRows0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numRows0 ) == SUCCESS)
 		{
@@ -8874,6 +9042,7 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendRows())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->AppendRows());
 
 
@@ -8885,6 +9054,7 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::AppendRows((size_t) numRows0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->AppendRows((size_t) numRows0));
 
 
@@ -8971,6 +9141,7 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &typeName0, &typeName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
@@ -8989,6 +9160,7 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::CanGetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->CanGetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
 
 
@@ -9071,6 +9243,7 @@ PHP_METHOD(php_wxGridTableBase, CanHaveAttributes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9085,6 +9258,7 @@ PHP_METHOD(php_wxGridTableBase, CanHaveAttributes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::CanHaveAttributes())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->CanHaveAttributes());
 
 
@@ -9171,6 +9345,7 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &typeName0, &typeName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
@@ -9189,6 +9364,7 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::CanSetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->CanSetValueAs((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)));
 
 
@@ -9271,6 +9447,7 @@ PHP_METHOD(php_wxGridTableBase, Clear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9285,6 +9462,7 @@ PHP_METHOD(php_wxGridTableBase, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::Clear()\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->Clear();
 
 
@@ -9369,6 +9547,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numCols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0 ) == SUCCESS)
 		{
@@ -9387,6 +9566,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteCols())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->DeleteCols());
 
 
@@ -9398,6 +9578,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteCols((size_t) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->DeleteCols((size_t) pos0));
 
 
@@ -9409,6 +9590,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteCols((size_t) pos0, (size_t) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->DeleteCols((size_t) pos0, (size_t) numCols0));
 
 
@@ -9493,6 +9675,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numRows0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0 ) == SUCCESS)
 		{
@@ -9511,6 +9694,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteRows())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->DeleteRows());
 
 
@@ -9522,6 +9706,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteRows((size_t) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->DeleteRows((size_t) pos0));
 
 
@@ -9533,6 +9718,7 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::DeleteRows((size_t) pos0, (size_t) numRows0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->DeleteRows((size_t) pos0, (size_t) numRows0));
 
 
@@ -9618,6 +9804,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&row0, &col0, &kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &kind0 ) == SUCCESS)
 		{
@@ -9636,6 +9823,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::GetAttr((int) row0, (int) col0, (wxGridCellAttr::wxAttrKind) kind0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellAttr_php* value_to_return3;
 				value_to_return3 = (wxGridCellAttr_php*) ((wxGridTableBase_php*)_this)->GetAttr((int) row0, (int) col0, (wxGridCellAttr::wxAttrKind) kind0);
 
@@ -9741,6 +9929,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9755,6 +9944,7 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::GetAttrProvider() to return object pointer\n\n");
 				#endif
+
 				wxGridCellAttrProvider_php* value_to_return0;
 				value_to_return0 = (wxGridCellAttrProvider_php*) ((wxGridTableBase_php*)_this)->GetAttrProvider();
 
@@ -9861,6 +10051,7 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -9879,6 +10070,7 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxGridTableBase::GetColLabelValue((int) col0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxGridTableBase_php*)_this)->GetColLabelValue((int) col0);
 				char* temp_string1;
@@ -9967,6 +10159,7 @@ PHP_METHOD(php_wxGridTableBase, GetColsCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9981,6 +10174,7 @@ PHP_METHOD(php_wxGridTableBase, GetColsCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridTableBase::GetColsCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridTableBase_php*)_this)->GetColsCount());
 
 
@@ -10198,6 +10392,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -10216,6 +10411,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxGridTableBase::GetRowLabelValue((int) row0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxGridTableBase_php*)_this)->GetRowLabelValue((int) row0);
 				char* temp_string1;
@@ -10304,6 +10500,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowsCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10318,6 +10515,7 @@ PHP_METHOD(php_wxGridTableBase, GetRowsCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridTableBase::GetRowsCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridTableBase_php*)_this)->GetRowsCount());
 
 
@@ -10402,6 +10600,7 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -10420,6 +10619,7 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxGridTableBase::GetTypeName((int) row0, (int) col0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = ((wxGridTableBase_php*)_this)->GetTypeName((int) row0, (int) col0);
 				char* temp_string2;
@@ -10592,6 +10792,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -10610,6 +10811,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::GetValueAsBool((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->GetValueAsBool((int) row0, (int) col0));
 
 
@@ -10696,6 +10898,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &typeName0, &typeName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
@@ -10714,6 +10917,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::GetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8))\n\n");
 				#endif
+
 				ZVAL_STRING(return_value, (char*) ((wxGridTableBase_php*)_this)->GetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8)), 1);
 
 
@@ -10798,6 +11002,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -10816,6 +11021,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridTableBase::GetValueAsDouble((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_DOUBLE(return_value, ((wxGridTableBase_php*)_this)->GetValueAsDouble((int) row0, (int) col0));
 
 
@@ -10900,6 +11106,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -10918,6 +11125,7 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridTableBase::GetValueAsLong((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridTableBase_php*)_this)->GetValueAsLong((int) row0, (int) col0));
 
 
@@ -11000,6 +11208,7 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11014,6 +11223,7 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::GetView() to return object pointer\n\n");
 				#endif
+
 				wxGrid_php* value_to_return0;
 				value_to_return0 = (wxGrid_php*) ((wxGridTableBase_php*)_this)->GetView();
 
@@ -11121,6 +11331,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numCols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0 ) == SUCCESS)
 		{
@@ -11139,6 +11350,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertCols())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertCols());
 
 
@@ -11150,6 +11362,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertCols((size_t) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertCols((size_t) pos0));
 
 
@@ -11161,6 +11374,7 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertCols((size_t) pos0, (size_t) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertCols((size_t) pos0, (size_t) numCols0));
 
 
@@ -11245,6 +11459,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numRows0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0 ) == SUCCESS)
 		{
@@ -11263,6 +11478,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertRows())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertRows());
 
 
@@ -11274,6 +11490,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertRows((size_t) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertRows((size_t) pos0));
 
 
@@ -11285,6 +11502,7 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::InsertRows((size_t) pos0, (size_t) numRows0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertRows((size_t) pos0, (size_t) numRows0));
 
 
@@ -11369,6 +11587,7 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -11387,6 +11606,7 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridTableBase::IsEmptyCell((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->IsEmptyCell((int) row0, (int) col0));
 
 
@@ -11473,6 +11693,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&attr0, &row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &row0, &col0 ) == SUCCESS)
 		{
@@ -11507,6 +11728,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetAttr((wxGridCellAttr*) object_pointer0_0, (int) row0, (int) col0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetAttr((wxGridCellAttr*) object_pointer0_0, (int) row0, (int) col0);
 
 				references->AddReference(attr0, "wxGridTableBase::SetAttr at call with 3 argument(s)");
@@ -11592,6 +11814,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&attrProvider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrProvider0 ) == SUCCESS)
 		{
@@ -11626,6 +11849,7 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetAttrProvider((wxGridCellAttrProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetAttrProvider((wxGridCellAttrProvider*) object_pointer0_0);
 
 				references->AddReference(attrProvider0, "wxGridTableBase::SetAttrProvider at call with 1 argument(s)");
@@ -11712,6 +11936,7 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&attr0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &col0 ) == SUCCESS)
 		{
@@ -11746,6 +11971,7 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetColAttr((wxGridCellAttr*) object_pointer0_0, (int) col0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetColAttr((wxGridCellAttr*) object_pointer0_0, (int) col0);
 
 				references->AddReference(attr0, "wxGridTableBase::SetColAttr at call with 2 argument(s)");
@@ -11832,6 +12058,7 @@ PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&col0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -11850,6 +12077,7 @@ PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetColLabelValue((int) col0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetColLabelValue((int) col0, wxString(label0, wxConvUTF8));
 
 
@@ -11935,6 +12163,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&attr0, &row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &row0 ) == SUCCESS)
 		{
@@ -11969,6 +12198,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetRowAttr((wxGridCellAttr*) object_pointer0_0, (int) row0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetRowAttr((wxGridCellAttr*) object_pointer0_0, (int) row0);
 
 				references->AddReference(attr0, "wxGridTableBase::SetRowAttr at call with 2 argument(s)");
@@ -12055,6 +12285,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&row0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -12073,6 +12304,7 @@ PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetRowLabelValue((int) row0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetRowLabelValue((int) row0, wxString(label0, wxConvUTF8));
 
 
@@ -12244,6 +12476,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsBool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llb' (&row0, &col0, &value0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &value0 ) == SUCCESS)
 		{
@@ -12262,6 +12495,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsBool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetValueAsBool((int) row0, (int) col0, value0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetValueAsBool((int) row0, (int) col0, value0);
 
 
@@ -12351,6 +12585,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsCustom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llss' (&row0, &col0, &typeName0, &typeName_len0, &value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -12372,6 +12607,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsCustom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8), (void*) value0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetValueAsCustom((int) row0, (int) col0, wxString(typeName0, wxConvUTF8), (void*) value0);
 
 				ZVAL_STRING(value0_ref, (char*) value0, 1);
@@ -12458,6 +12694,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsDouble)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lld' (&row0, &col0, &value0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lld";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &value0 ) == SUCCESS)
 		{
@@ -12476,6 +12713,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsDouble)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetValueAsDouble((int) row0, (int) col0, value0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetValueAsDouble((int) row0, (int) col0, value0);
 
 
@@ -12561,6 +12799,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsLong)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&row0, &col0, &value0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &value0 ) == SUCCESS)
 		{
@@ -12579,6 +12818,7 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsLong)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetValueAsLong((int) row0, (int) col0, (long) value0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetValueAsLong((int) row0, (int) col0, (long) value0);
 
 
@@ -12663,6 +12903,7 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&grid0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
@@ -12697,6 +12938,7 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridTableBase::SetView((wxGrid*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridTableBase_php*)_this)->SetView((wxGrid*) object_pointer0_0);
 
 				references->AddReference(grid0, "wxGridTableBase::SetView at call with 1 argument(s)");
@@ -12748,6 +12990,7 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12762,6 +13005,7 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridTableBase_php();
 
 				((wxGridTableBase_php*) _this)->references.Initialize();
@@ -12787,7 +13031,7 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridTableBase::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridTableBase::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -12836,6 +13080,7 @@ void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridSizesInfo::wxGridSizesInfo()
    Default constructor. */
 PHP_METHOD(php_wxGridSizesInfo, __construct)
@@ -12868,6 +13113,7 @@ PHP_METHOD(php_wxGridSizesInfo, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12882,6 +13128,7 @@ PHP_METHOD(php_wxGridSizesInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridSizesInfo_php();
 
 				((wxGridSizesInfo_php*) _this)->references.Initialize();
@@ -12907,7 +13154,7 @@ PHP_METHOD(php_wxGridSizesInfo, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridSizesInfo::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridSizesInfo::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -13045,6 +13292,7 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -13063,6 +13311,7 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizesInfo::GetSize((unsigned) pos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizesInfo_php*)_this)->GetSize((unsigned) pos0));
 
 
@@ -13088,6 +13337,7 @@ void php_wxGrid_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxGrid::AppendCols(int numCols, bool updateLabels)
    Appends one or more new columns to the right of the grid. */
 PHP_METHOD(php_wxGrid, AppendCols)
@@ -13154,6 +13404,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lb' (&numCols0, &updateLabels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numCols0, &updateLabels0 ) == SUCCESS)
 		{
@@ -13172,6 +13423,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AppendCols())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AppendCols());
 
 
@@ -13183,6 +13435,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AppendCols((int) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AppendCols((int) numCols0));
 
 
@@ -13194,6 +13447,7 @@ PHP_METHOD(php_wxGrid, AppendCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AppendCols((int) numCols0, updateLabels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AppendCols((int) numCols0, updateLabels0));
 
 
@@ -13278,6 +13532,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lb' (&numRows0, &updateLabels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numRows0, &updateLabels0 ) == SUCCESS)
 		{
@@ -13296,6 +13551,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AppendRows())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AppendRows());
 
 
@@ -13307,6 +13563,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AppendRows((int) numRows0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AppendRows((int) numRows0));
 
 
@@ -13318,6 +13575,7 @@ PHP_METHOD(php_wxGrid, AppendRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AppendRows((int) numRows0, updateLabels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AppendRows((int) numRows0, updateLabels0));
 
 
@@ -13400,6 +13658,7 @@ PHP_METHOD(php_wxGrid, AreHorzGridLinesClipped)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13414,6 +13673,7 @@ PHP_METHOD(php_wxGrid, AreHorzGridLinesClipped)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AreHorzGridLinesClipped())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AreHorzGridLinesClipped());
 
 
@@ -13496,6 +13756,7 @@ PHP_METHOD(php_wxGrid, AreVertGridLinesClipped)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13510,6 +13771,7 @@ PHP_METHOD(php_wxGrid, AreVertGridLinesClipped)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::AreVertGridLinesClipped())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->AreVertGridLinesClipped());
 
 
@@ -13592,6 +13854,7 @@ PHP_METHOD(php_wxGrid, AutoSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13606,6 +13869,7 @@ PHP_METHOD(php_wxGrid, AutoSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSize();
 
 
@@ -13689,6 +13953,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -13707,6 +13972,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeColLabelSize((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeColLabelSize((int) col0);
 
 
@@ -13791,6 +14057,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&col0, &setAsMin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &setAsMin0 ) == SUCCESS)
 		{
@@ -13809,6 +14076,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeColumn((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeColumn((int) col0);
 
 
@@ -13820,6 +14088,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeColumn((int) col0, setAsMin0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeColumn((int) col0, setAsMin0);
 
 
@@ -13903,6 +14172,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColumns)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&setAsMin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &setAsMin0 ) == SUCCESS)
 		{
@@ -13921,6 +14191,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColumns)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeColumns()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeColumns();
 
 
@@ -13932,6 +14203,7 @@ PHP_METHOD(php_wxGrid, AutoSizeColumns)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeColumns(setAsMin0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeColumns(setAsMin0);
 
 
@@ -14016,6 +14288,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&row0, &setAsMin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &setAsMin0 ) == SUCCESS)
 		{
@@ -14034,6 +14307,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeRow((int) row0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeRow((int) row0);
 
 
@@ -14045,6 +14319,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeRow((int) row0, setAsMin0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeRow((int) row0, setAsMin0);
 
 
@@ -14128,6 +14403,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -14146,6 +14422,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeRowLabelSize((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeRowLabelSize((int) col0);
 
 
@@ -14229,6 +14506,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&setAsMin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &setAsMin0 ) == SUCCESS)
 		{
@@ -14247,6 +14525,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeRows()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeRows();
 
 
@@ -14258,6 +14537,7 @@ PHP_METHOD(php_wxGrid, AutoSizeRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::AutoSizeRows(setAsMin0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->AutoSizeRows(setAsMin0);
 
 
@@ -14340,6 +14620,7 @@ PHP_METHOD(php_wxGrid, BeginBatch)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14354,6 +14635,7 @@ PHP_METHOD(php_wxGrid, BeginBatch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::BeginBatch()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->BeginBatch();
 
 
@@ -14436,6 +14718,7 @@ PHP_METHOD(php_wxGrid, CanDragCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14450,6 +14733,7 @@ PHP_METHOD(php_wxGrid, CanDragCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CanDragCell())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CanDragCell());
 
 
@@ -14532,6 +14816,7 @@ PHP_METHOD(php_wxGrid, CanDragColMove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14546,6 +14831,7 @@ PHP_METHOD(php_wxGrid, CanDragColMove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CanDragColMove())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CanDragColMove());
 
 
@@ -14629,6 +14915,7 @@ PHP_METHOD(php_wxGrid, CanDragColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -14647,6 +14934,7 @@ PHP_METHOD(php_wxGrid, CanDragColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CanDragColSize((int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CanDragColSize((int) col0));
 
 
@@ -14729,6 +15017,7 @@ PHP_METHOD(php_wxGrid, CanDragGridSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14743,6 +15032,7 @@ PHP_METHOD(php_wxGrid, CanDragGridSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CanDragGridSize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CanDragGridSize());
 
 
@@ -14826,6 +15116,7 @@ PHP_METHOD(php_wxGrid, CanDragRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -14844,6 +15135,7 @@ PHP_METHOD(php_wxGrid, CanDragRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CanDragRowSize((int) row0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CanDragRowSize((int) row0));
 
 
@@ -14926,6 +15218,7 @@ PHP_METHOD(php_wxGrid, CanEnableCellControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14940,6 +15233,7 @@ PHP_METHOD(php_wxGrid, CanEnableCellControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CanEnableCellControl())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CanEnableCellControl());
 
 
@@ -15024,6 +15318,7 @@ PHP_METHOD(php_wxGrid, CellToRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -15042,6 +15337,7 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::CellToRect((int) row0, (int) col0) to return new object\n\n");
 				#endif
+
 				wxRect value_to_return2;
 				value_to_return2 = ((wxGrid_php*)_this)->CellToRect((int) row0, (int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
@@ -15129,6 +15425,7 @@ PHP_METHOD(php_wxGrid, ClearGrid)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15143,6 +15440,7 @@ PHP_METHOD(php_wxGrid, ClearGrid)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ClearGrid()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ClearGrid();
 
 
@@ -15225,6 +15523,7 @@ PHP_METHOD(php_wxGrid, ClearSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15239,6 +15538,7 @@ PHP_METHOD(php_wxGrid, ClearSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ClearSelection()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ClearSelection();
 
 
@@ -15322,6 +15622,7 @@ PHP_METHOD(php_wxGrid, ClipHorzGridLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&clip0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clip0 ) == SUCCESS)
 		{
@@ -15340,6 +15641,7 @@ PHP_METHOD(php_wxGrid, ClipHorzGridLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ClipHorzGridLines(clip0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ClipHorzGridLines(clip0);
 
 
@@ -15423,6 +15725,7 @@ PHP_METHOD(php_wxGrid, ClipVertGridLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&clip0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clip0 ) == SUCCESS)
 		{
@@ -15441,6 +15744,7 @@ PHP_METHOD(php_wxGrid, ClipVertGridLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ClipVertGridLines(clip0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ClipVertGridLines(clip0);
 
 
@@ -15533,6 +15837,7 @@ PHP_METHOD(php_wxGrid, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -15599,6 +15904,7 @@ PHP_METHOD(php_wxGrid, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxGrid::Create at call with 2 argument(s)");
@@ -15611,6 +15917,7 @@ PHP_METHOD(php_wxGrid, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxGrid::Create at call with 3 argument(s)");
@@ -15624,6 +15931,7 @@ PHP_METHOD(php_wxGrid, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxGrid::Create at call with 4 argument(s)");
@@ -15638,6 +15946,7 @@ PHP_METHOD(php_wxGrid, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxGrid::Create at call with 5 argument(s)");
@@ -15652,6 +15961,7 @@ PHP_METHOD(php_wxGrid, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxGrid::Create at call with 6 argument(s)");
@@ -15740,6 +16050,7 @@ PHP_METHOD(php_wxGrid, CreateGrid)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|l' (&numRows0, &numCols0, &selmode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numRows0, &numCols0, &selmode0 ) == SUCCESS)
 		{
@@ -15758,6 +16069,7 @@ PHP_METHOD(php_wxGrid, CreateGrid)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CreateGrid((int) numRows0, (int) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CreateGrid((int) numRows0, (int) numCols0));
 
 
@@ -15769,6 +16081,7 @@ PHP_METHOD(php_wxGrid, CreateGrid)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::CreateGrid((int) numRows0, (int) numCols0, (wxGrid::wxGridSelectionModes) selmode0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->CreateGrid((int) numRows0, (int) numCols0, (wxGrid::wxGridSelectionModes) selmode0));
 
 
@@ -15854,6 +16167,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numCols0, &updateLabels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|llb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0, &updateLabels0 ) == SUCCESS)
 		{
@@ -15872,6 +16186,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteCols());
 
 
@@ -15883,6 +16198,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols((int) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteCols((int) pos0));
 
 
@@ -15894,6 +16210,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols((int) pos0, (int) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteCols((int) pos0, (int) numCols0));
 
 
@@ -15905,6 +16222,7 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteCols((int) pos0, (int) numCols0, updateLabels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteCols((int) pos0, (int) numCols0, updateLabels0));
 
 
@@ -15990,6 +16308,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numRows0, &updateLabels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|llb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0, &updateLabels0 ) == SUCCESS)
 		{
@@ -16008,6 +16327,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteRows());
 
 
@@ -16019,6 +16339,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows((int) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteRows((int) pos0));
 
 
@@ -16030,6 +16351,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows((int) pos0, (int) numRows0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteRows((int) pos0, (int) numRows0));
 
 
@@ -16041,6 +16363,7 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::DeleteRows((int) pos0, (int) numRows0, updateLabels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->DeleteRows((int) pos0, (int) numRows0, updateLabels0));
 
 
@@ -16123,6 +16446,7 @@ PHP_METHOD(php_wxGrid, DisableCellEditControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16137,6 +16461,7 @@ PHP_METHOD(php_wxGrid, DisableCellEditControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableCellEditControl()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableCellEditControl();
 
 
@@ -16220,6 +16545,7 @@ PHP_METHOD(php_wxGrid, DisableColResize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -16238,6 +16564,7 @@ PHP_METHOD(php_wxGrid, DisableColResize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableColResize((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableColResize((int) col0);
 
 
@@ -16320,6 +16647,7 @@ PHP_METHOD(php_wxGrid, DisableDragColMove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16334,6 +16662,7 @@ PHP_METHOD(php_wxGrid, DisableDragColMove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableDragColMove()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableDragColMove();
 
 
@@ -16416,6 +16745,7 @@ PHP_METHOD(php_wxGrid, DisableDragColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16430,6 +16760,7 @@ PHP_METHOD(php_wxGrid, DisableDragColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableDragColSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableDragColSize();
 
 
@@ -16512,6 +16843,7 @@ PHP_METHOD(php_wxGrid, DisableDragGridSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16526,6 +16858,7 @@ PHP_METHOD(php_wxGrid, DisableDragGridSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableDragGridSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableDragGridSize();
 
 
@@ -16608,6 +16941,7 @@ PHP_METHOD(php_wxGrid, DisableDragRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16622,6 +16956,7 @@ PHP_METHOD(php_wxGrid, DisableDragRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableDragRowSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableDragRowSize();
 
 
@@ -16705,6 +17040,7 @@ PHP_METHOD(php_wxGrid, DisableRowResize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -16723,6 +17059,7 @@ PHP_METHOD(php_wxGrid, DisableRowResize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::DisableRowResize((int) row0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->DisableRowResize((int) row0);
 
 
@@ -16806,6 +17143,7 @@ PHP_METHOD(php_wxGrid, EnableCellEditControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -16824,6 +17162,7 @@ PHP_METHOD(php_wxGrid, EnableCellEditControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableCellEditControl()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableCellEditControl();
 
 
@@ -16835,6 +17174,7 @@ PHP_METHOD(php_wxGrid, EnableCellEditControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableCellEditControl(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableCellEditControl(enable0);
 
 
@@ -16918,6 +17258,7 @@ PHP_METHOD(php_wxGrid, EnableDragCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -16936,6 +17277,7 @@ PHP_METHOD(php_wxGrid, EnableDragCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragCell()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragCell();
 
 
@@ -16947,6 +17289,7 @@ PHP_METHOD(php_wxGrid, EnableDragCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragCell(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragCell(enable0);
 
 
@@ -17030,6 +17373,7 @@ PHP_METHOD(php_wxGrid, EnableDragColMove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -17048,6 +17392,7 @@ PHP_METHOD(php_wxGrid, EnableDragColMove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragColMove()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragColMove();
 
 
@@ -17059,6 +17404,7 @@ PHP_METHOD(php_wxGrid, EnableDragColMove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragColMove(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragColMove(enable0);
 
 
@@ -17142,6 +17488,7 @@ PHP_METHOD(php_wxGrid, EnableDragColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -17160,6 +17507,7 @@ PHP_METHOD(php_wxGrid, EnableDragColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragColSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragColSize();
 
 
@@ -17171,6 +17519,7 @@ PHP_METHOD(php_wxGrid, EnableDragColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragColSize(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragColSize(enable0);
 
 
@@ -17254,6 +17603,7 @@ PHP_METHOD(php_wxGrid, EnableDragGridSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -17272,6 +17622,7 @@ PHP_METHOD(php_wxGrid, EnableDragGridSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragGridSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragGridSize();
 
 
@@ -17283,6 +17634,7 @@ PHP_METHOD(php_wxGrid, EnableDragGridSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragGridSize(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragGridSize(enable0);
 
 
@@ -17366,6 +17718,7 @@ PHP_METHOD(php_wxGrid, EnableDragRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -17384,6 +17737,7 @@ PHP_METHOD(php_wxGrid, EnableDragRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragRowSize()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragRowSize();
 
 
@@ -17395,6 +17749,7 @@ PHP_METHOD(php_wxGrid, EnableDragRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableDragRowSize(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableDragRowSize(enable0);
 
 
@@ -17478,6 +17833,7 @@ PHP_METHOD(php_wxGrid, EnableEditing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&edit0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &edit0 ) == SUCCESS)
 		{
@@ -17496,6 +17852,7 @@ PHP_METHOD(php_wxGrid, EnableEditing)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableEditing(edit0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableEditing(edit0);
 
 
@@ -17579,6 +17936,7 @@ PHP_METHOD(php_wxGrid, EnableGridLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -17597,6 +17955,7 @@ PHP_METHOD(php_wxGrid, EnableGridLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableGridLines()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableGridLines();
 
 
@@ -17608,6 +17967,7 @@ PHP_METHOD(php_wxGrid, EnableGridLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EnableGridLines(enable0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EnableGridLines(enable0);
 
 
@@ -17690,6 +18050,7 @@ PHP_METHOD(php_wxGrid, EndBatch)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17704,6 +18065,7 @@ PHP_METHOD(php_wxGrid, EndBatch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::EndBatch()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->EndBatch();
 
 
@@ -17786,6 +18148,7 @@ PHP_METHOD(php_wxGrid, Fit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17800,6 +18163,7 @@ PHP_METHOD(php_wxGrid, Fit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::Fit()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->Fit();
 
 
@@ -17882,6 +18246,7 @@ PHP_METHOD(php_wxGrid, ForceRefresh)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17896,6 +18261,7 @@ PHP_METHOD(php_wxGrid, ForceRefresh)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ForceRefresh()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ForceRefresh();
 
 
@@ -17978,6 +18344,7 @@ PHP_METHOD(php_wxGrid, GetBatchCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17992,6 +18359,7 @@ PHP_METHOD(php_wxGrid, GetBatchCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetBatchCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetBatchCount());
 
 
@@ -18080,6 +18448,7 @@ PHP_METHOD(php_wxGrid, GetCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, horiz0, vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, horiz0, vert0 ) == SUCCESS)
 		{
@@ -18101,6 +18470,7 @@ PHP_METHOD(php_wxGrid, GetCellAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetCellAlignment((int) row0, (int) col0, (int*) horiz0, (int*) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->GetCellAlignment((int) row0, (int) col0, (int*) horiz0, (int*) vert0);
 
 				size_t elements_returned0_2 = sizeof(horiz0)/sizeof(*horiz0);
@@ -18197,6 +18567,7 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -18215,6 +18586,7 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetCellBackgroundColour((int) row0, (int) col0) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return2;
 				value_to_return2 = ((wxGrid_php*)_this)->GetCellBackgroundColour((int) row0, (int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -18304,6 +18676,7 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -18322,6 +18695,7 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetCellEditor((int) row0, (int) col0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellEditor_php* value_to_return2;
 				value_to_return2 = (wxGridCellEditor_php*) ((wxGrid_php*)_this)->GetCellEditor((int) row0, (int) col0);
 
@@ -18429,6 +18803,7 @@ PHP_METHOD(php_wxGrid, GetCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -18447,6 +18822,7 @@ PHP_METHOD(php_wxGrid, GetCellFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetCellFont((int) row0, (int) col0) to return new object\n\n");
 				#endif
+
 				wxFont value_to_return2;
 				value_to_return2 = ((wxGrid_php*)_this)->GetCellFont((int) row0, (int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -18536,6 +18912,7 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -18554,6 +18931,7 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetCellRenderer((int) row0, (int) col0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellRenderer_php* value_to_return2;
 				value_to_return2 = (wxGridCellRenderer_php*) ((wxGrid_php*)_this)->GetCellRenderer((int) row0, (int) col0);
 
@@ -18665,6 +19043,7 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, num_rows0, num_cols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, num_rows0, num_cols0 ) == SUCCESS)
 		{
@@ -18686,6 +19065,7 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetCellSize((int) row0, (int) col0, (int*) num_rows0, (int*) num_cols0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetCellSize((int) row0, (int) col0, (int*) num_rows0, (int*) num_cols0));
 
 				size_t elements_returned0_2 = sizeof(num_rows0)/sizeof(*num_rows0);
@@ -18782,6 +19162,7 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -18800,6 +19181,7 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetCellTextColour((int) row0, (int) col0) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return2;
 				value_to_return2 = ((wxGrid_php*)_this)->GetCellTextColour((int) row0, (int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -18889,6 +19271,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -18907,6 +19290,7 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxGrid::GetCellValue((int) row0, (int) col0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = ((wxGrid_php*)_this)->GetCellValue((int) row0, (int) col0);
 				char* temp_string2;
@@ -18996,6 +19380,7 @@ PHP_METHOD(php_wxGrid, GetColAt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&colPos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colPos0 ) == SUCCESS)
 		{
@@ -19014,6 +19399,7 @@ PHP_METHOD(php_wxGrid, GetColAt)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetColAt((int) colPos0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetColAt((int) colPos0));
 
 
@@ -19097,6 +19483,7 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -19115,6 +19502,7 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetColGridLinePen((int) col0) to return new object\n\n");
 				#endif
+
 				wxPen value_to_return1;
 				value_to_return1 = ((wxGrid_php*)_this)->GetColGridLinePen((int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxPen_php), 0);
@@ -19206,6 +19594,7 @@ PHP_METHOD(php_wxGrid, GetColLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (horiz0, vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, horiz0, vert0 ) == SUCCESS)
 		{
@@ -19227,6 +19616,7 @@ PHP_METHOD(php_wxGrid, GetColLabelAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetColLabelAlignment((int*) horiz0, (int*) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->GetColLabelAlignment((int*) horiz0, (int*) vert0);
 
 				size_t elements_returned0_0 = sizeof(horiz0)/sizeof(*horiz0);
@@ -19321,6 +19711,7 @@ PHP_METHOD(php_wxGrid, GetColLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19335,6 +19726,7 @@ PHP_METHOD(php_wxGrid, GetColLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetColLabelSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetColLabelSize());
 
 
@@ -19417,6 +19809,7 @@ PHP_METHOD(php_wxGrid, GetColLabelTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19431,6 +19824,7 @@ PHP_METHOD(php_wxGrid, GetColLabelTextOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetColLabelTextOrientation())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetColLabelTextOrientation());
 
 
@@ -19514,6 +19908,7 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -19532,6 +19927,7 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxGrid::GetColLabelValue((int) col0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxGrid_php*)_this)->GetColLabelValue((int) col0);
 				char* temp_string1;
@@ -19620,6 +20016,7 @@ PHP_METHOD(php_wxGrid, GetColMinimalAcceptableWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19634,6 +20031,7 @@ PHP_METHOD(php_wxGrid, GetColMinimalAcceptableWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetColMinimalAcceptableWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetColMinimalAcceptableWidth());
 
 
@@ -19717,6 +20115,7 @@ PHP_METHOD(php_wxGrid, GetColPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&colID0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colID0 ) == SUCCESS)
 		{
@@ -19735,6 +20134,7 @@ PHP_METHOD(php_wxGrid, GetColPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetColPos((int) colID0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetColPos((int) colID0));
 
 
@@ -19818,6 +20218,7 @@ PHP_METHOD(php_wxGrid, GetColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -19836,6 +20237,7 @@ PHP_METHOD(php_wxGrid, GetColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetColSize((int) col0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetColSize((int) col0));
 
 
@@ -19918,6 +20320,7 @@ PHP_METHOD(php_wxGrid, GetColSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19932,6 +20335,7 @@ PHP_METHOD(php_wxGrid, GetColSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetColSizes() to return new object\n\n");
 				#endif
+
 				wxGridSizesInfo value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetColSizes();
 				void* ptr = safe_emalloc(1, sizeof(wxGridSizesInfo_php), 0);
@@ -20023,6 +20427,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (horiz0, vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, horiz0, vert0 ) == SUCCESS)
 		{
@@ -20044,6 +20449,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultCellAlignment((int*) horiz0, (int*) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->GetDefaultCellAlignment((int*) horiz0, (int*) vert0);
 
 				size_t elements_returned0_0 = sizeof(horiz0)/sizeof(*horiz0);
@@ -20138,6 +20544,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20152,6 +20559,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultCellBackgroundColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetDefaultCellBackgroundColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -20239,6 +20647,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20253,6 +20662,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultCellFont() to return new object\n\n");
 				#endif
+
 				wxFont value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetDefaultCellFont();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -20340,6 +20750,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20354,6 +20765,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultCellTextColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetDefaultCellTextColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -20441,6 +20853,7 @@ PHP_METHOD(php_wxGrid, GetDefaultColLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20455,6 +20868,7 @@ PHP_METHOD(php_wxGrid, GetDefaultColLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetDefaultColLabelSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetDefaultColLabelSize());
 
 
@@ -20537,6 +20951,7 @@ PHP_METHOD(php_wxGrid, GetDefaultColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20551,6 +20966,7 @@ PHP_METHOD(php_wxGrid, GetDefaultColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetDefaultColSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetDefaultColSize());
 
 
@@ -20633,6 +21049,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20647,6 +21064,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultEditor() to return object pointer\n\n");
 				#endif
+
 				wxGridCellEditor_php* value_to_return0;
 				value_to_return0 = (wxGridCellEditor_php*) ((wxGrid_php*)_this)->GetDefaultEditor();
 
@@ -20754,6 +21172,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&typeName0, &typeName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
@@ -20772,6 +21191,7 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultEditorForType(wxString(typeName0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxGridCellEditor_php* value_to_return1;
 				value_to_return1 = (wxGridCellEditor_php*) ((wxGrid_php*)_this)->GetDefaultEditorForType(wxString(typeName0, wxConvUTF8));
 
@@ -20877,6 +21297,7 @@ PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20891,6 +21312,7 @@ PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultGridLinePen() to return new object\n\n");
 				#endif
+
 				wxPen value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetDefaultGridLinePen();
 				void* ptr = safe_emalloc(1, sizeof(wxPen_php), 0);
@@ -20978,6 +21400,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20992,6 +21415,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultRenderer() to return object pointer\n\n");
 				#endif
+
 				wxGridCellRenderer_php* value_to_return0;
 				value_to_return0 = (wxGridCellRenderer_php*) ((wxGrid_php*)_this)->GetDefaultRenderer();
 
@@ -21099,6 +21523,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -21117,6 +21542,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultRendererForCell((int) row0, (int) col0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellRenderer_php* value_to_return2;
 				value_to_return2 = (wxGridCellRenderer_php*) ((wxGrid_php*)_this)->GetDefaultRendererForCell((int) row0, (int) col0);
 
@@ -21224,6 +21650,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&typeName0, &typeName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
@@ -21242,6 +21669,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetDefaultRendererForType(wxString(typeName0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxGridCellRenderer_php* value_to_return1;
 				value_to_return1 = (wxGridCellRenderer_php*) ((wxGrid_php*)_this)->GetDefaultRendererForType(wxString(typeName0, wxConvUTF8));
 
@@ -21347,6 +21775,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRowLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21361,6 +21790,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRowLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetDefaultRowLabelSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetDefaultRowLabelSize());
 
 
@@ -21443,6 +21873,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21457,6 +21888,7 @@ PHP_METHOD(php_wxGrid, GetDefaultRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetDefaultRowSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetDefaultRowSize());
 
 
@@ -21539,6 +21971,7 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21553,6 +21986,7 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetGridColHeader() to return object pointer\n\n");
 				#endif
+
 				wxHeaderCtrl_php* value_to_return0;
 				value_to_return0 = (wxHeaderCtrl_php*) ((wxGrid_php*)_this)->GetGridColHeader();
 
@@ -21658,6 +22092,7 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21672,6 +22107,7 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetGridColLabelWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxGrid_php*)_this)->GetGridColLabelWindow();
 
@@ -21777,6 +22213,7 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21791,6 +22228,7 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetGridCornerLabelWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxGrid_php*)_this)->GetGridCornerLabelWindow();
 
@@ -21896,6 +22334,7 @@ PHP_METHOD(php_wxGrid, GetGridCursorCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21910,6 +22349,7 @@ PHP_METHOD(php_wxGrid, GetGridCursorCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetGridCursorCol())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetGridCursorCol());
 
 
@@ -21992,6 +22432,7 @@ PHP_METHOD(php_wxGrid, GetGridCursorRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22006,6 +22447,7 @@ PHP_METHOD(php_wxGrid, GetGridCursorRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetGridCursorRow())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetGridCursorRow());
 
 
@@ -22088,6 +22530,7 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22102,6 +22545,7 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetGridLineColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetGridLineColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -22189,6 +22633,7 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22203,6 +22648,7 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetGridRowLabelWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxGrid_php*)_this)->GetGridRowLabelWindow();
 
@@ -22308,6 +22754,7 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22322,6 +22769,7 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetGridWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxGrid_php*)_this)->GetGridWindow();
 
@@ -22427,6 +22875,7 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22441,6 +22890,7 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetLabelBackgroundColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetLabelBackgroundColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -22528,6 +22978,7 @@ PHP_METHOD(php_wxGrid, GetLabelFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22542,6 +22993,7 @@ PHP_METHOD(php_wxGrid, GetLabelFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetLabelFont() to return new object\n\n");
 				#endif
+
 				wxFont value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetLabelFont();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -22629,6 +23081,7 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22643,6 +23096,7 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetLabelTextColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetLabelTextColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -22730,6 +23184,7 @@ PHP_METHOD(php_wxGrid, GetNumberCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22744,6 +23199,7 @@ PHP_METHOD(php_wxGrid, GetNumberCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetNumberCols())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetNumberCols());
 
 
@@ -22826,6 +23282,7 @@ PHP_METHOD(php_wxGrid, GetNumberRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22840,6 +23297,7 @@ PHP_METHOD(php_wxGrid, GetNumberRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetNumberRows())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetNumberRows());
 
 
@@ -22924,6 +23382,7 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -22942,6 +23401,7 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetOrCreateCellAttr((int) row0, (int) col0) to return object pointer\n\n");
 				#endif
+
 				wxGridCellAttr_php* value_to_return2;
 				value_to_return2 = (wxGridCellAttr_php*) ((wxGrid_php*)_this)->GetOrCreateCellAttr((int) row0, (int) col0);
 
@@ -23048,6 +23508,7 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -23066,6 +23527,7 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetRowGridLinePen((int) row0) to return new object\n\n");
 				#endif
+
 				wxPen value_to_return1;
 				value_to_return1 = ((wxGrid_php*)_this)->GetRowGridLinePen((int) row0);
 				void* ptr = safe_emalloc(1, sizeof(wxPen_php), 0);
@@ -23157,6 +23619,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (horiz0, vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, horiz0, vert0 ) == SUCCESS)
 		{
@@ -23178,6 +23641,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetRowLabelAlignment((int*) horiz0, (int*) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->GetRowLabelAlignment((int*) horiz0, (int*) vert0);
 
 				size_t elements_returned0_0 = sizeof(horiz0)/sizeof(*horiz0);
@@ -23272,6 +23736,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23286,6 +23751,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetRowLabelSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetRowLabelSize());
 
 
@@ -23369,6 +23835,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -23387,6 +23854,7 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxGrid::GetRowLabelValue((int) row0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxGrid_php*)_this)->GetRowLabelValue((int) row0);
 				char* temp_string1;
@@ -23475,6 +23943,7 @@ PHP_METHOD(php_wxGrid, GetRowMinimalAcceptableHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23489,6 +23958,7 @@ PHP_METHOD(php_wxGrid, GetRowMinimalAcceptableHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetRowMinimalAcceptableHeight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetRowMinimalAcceptableHeight());
 
 
@@ -23572,6 +24042,7 @@ PHP_METHOD(php_wxGrid, GetRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -23590,6 +24061,7 @@ PHP_METHOD(php_wxGrid, GetRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetRowSize((int) row0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetRowSize((int) row0));
 
 
@@ -23672,6 +24144,7 @@ PHP_METHOD(php_wxGrid, GetRowSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23686,6 +24159,7 @@ PHP_METHOD(php_wxGrid, GetRowSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetRowSizes() to return new object\n\n");
 				#endif
+
 				wxGridSizesInfo value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetRowSizes();
 				void* ptr = safe_emalloc(1, sizeof(wxGridSizesInfo_php), 0);
@@ -23773,6 +24247,7 @@ PHP_METHOD(php_wxGrid, GetScrollLineX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23787,6 +24262,7 @@ PHP_METHOD(php_wxGrid, GetScrollLineX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetScrollLineX())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetScrollLineX());
 
 
@@ -23869,6 +24345,7 @@ PHP_METHOD(php_wxGrid, GetScrollLineY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23883,6 +24360,7 @@ PHP_METHOD(php_wxGrid, GetScrollLineY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetScrollLineY())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetScrollLineY());
 
 
@@ -23965,6 +24443,7 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23979,6 +24458,7 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetSelectionBackground() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetSelectionBackground();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -24066,6 +24546,7 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24080,6 +24561,7 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetSelectionForeground() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxGrid_php*)_this)->GetSelectionForeground();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -24167,6 +24649,7 @@ PHP_METHOD(php_wxGrid, GetSelectionMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24181,6 +24664,7 @@ PHP_METHOD(php_wxGrid, GetSelectionMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetSelectionMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetSelectionMode());
 
 
@@ -24263,6 +24747,7 @@ PHP_METHOD(php_wxGrid, GetSortingColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24277,6 +24762,7 @@ PHP_METHOD(php_wxGrid, GetSortingColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::GetSortingColumn())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->GetSortingColumn());
 
 
@@ -24359,6 +24845,7 @@ PHP_METHOD(php_wxGrid, GetTable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24373,6 +24860,7 @@ PHP_METHOD(php_wxGrid, GetTable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GetTable() to return object pointer\n\n");
 				#endif
+
 				wxGridTableBase_php* value_to_return0;
 				value_to_return0 = (wxGridTableBase_php*) ((wxGrid_php*)_this)->GetTable();
 
@@ -24480,6 +24968,7 @@ PHP_METHOD(php_wxGrid, GoToCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -24498,6 +24987,7 @@ PHP_METHOD(php_wxGrid, GoToCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::GoToCell((int) row0, (int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->GoToCell((int) row0, (int) col0);
 
 
@@ -24580,6 +25070,7 @@ PHP_METHOD(php_wxGrid, GridLinesEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24594,6 +25085,7 @@ PHP_METHOD(php_wxGrid, GridLinesEnabled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::GridLinesEnabled())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->GridLinesEnabled());
 
 
@@ -24676,6 +25168,7 @@ PHP_METHOD(php_wxGrid, HideCellEditControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24690,6 +25183,7 @@ PHP_METHOD(php_wxGrid, HideCellEditControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::HideCellEditControl()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->HideCellEditControl();
 
 
@@ -24773,6 +25267,7 @@ PHP_METHOD(php_wxGrid, HideCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -24791,6 +25286,7 @@ PHP_METHOD(php_wxGrid, HideCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::HideCol((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->HideCol((int) col0);
 
 
@@ -24873,6 +25369,7 @@ PHP_METHOD(php_wxGrid, HideColLabels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24887,6 +25384,7 @@ PHP_METHOD(php_wxGrid, HideColLabels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::HideColLabels()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->HideColLabels();
 
 
@@ -24970,6 +25468,7 @@ PHP_METHOD(php_wxGrid, HideRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -24988,6 +25487,7 @@ PHP_METHOD(php_wxGrid, HideRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::HideRow((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->HideRow((int) col0);
 
 
@@ -25070,6 +25570,7 @@ PHP_METHOD(php_wxGrid, HideRowLabels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25084,6 +25585,7 @@ PHP_METHOD(php_wxGrid, HideRowLabels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::HideRowLabels()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->HideRowLabels();
 
 
@@ -25169,6 +25671,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numCols0, &updateLabels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|llb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0, &updateLabels0 ) == SUCCESS)
 		{
@@ -25187,6 +25690,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertCols())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertCols());
 
 
@@ -25198,6 +25702,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertCols((int) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertCols((int) pos0));
 
 
@@ -25209,6 +25714,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertCols((int) pos0, (int) numCols0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertCols((int) pos0, (int) numCols0));
 
 
@@ -25220,6 +25726,7 @@ PHP_METHOD(php_wxGrid, InsertCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertCols((int) pos0, (int) numCols0, updateLabels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertCols((int) pos0, (int) numCols0, updateLabels0));
 
 
@@ -25305,6 +25812,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numRows0, &updateLabels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|llb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0, &updateLabels0 ) == SUCCESS)
 		{
@@ -25323,6 +25831,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertRows())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertRows());
 
 
@@ -25334,6 +25843,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertRows((int) pos0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertRows((int) pos0));
 
 
@@ -25345,6 +25855,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertRows((int) pos0, (int) numRows0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertRows((int) pos0, (int) numRows0));
 
 
@@ -25356,6 +25867,7 @@ PHP_METHOD(php_wxGrid, InsertRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::InsertRows((int) pos0, (int) numRows0, updateLabels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->InsertRows((int) pos0, (int) numRows0, updateLabels0));
 
 
@@ -25438,6 +25950,7 @@ PHP_METHOD(php_wxGrid, IsCellEditControlEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25452,6 +25965,7 @@ PHP_METHOD(php_wxGrid, IsCellEditControlEnabled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsCellEditControlEnabled())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsCellEditControlEnabled());
 
 
@@ -25534,6 +26048,7 @@ PHP_METHOD(php_wxGrid, IsCurrentCellReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25548,6 +26063,7 @@ PHP_METHOD(php_wxGrid, IsCurrentCellReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsCurrentCellReadOnly())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsCurrentCellReadOnly());
 
 
@@ -25630,6 +26146,7 @@ PHP_METHOD(php_wxGrid, IsEditable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25644,6 +26161,7 @@ PHP_METHOD(php_wxGrid, IsEditable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsEditable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsEditable());
 
 
@@ -25727,6 +26245,7 @@ PHP_METHOD(php_wxGrid, IsColShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -25745,6 +26264,7 @@ PHP_METHOD(php_wxGrid, IsColShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsColShown((int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsColShown((int) col0));
 
 
@@ -25829,6 +26349,7 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -25847,6 +26368,7 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsInSelection((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsInSelection((int) row0, (int) col0));
 
 
@@ -25931,6 +26453,7 @@ PHP_METHOD(php_wxGrid, IsReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -25949,6 +26472,7 @@ PHP_METHOD(php_wxGrid, IsReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsReadOnly((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsReadOnly((int) row0, (int) col0));
 
 
@@ -26032,6 +26556,7 @@ PHP_METHOD(php_wxGrid, IsRowShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -26050,6 +26575,7 @@ PHP_METHOD(php_wxGrid, IsRowShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsRowShown((int) row0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsRowShown((int) row0));
 
 
@@ -26132,6 +26658,7 @@ PHP_METHOD(php_wxGrid, IsSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26146,6 +26673,7 @@ PHP_METHOD(php_wxGrid, IsSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsSelection())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsSelection());
 
 
@@ -26228,6 +26756,7 @@ PHP_METHOD(php_wxGrid, IsSortOrderAscending)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26242,6 +26771,7 @@ PHP_METHOD(php_wxGrid, IsSortOrderAscending)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsSortOrderAscending())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsSortOrderAscending());
 
 
@@ -26325,6 +26855,7 @@ PHP_METHOD(php_wxGrid, IsSortingBy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -26343,6 +26874,7 @@ PHP_METHOD(php_wxGrid, IsSortingBy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsSortingBy((int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsSortingBy((int) col0));
 
 
@@ -26428,6 +26960,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|b' (&row0, &col0, &wholeCellVisible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &wholeCellVisible0 ) == SUCCESS)
 		{
@@ -26446,6 +26979,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsVisible((int) row0, (int) col0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsVisible((int) row0, (int) col0));
 
 
@@ -26457,6 +26991,7 @@ PHP_METHOD(php_wxGrid, IsVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::IsVisible((int) row0, (int) col0, wholeCellVisible0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsVisible((int) row0, (int) col0, wholeCellVisible0));
 
 
@@ -26541,6 +27076,7 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -26559,6 +27095,7 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::MakeCellVisible((int) row0, (int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->MakeCellVisible((int) row0, (int) col0);
 
 
@@ -26642,6 +27179,7 @@ PHP_METHOD(php_wxGrid, MoveCursorDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -26660,6 +27198,7 @@ PHP_METHOD(php_wxGrid, MoveCursorDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorDown(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorDown(expandSelection0));
 
 
@@ -26743,6 +27282,7 @@ PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -26761,6 +27301,7 @@ PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorDownBlock(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorDownBlock(expandSelection0));
 
 
@@ -26844,6 +27385,7 @@ PHP_METHOD(php_wxGrid, MoveCursorLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -26862,6 +27404,7 @@ PHP_METHOD(php_wxGrid, MoveCursorLeft)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorLeft(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorLeft(expandSelection0));
 
 
@@ -26945,6 +27488,7 @@ PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -26963,6 +27507,7 @@ PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorLeftBlock(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorLeftBlock(expandSelection0));
 
 
@@ -27046,6 +27591,7 @@ PHP_METHOD(php_wxGrid, MoveCursorRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -27064,6 +27610,7 @@ PHP_METHOD(php_wxGrid, MoveCursorRight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorRight(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorRight(expandSelection0));
 
 
@@ -27147,6 +27694,7 @@ PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -27165,6 +27713,7 @@ PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorRightBlock(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorRightBlock(expandSelection0));
 
 
@@ -27248,6 +27797,7 @@ PHP_METHOD(php_wxGrid, MoveCursorUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -27266,6 +27816,7 @@ PHP_METHOD(php_wxGrid, MoveCursorUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorUp(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorUp(expandSelection0));
 
 
@@ -27349,6 +27900,7 @@ PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
@@ -27367,6 +27919,7 @@ PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MoveCursorUpBlock(expandSelection0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MoveCursorUpBlock(expandSelection0));
 
 
@@ -27449,6 +28002,7 @@ PHP_METHOD(php_wxGrid, MovePageDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27463,6 +28017,7 @@ PHP_METHOD(php_wxGrid, MovePageDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MovePageDown())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MovePageDown());
 
 
@@ -27545,6 +28100,7 @@ PHP_METHOD(php_wxGrid, MovePageUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27559,6 +28115,7 @@ PHP_METHOD(php_wxGrid, MovePageUp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::MovePageUp())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->MovePageUp());
 
 
@@ -27643,6 +28200,7 @@ PHP_METHOD(php_wxGrid, RefreshAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -27661,6 +28219,7 @@ PHP_METHOD(php_wxGrid, RefreshAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::RefreshAttr((int) row0, (int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->RefreshAttr((int) row0, (int) col0);
 
 
@@ -27749,6 +28308,7 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'szz' (&typeName0, &typeName_len0, &renderer0, &editor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "szz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0, &renderer0, &editor0 ) == SUCCESS)
 		{
@@ -27799,6 +28359,7 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::RegisterDataType(wxString(typeName0, wxConvUTF8), (wxGridCellRenderer*) object_pointer0_1, (wxGridCellEditor*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->RegisterDataType(wxString(typeName0, wxConvUTF8), (wxGridCellRenderer*) object_pointer0_1, (wxGridCellEditor*) object_pointer0_2);
 
 				references->AddReference(renderer0, "wxGrid::RegisterDataType at call with 3 argument(s)");
@@ -27883,6 +28444,7 @@ PHP_METHOD(php_wxGrid, ResetColPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27897,6 +28459,7 @@ PHP_METHOD(php_wxGrid, ResetColPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ResetColPos()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ResetColPos();
 
 
@@ -27979,6 +28542,7 @@ PHP_METHOD(php_wxGrid, SaveEditControlValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27993,6 +28557,7 @@ PHP_METHOD(php_wxGrid, SaveEditControlValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SaveEditControlValue()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SaveEditControlValue();
 
 
@@ -28075,6 +28640,7 @@ PHP_METHOD(php_wxGrid, SelectAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28089,6 +28655,7 @@ PHP_METHOD(php_wxGrid, SelectAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectAll()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectAll();
 
 
@@ -28176,6 +28743,7 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll|b' (&topRow0, &leftCol0, &bottomRow0, &rightCol0, &addToSelected0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &topRow0, &leftCol0, &bottomRow0, &rightCol0, &addToSelected0 ) == SUCCESS)
 		{
@@ -28194,6 +28762,7 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectBlock((int) topRow0, (int) leftCol0, (int) bottomRow0, (int) rightCol0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectBlock((int) topRow0, (int) leftCol0, (int) bottomRow0, (int) rightCol0);
 
 
@@ -28205,6 +28774,7 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectBlock((int) topRow0, (int) leftCol0, (int) bottomRow0, (int) rightCol0, addToSelected0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectBlock((int) topRow0, (int) leftCol0, (int) bottomRow0, (int) rightCol0, addToSelected0);
 
 
@@ -28289,6 +28859,7 @@ PHP_METHOD(php_wxGrid, SelectCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&col0, &addToSelected0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &addToSelected0 ) == SUCCESS)
 		{
@@ -28307,6 +28878,7 @@ PHP_METHOD(php_wxGrid, SelectCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectCol((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectCol((int) col0);
 
 
@@ -28318,6 +28890,7 @@ PHP_METHOD(php_wxGrid, SelectCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectCol((int) col0, addToSelected0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectCol((int) col0, addToSelected0);
 
 
@@ -28402,6 +28975,7 @@ PHP_METHOD(php_wxGrid, SelectRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&row0, &addToSelected0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &addToSelected0 ) == SUCCESS)
 		{
@@ -28420,6 +28994,7 @@ PHP_METHOD(php_wxGrid, SelectRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectRow((int) row0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectRow((int) row0);
 
 
@@ -28431,6 +29006,7 @@ PHP_METHOD(php_wxGrid, SelectRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SelectRow((int) row0, addToSelected0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SelectRow((int) row0, addToSelected0);
 
 
@@ -28522,6 +29098,7 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, &horiz0, &vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &horiz0, &vert0 ) == SUCCESS)
 		{
@@ -28538,6 +29115,7 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&align1, &row1, &col1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &align1, &row1, &col1 ) == SUCCESS)
 		{
@@ -28556,6 +29134,7 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellAlignment((int) row0, (int) col0, (int) horiz0, (int) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellAlignment((int) row0, (int) col0, (int) horiz0, (int) vert0);
 
 
@@ -28574,6 +29153,7 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellAlignment((int) align1, (int) row1, (int) col1)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellAlignment((int) align1, (int) row1, (int) col1);
 
 
@@ -28660,6 +29240,7 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&row0, &col0, &colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -28694,6 +29275,7 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellBackgroundColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellBackgroundColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2);
 
 				references->AddReference(colour0, "wxGrid::SetCellBackgroundColour at call with 3 argument(s)");
@@ -28781,6 +29363,7 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz' (&row0, &col0, &editor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &editor0 ) == SUCCESS)
 		{
@@ -28815,6 +29398,7 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellEditor((int) row0, (int) col0, (wxGridCellEditor*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellEditor((int) row0, (int) col0, (wxGridCellEditor*) object_pointer0_2);
 
 				references->AddReference(editor0, "wxGrid::SetCellEditor at call with 3 argument(s)");
@@ -28902,6 +29486,7 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&row0, &col0, &font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -28936,6 +29521,7 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellFont((int) row0, (int) col0, *(wxFont*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellFont((int) row0, (int) col0, *(wxFont*) object_pointer0_2);
 
 				references->AddReference(font0, "wxGrid::SetCellFont at call with 3 argument(s)");
@@ -29023,6 +29609,7 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz' (&row0, &col0, &renderer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &renderer0 ) == SUCCESS)
 		{
@@ -29057,6 +29644,7 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellRenderer((int) row0, (int) col0, (wxGridCellRenderer*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellRenderer((int) row0, (int) col0, (wxGridCellRenderer*) object_pointer0_2);
 
 				references->AddReference(renderer0, "wxGrid::SetCellRenderer at call with 3 argument(s)");
@@ -29144,6 +29732,7 @@ PHP_METHOD(php_wxGrid, SetCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, &num_rows0, &num_cols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &num_rows0, &num_cols0 ) == SUCCESS)
 		{
@@ -29162,6 +29751,7 @@ PHP_METHOD(php_wxGrid, SetCellSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellSize((int) row0, (int) col0, (int) num_rows0, (int) num_cols0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellSize((int) row0, (int) col0, (int) num_rows0, (int) num_cols0);
 
 
@@ -29258,6 +29848,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&row0, &col0, &colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -29290,6 +29881,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Oll' (&val1, php_wxColour_entry, &row1, &col1)\n");
 		#endif
+
 		char parse_parameters_string[] = "Oll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val1, php_wxColour_entry, &row1, &col1 ) == SUCCESS)
 		{
@@ -29322,6 +29914,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour2, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour2, php_wxColour_entry ) == SUCCESS)
 		{
@@ -29356,6 +29949,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellTextColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellTextColour((int) row0, (int) col0, *(wxColour*) object_pointer0_2);
 
 				references->AddReference(colour0, "wxGrid::SetCellTextColour at call with 3 argument(s)");
@@ -29375,6 +29969,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellTextColour(*(wxColour*) object_pointer1_0, (int) row1, (int) col1)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellTextColour(*(wxColour*) object_pointer1_0, (int) row1, (int) col1);
 
 				references->AddReference(val1, "wxGrid::SetCellTextColour at call with 3 argument(s)");
@@ -29394,6 +29989,7 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellTextColour(*(wxColour*) object_pointer2_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellTextColour(*(wxColour*) object_pointer2_0);
 
 				references->AddReference(colour2, "wxGrid::SetCellTextColour at call with 1 argument(s)");
@@ -29487,6 +30083,7 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -29503,6 +30100,7 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sll' (&val1, &val_len1, &row1, &col1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val1, &val_len1, &row1, &col1 ) == SUCCESS)
 		{
@@ -29521,6 +30119,7 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellValue((int) row0, (int) col0, wxString(s0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellValue((int) row0, (int) col0, wxString(s0, wxConvUTF8));
 
 
@@ -29539,6 +30138,7 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetCellValue(wxString(val1, wxConvUTF8), (int) row1, (int) col1)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetCellValue(wxString(val1, wxConvUTF8), (int) row1, (int) col1);
 
 
@@ -29624,6 +30224,7 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&col0, &attr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &attr0 ) == SUCCESS)
 		{
@@ -29658,6 +30259,7 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColAttr((int) col0, (wxGridCellAttr*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColAttr((int) col0, (wxGridCellAttr*) object_pointer0_1);
 
 				references->AddReference(attr0, "wxGrid::SetColAttr at call with 2 argument(s)");
@@ -29742,6 +30344,7 @@ PHP_METHOD(php_wxGrid, SetColFormatBool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -29760,6 +30363,7 @@ PHP_METHOD(php_wxGrid, SetColFormatBool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColFormatBool((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColFormatBool((int) col0);
 
 
@@ -29845,6 +30449,7 @@ PHP_METHOD(php_wxGrid, SetColFormatCustom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&col0, &typeName0, &typeName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
@@ -29863,6 +30468,7 @@ PHP_METHOD(php_wxGrid, SetColFormatCustom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColFormatCustom((int) col0, wxString(typeName0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColFormatCustom((int) col0, wxString(typeName0, wxConvUTF8));
 
 
@@ -29948,6 +30554,7 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|ll' (&col0, &width0, &precision0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &width0, &precision0 ) == SUCCESS)
 		{
@@ -29966,6 +30573,7 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColFormatFloat((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColFormatFloat((int) col0);
 
 
@@ -29977,6 +30585,7 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColFormatFloat((int) col0, (int) width0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColFormatFloat((int) col0, (int) width0);
 
 
@@ -29988,6 +30597,7 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColFormatFloat((int) col0, (int) width0, (int) precision0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColFormatFloat((int) col0, (int) width0, (int) precision0);
 
 
@@ -30071,6 +30681,7 @@ PHP_METHOD(php_wxGrid, SetColFormatNumber)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -30089,6 +30700,7 @@ PHP_METHOD(php_wxGrid, SetColFormatNumber)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColFormatNumber((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColFormatNumber((int) col0);
 
 
@@ -30173,6 +30785,7 @@ PHP_METHOD(php_wxGrid, SetColLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&horiz0, &vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &horiz0, &vert0 ) == SUCCESS)
 		{
@@ -30191,6 +30804,7 @@ PHP_METHOD(php_wxGrid, SetColLabelAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColLabelAlignment((int) horiz0, (int) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColLabelAlignment((int) horiz0, (int) vert0);
 
 
@@ -30274,6 +30888,7 @@ PHP_METHOD(php_wxGrid, SetColLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0 ) == SUCCESS)
 		{
@@ -30292,6 +30907,7 @@ PHP_METHOD(php_wxGrid, SetColLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColLabelSize((int) height0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColLabelSize((int) height0);
 
 
@@ -30375,6 +30991,7 @@ PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&textOrientation0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &textOrientation0 ) == SUCCESS)
 		{
@@ -30393,6 +31010,7 @@ PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColLabelTextOrientation((int) textOrientation0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColLabelTextOrientation((int) textOrientation0);
 
 
@@ -30478,6 +31096,7 @@ PHP_METHOD(php_wxGrid, SetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&col0, &value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -30496,6 +31115,7 @@ PHP_METHOD(php_wxGrid, SetColLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColLabelValue((int) col0, wxString(value0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColLabelValue((int) col0, wxString(value0, wxConvUTF8));
 
 
@@ -30579,6 +31199,7 @@ PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&width0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
 		{
@@ -30597,6 +31218,7 @@ PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColMinimalAcceptableWidth((int) width0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColMinimalAcceptableWidth((int) width0);
 
 
@@ -30681,6 +31303,7 @@ PHP_METHOD(php_wxGrid, SetColMinimalWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&col0, &width0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &width0 ) == SUCCESS)
 		{
@@ -30699,6 +31322,7 @@ PHP_METHOD(php_wxGrid, SetColMinimalWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColMinimalWidth((int) col0, (int) width0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColMinimalWidth((int) col0, (int) width0);
 
 
@@ -30783,6 +31407,7 @@ PHP_METHOD(php_wxGrid, SetColPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&colID0, &newPos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colID0, &newPos0 ) == SUCCESS)
 		{
@@ -30801,6 +31426,7 @@ PHP_METHOD(php_wxGrid, SetColPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColPos((int) colID0, (int) newPos0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColPos((int) colID0, (int) newPos0);
 
 
@@ -30885,6 +31511,7 @@ PHP_METHOD(php_wxGrid, SetColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&col0, &width0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &width0 ) == SUCCESS)
 		{
@@ -30903,6 +31530,7 @@ PHP_METHOD(php_wxGrid, SetColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColSize((int) col0, (int) width0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColSize((int) col0, (int) width0);
 
 
@@ -30987,6 +31615,7 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&sizeInfo0, php_wxGridSizesInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
 		{
@@ -31021,6 +31650,7 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetColSizes(*(wxGridSizesInfo*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetColSizes(*(wxGridSizesInfo*) object_pointer0_0);
 
 				references->AddReference(sizeInfo0, "wxGrid::SetColSizes at call with 1 argument(s)");
@@ -31106,6 +31736,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&horiz0, &vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &horiz0, &vert0 ) == SUCCESS)
 		{
@@ -31124,6 +31755,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultCellAlignment((int) horiz0, (int) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultCellAlignment((int) horiz0, (int) vert0);
 
 
@@ -31208,6 +31840,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -31242,6 +31875,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultCellBackgroundColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultCellBackgroundColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colour0, "wxGrid::SetDefaultCellBackgroundColour at call with 1 argument(s)");
@@ -31327,6 +31961,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -31361,6 +31996,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultCellFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultCellFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxGrid::SetDefaultCellFont at call with 1 argument(s)");
@@ -31446,6 +32082,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -31480,6 +32117,7 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultCellTextColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultCellTextColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colour0, "wxGrid::SetDefaultCellTextColour at call with 1 argument(s)");
@@ -31565,6 +32203,7 @@ PHP_METHOD(php_wxGrid, SetDefaultColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&width0, &resizeExistingCols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &resizeExistingCols0 ) == SUCCESS)
 		{
@@ -31583,6 +32222,7 @@ PHP_METHOD(php_wxGrid, SetDefaultColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultColSize((int) width0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultColSize((int) width0);
 
 
@@ -31594,6 +32234,7 @@ PHP_METHOD(php_wxGrid, SetDefaultColSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultColSize((int) width0, resizeExistingCols0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultColSize((int) width0, resizeExistingCols0);
 
 
@@ -31678,6 +32319,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&editor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0 ) == SUCCESS)
 		{
@@ -31712,6 +32354,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultEditor((wxGridCellEditor*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultEditor((wxGridCellEditor*) object_pointer0_0);
 
 				references->AddReference(editor0, "wxGrid::SetDefaultEditor at call with 1 argument(s)");
@@ -31797,6 +32440,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&renderer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &renderer0 ) == SUCCESS)
 		{
@@ -31831,6 +32475,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultRenderer((wxGridCellRenderer*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultRenderer((wxGridCellRenderer*) object_pointer0_0);
 
 				references->AddReference(renderer0, "wxGrid::SetDefaultRenderer at call with 1 argument(s)");
@@ -31916,6 +32561,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&height0, &resizeExistingRows0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0, &resizeExistingRows0 ) == SUCCESS)
 		{
@@ -31934,6 +32580,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultRowSize((int) height0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultRowSize((int) height0);
 
 
@@ -31945,6 +32592,7 @@ PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetDefaultRowSize((int) height0, resizeExistingRows0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetDefaultRowSize((int) height0, resizeExistingRows0);
 
 
@@ -32029,6 +32677,7 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -32047,6 +32696,7 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetGridCursor((int) row0, (int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetGridCursor((int) row0, (int) col0);
 
 
@@ -32131,6 +32781,7 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -32165,6 +32816,7 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetGridLineColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetGridLineColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colour0, "wxGrid::SetGridLineColour at call with 1 argument(s)");
@@ -32250,6 +32902,7 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -32284,6 +32937,7 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetLabelBackgroundColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetLabelBackgroundColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colour0, "wxGrid::SetLabelBackgroundColour at call with 1 argument(s)");
@@ -32369,6 +33023,7 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -32403,6 +33058,7 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetLabelFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetLabelFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxGrid::SetLabelFont at call with 1 argument(s)");
@@ -32488,6 +33144,7 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -32522,6 +33179,7 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetLabelTextColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetLabelTextColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colour0, "wxGrid::SetLabelTextColour at call with 1 argument(s)");
@@ -32607,6 +33265,7 @@ PHP_METHOD(php_wxGrid, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&extraWidth0, &extraHeight0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraWidth0, &extraHeight0 ) == SUCCESS)
 		{
@@ -32625,6 +33284,7 @@ PHP_METHOD(php_wxGrid, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetMargins((int) extraWidth0, (int) extraHeight0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetMargins((int) extraWidth0, (int) extraHeight0);
 
 
@@ -32710,6 +33370,7 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|b' (&row0, &col0, &isReadOnly0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &isReadOnly0 ) == SUCCESS)
 		{
@@ -32728,6 +33389,7 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetReadOnly((int) row0, (int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetReadOnly((int) row0, (int) col0);
 
 
@@ -32739,6 +33401,7 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetReadOnly((int) row0, (int) col0, isReadOnly0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetReadOnly((int) row0, (int) col0, isReadOnly0);
 
 
@@ -32824,6 +33487,7 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&row0, &attr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &attr0 ) == SUCCESS)
 		{
@@ -32858,6 +33522,7 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowAttr((int) row0, (wxGridCellAttr*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowAttr((int) row0, (wxGridCellAttr*) object_pointer0_1);
 
 				references->AddReference(attr0, "wxGrid::SetRowAttr at call with 2 argument(s)");
@@ -32943,6 +33608,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&horiz0, &vert0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &horiz0, &vert0 ) == SUCCESS)
 		{
@@ -32961,6 +33627,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowLabelAlignment((int) horiz0, (int) vert0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowLabelAlignment((int) horiz0, (int) vert0);
 
 
@@ -33044,6 +33711,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&width0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
 		{
@@ -33062,6 +33730,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowLabelSize((int) width0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowLabelSize((int) width0);
 
 
@@ -33147,6 +33816,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&row0, &value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -33165,6 +33835,7 @@ PHP_METHOD(php_wxGrid, SetRowLabelValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowLabelValue((int) row0, wxString(value0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowLabelValue((int) row0, wxString(value0, wxConvUTF8));
 
 
@@ -33248,6 +33919,7 @@ PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0 ) == SUCCESS)
 		{
@@ -33266,6 +33938,7 @@ PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowMinimalAcceptableHeight((int) height0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowMinimalAcceptableHeight((int) height0);
 
 
@@ -33350,6 +34023,7 @@ PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &height0 ) == SUCCESS)
 		{
@@ -33368,6 +34042,7 @@ PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowMinimalHeight((int) row0, (int) height0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowMinimalHeight((int) row0, (int) height0);
 
 
@@ -33452,6 +34127,7 @@ PHP_METHOD(php_wxGrid, SetRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &height0 ) == SUCCESS)
 		{
@@ -33470,6 +34146,7 @@ PHP_METHOD(php_wxGrid, SetRowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowSize((int) row0, (int) height0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowSize((int) row0, (int) height0);
 
 
@@ -33554,6 +34231,7 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&sizeInfo0, php_wxGridSizesInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
 		{
@@ -33588,6 +34266,7 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetRowSizes(*(wxGridSizesInfo*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetRowSizes(*(wxGridSizesInfo*) object_pointer0_0);
 
 				references->AddReference(sizeInfo0, "wxGrid::SetRowSizes at call with 1 argument(s)");
@@ -33672,6 +34351,7 @@ PHP_METHOD(php_wxGrid, SetScrollLineX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -33690,6 +34370,7 @@ PHP_METHOD(php_wxGrid, SetScrollLineX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetScrollLineX((int) x0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetScrollLineX((int) x0);
 
 
@@ -33773,6 +34454,7 @@ PHP_METHOD(php_wxGrid, SetScrollLineY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
@@ -33791,6 +34473,7 @@ PHP_METHOD(php_wxGrid, SetScrollLineY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetScrollLineY((int) y0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetScrollLineY((int) y0);
 
 
@@ -33875,6 +34558,7 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -33909,6 +34593,7 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetSelectionBackground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetSelectionBackground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(c0, "wxGrid::SetSelectionBackground at call with 1 argument(s)");
@@ -33994,6 +34679,7 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -34028,6 +34714,7 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetSelectionForeground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetSelectionForeground(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(c0, "wxGrid::SetSelectionForeground at call with 1 argument(s)");
@@ -34112,6 +34799,7 @@ PHP_METHOD(php_wxGrid, SetSelectionMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selmode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selmode0 ) == SUCCESS)
 		{
@@ -34130,6 +34818,7 @@ PHP_METHOD(php_wxGrid, SetSelectionMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetSelectionMode((wxGrid::wxGridSelectionModes) selmode0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetSelectionMode((wxGrid::wxGridSelectionModes) selmode0);
 
 
@@ -34214,6 +34903,7 @@ PHP_METHOD(php_wxGrid, SetSortingColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&col0, &ascending0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &ascending0 ) == SUCCESS)
 		{
@@ -34232,6 +34922,7 @@ PHP_METHOD(php_wxGrid, SetSortingColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetSortingColumn((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetSortingColumn((int) col0);
 
 
@@ -34243,6 +34934,7 @@ PHP_METHOD(php_wxGrid, SetSortingColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetSortingColumn((int) col0, ascending0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetSortingColumn((int) col0, ascending0);
 
 
@@ -34329,6 +35021,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|bl' (&table0, &takeOwnership0, &selmode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|bl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &table0, &takeOwnership0, &selmode0 ) == SUCCESS)
 		{
@@ -34363,6 +35056,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::SetTable((wxGridTableBase*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->SetTable((wxGridTableBase*) object_pointer0_0));
 
 				references->AddReference(table0, "wxGrid::SetTable at call with 1 argument(s)");
@@ -34375,6 +35069,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0));
 
 				references->AddReference(table0, "wxGrid::SetTable at call with 2 argument(s)");
@@ -34387,6 +35082,7 @@ PHP_METHOD(php_wxGrid, SetTable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGrid::SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->SetTable((wxGridTableBase*) object_pointer0_0, takeOwnership0, (wxGrid::wxGridSelectionModes) selmode0));
 
 				references->AddReference(table0, "wxGrid::SetTable at call with 3 argument(s)");
@@ -34471,6 +35167,7 @@ PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&native0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &native0 ) == SUCCESS)
 		{
@@ -34489,6 +35186,7 @@ PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetUseNativeColLabels()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetUseNativeColLabels();
 
 
@@ -34500,6 +35198,7 @@ PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::SetUseNativeColLabels(native0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->SetUseNativeColLabels(native0);
 
 
@@ -34582,6 +35281,7 @@ PHP_METHOD(php_wxGrid, ShowCellEditControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -34596,6 +35296,7 @@ PHP_METHOD(php_wxGrid, ShowCellEditControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ShowCellEditControl()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ShowCellEditControl();
 
 
@@ -34679,6 +35380,7 @@ PHP_METHOD(php_wxGrid, ShowCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -34697,6 +35399,7 @@ PHP_METHOD(php_wxGrid, ShowCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ShowCol((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ShowCol((int) col0);
 
 
@@ -34780,6 +35483,7 @@ PHP_METHOD(php_wxGrid, ShowRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -34798,6 +35502,7 @@ PHP_METHOD(php_wxGrid, ShowRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::ShowRow((int) col0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->ShowRow((int) col0);
 
 
@@ -34880,6 +35585,7 @@ PHP_METHOD(php_wxGrid, UnsetSortingColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -34894,6 +35600,7 @@ PHP_METHOD(php_wxGrid, UnsetSortingColumn)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::UnsetSortingColumn()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->UnsetSortingColumn();
 
 
@@ -34977,6 +35684,7 @@ PHP_METHOD(php_wxGrid, UseNativeColHeader)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&native0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &native0 ) == SUCCESS)
 		{
@@ -34995,6 +35703,7 @@ PHP_METHOD(php_wxGrid, UseNativeColHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::UseNativeColHeader()\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->UseNativeColHeader();
 
 
@@ -35006,6 +35715,7 @@ PHP_METHOD(php_wxGrid, UseNativeColHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGrid::UseNativeColHeader(native0)\n\n");
 				#endif
+
 				((wxGrid_php*)_this)->UseNativeColHeader(native0);
 
 
@@ -35090,6 +35800,7 @@ PHP_METHOD(php_wxGrid, XToCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&x0, &clipToMinMax0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &clipToMinMax0 ) == SUCCESS)
 		{
@@ -35108,6 +35819,7 @@ PHP_METHOD(php_wxGrid, XToCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::XToCol((int) x0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->XToCol((int) x0));
 
 
@@ -35119,6 +35831,7 @@ PHP_METHOD(php_wxGrid, XToCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::XToCol((int) x0, clipToMinMax0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->XToCol((int) x0, clipToMinMax0));
 
 
@@ -35202,6 +35915,7 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -35220,6 +35934,7 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::XToEdgeOfCol((int) x0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->XToEdgeOfCol((int) x0));
 
 
@@ -35303,6 +36018,7 @@ PHP_METHOD(php_wxGrid, YToEdgeOfRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
@@ -35321,6 +36037,7 @@ PHP_METHOD(php_wxGrid, YToEdgeOfRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::YToEdgeOfRow((int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->YToEdgeOfRow((int) y0));
 
 
@@ -35405,6 +36122,7 @@ PHP_METHOD(php_wxGrid, YToRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&y0, &clipToMinMax0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0, &clipToMinMax0 ) == SUCCESS)
 		{
@@ -35423,6 +36141,7 @@ PHP_METHOD(php_wxGrid, YToRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::YToRow((int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->YToRow((int) y0));
 
 
@@ -35434,6 +36153,7 @@ PHP_METHOD(php_wxGrid, YToRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGrid::YToRow((int) y0, clipToMinMax0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->YToRow((int) y0, clipToMinMax0));
 
 
@@ -35496,6 +36216,7 @@ PHP_METHOD(php_wxGrid, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -35508,6 +36229,7 @@ PHP_METHOD(php_wxGrid, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -35574,6 +36296,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGrid_php();
 
 				((wxGrid_php*) _this)->references.Initialize();
@@ -35591,6 +36314,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxGrid_php*) _this)->references.Initialize();
@@ -35602,6 +36326,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxGrid_php*) _this)->references.Initialize();
@@ -35614,6 +36339,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxGrid_php*) _this)->references.Initialize();
@@ -35627,6 +36353,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxGrid_php*) _this)->references.Initialize();
@@ -35640,6 +36367,7 @@ PHP_METHOD(php_wxGrid, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxGrid_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxGrid_php*) _this)->references.Initialize();
@@ -35668,7 +36396,7 @@ PHP_METHOD(php_wxGrid, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGrid::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGrid::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -35717,6 +36445,7 @@ void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+
 /* {{{ proto  wxGridUpdateLocker::Create(wxGrid &grid)
    This method can be called if the object had been constructed using the default constructor. */
 PHP_METHOD(php_wxGridUpdateLocker, Create)
@@ -35783,6 +36512,7 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&grid0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
@@ -35817,6 +36547,7 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridUpdateLocker::Create((wxGrid*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridUpdateLocker_php*)_this)->Create((wxGrid*) object_pointer0_0);
 
 				references->AddReference(grid0, "wxGridUpdateLocker::Create at call with 1 argument(s)");
@@ -35870,6 +36601,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&grid0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
@@ -35904,6 +36636,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridUpdateLocker_php();
 
 				((wxGridUpdateLocker_php*) _this)->references.Initialize();
@@ -35914,6 +36647,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxGrid*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxGridUpdateLocker_php((wxGrid*) object_pointer0_0);
 
 				((wxGridUpdateLocker_php*) _this)->references.Initialize();
@@ -35940,7 +36674,7 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridUpdateLocker::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridUpdateLocker::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

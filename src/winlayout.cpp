@@ -91,6 +91,7 @@ void php_wxGBPosition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto int wxGBPosition::GetCol()
    Get the current column value. */
 PHP_METHOD(php_wxGBPosition, GetCol)
@@ -155,6 +156,7 @@ PHP_METHOD(php_wxGBPosition, GetCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -169,6 +171,7 @@ PHP_METHOD(php_wxGBPosition, GetCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGBPosition::GetCol())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGBPosition_php*)_this)->GetCol());
 
 
@@ -251,6 +254,7 @@ PHP_METHOD(php_wxGBPosition, GetRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -265,6 +269,7 @@ PHP_METHOD(php_wxGBPosition, GetRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGBPosition::GetRow())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGBPosition_php*)_this)->GetRow());
 
 
@@ -348,6 +353,7 @@ PHP_METHOD(php_wxGBPosition, SetCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
@@ -366,6 +372,7 @@ PHP_METHOD(php_wxGBPosition, SetCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBPosition::SetCol((int) col0)\n\n");
 				#endif
+
 				((wxGBPosition_php*)_this)->SetCol((int) col0);
 
 
@@ -449,6 +456,7 @@ PHP_METHOD(php_wxGBPosition, SetRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -467,6 +475,7 @@ PHP_METHOD(php_wxGBPosition, SetRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBPosition::SetRow((int) row0)\n\n");
 				#endif
+
 				((wxGBPosition_php*)_this)->SetRow((int) row0);
 
 
@@ -521,6 +530,7 @@ PHP_METHOD(php_wxGBPosition, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -533,6 +543,7 @@ PHP_METHOD(php_wxGBPosition, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row1, &col1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row1, &col1 ) == SUCCESS)
 		{
@@ -551,6 +562,7 @@ PHP_METHOD(php_wxGBPosition, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGBPosition_php();
 
 				((wxGBPosition_php*) _this)->references.Initialize();
@@ -568,6 +580,7 @@ PHP_METHOD(php_wxGBPosition, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) row1, (int) col1)\n");
 				#endif
+
 				_this = new wxGBPosition_php((int) row1, (int) col1);
 
 				((wxGBPosition_php*) _this)->references.Initialize();
@@ -593,7 +606,7 @@ PHP_METHOD(php_wxGBPosition, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGBPosition::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGBPosition::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -609,6 +622,7 @@ void php_wxGridBagSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxSizerItem wxGridBagSizer::Add(wxWindow &window, wxGBPosition pos, wxGBSpan span, int flag, int border, wxObject &userData)
    Adds the given item to the given position. */
 PHP_METHOD(php_wxGridBagSizer, Add)
@@ -711,6 +725,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|Ollz' (&window0, &pos0, php_wxGBPosition_entry, &span0, php_wxGBSpan_entry, &flag0, &border0, &userData0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|Ollz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &pos0, php_wxGBPosition_entry, &span0, php_wxGBSpan_entry, &flag0, &border0, &userData0 ) == SUCCESS)
 		{
@@ -791,6 +806,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|Ollz' (&sizer1, &pos1, php_wxGBPosition_entry, &span1, php_wxGBSpan_entry, &flag1, &border1, &userData1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|Ollz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1, &pos1, php_wxGBPosition_entry, &span1, php_wxGBSpan_entry, &flag1, &border1, &userData1 ) == SUCCESS)
 		{
@@ -871,6 +887,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO|Ollz' (&width2, &height2, &pos2, php_wxGBPosition_entry, &span2, php_wxGBSpan_entry, &flag2, &border2, &userData2)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO|Ollz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width2, &height2, &pos2, php_wxGBPosition_entry, &span2, php_wxGBSpan_entry, &flag2, &border2, &userData2 ) == SUCCESS)
 		{
@@ -935,6 +952,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item3)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item3 ) == SUCCESS)
 		{
@@ -969,6 +987,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1);
 
@@ -1005,6 +1024,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2);
 
@@ -1042,6 +1062,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0);
 
@@ -1079,6 +1100,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0, (int) border0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0, (int) border0);
 
@@ -1116,6 +1138,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0, (int) border0, (wxObject*) object_pointer0_5) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1, *(wxGBSpan*) object_pointer0_2, (int) flag0, (int) border0, (wxObject*) object_pointer0_5);
 
@@ -1161,6 +1184,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1);
 
@@ -1197,6 +1221,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2);
 
@@ -1234,6 +1259,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1);
 
@@ -1271,6 +1297,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1);
 
@@ -1308,6 +1335,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1, (wxObject*) object_pointer1_5) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
@@ -1353,6 +1381,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2);
 
@@ -1388,6 +1417,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3);
 
@@ -1424,6 +1454,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2);
 
@@ -1460,6 +1491,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2, (int) border2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2, (int) border2);
 
@@ -1496,6 +1528,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2, (int) border2, (wxObject*) object_pointer2_6) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return7;
 				value_to_return7 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((int) width2, (int) height2, *(wxGBPosition*) object_pointer2_2, *(wxGBSpan*) object_pointer2_3, (int) flag2, (int) border2, (wxObject*) object_pointer2_6);
 
@@ -1540,6 +1573,7 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::Add((wxGBSizerItem*) object_pointer3_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxGridBagSizer_php*)_this)->Add((wxGBSizerItem*) object_pointer3_0);
 
@@ -1646,6 +1680,7 @@ PHP_METHOD(php_wxGridBagSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1660,6 +1695,7 @@ PHP_METHOD(php_wxGridBagSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxGridBagSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -1759,6 +1795,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|z' (&item0, &excludeItem0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, &excludeItem0 ) == SUCCESS)
 		{
@@ -1807,6 +1844,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO|z' (&pos1, php_wxGBPosition_entry, &span1, php_wxGBSpan_entry, &excludeItem1)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos1, php_wxGBPosition_entry, &span1, php_wxGBSpan_entry, &excludeItem1 ) == SUCCESS)
 		{
@@ -1873,6 +1911,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection((wxGBSizerItem*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0));
 
 				references->AddReference(item0, "wxGridBagSizer::CheckForIntersection at call with 1 argument(s)");
@@ -1885,6 +1924,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection((wxGBSizerItem*) object_pointer0_0, (wxGBSizerItem*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection((wxGBSizerItem*) object_pointer0_0, (wxGBSizerItem*) object_pointer0_1));
 
 				references->AddReference(item0, "wxGridBagSizer::CheckForIntersection at call with 2 argument(s)");
@@ -1905,6 +1945,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
 
 				references->AddReference(pos1, "wxGridBagSizer::CheckForIntersection at call with 2 argument(s)");
@@ -1918,6 +1959,7 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1, (wxGBSizerItem*) object_pointer1_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->CheckForIntersection(*(wxGBPosition*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1, (wxGBSizerItem*) object_pointer1_2));
 
 				references->AddReference(pos1, "wxGridBagSizer::CheckForIntersection at call with 3 argument(s)");
@@ -2009,6 +2051,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -2041,6 +2084,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1 ) == SUCCESS)
 		{
@@ -2075,6 +2119,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::FindItem((wxWindow*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxGBSizerItem_php* value_to_return1;
 				value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)_this)->FindItem((wxWindow*) object_pointer0_0);
 
@@ -2117,6 +2162,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::FindItem((wxSizer*) object_pointer1_0) to return object pointer\n\n");
 				#endif
+
 				wxGBSizerItem_php* value_to_return1;
 				value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)_this)->FindItem((wxSizer*) object_pointer1_0);
 
@@ -2225,6 +2271,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -2259,6 +2306,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::FindItemAtPoint(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxGBSizerItem_php* value_to_return1;
 				value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)_this)->FindItemAtPoint(*(wxPoint*) object_pointer0_0);
 
@@ -2367,6 +2415,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxGBPosition_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxGBPosition_entry ) == SUCCESS)
 		{
@@ -2401,6 +2450,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::FindItemAtPosition(*(wxGBPosition*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxGBSizerItem_php* value_to_return1;
 				value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)_this)->FindItemAtPosition(*(wxGBPosition*) object_pointer0_0);
 
@@ -2509,6 +2559,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemWithData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&userData0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &userData0 ) == SUCCESS)
 		{
@@ -2543,6 +2594,7 @@ PHP_METHOD(php_wxGridBagSizer, FindItemWithData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::FindItemWithData((const wxObject*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxGBSizerItem_php* value_to_return1;
 				value_to_return1 = (wxGBSizerItem_php*) ((wxGridBagSizer_php*)_this)->FindItemWithData((const wxObject*) object_pointer0_0);
 
@@ -2651,6 +2703,7 @@ PHP_METHOD(php_wxGridBagSizer, GetCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -2669,6 +2722,7 @@ PHP_METHOD(php_wxGridBagSizer, GetCellSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetCellSize((int) row0, (int) col0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return2;
 				value_to_return2 = ((wxGridBagSizer_php*)_this)->GetCellSize((int) row0, (int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -2756,6 +2810,7 @@ PHP_METHOD(php_wxGridBagSizer, GetEmptyCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2770,6 +2825,7 @@ PHP_METHOD(php_wxGridBagSizer, GetEmptyCellSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetEmptyCellSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxGridBagSizer_php*)_this)->GetEmptyCellSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -2866,6 +2922,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -2898,6 +2955,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1 ) == SUCCESS)
 		{
@@ -2930,6 +2988,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index2)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2 ) == SUCCESS)
 		{
@@ -2948,6 +3007,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetItemPosition((wxWindow*) object_pointer0_0) to return new object\n\n");
 				#endif
+
 				wxGBPosition value_to_return1;
 				value_to_return1 = ((wxGridBagSizer_php*)_this)->GetItemPosition((wxWindow*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
@@ -2972,6 +3032,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetItemPosition((wxSizer*) object_pointer1_0) to return new object\n\n");
 				#endif
+
 				wxGBPosition value_to_return1;
 				value_to_return1 = ((wxGridBagSizer_php*)_this)->GetItemPosition((wxSizer*) object_pointer1_0);
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
@@ -2996,6 +3057,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetItemPosition((size_t) index2) to return new object\n\n");
 				#endif
+
 				wxGBPosition value_to_return1;
 				value_to_return1 = ((wxGridBagSizer_php*)_this)->GetItemPosition((size_t) index2);
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
@@ -3092,6 +3154,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -3124,6 +3187,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1 ) == SUCCESS)
 		{
@@ -3156,6 +3220,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index2)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2 ) == SUCCESS)
 		{
@@ -3174,6 +3239,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetItemSpan((wxWindow*) object_pointer0_0) to return new object\n\n");
 				#endif
+
 				wxGBSpan value_to_return1;
 				value_to_return1 = ((wxGridBagSizer_php*)_this)->GetItemSpan((wxWindow*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
@@ -3198,6 +3264,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetItemSpan((wxSizer*) object_pointer1_0) to return new object\n\n");
 				#endif
+
 				wxGBSpan value_to_return1;
 				value_to_return1 = ((wxGridBagSizer_php*)_this)->GetItemSpan((wxSizer*) object_pointer1_0);
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
@@ -3222,6 +3289,7 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::GetItemSpan((size_t) index2) to return new object\n\n");
 				#endif
+
 				wxGBSpan value_to_return1;
 				value_to_return1 = ((wxGridBagSizer_php*)_this)->GetItemSpan((size_t) index2);
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
@@ -3309,6 +3377,7 @@ PHP_METHOD(php_wxGridBagSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3323,6 +3392,7 @@ PHP_METHOD(php_wxGridBagSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxGridBagSizer_php*)_this)->RecalcSizes();
 
 
@@ -3407,6 +3477,7 @@ PHP_METHOD(php_wxGridBagSizer, SetEmptyCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&sz0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sz0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -3441,6 +3512,7 @@ PHP_METHOD(php_wxGridBagSizer, SetEmptyCellSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridBagSizer::SetEmptyCellSize(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGridBagSizer_php*)_this)->SetEmptyCellSize(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(sz0, "wxGridBagSizer::SetEmptyCellSize at call with 1 argument(s)");
@@ -3539,6 +3611,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window0, &pos0, php_wxGBPosition_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &pos0, php_wxGBPosition_entry ) == SUCCESS)
 		{
@@ -3587,6 +3660,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&sizer1, &pos1, php_wxGBPosition_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1, &pos1, php_wxGBPosition_entry ) == SUCCESS)
 		{
@@ -3635,6 +3709,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&index2, &pos2, php_wxGBPosition_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2, &pos2, php_wxGBPosition_entry ) == SUCCESS)
 		{
@@ -3669,6 +3744,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemPosition((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemPosition((wxWindow*) object_pointer0_0, *(wxGBPosition*) object_pointer0_1));
 
 				references->AddReference(window0, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
@@ -3689,6 +3765,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemPosition((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemPosition((wxSizer*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1));
 
 				references->AddReference(sizer1, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
@@ -3709,6 +3786,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemPosition((size_t) index2, *(wxGBPosition*) object_pointer2_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemPosition((size_t) index2, *(wxGBPosition*) object_pointer2_1));
 
 				references->AddReference(pos2, "wxGridBagSizer::SetItemPosition at call with 2 argument(s)");
@@ -3807,6 +3885,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window0, &span0, php_wxGBSpan_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &span0, php_wxGBSpan_entry ) == SUCCESS)
 		{
@@ -3855,6 +3934,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&sizer1, &span1, php_wxGBSpan_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1, &span1, php_wxGBSpan_entry ) == SUCCESS)
 		{
@@ -3903,6 +3983,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&index2, &span2, php_wxGBSpan_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2, &span2, php_wxGBSpan_entry ) == SUCCESS)
 		{
@@ -3937,6 +4018,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemSpan((wxWindow*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemSpan((wxWindow*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
 
 				references->AddReference(window0, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
@@ -3957,6 +4039,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemSpan((wxSizer*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemSpan((wxSizer*) object_pointer1_0, *(wxGBSpan*) object_pointer1_1));
 
 				references->AddReference(sizer1, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
@@ -3977,6 +4060,7 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGridBagSizer::SetItemSpan((size_t) index2, *(wxGBSpan*) object_pointer2_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGridBagSizer_php*)_this)->SetItemSpan((size_t) index2, *(wxGBSpan*) object_pointer2_1));
 
 				references->AddReference(span2, "wxGridBagSizer::SetItemSpan at call with 2 argument(s)");
@@ -4030,6 +4114,7 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&vgap0, &hgap0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &vgap0, &hgap0 ) == SUCCESS)
 		{
@@ -4048,6 +4133,7 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGridBagSizer_php();
 
 				((wxGridBagSizer_php*) _this)->references.Initialize();
@@ -4058,6 +4144,7 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) vgap0)\n");
 				#endif
+
 				_this = new wxGridBagSizer_php((int) vgap0);
 
 				((wxGridBagSizer_php*) _this)->references.Initialize();
@@ -4068,6 +4155,7 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) vgap0, (int) hgap0)\n");
 				#endif
+
 				_this = new wxGridBagSizer_php((int) vgap0, (int) hgap0);
 
 				((wxGridBagSizer_php*) _this)->references.Initialize();
@@ -4093,7 +4181,7 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridBagSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridBagSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4142,6 +4230,7 @@ void php_wxGBSizerItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxGBSizerItem::wxGBSizerItem(int width, int height, wxGBPosition pos, wxGBSpan span, int flag, int border, wxObject &userData)
    Construct a sizer item for tracking a spacer. */
 PHP_METHOD(php_wxGBSizerItem, __construct)
@@ -4208,6 +4297,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO|Ollz' (&width0, &height0, &pos0, php_wxGBPosition_entry, &span0, php_wxGBSpan_entry, &flag0, &border0, &userData0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO|Ollz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &height0, &pos0, php_wxGBPosition_entry, &span0, php_wxGBSpan_entry, &flag0, &border0, &userData0 ) == SUCCESS)
 		{
@@ -4272,6 +4362,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|Ollz' (&window1, &pos1, php_wxGBPosition_entry, &span1, php_wxGBSpan_entry, &flag1, &border1, &userData1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|Ollz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1, &pos1, php_wxGBPosition_entry, &span1, php_wxGBSpan_entry, &flag1, &border1, &userData1 ) == SUCCESS)
 		{
@@ -4352,6 +4443,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|Ollz' (&sizer2, &pos2, php_wxGBPosition_entry, &span2, php_wxGBSpan_entry, &flag2, &border2, &userData2)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|Ollz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer2, &pos2, php_wxGBPosition_entry, &span2, php_wxGBSpan_entry, &flag2, &border2, &userData2 ) == SUCCESS)
 		{
@@ -4434,6 +4526,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4445,6 +4538,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4457,6 +4551,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4469,6 +4564,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0, (int) border0)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0, (int) border0);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4481,6 +4577,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0, (int) border0, (wxObject*) object_pointer0_6)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((int) width0, (int) height0, *(wxGBPosition*) object_pointer0_2, *(wxGBSpan*) object_pointer0_3, (int) flag0, (int) border0, (wxObject*) object_pointer0_6);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4501,6 +4598,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4513,6 +4611,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4526,6 +4625,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4539,6 +4639,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4552,6 +4653,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1, (wxObject*) object_pointer1_5)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxWindow*) object_pointer1_0, *(wxGBPosition*) object_pointer1_1, *(wxGBSpan*) object_pointer1_2, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4573,6 +4675,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4585,6 +4688,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4598,6 +4702,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4611,6 +4716,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2, (int) border2)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2, (int) border2);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4624,6 +4730,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2, (int) border2, (wxObject*) object_pointer2_5)\n");
 				#endif
+
 				_this = new wxGBSizerItem_php((wxSizer*) object_pointer2_0, *(wxGBPosition*) object_pointer2_1, *(wxGBSpan*) object_pointer2_2, (int) flag2, (int) border2, (wxObject*) object_pointer2_5);
 
 				((wxGBSizerItem_php*) _this)->references.Initialize();
@@ -4653,7 +4760,7 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGBSizerItem::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGBSizerItem::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4728,6 +4835,7 @@ PHP_METHOD(php_wxGBSizerItem, SetSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&span0, php_wxGBSpan_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &span0, php_wxGBSpan_entry ) == SUCCESS)
 		{
@@ -4762,6 +4870,7 @@ PHP_METHOD(php_wxGBSizerItem, SetSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGBSizerItem::SetSpan(*(wxGBSpan*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->SetSpan(*(wxGBSpan*) object_pointer0_0));
 
 				references->AddReference(span0, "wxGBSizerItem::SetSpan at call with 1 argument(s)");
@@ -4847,6 +4956,7 @@ PHP_METHOD(php_wxGBSizerItem, SetPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxGBPosition_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxGBPosition_entry ) == SUCCESS)
 		{
@@ -4881,6 +4991,7 @@ PHP_METHOD(php_wxGBSizerItem, SetPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGBSizerItem::SetPos(*(wxGBPosition*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->SetPos(*(wxGBPosition*) object_pointer0_0));
 
 				references->AddReference(pos0, "wxGBSizerItem::SetPos at call with 1 argument(s)");
@@ -4965,6 +5076,7 @@ PHP_METHOD(php_wxGBSizerItem, SetGBSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer0 ) == SUCCESS)
 		{
@@ -4999,6 +5111,7 @@ PHP_METHOD(php_wxGBSizerItem, SetGBSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::SetGBSizer((wxGridBagSizer*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxGBSizerItem_php*)_this)->SetGBSizer((wxGridBagSizer*) object_pointer0_0);
 
 				references->AddReference(sizer0, "wxGBSizerItem::SetGBSizer at call with 1 argument(s)");
@@ -5090,6 +5203,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pos0, php_wxGBPosition_entry, &span0, php_wxGBSpan_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxGBPosition_entry, &span0, php_wxGBSpan_entry ) == SUCCESS)
 		{
@@ -5138,6 +5252,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&other1, php_wxGBSizerItem_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &other1, php_wxGBSizerItem_entry ) == SUCCESS)
 		{
@@ -5172,6 +5287,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGBSizerItem::Intersects(*(wxGBPosition*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->Intersects(*(wxGBPosition*) object_pointer0_0, *(wxGBSpan*) object_pointer0_1));
 
 				references->AddReference(pos0, "wxGBSizerItem::Intersects at call with 2 argument(s)");
@@ -5192,6 +5308,7 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxGBSizerItem::Intersects(*(wxGBSizerItem*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxGBSizerItem_php*)_this)->Intersects(*(wxGBSizerItem*) object_pointer1_0));
 
 				references->AddReference(other1, "wxGBSizerItem::Intersects at call with 1 argument(s)");
@@ -5281,6 +5398,7 @@ PHP_METHOD(php_wxGBSizerItem, GetSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&rowspan0, &colspan0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rowspan0, &colspan0 ) == SUCCESS)
 		{
@@ -5300,6 +5418,7 @@ PHP_METHOD(php_wxGBSizerItem, GetSpan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -5314,6 +5433,7 @@ PHP_METHOD(php_wxGBSizerItem, GetSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::GetSpan((int&) rowspan0, (int&) colspan0)\n\n");
 				#endif
+
 				((wxGBSizerItem_php*)_this)->GetSpan((int&) rowspan0, (int&) colspan0);
 
 				ZVAL_LONG(rowspan0_ref, rowspan0);
@@ -5334,6 +5454,7 @@ PHP_METHOD(php_wxGBSizerItem, GetSpan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::GetSpan() to return new object\n\n");
 				#endif
+
 				wxGBSpan value_to_return0;
 				value_to_return0 = ((wxGBSizerItem_php*)_this)->GetSpan();
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
@@ -5427,6 +5548,7 @@ PHP_METHOD(php_wxGBSizerItem, GetPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -5446,6 +5568,7 @@ PHP_METHOD(php_wxGBSizerItem, GetPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -5460,6 +5583,7 @@ PHP_METHOD(php_wxGBSizerItem, GetPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::GetPos((int&) row0, (int&) col0)\n\n");
 				#endif
+
 				((wxGBSizerItem_php*)_this)->GetPos((int&) row0, (int&) col0);
 
 				ZVAL_LONG(row0_ref, row0);
@@ -5480,6 +5604,7 @@ PHP_METHOD(php_wxGBSizerItem, GetPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::GetPos() to return new object\n\n");
 				#endif
+
 				wxGBPosition value_to_return0;
 				value_to_return0 = ((wxGBSizerItem_php*)_this)->GetPos();
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
@@ -5566,6 +5691,7 @@ PHP_METHOD(php_wxGBSizerItem, GetGBSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5580,6 +5706,7 @@ PHP_METHOD(php_wxGBSizerItem, GetGBSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::GetGBSizer() to return object pointer\n\n");
 				#endif
+
 				wxGridBagSizer_php* value_to_return0;
 				value_to_return0 = (wxGridBagSizer_php*) ((wxGBSizerItem_php*)_this)->GetGBSizer();
 
@@ -5689,6 +5816,7 @@ PHP_METHOD(php_wxGBSizerItem, GetEndPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
@@ -5710,6 +5838,7 @@ PHP_METHOD(php_wxGBSizerItem, GetEndPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSizerItem::GetEndPos((int&) row0, (int&) col0)\n\n");
 				#endif
+
 				((wxGBSizerItem_php*)_this)->GetEndPos((int&) row0, (int&) col0);
 
 				ZVAL_LONG(row0_ref, row0);
@@ -5770,6 +5899,7 @@ void php_wxGBSpan_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto int wxGBSpan::GetColspan()
    Get the current colspan value. */
 PHP_METHOD(php_wxGBSpan, GetColspan)
@@ -5834,6 +5964,7 @@ PHP_METHOD(php_wxGBSpan, GetColspan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5848,6 +5979,7 @@ PHP_METHOD(php_wxGBSpan, GetColspan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGBSpan::GetColspan())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGBSpan_php*)_this)->GetColspan());
 
 
@@ -5930,6 +6062,7 @@ PHP_METHOD(php_wxGBSpan, GetRowspan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5944,6 +6077,7 @@ PHP_METHOD(php_wxGBSpan, GetRowspan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGBSpan::GetRowspan())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGBSpan_php*)_this)->GetRowspan());
 
 
@@ -6027,6 +6161,7 @@ PHP_METHOD(php_wxGBSpan, SetColspan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&colspan0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colspan0 ) == SUCCESS)
 		{
@@ -6045,6 +6180,7 @@ PHP_METHOD(php_wxGBSpan, SetColspan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSpan::SetColspan((int) colspan0)\n\n");
 				#endif
+
 				((wxGBSpan_php*)_this)->SetColspan((int) colspan0);
 
 
@@ -6128,6 +6264,7 @@ PHP_METHOD(php_wxGBSpan, SetRowspan)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&rowspan0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rowspan0 ) == SUCCESS)
 		{
@@ -6146,6 +6283,7 @@ PHP_METHOD(php_wxGBSpan, SetRowspan)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGBSpan::SetRowspan((int) rowspan0)\n\n");
 				#endif
+
 				((wxGBSpan_php*)_this)->SetRowspan((int) rowspan0);
 
 
@@ -6200,6 +6338,7 @@ PHP_METHOD(php_wxGBSpan, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6212,6 +6351,7 @@ PHP_METHOD(php_wxGBSpan, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&rowspan1, &colspan1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rowspan1, &colspan1 ) == SUCCESS)
 		{
@@ -6230,6 +6370,7 @@ PHP_METHOD(php_wxGBSpan, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxGBSpan_php();
 
 				((wxGBSpan_php*) _this)->references.Initialize();
@@ -6247,6 +6388,7 @@ PHP_METHOD(php_wxGBSpan, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) rowspan1, (int) colspan1)\n");
 				#endif
+
 				_this = new wxGBSpan_php((int) rowspan1, (int) colspan1);
 
 				((wxGBSpan_php*) _this)->references.Initialize();
@@ -6272,7 +6414,7 @@ PHP_METHOD(php_wxGBSpan, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGBSpan::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGBSpan::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6321,6 +6463,7 @@ void php_wxLayoutAlgorithm_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+
 /* {{{ proto bool wxLayoutAlgorithm::LayoutFrame(wxFrame &frame, wxWindow &mainWindow)
    Lays out the children of a normal frame. */
 PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
@@ -6389,6 +6532,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|z' (&frame0, &mainWindow0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0, &mainWindow0 ) == SUCCESS)
 		{
@@ -6439,6 +6583,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutFrame((wxFrame*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutFrame((wxFrame*) object_pointer0_0));
 
 				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutFrame at call with 1 argument(s)");
@@ -6451,6 +6596,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1));
 
 				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutFrame at call with 2 argument(s)");
@@ -6539,6 +6685,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|z' (&frame0, &rect0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0, &rect0 ) == SUCCESS)
 		{
@@ -6589,6 +6736,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0));
 
 				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutMDIFrame at call with 1 argument(s)");
@@ -6601,6 +6749,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0, (wxRect*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutMDIFrame((wxMDIParentFrame*) object_pointer0_0, (wxRect*) object_pointer0_1));
 
 				references->AddReference(frame0, "wxLayoutAlgorithm::LayoutMDIFrame at call with 2 argument(s)");
@@ -6689,6 +6838,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|z' (&parent0, &mainWindow0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &mainWindow0 ) == SUCCESS)
 		{
@@ -6739,6 +6889,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutWindow((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutWindow((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxLayoutAlgorithm::LayoutWindow at call with 1 argument(s)");
@@ -6751,6 +6902,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLayoutAlgorithm::LayoutWindow((wxWindow*) object_pointer0_0, (wxWindow*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLayoutAlgorithm_php*)_this)->LayoutWindow((wxWindow*) object_pointer0_0, (wxWindow*) object_pointer0_1));
 
 				references->AddReference(parent0, "wxLayoutAlgorithm::LayoutWindow at call with 2 argument(s)");
@@ -6803,6 +6955,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6817,6 +6970,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxLayoutAlgorithm_php();
 
 				((wxLayoutAlgorithm_php*) _this)->references.Initialize();
@@ -6842,7 +6996,7 @@ PHP_METHOD(php_wxLayoutAlgorithm, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLayoutAlgorithm::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLayoutAlgorithm::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6891,6 +7045,7 @@ void php_wxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto bool wxSizer::Show(wxSizer &sizer, bool show, bool recursive)
    Shows or hides sizer. */
 PHP_METHOD(php_wxSizer, Show)
@@ -6997,6 +7152,7 @@ PHP_METHOD(php_wxSizer, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|bb' (&sizer0, &show0, &recursive0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|bb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer0, &show0, &recursive0 ) == SUCCESS)
 		{
@@ -7029,6 +7185,7 @@ PHP_METHOD(php_wxSizer, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&index1, &show1)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index1, &show1 ) == SUCCESS)
 		{
@@ -7045,6 +7202,7 @@ PHP_METHOD(php_wxSizer, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|bb' (&window2, &show2, &recursive2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|bb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window2, &show2, &recursive2 ) == SUCCESS)
 		{
@@ -7079,6 +7237,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((wxSizer*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxSizer*) object_pointer0_0));
 
 				references->AddReference(sizer0, "wxSizer::Show at call with 1 argument(s)");
@@ -7091,6 +7250,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((wxSizer*) object_pointer0_0, show0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxSizer*) object_pointer0_0, show0));
 
 				references->AddReference(sizer0, "wxSizer::Show at call with 2 argument(s)");
@@ -7103,6 +7263,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((wxSizer*) object_pointer0_0, show0, recursive0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxSizer*) object_pointer0_0, show0, recursive0));
 
 				references->AddReference(sizer0, "wxSizer::Show at call with 3 argument(s)");
@@ -7122,6 +7283,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((size_t) index1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((size_t) index1));
 
 
@@ -7133,6 +7295,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((size_t) index1, show1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((size_t) index1, show1));
 
 
@@ -7151,6 +7314,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((wxWindow*) object_pointer2_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxWindow*) object_pointer2_0));
 
 				references->AddReference(window2, "wxSizer::Show at call with 1 argument(s)");
@@ -7163,6 +7327,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((wxWindow*) object_pointer2_0, show2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxWindow*) object_pointer2_0, show2));
 
 				references->AddReference(window2, "wxSizer::Show at call with 2 argument(s)");
@@ -7175,6 +7340,7 @@ PHP_METHOD(php_wxSizer, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Show((wxWindow*) object_pointer2_0, show2, recursive2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Show((wxWindow*) object_pointer2_0, show2, recursive2));
 
 				references->AddReference(window2, "wxSizer::Show at call with 3 argument(s)");
@@ -7226,6 +7392,7 @@ PHP_METHOD(php_wxSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7240,6 +7407,7 @@ PHP_METHOD(php_wxSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxSizer_php();
 
 				((wxSizer_php*) _this)->references.Initialize();
@@ -7265,7 +7433,7 @@ PHP_METHOD(php_wxSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -7368,6 +7536,7 @@ PHP_METHOD(php_wxSizer, SetSizeHints)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -7402,6 +7571,7 @@ PHP_METHOD(php_wxSizer, SetSizeHints)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::SetSizeHints((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->SetSizeHints((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxSizer::SetSizeHints at call with 1 argument(s)");
@@ -7515,6 +7685,7 @@ PHP_METHOD(php_wxSizer, SetVirtualSizeHints)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -7549,6 +7720,7 @@ PHP_METHOD(php_wxSizer, SetVirtualSizeHints)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::SetVirtualSizeHints((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->SetVirtualSizeHints((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxSizer::SetVirtualSizeHints at call with 1 argument(s)");
@@ -7666,6 +7838,7 @@ PHP_METHOD(php_wxSizer, SetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &height0 ) == SUCCESS)
 		{
@@ -7682,6 +7855,7 @@ PHP_METHOD(php_wxSizer, SetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -7716,6 +7890,7 @@ PHP_METHOD(php_wxSizer, SetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::SetMinSize((int) width0, (int) height0)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->SetMinSize((int) width0, (int) height0);
 
 
@@ -7734,6 +7909,7 @@ PHP_METHOD(php_wxSizer, SetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::SetMinSize(*(wxSize*) object_pointer1_0)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->SetMinSize(*(wxSize*) object_pointer1_0);
 
 				references->AddReference(size1, "wxSizer::SetMinSize at call with 1 argument(s)");
@@ -7877,6 +8053,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&index0, &size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -7909,6 +8086,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&index1, &width1, &height1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index1, &width1, &height1 ) == SUCCESS)
 		{
@@ -7925,6 +8103,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&sizer2, &size2, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer2, &size2, php_wxSize_entry ) == SUCCESS)
 		{
@@ -7973,6 +8152,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&sizer3, &width3, &height3)\n");
 		#endif
+
 		char parse_parameters_string[] = "zll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer3, &width3, &height3 ) == SUCCESS)
 		{
@@ -8005,6 +8185,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window4, &size4, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window4, &size4, php_wxSize_entry ) == SUCCESS)
 		{
@@ -8053,6 +8234,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&window5, &width5, &height5)\n");
 		#endif
+
 		char parse_parameters_string[] = "zll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window5, &width5, &height5 ) == SUCCESS)
 		{
@@ -8087,6 +8269,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((size_t) index0, *(wxSize*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((size_t) index0, *(wxSize*) object_pointer0_1));
 
 				references->AddReference(size0, "wxSizer::SetItemMinSize at call with 2 argument(s)");
@@ -8106,6 +8289,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((size_t) index1, (int) width1, (int) height1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((size_t) index1, (int) width1, (int) height1));
 
 
@@ -8124,6 +8308,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxSizer*) object_pointer2_0, *(wxSize*) object_pointer2_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxSizer*) object_pointer2_0, *(wxSize*) object_pointer2_1));
 
 				references->AddReference(sizer2, "wxSizer::SetItemMinSize at call with 2 argument(s)");
@@ -8144,6 +8329,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxSizer*) object_pointer3_0, (int) width3, (int) height3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxSizer*) object_pointer3_0, (int) width3, (int) height3));
 
 				references->AddReference(sizer3, "wxSizer::SetItemMinSize at call with 3 argument(s)");
@@ -8163,6 +8349,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxWindow*) object_pointer4_0, *(wxSize*) object_pointer4_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxWindow*) object_pointer4_0, *(wxSize*) object_pointer4_1));
 
 				references->AddReference(window4, "wxSizer::SetItemMinSize at call with 2 argument(s)");
@@ -8183,6 +8370,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::SetItemMinSize((wxWindow*) object_pointer5_0, (int) width5, (int) height5))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->SetItemMinSize((wxWindow*) object_pointer5_0, (int) width5, (int) height5));
 
 				references->AddReference(window5, "wxSizer::SetItemMinSize at call with 3 argument(s)");
@@ -8304,6 +8492,7 @@ PHP_METHOD(php_wxSizer, SetDimension)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pos0, php_wxPoint_entry, &size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -8352,6 +8541,7 @@ PHP_METHOD(php_wxSizer, SetDimension)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x1, &y1, &width1, &height1)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x1, &y1, &width1, &height1 ) == SUCCESS)
 		{
@@ -8370,6 +8560,7 @@ PHP_METHOD(php_wxSizer, SetDimension)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::SetDimension(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->SetDimension(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
 				references->AddReference(pos0, "wxSizer::SetDimension at call with 2 argument(s)");
@@ -8390,6 +8581,7 @@ PHP_METHOD(php_wxSizer, SetDimension)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::SetDimension((int) x1, (int) y1, (int) width1, (int) height1)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->SetDimension((int) x1, (int) y1, (int) width1, (int) height1);
 
 
@@ -8517,6 +8709,7 @@ PHP_METHOD(php_wxSizer, Replace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zz|b' (&oldsz0, &newsz0, &recursive0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zz|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &oldsz0, &newsz0, &recursive0 ) == SUCCESS)
 		{
@@ -8565,6 +8758,7 @@ PHP_METHOD(php_wxSizer, Replace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zz|b' (&oldwin1, &newwin1, &recursive1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zz|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &oldwin1, &newwin1, &recursive1 ) == SUCCESS)
 		{
@@ -8613,6 +8807,7 @@ PHP_METHOD(php_wxSizer, Replace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&index2, &newitem2)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2, &newitem2 ) == SUCCESS)
 		{
@@ -8647,6 +8842,7 @@ PHP_METHOD(php_wxSizer, Replace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1));
 
 				references->AddReference(oldsz0, "wxSizer::Replace at call with 2 argument(s)");
@@ -8660,6 +8856,7 @@ PHP_METHOD(php_wxSizer, Replace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1, recursive0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxSizer*) object_pointer0_0, (wxSizer*) object_pointer0_1, recursive0));
 
 				references->AddReference(oldsz0, "wxSizer::Replace at call with 3 argument(s)");
@@ -8680,6 +8877,7 @@ PHP_METHOD(php_wxSizer, Replace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1));
 
 				references->AddReference(oldwin1, "wxSizer::Replace at call with 2 argument(s)");
@@ -8693,6 +8891,7 @@ PHP_METHOD(php_wxSizer, Replace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1, recursive1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((wxWindow*) object_pointer1_0, (wxWindow*) object_pointer1_1, recursive1));
 
 				references->AddReference(oldwin1, "wxSizer::Replace at call with 3 argument(s)");
@@ -8713,6 +8912,7 @@ PHP_METHOD(php_wxSizer, Replace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Replace((size_t) index2, (wxSizerItem*) object_pointer2_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Replace((size_t) index2, (wxSizerItem*) object_pointer2_1));
 
 				references->AddReference(newitem2, "wxSizer::Replace at call with 2 argument(s)");
@@ -8829,6 +9029,7 @@ PHP_METHOD(php_wxSizer, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
@@ -8845,6 +9046,7 @@ PHP_METHOD(php_wxSizer, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1 ) == SUCCESS)
 		{
@@ -8879,6 +9081,7 @@ PHP_METHOD(php_wxSizer, Remove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Remove((int) index0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Remove((int) index0));
 
 
@@ -8897,6 +9100,7 @@ PHP_METHOD(php_wxSizer, Remove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Remove((wxSizer*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Remove((wxSizer*) object_pointer1_0));
 
 				references->AddReference(sizer1, "wxSizer::Remove at call with 1 argument(s)");
@@ -9076,6 +9280,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&prop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prop0 ) == SUCCESS)
 		{
@@ -9094,6 +9299,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::PrependStretchSpacer() to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return0;
 				value_to_return0 = (wxSizerItem_php*) ((wxSizer_php*)_this)->PrependStretchSpacer();
 
@@ -9128,6 +9334,7 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::PrependStretchSpacer((int) prop0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->PrependStretchSpacer((int) prop0);
 
@@ -9262,6 +9469,7 @@ PHP_METHOD(php_wxSizer, PrependSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
@@ -9280,6 +9488,7 @@ PHP_METHOD(php_wxSizer, PrependSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::PrependSpacer((int) size0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->PrependSpacer((int) size0);
 
@@ -9453,6 +9662,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
@@ -9485,6 +9695,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|lllz' (&width1, &height1, &proportion1, &flag1, &border1, &userData1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width1, &height1, &proportion1, &flag1, &border1, &userData1 ) == SUCCESS)
 		{
@@ -9517,6 +9728,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lllz' (&sizer2, &proportion2, &flag2, &border2, &userData2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer2, &proportion2, &flag2, &border2, &userData2 ) == SUCCESS)
 		{
@@ -9565,6 +9777,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lllz' (&window3, &proportion3, &flag3, &border3, &userData3)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window3, &proportion3, &flag3, &border3, &userData3 ) == SUCCESS)
 		{
@@ -9613,6 +9826,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window4, &flags4, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window4, &flags4, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -9661,6 +9875,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&sizer5, &flags5, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer5, &flags5, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -9711,6 +9926,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizerItem*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizerItem*) object_pointer0_0);
 
@@ -9753,6 +9969,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((int) width1, (int) height1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((int) width1, (int) height1);
 
@@ -9787,6 +10004,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((int) width1, (int) height1, (int) proportion1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((int) width1, (int) height1, (int) proportion1);
 
@@ -9821,6 +10039,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1);
 
@@ -9855,6 +10074,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1, (int) border1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1, (int) border1);
 
@@ -9889,6 +10109,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_5) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((int) width1, (int) height1, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
@@ -9931,6 +10152,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizer*) object_pointer2_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizer*) object_pointer2_0);
 
@@ -9966,6 +10188,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizer*) object_pointer2_0, (int) proportion2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2);
 
@@ -10001,6 +10224,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2);
 
@@ -10036,6 +10260,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2, (int) border2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2, (int) border2);
 
@@ -10071,6 +10296,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2, (int) border2, (wxObject*) object_pointer2_4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizer*) object_pointer2_0, (int) proportion2, (int) flag2, (int) border2, (wxObject*) object_pointer2_4);
 
@@ -10114,6 +10340,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxWindow*) object_pointer3_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxWindow*) object_pointer3_0);
 
@@ -10149,6 +10376,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxWindow*) object_pointer3_0, (int) proportion3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3);
 
@@ -10184,6 +10412,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3);
 
@@ -10219,6 +10448,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3);
 
@@ -10254,6 +10484,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxWindow*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4);
 
@@ -10297,6 +10528,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxWindow*) object_pointer4_0, *(wxSizerFlags*) object_pointer4_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxWindow*) object_pointer4_0, *(wxSizerFlags*) object_pointer4_1);
 
@@ -10340,6 +10572,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Prepend((wxSizer*) object_pointer5_0, *(wxSizerFlags*) object_pointer5_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Prepend((wxSizer*) object_pointer5_0, *(wxSizerFlags*) object_pointer5_1);
 
@@ -10475,6 +10708,7 @@ PHP_METHOD(php_wxSizer, Layout)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10489,6 +10723,7 @@ PHP_METHOD(php_wxSizer, Layout)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Layout()\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->Layout();
 
 
@@ -10608,6 +10843,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
@@ -10624,6 +10860,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1 ) == SUCCESS)
 		{
@@ -10656,6 +10893,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window2 ) == SUCCESS)
 		{
@@ -10690,6 +10928,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::IsShown((size_t) index0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->IsShown((size_t) index0));
 
 
@@ -10708,6 +10947,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::IsShown((wxSizer*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->IsShown((wxSizer*) object_pointer1_0));
 
 				references->AddReference(sizer1, "wxSizer::IsShown at call with 1 argument(s)");
@@ -10727,6 +10967,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::IsShown((wxWindow*) object_pointer2_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->IsShown((wxWindow*) object_pointer2_0));
 
 				references->AddReference(window2, "wxSizer::IsShown at call with 1 argument(s)");
@@ -10838,6 +11079,7 @@ PHP_METHOD(php_wxSizer, IsEmpty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10852,6 +11094,7 @@ PHP_METHOD(php_wxSizer, IsEmpty)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::IsEmpty())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->IsEmpty());
 
 
@@ -10964,6 +11207,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&index0, &prop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &prop0 ) == SUCCESS)
 		{
@@ -10982,6 +11226,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::InsertStretchSpacer((size_t) index0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->InsertStretchSpacer((size_t) index0);
 
@@ -11016,6 +11261,7 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::InsertStretchSpacer((size_t) index0, (int) prop0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->InsertStretchSpacer((size_t) index0, (int) prop0);
 
@@ -11151,6 +11397,7 @@ PHP_METHOD(php_wxSizer, InsertSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&index0, &size0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &size0 ) == SUCCESS)
 		{
@@ -11169,6 +11416,7 @@ PHP_METHOD(php_wxSizer, InsertSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::InsertSpacer((size_t) index0, (int) size0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->InsertSpacer((size_t) index0, (int) size0);
 
@@ -11349,6 +11597,7 @@ PHP_METHOD(php_wxSizer, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll|lllz' (&index0, &width0, &height0, &proportion0, &flag0, &border0, &userData0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &width0, &height0, &proportion0, &flag0, &border0, &userData0 ) == SUCCESS)
 		{
@@ -11381,6 +11630,7 @@ PHP_METHOD(php_wxSizer, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz|lllz' (&index1, &sizer1, &proportion1, &flag1, &border1, &userData1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index1, &sizer1, &proportion1, &flag1, &border1, &userData1 ) == SUCCESS)
 		{
@@ -11429,6 +11679,7 @@ PHP_METHOD(php_wxSizer, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzO' (&index2, &sizer2, &flags2, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2, &sizer2, &flags2, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -11477,6 +11728,7 @@ PHP_METHOD(php_wxSizer, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz|lllz' (&index3, &window3, &proportion3, &flag3, &border3, &userData3)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index3, &window3, &proportion3, &flag3, &border3, &userData3 ) == SUCCESS)
 		{
@@ -11525,6 +11777,7 @@ PHP_METHOD(php_wxSizer, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzO' (&index4, &window4, &flags4, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index4, &window4, &flags4, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -11573,6 +11826,7 @@ PHP_METHOD(php_wxSizer, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&index5, &item5)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index5, &item5 ) == SUCCESS)
 		{
@@ -11607,6 +11861,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index0, (int) width0, (int) height0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index0, (int) width0, (int) height0);
 
@@ -11641,6 +11896,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0);
 
@@ -11675,6 +11931,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0);
 
@@ -11709,6 +11966,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0, (int) border0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0, (int) border0);
 
@@ -11743,6 +12001,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0, (int) border0, (wxObject*) object_pointer0_6) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return7;
 				value_to_return7 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index0, (int) width0, (int) height0, (int) proportion0, (int) flag0, (int) border0, (wxObject*) object_pointer0_6);
 
@@ -11785,6 +12044,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index1, (wxSizer*) object_pointer1_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index1, (wxSizer*) object_pointer1_1);
 
@@ -11820,6 +12080,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1);
 
@@ -11855,6 +12116,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1);
 
@@ -11890,6 +12152,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1, (int) border1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1, (int) border1);
 
@@ -11925,6 +12188,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_5) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index1, (wxSizer*) object_pointer1_1, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_5);
 
@@ -11968,6 +12232,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index2, (wxSizer*) object_pointer2_1, *(wxSizerFlags*) object_pointer2_2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index2, (wxSizer*) object_pointer2_1, *(wxSizerFlags*) object_pointer2_2);
 
@@ -12011,6 +12276,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index3, (wxWindow*) object_pointer3_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index3, (wxWindow*) object_pointer3_1);
 
@@ -12046,6 +12312,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3);
 
@@ -12081,6 +12348,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3);
 
@@ -12116,6 +12384,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3, (int) border3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3, (int) border3);
 
@@ -12151,6 +12420,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_5) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index3, (wxWindow*) object_pointer3_1, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_5);
 
@@ -12194,6 +12464,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index4, (wxWindow*) object_pointer4_1, *(wxSizerFlags*) object_pointer4_2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index4, (wxWindow*) object_pointer4_1, *(wxSizerFlags*) object_pointer4_2);
 
@@ -12237,6 +12508,7 @@ PHP_METHOD(php_wxSizer, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Insert((size_t) index5, (wxSizerItem*) object_pointer5_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Insert((size_t) index5, (wxSizerItem*) object_pointer5_1);
 
@@ -12374,6 +12646,7 @@ PHP_METHOD(php_wxSizer, InformFirstDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&direction0, &size0, &availableOtherDir0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0, &size0, &availableOtherDir0 ) == SUCCESS)
 		{
@@ -12392,6 +12665,7 @@ PHP_METHOD(php_wxSizer, InformFirstDirection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0));
 
 
@@ -12513,6 +12787,7 @@ PHP_METHOD(php_wxSizer, Hide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
@@ -12529,6 +12804,7 @@ PHP_METHOD(php_wxSizer, Hide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|b' (&sizer1, &recursive1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1, &recursive1 ) == SUCCESS)
 		{
@@ -12561,6 +12837,7 @@ PHP_METHOD(php_wxSizer, Hide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|b' (&window2, &recursive2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window2, &recursive2 ) == SUCCESS)
 		{
@@ -12595,6 +12872,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Hide((size_t) index0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((size_t) index0));
 
 
@@ -12613,6 +12891,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxSizer*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxSizer*) object_pointer1_0));
 
 				references->AddReference(sizer1, "wxSizer::Hide at call with 1 argument(s)");
@@ -12625,6 +12904,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxSizer*) object_pointer1_0, recursive1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxSizer*) object_pointer1_0, recursive1));
 
 				references->AddReference(sizer1, "wxSizer::Hide at call with 2 argument(s)");
@@ -12644,6 +12924,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxWindow*) object_pointer2_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxWindow*) object_pointer2_0));
 
 				references->AddReference(window2, "wxSizer::Hide at call with 1 argument(s)");
@@ -12656,6 +12937,7 @@ PHP_METHOD(php_wxSizer, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Hide((wxWindow*) object_pointer2_0, recursive2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Hide((wxWindow*) object_pointer2_0, recursive2));
 
 				references->AddReference(window2, "wxSizer::Hide at call with 2 argument(s)");
@@ -12767,6 +13049,7 @@ PHP_METHOD(php_wxSizer, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12781,6 +13064,7 @@ PHP_METHOD(php_wxSizer, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizer_php*)_this)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -12896,6 +13180,7 @@ PHP_METHOD(php_wxSizer, GetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12910,6 +13195,7 @@ PHP_METHOD(php_wxSizer, GetPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetPosition() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxSizer_php*)_this)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
@@ -13025,6 +13311,7 @@ PHP_METHOD(php_wxSizer, GetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13039,6 +13326,7 @@ PHP_METHOD(php_wxSizer, GetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetMinSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizer_php*)_this)->GetMinSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -13154,6 +13442,7 @@ PHP_METHOD(php_wxSizer, GetItemCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13168,6 +13457,7 @@ PHP_METHOD(php_wxSizer, GetItemCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxSizer::GetItemCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxSizer_php*)_this)->GetItemCount());
 
 
@@ -13280,6 +13570,7 @@ PHP_METHOD(php_wxSizer, FitInside)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -13314,6 +13605,7 @@ PHP_METHOD(php_wxSizer, FitInside)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::FitInside((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->FitInside((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxSizer::FitInside at call with 1 argument(s)");
@@ -13427,6 +13719,7 @@ PHP_METHOD(php_wxSizer, Fit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -13461,6 +13754,7 @@ PHP_METHOD(php_wxSizer, Fit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Fit((wxWindow*) object_pointer0_0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = ((wxSizer_php*)_this)->Fit((wxWindow*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -13586,6 +13880,7 @@ PHP_METHOD(php_wxSizer, Detach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
@@ -13602,6 +13897,7 @@ PHP_METHOD(php_wxSizer, Detach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1 ) == SUCCESS)
 		{
@@ -13634,6 +13930,7 @@ PHP_METHOD(php_wxSizer, Detach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window2 ) == SUCCESS)
 		{
@@ -13668,6 +13965,7 @@ PHP_METHOD(php_wxSizer, Detach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Detach((int) index0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Detach((int) index0));
 
 
@@ -13686,6 +13984,7 @@ PHP_METHOD(php_wxSizer, Detach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Detach((wxSizer*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Detach((wxSizer*) object_pointer1_0));
 
 				references->AddReference(sizer1, "wxSizer::Detach at call with 1 argument(s)");
@@ -13705,6 +14004,7 @@ PHP_METHOD(php_wxSizer, Detach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizer::Detach((wxWindow*) object_pointer2_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizer_php*)_this)->Detach((wxWindow*) object_pointer2_0));
 
 				references->AddReference(window2, "wxSizer::Detach at call with 1 argument(s)");
@@ -13818,6 +14118,7 @@ PHP_METHOD(php_wxSizer, ComputeFittingWindowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -13852,6 +14153,7 @@ PHP_METHOD(php_wxSizer, ComputeFittingWindowSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::ComputeFittingWindowSize((wxWindow*) object_pointer0_0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = ((wxSizer_php*)_this)->ComputeFittingWindowSize((wxWindow*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -13970,6 +14272,7 @@ PHP_METHOD(php_wxSizer, ComputeFittingClientSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -14004,6 +14307,7 @@ PHP_METHOD(php_wxSizer, ComputeFittingClientSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::ComputeFittingClientSize((wxWindow*) object_pointer0_0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = ((wxSizer_php*)_this)->ComputeFittingClientSize((wxWindow*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -14161,6 +14465,7 @@ PHP_METHOD(php_wxSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window0, &flags0, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &flags0, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -14209,6 +14514,7 @@ PHP_METHOD(php_wxSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lllz' (&window1, &proportion1, &flag1, &border1, &userData1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1, &proportion1, &flag1, &border1, &userData1 ) == SUCCESS)
 		{
@@ -14257,6 +14563,7 @@ PHP_METHOD(php_wxSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&sizer2, &flags2, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer2, &flags2, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -14305,6 +14612,7 @@ PHP_METHOD(php_wxSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lllz' (&sizer3, &proportion3, &flag3, &border3, &userData3)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer3, &proportion3, &flag3, &border3, &userData3 ) == SUCCESS)
 		{
@@ -14353,6 +14661,7 @@ PHP_METHOD(php_wxSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|lllz' (&width4, &height4, &proportion4, &flag4, &border4, &userData4)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width4, &height4, &proportion4, &flag4, &border4, &userData4 ) == SUCCESS)
 		{
@@ -14385,6 +14694,7 @@ PHP_METHOD(php_wxSizer, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item5)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item5 ) == SUCCESS)
 		{
@@ -14419,6 +14729,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxWindow*) object_pointer0_0, *(wxSizerFlags*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxWindow*) object_pointer0_0, *(wxSizerFlags*) object_pointer0_1);
 
@@ -14462,6 +14773,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxWindow*) object_pointer1_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxWindow*) object_pointer1_0);
 
@@ -14497,6 +14809,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxWindow*) object_pointer1_0, (int) proportion1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxWindow*) object_pointer1_0, (int) proportion1);
 
@@ -14532,6 +14845,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1);
 
@@ -14567,6 +14881,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1);
 
@@ -14602,6 +14917,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_4);
 
@@ -14645,6 +14961,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizer*) object_pointer2_0, *(wxSizerFlags*) object_pointer2_1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizer*) object_pointer2_0, *(wxSizerFlags*) object_pointer2_1);
 
@@ -14688,6 +15005,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizer*) object_pointer3_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizer*) object_pointer3_0);
 
@@ -14723,6 +15041,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizer*) object_pointer3_0, (int) proportion3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizer*) object_pointer3_0, (int) proportion3);
 
@@ -14758,6 +15077,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3);
 
@@ -14793,6 +15113,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3);
 
@@ -14828,6 +15149,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4);
 
@@ -14871,6 +15193,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((int) width4, (int) height4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((int) width4, (int) height4);
 
@@ -14905,6 +15228,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((int) width4, (int) height4, (int) proportion4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return3;
 				value_to_return3 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((int) width4, (int) height4, (int) proportion4);
 
@@ -14939,6 +15263,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((int) width4, (int) height4, (int) proportion4, (int) flag4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return4;
 				value_to_return4 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((int) width4, (int) height4, (int) proportion4, (int) flag4);
 
@@ -14973,6 +15298,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return5;
 				value_to_return5 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4);
 
@@ -15007,6 +15333,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4, (wxObject*) object_pointer4_5) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return6;
 				value_to_return6 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4, (wxObject*) object_pointer4_5);
 
@@ -15049,6 +15376,7 @@ PHP_METHOD(php_wxSizer, Add)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Add((wxSizerItem*) object_pointer5_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->Add((wxSizerItem*) object_pointer5_0);
 
@@ -15184,6 +15512,7 @@ PHP_METHOD(php_wxSizer, AddSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
@@ -15202,6 +15531,7 @@ PHP_METHOD(php_wxSizer, AddSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::AddSpacer((int) size0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->AddSpacer((int) size0);
 
@@ -15336,6 +15666,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&prop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prop0 ) == SUCCESS)
 		{
@@ -15354,6 +15685,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::AddStretchSpacer() to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return0;
 				value_to_return0 = (wxSizerItem_php*) ((wxSizer_php*)_this)->AddStretchSpacer();
 
@@ -15388,6 +15720,7 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::AddStretchSpacer((int) prop0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->AddStretchSpacer((int) prop0);
 
@@ -15599,6 +15932,7 @@ PHP_METHOD(php_wxSizer, Clear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&delete_windows0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &delete_windows0 ) == SUCCESS)
 		{
@@ -15617,6 +15951,7 @@ PHP_METHOD(php_wxSizer, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Clear()\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->Clear();
 
 
@@ -15628,6 +15963,7 @@ PHP_METHOD(php_wxSizer, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::Clear(delete_windows0)\n\n");
 				#endif
+
 				((wxSizer_php*)_this)->Clear(delete_windows0);
 
 
@@ -15738,6 +16074,7 @@ PHP_METHOD(php_wxSizer, GetContainingWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15752,6 +16089,7 @@ PHP_METHOD(php_wxSizer, GetContainingWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetContainingWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxSizer_php*)_this)->GetContainingWindow();
 
@@ -15896,6 +16234,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|b' (&window0, &recursive0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &recursive0 ) == SUCCESS)
 		{
@@ -15928,6 +16267,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|b' (&sizer1, &recursive1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer1, &recursive1 ) == SUCCESS)
 		{
@@ -15960,6 +16300,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index2)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index2 ) == SUCCESS)
 		{
@@ -15978,6 +16319,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItem((wxWindow*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItem((wxWindow*) object_pointer0_0);
 
@@ -16013,6 +16355,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItem((wxWindow*) object_pointer0_0, recursive0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItem((wxWindow*) object_pointer0_0, recursive0);
 
@@ -16055,6 +16398,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItem((wxSizer*) object_pointer1_0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItem((wxSizer*) object_pointer1_0);
 
@@ -16090,6 +16434,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItem((wxSizer*) object_pointer1_0, recursive1) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItem((wxSizer*) object_pointer1_0, recursive1);
 
@@ -16132,6 +16477,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItem((size_t) index2) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItem((size_t) index2);
 
@@ -16267,6 +16613,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&id0, &recursive0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &recursive0 ) == SUCCESS)
 		{
@@ -16285,6 +16632,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItemById((int) id0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItemById((int) id0);
 
@@ -16319,6 +16667,7 @@ PHP_METHOD(php_wxSizer, GetItemById)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizer::GetItemById((int) id0, recursive0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return2;
 				value_to_return2 = (wxSizerItem_php*) ((wxSizer_php*)_this)->GetItemById((int) id0, recursive0);
 
@@ -16367,6 +16716,7 @@ void php_wxStdDialogButtonSizer_destruction_handler(zend_rsrc_list_entry *rsrc T
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxStdDialogButtonSizer::AddButton(wxButton &button)
    Adds a button to the wxStdDialogButtonSizer. */
 PHP_METHOD(php_wxStdDialogButtonSizer, AddButton)
@@ -16433,6 +16783,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, AddButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&button0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button0 ) == SUCCESS)
 		{
@@ -16467,6 +16818,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::AddButton((wxButton*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStdDialogButtonSizer_php*)_this)->AddButton((wxButton*) object_pointer0_0);
 
 				references->AddReference(button0, "wxStdDialogButtonSizer::AddButton at call with 1 argument(s)");
@@ -16550,6 +16902,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16564,6 +16917,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxStdDialogButtonSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -16651,6 +17005,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16665,6 +17020,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::Realize()\n\n");
 				#endif
+
 				((wxStdDialogButtonSizer_php*)_this)->Realize();
 
 
@@ -16747,6 +17103,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16761,6 +17118,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxStdDialogButtonSizer_php*)_this)->RecalcSizes();
 
 
@@ -16845,6 +17203,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetAffirmativeButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&button0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button0 ) == SUCCESS)
 		{
@@ -16879,6 +17238,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetAffirmativeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::SetAffirmativeButton((wxButton*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStdDialogButtonSizer_php*)_this)->SetAffirmativeButton((wxButton*) object_pointer0_0);
 
 				references->AddReference(button0, "wxStdDialogButtonSizer::SetAffirmativeButton at call with 1 argument(s)");
@@ -16964,6 +17324,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetCancelButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&button0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button0 ) == SUCCESS)
 		{
@@ -16998,6 +17359,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetCancelButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::SetCancelButton((wxButton*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStdDialogButtonSizer_php*)_this)->SetCancelButton((wxButton*) object_pointer0_0);
 
 				references->AddReference(button0, "wxStdDialogButtonSizer::SetCancelButton at call with 1 argument(s)");
@@ -17083,6 +17445,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetNegativeButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&button0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button0 ) == SUCCESS)
 		{
@@ -17117,6 +17480,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetNegativeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStdDialogButtonSizer::SetNegativeButton((wxButton*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxStdDialogButtonSizer_php*)_this)->SetNegativeButton((wxButton*) object_pointer0_0);
 
 				references->AddReference(button0, "wxStdDialogButtonSizer::SetNegativeButton at call with 1 argument(s)");
@@ -17168,6 +17532,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17182,6 +17547,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxStdDialogButtonSizer_php();
 
 				((wxStdDialogButtonSizer_php*) _this)->references.Initialize();
@@ -17207,7 +17573,7 @@ PHP_METHOD(php_wxStdDialogButtonSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStdDialogButtonSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStdDialogButtonSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -17256,6 +17622,7 @@ void php_wxSizerItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxSizerItem::wxSizerItem(wxWindow &window, wxSizerFlags flags)
    Construct a sizer item for tracking a window. */
 PHP_METHOD(php_wxSizerItem, __construct)
@@ -17325,6 +17692,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window0, &flags0, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &flags0, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -17373,6 +17741,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lllz' (&window1, &proportion1, &flag1, &border1, &userData1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1, &proportion1, &flag1, &border1, &userData1 ) == SUCCESS)
 		{
@@ -17421,6 +17790,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&sizer2, &flags2, php_wxSizerFlags_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer2, &flags2, php_wxSizerFlags_entry ) == SUCCESS)
 		{
@@ -17469,6 +17839,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lllz' (&sizer3, &proportion3, &flag3, &border3, &userData3)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer3, &proportion3, &flag3, &border3, &userData3 ) == SUCCESS)
 		{
@@ -17517,6 +17888,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|lllz' (&width4, &height4, &proportion4, &flag4, &border4, &userData4)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|lllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width4, &height4, &proportion4, &flag4, &border4, &userData4 ) == SUCCESS)
 		{
@@ -17551,6 +17923,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, *(wxSizerFlags*) object_pointer0_1)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxWindow*) object_pointer0_0, *(wxSizerFlags*) object_pointer0_1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17570,6 +17943,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17581,6 +17955,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) proportion1)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17592,6 +17967,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17603,6 +17979,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17614,6 +17991,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_4)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxWindow*) object_pointer1_0, (int) proportion1, (int) flag1, (int) border1, (wxObject*) object_pointer1_4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17633,6 +18011,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer2_0, *(wxSizerFlags*) object_pointer2_1)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxSizer*) object_pointer2_0, *(wxSizerFlags*) object_pointer2_1);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17652,6 +18031,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer3_0)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17663,6 +18043,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer3_0, (int) proportion3)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17674,6 +18055,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17685,6 +18067,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17696,6 +18079,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4)\n");
 				#endif
+
 				_this = new wxSizerItem_php((wxSizer*) object_pointer3_0, (int) proportion3, (int) flag3, (int) border3, (wxObject*) object_pointer3_4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17715,6 +18099,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width4, (int) height4)\n");
 				#endif
+
 				_this = new wxSizerItem_php((int) width4, (int) height4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17725,6 +18110,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width4, (int) height4, (int) proportion4)\n");
 				#endif
+
 				_this = new wxSizerItem_php((int) width4, (int) height4, (int) proportion4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17735,6 +18121,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width4, (int) height4, (int) proportion4, (int) flag4)\n");
 				#endif
+
 				_this = new wxSizerItem_php((int) width4, (int) height4, (int) proportion4, (int) flag4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17745,6 +18132,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4)\n");
 				#endif
+
 				_this = new wxSizerItem_php((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17755,6 +18143,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4, (wxObject*) object_pointer4_5)\n");
 				#endif
+
 				_this = new wxSizerItem_php((int) width4, (int) height4, (int) proportion4, (int) flag4, (int) border4, (wxObject*) object_pointer4_5);
 
 				((wxSizerItem_php*) _this)->references.Initialize();
@@ -17781,7 +18170,7 @@ PHP_METHOD(php_wxSizerItem, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSizerItem::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSizerItem::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -17860,6 +18249,7 @@ PHP_METHOD(php_wxSizerItem, SetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -17894,6 +18284,7 @@ PHP_METHOD(php_wxSizerItem, SetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxSizerItem::SetWindow at call with 1 argument(s)");
@@ -17982,6 +18373,7 @@ PHP_METHOD(php_wxSizerItem, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -18000,6 +18392,7 @@ PHP_METHOD(php_wxSizerItem, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::Show(show0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->Show(show0);
 
 
@@ -18087,6 +18480,7 @@ PHP_METHOD(php_wxSizerItem, SetUserData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&userData0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &userData0 ) == SUCCESS)
 		{
@@ -18121,6 +18515,7 @@ PHP_METHOD(php_wxSizerItem, SetUserData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetUserData((wxObject*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetUserData((wxObject*) object_pointer0_0);
 
 				references->AddReference(userData0, "wxSizerItem::SetUserData at call with 1 argument(s)");
@@ -18210,6 +18605,7 @@ PHP_METHOD(php_wxSizerItem, SetSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -18244,6 +18640,7 @@ PHP_METHOD(php_wxSizerItem, SetSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetSpacer(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetSpacer(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(size0, "wxSizerItem::SetSpacer at call with 1 argument(s)");
@@ -18333,6 +18730,7 @@ PHP_METHOD(php_wxSizerItem, SetSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer0 ) == SUCCESS)
 		{
@@ -18367,6 +18765,7 @@ PHP_METHOD(php_wxSizerItem, SetSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetSizer((wxSizer*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetSizer((wxSizer*) object_pointer0_0);
 
 				references->AddReference(sizer0, "wxSizerItem::SetSizer at call with 1 argument(s)");
@@ -18463,6 +18862,7 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (&ratio0)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ratio0 ) == SUCCESS)
 		{
@@ -18479,6 +18879,7 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -18511,6 +18912,7 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&width2, &height2)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width2, &height2 ) == SUCCESS)
 		{
@@ -18529,6 +18931,7 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetRatio(ratio0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetRatio(ratio0);
 
 
@@ -18547,6 +18950,7 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetRatio(*(wxSize*) object_pointer1_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetRatio(*(wxSize*) object_pointer1_0);
 
 
@@ -18565,6 +18969,7 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetRatio((int) width2, (int) height2)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetRatio((int) width2, (int) height2);
 
 
@@ -18652,6 +19057,7 @@ PHP_METHOD(php_wxSizerItem, SetProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &proportion0 ) == SUCCESS)
 		{
@@ -18670,6 +19076,7 @@ PHP_METHOD(php_wxSizerItem, SetProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetProportion((int) proportion0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetProportion((int) proportion0);
 
 
@@ -18762,6 +19169,7 @@ PHP_METHOD(php_wxSizerItem, SetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -18778,6 +19186,7 @@ PHP_METHOD(php_wxSizerItem, SetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -18812,6 +19221,7 @@ PHP_METHOD(php_wxSizerItem, SetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetMinSize((int) x0, (int) y0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetMinSize((int) x0, (int) y0);
 
 
@@ -18830,6 +19240,7 @@ PHP_METHOD(php_wxSizerItem, SetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetMinSize(*(wxSize*) object_pointer1_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetMinSize(*(wxSize*) object_pointer1_0);
 
 				references->AddReference(size1, "wxSizerItem::SetMinSize at call with 1 argument(s)");
@@ -18918,6 +19329,7 @@ PHP_METHOD(php_wxSizerItem, SetInitSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -18936,6 +19348,7 @@ PHP_METHOD(php_wxSizerItem, SetInitSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetInitSize((int) x0, (int) y0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetInitSize((int) x0, (int) y0);
 
 
@@ -19023,6 +19436,7 @@ PHP_METHOD(php_wxSizerItem, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -19041,6 +19455,7 @@ PHP_METHOD(php_wxSizerItem, SetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetId((int) id0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetId((int) id0);
 
 
@@ -19128,6 +19543,7 @@ PHP_METHOD(php_wxSizerItem, SetFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flag0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flag0 ) == SUCCESS)
 		{
@@ -19146,6 +19562,7 @@ PHP_METHOD(php_wxSizerItem, SetFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetFlag((int) flag0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetFlag((int) flag0);
 
 
@@ -19236,6 +19653,7 @@ PHP_METHOD(php_wxSizerItem, SetDimension)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pos0, php_wxPoint_entry, &size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -19286,6 +19704,7 @@ PHP_METHOD(php_wxSizerItem, SetDimension)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetDimension(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetDimension(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
 				references->AddReference(pos0, "wxSizerItem::SetDimension at call with 2 argument(s)");
@@ -19375,6 +19794,7 @@ PHP_METHOD(php_wxSizerItem, SetBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&border0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &border0 ) == SUCCESS)
 		{
@@ -19393,6 +19813,7 @@ PHP_METHOD(php_wxSizerItem, SetBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::SetBorder((int) border0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->SetBorder((int) border0);
 
 
@@ -19479,6 +19900,7 @@ PHP_METHOD(php_wxSizerItem, IsWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19493,6 +19915,7 @@ PHP_METHOD(php_wxSizerItem, IsWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizerItem::IsWindow())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizerItem_php*)_this)->IsWindow());
 
 
@@ -19579,6 +20002,7 @@ PHP_METHOD(php_wxSizerItem, IsSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19593,6 +20017,7 @@ PHP_METHOD(php_wxSizerItem, IsSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizerItem::IsSpacer())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizerItem_php*)_this)->IsSpacer());
 
 
@@ -19679,6 +20104,7 @@ PHP_METHOD(php_wxSizerItem, IsSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19693,6 +20119,7 @@ PHP_METHOD(php_wxSizerItem, IsSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizerItem::IsSizer())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizerItem_php*)_this)->IsSizer());
 
 
@@ -19779,6 +20206,7 @@ PHP_METHOD(php_wxSizerItem, IsShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19793,6 +20221,7 @@ PHP_METHOD(php_wxSizerItem, IsShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSizerItem::IsShown())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSizerItem_php*)_this)->IsShown());
 
 
@@ -19881,6 +20310,7 @@ PHP_METHOD(php_wxSizerItem, AssignSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&sizer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer0 ) == SUCCESS)
 		{
@@ -19915,6 +20345,7 @@ PHP_METHOD(php_wxSizerItem, AssignSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::AssignSizer((wxSizer*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->AssignSizer((wxSizer*) object_pointer0_0);
 
 				references->AddReference(sizer0, "wxSizerItem::AssignSizer at call with 1 argument(s)");
@@ -20008,6 +20439,7 @@ PHP_METHOD(php_wxSizerItem, AssignSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -20040,6 +20472,7 @@ PHP_METHOD(php_wxSizerItem, AssignSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&w1, &h1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &w1, &h1 ) == SUCCESS)
 		{
@@ -20058,6 +20491,7 @@ PHP_METHOD(php_wxSizerItem, AssignSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::AssignSpacer(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->AssignSpacer(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(size0, "wxSizerItem::AssignSpacer at call with 1 argument(s)");
@@ -20077,6 +20511,7 @@ PHP_METHOD(php_wxSizerItem, AssignSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::AssignSpacer((int) w1, (int) h1)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->AssignSpacer((int) w1, (int) h1);
 
 
@@ -20165,6 +20600,7 @@ PHP_METHOD(php_wxSizerItem, AssignWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -20199,6 +20635,7 @@ PHP_METHOD(php_wxSizerItem, AssignWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::AssignWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->AssignWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxSizerItem::AssignWindow at call with 1 argument(s)");
@@ -20286,6 +20723,7 @@ PHP_METHOD(php_wxSizerItem, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20300,6 +20738,7 @@ PHP_METHOD(php_wxSizerItem, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizerItem_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -20391,6 +20830,7 @@ PHP_METHOD(php_wxSizerItem, DeleteWindows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20405,6 +20845,7 @@ PHP_METHOD(php_wxSizerItem, DeleteWindows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::DeleteWindows()\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->DeleteWindows();
 
 
@@ -20491,6 +20932,7 @@ PHP_METHOD(php_wxSizerItem, DetachSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20505,6 +20947,7 @@ PHP_METHOD(php_wxSizerItem, DetachSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::DetachSizer()\n\n");
 				#endif
+
 				((wxSizerItem_php*)_this)->DetachSizer();
 
 
@@ -20591,6 +21034,7 @@ PHP_METHOD(php_wxSizerItem, GetBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20605,6 +21049,7 @@ PHP_METHOD(php_wxSizerItem, GetBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxSizerItem::GetBorder())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxSizerItem_php*)_this)->GetBorder());
 
 
@@ -20691,6 +21136,7 @@ PHP_METHOD(php_wxSizerItem, GetFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20705,6 +21151,7 @@ PHP_METHOD(php_wxSizerItem, GetFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxSizerItem::GetFlag())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxSizerItem_php*)_this)->GetFlag());
 
 
@@ -20791,6 +21238,7 @@ PHP_METHOD(php_wxSizerItem, GetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20805,6 +21253,7 @@ PHP_METHOD(php_wxSizerItem, GetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxSizerItem::GetId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxSizerItem_php*)_this)->GetId());
 
 
@@ -20891,6 +21340,7 @@ PHP_METHOD(php_wxSizerItem, GetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20905,6 +21355,7 @@ PHP_METHOD(php_wxSizerItem, GetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetMinSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizerItem_php*)_this)->GetMinSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -20996,6 +21447,7 @@ PHP_METHOD(php_wxSizerItem, GetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21010,6 +21462,7 @@ PHP_METHOD(php_wxSizerItem, GetPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetPosition() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxSizerItem_php*)_this)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
@@ -21101,6 +21554,7 @@ PHP_METHOD(php_wxSizerItem, GetProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21115,6 +21569,7 @@ PHP_METHOD(php_wxSizerItem, GetProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxSizerItem::GetProportion())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxSizerItem_php*)_this)->GetProportion());
 
 
@@ -21201,6 +21656,7 @@ PHP_METHOD(php_wxSizerItem, GetRatio)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21215,6 +21671,7 @@ PHP_METHOD(php_wxSizerItem, GetRatio)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxSizerItem::GetRatio())\n\n");
 				#endif
+
 				ZVAL_DOUBLE(return_value, ((wxSizerItem_php*)_this)->GetRatio());
 
 
@@ -21301,6 +21758,7 @@ PHP_METHOD(php_wxSizerItem, GetRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21315,6 +21773,7 @@ PHP_METHOD(php_wxSizerItem, GetRect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetRect() to return new object\n\n");
 				#endif
+
 				wxRect value_to_return0;
 				value_to_return0 = ((wxSizerItem_php*)_this)->GetRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
@@ -21406,6 +21865,7 @@ PHP_METHOD(php_wxSizerItem, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21420,6 +21880,7 @@ PHP_METHOD(php_wxSizerItem, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizerItem_php*)_this)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -21511,6 +21972,7 @@ PHP_METHOD(php_wxSizerItem, GetSizer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21525,6 +21987,7 @@ PHP_METHOD(php_wxSizerItem, GetSizer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetSizer() to return object pointer\n\n");
 				#endif
+
 				wxSizer_php* value_to_return0;
 				value_to_return0 = (wxSizer_php*) ((wxSizerItem_php*)_this)->GetSizer();
 
@@ -21634,6 +22097,7 @@ PHP_METHOD(php_wxSizerItem, GetSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21648,6 +22112,7 @@ PHP_METHOD(php_wxSizerItem, GetSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetSpacer() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizerItem_php*)_this)->GetSpacer();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -21739,6 +22204,7 @@ PHP_METHOD(php_wxSizerItem, GetUserData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21753,6 +22219,7 @@ PHP_METHOD(php_wxSizerItem, GetUserData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetUserData() to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return0;
 				value_to_return0 = (wxObject_php*) ((wxSizerItem_php*)_this)->GetUserData();
 
@@ -21862,6 +22329,7 @@ PHP_METHOD(php_wxSizerItem, GetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21876,6 +22344,7 @@ PHP_METHOD(php_wxSizerItem, GetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerItem::GetWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxSizerItem_php*)_this)->GetWindow();
 
@@ -21957,6 +22426,7 @@ void php_wxSizerFlags_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxSizerFlags::wxSizerFlags(int proportion)
    Creates the wxSizer with the proportion specified by proportion. */
 PHP_METHOD(php_wxSizerFlags, __construct)
@@ -21990,6 +22460,7 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &proportion0 ) == SUCCESS)
 		{
@@ -22008,6 +22479,7 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxSizerFlags_php();
 
 				((wxSizerFlags_php*) _this)->references.Initialize();
@@ -22018,6 +22490,7 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) proportion0)\n");
 				#endif
+
 				_this = new wxSizerFlags_php((int) proportion0);
 
 				((wxSizerFlags_php*) _this)->references.Initialize();
@@ -22043,7 +22516,7 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSizerFlags::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSizerFlags::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -22117,6 +22590,7 @@ PHP_METHOD(php_wxSizerFlags, TripleBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -22135,6 +22609,7 @@ PHP_METHOD(php_wxSizerFlags, TripleBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::TripleBorder() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->TripleBorder();
 
@@ -22166,6 +22641,7 @@ PHP_METHOD(php_wxSizerFlags, TripleBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::TripleBorder((int) direction0) to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return1;
 				value_to_return1 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->TripleBorder((int) direction0);
 
@@ -22268,6 +22744,7 @@ PHP_METHOD(php_wxSizerFlags, Top)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22282,6 +22759,7 @@ PHP_METHOD(php_wxSizerFlags, Top)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Top() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Top();
 
@@ -22384,6 +22862,7 @@ PHP_METHOD(php_wxSizerFlags, Shaped)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22398,6 +22877,7 @@ PHP_METHOD(php_wxSizerFlags, Shaped)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Shaped() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Shaped();
 
@@ -22500,6 +22980,7 @@ PHP_METHOD(php_wxSizerFlags, Right)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22514,6 +22995,7 @@ PHP_METHOD(php_wxSizerFlags, Right)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Right() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Right();
 
@@ -22616,6 +23098,7 @@ PHP_METHOD(php_wxSizerFlags, ReserveSpaceEvenIfHidden)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22630,6 +23113,7 @@ PHP_METHOD(php_wxSizerFlags, ReserveSpaceEvenIfHidden)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::ReserveSpaceEvenIfHidden() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->ReserveSpaceEvenIfHidden();
 
@@ -22733,6 +23217,7 @@ PHP_METHOD(php_wxSizerFlags, Proportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &proportion0 ) == SUCCESS)
 		{
@@ -22751,6 +23236,7 @@ PHP_METHOD(php_wxSizerFlags, Proportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Proportion((int) proportion0) to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return1;
 				value_to_return1 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Proportion((int) proportion0);
 
@@ -22853,6 +23339,7 @@ PHP_METHOD(php_wxSizerFlags, Left)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22867,6 +23354,7 @@ PHP_METHOD(php_wxSizerFlags, Left)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Left() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Left();
 
@@ -22969,6 +23457,7 @@ PHP_METHOD(php_wxSizerFlags, GetDefaultBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22984,6 +23473,7 @@ PHP_METHOD(php_wxSizerFlags, GetDefaultBorder)
 				php_printf("Static ");
 				php_printf("Executing RETURN_LONG(wxSizerFlags::GetDefaultBorder())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxSizerFlags::GetDefaultBorder());
 
 
@@ -23066,6 +23556,7 @@ PHP_METHOD(php_wxSizerFlags, FixedMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23080,6 +23571,7 @@ PHP_METHOD(php_wxSizerFlags, FixedMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::FixedMinSize() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->FixedMinSize();
 
@@ -23182,6 +23674,7 @@ PHP_METHOD(php_wxSizerFlags, Expand)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23196,6 +23689,7 @@ PHP_METHOD(php_wxSizerFlags, Expand)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Expand() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Expand();
 
@@ -23298,6 +23792,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleHorzBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23312,6 +23807,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleHorzBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::DoubleHorzBorder() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->DoubleHorzBorder();
 
@@ -23415,6 +23911,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -23433,6 +23930,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::DoubleBorder() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->DoubleBorder();
 
@@ -23464,6 +23962,7 @@ PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::DoubleBorder((int) direction0) to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return1;
 				value_to_return1 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->DoubleBorder((int) direction0);
 
@@ -23566,6 +24065,7 @@ PHP_METHOD(php_wxSizerFlags, Centre)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23580,6 +24080,7 @@ PHP_METHOD(php_wxSizerFlags, Centre)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Centre() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Centre();
 
@@ -23682,6 +24183,7 @@ PHP_METHOD(php_wxSizerFlags, Center)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23696,6 +24198,7 @@ PHP_METHOD(php_wxSizerFlags, Center)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Center() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Center();
 
@@ -23798,6 +24301,7 @@ PHP_METHOD(php_wxSizerFlags, Bottom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23812,6 +24316,7 @@ PHP_METHOD(php_wxSizerFlags, Bottom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Bottom() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Bottom();
 
@@ -23919,6 +24424,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -23935,6 +24441,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&direction1, &borderinpixels1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction1, &borderinpixels1 ) == SUCCESS)
 		{
@@ -23953,6 +24460,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Border() to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return0;
 				value_to_return0 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Border();
 
@@ -23984,6 +24492,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Border((int) direction0) to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return1;
 				value_to_return1 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Border((int) direction0);
 
@@ -24022,6 +24531,7 @@ PHP_METHOD(php_wxSizerFlags, Border)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Border((int) direction1, (int) borderinpixels1) to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return2;
 				value_to_return2 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Border((int) direction1, (int) borderinpixels1);
 
@@ -24125,6 +24635,7 @@ PHP_METHOD(php_wxSizerFlags, Align)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alignment0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alignment0 ) == SUCCESS)
 		{
@@ -24143,6 +24654,7 @@ PHP_METHOD(php_wxSizerFlags, Align)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxSizerFlags::Align((int) alignment0) to return object reference\n\n");
 				#endif
+
 				wxSizerFlags_php* value_to_return1;
 				value_to_return1 = (wxSizerFlags_php*) &((wxSizerFlags_php*)_this)->Align((int) alignment0);
 
@@ -24188,6 +24700,7 @@ void php_wxFlexGridSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxFlexGridSizer::AddGrowableCol(int idx, int proportion)
    Specifies that column idx (starting from zero) should be grown if there is extra space available to the sizer. */
 PHP_METHOD(php_wxFlexGridSizer, AddGrowableCol)
@@ -24258,6 +24771,7 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&idx0, &proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0, &proportion0 ) == SUCCESS)
 		{
@@ -24276,6 +24790,7 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::AddGrowableCol((size_t) idx0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->AddGrowableCol((size_t) idx0);
 
 
@@ -24287,6 +24802,7 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::AddGrowableCol((size_t) idx0, (int) proportion0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->AddGrowableCol((size_t) idx0, (int) proportion0);
 
 
@@ -24375,6 +24891,7 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&idx0, &proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0, &proportion0 ) == SUCCESS)
 		{
@@ -24393,6 +24910,7 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::AddGrowableRow((size_t) idx0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->AddGrowableRow((size_t) idx0);
 
 
@@ -24404,6 +24922,7 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::AddGrowableRow((size_t) idx0, (int) proportion0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->AddGrowableRow((size_t) idx0, (int) proportion0);
 
 
@@ -24490,6 +25009,7 @@ PHP_METHOD(php_wxFlexGridSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24504,6 +25024,7 @@ PHP_METHOD(php_wxFlexGridSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxFlexGridSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -24595,6 +25116,7 @@ PHP_METHOD(php_wxFlexGridSizer, GetFlexibleDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24609,6 +25131,7 @@ PHP_METHOD(php_wxFlexGridSizer, GetFlexibleDirection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxFlexGridSizer::GetFlexibleDirection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxFlexGridSizer_php*)_this)->GetFlexibleDirection());
 
 
@@ -24695,6 +25218,7 @@ PHP_METHOD(php_wxFlexGridSizer, GetNonFlexibleGrowMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24709,6 +25233,7 @@ PHP_METHOD(php_wxFlexGridSizer, GetNonFlexibleGrowMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxFlexGridSizer::GetNonFlexibleGrowMode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxFlexGridSizer_php*)_this)->GetNonFlexibleGrowMode());
 
 
@@ -24796,6 +25321,7 @@ PHP_METHOD(php_wxFlexGridSizer, IsColGrowable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&idx0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0 ) == SUCCESS)
 		{
@@ -24814,6 +25340,7 @@ PHP_METHOD(php_wxFlexGridSizer, IsColGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFlexGridSizer::IsColGrowable((size_t) idx0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFlexGridSizer_php*)_this)->IsColGrowable((size_t) idx0));
 
 
@@ -24901,6 +25428,7 @@ PHP_METHOD(php_wxFlexGridSizer, IsRowGrowable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&idx0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0 ) == SUCCESS)
 		{
@@ -24919,6 +25447,7 @@ PHP_METHOD(php_wxFlexGridSizer, IsRowGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFlexGridSizer::IsRowGrowable((size_t) idx0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFlexGridSizer_php*)_this)->IsRowGrowable((size_t) idx0));
 
 
@@ -25005,6 +25534,7 @@ PHP_METHOD(php_wxFlexGridSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25019,6 +25549,7 @@ PHP_METHOD(php_wxFlexGridSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->RecalcSizes();
 
 
@@ -25106,6 +25637,7 @@ PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&idx0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0 ) == SUCCESS)
 		{
@@ -25124,6 +25656,7 @@ PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableCol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::RemoveGrowableCol((size_t) idx0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->RemoveGrowableCol((size_t) idx0);
 
 
@@ -25211,6 +25744,7 @@ PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&idx0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0 ) == SUCCESS)
 		{
@@ -25229,6 +25763,7 @@ PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableRow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::RemoveGrowableRow((size_t) idx0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->RemoveGrowableRow((size_t) idx0);
 
 
@@ -25316,6 +25851,7 @@ PHP_METHOD(php_wxFlexGridSizer, SetFlexibleDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -25334,6 +25870,7 @@ PHP_METHOD(php_wxFlexGridSizer, SetFlexibleDirection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::SetFlexibleDirection((int) direction0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->SetFlexibleDirection((int) direction0);
 
 
@@ -25421,6 +25958,7 @@ PHP_METHOD(php_wxFlexGridSizer, SetNonFlexibleGrowMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -25439,6 +25977,7 @@ PHP_METHOD(php_wxFlexGridSizer, SetNonFlexibleGrowMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFlexGridSizer::SetNonFlexibleGrowMode((wxFlexSizerGrowMode) mode0)\n\n");
 				#endif
+
 				((wxFlexGridSizer_php*)_this)->SetNonFlexibleGrowMode((wxFlexSizerGrowMode) mode0);
 
 
@@ -25509,6 +26048,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&cols0, &vgap0, &hgap0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cols0, &vgap0, &hgap0 ) == SUCCESS)
 		{
@@ -25525,6 +26065,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|O' (&cols1, &gap1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cols1, &gap1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -25557,6 +26098,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&rows2, &cols2, &vgap2, &hgap2)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rows2, &cols2, &vgap2, &hgap2 ) == SUCCESS)
 		{
@@ -25573,6 +26115,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&rows3, &cols3, &gap3, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rows3, &cols3, &gap3, php_wxSize_entry ) == SUCCESS)
 		{
@@ -25607,6 +26150,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) cols0, (int) vgap0, (int) hgap0)\n");
 				#endif
+
 				_this = new wxFlexGridSizer_php((int) cols0, (int) vgap0, (int) hgap0);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
@@ -25624,6 +26168,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) cols1)\n");
 				#endif
+
 				_this = new wxFlexGridSizer_php((int) cols1);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
@@ -25634,6 +26179,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) cols1, *(wxSize*) object_pointer1_1)\n");
 				#endif
+
 				_this = new wxFlexGridSizer_php((int) cols1, *(wxSize*) object_pointer1_1);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
@@ -25652,6 +26198,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) rows2, (int) cols2, (int) vgap2, (int) hgap2)\n");
 				#endif
+
 				_this = new wxFlexGridSizer_php((int) rows2, (int) cols2, (int) vgap2, (int) hgap2);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
@@ -25669,6 +26216,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) rows3, (int) cols3, *(wxSize*) object_pointer3_2)\n");
 				#endif
+
 				_this = new wxFlexGridSizer_php((int) rows3, (int) cols3, *(wxSize*) object_pointer3_2);
 
 				((wxFlexGridSizer_php*) _this)->references.Initialize();
@@ -25695,7 +26243,7 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFlexGridSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFlexGridSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -25711,6 +26259,7 @@ void php_wxGridSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxSize wxGridSizer::CalcMin()
    This method is abstract and has to be overwritten by any derived class. */
 PHP_METHOD(php_wxGridSizer, CalcMin)
@@ -25783,6 +26332,7 @@ PHP_METHOD(php_wxGridSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25797,6 +26347,7 @@ PHP_METHOD(php_wxGridSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxGridSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -25892,6 +26443,7 @@ PHP_METHOD(php_wxGridSizer, GetCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25906,6 +26458,7 @@ PHP_METHOD(php_wxGridSizer, GetCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizer::GetCols())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizer_php*)_this)->GetCols());
 
 
@@ -25996,6 +26549,7 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveColsCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26010,6 +26564,7 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveColsCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizer::GetEffectiveColsCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizer_php*)_this)->GetEffectiveColsCount());
 
 
@@ -26100,6 +26655,7 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveRowsCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26114,6 +26670,7 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveRowsCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizer::GetEffectiveRowsCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizer_php*)_this)->GetEffectiveRowsCount());
 
 
@@ -26204,6 +26761,7 @@ PHP_METHOD(php_wxGridSizer, GetHGap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26218,6 +26776,7 @@ PHP_METHOD(php_wxGridSizer, GetHGap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizer::GetHGap())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizer_php*)_this)->GetHGap());
 
 
@@ -26308,6 +26867,7 @@ PHP_METHOD(php_wxGridSizer, GetRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26322,6 +26882,7 @@ PHP_METHOD(php_wxGridSizer, GetRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizer::GetRows())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizer_php*)_this)->GetRows());
 
 
@@ -26412,6 +26973,7 @@ PHP_METHOD(php_wxGridSizer, GetVGap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26426,6 +26988,7 @@ PHP_METHOD(php_wxGridSizer, GetVGap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxGridSizer::GetVGap())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxGridSizer_php*)_this)->GetVGap());
 
 
@@ -26516,6 +27079,7 @@ PHP_METHOD(php_wxGridSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26530,6 +27094,7 @@ PHP_METHOD(php_wxGridSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxGridSizer_php*)_this)->RecalcSizes();
 
 
@@ -26621,6 +27186,7 @@ PHP_METHOD(php_wxGridSizer, SetCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&cols0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cols0 ) == SUCCESS)
 		{
@@ -26639,6 +27205,7 @@ PHP_METHOD(php_wxGridSizer, SetCols)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridSizer::SetCols((int) cols0)\n\n");
 				#endif
+
 				((wxGridSizer_php*)_this)->SetCols((int) cols0);
 
 
@@ -26730,6 +27297,7 @@ PHP_METHOD(php_wxGridSizer, SetHGap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&gap0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &gap0 ) == SUCCESS)
 		{
@@ -26748,6 +27316,7 @@ PHP_METHOD(php_wxGridSizer, SetHGap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridSizer::SetHGap((int) gap0)\n\n");
 				#endif
+
 				((wxGridSizer_php*)_this)->SetHGap((int) gap0);
 
 
@@ -26839,6 +27408,7 @@ PHP_METHOD(php_wxGridSizer, SetRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&rows0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rows0 ) == SUCCESS)
 		{
@@ -26857,6 +27427,7 @@ PHP_METHOD(php_wxGridSizer, SetRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridSizer::SetRows((int) rows0)\n\n");
 				#endif
+
 				((wxGridSizer_php*)_this)->SetRows((int) rows0);
 
 
@@ -26948,6 +27519,7 @@ PHP_METHOD(php_wxGridSizer, SetVGap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&gap0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &gap0 ) == SUCCESS)
 		{
@@ -26966,6 +27538,7 @@ PHP_METHOD(php_wxGridSizer, SetVGap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxGridSizer::SetVGap((int) gap0)\n\n");
 				#endif
+
 				((wxGridSizer_php*)_this)->SetVGap((int) gap0);
 
 
@@ -27036,6 +27609,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&cols0, &vgap0, &hgap0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cols0, &vgap0, &hgap0 ) == SUCCESS)
 		{
@@ -27052,6 +27626,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|O' (&cols1, &gap1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cols1, &gap1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -27084,6 +27659,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&rows2, &cols2, &vgap2, &hgap2)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rows2, &cols2, &vgap2, &hgap2 ) == SUCCESS)
 		{
@@ -27100,6 +27676,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&rows3, &cols3, &gap3, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rows3, &cols3, &gap3, php_wxSize_entry ) == SUCCESS)
 		{
@@ -27134,6 +27711,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) cols0, (int) vgap0, (int) hgap0)\n");
 				#endif
+
 				_this = new wxGridSizer_php((int) cols0, (int) vgap0, (int) hgap0);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
@@ -27151,6 +27729,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) cols1)\n");
 				#endif
+
 				_this = new wxGridSizer_php((int) cols1);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
@@ -27161,6 +27740,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) cols1, *(wxSize*) object_pointer1_1)\n");
 				#endif
+
 				_this = new wxGridSizer_php((int) cols1, *(wxSize*) object_pointer1_1);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
@@ -27179,6 +27759,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) rows2, (int) cols2, (int) vgap2, (int) hgap2)\n");
 				#endif
+
 				_this = new wxGridSizer_php((int) rows2, (int) cols2, (int) vgap2, (int) hgap2);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
@@ -27196,6 +27777,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) rows3, (int) cols3, *(wxSize*) object_pointer3_2)\n");
 				#endif
+
 				_this = new wxGridSizer_php((int) rows3, (int) cols3, *(wxSize*) object_pointer3_2);
 
 				((wxGridSizer_php*) _this)->references.Initialize();
@@ -27222,7 +27804,7 @@ PHP_METHOD(php_wxGridSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -27238,6 +27820,7 @@ void php_wxStaticBoxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxSize wxStaticBoxSizer::CalcMin()
    Implements the calculation of a box sizer's minimal. */
 PHP_METHOD(php_wxStaticBoxSizer, CalcMin)
@@ -27302,6 +27885,7 @@ PHP_METHOD(php_wxStaticBoxSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27316,6 +27900,7 @@ PHP_METHOD(php_wxStaticBoxSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStaticBoxSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxStaticBoxSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -27403,6 +27988,7 @@ PHP_METHOD(php_wxStaticBoxSizer, GetStaticBox)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27417,6 +28003,7 @@ PHP_METHOD(php_wxStaticBoxSizer, GetStaticBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStaticBoxSizer::GetStaticBox() to return object pointer\n\n");
 				#endif
+
 				wxStaticBox_php* value_to_return0;
 				value_to_return0 = (wxStaticBox_php*) ((wxStaticBoxSizer_php*)_this)->GetStaticBox();
 
@@ -27522,6 +28109,7 @@ PHP_METHOD(php_wxStaticBoxSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27536,6 +28124,7 @@ PHP_METHOD(php_wxStaticBoxSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStaticBoxSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxStaticBoxSizer_php*)_this)->RecalcSizes();
 
 
@@ -27596,6 +28185,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&box0, &orient0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &box0, &orient0 ) == SUCCESS)
 		{
@@ -27628,6 +28218,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz|s' (&orient1, &parent1, &label1, &label_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orient1, &parent1, &label1, &label_len1 ) == SUCCESS)
 		{
@@ -27662,6 +28253,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxStaticBox*) object_pointer0_0, (int) orient0)\n");
 				#endif
+
 				_this = new wxStaticBoxSizer_php((wxStaticBox*) object_pointer0_0, (int) orient0);
 
 				((wxStaticBoxSizer_php*) _this)->references.Initialize();
@@ -27680,6 +28272,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) orient1, (wxWindow*) object_pointer1_1)\n");
 				#endif
+
 				_this = new wxStaticBoxSizer_php((int) orient1, (wxWindow*) object_pointer1_1);
 
 				((wxStaticBoxSizer_php*) _this)->references.Initialize();
@@ -27691,6 +28284,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) orient1, (wxWindow*) object_pointer1_1, wxString(label1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxStaticBoxSizer_php((int) orient1, (wxWindow*) object_pointer1_1, wxString(label1, wxConvUTF8));
 
 				((wxStaticBoxSizer_php*) _this)->references.Initialize();
@@ -27717,7 +28311,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStaticBoxSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStaticBoxSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -27733,6 +28327,7 @@ void php_wxBoxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxBoxSizer::wxBoxSizer(int orient)
    Constructor for a wxBoxSizer. */
 PHP_METHOD(php_wxBoxSizer, __construct)
@@ -27766,6 +28361,7 @@ PHP_METHOD(php_wxBoxSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&orient0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orient0 ) == SUCCESS)
 		{
@@ -27784,6 +28380,7 @@ PHP_METHOD(php_wxBoxSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) orient0)\n");
 				#endif
+
 				_this = new wxBoxSizer_php((int) orient0);
 
 				((wxBoxSizer_php*) _this)->references.Initialize();
@@ -27809,7 +28406,7 @@ PHP_METHOD(php_wxBoxSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBoxSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBoxSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -27894,6 +28491,7 @@ PHP_METHOD(php_wxBoxSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27908,6 +28506,7 @@ PHP_METHOD(php_wxBoxSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBoxSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxBoxSizer_php*)_this)->RecalcSizes();
 
 
@@ -28002,6 +28601,7 @@ PHP_METHOD(php_wxBoxSizer, GetOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28016,6 +28616,7 @@ PHP_METHOD(php_wxBoxSizer, GetOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxBoxSizer::GetOrientation())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxBoxSizer_php*)_this)->GetOrientation());
 
 
@@ -28110,6 +28711,7 @@ PHP_METHOD(php_wxBoxSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28124,6 +28726,7 @@ PHP_METHOD(php_wxBoxSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBoxSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxBoxSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -28224,6 +28827,7 @@ PHP_METHOD(php_wxBoxSizer, AddSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
@@ -28242,6 +28846,7 @@ PHP_METHOD(php_wxBoxSizer, AddSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBoxSizer::AddSpacer((int) size0) to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return1;
 				value_to_return1 = (wxSizerItem_php*) ((wxBoxSizer_php*)_this)->AddSpacer((int) size0);
 
@@ -28290,6 +28895,7 @@ void php_wxWrapSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxWrapSizer::wxWrapSizer(int orient, int flags)
    Constructor for a wxWrapSizer. */
 PHP_METHOD(php_wxWrapSizer, __construct)
@@ -28324,6 +28930,7 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&orient0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orient0, &flags0 ) == SUCCESS)
 		{
@@ -28342,6 +28949,7 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxWrapSizer_php();
 
 				((wxWrapSizer_php*) _this)->references.Initialize();
@@ -28352,6 +28960,7 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) orient0)\n");
 				#endif
+
 				_this = new wxWrapSizer_php((int) orient0);
 
 				((wxWrapSizer_php*) _this)->references.Initialize();
@@ -28362,6 +28971,7 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) orient0, (int) flags0)\n");
 				#endif
+
 				_this = new wxWrapSizer_php((int) orient0, (int) flags0);
 
 				((wxWrapSizer_php*) _this)->references.Initialize();
@@ -28387,7 +28997,7 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWrapSizer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWrapSizer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -28460,6 +29070,7 @@ PHP_METHOD(php_wxWrapSizer, RecalcSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28474,6 +29085,7 @@ PHP_METHOD(php_wxWrapSizer, RecalcSizes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxWrapSizer::RecalcSizes()\n\n");
 				#endif
+
 				((wxWrapSizer_php*)_this)->RecalcSizes();
 
 
@@ -28649,6 +29261,7 @@ PHP_METHOD(php_wxWrapSizer, InformFirstDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&direction0, &size0, &availableOtherDir0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0, &size0, &availableOtherDir0 ) == SUCCESS)
 		{
@@ -28667,6 +29280,7 @@ PHP_METHOD(php_wxWrapSizer, InformFirstDirection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxWrapSizer::InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxWrapSizer_php*)_this)->InformFirstDirection((int) direction0, (int) size0, (int) availableOtherDir0));
 
 
@@ -28749,6 +29363,7 @@ PHP_METHOD(php_wxWrapSizer, CalcMin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -28763,6 +29378,7 @@ PHP_METHOD(php_wxWrapSizer, CalcMin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxWrapSizer::CalcMin() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxWrapSizer_php*)_this)->CalcMin();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);

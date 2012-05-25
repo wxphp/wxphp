@@ -91,6 +91,7 @@ void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxFileHistory::AddFileToHistory(string filename)
    Adds a file to the file history list, if the object has a pointer to an appropriate file menu. */
 PHP_METHOD(php_wxFileHistory, AddFileToHistory)
@@ -157,6 +158,7 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
 		{
@@ -175,6 +177,7 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::AddFileToHistory(wxString(filename0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->AddFileToHistory(wxString(filename0, wxConvUTF8));
 
 
@@ -261,6 +264,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -273,6 +277,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu1 ) == SUCCESS)
 		{
@@ -307,6 +312,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::AddFilesToMenu()\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->AddFilesToMenu();
 
 
@@ -325,6 +331,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::AddFilesToMenu((wxMenu*) object_pointer1_0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->AddFilesToMenu((wxMenu*) object_pointer1_0);
 
 				references->AddReference(menu1, "wxFileHistory::AddFilesToMenu at call with 1 argument(s)");
@@ -408,6 +415,7 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -422,6 +430,7 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxFileHistory::GetBaseId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxFileHistory_php*)_this)->GetBaseId());
 
 
@@ -504,6 +513,7 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -518,6 +528,7 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxFileHistory::GetCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxFileHistory_php*)_this)->GetCount());
 
 
@@ -601,6 +612,7 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
@@ -619,6 +631,7 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxFileHistory::GetHistoryFile((size_t) index0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxFileHistory_php*)_this)->GetHistoryFile((size_t) index0);
 				char* temp_string1;
@@ -707,6 +720,7 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -721,6 +735,7 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxFileHistory::GetMaxFiles())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxFileHistory_php*)_this)->GetMaxFiles());
 
 
@@ -805,6 +820,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&config0, php_wxConfigBase_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
 		{
@@ -839,6 +855,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::Load(*(wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->Load(*(wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(config0, "wxFileHistory::Load at call with 1 argument(s)");
@@ -923,6 +940,7 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&i0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &i0 ) == SUCCESS)
 		{
@@ -941,6 +959,7 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::RemoveFileFromHistory((size_t) i0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->RemoveFileFromHistory((size_t) i0);
 
 
@@ -1025,6 +1044,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
@@ -1059,6 +1079,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::RemoveMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->RemoveMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxFileHistory::RemoveMenu at call with 1 argument(s)");
@@ -1144,6 +1165,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&config0, php_wxConfigBase_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
 		{
@@ -1178,6 +1200,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::Save(*(wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->Save(*(wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(config0, "wxFileHistory::Save at call with 1 argument(s)");
@@ -1262,6 +1285,7 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&baseId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &baseId0 ) == SUCCESS)
 		{
@@ -1280,6 +1304,7 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::SetBaseId((wxWindowID) baseId0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->SetBaseId((wxWindowID) baseId0);
 
 
@@ -1364,6 +1389,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
@@ -1398,6 +1424,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFileHistory::UseMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxFileHistory_php*)_this)->UseMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxFileHistory::UseMenu at call with 1 argument(s)");
@@ -1451,6 +1478,7 @@ PHP_METHOD(php_wxFileHistory, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&maxFiles0, &idBase0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &maxFiles0, &idBase0 ) == SUCCESS)
 		{
@@ -1469,6 +1497,7 @@ PHP_METHOD(php_wxFileHistory, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxFileHistory_php();
 
 				((wxFileHistory_php*) _this)->references.Initialize();
@@ -1479,6 +1508,7 @@ PHP_METHOD(php_wxFileHistory, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((size_t) maxFiles0)\n");
 				#endif
+
 				_this = new wxFileHistory_php((size_t) maxFiles0);
 
 				((wxFileHistory_php*) _this)->references.Initialize();
@@ -1489,6 +1519,7 @@ PHP_METHOD(php_wxFileHistory, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((size_t) maxFiles0, (wxWindowID) idBase0)\n");
 				#endif
+
 				_this = new wxFileHistory_php((size_t) maxFiles0, (wxWindowID) idBase0);
 
 				((wxFileHistory_php*) _this)->references.Initialize();
@@ -1514,7 +1545,7 @@ PHP_METHOD(php_wxFileHistory, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFileHistory::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFileHistory::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

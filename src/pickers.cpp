@@ -58,6 +58,7 @@ void php_wxColourPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxColourPickerCtrl::Create(wxWindow &parent, int id, wxColour colour, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Creates a colour picker with the given arguments. */
 PHP_METHOD(php_wxColourPickerCtrl, Create)
@@ -136,6 +137,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -234,6 +236,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 2 argument(s)");
@@ -246,6 +249,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 3 argument(s)");
@@ -259,6 +263,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 4 argument(s)");
@@ -273,6 +278,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 5 argument(s)");
@@ -288,6 +294,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 6 argument(s)");
@@ -303,6 +310,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 7 argument(s)");
@@ -319,6 +327,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxColourPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxColourPickerCtrl::Create at call with 8 argument(s)");
@@ -406,6 +415,7 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -420,6 +430,7 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxColourPickerCtrl::GetColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxColourPickerCtrl_php*)_this)->GetColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -513,6 +524,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&col0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -545,6 +557,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&colname1, &colname_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colname1, &colname_len1 ) == SUCCESS)
 		{
@@ -563,6 +576,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxColourPickerCtrl::SetColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxColourPickerCtrl_php*)_this)->SetColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(col0, "wxColourPickerCtrl::SetColour at call with 1 argument(s)");
@@ -582,6 +596,7 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxColourPickerCtrl::SetColour(wxString(colname1, wxConvUTF8))\n\n");
 				#endif
+
 				((wxColourPickerCtrl_php*)_this)->SetColour(wxString(colname1, wxConvUTF8));
 
 
@@ -646,6 +661,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -744,6 +760,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -755,6 +772,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -767,6 +785,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -780,6 +799,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -794,6 +814,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -808,6 +829,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -823,6 +845,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxColourPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxColour*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxColourPickerCtrl_php*) _this)->references.Initialize();
@@ -853,7 +876,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxColourPickerCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxColourPickerCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -869,6 +892,7 @@ void php_wxDatePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxDatePickerCtrl::wxDatePickerCtrl(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxDatePickerCtrl, __construct)
@@ -914,6 +938,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|lOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -996,6 +1021,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1007,6 +1033,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0))\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1018,6 +1045,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1030,6 +1058,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1043,6 +1072,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1056,6 +1086,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1070,6 +1101,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxDatePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxDatePickerCtrl_php*) _this)->references.Initialize();
@@ -1099,7 +1131,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDatePickerCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDatePickerCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1185,6 +1217,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|lOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -1267,6 +1300,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 2 argument(s)");
@@ -1279,6 +1313,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 3 argument(s)");
@@ -1291,6 +1326,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 4 argument(s)");
@@ -1304,6 +1340,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 5 argument(s)");
@@ -1318,6 +1355,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 6 argument(s)");
@@ -1332,6 +1370,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 7 argument(s)");
@@ -1347,6 +1386,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxDatePickerCtrl::Create at call with 8 argument(s)");
@@ -1434,6 +1474,7 @@ PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&dt0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt0 ) == SUCCESS)
 		{
@@ -1452,6 +1493,7 @@ PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDatePickerCtrl::SetValue(wxDateTime(dt0))\n\n");
 				#endif
+
 				((wxDatePickerCtrl_php*)_this)->SetValue(wxDateTime(dt0));
 
 
@@ -1536,6 +1578,7 @@ PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&dt10, &dt20)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt10, &dt20 ) == SUCCESS)
 		{
@@ -1554,6 +1597,7 @@ PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDatePickerCtrl::SetRange(wxDateTime(dt10), wxDateTime(dt20))\n\n");
 				#endif
+
 				((wxDatePickerCtrl_php*)_this)->SetRange(wxDateTime(dt10), wxDateTime(dt20));
 
 
@@ -1636,6 +1680,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1650,6 +1695,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDatePickerCtrl::GetValue() to return timestamp\n\n");
 				#endif
+
 				long value_to_return0;
 				value_to_return0 = ((wxDatePickerCtrl_php*)_this)->GetValue().GetTicks();
 				ZVAL_LONG(return_value, value_to_return0);
@@ -1738,6 +1784,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&dt10, &dt20)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt10, &dt20 ) == SUCCESS)
 		{
@@ -1761,6 +1808,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDatePickerCtrl::GetRange(&date_time0_0, &date_time0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDatePickerCtrl_php*)_this)->GetRange(&date_time0_0, &date_time0_1));
 
 				ZVAL_LONG(dt10_ref, date_time0_0.GetTicks());
@@ -1788,6 +1836,7 @@ void php_wxFilePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxFilePickerCtrl::Create(wxWindow &parent, int id, string path, string message, string wildcard, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Creates this widget with the given parameters. */
 PHP_METHOD(php_wxFilePickerCtrl, Create)
@@ -1870,6 +1919,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|sssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|sssOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -1952,6 +2002,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 2 argument(s)");
@@ -1964,6 +2015,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 3 argument(s)");
@@ -1976,6 +2028,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 4 argument(s)");
@@ -1988,6 +2041,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 5 argument(s)");
@@ -2000,6 +2054,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 6 argument(s)");
@@ -2013,6 +2068,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 7 argument(s)");
@@ -2027,6 +2083,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 8 argument(s)");
@@ -2041,6 +2098,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 9 argument(s)");
@@ -2056,6 +2114,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFilePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFilePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxFilePickerCtrl::Create at call with 10 argument(s)");
@@ -2142,6 +2201,7 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2156,6 +2216,7 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxFilePickerCtrl::GetPath().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxFilePickerCtrl_php*)_this)->GetPath();
 				char* temp_string0;
@@ -2246,6 +2307,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&filename0, php_wxFileName_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
@@ -2280,6 +2342,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFilePickerCtrl::SetFileName(*(wxFileName*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxFilePickerCtrl_php*)_this)->SetFileName(*(wxFileName*) object_pointer0_0);
 
 				references->AddReference(filename0, "wxFilePickerCtrl::SetFileName at call with 1 argument(s)");
@@ -2365,6 +2428,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
 		{
@@ -2383,6 +2447,7 @@ PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFilePickerCtrl::SetPath(wxString(filename0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxFilePickerCtrl_php*)_this)->SetPath(wxString(filename0, wxConvUTF8));
 
 
@@ -2451,6 +2516,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|sssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|sssOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -2533,6 +2599,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2544,6 +2611,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2555,6 +2623,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2566,6 +2635,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2577,6 +2647,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5)\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2589,6 +2660,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6)\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2602,6 +2674,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0)\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2615,6 +2688,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8)\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8);
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2629,6 +2703,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxFilePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0, *(wxValidator*) object_pointer0_8, wxString(name0, wxConvUTF8));
 
 				((wxFilePickerCtrl_php*) _this)->references.Initialize();
@@ -2658,7 +2733,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFilePickerCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFilePickerCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2731,6 +2806,7 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2745,6 +2821,7 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFilePickerCtrl::GetFileName() to return new object\n\n");
 				#endif
+
 				wxFileName value_to_return0;
 				value_to_return0 = ((wxFilePickerCtrl_php*)_this)->GetFileName();
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
@@ -2775,6 +2852,7 @@ void php_wxDirPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxDirPickerCtrl::Create(wxWindow &parent, int id, string path, string message, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Creates the widgets with the given parameters. */
 PHP_METHOD(php_wxDirPickerCtrl, Create)
@@ -2855,6 +2933,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|ssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|ssOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -2937,6 +3016,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 2 argument(s)");
@@ -2949,6 +3029,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 3 argument(s)");
@@ -2961,6 +3042,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 4 argument(s)");
@@ -2973,6 +3055,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 5 argument(s)");
@@ -2986,6 +3069,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 6 argument(s)");
@@ -3000,6 +3084,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 7 argument(s)");
@@ -3014,6 +3099,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 8 argument(s)");
@@ -3029,6 +3115,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDirPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxDirPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxDirPickerCtrl::Create at call with 9 argument(s)");
@@ -3115,6 +3202,7 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3129,6 +3217,7 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDirPickerCtrl::GetDirName() to return new object\n\n");
 				#endif
+
 				wxFileName value_to_return0;
 				value_to_return0 = ((wxDirPickerCtrl_php*)_this)->GetDirName();
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
@@ -3216,6 +3305,7 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3230,6 +3320,7 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxDirPickerCtrl::GetPath().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxDirPickerCtrl_php*)_this)->GetPath();
 				char* temp_string0;
@@ -3320,6 +3411,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&dirname0, php_wxFileName_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, php_wxFileName_entry ) == SUCCESS)
 		{
@@ -3354,6 +3446,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDirPickerCtrl::SetDirName(*(wxFileName*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxDirPickerCtrl_php*)_this)->SetDirName(*(wxFileName*) object_pointer0_0);
 
 				references->AddReference(dirname0, "wxDirPickerCtrl::SetDirName at call with 1 argument(s)");
@@ -3439,6 +3532,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&dirname0, &dirname_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, &dirname_len0 ) == SUCCESS)
 		{
@@ -3457,6 +3551,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDirPickerCtrl::SetPath(wxString(dirname0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxDirPickerCtrl_php*)_this)->SetPath(wxString(dirname0, wxConvUTF8));
 
 
@@ -3523,6 +3618,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|ssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|ssOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -3605,6 +3701,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3616,6 +3713,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8));
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3627,6 +3725,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8));
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3638,6 +3737,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4)\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3650,6 +3750,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5)\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3663,6 +3764,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0)\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3676,6 +3778,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7)\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7);
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3690,6 +3793,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxDirPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(path0, wxConvUTF8), wxString(message0, wxConvUTF8), *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0, *(wxValidator*) object_pointer0_7, wxString(name0, wxConvUTF8));
 
 				((wxDirPickerCtrl_php*) _this)->references.Initialize();
@@ -3719,7 +3823,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDirPickerCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDirPickerCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -3735,6 +3839,7 @@ void php_wxFontPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxFontPickerCtrl::Create(wxWindow &parent, int id, wxFont font, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Creates this widget with given parameters. */
 PHP_METHOD(php_wxFontPickerCtrl, Create)
@@ -3813,6 +3918,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -3911,6 +4017,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 2 argument(s)");
@@ -3923,6 +4030,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 3 argument(s)");
@@ -3936,6 +4044,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 4 argument(s)");
@@ -3950,6 +4059,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 5 argument(s)");
@@ -3965,6 +4075,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 6 argument(s)");
@@ -3980,6 +4091,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 7 argument(s)");
@@ -3996,6 +4108,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxFontPickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxFontPickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxFontPickerCtrl::Create at call with 8 argument(s)");
@@ -4083,6 +4196,7 @@ PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4097,6 +4211,7 @@ PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxFontPickerCtrl::GetMaxPointSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxFontPickerCtrl_php*)_this)->GetMaxPointSize());
 
 
@@ -4179,6 +4294,7 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4193,6 +4309,7 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFontPickerCtrl::GetSelectedFont() to return new object\n\n");
 				#endif
+
 				wxFont value_to_return0;
 				value_to_return0 = ((wxFontPickerCtrl_php*)_this)->GetSelectedFont();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -4281,6 +4398,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&max0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &max0 ) == SUCCESS)
 		{
@@ -4299,6 +4417,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFontPickerCtrl::SetMaxPointSize((unsigned int) max0)\n\n");
 				#endif
+
 				((wxFontPickerCtrl_php*)_this)->SetMaxPointSize((unsigned int) max0);
 
 
@@ -4383,6 +4502,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -4417,6 +4537,7 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxFontPickerCtrl::SetSelectedFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxFontPickerCtrl_php*)_this)->SetSelectedFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxFontPickerCtrl::SetSelectedFont at call with 1 argument(s)");
@@ -4482,6 +4603,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -4580,6 +4702,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4591,6 +4714,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4603,6 +4727,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4616,6 +4741,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4630,6 +4756,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4644,6 +4771,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4659,6 +4787,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxFontPickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxFont*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxFontPickerCtrl_php*) _this)->references.Initialize();
@@ -4689,7 +4818,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFontPickerCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxFontPickerCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4705,6 +4834,7 @@ void php_wxPickerBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto int wxPickerBase::GetInternalMargin()
    Returns the margin (in pixel) between the picker and the text control. */
 PHP_METHOD(php_wxPickerBase, GetInternalMargin)
@@ -4785,6 +4915,7 @@ PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4799,6 +4930,7 @@ PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxPickerBase::GetInternalMargin())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)_this)->GetInternalMargin());
@@ -4916,6 +5048,7 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4930,6 +5063,7 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::GetPickerCtrl() to return object pointer\n\n");
 				#endif
+
 				wxControl_php* value_to_return0;
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
@@ -5074,6 +5208,7 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5088,6 +5223,7 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxPickerBase::GetPickerCtrlProportion())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)_this)->GetPickerCtrlProportion());
@@ -5205,6 +5341,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5219,6 +5356,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::GetTextCtrl() to return object pointer\n\n");
 				#endif
+
 				wxTextCtrl_php* value_to_return0;
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
@@ -5363,6 +5501,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5377,6 +5516,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxPickerBase::GetTextCtrlProportion())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					ZVAL_LONG(return_value, ((wxColourPickerCtrl_php*)_this)->GetTextCtrlProportion());
@@ -5494,6 +5634,7 @@ PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5508,6 +5649,7 @@ PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxPickerBase::HasTextCtrl())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->HasTextCtrl());
@@ -5625,6 +5767,7 @@ PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5639,6 +5782,7 @@ PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxPickerBase::IsPickerCtrlGrowable())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->IsPickerCtrlGrowable());
@@ -5756,6 +5900,7 @@ PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5770,6 +5915,7 @@ PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxPickerBase::IsTextCtrlGrowable())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					ZVAL_BOOL(return_value, ((wxColourPickerCtrl_php*)_this)->IsTextCtrlGrowable());
@@ -5888,6 +6034,7 @@ PHP_METHOD(php_wxPickerBase, SetInternalMargin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
@@ -5906,6 +6053,7 @@ PHP_METHOD(php_wxPickerBase, SetInternalMargin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetInternalMargin((int) margin0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetInternalMargin((int) margin0);
@@ -6024,6 +6172,7 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&grow0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grow0 ) == SUCCESS)
 		{
@@ -6042,6 +6191,7 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetPickerCtrlGrowable()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetPickerCtrlGrowable();
@@ -6072,6 +6222,7 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetPickerCtrlGrowable(grow0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetPickerCtrlGrowable(grow0);
@@ -6190,6 +6341,7 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&prop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prop0 ) == SUCCESS)
 		{
@@ -6208,6 +6360,7 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetPickerCtrlProportion((int) prop0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetPickerCtrlProportion((int) prop0);
@@ -6326,6 +6479,7 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&grow0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grow0 ) == SUCCESS)
 		{
@@ -6344,6 +6498,7 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetTextCtrlGrowable()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetTextCtrlGrowable();
@@ -6374,6 +6529,7 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetTextCtrlGrowable(grow0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetTextCtrlGrowable(grow0);
@@ -6492,6 +6648,7 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&prop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &prop0 ) == SUCCESS)
 		{
@@ -6510,6 +6667,7 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxPickerBase::SetTextCtrlProportion((int) prop0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxColourPickerCtrl)
 				{
 					((wxColourPickerCtrl_php*)_this)->SetTextCtrlProportion((int) prop0);
@@ -6554,6 +6712,7 @@ void php_wxTimePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxTimePickerCtrl::wxTimePickerCtrl(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxTimePickerCtrl, __construct)
@@ -6599,6 +6758,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|lOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -6681,6 +6841,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6692,6 +6853,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0))\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0));
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6703,6 +6865,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6715,6 +6878,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4)\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6728,6 +6892,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0)\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6741,6 +6906,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6)\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6);
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6755,6 +6921,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxTimePickerCtrl_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8));
 
 				((wxTimePickerCtrl_php*) _this)->references.Initialize();
@@ -6784,7 +6951,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTimePickerCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTimePickerCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -7018,6 +7185,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|lOOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -7100,6 +7268,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 2 argument(s)");
@@ -7112,6 +7281,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0)));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 3 argument(s)");
@@ -7124,6 +7294,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 4 argument(s)");
@@ -7137,6 +7308,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 5 argument(s)");
@@ -7151,6 +7323,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 6 argument(s)");
@@ -7165,6 +7338,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 7 argument(s)");
@@ -7180,6 +7354,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimePickerCtrl::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimePickerCtrl_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxDateTime(dt0), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, *(wxValidator*) object_pointer0_6, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxTimePickerCtrl::Create at call with 8 argument(s)");

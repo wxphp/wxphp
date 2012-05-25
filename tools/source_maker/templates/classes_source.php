@@ -73,3 +73,4 @@ void php_<?=$class_name?>_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 <?}?>
 }
+

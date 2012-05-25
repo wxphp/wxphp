@@ -91,6 +91,7 @@ void php_wxHtmlHelpController_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto bool wxHtmlHelpController::AddBook(wxFileName bookFile, bool showWaitMsg)
    Adds a book (i.e. */
 PHP_METHOD(php_wxHtmlHelpController, AddBook)
@@ -163,6 +164,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|b' (&bookFile0, php_wxFileName_entry, &showWaitMsg0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bookFile0, php_wxFileName_entry, &showWaitMsg0 ) == SUCCESS)
 		{
@@ -195,6 +197,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&bookUrl1, &bookUrl_len1, &showWaitMsg1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bookUrl1, &bookUrl_len1, &showWaitMsg1 ) == SUCCESS)
 		{
@@ -213,6 +216,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(*(wxFileName*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->AddBook(*(wxFileName*) object_pointer0_0));
 
 				references->AddReference(bookFile0, "wxHtmlHelpController::AddBook at call with 1 argument(s)");
@@ -225,6 +229,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(*(wxFileName*) object_pointer0_0, showWaitMsg0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->AddBook(*(wxFileName*) object_pointer0_0, showWaitMsg0));
 
 				references->AddReference(bookFile0, "wxHtmlHelpController::AddBook at call with 2 argument(s)");
@@ -244,6 +249,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(wxString(bookUrl1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->AddBook(wxString(bookUrl1, wxConvUTF8)));
 
 
@@ -255,6 +261,7 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::AddBook(wxString(bookUrl1, wxConvUTF8), showWaitMsg1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->AddBook(wxString(bookUrl1, wxConvUTF8), showWaitMsg1));
 
 
@@ -542,6 +549,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&x0, &x_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &x_len0 ) == SUCCESS)
 		{
@@ -558,6 +566,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id1)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1 ) == SUCCESS)
 		{
@@ -576,6 +585,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::Display(wxString(x0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->Display(wxString(x0, wxConvUTF8)));
 
 
@@ -594,6 +604,7 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::Display((int) id1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->Display((int) id1));
 
 
@@ -676,6 +687,7 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayContents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -690,6 +702,7 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayContents)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::DisplayContents())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->DisplayContents());
 
 
@@ -772,6 +785,7 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -786,6 +800,7 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::DisplayIndex())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->DisplayIndex());
 
 
@@ -871,6 +886,7 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&keyword0, &keyword_len0, &mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keyword0, &keyword_len0, &mode0 ) == SUCCESS)
 		{
@@ -889,6 +905,7 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::KeywordSearch(wxString(keyword0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->KeywordSearch(wxString(keyword0, wxConvUTF8)));
 
 
@@ -900,6 +917,7 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpController::KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpController_php*)_this)->KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0));
 
 
@@ -986,6 +1004,7 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&cfg0, &path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cfg0, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -1020,6 +1039,7 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::ReadCustomization((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(cfg0, "wxHtmlHelpController::ReadCustomization at call with 1 argument(s)");
@@ -1032,6 +1052,7 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::ReadCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
 				references->AddReference(cfg0, "wxHtmlHelpController::ReadCustomization at call with 2 argument(s)");
@@ -1116,6 +1137,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetShouldPreventAppExit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -1134,6 +1156,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetShouldPreventAppExit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::SetShouldPreventAppExit(enable0)\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->SetShouldPreventAppExit(enable0);
 
 
@@ -1218,6 +1241,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetTempDir)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -1236,6 +1260,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetTempDir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::SetTempDir(wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->SetTempDir(wxString(path0, wxConvUTF8));
 
 
@@ -1320,6 +1345,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&format0, &format_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, &format_len0 ) == SUCCESS)
 		{
@@ -1338,6 +1364,7 @@ PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::SetTitleFormat(wxString(format0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->SetTitleFormat(wxString(format0, wxConvUTF8));
 
 
@@ -1424,6 +1451,7 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&config0, &rootpath0, &rootpath_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, &rootpath0, &rootpath_len0 ) == SUCCESS)
 		{
@@ -1458,6 +1486,7 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::UseConfig((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(config0, "wxHtmlHelpController::UseConfig at call with 1 argument(s)");
@@ -1470,6 +1499,7 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::UseConfig((wxConfigBase*) object_pointer0_0, wxString(rootpath0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0, wxString(rootpath0, wxConvUTF8));
 
 				references->AddReference(config0, "wxHtmlHelpController::UseConfig at call with 2 argument(s)");
@@ -1557,6 +1587,7 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&cfg0, &path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cfg0, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -1591,6 +1622,7 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::WriteCustomization((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(cfg0, "wxHtmlHelpController::WriteCustomization at call with 1 argument(s)");
@@ -1603,6 +1635,7 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpController::WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpController_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
 				references->AddReference(cfg0, "wxHtmlHelpController::WriteCustomization at call with 2 argument(s)");
@@ -1657,6 +1690,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lz' (&style0, &parentWindow0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &parentWindow0 ) == SUCCESS)
 		{
@@ -1691,6 +1725,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlHelpController_php();
 
 				((wxHtmlHelpController_php*) _this)->references.Initialize();
@@ -1701,6 +1736,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) style0)\n");
 				#endif
+
 				_this = new wxHtmlHelpController_php((int) style0);
 
 				((wxHtmlHelpController_php*) _this)->references.Initialize();
@@ -1711,6 +1747,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) style0, (wxWindow*) object_pointer0_1)\n");
 				#endif
+
 				_this = new wxHtmlHelpController_php((int) style0, (wxWindow*) object_pointer0_1);
 
 				((wxHtmlHelpController_php*) _this)->references.Initialize();
@@ -1737,7 +1774,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpController::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpController::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1786,6 +1823,7 @@ void php_wxHtmlModalHelp_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlModalHelp::wxHtmlModalHelp(wxWindow &parent, string helpFile, string topic, int style)
    The ctor. */
 PHP_METHOD(php_wxHtmlModalHelp, __construct)
@@ -1825,6 +1863,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|sl' (&parent0, &helpFile0, &helpFile_len0, &topic0, &topic_len0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &helpFile0, &helpFile_len0, &topic0, &topic_len0, &style0 ) == SUCCESS)
 		{
@@ -1859,6 +1898,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlModalHelp_php((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8));
 
 				((wxHtmlModalHelp_php*) _this)->references.Initialize();
@@ -1870,6 +1910,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8), wxString(topic0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlModalHelp_php((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8), wxString(topic0, wxConvUTF8));
 
 				((wxHtmlModalHelp_php*) _this)->references.Initialize();
@@ -1881,6 +1922,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8), wxString(topic0, wxConvUTF8), (int) style0)\n");
 				#endif
+
 				_this = new wxHtmlModalHelp_php((wxWindow*) object_pointer0_0, wxString(helpFile0, wxConvUTF8), wxString(topic0, wxConvUTF8), (int) style0);
 
 				((wxHtmlModalHelp_php*) _this)->references.Initialize();
@@ -1907,7 +1949,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlModalHelp::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlModalHelp::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1956,6 +1998,7 @@ void php_wxHtmlHelpData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+
 /* {{{ proto bool wxHtmlHelpData::AddBook(string book_url)
    Adds new book. */
 PHP_METHOD(php_wxHtmlHelpData, AddBook)
@@ -2022,6 +2065,7 @@ PHP_METHOD(php_wxHtmlHelpData, AddBook)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&book_url0, &book_url_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &book_url0, &book_url_len0 ) == SUCCESS)
 		{
@@ -2040,6 +2084,7 @@ PHP_METHOD(php_wxHtmlHelpData, AddBook)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpData::AddBook(wxString(book_url0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpData_php*)_this)->AddBook(wxString(book_url0, wxConvUTF8)));
 
 
@@ -2123,6 +2168,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageById)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -2141,6 +2187,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageById)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlHelpData::FindPageById((int) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxHtmlHelpData_php*)_this)->FindPageById((int) id0);
 				char* temp_string1;
@@ -2231,6 +2278,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&page0, &page_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &page_len0 ) == SUCCESS)
 		{
@@ -2249,6 +2297,7 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlHelpData::FindPageByName(wxString(page0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxHtmlHelpData_php*)_this)->FindPageByName(wxString(page0, wxConvUTF8));
 				char* temp_string1;
@@ -2339,6 +2388,7 @@ PHP_METHOD(php_wxHtmlHelpData, SetTempDir)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -2357,6 +2407,7 @@ PHP_METHOD(php_wxHtmlHelpData, SetTempDir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpData::SetTempDir(wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpData_php*)_this)->SetTempDir(wxString(path0, wxConvUTF8));
 
 
@@ -2407,6 +2458,7 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2421,6 +2473,7 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlHelpData_php();
 
 				((wxHtmlHelpData_php*) _this)->references.Initialize();
@@ -2446,7 +2499,7 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpData::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpData::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2459,6 +2512,7 @@ void php_wxHtmlHelpDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 {
 	zend_error(E_NOTICE, "Object of class wxHtmlHelpDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+
 /* {{{ proto  wxHtmlHelpDialog::AddToolbarButtons(wxToolBar &toolBar, int style)
    You may override this virtual method to add more buttons to the help window's toolbar. */
 PHP_METHOD(php_wxHtmlHelpDialog, AddToolbarButtons)
@@ -2526,6 +2580,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, AddToolbarButtons)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&toolBar0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &toolBar0, &style0 ) == SUCCESS)
 		{
@@ -2560,6 +2615,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, AddToolbarButtons)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpDialog::AddToolbarButtons((wxToolBar*) object_pointer0_0, (int) style0)\n\n");
 				#endif
+
 				((wxHtmlHelpDialog_php*)_this)->AddToolbarButtons((wxToolBar*) object_pointer0_0, (int) style0);
 
 				references->AddReference(toolBar0, "wxHtmlHelpDialog::AddToolbarButtons at call with 2 argument(s)");
@@ -2649,6 +2705,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|sl' (&parent0, &id0, &title0, &title_len0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &style0 ) == SUCCESS)
 		{
@@ -2683,6 +2740,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxHtmlHelpDialog::Create at call with 2 argument(s)");
@@ -2695,6 +2753,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxHtmlHelpDialog::Create at call with 3 argument(s)");
@@ -2707,6 +2766,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpDialog::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
 
 				references->AddReference(parent0, "wxHtmlHelpDialog::Create at call with 4 argument(s)");
@@ -2790,6 +2850,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, GetController)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2804,6 +2865,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, GetController)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpDialog::GetController() to return object pointer\n\n");
 				#endif
+
 				wxHtmlHelpController_php* value_to_return0;
 				value_to_return0 = (wxHtmlHelpController_php*) ((wxHtmlHelpDialog_php*)_this)->GetController();
 
@@ -2911,6 +2973,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetController)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&controller0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &controller0 ) == SUCCESS)
 		{
@@ -2945,6 +3008,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetController)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpDialog::SetController((wxHtmlHelpController*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpDialog_php*)_this)->SetController((wxHtmlHelpController*) object_pointer0_0);
 
 				references->AddReference(controller0, "wxHtmlHelpDialog::SetController at call with 1 argument(s)");
@@ -3030,6 +3094,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetTitleFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&format0, &format_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, &format_len0 ) == SUCCESS)
 		{
@@ -3048,6 +3113,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetTitleFormat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpDialog::SetTitleFormat(wxString(format0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpDialog_php*)_this)->SetTitleFormat(wxString(format0, wxConvUTF8));
 
 
@@ -3109,6 +3175,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&data0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
@@ -3141,6 +3208,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|slz' (&parent1, &wxWindowID1, &title1, &title_len1, &style1, &data1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|slz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &wxWindowID1, &title1, &title_len1, &style1, &data1 ) == SUCCESS)
 		{
@@ -3191,6 +3259,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlHelpDialog_php();
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
@@ -3201,6 +3270,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxHtmlHelpData*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxHtmlHelpDialog_php((wxHtmlHelpData*) object_pointer0_0);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
@@ -3219,6 +3289,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1)\n");
 				#endif
+
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
@@ -3230,6 +3301,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8));
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
@@ -3241,6 +3313,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1)\n");
 				#endif
+
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
@@ -3252,6 +3325,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4)\n");
 				#endif
+
 				_this = new wxHtmlHelpDialog_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4);
 
 				((wxHtmlHelpDialog_php*) _this)->references.Initialize();
@@ -3279,7 +3353,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpDialog::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpDialog::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -3292,6 +3366,7 @@ void php_wxHtmlHelpFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 {
 	zend_error(E_NOTICE, "Object of class wxHtmlHelpFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+
 /* {{{ proto  wxHtmlHelpFrame::AddToolbarButtons(wxToolBar &toolBar, int style)
    You may override this virtual method to add more buttons to the help window's toolbar. */
 PHP_METHOD(php_wxHtmlHelpFrame, AddToolbarButtons)
@@ -3359,6 +3434,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, AddToolbarButtons)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&toolBar0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &toolBar0, &style0 ) == SUCCESS)
 		{
@@ -3393,6 +3469,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, AddToolbarButtons)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpFrame::AddToolbarButtons((wxToolBar*) object_pointer0_0, (int) style0)\n\n");
 				#endif
+
 				((wxHtmlHelpFrame_php*)_this)->AddToolbarButtons((wxToolBar*) object_pointer0_0, (int) style0);
 
 				references->AddReference(toolBar0, "wxHtmlHelpFrame::AddToolbarButtons at call with 2 argument(s)");
@@ -3486,6 +3563,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|slzs' (&parent0, &id0, &title0, &title_len0, &style0, &config0, &rootpath0, &rootpath_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|slzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &style0, &config0, &rootpath0, &rootpath_len0 ) == SUCCESS)
 		{
@@ -3536,6 +3614,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 2 argument(s)");
@@ -3548,6 +3627,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 3 argument(s)");
@@ -3560,6 +3640,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0));
 
 				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 4 argument(s)");
@@ -3572,6 +3653,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 5 argument(s)");
@@ -3585,6 +3667,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpFrame::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4, wxString(rootpath0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), (int) style0, (wxConfigBase*) object_pointer0_4, wxString(rootpath0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxHtmlHelpFrame::Create at call with 6 argument(s)");
@@ -3669,6 +3752,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, GetController)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3683,6 +3767,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, GetController)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpFrame::GetController() to return object pointer\n\n");
 				#endif
+
 				wxHtmlHelpController_php* value_to_return0;
 				value_to_return0 = (wxHtmlHelpController_php*) ((wxHtmlHelpFrame_php*)_this)->GetController();
 
@@ -3790,6 +3875,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetController)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&controller0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &controller0 ) == SUCCESS)
 		{
@@ -3824,6 +3910,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetController)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpFrame::SetController((wxHtmlHelpController*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpFrame_php*)_this)->SetController((wxHtmlHelpController*) object_pointer0_0);
 
 				references->AddReference(controller0, "wxHtmlHelpFrame::SetController at call with 1 argument(s)");
@@ -3909,6 +3996,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetTitleFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&format0, &format_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, &format_len0 ) == SUCCESS)
 		{
@@ -3927,6 +4015,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetTitleFormat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpFrame::SetTitleFormat(wxString(format0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpFrame_php*)_this)->SetTitleFormat(wxString(format0, wxConvUTF8));
 
 
@@ -3992,6 +4081,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&data0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
@@ -4024,6 +4114,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|slzzs' (&parent1, &wxWindowID1, &title1, &title_len1, &style1, &data1, &config1, &rootpath1, &rootpath_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|slzzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &wxWindowID1, &title1, &title_len1, &style1, &data1, &config1, &rootpath1, &rootpath_len1 ) == SUCCESS)
 		{
@@ -4090,6 +4181,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php();
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4100,6 +4192,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxHtmlHelpData*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxHtmlHelpData*) object_pointer0_0);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4118,6 +4211,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1)\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4129,6 +4223,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8));
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4140,6 +4235,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1)\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4151,6 +4247,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4)\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4163,6 +4260,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4, (wxConfigBase*) object_pointer1_5)\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4, (wxConfigBase*) object_pointer1_5);
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4176,6 +4274,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4, (wxConfigBase*) object_pointer1_5, wxString(rootpath1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlHelpFrame_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, wxString(title1, wxConvUTF8), (int) style1, (wxHtmlHelpData*) object_pointer1_4, (wxConfigBase*) object_pointer1_5, wxString(rootpath1, wxConvUTF8));
 
 				((wxHtmlHelpFrame_php*) _this)->references.Initialize();
@@ -4204,7 +4303,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpFrame::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpFrame::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4254,6 +4353,7 @@ void php_wxHtmlHelpWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlHelpWindow::AddToolbarButtons(wxToolBar &toolBar, int style)
    You may override this virtual method to add more buttons to the help window's toolbar. */
 void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
@@ -4418,6 +4518,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOll' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &helpStyle0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &helpStyle0 ) == SUCCESS)
 		{
@@ -4484,6 +4585,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 2 argument(s)");
@@ -4496,6 +4598,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 3 argument(s)");
@@ -4509,6 +4612,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 4 argument(s)");
@@ -4523,6 +4627,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0));
 
 				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 5 argument(s)");
@@ -4537,6 +4642,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0, (int) helpStyle0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (int) style0, (int) helpStyle0));
 
 				references->AddReference(parent0, "wxHtmlHelpWindow::Create at call with 6 argument(s)");
@@ -4627,6 +4733,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&x0, &x_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &x_len0 ) == SUCCESS)
 		{
@@ -4643,6 +4750,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id1)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1 ) == SUCCESS)
 		{
@@ -4661,6 +4769,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Display(wxString(x0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Display(wxString(x0, wxConvUTF8)));
 
 
@@ -4679,6 +4788,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::Display((const int) id1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->Display((const int) id1));
 
 
@@ -4761,6 +4871,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4775,6 +4886,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::DisplayIndex())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->DisplayIndex());
 
 
@@ -4857,6 +4969,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, GetData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4871,6 +4984,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, GetData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::GetData() to return object pointer\n\n");
 				#endif
+
 				wxHtmlHelpData_php* value_to_return0;
 				value_to_return0 = (wxHtmlHelpData_php*) ((wxHtmlHelpWindow_php*)_this)->GetData();
 
@@ -4976,6 +5090,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayContents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4990,6 +5105,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayContents)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::DisplayContents())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->DisplayContents());
 
 
@@ -5075,6 +5191,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&keyword0, &keyword_len0, &mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keyword0, &keyword_len0, &mode0 ) == SUCCESS)
 		{
@@ -5093,6 +5210,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::KeywordSearch(wxString(keyword0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->KeywordSearch(wxString(keyword0, wxConvUTF8)));
 
 
@@ -5104,6 +5222,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlHelpWindow::KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlHelpWindow_php*)_this)->KeywordSearch(wxString(keyword0, wxConvUTF8), (wxHelpSearchMode) mode0));
 
 
@@ -5190,6 +5309,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&cfg0, &path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cfg0, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -5224,6 +5344,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::ReadCustomization((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(cfg0, "wxHtmlHelpWindow::ReadCustomization at call with 1 argument(s)");
@@ -5236,6 +5357,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::ReadCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->ReadCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
 				references->AddReference(cfg0, "wxHtmlHelpWindow::ReadCustomization at call with 2 argument(s)");
@@ -5319,6 +5441,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, RefreshLists)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5333,6 +5456,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, RefreshLists)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::RefreshLists()\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->RefreshLists();
 
 
@@ -5419,6 +5543,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&config0, &rootpath0, &rootpath_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, &rootpath0, &rootpath_len0 ) == SUCCESS)
 		{
@@ -5453,6 +5578,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::UseConfig((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(config0, "wxHtmlHelpWindow::UseConfig at call with 1 argument(s)");
@@ -5465,6 +5591,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::UseConfig((wxConfigBase*) object_pointer0_0, wxString(rootpath0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->UseConfig((wxConfigBase*) object_pointer0_0, wxString(rootpath0, wxConvUTF8));
 
 				references->AddReference(config0, "wxHtmlHelpWindow::UseConfig at call with 2 argument(s)");
@@ -5552,6 +5679,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&cfg0, &path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cfg0, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -5586,6 +5714,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::WriteCustomization((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(cfg0, "wxHtmlHelpWindow::WriteCustomization at call with 1 argument(s)");
@@ -5598,6 +5727,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlHelpWindow::WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlHelpWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
 				references->AddReference(cfg0, "wxHtmlHelpWindow::WriteCustomization at call with 2 argument(s)");
@@ -5663,6 +5793,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&data0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
@@ -5695,6 +5826,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOllz' (&parent1, &wxWindowID1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &helpStyle1, &data1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOllz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &wxWindowID1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &helpStyle1, &data1 ) == SUCCESS)
 		{
@@ -5777,6 +5909,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php();
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5787,6 +5920,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxHtmlHelpData*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxHtmlHelpData*) object_pointer0_0);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5805,6 +5939,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5816,6 +5951,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5828,6 +5964,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5841,6 +5978,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5854,6 +5992,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1, (int) helpStyle1)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1, (int) helpStyle1);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5867,6 +6006,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1, (int) helpStyle1, (wxHtmlHelpData*) object_pointer1_6)\n");
 				#endif
+
 				_this = new wxHtmlHelpWindow_php((wxWindow*) object_pointer1_0, (int) wxWindowID1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (int) style1, (int) helpStyle1, (wxHtmlHelpData*) object_pointer1_6);
 
 				((wxHtmlHelpWindow_php*) _this)->references.Initialize();
@@ -5896,7 +6036,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpWindow::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlHelpWindow::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5945,6 +6085,7 @@ void php_wxHtmlRenderingStyle_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto wxColour wxHtmlRenderingStyle::GetSelectedTextBgColour(wxColour clr)
    Returns the colour to use for the selected text's background. */
 wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
@@ -6169,6 +6310,7 @@ void php_wxHtmlRenderingInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+
 /* {{{ proto wxHtmlRenderingStyle wxHtmlRenderingInfo::GetStyle()
    Accessors. */
 PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
@@ -6233,6 +6375,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6247,6 +6390,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlRenderingInfo::GetStyle() to return object reference\n\n");
 				#endif
+
 				wxHtmlRenderingStyle_php* value_to_return0;
 				value_to_return0 = (wxHtmlRenderingStyle_php*) &((wxHtmlRenderingInfo_php*)_this)->GetStyle();
 
@@ -6351,6 +6495,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, SetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -6385,6 +6530,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, SetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlRenderingInfo::SetStyle((wxHtmlRenderingStyle*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlRenderingInfo_php*)_this)->SetStyle((wxHtmlRenderingStyle*) object_pointer0_0);
 
 				references->AddReference(style0, "wxHtmlRenderingInfo::SetStyle at call with 1 argument(s)");
@@ -6436,6 +6582,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6450,6 +6597,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlRenderingInfo_php();
 
 				((wxHtmlRenderingInfo_php*) _this)->references.Initialize();
@@ -6475,7 +6623,7 @@ PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlRenderingInfo::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlRenderingInfo::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6524,6 +6672,7 @@ void php_wxHtmlCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto int wxHtmlCell::GetDescent()
    Returns descent value of the cell (m_Descent member). */
 PHP_METHOD(php_wxHtmlCell, GetDescent)
@@ -6600,6 +6749,7 @@ PHP_METHOD(php_wxHtmlCell, GetDescent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6614,6 +6764,7 @@ PHP_METHOD(php_wxHtmlCell, GetDescent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlCell::GetDescent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlCell_php*)_this)->GetDescent());
 
 
@@ -6708,6 +6859,7 @@ PHP_METHOD(php_wxHtmlCell, GetFirstChild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6722,6 +6874,7 @@ PHP_METHOD(php_wxHtmlCell, GetFirstChild)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::GetFirstChild() to return object pointer\n\n");
 				#endif
+
 				wxHtmlCell_php* value_to_return0;
 				value_to_return0 = (wxHtmlCell_php*) ((wxHtmlCell_php*)_this)->GetFirstChild();
 
@@ -6839,6 +6992,7 @@ PHP_METHOD(php_wxHtmlCell, GetHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6853,6 +7007,7 @@ PHP_METHOD(php_wxHtmlCell, GetHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlCell::GetHeight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlCell_php*)_this)->GetHeight());
 
 
@@ -6947,6 +7102,7 @@ PHP_METHOD(php_wxHtmlCell, GetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6961,6 +7117,7 @@ PHP_METHOD(php_wxHtmlCell, GetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlCell::GetId().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlCell_php*)_this)->GetId();
 				char* temp_string0;
@@ -7063,6 +7220,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -7081,6 +7239,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::GetLink() to return object pointer\n\n");
 				#endif
+
 				wxHtmlLinkInfo_php* value_to_return0;
 				value_to_return0 = (wxHtmlLinkInfo_php*) ((wxHtmlCell_php*)_this)->GetLink();
 
@@ -7115,6 +7274,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::GetLink((int) x0) to return object pointer\n\n");
 				#endif
+
 				wxHtmlLinkInfo_php* value_to_return1;
 				value_to_return1 = (wxHtmlLinkInfo_php*) ((wxHtmlCell_php*)_this)->GetLink((int) x0);
 
@@ -7149,6 +7309,7 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::GetLink((int) x0, (int) y0) to return object pointer\n\n");
 				#endif
+
 				wxHtmlLinkInfo_php* value_to_return2;
 				value_to_return2 = (wxHtmlLinkInfo_php*) ((wxHtmlCell_php*)_this)->GetLink((int) x0, (int) y0);
 
@@ -7266,6 +7427,7 @@ PHP_METHOD(php_wxHtmlCell, GetNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7280,6 +7442,7 @@ PHP_METHOD(php_wxHtmlCell, GetNext)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::GetNext() to return object pointer\n\n");
 				#endif
+
 				wxHtmlCell_php* value_to_return0;
 				value_to_return0 = (wxHtmlCell_php*) ((wxHtmlCell_php*)_this)->GetNext();
 
@@ -7397,6 +7560,7 @@ PHP_METHOD(php_wxHtmlCell, GetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7411,6 +7575,7 @@ PHP_METHOD(php_wxHtmlCell, GetParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::GetParent() to return object pointer\n\n");
 				#endif
+
 				wxHtmlContainerCell_php* value_to_return0;
 				value_to_return0 = (wxHtmlContainerCell_php*) ((wxHtmlCell_php*)_this)->GetParent();
 
@@ -7528,6 +7693,7 @@ PHP_METHOD(php_wxHtmlCell, GetPosX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7542,6 +7708,7 @@ PHP_METHOD(php_wxHtmlCell, GetPosX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlCell::GetPosX())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlCell_php*)_this)->GetPosX());
 
 
@@ -7636,6 +7803,7 @@ PHP_METHOD(php_wxHtmlCell, GetPosY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7650,6 +7818,7 @@ PHP_METHOD(php_wxHtmlCell, GetPosY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlCell::GetPosY())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlCell_php*)_this)->GetPosY());
 
 
@@ -7744,6 +7913,7 @@ PHP_METHOD(php_wxHtmlCell, GetWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7758,6 +7928,7 @@ PHP_METHOD(php_wxHtmlCell, GetWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlCell::GetWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlCell_php*)_this)->GetWidth());
 
 
@@ -7853,6 +8024,7 @@ PHP_METHOD(php_wxHtmlCell, Layout)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&w0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &w0 ) == SUCCESS)
 		{
@@ -7871,6 +8043,7 @@ PHP_METHOD(php_wxHtmlCell, Layout)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::Layout((int) w0)\n\n");
 				#endif
+
 				((wxHtmlCell_php*)_this)->Layout((int) w0);
 
 
@@ -7967,6 +8140,7 @@ PHP_METHOD(php_wxHtmlCell, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&id0, &id_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &id_len0 ) == SUCCESS)
 		{
@@ -7985,6 +8159,7 @@ PHP_METHOD(php_wxHtmlCell, SetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::SetId(wxString(id0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlCell_php*)_this)->SetId(wxString(id0, wxConvUTF8));
 
 
@@ -8081,6 +8256,7 @@ PHP_METHOD(php_wxHtmlCell, SetLink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&link0, php_wxHtmlLinkInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &link0, php_wxHtmlLinkInfo_entry ) == SUCCESS)
 		{
@@ -8115,6 +8291,7 @@ PHP_METHOD(php_wxHtmlCell, SetLink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::SetLink(*(wxHtmlLinkInfo*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlCell_php*)_this)->SetLink(*(wxHtmlLinkInfo*) object_pointer0_0);
 
 				references->AddReference(link0, "wxHtmlCell::SetLink at call with 1 argument(s)");
@@ -8212,6 +8389,7 @@ PHP_METHOD(php_wxHtmlCell, SetNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&cell0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cell0 ) == SUCCESS)
 		{
@@ -8246,6 +8424,7 @@ PHP_METHOD(php_wxHtmlCell, SetNext)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::SetNext((wxHtmlCell*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlCell_php*)_this)->SetNext((wxHtmlCell*) object_pointer0_0);
 
 				references->AddReference(cell0, "wxHtmlCell::SetNext at call with 1 argument(s)");
@@ -8343,6 +8522,7 @@ PHP_METHOD(php_wxHtmlCell, SetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&p0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &p0 ) == SUCCESS)
 		{
@@ -8377,6 +8557,7 @@ PHP_METHOD(php_wxHtmlCell, SetParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::SetParent((wxHtmlContainerCell*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlCell_php*)_this)->SetParent((wxHtmlContainerCell*) object_pointer0_0);
 
 				references->AddReference(p0, "wxHtmlCell::SetParent at call with 1 argument(s)");
@@ -8474,6 +8655,7 @@ PHP_METHOD(php_wxHtmlCell, SetPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -8492,6 +8674,7 @@ PHP_METHOD(php_wxHtmlCell, SetPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::SetPos((int) x0, (int) y0)\n\n");
 				#endif
+
 				((wxHtmlCell_php*)_this)->SetPos((int) x0, (int) y0);
 
 
@@ -8542,6 +8725,7 @@ PHP_METHOD(php_wxHtmlCell, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8556,6 +8740,7 @@ PHP_METHOD(php_wxHtmlCell, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlCell_php();
 
 				((wxHtmlCell_php*) _this)->references.Initialize();
@@ -8581,7 +8766,7 @@ PHP_METHOD(php_wxHtmlCell, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlCell::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlCell::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -8669,6 +8854,7 @@ PHP_METHOD(php_wxHtmlCell, Find)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&condition0, &param0, &param_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &condition0, &param0, &param_len0 ) == SUCCESS)
 		{
@@ -8687,6 +8873,7 @@ PHP_METHOD(php_wxHtmlCell, Find)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCell::Find((int) condition0, (const void*) param0) to return object pointer\n\n");
 				#endif
+
 				wxHtmlCell_php* value_to_return2;
 				value_to_return2 = (wxHtmlCell_php*) ((wxHtmlCell_php*)_this)->Find((int) condition0, (const void*) param0);
 
@@ -8768,6 +8955,7 @@ void php_wxHtmlContainerCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlContainerCell::wxHtmlContainerCell(wxHtmlContainerCell &parent)
    Constructor. */
 PHP_METHOD(php_wxHtmlContainerCell, __construct)
@@ -8802,6 +8990,7 @@ PHP_METHOD(php_wxHtmlContainerCell, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
@@ -8836,6 +9025,7 @@ PHP_METHOD(php_wxHtmlContainerCell, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxHtmlContainerCell*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxHtmlContainerCell_php((wxHtmlContainerCell*) object_pointer0_0);
 
 				((wxHtmlContainerCell_php*) _this)->references.Initialize();
@@ -8862,7 +9052,7 @@ PHP_METHOD(php_wxHtmlContainerCell, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlContainerCell::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlContainerCell::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -8942,6 +9132,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|d' (&tag0, php_wxHtmlTag_entry, &pixel_scale0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tag0, php_wxHtmlTag_entry, &pixel_scale0 ) == SUCCESS)
 		{
@@ -8974,6 +9165,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&w1, &units1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &w1, &units1 ) == SUCCESS)
 		{
@@ -8992,6 +9184,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetWidthFloat(*(wxHtmlTag*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetWidthFloat(*(wxHtmlTag*) object_pointer0_0);
 
 				references->AddReference(tag0, "wxHtmlContainerCell::SetWidthFloat at call with 1 argument(s)");
@@ -9004,6 +9197,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetWidthFloat(*(wxHtmlTag*) object_pointer0_0, pixel_scale0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetWidthFloat(*(wxHtmlTag*) object_pointer0_0, pixel_scale0);
 
 				references->AddReference(tag0, "wxHtmlContainerCell::SetWidthFloat at call with 2 argument(s)");
@@ -9023,6 +9217,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetWidthFloat((int) w1, (int) units1)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetWidthFloat((int) w1, (int) units1);
 
 
@@ -9107,6 +9302,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetMinHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&h0, &align0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &h0, &align0 ) == SUCCESS)
 		{
@@ -9125,6 +9321,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetMinHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetMinHeight((int) h0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetMinHeight((int) h0);
 
 
@@ -9136,6 +9333,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetMinHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetMinHeight((int) h0, (int) align0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetMinHeight((int) h0, (int) align0);
 
 
@@ -9221,6 +9419,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|l' (&i0, &what0, &units0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &i0, &what0, &units0 ) == SUCCESS)
 		{
@@ -9239,6 +9438,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetIndent((int) i0, (int) what0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetIndent((int) i0, (int) what0);
 
 
@@ -9250,6 +9450,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetIndent((int) i0, (int) what0, (int) units0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetIndent((int) i0, (int) what0, (int) units0);
 
 
@@ -9337,6 +9538,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO|l' (&clr10, php_wxColour_entry, &clr20, php_wxColour_entry, &border0)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clr10, php_wxColour_entry, &clr20, php_wxColour_entry, &border0 ) == SUCCESS)
 		{
@@ -9387,6 +9589,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetBorder(*(wxColour*) object_pointer0_0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetBorder(*(wxColour*) object_pointer0_0, *(wxColour*) object_pointer0_1);
 
 				references->AddReference(clr10, "wxHtmlContainerCell::SetBorder at call with 2 argument(s)");
@@ -9400,6 +9603,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetBorder(*(wxColour*) object_pointer0_0, *(wxColour*) object_pointer0_1, (int) border0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetBorder(*(wxColour*) object_pointer0_0, *(wxColour*) object_pointer0_1, (int) border0);
 
 				references->AddReference(clr10, "wxHtmlContainerCell::SetBorder at call with 3 argument(s)");
@@ -9486,6 +9690,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&clr0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clr0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -9520,6 +9725,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetBackgroundColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(clr0, "wxHtmlContainerCell::SetBackgroundColour at call with 1 argument(s)");
@@ -9604,6 +9810,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlignVer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&al0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &al0 ) == SUCCESS)
 		{
@@ -9622,6 +9829,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlignVer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetAlignVer((int) al0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetAlignVer((int) al0);
 
 
@@ -9705,6 +9913,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlignHor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&al0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &al0 ) == SUCCESS)
 		{
@@ -9723,6 +9932,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlignHor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetAlignHor((int) al0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetAlignHor((int) al0);
 
 
@@ -9807,6 +10017,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlign)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&tag0, php_wxHtmlTag_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tag0, php_wxHtmlTag_entry ) == SUCCESS)
 		{
@@ -9841,6 +10052,7 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlign)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::SetAlign(*(wxHtmlTag*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->SetAlign(*(wxHtmlTag*) object_pointer0_0);
 
 				references->AddReference(tag0, "wxHtmlContainerCell::SetAlign at call with 1 argument(s)");
@@ -9926,6 +10138,7 @@ PHP_METHOD(php_wxHtmlContainerCell, InsertCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&cell0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cell0 ) == SUCCESS)
 		{
@@ -9960,6 +10173,7 @@ PHP_METHOD(php_wxHtmlContainerCell, InsertCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::InsertCell((wxHtmlCell*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlContainerCell_php*)_this)->InsertCell((wxHtmlCell*) object_pointer0_0);
 
 				references->AddReference(cell0, "wxHtmlContainerCell::InsertCell at call with 1 argument(s)");
@@ -10044,6 +10258,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndentUnits)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&ind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ind0 ) == SUCCESS)
 		{
@@ -10062,6 +10277,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndentUnits)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetIndentUnits((int) ind0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)_this)->GetIndentUnits((int) ind0));
 
 
@@ -10145,6 +10361,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&ind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ind0 ) == SUCCESS)
 		{
@@ -10163,6 +10380,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetIndent((int) ind0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)_this)->GetIndent((int) ind0));
 
 
@@ -10245,6 +10463,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10259,6 +10478,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlContainerCell::GetBackgroundColour() to return new object\n\n");
 				#endif
+
 				wxColour value_to_return0;
 				value_to_return0 = ((wxHtmlContainerCell_php*)_this)->GetBackgroundColour();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -10346,6 +10566,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignVer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10360,6 +10581,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignVer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetAlignVer())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)_this)->GetAlignVer());
 
 
@@ -10442,6 +10664,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignHor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10456,6 +10679,7 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignHor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlContainerCell::GetAlignHor())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlContainerCell_php*)_this)->GetAlignHor());
 
 
@@ -10514,6 +10738,7 @@ void php_wxHtmlLinkInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+
 /* {{{ proto wxMouseEvent wxHtmlLinkInfo::GetEvent()
    Return pointer to event that generated OnLinkClicked() event. */
 PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
@@ -10578,6 +10803,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10592,6 +10818,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlLinkInfo::GetEvent() to return object pointer\n\n");
 				#endif
+
 				wxMouseEvent_php* value_to_return0;
 				value_to_return0 = (wxMouseEvent_php*) ((wxHtmlLinkInfo_php*)_this)->GetEvent();
 
@@ -10697,6 +10924,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHref)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10711,6 +10939,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHref)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlLinkInfo::GetHref().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlLinkInfo_php*)_this)->GetHref();
 				char* temp_string0;
@@ -10799,6 +11028,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10813,6 +11043,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlLinkInfo::GetHtmlCell() to return object pointer\n\n");
 				#endif
+
 				wxHtmlCell_php* value_to_return0;
 				value_to_return0 = (wxHtmlCell_php*) ((wxHtmlLinkInfo_php*)_this)->GetHtmlCell();
 
@@ -10918,6 +11149,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10932,6 +11164,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetTarget)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlLinkInfo::GetTarget().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlLinkInfo_php*)_this)->GetTarget();
 				char* temp_string0;
@@ -10994,6 +11227,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11006,6 +11240,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&href1, &href_len1, &target1, &target_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &href1, &href_len1, &target1, &target_len1 ) == SUCCESS)
 		{
@@ -11024,6 +11259,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlLinkInfo_php();
 
 				((wxHtmlLinkInfo_php*) _this)->references.Initialize();
@@ -11041,6 +11277,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(href1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlLinkInfo_php(wxString(href1, wxConvUTF8));
 
 				((wxHtmlLinkInfo_php*) _this)->references.Initialize();
@@ -11051,6 +11288,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(href1, wxConvUTF8), wxString(target1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlLinkInfo_php(wxString(href1, wxConvUTF8), wxString(target1, wxConvUTF8));
 
 				((wxHtmlLinkInfo_php*) _this)->references.Initialize();
@@ -11076,7 +11314,7 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlLinkInfo::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlLinkInfo::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -11125,6 +11363,7 @@ void php_wxHtmlColourCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlColourCell::wxHtmlColourCell(wxColour clr, int flags)
    Constructor. */
 PHP_METHOD(php_wxHtmlColourCell, __construct)
@@ -11160,6 +11399,7 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&clr0, php_wxColour_entry, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clr0, php_wxColour_entry, &flags0 ) == SUCCESS)
 		{
@@ -11194,6 +11434,7 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxHtmlColourCell_php(*(wxColour*) object_pointer0_0);
 
 				((wxHtmlColourCell_php*) _this)->references.Initialize();
@@ -11205,6 +11446,7 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer0_0, (int) flags0)\n");
 				#endif
+
 				_this = new wxHtmlColourCell_php(*(wxColour*) object_pointer0_0, (int) flags0);
 
 				((wxHtmlColourCell_php*) _this)->references.Initialize();
@@ -11231,7 +11473,7 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlColourCell::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlColourCell::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -11280,6 +11522,7 @@ void php_wxHtmlWidgetCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlWidgetCell::wxHtmlWidgetCell(wxWindow &wnd, int w)
    Constructor. */
 PHP_METHOD(php_wxHtmlWidgetCell, __construct)
@@ -11315,6 +11558,7 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|l' (&wnd0, &w0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wnd0, &w0 ) == SUCCESS)
 		{
@@ -11349,6 +11593,7 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxHtmlWidgetCell_php((wxWindow*) object_pointer0_0);
 
 				((wxHtmlWidgetCell_php*) _this)->references.Initialize();
@@ -11360,6 +11605,7 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (int) w0)\n");
 				#endif
+
 				_this = new wxHtmlWidgetCell_php((wxWindow*) object_pointer0_0, (int) w0);
 
 				((wxHtmlWidgetCell_php*) _this)->references.Initialize();
@@ -11386,7 +11632,7 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlWidgetCell::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlWidgetCell::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -11435,6 +11681,7 @@ void php_wxHtmlFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto bool wxHtmlFilter::CanRead(wxFSFile file)
    Returns true if this filter is capable of reading file file. */
 bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
@@ -11631,6 +11878,7 @@ PHP_METHOD(php_wxHtmlFilter, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11645,6 +11893,7 @@ PHP_METHOD(php_wxHtmlFilter, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlFilter_php();
 
 				((wxHtmlFilter_php*) _this)->references.Initialize();
@@ -11670,7 +11919,7 @@ PHP_METHOD(php_wxHtmlFilter, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlFilter::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlFilter::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -11719,6 +11968,7 @@ void php_wxHtmlTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto string wxHtmlTagHandler::GetSupportedTags()
    Returns list of supported tags. */
 wxString wxHtmlTagHandler_php::GetSupportedTags()
@@ -11900,6 +12150,7 @@ PHP_METHOD(php_wxHtmlTagHandler, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11914,6 +12165,7 @@ PHP_METHOD(php_wxHtmlTagHandler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlTagHandler_php();
 
 				((wxHtmlTagHandler_php*) _this)->references.Initialize();
@@ -11939,7 +12191,7 @@ PHP_METHOD(php_wxHtmlTagHandler, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlTagHandler::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlTagHandler::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -12048,6 +12300,7 @@ void php_wxHtmlTag_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto string wxHtmlTag::GetAllParams()
    Returns a string containing all parameters. */
 PHP_METHOD(php_wxHtmlTag, GetAllParams)
@@ -12112,6 +12365,7 @@ PHP_METHOD(php_wxHtmlTag, GetAllParams)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12126,6 +12380,7 @@ PHP_METHOD(php_wxHtmlTag, GetAllParams)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlTag::GetAllParams().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
@@ -12217,6 +12472,7 @@ PHP_METHOD(php_wxHtmlTag, GetBeginPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12231,6 +12487,7 @@ PHP_METHOD(php_wxHtmlTag, GetBeginPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlTag::GetBeginPos())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlTag_php*)_this)->GetBeginPos());
@@ -12316,6 +12573,7 @@ PHP_METHOD(php_wxHtmlTag, GetEndPos1)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12330,6 +12588,7 @@ PHP_METHOD(php_wxHtmlTag, GetEndPos1)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlTag::GetEndPos1())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlTag_php*)_this)->GetEndPos1());
@@ -12415,6 +12674,7 @@ PHP_METHOD(php_wxHtmlTag, GetEndPos2)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12429,6 +12689,7 @@ PHP_METHOD(php_wxHtmlTag, GetEndPos2)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlTag::GetEndPos2())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlTag_php*)_this)->GetEndPos2());
@@ -12514,6 +12775,7 @@ PHP_METHOD(php_wxHtmlTag, GetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12528,6 +12790,7 @@ PHP_METHOD(php_wxHtmlTag, GetName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlTag::GetName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
@@ -12622,6 +12885,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&par0, &par_len0, &with_quotes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &par0, &par_len0, &with_quotes0 ) == SUCCESS)
 		{
@@ -12640,6 +12904,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlTag::GetParam(wxString(par0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
@@ -12660,6 +12925,7 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlTag::GetParam(wxString(par0, wxConvUTF8), with_quotes0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
@@ -12755,6 +13021,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sz' (&par0, &par_len0, &clr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &par0, &par_len0, &clr0 ) == SUCCESS)
 		{
@@ -12789,6 +13056,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlTag::GetParamAsColour(wxString(par0, wxConvUTF8), (wxColour*) object_pointer0_1))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_BOOL(return_value, ((wxHtmlTag_php*)_this)->GetParamAsColour(wxString(par0, wxConvUTF8), (wxColour*) object_pointer0_1));
@@ -12875,6 +13143,7 @@ PHP_METHOD(php_wxHtmlTag, HasEnding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12889,6 +13158,7 @@ PHP_METHOD(php_wxHtmlTag, HasEnding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlTag::HasEnding())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_BOOL(return_value, ((wxHtmlTag_php*)_this)->HasEnding());
@@ -12976,6 +13246,7 @@ PHP_METHOD(php_wxHtmlTag, HasParam)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&par0, &par_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &par0, &par_len0 ) == SUCCESS)
 		{
@@ -12994,6 +13265,7 @@ PHP_METHOD(php_wxHtmlTag, HasParam)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlTag::HasParam(wxString(par0, wxConvUTF8)))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_BOOL(return_value, ((wxHtmlTag_php*)_this)->HasParam(wxString(par0, wxConvUTF8)));
@@ -13083,6 +13355,7 @@ PHP_METHOD(php_wxHtmlTag, ParseAsColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sz' (&str0, &str_len0, &clr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &clr0 ) == SUCCESS)
 		{
@@ -13118,6 +13391,7 @@ PHP_METHOD(php_wxHtmlTag, ParseAsColour)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxHtmlTag::ParseAsColour(wxString(str0, wxConvUTF8), (wxColour*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxHtmlTag::ParseAsColour(wxString(str0, wxConvUTF8), (wxColour*) object_pointer0_1));
 
 
@@ -13207,6 +13481,7 @@ PHP_METHOD(php_wxHtmlTag, ScanParam)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sss' (&par0, &par_len0, &format0, &format_len0, &value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &par0, &par_len0, &format0, &format_len0, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -13228,6 +13503,7 @@ PHP_METHOD(php_wxHtmlTag, ScanParam)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlTag::ScanParam(wxString(par0, wxConvUTF8), format0, (void*) value0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlTag_php*)_this)->ScanParam(wxString(par0, wxConvUTF8), format0, (void*) value0));
@@ -13318,6 +13594,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&par0, &par_len0, value0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &par0, &par_len0, value0 ) == SUCCESS)
 		{
@@ -13339,6 +13616,7 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlTag::GetParamAsInt(wxString(par0, wxConvUTF8), (int*) value0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTag)
 				{
 					ZVAL_BOOL(return_value, ((wxHtmlTag_php*)_this)->GetParamAsInt(wxString(par0, wxConvUTF8), (int*) value0));
@@ -13373,6 +13651,7 @@ void php_wxHtmlWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxHtmlWindow::AppendToPage(string source)
    Appends HTML fragment to currently displayed text and refreshes the window. */
 PHP_METHOD(php_wxHtmlWindow, AppendToPage)
@@ -13439,6 +13718,7 @@ PHP_METHOD(php_wxHtmlWindow, AppendToPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&source0, &source_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &source0, &source_len0 ) == SUCCESS)
 		{
@@ -13457,6 +13737,7 @@ PHP_METHOD(php_wxHtmlWindow, AppendToPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::AppendToPage(wxString(source0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->AppendToPage(wxString(source0, wxConvUTF8)));
 
 
@@ -13539,6 +13820,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13553,6 +13835,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedAnchor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlWindow::GetOpenedAnchor().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlWindow_php*)_this)->GetOpenedAnchor();
 				char* temp_string0;
@@ -13641,6 +13924,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13655,6 +13939,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlWindow::GetOpenedPage().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlWindow_php*)_this)->GetOpenedPage();
 				char* temp_string0;
@@ -13743,6 +14028,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPageTitle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13757,6 +14043,7 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPageTitle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlWindow::GetOpenedPageTitle().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlWindow_php*)_this)->GetOpenedPageTitle();
 				char* temp_string0;
@@ -13845,6 +14132,7 @@ PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13859,6 +14147,7 @@ PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::GetRelatedFrame() to return object pointer\n\n");
 				#endif
+
 				wxFrame_php* value_to_return0;
 				value_to_return0 = (wxFrame_php*) ((wxHtmlWindow_php*)_this)->GetRelatedFrame();
 
@@ -13964,6 +14253,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryBack)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13978,6 +14268,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryBack)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryBack())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->HistoryBack());
 
 
@@ -14060,6 +14351,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanBack)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14074,6 +14366,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanBack)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryCanBack())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->HistoryCanBack());
 
 
@@ -14156,6 +14449,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanForward)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14170,6 +14464,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanForward)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryCanForward())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->HistoryCanForward());
 
 
@@ -14252,6 +14547,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryClear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14266,6 +14562,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryClear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::HistoryClear()\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->HistoryClear();
 
 
@@ -14348,6 +14645,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryForward)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14362,6 +14660,7 @@ PHP_METHOD(php_wxHtmlWindow, HistoryForward)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::HistoryForward())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->HistoryForward());
 
 
@@ -14446,6 +14745,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&location0, &location_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &location0, &location_len0 ) == SUCCESS)
 		{
@@ -14464,6 +14764,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::LoadPage(wxString(location0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->LoadPage(wxString(location0, wxConvUTF8)));
 
 
@@ -14548,6 +14849,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&filename0, php_wxFileName_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
@@ -14582,6 +14884,7 @@ PHP_METHOD(php_wxHtmlWindow, LoadFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::LoadFile(*(wxFileName*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->LoadFile(*(wxFileName*) object_pointer0_0));
 
 				references->AddReference(filename0, "wxHtmlWindow::LoadFile at call with 1 argument(s)");
@@ -15033,6 +15336,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15047,6 +15351,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectAll)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SelectAll()\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SelectAll();
 
 
@@ -15131,6 +15436,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -15165,6 +15471,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SelectLine(*(wxPoint*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SelectLine(*(wxPoint*) object_pointer0_0);
 
 				references->AddReference(pos0, "wxHtmlWindow::SelectLine at call with 1 argument(s)");
@@ -15250,6 +15557,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectWord)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -15284,6 +15592,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectWord)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SelectWord(*(wxPoint*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SelectWord(*(wxPoint*) object_pointer0_0);
 
 				references->AddReference(pos0, "wxHtmlWindow::SelectWord at call with 1 argument(s)");
@@ -15367,6 +15676,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectionToText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15381,6 +15691,7 @@ PHP_METHOD(php_wxHtmlWindow, SelectionToText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlWindow::SelectionToText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlWindow_php*)_this)->SelectionToText();
 				char* temp_string0;
@@ -15470,6 +15781,7 @@ PHP_METHOD(php_wxHtmlWindow, SetBorders)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -15488,6 +15800,7 @@ PHP_METHOD(php_wxHtmlWindow, SetBorders)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetBorders((int) b0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetBorders((int) b0);
 
 
@@ -15572,6 +15885,7 @@ PHP_METHOD(php_wxHtmlWindow, SetPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&source0, &source_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &source0, &source_len0 ) == SUCCESS)
 		{
@@ -15590,6 +15904,7 @@ PHP_METHOD(php_wxHtmlWindow, SetPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlWindow::SetPage(wxString(source0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlWindow_php*)_this)->SetPage(wxString(source0, wxConvUTF8)));
 
 
@@ -15676,6 +15991,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&frame0, &format0, &format_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0, &format0, &format_len0 ) == SUCCESS)
 		{
@@ -15710,6 +16026,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetRelatedFrame((wxFrame*) object_pointer0_0, wxString(format0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetRelatedFrame((wxFrame*) object_pointer0_0, wxString(format0, wxConvUTF8));
 
 				references->AddReference(frame0, "wxHtmlWindow::SetRelatedFrame at call with 2 argument(s)");
@@ -15799,6 +16116,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
@@ -15815,6 +16133,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|l' (&statusbar1, &index1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &statusbar1, &index1 ) == SUCCESS)
 		{
@@ -15849,6 +16168,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetRelatedStatusBar((int) index0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetRelatedStatusBar((int) index0);
 
 
@@ -15867,6 +16187,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetRelatedStatusBar((wxStatusBar*) object_pointer1_0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetRelatedStatusBar((wxStatusBar*) object_pointer1_0);
 
 				references->AddReference(statusbar1, "wxHtmlWindow::SetRelatedStatusBar at call with 1 argument(s)");
@@ -15879,6 +16200,7 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetRelatedStatusBar((wxStatusBar*) object_pointer1_0, (int) index1)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetRelatedStatusBar((wxStatusBar*) object_pointer1_0, (int) index1);
 
 				references->AddReference(statusbar1, "wxHtmlWindow::SetRelatedStatusBar at call with 2 argument(s)");
@@ -15967,6 +16289,7 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lss' (&size0, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0 ) == SUCCESS)
 		{
@@ -15985,6 +16308,7 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetStandardFonts()\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetStandardFonts();
 
 
@@ -15996,6 +16320,7 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetStandardFonts((int) size0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetStandardFonts((int) size0);
 
 
@@ -16007,6 +16332,7 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8));
 
 
@@ -16018,6 +16344,7 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -16100,6 +16427,7 @@ PHP_METHOD(php_wxHtmlWindow, ToText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16114,6 +16442,7 @@ PHP_METHOD(php_wxHtmlWindow, ToText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlWindow::ToText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlWindow_php*)_this)->ToText();
 				char* temp_string0;
@@ -16206,6 +16535,7 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&cfg0, &path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cfg0, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -16240,6 +16570,7 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::WriteCustomization((wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(cfg0, "wxHtmlWindow::WriteCustomization at call with 1 argument(s)");
@@ -16252,6 +16583,7 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->WriteCustomization((wxConfigBase*) object_pointer0_0, wxString(path0, wxConvUTF8));
 
 				references->AddReference(cfg0, "wxHtmlWindow::WriteCustomization at call with 2 argument(s)");
@@ -16315,6 +16647,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16327,6 +16660,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -16393,6 +16727,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlWindow_php();
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16410,6 +16745,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16421,6 +16757,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16432,6 +16769,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16444,6 +16782,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16457,6 +16796,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16470,6 +16810,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, wxString(name1, wxConvUTF8));
 
 				((wxHtmlWindow_php*) _this)->references.Initialize();
@@ -16498,7 +16839,7 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlWindow::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlWindow::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -16571,6 +16912,7 @@ PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16585,6 +16927,7 @@ PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::GetInternalRepresentation() to return object pointer\n\n");
 				#endif
+
 				wxHtmlContainerCell_php* value_to_return0;
 				value_to_return0 = (wxHtmlContainerCell_php*) ((wxHtmlWindow_php*)_this)->GetInternalRepresentation();
 
@@ -16692,6 +17035,7 @@ PHP_METHOD(php_wxHtmlWindow, AddFilter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&filter0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filter0 ) == SUCCESS)
 		{
@@ -16727,6 +17071,7 @@ PHP_METHOD(php_wxHtmlWindow, AddFilter)
 				php_printf("Static ");
 				php_printf("Executing wxHtmlWindow::AddFilter((wxHtmlFilter*) object_pointer0_0)\n\n");
 				#endif
+
 				wxHtmlWindow::AddFilter((wxHtmlFilter*) object_pointer0_0);
 
 
@@ -16814,6 +17159,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
 		{
@@ -16842,6 +17188,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -16868,6 +17215,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWindow::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2)\n\n");
 				#endif
+
 				((wxHtmlWindow_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
 				delete[] integers_array0_2;
@@ -16927,6 +17275,7 @@ void php_wxHtmlLinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto wxHtmlLinkInfo wxHtmlLinkEvent::GetLinkInfo()
    Returns the wxHtmlLinkInfo which contains info about the cell clicked and the hyperlink it contains. */
 PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
@@ -16991,6 +17340,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17005,6 +17355,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlLinkEvent::GetLinkInfo() to return object reference\n\n");
 				#endif
+
 				wxHtmlLinkInfo_php* value_to_return0;
 				value_to_return0 = (wxHtmlLinkInfo_php*) &((wxHtmlLinkEvent_php*)_this)->GetLinkInfo();
 
@@ -17078,6 +17429,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&id0, &linkinfo0, php_wxHtmlLinkInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &linkinfo0, php_wxHtmlLinkInfo_entry ) == SUCCESS)
 		{
@@ -17112,6 +17464,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) id0, *(wxHtmlLinkInfo*) object_pointer0_1)\n");
 				#endif
+
 				_this = new wxHtmlLinkEvent_php((int) id0, *(wxHtmlLinkInfo*) object_pointer0_1);
 
 				((wxHtmlLinkEvent_php*) _this)->references.Initialize();
@@ -17138,7 +17491,7 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlLinkEvent::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlLinkEvent::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -17187,6 +17540,7 @@ void php_wxHtmlCellEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto wxHtmlCell wxHtmlCellEvent::GetCell()
    Returns the wxHtmlCellEvent associated with the event. */
 PHP_METHOD(php_wxHtmlCellEvent, GetCell)
@@ -17251,6 +17605,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17265,6 +17620,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetCell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCellEvent::GetCell() to return object pointer\n\n");
 				#endif
+
 				wxHtmlCell_php* value_to_return0;
 				value_to_return0 = (wxHtmlCell_php*) ((wxHtmlCellEvent_php*)_this)->GetCell();
 
@@ -17370,6 +17726,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetLinkClicked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17384,6 +17741,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetLinkClicked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlCellEvent::GetLinkClicked())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlCellEvent_php*)_this)->GetLinkClicked());
 
 
@@ -17466,6 +17824,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17480,6 +17839,7 @@ PHP_METHOD(php_wxHtmlCellEvent, GetPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCellEvent::GetPoint() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxHtmlCellEvent_php*)_this)->GetPoint();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
@@ -17568,6 +17928,7 @@ PHP_METHOD(php_wxHtmlCellEvent, SetLinkClicked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&linkclicked0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &linkclicked0 ) == SUCCESS)
 		{
@@ -17586,6 +17947,7 @@ PHP_METHOD(php_wxHtmlCellEvent, SetLinkClicked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlCellEvent::SetLinkClicked(linkclicked0)\n\n");
 				#endif
+
 				((wxHtmlCellEvent_php*)_this)->SetLinkClicked(linkclicked0);
 
 
@@ -17644,6 +18006,7 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llzOO' (&commandType0, &id0, &cell0, &point0, php_wxPoint_entry, &ev0, php_wxMouseEvent_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "llzOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &id0, &cell0, &point0, php_wxPoint_entry, &ev0, php_wxMouseEvent_entry ) == SUCCESS)
 		{
@@ -17710,6 +18073,7 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEventType) commandType0, (int) id0, (wxHtmlCell*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxMouseEvent*) object_pointer0_4)\n");
 				#endif
+
 				_this = new wxHtmlCellEvent_php((wxEventType) commandType0, (int) id0, (wxHtmlCell*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxMouseEvent*) object_pointer0_4);
 
 				((wxHtmlCellEvent_php*) _this)->references.Initialize();
@@ -17738,7 +18102,7 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlCellEvent::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlCellEvent::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -17787,6 +18151,7 @@ void php_wxHtmlDCRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto int wxHtmlDCRenderer::GetTotalHeight()
    Returns the height of the HTML text in pixels. */
 PHP_METHOD(php_wxHtmlDCRenderer, GetTotalHeight)
@@ -17851,6 +18216,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17865,6 +18231,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlDCRenderer::GetTotalHeight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlDCRenderer_php*)_this)->GetTotalHeight());
 
 
@@ -17947,6 +18314,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17961,6 +18329,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlDCRenderer::GetTotalWidth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxHtmlDCRenderer_php*)_this)->GetTotalWidth());
 
 
@@ -18011,6 +18380,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18025,6 +18395,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlDCRenderer_php();
 
 				((wxHtmlDCRenderer_php*) _this)->references.Initialize();
@@ -18050,7 +18421,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlDCRenderer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlDCRenderer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -18128,6 +18499,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lss' (&size0, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0 ) == SUCCESS)
 		{
@@ -18146,6 +18518,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetStandardFonts()\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetStandardFonts();
 
 
@@ -18157,6 +18530,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetStandardFonts((int) size0)\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetStandardFonts((int) size0);
 
 
@@ -18168,6 +18542,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8));
 
 
@@ -18179,6 +18554,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -18263,6 +18639,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &height0 ) == SUCCESS)
 		{
@@ -18281,6 +18658,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetSize((int) width0, (int) height0)\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetSize((int) width0, (int) height0);
 
 
@@ -18368,6 +18746,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sb' (&html0, &html_len0, &basepath0, &basepath_len0, &isdir0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &html0, &html_len0, &basepath0, &basepath_len0, &isdir0 ) == SUCCESS)
 		{
@@ -18386,6 +18765,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetHtmlText(wxString(html0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetHtmlText(wxString(html0, wxConvUTF8));
 
 
@@ -18397,6 +18777,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8));
 
 
@@ -18408,6 +18789,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8), isdir0)\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8), isdir0);
 
 
@@ -18495,6 +18877,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
 		{
@@ -18523,6 +18906,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -18549,6 +18933,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2)\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
 				delete[] integers_array0_2;
@@ -18635,6 +19020,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|d' (&dc0, &pixel_scale0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &pixel_scale0 ) == SUCCESS)
 		{
@@ -18669,6 +19055,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetDC((wxDC*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetDC((wxDC*) object_pointer0_0);
 
 				references->AddReference(dc0, "wxHtmlDCRenderer::SetDC at call with 1 argument(s)");
@@ -18681,6 +19068,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlDCRenderer::SetDC((wxDC*) object_pointer0_0, pixel_scale0)\n\n");
 				#endif
+
 				((wxHtmlDCRenderer_php*)_this)->SetDC((wxDC*) object_pointer0_0, pixel_scale0);
 
 				references->AddReference(dc0, "wxHtmlDCRenderer::SetDC at call with 2 argument(s)");
@@ -18740,6 +19128,7 @@ void php_wxHtmlEasyPrinting_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+
 /* {{{ proto string wxHtmlEasyPrinting::GetName()
    Returns the current name being used for preview frames and setup dialogs. */
 PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
@@ -18804,6 +19193,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18818,6 +19208,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlEasyPrinting::GetName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxHtmlEasyPrinting_php*)_this)->GetName();
 				char* temp_string0;
@@ -18906,6 +19297,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18920,6 +19312,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::GetPageSetupData() to return object pointer\n\n");
 				#endif
+
 				wxPageSetupDialogData_php* value_to_return0;
 				value_to_return0 = (wxPageSetupDialogData_php*) ((wxHtmlEasyPrinting_php*)_this)->GetPageSetupData();
 
@@ -19025,6 +19418,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19039,6 +19433,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::GetParentWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxHtmlEasyPrinting_php*)_this)->GetParentWindow();
 
@@ -19144,6 +19539,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19158,6 +19554,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::GetPrintData() to return object pointer\n\n");
 				#endif
+
 				wxPrintData_php* value_to_return0;
 				value_to_return0 = (wxPrintData_php*) ((wxHtmlEasyPrinting_php*)_this)->GetPrintData();
 
@@ -19263,6 +19660,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PageSetup)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -19277,6 +19675,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PageSetup)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::PageSetup()\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->PageSetup();
 
 
@@ -19361,6 +19760,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&htmlfile0, &htmlfile_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &htmlfile0, &htmlfile_len0 ) == SUCCESS)
 		{
@@ -19379,6 +19779,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PreviewFile(wxString(htmlfile0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)_this)->PreviewFile(wxString(htmlfile0, wxConvUTF8)));
 
 
@@ -19465,6 +19866,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&htmltext0, &htmltext_len0, &basepath0, &basepath_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &htmltext0, &htmltext_len0, &basepath0, &basepath_len0 ) == SUCCESS)
 		{
@@ -19483,6 +19885,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PreviewText(wxString(htmltext0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)_this)->PreviewText(wxString(htmltext0, wxConvUTF8)));
 
 
@@ -19494,6 +19897,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PreviewText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)_this)->PreviewText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)));
 
 
@@ -19578,6 +19982,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&htmlfile0, &htmlfile_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &htmlfile0, &htmlfile_len0 ) == SUCCESS)
 		{
@@ -19596,6 +20001,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PrintFile(wxString(htmlfile0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)_this)->PrintFile(wxString(htmlfile0, wxConvUTF8)));
 
 
@@ -19682,6 +20088,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&htmltext0, &htmltext_len0, &basepath0, &basepath_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &htmltext0, &htmltext_len0, &basepath0, &basepath_len0 ) == SUCCESS)
 		{
@@ -19700,6 +20107,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PrintText(wxString(htmltext0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)_this)->PrintText(wxString(htmltext0, wxConvUTF8)));
 
 
@@ -19711,6 +20119,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxHtmlEasyPrinting::PrintText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxHtmlEasyPrinting_php*)_this)->PrintText(wxString(htmltext0, wxConvUTF8), wxString(basepath0, wxConvUTF8)));
 
 
@@ -19796,6 +20205,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFooter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&footer0, &footer_len0, &pg0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &footer0, &footer_len0, &pg0 ) == SUCCESS)
 		{
@@ -19814,6 +20224,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFooter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetFooter(wxString(footer0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetFooter(wxString(footer0, wxConvUTF8));
 
 
@@ -19825,6 +20236,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFooter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetFooter(wxString(footer0, wxConvUTF8), (int) pg0)\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetFooter(wxString(footer0, wxConvUTF8), (int) pg0);
 
 
@@ -19910,6 +20322,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetHeader)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&header0, &header_len0, &pg0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &header0, &header_len0, &pg0 ) == SUCCESS)
 		{
@@ -19928,6 +20341,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetHeader(wxString(header0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetHeader(wxString(header0, wxConvUTF8));
 
 
@@ -19939,6 +20353,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetHeader(wxString(header0, wxConvUTF8), (int) pg0)\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetHeader(wxString(header0, wxConvUTF8), (int) pg0);
 
 
@@ -19993,6 +20408,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|sz' (&name0, &name_len0, &parentWindow0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0, &parentWindow0 ) == SUCCESS)
 		{
@@ -20027,6 +20443,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlEasyPrinting_php();
 
 				((wxHtmlEasyPrinting_php*) _this)->references.Initialize();
@@ -20037,6 +20454,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(name0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlEasyPrinting_php(wxString(name0, wxConvUTF8));
 
 				((wxHtmlEasyPrinting_php*) _this)->references.Initialize();
@@ -20047,6 +20465,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1)\n");
 				#endif
+
 				_this = new wxHtmlEasyPrinting_php(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1);
 
 				((wxHtmlEasyPrinting_php*) _this)->references.Initialize();
@@ -20073,7 +20492,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlEasyPrinting::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlEasyPrinting::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -20151,6 +20570,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lss' (&size0, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0 ) == SUCCESS)
 		{
@@ -20169,6 +20589,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetStandardFonts()\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetStandardFonts();
 
 
@@ -20180,6 +20601,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetStandardFonts((int) size0)\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetStandardFonts((int) size0);
 
 
@@ -20191,6 +20613,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8));
 
 
@@ -20202,6 +20625,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetStandardFonts((int) size0, wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -20286,6 +20710,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetParentWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -20320,6 +20745,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetParentWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetParentWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetParentWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(window0, "wxHtmlEasyPrinting::SetParentWindow at call with 1 argument(s)");
@@ -20405,6 +20831,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -20423,6 +20850,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetName(wxString(name0, wxConvUTF8));
 
 
@@ -20510,6 +20938,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
 		{
@@ -20538,6 +20967,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -20564,6 +20994,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlEasyPrinting::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2)\n\n");
 				#endif
+
 				((wxHtmlEasyPrinting_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
 				delete[] integers_array0_2;
@@ -20623,6 +21054,7 @@ void php_wxHtmlPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlPrintout::wxHtmlPrintout(string title)
    Constructor. */
 PHP_METHOD(php_wxHtmlPrintout, __construct)
@@ -20657,6 +21089,7 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -20675,6 +21108,7 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxHtmlPrintout_php();
 
 				((wxHtmlPrintout_php*) _this)->references.Initialize();
@@ -20685,6 +21119,7 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxHtmlPrintout_php(wxString(title0, wxConvUTF8));
 
 				((wxHtmlPrintout_php*) _this)->references.Initialize();
@@ -20710,7 +21145,7 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlPrintout::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxHtmlPrintout::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -20788,6 +21223,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ddddd' (&top0, &bottom0, &left0, &right0, &spaces0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ddddd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &top0, &bottom0, &left0, &right0, &spaces0 ) == SUCCESS)
 		{
@@ -20806,6 +21242,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetMargins()\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetMargins();
 
 
@@ -20817,6 +21254,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetMargins(top0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetMargins(top0);
 
 
@@ -20828,6 +21266,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetMargins(top0, bottom0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetMargins(top0, bottom0);
 
 
@@ -20839,6 +21278,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetMargins(top0, bottom0, left0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetMargins(top0, bottom0, left0);
 
 
@@ -20850,6 +21290,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetMargins(top0, bottom0, left0, right0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetMargins(top0, bottom0, left0, right0);
 
 
@@ -20861,6 +21302,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetMargins(top0, bottom0, left0, right0, spaces0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetMargins(top0, bottom0, left0, right0, spaces0);
 
 
@@ -20948,6 +21390,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sb' (&html0, &html_len0, &basepath0, &basepath_len0, &isdir0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &html0, &html_len0, &basepath0, &basepath_len0, &isdir0 ) == SUCCESS)
 		{
@@ -20966,6 +21409,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetHtmlText(wxString(html0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetHtmlText(wxString(html0, wxConvUTF8));
 
 
@@ -20977,6 +21421,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8));
 
 
@@ -20988,6 +21433,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8), isdir0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetHtmlText(wxString(html0, wxConvUTF8), wxString(basepath0, wxConvUTF8), isdir0);
 
 
@@ -21072,6 +21518,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&htmlfile0, &htmlfile_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &htmlfile0, &htmlfile_len0 ) == SUCCESS)
 		{
@@ -21090,6 +21537,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetHtmlFile(wxString(htmlfile0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetHtmlFile(wxString(htmlfile0, wxConvUTF8));
 
 
@@ -21175,6 +21623,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHeader)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&header0, &header_len0, &pg0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &header0, &header_len0, &pg0 ) == SUCCESS)
 		{
@@ -21193,6 +21642,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetHeader(wxString(header0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetHeader(wxString(header0, wxConvUTF8));
 
 
@@ -21204,6 +21654,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetHeader)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetHeader(wxString(header0, wxConvUTF8), (int) pg0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetHeader(wxString(header0, wxConvUTF8), (int) pg0);
 
 
@@ -21289,6 +21740,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFooter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&footer0, &footer_len0, &pg0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &footer0, &footer_len0, &pg0 ) == SUCCESS)
 		{
@@ -21307,6 +21759,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFooter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetFooter(wxString(footer0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetFooter(wxString(footer0, wxConvUTF8));
 
 
@@ -21318,6 +21771,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFooter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetFooter(wxString(footer0, wxConvUTF8), (int) pg0)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetFooter(wxString(footer0, wxConvUTF8), (int) pg0);
 
 
@@ -21405,6 +21859,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
 		{
@@ -21433,6 +21888,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
 
 
@@ -21459,6 +21915,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlPrintout::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2)\n\n");
 				#endif
+
 				((wxHtmlPrintout_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
 				delete[] integers_array0_2;
@@ -21544,6 +22001,7 @@ PHP_METHOD(php_wxHtmlPrintout, AddFilter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&filter0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filter0 ) == SUCCESS)
 		{
@@ -21579,6 +22037,7 @@ PHP_METHOD(php_wxHtmlPrintout, AddFilter)
 				php_printf("Static ");
 				php_printf("Executing wxHtmlPrintout::AddFilter((wxHtmlFilter*) object_pointer0_0)\n\n");
 				#endif
+
 				wxHtmlPrintout::AddFilter((wxHtmlFilter*) object_pointer0_0);
 
 
@@ -21637,6 +22096,7 @@ void php_wxHtmlTagsModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlTagsModule::FillHandlersTable(wxHtmlWinParser &parser)
    You must override this method. */
 PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
@@ -21703,6 +22163,7 @@ PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parser0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parser0 ) == SUCCESS)
 		{
@@ -21737,6 +22198,7 @@ PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlTagsModule::FillHandlersTable((wxHtmlWinParser*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlTagsModule)
 				{
 					((wxHtmlTagsModule_php*)_this)->FillHandlersTable((wxHtmlWinParser*) object_pointer0_0);
@@ -21799,6 +22261,7 @@ void php_wxHtmlWinTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+
 void php_wxHtmlWinParser_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21839,6 +22302,7 @@ void php_wxHtmlWinParser_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto  wxHtmlWinParser::AddModule(wxHtmlTagsModule &module)
    Adds module() to the list of wxHtmlWinParser tag handler. */
 PHP_METHOD(php_wxHtmlWinParser, AddModule)
@@ -21905,6 +22369,7 @@ PHP_METHOD(php_wxHtmlWinParser, AddModule)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&module0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &module0 ) == SUCCESS)
 		{
@@ -21940,6 +22405,7 @@ PHP_METHOD(php_wxHtmlWinParser, AddModule)
 				php_printf("Static ");
 				php_printf("Executing wxHtmlWinParser::AddModule((wxHtmlTagsModule*) object_pointer0_0)\n\n");
 				#endif
+
 				wxHtmlWinParser::AddModule((wxHtmlTagsModule*) object_pointer0_0);
 
 
@@ -22022,6 +22488,7 @@ PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22036,6 +22503,7 @@ PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::CloseContainer() to return object pointer\n\n");
 				#endif
+
 				wxHtmlContainerCell_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -22144,6 +22612,7 @@ PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22158,6 +22627,7 @@ PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::CreateCurrentFont() to return object pointer\n\n");
 				#endif
+
 				wxFont_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -22266,6 +22736,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetActualColor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22280,6 +22751,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetActualColor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::GetActualColor() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -22385,6 +22857,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetAlign)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22399,6 +22872,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetAlign)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetAlign())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetAlign());
@@ -22484,6 +22958,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22498,6 +22973,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetCharHeight())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetCharHeight());
@@ -22583,6 +23059,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22597,6 +23074,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetCharWidth())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetCharWidth());
@@ -22682,6 +23160,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22696,6 +23175,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::GetContainer() to return object pointer\n\n");
 				#endif
+
 				wxHtmlContainerCell_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -22804,6 +23284,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetDC)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22818,6 +23299,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetDC)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::GetDC() to return object pointer\n\n");
 				#endif
+
 				wxDC_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -22926,6 +23408,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontBold)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22940,6 +23423,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontBold)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetFontBold())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetFontBold());
@@ -23025,6 +23509,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23039,6 +23524,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxHtmlWinParser::GetFontFace().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -23130,6 +23616,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFixed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23144,6 +23631,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFixed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetFontFixed())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetFontFixed());
@@ -23229,6 +23717,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontItalic)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23243,6 +23732,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontItalic)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetFontItalic())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetFontItalic());
@@ -23328,6 +23818,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23342,6 +23833,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetFontSize())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetFontSize());
@@ -23427,6 +23919,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontUnderlined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23441,6 +23934,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontUnderlined)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxHtmlWinParser::GetFontUnderlined())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					ZVAL_LONG(return_value, ((wxHtmlWinParser_php*)_this)->GetFontUnderlined());
@@ -23526,6 +24020,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetLink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23540,6 +24035,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetLink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::GetLink() to return object reference\n\n");
 				#endif
+
 				wxHtmlLinkInfo_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -23645,6 +24141,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetLinkColor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23659,6 +24156,7 @@ PHP_METHOD(php_wxHtmlWinParser, GetLinkColor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::GetLinkColor() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -23766,6 +24264,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetActualColor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&clr0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clr0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -23800,6 +24299,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetActualColor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetActualColor(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetActualColor(*(wxColour*) object_pointer0_0);
@@ -23887,6 +24387,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetAlign)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&a0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &a0 ) == SUCCESS)
 		{
@@ -23905,6 +24406,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetAlign)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetAlign((int) a0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetAlign((int) a0);
@@ -23992,6 +24494,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&c0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0 ) == SUCCESS)
 		{
@@ -24026,6 +24529,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetContainer((wxHtmlContainerCell*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxHtmlContainerCell_php* value_to_return1;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -24138,6 +24642,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetDC)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|d' (&dc0, &pixel_scale0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &pixel_scale0 ) == SUCCESS)
 		{
@@ -24172,6 +24677,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetDC)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetDC((wxDC*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetDC((wxDC*) object_pointer0_0);
@@ -24187,6 +24693,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetDC)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetDC((wxDC*) object_pointer0_0, pixel_scale0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetDC((wxDC*) object_pointer0_0, pixel_scale0);
@@ -24273,6 +24780,7 @@ PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24287,6 +24795,7 @@ PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::OpenContainer() to return object pointer\n\n");
 				#endif
+
 				wxHtmlContainerCell_php* value_to_return0;
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
@@ -24396,6 +24905,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontBold)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -24414,6 +24924,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontBold)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFontBold((int) x0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFontBold((int) x0);
@@ -24501,6 +25012,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&face0, &face_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &face0, &face_len0 ) == SUCCESS)
 		{
@@ -24519,6 +25031,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFontFace(wxString(face0, wxConvUTF8))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFontFace(wxString(face0, wxConvUTF8));
@@ -24605,6 +25118,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFixed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -24623,6 +25137,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFixed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFontFixed((int) x0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFontFixed((int) x0);
@@ -24709,6 +25224,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontItalic)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -24727,6 +25243,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontItalic)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFontItalic((int) x0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFontItalic((int) x0);
@@ -24813,6 +25330,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&s0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0 ) == SUCCESS)
 		{
@@ -24831,6 +25349,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFontSize((int) s0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFontSize((int) s0);
@@ -24917,6 +25436,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontUnderlined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -24935,6 +25455,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontUnderlined)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFontUnderlined((int) x0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFontUnderlined((int) x0);
@@ -25025,6 +25546,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|a' (&normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|a";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal_face0, &normal_face_len0, &fixed_face0, &fixed_face_len0, &sizes0 ) == SUCCESS)
 		{
@@ -25053,6 +25575,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8));
@@ -25082,6 +25605,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
@@ -25170,6 +25694,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetLink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&link0, php_wxHtmlLinkInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &link0, php_wxHtmlLinkInfo_entry ) == SUCCESS)
 		{
@@ -25204,6 +25729,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetLink)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetLink(*(wxHtmlLinkInfo*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetLink(*(wxHtmlLinkInfo*) object_pointer0_0);
@@ -25292,6 +25818,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetLinkColor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&clr0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clr0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -25326,6 +25853,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetLinkColor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxHtmlWinParser::SetLinkColor(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxHtmlWinParser)
 				{
 					((wxHtmlWinParser_php*)_this)->SetLinkColor(*(wxColour*) object_pointer0_0);

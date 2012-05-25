@@ -91,6 +91,7 @@ void php_wxWebViewHistoryItem_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto  wxWebViewHistoryItem::wxWebViewHistoryItem(string url, string title)
    Construtor. */
 PHP_METHOD(php_wxWebViewHistoryItem, __construct)
@@ -127,6 +128,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&url0, &url_len0, &title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -145,6 +147,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(url0, wxConvUTF8), wxString(title0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxWebViewHistoryItem_php(wxString(url0, wxConvUTF8), wxString(title0, wxConvUTF8));
 
 				((wxWebViewHistoryItem_php*) _this)->references.Initialize();
@@ -170,7 +173,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWebViewHistoryItem::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWebViewHistoryItem::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -242,6 +245,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -256,6 +260,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxWebViewHistoryItem::GetUrl().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxWebViewHistoryItem_php*)_this)->GetUrl();
 				char* temp_string0;
@@ -343,6 +348,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -357,6 +363,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxWebViewHistoryItem::GetTitle().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxWebViewHistoryItem_php*)_this)->GetTitle();
 				char* temp_string0;
@@ -421,6 +428,7 @@ void php_wxWebViewHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxWebViewHandler::wxWebViewHandler(string scheme)
    Constructor. */
 PHP_METHOD(php_wxWebViewHandler, __construct)
@@ -455,6 +463,7 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&scheme0, &scheme_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &scheme0, &scheme_len0 ) == SUCCESS)
 		{
@@ -473,6 +482,7 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(scheme0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxWebViewHandler_php(wxString(scheme0, wxConvUTF8));
 
 				((wxWebViewHandler_php*) _this)->references.Initialize();
@@ -498,7 +508,7 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWebViewHandler::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWebViewHandler::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -574,6 +584,7 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -588,6 +599,7 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxWebViewHandler::GetName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxWebViewHandler_php*)_this)->GetName();
 				char* temp_string0;
@@ -745,6 +757,7 @@ void php_wxWebViewArchiveHandler_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+
 /* {{{ proto  wxWebViewArchiveHandler::wxWebViewArchiveHandler(string scheme)
    Constructor. */
 PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
@@ -779,6 +792,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&scheme0, &scheme_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &scheme0, &scheme_len0 ) == SUCCESS)
 		{
@@ -797,6 +811,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(scheme0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxWebViewArchiveHandler_php(wxString(scheme0, wxConvUTF8));
 
 				((wxWebViewArchiveHandler_php*) _this)->references.Initialize();
@@ -822,7 +837,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWebViewArchiveHandler::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWebViewArchiveHandler::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -896,6 +911,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&uri0, &uri_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &uri0, &uri_len0 ) == SUCCESS)
 		{
@@ -914,6 +930,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxWebViewArchiveHandler::GetFile(wxString(uri0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxFSFile_php* value_to_return1;
 				value_to_return1 = (wxFSFile_php*) ((wxWebViewArchiveHandler_php*)_this)->GetFile(wxString(uri0, wxConvUTF8));
 

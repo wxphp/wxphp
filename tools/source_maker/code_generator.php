@@ -686,7 +686,7 @@ ob_start();
 	$wxwidgets_source .= ob_get_contents();
 ob_end_clean();
 
-file_put_contents("./../../src/wxwidgets.cpp", $wxwidgets_source);
+file_put_contents("./../../wxwidgets.cpp", $wxwidgets_source);
 
 
 //Update php_wxwidgets.h by just upgrading the code betewen 
@@ -733,7 +733,7 @@ if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^§]+)/sm", $old, 
 {
 	$output = $matches[1] . "\n" . $output . $matches[2];
 	
-	$hd = fopen("./../../includes/php_wxwidgets.h", "w");
+	$hd = fopen("./../../php_wxwidgets.h", "w");
 	fwrite($hd, $output);
 	fclose($hd);
 }

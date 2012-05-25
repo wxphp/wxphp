@@ -58,6 +58,7 @@ void php_wxAuiNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxAuiNotebook::wxAuiNotebook(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
    Constructor. */
 PHP_METHOD(php_wxAuiNotebook, __construct)
@@ -100,6 +101,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -164,6 +166,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -178,6 +181,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
@@ -189,6 +193,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
@@ -200,6 +205,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
@@ -212,6 +218,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
@@ -225,6 +232,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0)\n");
 				#endif
+
 				_this = new wxAuiNotebook_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
@@ -245,6 +253,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiNotebook_php();
 
 				((wxAuiNotebook_php*) _this)->references.Initialize();
@@ -270,7 +279,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiNotebook::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiNotebook::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -345,6 +354,7 @@ PHP_METHOD(php_wxAuiNotebook, Split)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&page0, &direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &direction0 ) == SUCCESS)
 		{
@@ -363,6 +373,7 @@ PHP_METHOD(php_wxAuiNotebook, Split)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::Split((size_t) page0, (int) direction0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->Split((size_t) page0, (int) direction0);
 
 
@@ -445,6 +456,7 @@ PHP_METHOD(php_wxAuiNotebook, ShowWindowMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -459,6 +471,7 @@ PHP_METHOD(php_wxAuiNotebook, ShowWindowMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::ShowWindowMenu())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->ShowWindowMenu());
 
 
@@ -543,6 +556,7 @@ PHP_METHOD(php_wxAuiNotebook, SetUniformBitmapSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -577,6 +591,7 @@ PHP_METHOD(php_wxAuiNotebook, SetUniformBitmapSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::SetUniformBitmapSize(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->SetUniformBitmapSize(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(size0, "wxAuiNotebook::SetUniformBitmapSize at call with 1 argument(s)");
@@ -661,6 +676,7 @@ PHP_METHOD(php_wxAuiNotebook, SetTabCtrlHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0 ) == SUCCESS)
 		{
@@ -679,6 +695,7 @@ PHP_METHOD(php_wxAuiNotebook, SetTabCtrlHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::SetTabCtrlHeight((int) height0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->SetTabCtrlHeight((int) height0);
 
 
@@ -763,6 +780,7 @@ PHP_METHOD(php_wxAuiNotebook, SetSelectedFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -797,6 +815,7 @@ PHP_METHOD(php_wxAuiNotebook, SetSelectedFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::SetSelectedFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->SetSelectedFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxAuiNotebook::SetSelectedFont at call with 1 argument(s)");
@@ -883,6 +902,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&page0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -901,6 +921,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetPageText((size_t) page0, wxString(text0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->SetPageText((size_t) page0, wxString(text0, wxConvUTF8)));
 
 
@@ -985,6 +1006,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageImage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&n0, &imageId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0, &imageId0 ) == SUCCESS)
 		{
@@ -1003,6 +1025,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageImage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetPageImage((size_t) n0, (int) imageId0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->SetPageImage((size_t) n0, (int) imageId0));
 
 
@@ -1088,6 +1111,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&page0, &bitmap0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -1122,6 +1146,7 @@ PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetPageBitmap((size_t) page0, *(wxBitmap*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->SetPageBitmap((size_t) page0, *(wxBitmap*) object_pointer0_1));
 
 				references->AddReference(bitmap0, "wxAuiNotebook::SetPageBitmap at call with 2 argument(s)");
@@ -1207,6 +1232,7 @@ PHP_METHOD(php_wxAuiNotebook, SetNormalFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -1241,6 +1267,7 @@ PHP_METHOD(php_wxAuiNotebook, SetNormalFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::SetNormalFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->SetNormalFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxAuiNotebook::SetNormalFont at call with 1 argument(s)");
@@ -1326,6 +1353,7 @@ PHP_METHOD(php_wxAuiNotebook, SetMeasuringFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -1360,6 +1388,7 @@ PHP_METHOD(php_wxAuiNotebook, SetMeasuringFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::SetMeasuringFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->SetMeasuringFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxAuiNotebook::SetMeasuringFont at call with 1 argument(s)");
@@ -1445,6 +1474,7 @@ PHP_METHOD(php_wxAuiNotebook, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -1479,6 +1509,7 @@ PHP_METHOD(php_wxAuiNotebook, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::SetFont(*(wxFont*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->SetFont(*(wxFont*) object_pointer0_0));
 
 				references->AddReference(font0, "wxAuiNotebook::SetFont at call with 1 argument(s)");
@@ -1564,6 +1595,7 @@ PHP_METHOD(php_wxAuiNotebook, SetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&art0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &art0 ) == SUCCESS)
 		{
@@ -1598,6 +1630,7 @@ PHP_METHOD(php_wxAuiNotebook, SetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::SetArtProvider((wxAuiTabArt*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->SetArtProvider((wxAuiTabArt*) object_pointer0_0);
 
 				references->AddReference(art0, "wxAuiNotebook::SetArtProvider at call with 1 argument(s)");
@@ -1682,6 +1715,7 @@ PHP_METHOD(php_wxAuiNotebook, RemovePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -1700,6 +1734,7 @@ PHP_METHOD(php_wxAuiNotebook, RemovePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::RemovePage((size_t) page0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->RemovePage((size_t) page0));
 
 
@@ -1782,6 +1817,7 @@ PHP_METHOD(php_wxAuiNotebook, GetTabCtrlHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1796,6 +1832,7 @@ PHP_METHOD(php_wxAuiNotebook, GetTabCtrlHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::GetTabCtrlHeight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->GetTabCtrlHeight());
 
 
@@ -1878,6 +1915,7 @@ PHP_METHOD(php_wxAuiNotebook, GetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1892,6 +1930,7 @@ PHP_METHOD(php_wxAuiNotebook, GetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::GetSelection())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->GetSelection());
 
 
@@ -1975,6 +2014,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -1993,6 +2033,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiNotebook::GetPageText((size_t) page0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxAuiNotebook_php*)_this)->GetPageText((size_t) page0);
 				char* temp_string1;
@@ -2083,6 +2124,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&page_wnd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page_wnd0 ) == SUCCESS)
 		{
@@ -2117,6 +2159,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::GetPageIndex((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->GetPageIndex((wxWindow*) object_pointer0_0));
 
 				references->AddReference(page_wnd0, "wxAuiNotebook::GetPageIndex at call with 1 argument(s)");
@@ -2200,6 +2243,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2214,6 +2258,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::GetPageCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->GetPageCount());
 
 
@@ -2297,6 +2342,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -2315,6 +2361,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::GetPageBitmap((size_t) page0) to return new object\n\n");
 				#endif
+
 				wxBitmap value_to_return1;
 				value_to_return1 = ((wxAuiNotebook_php*)_this)->GetPageBitmap((size_t) page0);
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -2403,6 +2450,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page_idx0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page_idx0 ) == SUCCESS)
 		{
@@ -2421,6 +2469,7 @@ PHP_METHOD(php_wxAuiNotebook, GetPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::GetPage((size_t) page_idx0) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				value_to_return1 = (wxWindow_php*) ((wxAuiNotebook_php*)_this)->GetPage((size_t) page_idx0);
 
@@ -2527,6 +2576,7 @@ PHP_METHOD(php_wxAuiNotebook, GetHeightForPageHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pageHeight0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageHeight0 ) == SUCCESS)
 		{
@@ -2545,6 +2595,7 @@ PHP_METHOD(php_wxAuiNotebook, GetHeightForPageHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::GetHeightForPageHeight((int) pageHeight0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->GetHeightForPageHeight((int) pageHeight0));
 
 
@@ -2627,6 +2678,7 @@ PHP_METHOD(php_wxAuiNotebook, GetCurrentPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2641,6 +2693,7 @@ PHP_METHOD(php_wxAuiNotebook, GetCurrentPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::GetCurrentPage() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxAuiNotebook_php*)_this)->GetCurrentPage();
 
@@ -2746,6 +2799,7 @@ PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2760,6 +2814,7 @@ PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::GetArtProvider() to return object pointer\n\n");
 				#endif
+
 				wxAuiTabArt_php* value_to_return0;
 				value_to_return0 = (wxAuiTabArt_php*) ((wxAuiNotebook_php*)_this)->GetArtProvider();
 
@@ -2866,6 +2921,7 @@ PHP_METHOD(php_wxAuiNotebook, DeletePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -2884,6 +2940,7 @@ PHP_METHOD(php_wxAuiNotebook, DeletePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::DeletePage((size_t) page0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->DeletePage((size_t) page0));
 
 
@@ -2966,6 +3023,7 @@ PHP_METHOD(php_wxAuiNotebook, DeleteAllPages)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2980,6 +3038,7 @@ PHP_METHOD(php_wxAuiNotebook, DeleteAllPages)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::DeleteAllPages())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->DeleteAllPages());
 
 
@@ -3070,6 +3129,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -3136,6 +3196,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxAuiNotebook::Create at call with 1 argument(s)");
@@ -3148,6 +3209,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxAuiNotebook::Create at call with 2 argument(s)");
@@ -3160,6 +3222,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxAuiNotebook::Create at call with 3 argument(s)");
@@ -3173,6 +3236,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxAuiNotebook::Create at call with 4 argument(s)");
@@ -3187,6 +3251,7 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxAuiNotebook::Create at call with 5 argument(s)");
@@ -3273,6 +3338,7 @@ PHP_METHOD(php_wxAuiNotebook, ChangeSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
 		{
@@ -3291,6 +3357,7 @@ PHP_METHOD(php_wxAuiNotebook, ChangeSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::ChangeSelection((size_t) n0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->ChangeSelection((size_t) n0));
 
 
@@ -3374,6 +3441,7 @@ PHP_METHOD(php_wxAuiNotebook, AdvanceSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&forward0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &forward0 ) == SUCCESS)
 		{
@@ -3392,6 +3460,7 @@ PHP_METHOD(php_wxAuiNotebook, AdvanceSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::AdvanceSelection()\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->AdvanceSelection();
 
 
@@ -3403,6 +3472,7 @@ PHP_METHOD(php_wxAuiNotebook, AdvanceSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiNotebook::AdvanceSelection(forward0)\n\n");
 				#endif
+
 				((wxAuiNotebook_php*)_this)->AdvanceSelection(forward0);
 
 
@@ -3492,6 +3562,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|bO' (&page0, &caption0, &caption_len0, &select0, &bitmap0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|bO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0, &caption0, &caption_len0, &select0, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -3542,6 +3613,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8)));
 
 				references->AddReference(page0, "wxAuiNotebook::AddPage at call with 2 argument(s)");
@@ -3554,6 +3626,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0));
 
 				references->AddReference(page0, "wxAuiNotebook::AddPage at call with 3 argument(s)");
@@ -3566,6 +3639,7 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiNotebook::AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0, *(wxBitmap*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) object_pointer0_0, wxString(caption0, wxConvUTF8), select0, *(wxBitmap*) object_pointer0_3));
 
 				references->AddReference(page0, "wxAuiNotebook::AddPage at call with 4 argument(s)");
@@ -3651,6 +3725,7 @@ PHP_METHOD(php_wxAuiNotebook, SetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&new_page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &new_page0 ) == SUCCESS)
 		{
@@ -3669,6 +3744,7 @@ PHP_METHOD(php_wxAuiNotebook, SetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiNotebook::SetSelection((size_t) new_page0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiNotebook_php*)_this)->SetSelection((size_t) new_page0));
 
 
@@ -3727,6 +3803,7 @@ void php_wxAuiTabArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxAuiTabArt::SetSizingInfo(wxSize tab_ctrl_size, int tab_count)
    Sets sizing information. */
 void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_count)
@@ -4765,6 +4842,7 @@ void php_wxAuiDockArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxAuiDockArt::wxAuiDockArt()
    Constructor. */
 PHP_METHOD(php_wxAuiDockArt, __construct)
@@ -4797,6 +4875,7 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4811,6 +4890,7 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiDockArt_php();
 
 				((wxAuiDockArt_php*) _this)->references.Initialize();
@@ -4836,7 +4916,7 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiDockArt::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiDockArt::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5895,6 +5975,7 @@ void php_wxAuiManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxAuiManager::wxAuiManager(wxWindow &managed_wnd, int flags)
    Constructor. */
 PHP_METHOD(php_wxAuiManager, __construct)
@@ -5930,6 +6011,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|zl' (&managed_wnd0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|zl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &managed_wnd0, &flags0 ) == SUCCESS)
 		{
@@ -5964,6 +6046,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiManager_php();
 
 				((wxAuiManager_php*) _this)->references.Initialize();
@@ -5974,6 +6057,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxAuiManager_php((wxWindow*) object_pointer0_0);
 
 				((wxAuiManager_php*) _this)->references.Initialize();
@@ -5985,6 +6069,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (unsigned int) flags0)\n");
 				#endif
+
 				_this = new wxAuiManager_php((wxWindow*) object_pointer0_0, (unsigned int) flags0);
 
 				((wxAuiManager_php*) _this)->references.Initialize();
@@ -6011,7 +6096,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiManager::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiManager::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6084,6 +6169,7 @@ PHP_METHOD(php_wxAuiManager, Update)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6098,6 +6184,7 @@ PHP_METHOD(php_wxAuiManager, Update)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::Update()\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->Update();
 
 
@@ -6180,6 +6267,7 @@ PHP_METHOD(php_wxAuiManager, UnInit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6194,6 +6282,7 @@ PHP_METHOD(php_wxAuiManager, UnInit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::UnInit()\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->UnInit();
 
 
@@ -6278,6 +6367,7 @@ PHP_METHOD(php_wxAuiManager, ShowHint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -6312,6 +6402,7 @@ PHP_METHOD(php_wxAuiManager, ShowHint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::ShowHint(*(wxRect*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->ShowHint(*(wxRect*) object_pointer0_0);
 
 				references->AddReference(rect0, "wxAuiManager::ShowHint at call with 1 argument(s)");
@@ -6397,6 +6488,7 @@ PHP_METHOD(php_wxAuiManager, SetManagedWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&managed_wnd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &managed_wnd0 ) == SUCCESS)
 		{
@@ -6431,6 +6523,7 @@ PHP_METHOD(php_wxAuiManager, SetManagedWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::SetManagedWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->SetManagedWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(managed_wnd0, "wxAuiManager::SetManagedWindow at call with 1 argument(s)");
@@ -6516,6 +6609,7 @@ PHP_METHOD(php_wxAuiManager, SetDockSizeConstraint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (&widthpct0, &heightpct0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &widthpct0, &heightpct0 ) == SUCCESS)
 		{
@@ -6534,6 +6628,7 @@ PHP_METHOD(php_wxAuiManager, SetDockSizeConstraint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::SetDockSizeConstraint(widthpct0, heightpct0)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->SetDockSizeConstraint(widthpct0, heightpct0);
 
 
@@ -6617,6 +6712,7 @@ PHP_METHOD(php_wxAuiManager, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -6635,6 +6731,7 @@ PHP_METHOD(php_wxAuiManager, SetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::SetFlags((unsigned int) flags0)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->SetFlags((unsigned int) flags0);
 
 
@@ -6719,6 +6816,7 @@ PHP_METHOD(php_wxAuiManager, SetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&art_provider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &art_provider0 ) == SUCCESS)
 		{
@@ -6753,6 +6851,7 @@ PHP_METHOD(php_wxAuiManager, SetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::SetArtProvider((wxAuiDockArt*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->SetArtProvider((wxAuiDockArt*) object_pointer0_0);
 
 				references->AddReference(art_provider0, "wxAuiManager::SetArtProvider at call with 1 argument(s)");
@@ -6836,6 +6935,7 @@ PHP_METHOD(php_wxAuiManager, SavePerspective)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6850,6 +6950,7 @@ PHP_METHOD(php_wxAuiManager, SavePerspective)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiManager::SavePerspective().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxAuiManager_php*)_this)->SavePerspective();
 				char* temp_string0;
@@ -6940,6 +7041,7 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pane0, php_wxAuiPaneInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pane0, php_wxAuiPaneInfo_entry ) == SUCCESS)
 		{
@@ -6974,6 +7076,7 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiManager::SavePaneInfo(*(wxAuiPaneInfo*) object_pointer0_0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxAuiManager_php*)_this)->SavePaneInfo(*(wxAuiPaneInfo*) object_pointer0_0);
 				char* temp_string1;
@@ -7158,6 +7261,7 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&perspective0, &perspective_len0, &update0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &perspective0, &perspective_len0, &update0 ) == SUCCESS)
 		{
@@ -7176,6 +7280,7 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::LoadPerspective(wxString(perspective0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->LoadPerspective(wxString(perspective0, wxConvUTF8)));
 
 
@@ -7187,6 +7292,7 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::LoadPerspective(wxString(perspective0, wxConvUTF8), update0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->LoadPerspective(wxString(perspective0, wxConvUTF8), update0));
 
 
@@ -7273,6 +7379,7 @@ PHP_METHOD(php_wxAuiManager, LoadPaneInfo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sO' (&pane_part0, &pane_part_len0, &pane0, php_wxAuiPaneInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "sO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pane_part0, &pane_part_len0, &pane0, php_wxAuiPaneInfo_entry ) == SUCCESS)
 		{
@@ -7307,6 +7414,7 @@ PHP_METHOD(php_wxAuiManager, LoadPaneInfo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::LoadPaneInfo(wxString(pane_part0, wxConvUTF8), *(wxAuiPaneInfo*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->LoadPaneInfo(wxString(pane_part0, wxConvUTF8), *(wxAuiPaneInfo*) object_pointer0_1);
 
 				references->AddReference(pane0, "wxAuiManager::LoadPaneInfo at call with 2 argument(s)");
@@ -7395,6 +7503,7 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|l' (&window0, &insert_location0, php_wxAuiPaneInfo_entry, &insert_level0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &insert_location0, php_wxAuiPaneInfo_entry, &insert_level0 ) == SUCCESS)
 		{
@@ -7445,6 +7554,7 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1));
 
 				references->AddReference(window0, "wxAuiManager::InsertPane at call with 2 argument(s)");
@@ -7458,6 +7568,7 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, (int) insert_level0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->InsertPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, (int) insert_level0));
 
 				references->AddReference(window0, "wxAuiManager::InsertPane at call with 3 argument(s)");
@@ -7542,6 +7653,7 @@ PHP_METHOD(php_wxAuiManager, HideHint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7556,6 +7668,7 @@ PHP_METHOD(php_wxAuiManager, HideHint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::HideHint()\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->HideHint();
 
 
@@ -7644,6 +7757,7 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -7660,6 +7774,7 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1 ) == SUCCESS)
 		{
@@ -7694,6 +7809,7 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::GetPane(wxString(name0, wxConvUTF8)) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiManager_php*)_this)->GetPane(wxString(name0, wxConvUTF8));
 
@@ -7732,6 +7848,7 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::GetPane((wxWindow*) object_pointer1_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiManager_php*)_this)->GetPane((wxWindow*) object_pointer1_0);
 
@@ -7837,6 +7954,7 @@ PHP_METHOD(php_wxAuiManager, GetManager)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -7872,6 +7990,7 @@ PHP_METHOD(php_wxAuiManager, GetManager)
 				php_printf("Static ");
 				php_printf("Executing wxAuiManager::GetManager((wxWindow*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxAuiManager_php* value_to_return1;
 				value_to_return1 = (wxAuiManager_php*) wxAuiManager::GetManager((wxWindow*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -7973,6 +8092,7 @@ PHP_METHOD(php_wxAuiManager, GetManagedWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7987,6 +8107,7 @@ PHP_METHOD(php_wxAuiManager, GetManagedWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::GetManagedWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxAuiManager_php*)_this)->GetManagedWindow();
 
@@ -8092,6 +8213,7 @@ PHP_METHOD(php_wxAuiManager, GetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8106,6 +8228,7 @@ PHP_METHOD(php_wxAuiManager, GetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiManager::GetFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiManager_php*)_this)->GetFlags());
 
 
@@ -8192,6 +8315,7 @@ PHP_METHOD(php_wxAuiManager, GetDockSizeConstraint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (widthpct0, heightpct0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, widthpct0, heightpct0 ) == SUCCESS)
 		{
@@ -8213,6 +8337,7 @@ PHP_METHOD(php_wxAuiManager, GetDockSizeConstraint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::GetDockSizeConstraint(widthpct0, heightpct0)\n\n");
 				#endif
+
 				((wxAuiManager_php*)_this)->GetDockSizeConstraint(widthpct0, heightpct0);
 
 				size_t elements_returned0_0 = sizeof(widthpct0)/sizeof(*widthpct0);
@@ -8307,6 +8432,7 @@ PHP_METHOD(php_wxAuiManager, GetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8321,6 +8447,7 @@ PHP_METHOD(php_wxAuiManager, GetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiManager::GetArtProvider() to return object pointer\n\n");
 				#endif
+
 				wxAuiDockArt_php* value_to_return0;
 				value_to_return0 = (wxAuiDockArt_php*) ((wxAuiManager_php*)_this)->GetArtProvider();
 
@@ -8428,6 +8555,7 @@ PHP_METHOD(php_wxAuiManager, DetachPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -8462,6 +8590,7 @@ PHP_METHOD(php_wxAuiManager, DetachPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::DetachPane((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->DetachPane((wxWindow*) object_pointer0_0));
 
 				references->AddReference(window0, "wxAuiManager::DetachPane at call with 1 argument(s)");
@@ -8564,6 +8693,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zOO' (&window0, &pane_info0, php_wxAuiPaneInfo_entry, &drop_pos0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &pane_info0, php_wxAuiPaneInfo_entry, &drop_pos0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -8628,6 +8758,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|ls' (&window1, &direction1, &caption1, &caption_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1, &direction1, &caption1, &caption_len1 ) == SUCCESS)
 		{
@@ -8660,6 +8791,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&window2, &pane_info2, php_wxAuiPaneInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window2, &pane_info2, php_wxAuiPaneInfo_entry ) == SUCCESS)
 		{
@@ -8710,6 +8842,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer0_0, *(wxAuiPaneInfo*) object_pointer0_1, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(window0, "wxAuiManager::AddPane at call with 3 argument(s)");
@@ -8731,6 +8864,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer1_0));
 
 				references->AddReference(window1, "wxAuiManager::AddPane at call with 1 argument(s)");
@@ -8743,6 +8877,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer1_0, (int) direction1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer1_0, (int) direction1));
 
 				references->AddReference(window1, "wxAuiManager::AddPane at call with 2 argument(s)");
@@ -8755,6 +8890,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer1_0, (int) direction1, wxString(caption1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer1_0, (int) direction1, wxString(caption1, wxConvUTF8)));
 
 				references->AddReference(window1, "wxAuiManager::AddPane at call with 3 argument(s)");
@@ -8774,6 +8910,7 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiManager::AddPane((wxWindow*) object_pointer2_0, *(wxAuiPaneInfo*) object_pointer2_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiManager_php*)_this)->AddPane((wxWindow*) object_pointer2_0, *(wxAuiPaneInfo*) object_pointer2_1));
 
 				references->AddReference(window2, "wxAuiManager::AddPane at call with 2 argument(s)");
@@ -8834,6 +8971,7 @@ void php_wxAuiPaneInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxAuiPaneInfo::wxAuiPaneInfo(wxAuiPaneInfo c)
    Copy constructor. */
 PHP_METHOD(php_wxAuiPaneInfo, __construct)
@@ -8870,6 +9008,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxAuiPaneInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxAuiPaneInfo_entry ) == SUCCESS)
 		{
@@ -8902,6 +9041,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -8916,6 +9056,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxAuiPaneInfo*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxAuiPaneInfo_php(*(wxAuiPaneInfo*) object_pointer0_0);
 
 				((wxAuiPaneInfo_php*) _this)->references.Initialize();
@@ -8934,6 +9075,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiPaneInfo_php();
 
 				((wxAuiPaneInfo_php*) _this)->references.Initialize();
@@ -8959,7 +9101,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiPaneInfo::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiPaneInfo::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -9034,6 +9176,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Window)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&w0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &w0 ) == SUCCESS)
 		{
@@ -9068,6 +9211,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Window)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Window((wxWindow*) object_pointer0_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Window((wxWindow*) object_pointer0_0);
 
@@ -9172,6 +9316,7 @@ PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -9190,6 +9335,7 @@ PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::TopDockable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->TopDockable();
 
@@ -9221,6 +9367,7 @@ PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::TopDockable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->TopDockable(b0);
 
@@ -9323,6 +9470,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Top)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9337,6 +9485,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Top)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Top() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Top();
 
@@ -9439,6 +9588,7 @@ PHP_METHOD(php_wxAuiPaneInfo, ToolbarPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9453,6 +9603,7 @@ PHP_METHOD(php_wxAuiPaneInfo, ToolbarPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::ToolbarPane() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->ToolbarPane();
 
@@ -9556,6 +9707,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -9574,6 +9726,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Show() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Show();
 
@@ -9605,6 +9758,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Show(show0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Show(show0);
 
@@ -9709,6 +9863,7 @@ PHP_METHOD(php_wxAuiPaneInfo, SetFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&flag0, &option_state0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flag0, &option_state0 ) == SUCCESS)
 		{
@@ -9727,6 +9882,7 @@ PHP_METHOD(php_wxAuiPaneInfo, SetFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::SetFlag((int) flag0, option_state0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return2;
 				value_to_return2 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->SetFlag((int) flag0, option_state0);
 
@@ -9831,6 +9987,7 @@ PHP_METHOD(php_wxAuiPaneInfo, SafeSet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&source0, php_wxAuiPaneInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &source0, php_wxAuiPaneInfo_entry ) == SUCCESS)
 		{
@@ -9865,6 +10022,7 @@ PHP_METHOD(php_wxAuiPaneInfo, SafeSet)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::SafeSet(*(wxAuiPaneInfo*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiPaneInfo_php*)_this)->SafeSet(*(wxAuiPaneInfo*) object_pointer0_0);
 
 
@@ -9948,6 +10106,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Row)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
@@ -9966,6 +10125,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Row)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Row((int) row0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Row((int) row0);
 
@@ -10069,6 +10229,7 @@ PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -10087,6 +10248,7 @@ PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::RightDockable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->RightDockable();
 
@@ -10118,6 +10280,7 @@ PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::RightDockable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->RightDockable(b0);
 
@@ -10220,6 +10383,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Right)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10234,6 +10398,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Right)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Right() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Right();
 
@@ -10337,6 +10502,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&resizable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &resizable0 ) == SUCCESS)
 		{
@@ -10355,6 +10521,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Resizable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Resizable();
 
@@ -10386,6 +10553,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Resizable(resizable0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Resizable(resizable0);
 
@@ -10489,6 +10657,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Position)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -10507,6 +10676,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Position)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Position((int) pos0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Position((int) pos0);
 
@@ -10610,6 +10780,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -10628,6 +10799,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::PinButton() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->PinButton();
 
@@ -10659,6 +10831,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::PinButton(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->PinButton(visible0);
 
@@ -10762,6 +10935,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -10780,6 +10954,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::PaneBorder() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->PaneBorder();
 
@@ -10811,6 +10986,7 @@ PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::PaneBorder(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->PaneBorder(visible0);
 
@@ -10915,6 +11091,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Name)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&n0, &n_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0, &n_len0 ) == SUCCESS)
 		{
@@ -10933,6 +11110,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Name)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Name(wxString(n0, wxConvUTF8)) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Name(wxString(n0, wxConvUTF8));
 
@@ -11036,6 +11214,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Movable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -11054,6 +11233,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Movable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Movable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Movable();
 
@@ -11085,6 +11265,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Movable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Movable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Movable(b0);
 
@@ -11188,6 +11369,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -11206,6 +11388,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MinimizeButton() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MinimizeButton();
 
@@ -11237,6 +11420,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MinimizeButton(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MinimizeButton(visible0);
 
@@ -11345,6 +11529,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -11361,6 +11546,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -11395,6 +11581,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MinSize((int) x0, (int) y0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return2;
 				value_to_return2 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MinSize((int) x0, (int) y0);
 
@@ -11433,6 +11620,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MinSize(*(wxSize*) object_pointer1_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MinSize(*(wxSize*) object_pointer1_0);
 
@@ -11537,6 +11725,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -11555,6 +11744,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MaximizeButton() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MaximizeButton();
 
@@ -11586,6 +11776,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MaximizeButton(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MaximizeButton(visible0);
 
@@ -11694,6 +11885,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -11710,6 +11902,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -11744,6 +11937,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MaxSize((int) x0, (int) y0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return2;
 				value_to_return2 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MaxSize((int) x0, (int) y0);
 
@@ -11782,6 +11976,7 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::MaxSize(*(wxSize*) object_pointer1_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->MaxSize(*(wxSize*) object_pointer1_0);
 
@@ -11886,6 +12081,7 @@ PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -11904,6 +12100,7 @@ PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::LeftDockable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->LeftDockable();
 
@@ -11935,6 +12132,7 @@ PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::LeftDockable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->LeftDockable(b0);
 
@@ -12037,6 +12235,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Left)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12051,6 +12250,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Left)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Left() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Left();
 
@@ -12154,6 +12354,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Layer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&layer0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &layer0 ) == SUCCESS)
 		{
@@ -12172,6 +12373,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Layer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Layer((int) layer0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Layer((int) layer0);
 
@@ -12274,6 +12476,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsTopDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12288,6 +12491,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsTopDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsTopDockable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsTopDockable());
 
 
@@ -12370,6 +12574,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsToolbar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12384,6 +12589,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsToolbar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsToolbar())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsToolbar());
 
 
@@ -12466,6 +12672,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12480,6 +12687,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsShown())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsShown());
 
 
@@ -12562,6 +12770,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsRightDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12576,6 +12785,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsRightDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsRightDockable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsRightDockable());
 
 
@@ -12658,6 +12868,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsResizable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12672,6 +12883,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsResizable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsResizable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsResizable());
 
 
@@ -12754,6 +12966,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsOk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12768,6 +12981,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsOk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsOk())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsOk());
 
 
@@ -12850,6 +13064,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsMovable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12864,6 +13079,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsMovable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsMovable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsMovable());
 
 
@@ -12946,6 +13162,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsLeftDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12960,6 +13177,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsLeftDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsLeftDockable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsLeftDockable());
 
 
@@ -13042,6 +13260,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloating)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13056,6 +13275,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloating)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsFloating())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsFloating());
 
 
@@ -13138,6 +13358,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloatable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13152,6 +13373,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloatable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsFloatable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsFloatable());
 
 
@@ -13234,6 +13456,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFixed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13248,6 +13471,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFixed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsFixed())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsFixed());
 
 
@@ -13330,6 +13554,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDocked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13344,6 +13569,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDocked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsDocked())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsDocked());
 
 
@@ -13426,6 +13652,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13440,6 +13667,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsDockable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsDockable());
 
 
@@ -13522,6 +13750,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsBottomDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13536,6 +13765,7 @@ PHP_METHOD(php_wxAuiPaneInfo, IsBottomDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::IsBottomDockable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->IsBottomDockable());
 
 
@@ -13620,6 +13850,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Icon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&b0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -13654,6 +13885,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Icon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Icon(*(wxBitmap*) object_pointer0_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Icon(*(wxBitmap*) object_pointer0_0);
 
@@ -13757,6 +13989,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Hide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13771,6 +14004,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Hide() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Hide();
 
@@ -13873,6 +14107,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasPinButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13887,6 +14122,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasPinButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasPinButton())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasPinButton());
 
 
@@ -13969,6 +14205,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMinimizeButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13983,6 +14220,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMinimizeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasMinimizeButton())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasMinimizeButton());
 
 
@@ -14065,6 +14303,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMaximizeButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14079,6 +14318,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMaximizeButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasMaximizeButton())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasMaximizeButton());
 
 
@@ -14161,6 +14401,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripperTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14175,6 +14416,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripperTop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasGripperTop())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasGripperTop());
 
 
@@ -14257,6 +14499,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripper)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14271,6 +14514,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripper)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasGripper())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasGripper());
 
 
@@ -14354,6 +14598,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flag0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flag0 ) == SUCCESS)
 		{
@@ -14372,6 +14617,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasFlag((int) flag0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasFlag((int) flag0));
 
 
@@ -14454,6 +14700,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCloseButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14468,6 +14715,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCloseButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasCloseButton())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasCloseButton());
 
 
@@ -14550,6 +14798,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCaption)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14564,6 +14813,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCaption)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasCaption())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasCaption());
 
 
@@ -14646,6 +14896,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasBorder)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14660,6 +14911,7 @@ PHP_METHOD(php_wxAuiPaneInfo, HasBorder)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiPaneInfo::HasBorder())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiPaneInfo_php*)_this)->HasBorder());
 
 
@@ -14743,6 +14995,7 @@ PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&attop0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attop0 ) == SUCCESS)
 		{
@@ -14761,6 +15014,7 @@ PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::GripperTop() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->GripperTop();
 
@@ -14792,6 +15046,7 @@ PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::GripperTop(attop0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->GripperTop(attop0);
 
@@ -14895,6 +15150,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -14913,6 +15169,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Gripper() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Gripper();
 
@@ -14944,6 +15201,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Gripper(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Gripper(visible0);
 
@@ -15052,6 +15310,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -15068,6 +15327,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -15102,6 +15362,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::FloatingSize((int) x0, (int) y0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return2;
 				value_to_return2 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->FloatingSize((int) x0, (int) y0);
 
@@ -15140,6 +15401,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::FloatingSize(*(wxSize*) object_pointer1_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->FloatingSize(*(wxSize*) object_pointer1_0);
 
@@ -15249,6 +15511,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -15265,6 +15528,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -15299,6 +15563,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::FloatingPosition((int) x0, (int) y0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return2;
 				value_to_return2 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->FloatingPosition((int) x0, (int) y0);
 
@@ -15337,6 +15602,7 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::FloatingPosition(*(wxPoint*) object_pointer1_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->FloatingPosition(*(wxPoint*) object_pointer1_0);
 
@@ -15441,6 +15707,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -15459,6 +15726,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Floatable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Floatable();
 
@@ -15490,6 +15758,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Floatable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Floatable(b0);
 
@@ -15592,6 +15861,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Float)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15606,6 +15876,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Float)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Float() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Float();
 
@@ -15708,6 +15979,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Fixed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15722,6 +15994,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Fixed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Fixed() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Fixed();
 
@@ -15825,6 +16098,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -15843,6 +16117,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Dockable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Dockable();
 
@@ -15874,6 +16149,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Dockable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Dockable(b0);
 
@@ -15977,6 +16253,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -15995,6 +16272,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::DockFixed() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->DockFixed();
 
@@ -16026,6 +16304,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::DockFixed(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->DockFixed(b0);
 
@@ -16128,6 +16407,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16142,6 +16422,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Dock)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Dock() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Dock();
 
@@ -16245,6 +16526,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Direction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -16263,6 +16545,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Direction)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Direction((int) direction0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Direction((int) direction0);
 
@@ -16366,6 +16649,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -16384,6 +16668,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::DestroyOnClose() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->DestroyOnClose();
 
@@ -16415,6 +16700,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::DestroyOnClose(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->DestroyOnClose(b0);
 
@@ -16517,6 +16803,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DefaultPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16531,6 +16818,7 @@ PHP_METHOD(php_wxAuiPaneInfo, DefaultPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::DefaultPane() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->DefaultPane();
 
@@ -16634,6 +16922,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -16652,6 +16941,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::CloseButton() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->CloseButton();
 
@@ -16683,6 +16973,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::CloseButton(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->CloseButton(visible0);
 
@@ -16785,6 +17076,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CentrePane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16799,6 +17091,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CentrePane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::CentrePane() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->CentrePane();
 
@@ -16901,6 +17194,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Centre)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16915,6 +17209,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Centre)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Centre() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Centre();
 
@@ -17017,6 +17312,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CenterPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17031,6 +17327,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CenterPane)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::CenterPane() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->CenterPane();
 
@@ -17133,6 +17430,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Center)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17147,6 +17445,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Center)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Center() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Center();
 
@@ -17250,6 +17549,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -17268,6 +17568,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::CaptionVisible() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->CaptionVisible();
 
@@ -17299,6 +17600,7 @@ PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::CaptionVisible(visible0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->CaptionVisible(visible0);
 
@@ -17403,6 +17705,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Caption)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&c0, &c_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, &c_len0 ) == SUCCESS)
 		{
@@ -17421,6 +17724,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Caption)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Caption(wxString(c0, wxConvUTF8)) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Caption(wxString(c0, wxConvUTF8));
 
@@ -17524,6 +17828,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -17542,6 +17847,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::BottomDockable() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->BottomDockable();
 
@@ -17573,6 +17879,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::BottomDockable(b0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->BottomDockable(b0);
 
@@ -17675,6 +17982,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Bottom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17689,6 +17997,7 @@ PHP_METHOD(php_wxAuiPaneInfo, Bottom)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::Bottom() to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return0;
 				value_to_return0 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->Bottom();
 
@@ -17797,6 +18106,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -17813,6 +18123,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -17847,6 +18158,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::BestSize((int) x0, (int) y0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return2;
 				value_to_return2 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->BestSize((int) x0, (int) y0);
 
@@ -17885,6 +18197,7 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiPaneInfo::BestSize(*(wxSize*) object_pointer1_0) to return object reference\n\n");
 				#endif
+
 				wxAuiPaneInfo_php* value_to_return1;
 				value_to_return1 = (wxAuiPaneInfo_php*) &((wxAuiPaneInfo_php*)_this)->BestSize(*(wxSize*) object_pointer1_0);
 
@@ -17964,6 +18277,7 @@ void php_wxAuiToolBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+
 /* {{{ proto wxPoint wxAuiToolBarEvent::GetClickPoint() */
 PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 {
@@ -18027,6 +18341,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18041,6 +18356,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarEvent::GetClickPoint() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				if(parent_rsrc_type == le_wxAuiToolBarEvent)
 				{
@@ -18130,6 +18446,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetItemRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18144,6 +18461,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetItemRect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarEvent::GetItemRect() to return new object\n\n");
 				#endif
+
 				wxRect value_to_return0;
 				if(parent_rsrc_type == le_wxAuiToolBarEvent)
 				{
@@ -18233,6 +18551,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetToolId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18247,6 +18566,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetToolId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarEvent::GetToolId())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxAuiToolBarEvent)
 				{
 					ZVAL_LONG(return_value, ((wxAuiToolBarEvent_php*)_this)->GetToolId());
@@ -18331,6 +18651,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, IsDropDownClicked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -18345,6 +18666,7 @@ PHP_METHOD(php_wxAuiToolBarEvent, IsDropDownClicked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBarEvent::IsDropDownClicked())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxAuiToolBarEvent)
 				{
 					ZVAL_BOOL(return_value, ((wxAuiToolBarEvent_php*)_this)->IsDropDownClicked());
@@ -18406,6 +18728,7 @@ void php_wxAuiToolBarItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxAuiToolBarItem::wxAuiToolBarItem(wxAuiToolBarItem c) */
 PHP_METHOD(php_wxAuiToolBarItem, __construct)
 {
@@ -18441,6 +18764,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxAuiToolBarItem_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxAuiToolBarItem_entry ) == SUCCESS)
 		{
@@ -18473,6 +18797,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -18487,6 +18812,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxAuiToolBarItem*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxAuiToolBarItem_php(*(wxAuiToolBarItem*) object_pointer0_0);
 
 				((wxAuiToolBarItem_php*) _this)->references.Initialize();
@@ -18505,6 +18831,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiToolBarItem_php();
 
 				((wxAuiToolBarItem_php*) _this)->references.Initialize();
@@ -18530,7 +18857,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiToolBarItem::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiToolBarItem::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -18604,6 +18931,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&w0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &w0 ) == SUCCESS)
 		{
@@ -18638,6 +18966,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(w0, "wxAuiToolBarItem::SetWindow at call with 1 argument(s)");
@@ -18721,6 +19050,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetUserData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&l0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &l0 ) == SUCCESS)
 		{
@@ -18739,6 +19069,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetUserData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetUserData((long) l0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetUserData((long) l0);
 
 
@@ -18821,6 +19152,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -18839,6 +19171,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetSticky(b0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetSticky(b0);
 
 
@@ -18921,6 +19254,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&new_state0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &new_state0 ) == SUCCESS)
 		{
@@ -18939,6 +19273,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetState((int) new_state0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetState((int) new_state0);
 
 
@@ -19021,6 +19356,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSpacerPixels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&s0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0 ) == SUCCESS)
 		{
@@ -19039,6 +19375,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSpacerPixels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetSpacerPixels((int) s0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetSpacerPixels((int) s0);
 
 
@@ -19122,6 +19459,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSizerItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&s0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0 ) == SUCCESS)
 		{
@@ -19156,6 +19494,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSizerItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetSizerItem((wxSizerItem*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetSizerItem((wxSizerItem*) object_pointer0_0);
 
 				references->AddReference(s0, "wxAuiToolBarItem::SetSizerItem at call with 1 argument(s)");
@@ -19240,6 +19579,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetShortHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -19258,6 +19598,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetShortHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetShortHelp(wxString(s0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetShortHelp(wxString(s0, wxConvUTF8));
 
 
@@ -19340,6 +19681,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&p0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &p0 ) == SUCCESS)
 		{
@@ -19358,6 +19700,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetProportion((int) p0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetProportion((int) p0);
 
 
@@ -19441,6 +19784,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&s0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -19475,6 +19819,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetMinSize(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetMinSize(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(s0, "wxAuiToolBarItem::SetMinSize at call with 1 argument(s)");
@@ -19559,6 +19904,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLongHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -19577,6 +19923,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLongHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetLongHelp(wxString(s0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetLongHelp(wxString(s0, wxConvUTF8));
 
 
@@ -19660,6 +20007,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -19678,6 +20026,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetLabel(wxString(s0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetLabel(wxString(s0, wxConvUTF8));
 
 
@@ -19760,6 +20109,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetKind)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&new_kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &new_kind0 ) == SUCCESS)
 		{
@@ -19778,6 +20128,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetKind)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetKind((int) new_kind0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetKind((int) new_kind0);
 
 
@@ -19860,6 +20211,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&new_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &new_id0 ) == SUCCESS)
 		{
@@ -19878,6 +20230,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetId((int) new_id0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetId((int) new_id0);
 
 
@@ -19961,6 +20314,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHoverBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bmp0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -19995,6 +20349,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHoverBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetHoverBitmap(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetHoverBitmap(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bmp0, "wxAuiToolBarItem::SetHoverBitmap at call with 1 argument(s)");
@@ -20078,6 +20433,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHasDropDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -20096,6 +20452,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHasDropDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetHasDropDown(b0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetHasDropDown(b0);
 
 
@@ -20179,6 +20536,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetDisabledBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bmp0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -20213,6 +20571,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetDisabledBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetDisabledBitmap(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetDisabledBitmap(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bmp0, "wxAuiToolBarItem::SetDisabledBitmap at call with 1 argument(s)");
@@ -20297,6 +20656,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bmp0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -20331,6 +20691,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetBitmap(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bmp0, "wxAuiToolBarItem::SetBitmap at call with 1 argument(s)");
@@ -20414,6 +20775,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&l0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &l0 ) == SUCCESS)
 		{
@@ -20432,6 +20794,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetAlignment((int) l0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetAlignment((int) l0);
 
 
@@ -20514,6 +20877,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetActive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&b0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &b0 ) == SUCCESS)
 		{
@@ -20532,6 +20896,7 @@ PHP_METHOD(php_wxAuiToolBarItem, SetActive)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::SetActive(b0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->SetActive(b0);
 
 
@@ -20613,6 +20978,7 @@ PHP_METHOD(php_wxAuiToolBarItem, IsSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20627,6 +20993,7 @@ PHP_METHOD(php_wxAuiToolBarItem, IsSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBarItem::IsSticky())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBarItem_php*)_this)->IsSticky());
 
 
@@ -20708,6 +21075,7 @@ PHP_METHOD(php_wxAuiToolBarItem, IsActive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20722,6 +21090,7 @@ PHP_METHOD(php_wxAuiToolBarItem, IsActive)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBarItem::IsActive())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBarItem_php*)_this)->IsActive());
 
 
@@ -20803,6 +21172,7 @@ PHP_METHOD(php_wxAuiToolBarItem, HasDropDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20817,6 +21187,7 @@ PHP_METHOD(php_wxAuiToolBarItem, HasDropDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBarItem::HasDropDown())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBarItem_php*)_this)->HasDropDown());
 
 
@@ -20898,6 +21269,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -20912,6 +21284,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::GetWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxAuiToolBarItem_php*)_this)->GetWindow();
 
@@ -21016,6 +21389,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetUserData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21030,6 +21404,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetUserData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetUserData())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetUserData());
 
 
@@ -21111,6 +21486,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21125,6 +21501,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetState())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetState());
 
 
@@ -21206,6 +21583,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSpacerPixels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21220,6 +21598,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSpacerPixels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetSpacerPixels())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetSpacerPixels());
 
 
@@ -21301,6 +21680,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSizerItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21315,6 +21695,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSizerItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::GetSizerItem() to return object pointer\n\n");
 				#endif
+
 				wxSizerItem_php* value_to_return0;
 				value_to_return0 = (wxSizerItem_php*) ((wxAuiToolBarItem_php*)_this)->GetSizerItem();
 
@@ -21419,6 +21800,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetShortHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21433,6 +21815,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetShortHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiToolBarItem::GetShortHelp().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxAuiToolBarItem_php*)_this)->GetShortHelp();
 				char* temp_string0;
@@ -21520,6 +21903,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21534,6 +21918,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetProportion())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetProportion());
 
 
@@ -21615,6 +22000,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetMinSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21629,6 +22015,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetMinSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::GetMinSize() to return object reference\n\n");
 				#endif
+
 				wxSize_php* value_to_return0;
 				value_to_return0 = (wxSize_php*) &((wxAuiToolBarItem_php*)_this)->GetMinSize();
 
@@ -21730,6 +22117,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLongHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21744,6 +22132,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLongHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiToolBarItem::GetLongHelp().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxAuiToolBarItem_php*)_this)->GetLongHelp();
 				char* temp_string0;
@@ -21831,6 +22220,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21845,6 +22235,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiToolBarItem::GetLabel().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxAuiToolBarItem_php*)_this)->GetLabel();
 				char* temp_string0;
@@ -21932,6 +22323,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetKind)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -21946,6 +22338,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetKind)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetKind())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetKind());
 
 
@@ -22027,6 +22420,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22041,6 +22435,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetId());
 
 
@@ -22122,6 +22517,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetHoverBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22136,6 +22532,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetHoverBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::GetHoverBitmap() to return object reference\n\n");
 				#endif
+
 				wxBitmap_php* value_to_return0;
 				value_to_return0 = (wxBitmap_php*) &((wxAuiToolBarItem_php*)_this)->GetHoverBitmap();
 
@@ -22237,6 +22634,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetDisabledBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22251,6 +22649,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetDisabledBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::GetDisabledBitmap() to return object reference\n\n");
 				#endif
+
 				wxBitmap_php* value_to_return0;
 				value_to_return0 = (wxBitmap_php*) &((wxAuiToolBarItem_php*)_this)->GetDisabledBitmap();
 
@@ -22352,6 +22751,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22366,6 +22766,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::GetBitmap() to return object reference\n\n");
 				#endif
+
 				wxBitmap_php* value_to_return0;
 				value_to_return0 = (wxBitmap_php*) &((wxAuiToolBarItem_php*)_this)->GetBitmap();
 
@@ -22467,6 +22868,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22481,6 +22883,7 @@ PHP_METHOD(php_wxAuiToolBarItem, GetAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBarItem::GetAlignment())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBarItem_php*)_this)->GetAlignment());
 
 
@@ -22564,6 +22967,7 @@ PHP_METHOD(php_wxAuiToolBarItem, Assign)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxAuiToolBarItem_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxAuiToolBarItem_entry ) == SUCCESS)
 		{
@@ -22598,6 +23002,7 @@ PHP_METHOD(php_wxAuiToolBarItem, Assign)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBarItem::Assign(*(wxAuiToolBarItem*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBarItem_php*)_this)->Assign(*(wxAuiToolBarItem*) object_pointer0_0);
 
 				references->AddReference(c0, "wxAuiToolBarItem::Assign at call with 1 argument(s)");
@@ -22657,6 +23062,7 @@ void php_wxAuiToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto wxAuiToolBarArt wxAuiToolBarArt::Clone() */
 wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 {
@@ -24262,6 +24668,7 @@ void php_wxAuiDefaultToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+
 /* {{{ proto wxAuiToolBarArt wxAuiDefaultToolBarArt::Clone() */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
 {
@@ -24325,6 +24732,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24339,6 +24747,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::Clone() to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarArt_php* value_to_return0;
 				value_to_return0 = (wxAuiToolBarArt_php*) ((wxAuiDefaultToolBarArt_php*)_this)->Clone();
 
@@ -24449,6 +24858,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -24515,6 +24925,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawBackground(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawBackground(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawBackground at call with 3 argument(s)");
@@ -24607,6 +25018,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -24689,6 +25101,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawButton at call with 4 argument(s)");
@@ -24782,6 +25195,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -24864,6 +25278,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawControlLabel(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawControlLabel(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawControlLabel at call with 4 argument(s)");
@@ -24957,6 +25372,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -25039,6 +25455,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawDropDownButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawDropDownButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawDropDownButton at call with 4 argument(s)");
@@ -25130,6 +25547,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -25196,6 +25614,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawGripper(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawGripper(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawGripper at call with 3 argument(s)");
@@ -25288,6 +25707,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -25370,6 +25790,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawLabel(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawLabel(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2, *(wxRect*) object_pointer0_3);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawLabel at call with 4 argument(s)");
@@ -25462,6 +25883,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzOl' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry, &state0)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry, &state0 ) == SUCCESS)
 		{
@@ -25528,6 +25950,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawOverflowButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) state0)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawOverflowButton(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) state0);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawOverflowButton at call with 4 argument(s)");
@@ -25618,6 +26041,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
@@ -25684,6 +26108,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::DrawSeparator(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->DrawSeparator(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxRect*) object_pointer0_2);
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::DrawSeparator at call with 3 argument(s)");
@@ -25769,6 +26194,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetElementSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&element0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &element0 ) == SUCCESS)
 		{
@@ -25787,6 +26213,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetElementSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiDefaultToolBarArt::GetElementSize((int) element0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiDefaultToolBarArt_php*)_this)->GetElementSize((int) element0));
 
 
@@ -25868,6 +26295,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25882,6 +26310,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiDefaultToolBarArt::GetFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiDefaultToolBarArt_php*)_this)->GetFlags());
 
 
@@ -25963,6 +26392,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -25977,6 +26407,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::GetFont() to return new object\n\n");
 				#endif
+
 				wxFont value_to_return0;
 				value_to_return0 = ((wxAuiDefaultToolBarArt_php*)_this)->GetFont();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -26069,6 +26500,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry ) == SUCCESS)
 		{
@@ -26135,6 +26567,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::GetLabelSize(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return3;
 				value_to_return3 = ((wxAuiDefaultToolBarArt_php*)_this)->GetLabelSize(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -26224,6 +26657,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26238,6 +26672,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetTextOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiDefaultToolBarArt::GetTextOrientation())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiDefaultToolBarArt_php*)_this)->GetTextOrientation());
 
 
@@ -26325,6 +26760,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OzO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry ) == SUCCESS)
 		{
@@ -26391,6 +26827,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::GetToolSize(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return3;
 				value_to_return3 = ((wxAuiDefaultToolBarArt_php*)_this)->GetToolSize(*(wxDC*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxAuiToolBarItem*) object_pointer0_2);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -26482,6 +26919,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetElementSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&element_id0, &size0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &element_id0, &size0 ) == SUCCESS)
 		{
@@ -26500,6 +26938,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetElementSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::SetElementSize((int) element_id0, (int) size0)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->SetElementSize((int) element_id0, (int) size0);
 
 
@@ -26582,6 +27021,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -26600,6 +27040,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::SetFlags((unsigned int) flags0)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->SetFlags((unsigned int) flags0);
 
 
@@ -26683,6 +27124,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -26717,6 +27159,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::SetFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxAuiDefaultToolBarArt::SetFont at call with 1 argument(s)");
@@ -26800,6 +27243,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&orientation0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orientation0 ) == SUCCESS)
 		{
@@ -26818,6 +27262,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetTextOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiDefaultToolBarArt::SetTextOrientation((int) orientation0)\n\n");
 				#endif
+
 				((wxAuiDefaultToolBarArt_php*)_this)->SetTextOrientation((int) orientation0);
 
 
@@ -26867,6 +27312,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -26881,6 +27327,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxAuiDefaultToolBarArt_php();
 
 				((wxAuiDefaultToolBarArt_php*) _this)->references.Initialize();
@@ -26906,7 +27353,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiDefaultToolBarArt::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiDefaultToolBarArt::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -26922,6 +27369,7 @@ void php_wxAuiToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddControl(wxControl &control, string label) */
 PHP_METHOD(php_wxAuiToolBar, AddControl)
 {
@@ -26989,6 +27437,7 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|s' (&control0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &control0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -27023,6 +27472,7 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddControl((wxControl*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return1;
 				value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddControl((wxControl*) object_pointer0_0);
 
@@ -27058,6 +27508,7 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddControl((wxControl*) object_pointer0_0, wxString(label0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return2;
 				value_to_return2 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddControl((wxControl*) object_pointer0_0, wxString(label0, wxConvUTF8));
 
@@ -27167,6 +27618,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|sl' (&tool_id0, &label0, &label_len0, &width0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &label0, &label_len0, &width0 ) == SUCCESS)
 		{
@@ -27185,6 +27637,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddLabel((int) tool_id0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return1;
 				value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddLabel((int) tool_id0);
 
@@ -27219,6 +27672,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddLabel((int) tool_id0, wxString(label0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return2;
 				value_to_return2 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddLabel((int) tool_id0, wxString(label0, wxConvUTF8));
 
@@ -27253,6 +27707,7 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddLabel((int) tool_id0, wxString(label0, wxConvUTF8), (const int) width0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return3;
 				value_to_return3 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddLabel((int) tool_id0, wxString(label0, wxConvUTF8), (const int) width0);
 
@@ -27357,6 +27812,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27371,6 +27827,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddSeparator() to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return0;
 				value_to_return0 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddSeparator();
 
@@ -27476,6 +27933,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixels0 ) == SUCCESS)
 		{
@@ -27494,6 +27952,7 @@ PHP_METHOD(php_wxAuiToolBar, AddSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddSpacer((int) pixels0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return1;
 				value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddSpacer((int) pixels0);
 
@@ -27599,6 +28058,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &proportion0 ) == SUCCESS)
 		{
@@ -27617,6 +28077,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddStretchSpacer() to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return0;
 				value_to_return0 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddStretchSpacer();
 
@@ -27651,6 +28112,7 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddStretchSpacer((int) proportion0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return1;
 				value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddStretchSpacer((int) proportion0);
 
@@ -27755,6 +28217,7 @@ PHP_METHOD(php_wxAuiToolBar, Clear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27769,6 +28232,7 @@ PHP_METHOD(php_wxAuiToolBar, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::Clear()\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->Clear();
 
 
@@ -27850,6 +28314,7 @@ PHP_METHOD(php_wxAuiToolBar, ClearTools)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -27864,6 +28329,7 @@ PHP_METHOD(php_wxAuiToolBar, ClearTools)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::ClearTools()\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->ClearTools();
 
 
@@ -27946,6 +28412,7 @@ PHP_METHOD(php_wxAuiToolBar, DeleteByIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -27964,6 +28431,7 @@ PHP_METHOD(php_wxAuiToolBar, DeleteByIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::DeleteByIndex((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->DeleteByIndex((int) tool_id0));
 
 
@@ -28046,6 +28514,7 @@ PHP_METHOD(php_wxAuiToolBar, DeleteTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -28064,6 +28533,7 @@ PHP_METHOD(php_wxAuiToolBar, DeleteTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::DeleteTool((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->DeleteTool((int) tool_id0));
 
 
@@ -28147,6 +28617,7 @@ PHP_METHOD(php_wxAuiToolBar, EnableTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&tool_id0, &state0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &state0 ) == SUCCESS)
 		{
@@ -28165,6 +28636,7 @@ PHP_METHOD(php_wxAuiToolBar, EnableTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::EnableTool((int) tool_id0, state0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->EnableTool((int) tool_id0, state0);
 
 
@@ -28222,6 +28694,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &position0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &position0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -28288,6 +28761,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
@@ -28299,6 +28773,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0)\n");
 				#endif
+
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
@@ -28310,6 +28785,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2)\n");
 				#endif
+
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
@@ -28322,6 +28798,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3)\n");
 				#endif
+
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
@@ -28335,6 +28812,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0)\n");
 				#endif
+
 				_this = new wxAuiToolBar_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				((wxAuiToolBar_php*) _this)->references.Initialize();
@@ -28363,7 +28841,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiToolBar::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiToolBar::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -28437,6 +28915,7 @@ PHP_METHOD(php_wxAuiToolBar, ToggleTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&tool_id0, &state0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &state0 ) == SUCCESS)
 		{
@@ -28455,6 +28934,7 @@ PHP_METHOD(php_wxAuiToolBar, ToggleTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::ToggleTool((int) tool_id0, state0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->ToggleTool((int) tool_id0, state0);
 
 
@@ -28538,6 +29018,7 @@ PHP_METHOD(php_wxAuiToolBar, SetWindowStyleFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -28556,6 +29037,7 @@ PHP_METHOD(php_wxAuiToolBar, SetWindowStyleFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetWindowStyleFlag((long) style0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetWindowStyleFlag((long) style0);
 
 
@@ -28638,6 +29120,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&orientation0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orientation0 ) == SUCCESS)
 		{
@@ -28656,6 +29139,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolTextOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolTextOrientation((int) orientation0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolTextOrientation((int) orientation0);
 
 
@@ -28739,6 +29223,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&tool_id0, &sticky0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &sticky0 ) == SUCCESS)
 		{
@@ -28757,6 +29242,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolSticky((int) tool_id0, sticky0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolSticky((int) tool_id0, sticky0);
 
 
@@ -28841,6 +29327,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolShortHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&tool_id0, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -28859,6 +29346,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolShortHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolShortHelp((int) tool_id0, wxString(help_string0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolShortHelp((int) tool_id0, wxString(help_string0, wxConvUTF8));
 
 
@@ -28941,6 +29429,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolSeparation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&separation0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &separation0 ) == SUCCESS)
 		{
@@ -28959,6 +29448,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolSeparation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolSeparation((int) separation0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolSeparation((int) separation0);
 
 
@@ -29042,6 +29532,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&tool_id0, &proportion0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &proportion0 ) == SUCCESS)
 		{
@@ -29060,6 +29551,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolProportion((int) tool_id0, (int) proportion0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolProportion((int) tool_id0, (int) proportion0);
 
 
@@ -29142,6 +29634,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolPacking)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&packing0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &packing0 ) == SUCCESS)
 		{
@@ -29160,6 +29653,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolPacking)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolPacking((int) packing0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolPacking((int) packing0);
 
 
@@ -29244,6 +29738,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLongHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&tool_id0, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -29262,6 +29757,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLongHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolLongHelp((int) tool_id0, wxString(help_string0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolLongHelp((int) tool_id0, wxString(help_string0, wxConvUTF8));
 
 
@@ -29346,6 +29842,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&tool_id0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -29364,6 +29861,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolLabel((int) tool_id0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolLabel((int) tool_id0, wxString(label0, wxConvUTF8));
 
 
@@ -29447,6 +29945,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolDropDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&tool_id0, &dropdown0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &dropdown0 ) == SUCCESS)
 		{
@@ -29465,6 +29964,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolDropDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolDropDown((int) tool_id0, dropdown0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolDropDown((int) tool_id0, dropdown0);
 
 
@@ -29547,6 +30047,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBorderPadding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&padding0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &padding0 ) == SUCCESS)
 		{
@@ -29565,6 +30066,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBorderPadding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolBorderPadding((int) padding0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolBorderPadding((int) padding0);
 
 
@@ -29648,6 +30150,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmapSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -29682,6 +30185,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmapSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolBitmapSize(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolBitmapSize(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(size0, "wxAuiToolBar::SetToolBitmapSize at call with 1 argument(s)");
@@ -29767,6 +30271,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&tool_id0, &bitmap0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -29801,6 +30306,7 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetToolBitmap((int) tool_id0, *(wxBitmap*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetToolBitmap((int) tool_id0, *(wxBitmap*) object_pointer0_1);
 
 				references->AddReference(bitmap0, "wxAuiToolBar::SetToolBitmap at call with 2 argument(s)");
@@ -29884,6 +30390,7 @@ PHP_METHOD(php_wxAuiToolBar, SetOverflowVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -29902,6 +30409,7 @@ PHP_METHOD(php_wxAuiToolBar, SetOverflowVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetOverflowVisible(visible0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetOverflowVisible(visible0);
 
 
@@ -29995,6 +30503,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&left0, &right0, &top0, &bottom0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &left0, &right0, &top0, &bottom0 ) == SUCCESS)
 		{
@@ -30011,6 +30520,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x1, &y1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x1, &y1 ) == SUCCESS)
 		{
@@ -30027,6 +30537,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size2, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size2, php_wxSize_entry ) == SUCCESS)
 		{
@@ -30061,6 +30572,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetMargins((int) left0, (int) right0, (int) top0, (int) bottom0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetMargins((int) left0, (int) right0, (int) top0, (int) bottom0);
 
 
@@ -30079,6 +30591,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetMargins((int) x1, (int) y1)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetMargins((int) x1, (int) y1);
 
 
@@ -30097,6 +30610,7 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetMargins(*(wxSize*) object_pointer2_0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetMargins(*(wxSize*) object_pointer2_0);
 
 				references->AddReference(size2, "wxAuiToolBar::SetMargins at call with 1 argument(s)");
@@ -30180,6 +30694,7 @@ PHP_METHOD(php_wxAuiToolBar, SetGripperVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&visible0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
@@ -30198,6 +30713,7 @@ PHP_METHOD(php_wxAuiToolBar, SetGripperVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::SetGripperVisible(visible0)\n\n");
 				#endif
+
 				((wxAuiToolBar_php*)_this)->SetGripperVisible(visible0);
 
 
@@ -30282,6 +30798,7 @@ PHP_METHOD(php_wxAuiToolBar, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -30316,6 +30833,7 @@ PHP_METHOD(php_wxAuiToolBar, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::SetFont(*(wxFont*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->SetFont(*(wxFont*) object_pointer0_0));
 
 				references->AddReference(font0, "wxAuiToolBar::SetFont at call with 1 argument(s)");
@@ -30398,6 +30916,7 @@ PHP_METHOD(php_wxAuiToolBar, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -30412,6 +30931,7 @@ PHP_METHOD(php_wxAuiToolBar, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::Realize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->Realize());
 
 
@@ -30495,6 +31015,7 @@ PHP_METHOD(php_wxAuiToolBar, IsPaneValid)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pane0, php_wxAuiPaneInfo_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pane0, php_wxAuiPaneInfo_entry ) == SUCCESS)
 		{
@@ -30529,6 +31050,7 @@ PHP_METHOD(php_wxAuiToolBar, IsPaneValid)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::IsPaneValid(*(wxAuiPaneInfo*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->IsPaneValid(*(wxAuiPaneInfo*) object_pointer0_0));
 
 				references->AddReference(pane0, "wxAuiToolBar::IsPaneValid at call with 1 argument(s)");
@@ -30612,6 +31134,7 @@ PHP_METHOD(php_wxAuiToolBar, GetWindowStyleFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -30626,6 +31149,7 @@ PHP_METHOD(php_wxAuiToolBar, GetWindowStyleFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetWindowStyleFlag())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetWindowStyleFlag());
 
 
@@ -30708,6 +31232,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolToggled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -30726,6 +31251,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolToggled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolToggled((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolToggled((int) tool_id0));
 
 
@@ -30807,6 +31333,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -30821,6 +31348,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolTextOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolTextOrientation())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolTextOrientation());
 
 
@@ -30903,6 +31431,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -30921,6 +31450,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSticky)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolSticky((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolSticky((int) tool_id0));
 
 
@@ -31003,6 +31533,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolShortHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -31021,6 +31552,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolShortHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiToolBar::GetToolShortHelp((int) tool_id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)_this)->GetToolShortHelp((int) tool_id0);
 				char* temp_string1;
@@ -31108,6 +31640,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSeparation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31122,6 +31655,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSeparation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolSeparation())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolSeparation());
 
 
@@ -31204,6 +31738,7 @@ PHP_METHOD(php_wxAuiToolBar, FindControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&window_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window_id0 ) == SUCCESS)
 		{
@@ -31222,6 +31757,7 @@ PHP_METHOD(php_wxAuiToolBar, FindControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::FindControl((int) window_id0) to return object pointer\n\n");
 				#endif
+
 				wxControl_php* value_to_return1;
 				value_to_return1 = (wxControl_php*) ((wxAuiToolBar_php*)_this)->FindControl((int) window_id0);
 
@@ -31327,6 +31863,7 @@ PHP_METHOD(php_wxAuiToolBar, FindTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -31345,6 +31882,7 @@ PHP_METHOD(php_wxAuiToolBar, FindTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::FindTool((int) tool_id0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return1;
 				value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->FindTool((int) tool_id0);
 
@@ -31450,6 +31988,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&idx0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &idx0 ) == SUCCESS)
 		{
@@ -31468,6 +32007,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::FindToolByIndex((int) idx0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return1;
 				value_to_return1 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->FindToolByIndex((int) idx0);
 
@@ -31574,6 +32114,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -31592,6 +32133,7 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::FindToolByPosition((wxCoord) x0, (wxCoord) y0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return2;
 				value_to_return2 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->FindToolByPosition((wxCoord) x0, (wxCoord) y0);
 
@@ -31696,6 +32238,7 @@ PHP_METHOD(php_wxAuiToolBar, GetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31710,6 +32253,7 @@ PHP_METHOD(php_wxAuiToolBar, GetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::GetArtProvider() to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarArt_php* value_to_return0;
 				value_to_return0 = (wxAuiToolBarArt_php*) ((wxAuiToolBar_php*)_this)->GetArtProvider();
 
@@ -31814,6 +32358,7 @@ PHP_METHOD(php_wxAuiToolBar, GetGripperVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -31828,6 +32373,7 @@ PHP_METHOD(php_wxAuiToolBar, GetGripperVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetGripperVisible())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetGripperVisible());
 
 
@@ -31911,6 +32457,7 @@ PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&dock_direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dock_direction0 ) == SUCCESS)
 		{
@@ -31929,6 +32476,7 @@ PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::GetHintSize((int) dock_direction0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)_this)->GetHintSize((int) dock_direction0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -32015,6 +32563,7 @@ PHP_METHOD(php_wxAuiToolBar, GetOverflowVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32029,6 +32578,7 @@ PHP_METHOD(php_wxAuiToolBar, GetOverflowVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetOverflowVisible())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetOverflowVisible());
 
 
@@ -32110,6 +32660,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBarFits)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32124,6 +32675,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBarFits)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolBarFits())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolBarFits());
 
 
@@ -32206,6 +32758,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -32224,6 +32777,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::GetToolBitmap((int) tool_id0) to return new object\n\n");
 				#endif
+
 				wxBitmap value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)_this)->GetToolBitmap((int) tool_id0);
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -32310,6 +32864,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32324,6 +32879,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::GetToolBitmapSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxAuiToolBar_php*)_this)->GetToolBitmapSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -32410,6 +32966,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBorderPadding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32424,6 +32981,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBorderPadding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolBorderPadding())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolBorderPadding());
 
 
@@ -32505,6 +33063,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -32519,6 +33078,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolCount());
 
 
@@ -32601,6 +33161,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolDropDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -32619,6 +33180,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolDropDown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolDropDown((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolDropDown((int) tool_id0));
 
 
@@ -32701,6 +33263,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -32719,6 +33282,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolEnabled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolEnabled((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolEnabled((int) tool_id0));
 
 
@@ -32801,6 +33365,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFits)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -32819,6 +33384,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFits)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolFits((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolFits((int) tool_id0));
 
 
@@ -32901,6 +33467,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFitsByIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -32919,6 +33486,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFitsByIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxAuiToolBar::GetToolFitsByIndex((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxAuiToolBar_php*)_this)->GetToolFitsByIndex((int) tool_id0));
 
 
@@ -33001,6 +33569,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -33019,6 +33588,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolIndex((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolIndex((int) tool_id0));
 
 
@@ -33101,6 +33671,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -33119,6 +33690,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiToolBar::GetToolLabel((int) tool_id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)_this)->GetToolLabel((int) tool_id0);
 				char* temp_string1;
@@ -33207,6 +33779,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLongHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -33225,6 +33798,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLongHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxAuiToolBar::GetToolLongHelp((int) tool_id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)_this)->GetToolLongHelp((int) tool_id0);
 				char* temp_string1;
@@ -33312,6 +33886,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPacking)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -33326,6 +33901,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPacking)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolPacking())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolPacking());
 
 
@@ -33408,6 +33984,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -33426,6 +34003,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPos)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolPos((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolPos((int) tool_id0));
 
 
@@ -33508,6 +34086,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolProportion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -33526,6 +34105,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolProportion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxAuiToolBar::GetToolProportion((int) tool_id0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxAuiToolBar_php*)_this)->GetToolProportion((int) tool_id0));
 
 
@@ -33608,6 +34188,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tool_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0 ) == SUCCESS)
 		{
@@ -33626,6 +34207,7 @@ PHP_METHOD(php_wxAuiToolBar, GetToolRect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::GetToolRect((int) tool_id0) to return new object\n\n");
 				#endif
+
 				wxRect value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)_this)->GetToolRect((int) tool_id0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
@@ -33750,6 +34332,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsO|sl' (&tool_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &short_help_string0, &short_help_string_len0, &kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsO|sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &short_help_string0, &short_help_string_len0, &kind0 ) == SUCCESS)
 		{
@@ -33782,6 +34365,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsOOlssz' (&tool_id1, &label1, &label_len1, &bitmap1, php_wxBitmap_entry, &disabled_bitmap1, php_wxBitmap_entry, &kind1, &short_help_string1, &short_help_string_len1, &long_help_string1, &long_help_string_len1, &client_data1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsOOlssz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id1, &label1, &label_len1, &bitmap1, php_wxBitmap_entry, &disabled_bitmap1, php_wxBitmap_entry, &kind1, &short_help_string1, &short_help_string_len1, &long_help_string1, &long_help_string_len1, &client_data1 ) == SUCCESS)
 		{
@@ -33846,6 +34430,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lOO|bzss' (&tool_id2, &bitmap2, php_wxBitmap_entry, &disabled_bitmap2, php_wxBitmap_entry, &toggle2, &client_data2, &short_help_string2, &short_help_string_len2, &long_help_string2, &long_help_string_len2)\n");
 		#endif
+
 		char parse_parameters_string[] = "lOO|bzss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id2, &bitmap2, php_wxBitmap_entry, &disabled_bitmap2, php_wxBitmap_entry, &toggle2, &client_data2, &short_help_string2, &short_help_string_len2, &long_help_string2, &long_help_string_len2 ) == SUCCESS)
 		{
@@ -33912,6 +34497,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return3;
 				value_to_return3 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
@@ -33947,6 +34533,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(short_help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return4;
 				value_to_return4 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(short_help_string0, wxConvUTF8));
 
@@ -33982,6 +34569,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(short_help_string0, wxConvUTF8), (wxItemKind) kind0) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return5;
 				value_to_return5 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(short_help_string0, wxConvUTF8), (wxItemKind) kind0);
 
@@ -34024,6 +34612,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, (wxItemKind) kind1, wxString(short_help_string1, wxConvUTF8), wxString(long_help_string1, wxConvUTF8), (wxObject*) object_pointer1_7) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return8;
 				value_to_return8 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, (wxItemKind) kind1, wxString(short_help_string1, wxConvUTF8), wxString(long_help_string1, wxConvUTF8), (wxObject*) object_pointer1_7);
 
@@ -34068,6 +34657,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return3;
 				value_to_return3 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2);
 
@@ -34104,6 +34694,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return4;
 				value_to_return4 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2);
 
@@ -34140,6 +34731,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return5;
 				value_to_return5 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4);
 
@@ -34177,6 +34769,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4, wxString(short_help_string2, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return6;
 				value_to_return6 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4, wxString(short_help_string2, wxConvUTF8));
 
@@ -34214,6 +34807,7 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxAuiToolBar::AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4, wxString(short_help_string2, wxConvUTF8), wxString(long_help_string2, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxAuiToolBarItem_php* value_to_return7;
 				value_to_return7 = (wxAuiToolBarItem_php*) ((wxAuiToolBar_php*)_this)->AddTool((int) tool_id2, *(wxBitmap*) object_pointer2_1, *(wxBitmap*) object_pointer2_2, toggle2, (wxObject*) object_pointer2_4, wxString(short_help_string2, wxConvUTF8), wxString(long_help_string2, wxConvUTF8));
 

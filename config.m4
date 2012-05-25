@@ -43,7 +43,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 		AC_DEFINE(USE_WXPHP_DEBUG,1,[Include debugging support in wxPHP])
 	fi
 	
-	dnl Add include directory since headers are store there
+	dnl Add additional includes directory
 	if test -n "$ext_srcdir"; then
 		PHP_WXWIDGETS_CFLAGS="-I$ext_srcdir/includes";
 	else
@@ -79,5 +79,5 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_ADD_LIBRARY(stdc++, 1 , WXWIDGETS_SHARED_LIBADD)
 
 	dnl PHP_NEW_EXTENSION(extname, sources [, shared [, sapi_class [, extra-cflags [, cxx [, zend_ext]]]]])
-	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp src/appmanagement.cpp src/cfg.cpp src/bookctrl.cpp src/dnd.cpp src/cmndlg.cpp src/containers.cpp src/ctrl.cpp src/data.cpp src/dc.cpp src/docview.cpp src/events.cpp src/file.cpp src/gdi.cpp src/grid.cpp src/html.cpp src/help.cpp src/logging.cpp src/managedwnd.cpp src/menus.cpp src/misc.cpp src/miscwnd.cpp src/media.cpp src/pickers.cpp src/printing.cpp src/ribbon.cpp src/richtext.cpp src/rtti.cpp src/stc.cpp src/streams.cpp src/threading.cpp src/validator.cpp src/vfs.cpp src/webview.cpp src/aui.cpp src/winlayout.cpp src/xml.cpp src/xrc.cpp src/dvc.cpp src/others.cpp src/functions.cpp src/wxwidgets.cpp, $ext_shared,,,1)
+	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp src/appmanagement.cpp src/cfg.cpp src/bookctrl.cpp src/dnd.cpp src/cmndlg.cpp src/containers.cpp src/ctrl.cpp src/data.cpp src/dc.cpp src/docview.cpp src/events.cpp src/file.cpp src/gdi.cpp src/grid.cpp src/html.cpp src/help.cpp src/logging.cpp src/managedwnd.cpp src/menus.cpp src/misc.cpp src/miscwnd.cpp src/media.cpp src/pickers.cpp src/printing.cpp src/ribbon.cpp src/richtext.cpp src/rtti.cpp src/stc.cpp src/streams.cpp src/threading.cpp src/validator.cpp src/vfs.cpp src/webview.cpp src/aui.cpp src/winlayout.cpp src/xml.cpp src/xrc.cpp src/dvc.cpp src/others.cpp src/functions.cpp wxwidgets.cpp, $ext_shared,,,1)
 fi

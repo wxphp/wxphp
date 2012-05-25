@@ -40,7 +40,7 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: <?=$class_name?>::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: <?=$class_name?>::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
