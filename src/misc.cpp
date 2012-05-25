@@ -91,6 +91,7 @@ void php_wxArtProvider_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto bool wxArtProvider::Remove(wxArtProvider &provider)
    Remove a provider from the stack if it is on it. */
 PHP_METHOD(php_wxArtProvider, Remove)
@@ -157,6 +158,7 @@ PHP_METHOD(php_wxArtProvider, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&provider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &provider0 ) == SUCCESS)
 		{
@@ -192,6 +194,7 @@ PHP_METHOD(php_wxArtProvider, Remove)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxArtProvider::Remove((wxArtProvider*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxArtProvider::Remove((wxArtProvider*) object_pointer0_0));
 
 
@@ -276,6 +279,7 @@ PHP_METHOD(php_wxArtProvider, PushBack)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&provider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &provider0 ) == SUCCESS)
 		{
@@ -311,6 +315,7 @@ PHP_METHOD(php_wxArtProvider, PushBack)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::PushBack((wxArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				wxArtProvider::PushBack((wxArtProvider*) object_pointer0_0);
 
 
@@ -395,6 +400,7 @@ PHP_METHOD(php_wxArtProvider, Push)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&provider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &provider0 ) == SUCCESS)
 		{
@@ -430,6 +436,7 @@ PHP_METHOD(php_wxArtProvider, Push)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::Push((wxArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				wxArtProvider::Push((wxArtProvider*) object_pointer0_0);
 
 
@@ -512,6 +519,7 @@ PHP_METHOD(php_wxArtProvider, Pop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -527,6 +535,7 @@ PHP_METHOD(php_wxArtProvider, Pop)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxArtProvider::Pop())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxArtProvider::Pop());
 
 
@@ -610,6 +619,7 @@ PHP_METHOD(php_wxArtProvider, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&provider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &provider0 ) == SUCCESS)
 		{
@@ -645,6 +655,7 @@ PHP_METHOD(php_wxArtProvider, Insert)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::Insert((wxArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				wxArtProvider::Insert((wxArtProvider*) object_pointer0_0);
 
 
@@ -727,6 +738,7 @@ PHP_METHOD(php_wxArtProvider, HasNativeProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -742,6 +754,7 @@ PHP_METHOD(php_wxArtProvider, HasNativeProvider)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxArtProvider::HasNativeProvider())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxArtProvider::HasNativeProvider());
 
 
@@ -827,6 +840,7 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&client0, &client_len0, &platform_default0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &client0, &client_len0, &platform_default0 ) == SUCCESS)
 		{
@@ -846,6 +860,7 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetSizeHint(wxString(client0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = wxArtProvider::GetSizeHint(wxString(client0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -865,6 +880,7 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetSizeHint(wxString(client0, wxConvUTF8), platform_default0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return2;
 				value_to_return2 = wxArtProvider::GetSizeHint(wxString(client0, wxConvUTF8), platform_default0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -956,6 +972,7 @@ PHP_METHOD(php_wxArtProvider, GetNativeSizeHint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&client0, &client_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &client0, &client_len0 ) == SUCCESS)
 		{
@@ -975,6 +992,7 @@ PHP_METHOD(php_wxArtProvider, GetNativeSizeHint)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetNativeSizeHint(wxString(client0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = wxArtProvider::GetNativeSizeHint(wxString(client0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -1068,6 +1086,7 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&id0, &id_len0, &client0, &client_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &id_len0, &client0, &client_len0 ) == SUCCESS)
 		{
@@ -1087,6 +1106,7 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetIconBundle(wxString(id0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxIconBundle value_to_return1;
 				value_to_return1 = wxArtProvider::GetIconBundle(wxString(id0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxIconBundle_php), 0);
@@ -1106,6 +1126,7 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetIconBundle(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxIconBundle value_to_return2;
 				value_to_return2 = wxArtProvider::GetIconBundle(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxIconBundle_php), 0);
@@ -1201,6 +1222,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sO' (&id0, &id_len0, &client0, &client_len0, &size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &id_len0, &client0, &client_len0, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -1236,6 +1258,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetIcon(wxString(id0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxIcon value_to_return1;
 				value_to_return1 = wxArtProvider::GetIcon(wxString(id0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -1255,6 +1278,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetIcon(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxIcon value_to_return2;
 				value_to_return2 = wxArtProvider::GetIcon(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -1274,6 +1298,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetIcon(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8), *(wxSize*) object_pointer0_2) to return new object\n\n");
 				#endif
+
 				wxIcon value_to_return3;
 				value_to_return3 = wxArtProvider::GetIcon(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8), *(wxSize*) object_pointer0_2);
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -1369,6 +1394,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sO' (&id0, &id_len0, &client0, &client_len0, &size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &id_len0, &client0, &client_len0, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -1404,6 +1430,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxBitmap value_to_return1;
 				value_to_return1 = wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -1423,6 +1450,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxBitmap value_to_return2;
 				value_to_return2 = wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -1442,6 +1470,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 				php_printf("Static ");
 				php_printf("Executing wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8), *(wxSize*) object_pointer0_2) to return new object\n\n");
 				#endif
+
 				wxBitmap value_to_return3;
 				value_to_return3 = wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8), *(wxSize*) object_pointer0_2);
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -1533,6 +1562,7 @@ PHP_METHOD(php_wxArtProvider, Delete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&provider0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &provider0 ) == SUCCESS)
 		{
@@ -1568,6 +1598,7 @@ PHP_METHOD(php_wxArtProvider, Delete)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxArtProvider::Delete((wxArtProvider*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxArtProvider::Delete((wxArtProvider*) object_pointer0_0));
 
 
@@ -1626,6 +1657,7 @@ void php_wxCaret_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxCaret::wxCaret()
    Default constructor. */
 PHP_METHOD(php_wxCaret, __construct)
@@ -1664,6 +1696,7 @@ PHP_METHOD(php_wxCaret, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1676,6 +1709,7 @@ PHP_METHOD(php_wxCaret, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&window1, &width1, &height1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1, &width1, &height1 ) == SUCCESS)
 		{
@@ -1710,6 +1744,7 @@ PHP_METHOD(php_wxCaret, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxCaret_php();
 
 				((wxCaret_php*) _this)->references.Initialize();
@@ -1727,6 +1762,7 @@ PHP_METHOD(php_wxCaret, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) width1, (int) height1)\n");
 				#endif
+
 				_this = new wxCaret_php((wxWindow*) object_pointer1_0, (int) width1, (int) height1);
 
 				((wxCaret_php*) _this)->references.Initialize();
@@ -1753,7 +1789,7 @@ PHP_METHOD(php_wxCaret, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxCaret::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxCaret::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1827,6 +1863,7 @@ PHP_METHOD(php_wxCaret, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -1845,6 +1882,7 @@ PHP_METHOD(php_wxCaret, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::Show()\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->Show();
 
 
@@ -1856,6 +1894,7 @@ PHP_METHOD(php_wxCaret, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::Show(show0)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->Show(show0);
 
 
@@ -1944,6 +1983,7 @@ PHP_METHOD(php_wxCaret, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
@@ -1976,6 +2016,7 @@ PHP_METHOD(php_wxCaret, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&width1, &height1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width1, &height1 ) == SUCCESS)
 		{
@@ -1994,6 +2035,7 @@ PHP_METHOD(php_wxCaret, SetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::SetSize(*(wxSize*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->SetSize(*(wxSize*) object_pointer0_0);
 
 				references->AddReference(size0, "wxCaret::SetSize at call with 1 argument(s)");
@@ -2013,6 +2055,7 @@ PHP_METHOD(php_wxCaret, SetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::SetSize((int) width1, (int) height1)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->SetSize((int) width1, (int) height1);
 
 
@@ -2096,6 +2139,7 @@ PHP_METHOD(php_wxCaret, SetBlinkTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
 		{
@@ -2115,6 +2159,7 @@ PHP_METHOD(php_wxCaret, SetBlinkTime)
 				php_printf("Static ");
 				php_printf("Executing wxCaret::SetBlinkTime((int) milliseconds0)\n\n");
 				#endif
+
 				wxCaret::SetBlinkTime((int) milliseconds0);
 
 
@@ -2203,6 +2248,7 @@ PHP_METHOD(php_wxCaret, Move)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -2235,6 +2281,7 @@ PHP_METHOD(php_wxCaret, Move)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x1, &y1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x1, &y1 ) == SUCCESS)
 		{
@@ -2253,6 +2300,7 @@ PHP_METHOD(php_wxCaret, Move)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::Move(*(wxPoint*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->Move(*(wxPoint*) object_pointer0_0);
 
 				references->AddReference(pt0, "wxCaret::Move at call with 1 argument(s)");
@@ -2272,6 +2320,7 @@ PHP_METHOD(php_wxCaret, Move)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::Move((int) x1, (int) y1)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->Move((int) x1, (int) y1);
 
 
@@ -2354,6 +2403,7 @@ PHP_METHOD(php_wxCaret, IsVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2368,6 +2418,7 @@ PHP_METHOD(php_wxCaret, IsVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxCaret::IsVisible())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxCaret_php*)_this)->IsVisible());
 
 
@@ -2450,6 +2501,7 @@ PHP_METHOD(php_wxCaret, IsOk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2464,6 +2516,7 @@ PHP_METHOD(php_wxCaret, IsOk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxCaret::IsOk())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxCaret_php*)_this)->IsOk());
 
 
@@ -2546,6 +2599,7 @@ PHP_METHOD(php_wxCaret, Hide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2560,6 +2614,7 @@ PHP_METHOD(php_wxCaret, Hide)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::Hide()\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->Hide();
 
 
@@ -2642,6 +2697,7 @@ PHP_METHOD(php_wxCaret, GetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2656,6 +2712,7 @@ PHP_METHOD(php_wxCaret, GetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::GetWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxCaret_php*)_this)->GetWindow();
 
@@ -2767,6 +2824,7 @@ PHP_METHOD(php_wxCaret, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2779,6 +2837,7 @@ PHP_METHOD(php_wxCaret, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (width1, height1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, width1, height1 ) == SUCCESS)
 		{
@@ -2800,6 +2859,7 @@ PHP_METHOD(php_wxCaret, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::GetSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = ((wxCaret_php*)_this)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -2823,6 +2883,7 @@ PHP_METHOD(php_wxCaret, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::GetSize((int*) width1, (int*) height1)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->GetSize((int*) width1, (int*) height1);
 
 				size_t elements_returned1_0 = sizeof(width1)/sizeof(*width1);
@@ -2917,6 +2978,7 @@ PHP_METHOD(php_wxCaret, GetBlinkTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2932,6 +2994,7 @@ PHP_METHOD(php_wxCaret, GetBlinkTime)
 				php_printf("Static ");
 				php_printf("Executing RETURN_LONG(wxCaret::GetBlinkTime())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxCaret::GetBlinkTime());
 
 
@@ -3020,6 +3083,7 @@ PHP_METHOD(php_wxCaret, GetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3032,6 +3096,7 @@ PHP_METHOD(php_wxCaret, GetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (x1, y1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x1, y1 ) == SUCCESS)
 		{
@@ -3053,6 +3118,7 @@ PHP_METHOD(php_wxCaret, GetPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::GetPosition() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxCaret_php*)_this)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
@@ -3076,6 +3142,7 @@ PHP_METHOD(php_wxCaret, GetPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxCaret::GetPosition((int*) x1, (int*) y1)\n\n");
 				#endif
+
 				((wxCaret_php*)_this)->GetPosition((int*) x1, (int*) y1);
 
 				size_t elements_returned1_0 = sizeof(x1)/sizeof(*x1);
@@ -3146,6 +3213,7 @@ void php_wxNotificationMessage_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+
 /* {{{ proto bool wxNotificationMessage::Close()
    Hides the notification. */
 PHP_METHOD(php_wxNotificationMessage, Close)
@@ -3210,6 +3278,7 @@ PHP_METHOD(php_wxNotificationMessage, Close)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3224,6 +3293,7 @@ PHP_METHOD(php_wxNotificationMessage, Close)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotificationMessage::Close())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotificationMessage_php*)_this)->Close());
 
 
@@ -3307,6 +3377,7 @@ PHP_METHOD(php_wxNotificationMessage, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -3325,6 +3396,7 @@ PHP_METHOD(php_wxNotificationMessage, SetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxNotificationMessage::SetFlags((int) flags0)\n\n");
 				#endif
+
 				((wxNotificationMessage_php*)_this)->SetFlags((int) flags0);
 
 
@@ -3409,6 +3481,7 @@ PHP_METHOD(php_wxNotificationMessage, SetMessage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&message0, &message_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0 ) == SUCCESS)
 		{
@@ -3427,6 +3500,7 @@ PHP_METHOD(php_wxNotificationMessage, SetMessage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxNotificationMessage::SetMessage(wxString(message0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxNotificationMessage_php*)_this)->SetMessage(wxString(message0, wxConvUTF8));
 
 
@@ -3511,6 +3585,7 @@ PHP_METHOD(php_wxNotificationMessage, SetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
@@ -3545,6 +3620,7 @@ PHP_METHOD(php_wxNotificationMessage, SetParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxNotificationMessage::SetParent((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxNotificationMessage_php*)_this)->SetParent((wxWindow*) object_pointer0_0);
 
 				references->AddReference(parent0, "wxNotificationMessage::SetParent at call with 1 argument(s)");
@@ -3630,6 +3706,7 @@ PHP_METHOD(php_wxNotificationMessage, SetTitle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -3648,6 +3725,7 @@ PHP_METHOD(php_wxNotificationMessage, SetTitle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxNotificationMessage::SetTitle(wxString(title0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxNotificationMessage_php*)_this)->SetTitle(wxString(title0, wxConvUTF8));
 
 
@@ -3731,6 +3809,7 @@ PHP_METHOD(php_wxNotificationMessage, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&timeout0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &timeout0 ) == SUCCESS)
 		{
@@ -3749,6 +3828,7 @@ PHP_METHOD(php_wxNotificationMessage, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotificationMessage::Show())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotificationMessage_php*)_this)->Show());
 
 
@@ -3760,6 +3840,7 @@ PHP_METHOD(php_wxNotificationMessage, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxNotificationMessage::Show((int) timeout0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxNotificationMessage_php*)_this)->Show((int) timeout0));
 
 
@@ -3819,6 +3900,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3831,6 +3913,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|szl' (&title1, &title_len1, &message1, &message_len1, &parent1, &flags1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|szl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title1, &title_len1, &message1, &message_len1, &parent1, &flags1 ) == SUCCESS)
 		{
@@ -3865,6 +3948,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxNotificationMessage_php();
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
@@ -3882,6 +3966,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxNotificationMessage_php(wxString(title1, wxConvUTF8));
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
@@ -3892,6 +3977,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxNotificationMessage_php(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8));
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
@@ -3902,6 +3988,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8), (wxWindow*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxNotificationMessage_php(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8), (wxWindow*) object_pointer1_2);
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
@@ -3913,6 +4000,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8), (wxWindow*) object_pointer1_2, (int) flags1)\n");
 				#endif
+
 				_this = new wxNotificationMessage_php(wxString(title1, wxConvUTF8), wxString(message1, wxConvUTF8), (wxWindow*) object_pointer1_2, (int) flags1);
 
 				((wxNotificationMessage_php*) _this)->references.Initialize();
@@ -3939,7 +4027,7 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxNotificationMessage::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxNotificationMessage::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -3988,6 +4076,7 @@ void php_wxStopWatch_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxStopWatch::wxStopWatch()
    Constructor. */
 PHP_METHOD(php_wxStopWatch, __construct)
@@ -4020,6 +4109,7 @@ PHP_METHOD(php_wxStopWatch, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4034,6 +4124,7 @@ PHP_METHOD(php_wxStopWatch, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxStopWatch_php();
 
 				((wxStopWatch_php*) _this)->references.Initialize();
@@ -4059,7 +4150,7 @@ PHP_METHOD(php_wxStopWatch, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStopWatch::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStopWatch::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4132,6 +4223,7 @@ PHP_METHOD(php_wxStopWatch, Time)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4146,6 +4238,7 @@ PHP_METHOD(php_wxStopWatch, Time)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxStopWatch::Time())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxStopWatch_php*)_this)->Time());
 
 
@@ -4229,6 +4322,7 @@ PHP_METHOD(php_wxStopWatch, Start)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&milliseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
 		{
@@ -4247,6 +4341,7 @@ PHP_METHOD(php_wxStopWatch, Start)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStopWatch::Start()\n\n");
 				#endif
+
 				((wxStopWatch_php*)_this)->Start();
 
 
@@ -4258,6 +4353,7 @@ PHP_METHOD(php_wxStopWatch, Start)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStopWatch::Start((long) milliseconds0)\n\n");
 				#endif
+
 				((wxStopWatch_php*)_this)->Start((long) milliseconds0);
 
 
@@ -4340,6 +4436,7 @@ PHP_METHOD(php_wxStopWatch, Resume)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4354,6 +4451,7 @@ PHP_METHOD(php_wxStopWatch, Resume)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStopWatch::Resume()\n\n");
 				#endif
+
 				((wxStopWatch_php*)_this)->Resume();
 
 
@@ -4436,6 +4534,7 @@ PHP_METHOD(php_wxStopWatch, Pause)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4450,6 +4549,7 @@ PHP_METHOD(php_wxStopWatch, Pause)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxStopWatch::Pause()\n\n");
 				#endif
+
 				((wxStopWatch_php*)_this)->Pause();
 
 
@@ -4508,6 +4608,7 @@ void php_wxTaskBarIcon_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto wxMenu wxTaskBarIcon::CreatePopupMenu()
    This method is called by the library when the user requests popup menu (on Windows and Unix platforms, this is when the user right-clicks the icon). */
 wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
@@ -4657,6 +4758,7 @@ PHP_METHOD(php_wxTaskBarIcon, Destroy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4671,6 +4773,7 @@ PHP_METHOD(php_wxTaskBarIcon, Destroy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTaskBarIcon::Destroy()\n\n");
 				#endif
+
 				((wxTaskBarIcon_php*)_this)->Destroy();
 
 
@@ -4753,6 +4856,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsAvailable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4768,6 +4872,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsAvailable)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::IsAvailable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxTaskBarIcon::IsAvailable());
 
 
@@ -4850,6 +4955,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsIconInstalled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4864,6 +4970,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsIconInstalled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::IsIconInstalled())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->IsIconInstalled());
 
 
@@ -4946,6 +5053,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsOk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4960,6 +5068,7 @@ PHP_METHOD(php_wxTaskBarIcon, IsOk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::IsOk())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->IsOk());
 
 
@@ -5044,6 +5153,7 @@ PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
@@ -5078,6 +5188,7 @@ PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::PopupMenu((wxMenu*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->PopupMenu((wxMenu*) object_pointer0_0));
 
 				references->AddReference(menu0, "wxTaskBarIcon::PopupMenu at call with 1 argument(s)");
@@ -5161,6 +5272,7 @@ PHP_METHOD(php_wxTaskBarIcon, RemoveIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5175,6 +5287,7 @@ PHP_METHOD(php_wxTaskBarIcon, RemoveIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::RemoveIcon())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->RemoveIcon());
 
 
@@ -5261,6 +5374,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|s' (&icon0, php_wxIcon_entry, &tooltip0, &tooltip_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &icon0, php_wxIcon_entry, &tooltip0, &tooltip_len0 ) == SUCCESS)
 		{
@@ -5295,6 +5409,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::SetIcon(*(wxIcon*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0));
 
 				references->AddReference(icon0, "wxTaskBarIcon::SetIcon at call with 1 argument(s)");
@@ -5307,6 +5422,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTaskBarIcon::SetIcon(*(wxIcon*) object_pointer0_0, wxString(tooltip0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTaskBarIcon_php*)_this)->SetIcon(*(wxIcon*) object_pointer0_0, wxString(tooltip0, wxConvUTF8)));
 
 				references->AddReference(icon0, "wxTaskBarIcon::SetIcon at call with 2 argument(s)");
@@ -5359,6 +5475,7 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&iconType0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &iconType0 ) == SUCCESS)
 		{
@@ -5377,6 +5494,7 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxTaskBarIcon_php();
 
 				((wxTaskBarIcon_php*) _this)->references.Initialize();
@@ -5387,6 +5505,7 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxTaskBarIconType) iconType0)\n");
 				#endif
+
 				_this = new wxTaskBarIcon_php((wxTaskBarIconType) iconType0);
 
 				((wxTaskBarIcon_php*) _this)->references.Initialize();
@@ -5412,7 +5531,7 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTaskBarIcon::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTaskBarIcon::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -5461,6 +5580,7 @@ void php_wxTimer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto int wxTimer::GetId()
    Returns the ID of the events generated by this timer. */
 PHP_METHOD(php_wxTimer, GetId)
@@ -5525,6 +5645,7 @@ PHP_METHOD(php_wxTimer, GetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5539,6 +5660,7 @@ PHP_METHOD(php_wxTimer, GetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTimer::GetId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTimer_php*)_this)->GetId());
 
 
@@ -5621,6 +5743,7 @@ PHP_METHOD(php_wxTimer, GetInterval)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5635,6 +5758,7 @@ PHP_METHOD(php_wxTimer, GetInterval)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTimer::GetInterval())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTimer_php*)_this)->GetInterval());
 
 
@@ -5717,6 +5841,7 @@ PHP_METHOD(php_wxTimer, GetOwner)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5731,6 +5856,7 @@ PHP_METHOD(php_wxTimer, GetOwner)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTimer::GetOwner() to return object pointer\n\n");
 				#endif
+
 				wxEvtHandler_php* value_to_return0;
 				value_to_return0 = (wxEvtHandler_php*) ((wxTimer_php*)_this)->GetOwner();
 
@@ -5836,6 +5962,7 @@ PHP_METHOD(php_wxTimer, IsOneShot)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5850,6 +5977,7 @@ PHP_METHOD(php_wxTimer, IsOneShot)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimer::IsOneShot())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimer_php*)_this)->IsOneShot());
 
 
@@ -5932,6 +6060,7 @@ PHP_METHOD(php_wxTimer, IsRunning)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5946,6 +6075,7 @@ PHP_METHOD(php_wxTimer, IsRunning)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimer::IsRunning())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimer_php*)_this)->IsRunning());
 
 
@@ -6028,6 +6158,7 @@ PHP_METHOD(php_wxTimer, Notify)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6042,6 +6173,7 @@ PHP_METHOD(php_wxTimer, Notify)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTimer::Notify()\n\n");
 				#endif
+
 				((wxTimer_php*)_this)->Notify();
 
 
@@ -6127,6 +6259,7 @@ PHP_METHOD(php_wxTimer, SetOwner)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|l' (&owner0, &id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &owner0, &id0 ) == SUCCESS)
 		{
@@ -6161,6 +6294,7 @@ PHP_METHOD(php_wxTimer, SetOwner)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTimer::SetOwner((wxEvtHandler*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxTimer_php*)_this)->SetOwner((wxEvtHandler*) object_pointer0_0);
 
 				references->AddReference(owner0, "wxTimer::SetOwner at call with 1 argument(s)");
@@ -6173,6 +6307,7 @@ PHP_METHOD(php_wxTimer, SetOwner)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTimer::SetOwner((wxEvtHandler*) object_pointer0_0, (int) id0)\n\n");
 				#endif
+
 				((wxTimer_php*)_this)->SetOwner((wxEvtHandler*) object_pointer0_0, (int) id0);
 
 				references->AddReference(owner0, "wxTimer::SetOwner at call with 2 argument(s)");
@@ -6258,6 +6393,7 @@ PHP_METHOD(php_wxTimer, Start)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lb' (&milliseconds0, &oneShot0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0, &oneShot0 ) == SUCCESS)
 		{
@@ -6276,6 +6412,7 @@ PHP_METHOD(php_wxTimer, Start)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimer::Start())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimer_php*)_this)->Start());
 
 
@@ -6287,6 +6424,7 @@ PHP_METHOD(php_wxTimer, Start)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimer::Start((int) milliseconds0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimer_php*)_this)->Start((int) milliseconds0));
 
 
@@ -6298,6 +6436,7 @@ PHP_METHOD(php_wxTimer, Start)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTimer::Start((int) milliseconds0, oneShot0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTimer_php*)_this)->Start((int) milliseconds0, oneShot0));
 
 
@@ -6380,6 +6519,7 @@ PHP_METHOD(php_wxTimer, Stop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6394,6 +6534,7 @@ PHP_METHOD(php_wxTimer, Stop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTimer::Stop()\n\n");
 				#endif
+
 				((wxTimer_php*)_this)->Stop();
 
 
@@ -6449,6 +6590,7 @@ PHP_METHOD(php_wxTimer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6461,6 +6603,7 @@ PHP_METHOD(php_wxTimer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|l' (&owner1, &id1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &owner1, &id1 ) == SUCCESS)
 		{
@@ -6495,6 +6638,7 @@ PHP_METHOD(php_wxTimer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxTimer_php();
 
 				((wxTimer_php*) _this)->references.Initialize();
@@ -6512,6 +6656,7 @@ PHP_METHOD(php_wxTimer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEvtHandler*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxTimer_php((wxEvtHandler*) object_pointer1_0);
 
 				((wxTimer_php*) _this)->references.Initialize();
@@ -6523,6 +6668,7 @@ PHP_METHOD(php_wxTimer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxEvtHandler*) object_pointer1_0, (int) id1)\n");
 				#endif
+
 				_this = new wxTimer_php((wxEvtHandler*) object_pointer1_0, (int) id1);
 
 				((wxTimer_php*) _this)->references.Initialize();
@@ -6549,7 +6695,7 @@ PHP_METHOD(php_wxTimer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTimer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTimer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6598,6 +6744,7 @@ void php_wxWindowDisabler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+
 /* {{{ proto  wxWindowDisabler::wxWindowDisabler(bool disable)
    Disables all top level windows of the applications. */
 PHP_METHOD(php_wxWindowDisabler, __construct)
@@ -6635,6 +6782,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&disable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &disable0 ) == SUCCESS)
 		{
@@ -6651,6 +6799,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&winToSkip1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &winToSkip1 ) == SUCCESS)
 		{
@@ -6685,6 +6834,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxWindowDisabler_php();
 
 				((wxWindowDisabler_php*) _this)->references.Initialize();
@@ -6695,6 +6845,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(disable0)\n");
 				#endif
+
 				_this = new wxWindowDisabler_php(disable0);
 
 				((wxWindowDisabler_php*) _this)->references.Initialize();
@@ -6712,6 +6863,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxWindowDisabler_php((wxWindow*) object_pointer1_0);
 
 				((wxWindowDisabler_php*) _this)->references.Initialize();
@@ -6738,7 +6890,7 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWindowDisabler::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWindowDisabler::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6787,6 +6939,7 @@ void php_wxBusyCursor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxBusyCursor::wxBusyCursor(wxCursor cursor)
    Constructs a busy cursor object, calling wxBeginBusyCursor(). */
 PHP_METHOD(php_wxBusyCursor, __construct)
@@ -6821,6 +6974,7 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&cursor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0 ) == SUCCESS)
 		{
@@ -6855,6 +7009,7 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxBusyCursor_php();
 
 				((wxBusyCursor_php*) _this)->references.Initialize();
@@ -6865,6 +7020,7 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((const wxCursor*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxBusyCursor_php((const wxCursor*) object_pointer0_0);
 
 				((wxBusyCursor_php*) _this)->references.Initialize();
@@ -6891,7 +7047,7 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBusyCursor::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBusyCursor::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

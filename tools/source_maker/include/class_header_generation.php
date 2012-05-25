@@ -161,12 +161,12 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", *$property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", *$property_name TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_CC);\n";
 							break;
 					}
 					break;
@@ -178,12 +178,12 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzend_declare_class_constant_long(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", *$property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_long(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", *$property_name TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzend_declare_class_constant_long(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_long(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_CC);\n";
 							break;
 					}
 					break;
@@ -193,12 +193,12 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzend_declare_class_constant_double(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", *$property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_double(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", *$property_name TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzend_declare_class_constant_double(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_double(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_CC);\n";
 							break;
 					}
 					break;
@@ -208,12 +208,12 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzend_declare_class_constant_string(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_string(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzend_declare_class_constant_long(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_long(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name TSRMLS_CC);\n";
 							break;
 					}
 					break;
@@ -223,12 +223,12 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name->GetTicks() TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name->GetTicks() TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name.GetTicks() TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_bool(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name.GetTicks() TSRMLS_CC);\n";
 							break;
 					}
 					break;
@@ -238,12 +238,12 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name->char_str(), $property_name->size() TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name->char_str(), $property_name->size() TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name.char_str(), $property_name.size() TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant_stringl(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", $property_name.char_str(), $property_name.size() TSRMLS_CC);\n";
 							break;
 					}
 					break;
@@ -257,7 +257,7 @@ function register_class_const_properties($class_name)
 							$code .= "\tMAKE_STD_ZVAL({$property_name}_zval)\n";
 							$code .= "\tobject_init_ex({$property_name}_zval, php_{$property_type}_entry);\n";
 							$code .= "\tadd_property_resource({$property_name}_zval, \"wxResource\", zend_list_insert({$property_name}, le_{$property_type}));\n";
-							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
@@ -266,7 +266,7 @@ function register_class_const_properties($class_name)
 							$code .= "\tMAKE_STD_ZVAL({$property_name}_zval)\n";
 							$code .= "\tobject_init_ex({$property_name}_zval, php_{$property_type}_entry);\n";
 							$code .= "\tadd_property_resource({$property_name}_zval, \"wxResource\", zend_list_insert(&{$property_name}, le_{$property_type}));\n";
-							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_DC);\n";
+							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_CC);\n";
 							break;
 					}
 					break;

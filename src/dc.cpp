@@ -91,6 +91,7 @@ void php_wxDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxDC::StartPage()
    Starts a document page (only relevant when outputting to a printer). */
 PHP_METHOD(php_wxDC, StartPage)
@@ -199,6 +200,7 @@ PHP_METHOD(php_wxDC, StartPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -213,6 +215,7 @@ PHP_METHOD(php_wxDC, StartPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::StartPage()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->StartPage();
@@ -388,6 +391,7 @@ PHP_METHOD(php_wxDC, StartDoc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&message0, &message_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0 ) == SUCCESS)
 		{
@@ -406,6 +410,7 @@ PHP_METHOD(php_wxDC, StartDoc)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::StartDoc(wxString(message0, wxConvUTF8)))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->StartDoc(wxString(message0, wxConvUTF8)));
@@ -581,6 +586,7 @@ PHP_METHOD(php_wxDC, SetUserScale)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (&xScale0, &yScale0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &xScale0, &yScale0 ) == SUCCESS)
 		{
@@ -599,6 +605,7 @@ PHP_METHOD(php_wxDC, SetUserScale)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetUserScale(xScale0, yScale0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetUserScale(xScale0, yScale0);
@@ -774,6 +781,7 @@ PHP_METHOD(php_wxDC, SetTextForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -808,6 +816,7 @@ PHP_METHOD(php_wxDC, SetTextForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetTextForeground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetTextForeground(*(wxColour*) object_pointer0_0);
@@ -984,6 +993,7 @@ PHP_METHOD(php_wxDC, SetTextBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -1018,6 +1028,7 @@ PHP_METHOD(php_wxDC, SetTextBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetTextBackground(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetTextBackground(*(wxColour*) object_pointer0_0);
@@ -1194,6 +1205,7 @@ PHP_METHOD(php_wxDC, CalcBoundingBox)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -1212,6 +1224,7 @@ PHP_METHOD(php_wxDC, CalcBoundingBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::CalcBoundingBox((wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->CalcBoundingBox((wxCoord) x0, (wxCoord) y0);
@@ -1385,6 +1398,7 @@ PHP_METHOD(php_wxDC, CanUseTransformMatrix)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1399,6 +1413,7 @@ PHP_METHOD(php_wxDC, CanUseTransformMatrix)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::CanUseTransformMatrix())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->CanUseTransformMatrix());
@@ -1572,6 +1587,7 @@ PHP_METHOD(php_wxDC, Clear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1586,6 +1602,7 @@ PHP_METHOD(php_wxDC, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::Clear()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->Clear();
@@ -1761,6 +1778,7 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&dc0, php_wxDC_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry ) == SUCCESS)
 		{
@@ -1795,6 +1813,7 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::CopyAttributes(*(wxDC*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->CopyAttributes(*(wxDC*) object_pointer0_0);
@@ -1975,6 +1994,7 @@ PHP_METHOD(php_wxDC, CrossHair)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -1991,6 +2011,7 @@ PHP_METHOD(php_wxDC, CrossHair)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -2025,6 +2046,7 @@ PHP_METHOD(php_wxDC, CrossHair)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::CrossHair((wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->CrossHair((wxCoord) x0, (wxCoord) y0);
@@ -2090,6 +2112,7 @@ PHP_METHOD(php_wxDC, CrossHair)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::CrossHair(*(wxPoint*) object_pointer1_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->CrossHair(*(wxPoint*) object_pointer1_0);
@@ -2264,6 +2287,7 @@ PHP_METHOD(php_wxDC, DestroyClippingRegion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2278,6 +2302,7 @@ PHP_METHOD(php_wxDC, DestroyClippingRegion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DestroyClippingRegion()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DestroyClippingRegion();
@@ -2452,6 +2477,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -2470,6 +2496,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::DeviceToLogicalX((wxCoord) x0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->DeviceToLogicalX((wxCoord) x0));
@@ -2644,6 +2671,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalXRel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -2662,6 +2690,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalXRel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::DeviceToLogicalXRel((wxCoord) x0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->DeviceToLogicalXRel((wxCoord) x0));
@@ -2836,6 +2865,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
@@ -2854,6 +2884,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::DeviceToLogicalY((wxCoord) y0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->DeviceToLogicalY((wxCoord) y0));
@@ -3028,6 +3059,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalYRel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
@@ -3046,6 +3078,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalYRel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::DeviceToLogicalYRel((wxCoord) y0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->DeviceToLogicalYRel((wxCoord) y0));
@@ -3233,6 +3266,7 @@ PHP_METHOD(php_wxDC, DrawArc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llllll' (&xStart0, &yStart0, &xEnd0, &yEnd0, &xc0, &yc0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llllll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &xStart0, &yStart0, &xEnd0, &yEnd0, &xc0, &yc0 ) == SUCCESS)
 		{
@@ -3249,6 +3283,7 @@ PHP_METHOD(php_wxDC, DrawArc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOO' (&ptStart1, php_wxPoint_entry, &ptEnd1, php_wxPoint_entry, &centre1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ptStart1, php_wxPoint_entry, &ptEnd1, php_wxPoint_entry, &centre1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -3315,6 +3350,7 @@ PHP_METHOD(php_wxDC, DrawArc)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawArc((wxCoord) xStart0, (wxCoord) yStart0, (wxCoord) xEnd0, (wxCoord) yEnd0, (wxCoord) xc0, (wxCoord) yc0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawArc((wxCoord) xStart0, (wxCoord) yStart0, (wxCoord) xEnd0, (wxCoord) yEnd0, (wxCoord) xc0, (wxCoord) yc0);
@@ -3380,6 +3416,7 @@ PHP_METHOD(php_wxDC, DrawArc)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawArc(*(wxPoint*) object_pointer1_0, *(wxPoint*) object_pointer1_1, *(wxPoint*) object_pointer1_2)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawArc(*(wxPoint*) object_pointer1_0, *(wxPoint*) object_pointer1_1, *(wxPoint*) object_pointer1_2);
@@ -3568,6 +3605,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Oll|b' (&bitmap0, php_wxBitmap_entry, &x0, &y0, &useMask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "Oll|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry, &x0, &y0, &useMask0 ) == SUCCESS)
 		{
@@ -3600,6 +3638,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO|b' (&bmp1, php_wxBitmap_entry, &pt1, php_wxPoint_entry, &useMask1)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp1, php_wxBitmap_entry, &pt1, php_wxPoint_entry, &useMask1 ) == SUCCESS)
 		{
@@ -3650,6 +3689,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawBitmap(*(wxBitmap*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0);
@@ -3709,6 +3749,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawBitmap(*(wxBitmap*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0, useMask0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0, useMask0);
@@ -3775,6 +3816,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawBitmap(*(wxBitmap*) object_pointer1_0, *(wxPoint*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer1_0, *(wxPoint*) object_pointer1_1);
@@ -3835,6 +3877,7 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawBitmap(*(wxBitmap*) object_pointer1_0, *(wxPoint*) object_pointer1_1, useMask1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawBitmap(*(wxBitmap*) object_pointer1_0, *(wxPoint*) object_pointer1_1, useMask1);
@@ -4018,6 +4061,7 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x0, &y0, &width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0 ) == SUCCESS)
 		{
@@ -4034,6 +4078,7 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect1, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1, php_wxRect_entry ) == SUCCESS)
 		{
@@ -4068,6 +4113,7 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawCheckMark((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawCheckMark((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0);
@@ -4133,6 +4179,7 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawCheckMark(*(wxRect*) object_pointer1_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawCheckMark(*(wxRect*) object_pointer1_0);
@@ -4315,6 +4362,7 @@ PHP_METHOD(php_wxDC, DrawCircle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&x0, &y0, &radius0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &radius0 ) == SUCCESS)
 		{
@@ -4331,6 +4379,7 @@ PHP_METHOD(php_wxDC, DrawCircle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Ol' (&pt1, php_wxPoint_entry, &radius1)\n");
 		#endif
+
 		char parse_parameters_string[] = "Ol";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &radius1 ) == SUCCESS)
 		{
@@ -4365,6 +4414,7 @@ PHP_METHOD(php_wxDC, DrawCircle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawCircle((wxCoord) x0, (wxCoord) y0, (wxCoord) radius0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawCircle((wxCoord) x0, (wxCoord) y0, (wxCoord) radius0);
@@ -4430,6 +4480,7 @@ PHP_METHOD(php_wxDC, DrawCircle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawCircle(*(wxPoint*) object_pointer1_0, (wxCoord) radius1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawCircle(*(wxPoint*) object_pointer1_0, (wxCoord) radius1);
@@ -4618,6 +4669,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x0, &y0, &width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0 ) == SUCCESS)
 		{
@@ -4634,6 +4686,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pt1, php_wxPoint_entry, &size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -4682,6 +4735,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect2, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect2, php_wxRect_entry ) == SUCCESS)
 		{
@@ -4716,6 +4770,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawEllipse((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawEllipse((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0);
@@ -4781,6 +4836,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawEllipse(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawEllipse(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1);
@@ -4848,6 +4904,7 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawEllipse(*(wxRect*) object_pointer2_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawEllipse(*(wxRect*) object_pointer2_0);
@@ -5036,6 +5093,7 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lllldd' (&x0, &y0, &width0, &height0, &start0, &end0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lllldd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0, &start0, &end0 ) == SUCCESS)
 		{
@@ -5052,6 +5110,7 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOdd' (&pt1, php_wxPoint_entry, &sz1, php_wxSize_entry, &sa1, &ea1)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOdd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &sz1, php_wxSize_entry, &sa1, &ea1 ) == SUCCESS)
 		{
@@ -5102,6 +5161,7 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawEllipticArc((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0, start0, end0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawEllipticArc((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0, start0, end0);
@@ -5167,6 +5227,7 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawEllipticArc(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1, sa1, ea1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawEllipticArc(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1, sa1, ea1);
@@ -5352,6 +5413,7 @@ PHP_METHOD(php_wxDC, DrawIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Oll' (&icon0, php_wxIcon_entry, &x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "Oll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &icon0, php_wxIcon_entry, &x0, &y0 ) == SUCCESS)
 		{
@@ -5384,6 +5446,7 @@ PHP_METHOD(php_wxDC, DrawIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&icon1, php_wxIcon_entry, &pt1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &icon1, php_wxIcon_entry, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -5434,6 +5497,7 @@ PHP_METHOD(php_wxDC, DrawIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawIcon(*(wxIcon*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawIcon(*(wxIcon*) object_pointer0_0, (wxCoord) x0, (wxCoord) y0);
@@ -5500,6 +5564,7 @@ PHP_METHOD(php_wxDC, DrawIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawIcon(*(wxIcon*) object_pointer1_0, *(wxPoint*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawIcon(*(wxIcon*) object_pointer1_0, *(wxPoint*) object_pointer1_1);
@@ -5693,6 +5758,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sOO|llz' (&text0, &text_len0, &bitmap0, php_wxBitmap_entry, &rect0, php_wxRect_entry, &alignment0, &indexAccel0, &rectBounding0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sOO|llz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &bitmap0, php_wxBitmap_entry, &rect0, php_wxRect_entry, &alignment0, &indexAccel0, &rectBounding0 ) == SUCCESS)
 		{
@@ -5757,6 +5823,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sO|ll' (&text1, &text_len1, &rect1, php_wxRect_entry, &alignment1, &indexAccel1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sO|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text1, &text_len1, &rect1, php_wxRect_entry, &alignment1, &indexAccel1 ) == SUCCESS)
 		{
@@ -5791,6 +5858,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2);
@@ -5851,6 +5919,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0);
@@ -5911,6 +5980,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0, (int) indexAccel0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0, (int) indexAccel0);
@@ -5971,6 +6041,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0, (int) indexAccel0, (wxRect*) object_pointer0_5)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text0, wxConvUTF8), *(wxBitmap*) object_pointer0_1, *(wxRect*) object_pointer0_2, (int) alignment0, (int) indexAccel0, (wxRect*) object_pointer0_5);
@@ -6039,6 +6110,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1);
@@ -6098,6 +6170,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1, (int) alignment1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1, (int) alignment1);
@@ -6157,6 +6230,7 @@ PHP_METHOD(php_wxDC, DrawLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1, (int) alignment1, (int) indexAccel1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLabel(wxString(text1, wxConvUTF8), *(wxRect*) object_pointer1_1, (int) alignment1, (int) indexAccel1);
@@ -6341,6 +6415,7 @@ PHP_METHOD(php_wxDC, DrawLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x10, &y10, &x20, &y20)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x10, &y10, &x20, &y20 ) == SUCCESS)
 		{
@@ -6357,6 +6432,7 @@ PHP_METHOD(php_wxDC, DrawLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pt11, php_wxPoint_entry, &pt21, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt11, php_wxPoint_entry, &pt21, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -6407,6 +6483,7 @@ PHP_METHOD(php_wxDC, DrawLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLine((wxCoord) x10, (wxCoord) y10, (wxCoord) x20, (wxCoord) y20)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLine((wxCoord) x10, (wxCoord) y10, (wxCoord) x20, (wxCoord) y20);
@@ -6472,6 +6549,7 @@ PHP_METHOD(php_wxDC, DrawLine)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawLine(*(wxPoint*) object_pointer1_0, *(wxPoint*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawLine(*(wxPoint*) object_pointer1_0, *(wxPoint*) object_pointer1_1);
@@ -6653,6 +6731,7 @@ PHP_METHOD(php_wxDC, DrawPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -6669,6 +6748,7 @@ PHP_METHOD(php_wxDC, DrawPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -6703,6 +6783,7 @@ PHP_METHOD(php_wxDC, DrawPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawPoint((wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawPoint((wxCoord) x0, (wxCoord) y0);
@@ -6768,6 +6849,7 @@ PHP_METHOD(php_wxDC, DrawPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawPoint(*(wxPoint*) object_pointer1_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawPoint(*(wxPoint*) object_pointer1_0);
@@ -6956,6 +7038,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x0, &y0, &width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0 ) == SUCCESS)
 		{
@@ -6972,6 +7055,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pt1, php_wxPoint_entry, &sz1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &sz1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -7020,6 +7104,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect2, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect2, php_wxRect_entry ) == SUCCESS)
 		{
@@ -7054,6 +7139,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRectangle((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRectangle((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0);
@@ -7119,6 +7205,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRectangle(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRectangle(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1);
@@ -7186,6 +7273,7 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRectangle(*(wxRect*) object_pointer2_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRectangle(*(wxRect*) object_pointer2_0);
@@ -7372,6 +7460,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'slld' (&text0, &text_len0, &x0, &y0, &angle0)\n");
 		#endif
+
 		char parse_parameters_string[] = "slld";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &x0, &y0, &angle0 ) == SUCCESS)
 		{
@@ -7388,6 +7477,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sOd' (&text1, &text_len1, &point1, php_wxPoint_entry, &angle1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sOd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text1, &text_len1, &point1, php_wxPoint_entry, &angle1 ) == SUCCESS)
 		{
@@ -7422,6 +7512,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRotatedText(wxString(text0, wxConvUTF8), (wxCoord) x0, (wxCoord) y0, angle0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRotatedText(wxString(text0, wxConvUTF8), (wxCoord) x0, (wxCoord) y0, angle0);
@@ -7487,6 +7578,7 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRotatedText(wxString(text1, wxConvUTF8), *(wxPoint*) object_pointer1_1, angle1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRotatedText(wxString(text1, wxConvUTF8), *(wxPoint*) object_pointer1_1, angle1);
@@ -7678,6 +7770,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lllld' (&x0, &y0, &width0, &height0, &radius0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lllld";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0, &radius0 ) == SUCCESS)
 		{
@@ -7694,6 +7787,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOd' (&pt1, php_wxPoint_entry, &sz1, php_wxSize_entry, &radius1)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &sz1, php_wxSize_entry, &radius1 ) == SUCCESS)
 		{
@@ -7742,6 +7836,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Od' (&rect2, php_wxRect_entry, &radius2)\n");
 		#endif
+
 		char parse_parameters_string[] = "Od";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect2, php_wxRect_entry, &radius2 ) == SUCCESS)
 		{
@@ -7776,6 +7871,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRoundedRectangle((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0, radius0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRoundedRectangle((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0, radius0);
@@ -7841,6 +7937,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRoundedRectangle(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1, radius1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRoundedRectangle(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1, radius1);
@@ -7908,6 +8005,7 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawRoundedRectangle(*(wxRect*) object_pointer2_0, radius2)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawRoundedRectangle(*(wxRect*) object_pointer2_0, radius2);
@@ -8088,6 +8186,7 @@ PHP_METHOD(php_wxDC, DrawSpline)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llllll' (&x10, &y10, &x20, &y20, &x30, &y30)\n");
 		#endif
+
 		char parse_parameters_string[] = "llllll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x10, &y10, &x20, &y20, &x30, &y30 ) == SUCCESS)
 		{
@@ -8106,6 +8205,7 @@ PHP_METHOD(php_wxDC, DrawSpline)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawSpline((wxCoord) x10, (wxCoord) y10, (wxCoord) x20, (wxCoord) y20, (wxCoord) x30, (wxCoord) y30)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawSpline((wxCoord) x10, (wxCoord) y10, (wxCoord) x20, (wxCoord) y20, (wxCoord) x30, (wxCoord) y30);
@@ -8289,6 +8389,7 @@ PHP_METHOD(php_wxDC, DrawText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sll' (&text0, &text_len0, &x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &x0, &y0 ) == SUCCESS)
 		{
@@ -8305,6 +8406,7 @@ PHP_METHOD(php_wxDC, DrawText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sO' (&text1, &text_len1, &pt1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "sO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text1, &text_len1, &pt1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -8339,6 +8441,7 @@ PHP_METHOD(php_wxDC, DrawText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawText(wxString(text0, wxConvUTF8), (wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawText(wxString(text0, wxConvUTF8), (wxCoord) x0, (wxCoord) y0);
@@ -8404,6 +8507,7 @@ PHP_METHOD(php_wxDC, DrawText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::DrawText(wxString(text1, wxConvUTF8), *(wxPoint*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->DrawText(wxString(text1, wxConvUTF8), *(wxPoint*) object_pointer1_1);
@@ -8578,6 +8682,7 @@ PHP_METHOD(php_wxDC, EndDoc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8592,6 +8697,7 @@ PHP_METHOD(php_wxDC, EndDoc)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::EndDoc()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->EndDoc();
@@ -8765,6 +8871,7 @@ PHP_METHOD(php_wxDC, EndPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8779,6 +8886,7 @@ PHP_METHOD(php_wxDC, EndPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::EndPage()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->EndPage();
@@ -8964,6 +9072,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO|l' (&x0, &y0, &colour0, php_wxColour_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &colour0, php_wxColour_entry, &style0 ) == SUCCESS)
 		{
@@ -8996,6 +9105,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO|l' (&pt1, php_wxPoint_entry, &col1, php_wxColour_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &col1, php_wxColour_entry, &style1 ) == SUCCESS)
 		{
@@ -9046,6 +9156,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::FloodFill((wxCoord) x0, (wxCoord) y0, *(wxColour*) object_pointer0_2))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->FloodFill((wxCoord) x0, (wxCoord) y0, *(wxColour*) object_pointer0_2));
@@ -9105,6 +9216,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::FloodFill((wxCoord) x0, (wxCoord) y0, *(wxColour*) object_pointer0_2, (wxFloodFillStyle) style0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->FloodFill((wxCoord) x0, (wxCoord) y0, *(wxColour*) object_pointer0_2, (wxFloodFillStyle) style0));
@@ -9171,6 +9283,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::FloodFill(*(wxPoint*) object_pointer1_0, *(wxColour*) object_pointer1_1))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->FloodFill(*(wxPoint*) object_pointer1_0, *(wxColour*) object_pointer1_1));
@@ -9231,6 +9344,7 @@ PHP_METHOD(php_wxDC, FloodFill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::FloodFill(*(wxPoint*) object_pointer1_0, *(wxColour*) object_pointer1_1, (wxFloodFillStyle) style1))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->FloodFill(*(wxPoint*) object_pointer1_0, *(wxColour*) object_pointer1_1, (wxFloodFillStyle) style1));
@@ -9406,6 +9520,7 @@ PHP_METHOD(php_wxDC, GetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9420,6 +9535,7 @@ PHP_METHOD(php_wxDC, GetBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetBackground() to return object reference\n\n");
 				#endif
+
 				wxBrush_php* value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -9624,6 +9740,7 @@ PHP_METHOD(php_wxDC, GetBackgroundMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9638,6 +9755,7 @@ PHP_METHOD(php_wxDC, GetBackgroundMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetBackgroundMode())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetBackgroundMode());
@@ -9811,6 +9929,7 @@ PHP_METHOD(php_wxDC, GetBrush)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9825,6 +9944,7 @@ PHP_METHOD(php_wxDC, GetBrush)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetBrush() to return object reference\n\n");
 				#endif
+
 				wxBrush_php* value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -10029,6 +10149,7 @@ PHP_METHOD(php_wxDC, GetCharHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10043,6 +10164,7 @@ PHP_METHOD(php_wxDC, GetCharHeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetCharHeight())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetCharHeight());
@@ -10216,6 +10338,7 @@ PHP_METHOD(php_wxDC, GetCharWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10230,6 +10353,7 @@ PHP_METHOD(php_wxDC, GetCharWidth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetCharWidth())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetCharWidth());
@@ -10407,6 +10531,7 @@ PHP_METHOD(php_wxDC, GetClippingBox)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x0, &y0, &width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0 ) == SUCCESS)
 		{
@@ -10425,6 +10550,7 @@ PHP_METHOD(php_wxDC, GetClippingBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetClippingBox((wxCoord*) x0, (wxCoord*) y0, (wxCoord*) width0, (wxCoord*) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetClippingBox((wxCoord*) x0, (wxCoord*) y0, (wxCoord*) width0, (wxCoord*) height0);
@@ -10598,6 +10724,7 @@ PHP_METHOD(php_wxDC, GetDepth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10612,6 +10739,7 @@ PHP_METHOD(php_wxDC, GetDepth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetDepth())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetDepth());
@@ -10785,6 +10913,7 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10799,6 +10928,7 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetDeviceOrigin() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -11021,6 +11151,7 @@ PHP_METHOD(php_wxDC, GetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11035,6 +11166,7 @@ PHP_METHOD(php_wxDC, GetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetFont() to return object reference\n\n");
 				#endif
+
 				wxFont_php* value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -11239,6 +11371,7 @@ PHP_METHOD(php_wxDC, GetLayoutDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11253,6 +11386,7 @@ PHP_METHOD(php_wxDC, GetLayoutDirection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetLayoutDirection())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetLayoutDirection());
@@ -11426,6 +11560,7 @@ PHP_METHOD(php_wxDC, GetLogicalFunction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11440,6 +11575,7 @@ PHP_METHOD(php_wxDC, GetLogicalFunction)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetLogicalFunction())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetLogicalFunction());
@@ -11616,6 +11752,7 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -11632,6 +11769,7 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -11646,6 +11784,7 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetLogicalOrigin((wxCoord*) x0, (wxCoord*) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetLogicalOrigin((wxCoord*) x0, (wxCoord*) y0);
@@ -11711,6 +11850,7 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetLogicalOrigin() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -11936,6 +12076,7 @@ PHP_METHOD(php_wxDC, GetLogicalScale)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (x0, y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x0, y0 ) == SUCCESS)
 		{
@@ -11957,6 +12098,7 @@ PHP_METHOD(php_wxDC, GetLogicalScale)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetLogicalScale(x0, y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetLogicalScale(x0, y0);
@@ -12142,6 +12284,7 @@ PHP_METHOD(php_wxDC, GetMapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12156,6 +12299,7 @@ PHP_METHOD(php_wxDC, GetMapMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::GetMapMode())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->GetMapMode());
@@ -12340,6 +12484,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sll|lz' (&string0, &string_len0, &w0, &h0, &heightLine0, &font0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sll|lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0, &w0, &h0, &heightLine0, &font0 ) == SUCCESS)
 		{
@@ -12372,6 +12517,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&string1, &string_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string1, &string_len1 ) == SUCCESS)
 		{
@@ -12390,6 +12536,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0);
@@ -12448,6 +12595,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) heightLine0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) heightLine0);
@@ -12506,6 +12654,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) heightLine0, (const wxFont*) object_pointer0_4)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetMultiLineTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) heightLine0, (const wxFont*) object_pointer0_4);
@@ -12572,6 +12721,7 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetMultiLineTextExtent(wxString(string1, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -12794,6 +12944,7 @@ PHP_METHOD(php_wxDC, GetPPI)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12808,6 +12959,7 @@ PHP_METHOD(php_wxDC, GetPPI)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetPPI() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -13030,6 +13182,7 @@ PHP_METHOD(php_wxDC, GetPen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13044,6 +13197,7 @@ PHP_METHOD(php_wxDC, GetPen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetPen() to return object reference\n\n");
 				#endif
+
 				wxPen_php* value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -13252,6 +13406,7 @@ PHP_METHOD(php_wxDC, GetPixel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz' (&x0, &y0, &colour0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &colour0 ) == SUCCESS)
 		{
@@ -13286,6 +13441,7 @@ PHP_METHOD(php_wxDC, GetPixel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::GetPixel((wxCoord) x0, (wxCoord) y0, (wxColour*) object_pointer0_2))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->GetPixel((wxCoord) x0, (wxCoord) y0, (wxColour*) object_pointer0_2));
@@ -13464,6 +13620,7 @@ PHP_METHOD(php_wxDC, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &height0 ) == SUCCESS)
 		{
@@ -13480,6 +13637,7 @@ PHP_METHOD(php_wxDC, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -13494,6 +13652,7 @@ PHP_METHOD(php_wxDC, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetSize((wxCoord*) width0, (wxCoord*) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetSize((wxCoord*) width0, (wxCoord*) height0);
@@ -13559,6 +13718,7 @@ PHP_METHOD(php_wxDC, GetSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetSize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -13785,6 +13945,7 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &height0 ) == SUCCESS)
 		{
@@ -13801,6 +13962,7 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -13815,6 +13977,7 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetSizeMM((wxCoord*) width0, (wxCoord*) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetSizeMM((wxCoord*) width0, (wxCoord*) height0);
@@ -13880,6 +14043,7 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetSizeMM() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -14102,6 +14266,7 @@ PHP_METHOD(php_wxDC, GetTextBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14116,6 +14281,7 @@ PHP_METHOD(php_wxDC, GetTextBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextBackground() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -14332,6 +14498,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sll|llz' (&string0, &string_len0, &w0, &h0, &descent0, &externalLeading0, &font0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sll|llz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0, &w0, &h0, &descent0, &externalLeading0, &font0 ) == SUCCESS)
 		{
@@ -14364,6 +14531,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&string1, &string_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string1, &string_len1 ) == SUCCESS)
 		{
@@ -14382,6 +14550,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0);
@@ -14440,6 +14609,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0);
@@ -14498,6 +14668,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0, (wxCoord*) externalLeading0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0, (wxCoord*) externalLeading0);
@@ -14556,6 +14727,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0, (wxCoord*) externalLeading0, (const wxFont*) object_pointer0_5)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetTextExtent(wxString(string0, wxConvUTF8), (wxCoord*) w0, (wxCoord*) h0, (wxCoord*) descent0, (wxCoord*) externalLeading0, (const wxFont*) object_pointer0_5);
@@ -14622,6 +14794,7 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextExtent(wxString(string1, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -14844,6 +15017,7 @@ PHP_METHOD(php_wxDC, GetTextForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14858,6 +15032,7 @@ PHP_METHOD(php_wxDC, GetTextForeground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetTextForeground() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
@@ -15066,6 +15241,7 @@ PHP_METHOD(php_wxDC, GetUserScale)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (x0, y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x0, y0 ) == SUCCESS)
 		{
@@ -15087,6 +15263,7 @@ PHP_METHOD(php_wxDC, GetUserScale)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GetUserScale(x0, y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GetUserScale(x0, y0);
@@ -15288,6 +15465,7 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOO' (&rect0, php_wxRect_entry, &initialColour0, php_wxColour_entry, &destColour0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry, &initialColour0, php_wxColour_entry, &destColour0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -15352,6 +15530,7 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOOO' (&rect1, php_wxRect_entry, &initialColour1, php_wxColour_entry, &destColour1, php_wxColour_entry, &circleCenter1, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOOO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1, php_wxRect_entry, &initialColour1, php_wxColour_entry, &destColour1, php_wxColour_entry, &circleCenter1, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -15434,6 +15613,7 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GradientFillConcentric(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GradientFillConcentric(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2);
@@ -15502,6 +15682,7 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GradientFillConcentric(*(wxRect*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxPoint*) object_pointer1_3)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GradientFillConcentric(*(wxRect*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxColour*) object_pointer1_2, *(wxPoint*) object_pointer1_3);
@@ -15686,6 +15867,7 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOO|l' (&rect0, php_wxRect_entry, &initialColour0, php_wxColour_entry, &destColour0, php_wxColour_entry, &nDirection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "OOO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry, &initialColour0, php_wxColour_entry, &destColour0, php_wxColour_entry, &nDirection0 ) == SUCCESS)
 		{
@@ -15752,6 +15934,7 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GradientFillLinear(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GradientFillLinear(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2);
@@ -15813,6 +15996,7 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::GradientFillLinear(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2, (wxDirection) nDirection0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->GradientFillLinear(*(wxRect*) object_pointer0_0, *(wxColour*) object_pointer0_1, *(wxColour*) object_pointer0_2, (wxDirection) nDirection0);
@@ -15989,6 +16173,7 @@ PHP_METHOD(php_wxDC, IsOk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16003,6 +16188,7 @@ PHP_METHOD(php_wxDC, IsOk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::IsOk())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->IsOk());
@@ -16177,6 +16363,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -16195,6 +16382,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::LogicalToDeviceX((wxCoord) x0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->LogicalToDeviceX((wxCoord) x0));
@@ -16369,6 +16557,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
@@ -16387,6 +16576,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::LogicalToDeviceY((wxCoord) y0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->LogicalToDeviceY((wxCoord) y0));
@@ -16561,6 +16751,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceXRel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -16579,6 +16770,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceXRel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::LogicalToDeviceXRel((wxCoord) x0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->LogicalToDeviceXRel((wxCoord) x0));
@@ -16753,6 +16945,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceYRel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
@@ -16771,6 +16964,7 @@ PHP_METHOD(php_wxDC, LogicalToDeviceYRel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::LogicalToDeviceYRel((wxCoord) y0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->LogicalToDeviceYRel((wxCoord) y0));
@@ -16944,6 +17138,7 @@ PHP_METHOD(php_wxDC, MaxX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -16958,6 +17153,7 @@ PHP_METHOD(php_wxDC, MaxX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::MaxX())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->MaxX());
@@ -17131,6 +17327,7 @@ PHP_METHOD(php_wxDC, MaxY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17145,6 +17342,7 @@ PHP_METHOD(php_wxDC, MaxY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::MaxY())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->MaxY());
@@ -17318,6 +17516,7 @@ PHP_METHOD(php_wxDC, MinX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17332,6 +17531,7 @@ PHP_METHOD(php_wxDC, MinX)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::MinX())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->MinX());
@@ -17505,6 +17705,7 @@ PHP_METHOD(php_wxDC, MinY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17519,6 +17720,7 @@ PHP_METHOD(php_wxDC, MinY)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDC::MinY())\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_LONG(return_value, ((wxWindowDC_php*)_this)->MinY());
@@ -17692,6 +17894,7 @@ PHP_METHOD(php_wxDC, ResetBoundingBox)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17706,6 +17909,7 @@ PHP_METHOD(php_wxDC, ResetBoundingBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::ResetBoundingBox()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->ResetBoundingBox();
@@ -17879,6 +18083,7 @@ PHP_METHOD(php_wxDC, ResetTransformMatrix)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -17893,6 +18098,7 @@ PHP_METHOD(php_wxDC, ResetTransformMatrix)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::ResetTransformMatrix()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->ResetTransformMatrix();
@@ -18068,6 +18274,7 @@ PHP_METHOD(php_wxDC, SetAxisOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bb' (&xLeftRight0, &yBottomUp0)\n");
 		#endif
+
 		char parse_parameters_string[] = "bb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &xLeftRight0, &yBottomUp0 ) == SUCCESS)
 		{
@@ -18086,6 +18293,7 @@ PHP_METHOD(php_wxDC, SetAxisOrientation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetAxisOrientation(xLeftRight0, yBottomUp0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetAxisOrientation(xLeftRight0, yBottomUp0);
@@ -18261,6 +18469,7 @@ PHP_METHOD(php_wxDC, SetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&brush0, php_wxBrush_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &brush0, php_wxBrush_entry ) == SUCCESS)
 		{
@@ -18295,6 +18504,7 @@ PHP_METHOD(php_wxDC, SetBackground)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetBackground(*(wxBrush*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetBackground(*(wxBrush*) object_pointer0_0);
@@ -18470,6 +18680,7 @@ PHP_METHOD(php_wxDC, SetBackgroundMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -18488,6 +18699,7 @@ PHP_METHOD(php_wxDC, SetBackgroundMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetBackgroundMode((int) mode0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetBackgroundMode((int) mode0);
@@ -18663,6 +18875,7 @@ PHP_METHOD(php_wxDC, SetBrush)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&brush0, php_wxBrush_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &brush0, php_wxBrush_entry ) == SUCCESS)
 		{
@@ -18697,6 +18910,7 @@ PHP_METHOD(php_wxDC, SetBrush)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetBrush(*(wxBrush*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetBrush(*(wxBrush*) object_pointer0_0);
@@ -18885,6 +19099,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x0, &y0, &width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0 ) == SUCCESS)
 		{
@@ -18901,6 +19116,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&pt1, php_wxPoint_entry, &sz1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt1, php_wxPoint_entry, &sz1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -18949,6 +19165,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect2, php_wxRect_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect2, php_wxRect_entry ) == SUCCESS)
 		{
@@ -18983,6 +19200,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetClippingRegion((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetClippingRegion((wxCoord) x0, (wxCoord) y0, (wxCoord) width0, (wxCoord) height0);
@@ -19048,6 +19266,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetClippingRegion(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetClippingRegion(*(wxPoint*) object_pointer1_0, *(wxSize*) object_pointer1_1);
@@ -19115,6 +19334,7 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetClippingRegion(*(wxRect*) object_pointer2_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetClippingRegion(*(wxRect*) object_pointer2_0);
@@ -19291,6 +19511,7 @@ PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&region0, php_wxRegion_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &region0, php_wxRegion_entry ) == SUCCESS)
 		{
@@ -19325,6 +19546,7 @@ PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetDeviceClippingRegion(*(wxRegion*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetDeviceClippingRegion(*(wxRegion*) object_pointer0_0);
@@ -19501,6 +19723,7 @@ PHP_METHOD(php_wxDC, SetDeviceOrigin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -19519,6 +19742,7 @@ PHP_METHOD(php_wxDC, SetDeviceOrigin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetDeviceOrigin((wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetDeviceOrigin((wxCoord) x0, (wxCoord) y0);
@@ -19694,6 +19918,7 @@ PHP_METHOD(php_wxDC, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -19728,6 +19953,7 @@ PHP_METHOD(php_wxDC, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
@@ -19903,6 +20129,7 @@ PHP_METHOD(php_wxDC, SetLayoutDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&dir0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0 ) == SUCCESS)
 		{
@@ -19921,6 +20148,7 @@ PHP_METHOD(php_wxDC, SetLayoutDirection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetLayoutDirection((wxLayoutDirection) dir0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetLayoutDirection((wxLayoutDirection) dir0);
@@ -20095,6 +20323,7 @@ PHP_METHOD(php_wxDC, SetLogicalFunction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&function0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &function0 ) == SUCCESS)
 		{
@@ -20113,6 +20342,7 @@ PHP_METHOD(php_wxDC, SetLogicalFunction)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetLogicalFunction((wxRasterOperationMode) function0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetLogicalFunction((wxRasterOperationMode) function0);
@@ -20287,6 +20517,7 @@ PHP_METHOD(php_wxDC, SetLogicalOrigin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -20305,6 +20536,7 @@ PHP_METHOD(php_wxDC, SetLogicalOrigin)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetLogicalOrigin((wxCoord) x0, (wxCoord) y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetLogicalOrigin((wxCoord) x0, (wxCoord) y0);
@@ -20479,6 +20711,7 @@ PHP_METHOD(php_wxDC, SetLogicalScale)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -20497,6 +20730,7 @@ PHP_METHOD(php_wxDC, SetLogicalScale)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetLogicalScale(x0, y0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetLogicalScale(x0, y0);
@@ -20671,6 +20905,7 @@ PHP_METHOD(php_wxDC, SetMapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
@@ -20689,6 +20924,7 @@ PHP_METHOD(php_wxDC, SetMapMode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetMapMode((wxMappingMode) mode0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetMapMode((wxMappingMode) mode0);
@@ -20864,6 +21100,7 @@ PHP_METHOD(php_wxDC, SetPalette)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&palette0, php_wxPalette_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &palette0, php_wxPalette_entry ) == SUCCESS)
 		{
@@ -20898,6 +21135,7 @@ PHP_METHOD(php_wxDC, SetPalette)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetPalette(*(wxPalette*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetPalette(*(wxPalette*) object_pointer0_0);
@@ -21074,6 +21312,7 @@ PHP_METHOD(php_wxDC, SetPen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pen0, php_wxPen_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pen0, php_wxPen_entry ) == SUCCESS)
 		{
@@ -21108,6 +21347,7 @@ PHP_METHOD(php_wxDC, SetPen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxDC::SetPen(*(wxPen*) object_pointer0_0)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					((wxWindowDC_php*)_this)->SetPen(*(wxPen*) object_pointer0_0);
@@ -21296,6 +21536,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llllzllll|lbll' (&xdest0, &ydest0, &dstWidth0, &dstHeight0, &source0, &xsrc0, &ysrc0, &srcWidth0, &srcHeight0, &logicalFunc0, &useMask0, &xsrcMask0, &ysrcMask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llllzllll|lbll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &xdest0, &ydest0, &dstWidth0, &dstHeight0, &source0, &xsrc0, &ysrc0, &srcWidth0, &srcHeight0, &logicalFunc0, &useMask0, &xsrcMask0, &ysrcMask0 ) == SUCCESS)
 		{
@@ -21330,6 +21571,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0));
@@ -21389,6 +21631,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0));
@@ -21448,6 +21691,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0));
@@ -21507,6 +21751,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0));
@@ -21566,6 +21811,7 @@ PHP_METHOD(php_wxDC, StretchBlit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0, (wxCoord) ysrcMask0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->StretchBlit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) dstWidth0, (wxCoord) dstHeight0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxCoord) srcWidth0, (wxCoord) srcHeight0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0, (wxCoord) ysrcMask0));
@@ -21752,6 +21998,7 @@ PHP_METHOD(php_wxDC, Blit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llllzll|lbll' (&xdest0, &ydest0, &width0, &height0, &source0, &xsrc0, &ysrc0, &logicalFunc0, &useMask0, &xsrcMask0, &ysrcMask0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llllzll|lbll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &xdest0, &ydest0, &width0, &height0, &source0, &xsrc0, &ysrc0, &logicalFunc0, &useMask0, &xsrcMask0, &ysrcMask0 ) == SUCCESS)
 		{
@@ -21786,6 +22033,7 @@ PHP_METHOD(php_wxDC, Blit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0));
@@ -21845,6 +22093,7 @@ PHP_METHOD(php_wxDC, Blit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0));
@@ -21904,6 +22153,7 @@ PHP_METHOD(php_wxDC, Blit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0));
@@ -21963,6 +22213,7 @@ PHP_METHOD(php_wxDC, Blit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0));
@@ -22022,6 +22273,7 @@ PHP_METHOD(php_wxDC, Blit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxDC::Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0, (wxCoord) ysrcMask0))\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxWindowDC)
 				{
 					ZVAL_BOOL(return_value, ((wxWindowDC_php*)_this)->Blit((wxCoord) xdest0, (wxCoord) ydest0, (wxCoord) width0, (wxCoord) height0, (wxDC*) object_pointer0_4, (wxCoord) xsrc0, (wxCoord) ysrc0, (wxRasterOperationMode) logicalFunc0, useMask0, (wxCoord) xsrcMask0, (wxCoord) ysrcMask0));
@@ -22128,6 +22380,7 @@ void php_wxBufferedDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxBufferedDC::Init(wxDC &dc, wxSize area, int style)
    Initializes the object created using the default constructor. */
 PHP_METHOD(php_wxBufferedDC, Init)
@@ -22212,6 +22465,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|l' (&dc0, &area0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &area0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -22260,6 +22514,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|Ol' (&dc1, &buffer1, php_wxBitmap_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|Ol";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc1, &buffer1, php_wxBitmap_entry, &style1 ) == SUCCESS)
 		{
@@ -22310,6 +22565,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBufferedDC::Init((wxDC*) object_pointer0_0, *(wxSize*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
 				references->AddReference(dc0, "wxBufferedDC::Init at call with 2 argument(s)");
@@ -22323,6 +22579,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBufferedDC::Init((wxDC*) object_pointer0_0, *(wxSize*) object_pointer0_1, (int) style0)\n\n");
 				#endif
+
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer0_0, *(wxSize*) object_pointer0_1, (int) style0);
 
 				references->AddReference(dc0, "wxBufferedDC::Init at call with 3 argument(s)");
@@ -22343,6 +22600,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBufferedDC::Init((wxDC*) object_pointer1_0)\n\n");
 				#endif
+
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer1_0);
 
 				references->AddReference(dc1, "wxBufferedDC::Init at call with 1 argument(s)");
@@ -22355,6 +22613,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBufferedDC::Init((wxDC*) object_pointer1_0, *(wxBitmap*) object_pointer1_1)\n\n");
 				#endif
+
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer1_0, *(wxBitmap*) object_pointer1_1);
 
 				references->AddReference(dc1, "wxBufferedDC::Init at call with 2 argument(s)");
@@ -22368,6 +22627,7 @@ PHP_METHOD(php_wxBufferedDC, Init)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxBufferedDC::Init((wxDC*) object_pointer1_0, *(wxBitmap*) object_pointer1_1, (int) style1)\n\n");
 				#endif
+
 				((wxBufferedDC_php*)_this)->Init((wxDC*) object_pointer1_0, *(wxBitmap*) object_pointer1_1, (int) style1);
 
 				references->AddReference(dc1, "wxBufferedDC::Init at call with 3 argument(s)");
@@ -22434,6 +22694,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -22446,6 +22707,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|l' (&dc1, &area1, php_wxSize_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc1, &area1, php_wxSize_entry, &style1 ) == SUCCESS)
 		{
@@ -22494,6 +22756,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|Ol' (&dc2, &buffer2, php_wxBitmap_entry, &style2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|Ol";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc2, &buffer2, php_wxBitmap_entry, &style2 ) == SUCCESS)
 		{
@@ -22544,6 +22807,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxBufferedDC_php();
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
@@ -22561,6 +22825,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxDC*) object_pointer1_0, *(wxSize*) object_pointer1_1)\n");
 				#endif
+
 				_this = new wxBufferedDC_php((wxDC*) object_pointer1_0, *(wxSize*) object_pointer1_1);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
@@ -22573,6 +22838,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxDC*) object_pointer1_0, *(wxSize*) object_pointer1_1, (int) style1)\n");
 				#endif
+
 				_this = new wxBufferedDC_php((wxDC*) object_pointer1_0, *(wxSize*) object_pointer1_1, (int) style1);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
@@ -22592,6 +22858,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxDC*) object_pointer2_0)\n");
 				#endif
+
 				_this = new wxBufferedDC_php((wxDC*) object_pointer2_0);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
@@ -22603,6 +22870,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxDC*) object_pointer2_0, *(wxBitmap*) object_pointer2_1)\n");
 				#endif
+
 				_this = new wxBufferedDC_php((wxDC*) object_pointer2_0, *(wxBitmap*) object_pointer2_1);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
@@ -22615,6 +22883,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxDC*) object_pointer2_0, *(wxBitmap*) object_pointer2_1, (int) style2)\n");
 				#endif
+
 				_this = new wxBufferedDC_php((wxDC*) object_pointer2_0, *(wxBitmap*) object_pointer2_1, (int) style2);
 
 				((wxBufferedDC_php*) _this)->references.Initialize();
@@ -22642,7 +22911,7 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBufferedDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBufferedDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -22691,6 +22960,7 @@ void php_wxAutoBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+
 /* {{{ proto  wxAutoBufferedPaintDC::wxAutoBufferedPaintDC(wxWindow &window)
    Constructor. */
 PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
@@ -22725,6 +22995,7 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -22759,6 +23030,7 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxAutoBufferedPaintDC_php((wxWindow*) object_pointer0_0);
 
 				((wxAutoBufferedPaintDC_php*) _this)->references.Initialize();
@@ -22785,7 +23057,7 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAutoBufferedPaintDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAutoBufferedPaintDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -22834,6 +23106,7 @@ void php_wxBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+
 /* {{{ proto  wxBufferedPaintDC::wxBufferedPaintDC(wxWindow &window, wxBitmap &buffer, int style)
    As with wxBufferedDC, you may either provide the bitmap to be used for buffering or let this object create one internally (in the latter case, the size of the client part of the window is used). */
 PHP_METHOD(php_wxBufferedPaintDC, __construct)
@@ -22876,6 +23149,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|l' (&window0, &buffer0, php_wxBitmap_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0, &buffer0, php_wxBitmap_entry, &style0 ) == SUCCESS)
 		{
@@ -22924,6 +23198,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|l' (&window1, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window1, &style1 ) == SUCCESS)
 		{
@@ -22958,6 +23233,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, *(wxBitmap*) object_pointer0_1)\n");
 				#endif
+
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer0_0, *(wxBitmap*) object_pointer0_1);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
@@ -22970,6 +23246,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, *(wxBitmap*) object_pointer0_1, (int) style0)\n");
 				#endif
+
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer0_0, *(wxBitmap*) object_pointer0_1, (int) style0);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
@@ -22989,6 +23266,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer1_0);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
@@ -23000,6 +23278,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (int) style1)\n");
 				#endif
+
 				_this = new wxBufferedPaintDC_php((wxWindow*) object_pointer1_0, (int) style1);
 
 				((wxBufferedPaintDC_php*) _this)->references.Initialize();
@@ -23026,7 +23305,7 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBufferedPaintDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxBufferedPaintDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -23075,6 +23354,7 @@ void php_wxPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxPaintDC::wxPaintDC(wxWindow &window)
    Constructor. */
 PHP_METHOD(php_wxPaintDC, __construct)
@@ -23109,6 +23389,7 @@ PHP_METHOD(php_wxPaintDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -23143,6 +23424,7 @@ PHP_METHOD(php_wxPaintDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxPaintDC_php((wxWindow*) object_pointer0_0);
 
 				((wxPaintDC_php*) _this)->references.Initialize();
@@ -23169,7 +23451,7 @@ PHP_METHOD(php_wxPaintDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxPaintDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxPaintDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -23218,6 +23500,7 @@ void php_wxClientDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxClientDC::wxClientDC(wxWindow &window)
    Constructor. */
 PHP_METHOD(php_wxClientDC, __construct)
@@ -23252,6 +23535,7 @@ PHP_METHOD(php_wxClientDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -23286,6 +23570,7 @@ PHP_METHOD(php_wxClientDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxClientDC_php((wxWindow*) object_pointer0_0);
 
 				((wxClientDC_php*) _this)->references.Initialize();
@@ -23312,7 +23597,7 @@ PHP_METHOD(php_wxClientDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxClientDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxClientDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -23361,6 +23646,7 @@ void php_wxWindowDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxWindowDC::wxWindowDC(wxWindow &window)
    Constructor. */
 PHP_METHOD(php_wxWindowDC, __construct)
@@ -23395,6 +23681,7 @@ PHP_METHOD(php_wxWindowDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -23429,6 +23716,7 @@ PHP_METHOD(php_wxWindowDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxWindowDC_php((wxWindow*) object_pointer0_0);
 
 				((wxWindowDC_php*) _this)->references.Initialize();
@@ -23455,7 +23743,7 @@ PHP_METHOD(php_wxWindowDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWindowDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxWindowDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -23504,6 +23792,7 @@ void php_wxMemoryDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxMemoryDC::SelectObject(wxBitmap &bitmap)
    Works exactly like SelectObjectAsSource() but this is the function you should use when you select a bitmap because you want to modify it, e.g. */
 PHP_METHOD(php_wxMemoryDC, SelectObject)
@@ -23582,6 +23871,7 @@ PHP_METHOD(php_wxMemoryDC, SelectObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bitmap0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -23616,6 +23906,7 @@ PHP_METHOD(php_wxMemoryDC, SelectObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMemoryDC::SelectObject(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMemoryDC_php*)_this)->SelectObject(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bitmap0, "wxMemoryDC::SelectObject at call with 1 argument(s)");
@@ -23713,6 +24004,7 @@ PHP_METHOD(php_wxMemoryDC, SelectObjectAsSource)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bitmap0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -23747,6 +24039,7 @@ PHP_METHOD(php_wxMemoryDC, SelectObjectAsSource)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMemoryDC::SelectObjectAsSource(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMemoryDC_php*)_this)->SelectObjectAsSource(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bitmap0, "wxMemoryDC::SelectObjectAsSource at call with 1 argument(s)");
@@ -23806,6 +24099,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -23818,6 +24112,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&dc1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc1 ) == SUCCESS)
 		{
@@ -23850,6 +24145,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bitmap2, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap2, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -23884,6 +24180,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxMemoryDC_php();
 
 				((wxMemoryDC_php*) _this)->references.Initialize();
@@ -23901,6 +24198,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxDC*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxMemoryDC_php((wxDC*) object_pointer1_0);
 
 				((wxMemoryDC_php*) _this)->references.Initialize();
@@ -23919,6 +24217,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxBitmap*) object_pointer2_0)\n");
 				#endif
+
 				_this = new wxMemoryDC_php(*(wxBitmap*) object_pointer2_0);
 
 				((wxMemoryDC_php*) _this)->references.Initialize();
@@ -23945,7 +24244,7 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMemoryDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMemoryDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -23994,6 +24293,7 @@ void php_wxMirrorDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxMirrorDC::wxMirrorDC(wxDC &dc, bool mirror)
    Creates a (maybe) mirrored DC associated with the real dc. */
 PHP_METHOD(php_wxMirrorDC, __construct)
@@ -24029,6 +24329,7 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Ob' (&dc0, php_wxDC_entry, &mirror0)\n");
 		#endif
+
 		char parse_parameters_string[] = "Ob";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &mirror0 ) == SUCCESS)
 		{
@@ -24063,6 +24364,7 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxDC*) object_pointer0_0, mirror0)\n");
 				#endif
+
 				_this = new wxMirrorDC_php(*(wxDC*) object_pointer0_0, mirror0);
 
 				((wxMirrorDC_php*) _this)->references.Initialize();
@@ -24089,7 +24391,7 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMirrorDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMirrorDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -24138,6 +24440,7 @@ void php_wxPostScriptDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+
 /* {{{ proto  wxPostScriptDC::wxPostScriptDC() */
 PHP_METHOD(php_wxPostScriptDC, __construct)
 {
@@ -24173,6 +24476,7 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24185,6 +24489,7 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&printData1, php_wxPrintData_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &printData1, php_wxPrintData_entry ) == SUCCESS)
 		{
@@ -24219,6 +24524,7 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxPostScriptDC_php();
 
 				((wxPostScriptDC_php*) _this)->references.Initialize();
@@ -24236,6 +24542,7 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxPrintData*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxPostScriptDC_php(*(wxPrintData*) object_pointer1_0);
 
 				((wxPostScriptDC_php*) _this)->references.Initialize();
@@ -24262,7 +24569,7 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxPostScriptDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxPostScriptDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -24311,6 +24618,7 @@ void php_wxScreenDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto bool wxScreenDC::EndDrawingOnTop()
    Use this in conjunction with StartDrawingOnTop(). */
 PHP_METHOD(php_wxScreenDC, EndDrawingOnTop)
@@ -24375,6 +24683,7 @@ PHP_METHOD(php_wxScreenDC, EndDrawingOnTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24390,6 +24699,7 @@ PHP_METHOD(php_wxScreenDC, EndDrawingOnTop)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxScreenDC::EndDrawingOnTop())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxScreenDC::EndDrawingOnTop());
 
 
@@ -24478,6 +24788,7 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -24510,6 +24821,7 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&rect1)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect1 ) == SUCCESS)
 		{
@@ -24545,6 +24857,7 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxScreenDC::StartDrawingOnTop((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxScreenDC::StartDrawingOnTop((wxWindow*) object_pointer0_0));
 
 
@@ -24564,6 +24877,7 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxScreenDC::StartDrawingOnTop())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxScreenDC::StartDrawingOnTop());
 
 
@@ -24576,6 +24890,7 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxScreenDC::StartDrawingOnTop((wxRect*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxScreenDC::StartDrawingOnTop((wxRect*) object_pointer1_0));
 
 
@@ -24626,6 +24941,7 @@ PHP_METHOD(php_wxScreenDC, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -24640,6 +24956,7 @@ PHP_METHOD(php_wxScreenDC, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxScreenDC_php();
 
 				((wxScreenDC_php*) _this)->references.Initialize();
@@ -24665,7 +24982,7 @@ PHP_METHOD(php_wxScreenDC, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxScreenDC::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxScreenDC::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

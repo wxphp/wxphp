@@ -91,6 +91,7 @@ void php_wxToolTip_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxToolTip::wxToolTip(string tip)
    Constructor. */
 PHP_METHOD(php_wxToolTip, __construct)
@@ -125,6 +126,7 @@ PHP_METHOD(php_wxToolTip, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&tip0, &tip_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tip0, &tip_len0 ) == SUCCESS)
 		{
@@ -143,6 +145,7 @@ PHP_METHOD(php_wxToolTip, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(tip0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxToolTip_php(wxString(tip0, wxConvUTF8));
 
 				((wxToolTip_php*) _this)->references.Initialize();
@@ -168,7 +171,7 @@ PHP_METHOD(php_wxToolTip, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxToolTip::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxToolTip::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -243,6 +246,7 @@ PHP_METHOD(php_wxToolTip, SetTip)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&tip0, &tip_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tip0, &tip_len0 ) == SUCCESS)
 		{
@@ -261,6 +265,7 @@ PHP_METHOD(php_wxToolTip, SetTip)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxToolTip::SetTip(wxString(tip0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxToolTip_php*)_this)->SetTip(wxString(tip0, wxConvUTF8));
 
 
@@ -344,6 +349,7 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msecs0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msecs0 ) == SUCCESS)
 		{
@@ -363,6 +369,7 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 				php_printf("Static ");
 				php_printf("Executing wxToolTip::SetReshow((long) msecs0)\n\n");
 				#endif
+
 				wxToolTip::SetReshow((long) msecs0);
 
 
@@ -446,6 +453,7 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msecs0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msecs0 ) == SUCCESS)
 		{
@@ -465,6 +473,7 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 				php_printf("Static ");
 				php_printf("Executing wxToolTip::SetDelay((long) msecs0)\n\n");
 				#endif
+
 				wxToolTip::SetDelay((long) msecs0);
 
 
@@ -548,6 +557,7 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msecs0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msecs0 ) == SUCCESS)
 		{
@@ -567,6 +577,7 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 				php_printf("Static ");
 				php_printf("Executing wxToolTip::SetAutoPop((long) msecs0)\n\n");
 				#endif
+
 				wxToolTip::SetAutoPop((long) msecs0);
 
 
@@ -649,6 +660,7 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -663,6 +675,7 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxToolTip::GetWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxToolTip_php*)_this)->GetWindow();
 
@@ -768,6 +781,7 @@ PHP_METHOD(php_wxToolTip, GetTip)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -782,6 +796,7 @@ PHP_METHOD(php_wxToolTip, GetTip)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxToolTip::GetTip().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxToolTip_php*)_this)->GetTip();
 				char* temp_string0;
@@ -871,6 +886,7 @@ PHP_METHOD(php_wxToolTip, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&flag0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flag0 ) == SUCCESS)
 		{
@@ -890,6 +906,7 @@ PHP_METHOD(php_wxToolTip, Enable)
 				php_printf("Static ");
 				php_printf("Executing wxToolTip::Enable(flag0)\n\n");
 				#endif
+
 				wxToolTip::Enable(flag0);
 
 

@@ -91,6 +91,7 @@ void php_wxSound_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto bool wxSound::Create(string fileName, bool isResource)
    Constructs a wave object from a file or resource. */
 PHP_METHOD(php_wxSound, Create)
@@ -158,6 +159,7 @@ PHP_METHOD(php_wxSound, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&fileName0, &fileName_len0, &isResource0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName0, &fileName_len0, &isResource0 ) == SUCCESS)
 		{
@@ -176,6 +178,7 @@ PHP_METHOD(php_wxSound, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Create(wxString(fileName0, wxConvUTF8)));
 
 
@@ -187,6 +190,7 @@ PHP_METHOD(php_wxSound, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8), isResource0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Create(wxString(fileName0, wxConvUTF8), isResource0));
 
 
@@ -269,6 +273,7 @@ PHP_METHOD(php_wxSound, IsOk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -283,6 +288,7 @@ PHP_METHOD(php_wxSound, IsOk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSound::IsOk())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->IsOk());
 
 
@@ -371,6 +377,7 @@ PHP_METHOD(php_wxSound, Play)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -387,6 +394,7 @@ PHP_METHOD(php_wxSound, Play)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&filename1, &filename_len1, &flags1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename1, &filename_len1, &flags1 ) == SUCCESS)
 		{
@@ -405,6 +413,7 @@ PHP_METHOD(php_wxSound, Play)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSound::Play())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Play());
 
 
@@ -416,6 +425,7 @@ PHP_METHOD(php_wxSound, Play)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxSound::Play((unsigned) flags0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Play((unsigned) flags0));
 
 
@@ -435,6 +445,7 @@ PHP_METHOD(php_wxSound, Play)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8)));
 
 
@@ -447,6 +458,7 @@ PHP_METHOD(php_wxSound, Play)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSound::Play(wxString(filename1, wxConvUTF8), (unsigned) flags1));
 
 
@@ -529,6 +541,7 @@ PHP_METHOD(php_wxSound, Stop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -544,6 +557,7 @@ PHP_METHOD(php_wxSound, Stop)
 				php_printf("Static ");
 				php_printf("Executing wxSound::Stop()\n\n");
 				#endif
+
 				wxSound::Stop();
 
 
@@ -604,6 +618,7 @@ PHP_METHOD(php_wxSound, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -616,6 +631,7 @@ PHP_METHOD(php_wxSound, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&fileName1, &fileName_len1, &isResource1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName1, &fileName_len1, &isResource1 ) == SUCCESS)
 		{
@@ -632,6 +648,7 @@ PHP_METHOD(php_wxSound, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&size2, &data2, &data_len2)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size2, &data2, &data_len2 ) == SUCCESS)
 		{
@@ -650,6 +667,7 @@ PHP_METHOD(php_wxSound, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxSound_php();
 
 				((wxSound_php*) _this)->references.Initialize();
@@ -667,6 +685,7 @@ PHP_METHOD(php_wxSound, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(fileName1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxSound_php(wxString(fileName1, wxConvUTF8));
 
 				((wxSound_php*) _this)->references.Initialize();
@@ -677,6 +696,7 @@ PHP_METHOD(php_wxSound, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(fileName1, wxConvUTF8), isResource1)\n");
 				#endif
+
 				_this = new wxSound_php(wxString(fileName1, wxConvUTF8), isResource1);
 
 				((wxSound_php*) _this)->references.Initialize();
@@ -694,6 +714,7 @@ PHP_METHOD(php_wxSound, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((size_t) size2, (const void*) data2)\n");
 				#endif
+
 				_this = new wxSound_php((size_t) size2, (const void*) data2);
 
 				((wxSound_php*) _this)->references.Initialize();
@@ -719,7 +740,7 @@ PHP_METHOD(php_wxSound, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSound::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxSound::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

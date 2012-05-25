@@ -43,7 +43,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 		AC_DEFINE(USE_WXPHP_DEBUG,1,[Include debugging support in wxPHP])
 	fi
 	
-	dnl Add include directory since headers are store there
+	dnl Add additional includes directory
 	if test -n "$ext_srcdir"; then
 		PHP_WXWIDGETS_CFLAGS="-I$ext_srcdir/includes";
 	else
@@ -79,5 +79,5 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_ADD_LIBRARY(stdc++, 1 , WXWIDGETS_SHARED_LIBADD)
 
 	dnl PHP_NEW_EXTENSION(extname, sources [, shared [, sapi_class [, extra-cflags [, cxx [, zend_ext]]]]])
-	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp <?=$source_files?> src/functions.cpp src/wxwidgets.cpp, $ext_shared,,,1)
+	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp <?=$source_files?> src/functions.cpp wxwidgets.cpp, $ext_shared,,,1)
 fi

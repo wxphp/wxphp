@@ -91,6 +91,7 @@ void php_wxXmlResourceHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+
 /* {{{ proto bool wxXmlResourceHandler::CanHandle(wxXmlNode &node)
    Returns true if it understands this node and can create a resource from it, false otherwise. */
 bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
@@ -243,6 +244,7 @@ PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zzz' (&node0, &parent0, &instance0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zzz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &node0, &parent0, &instance0 ) == SUCCESS)
 		{
@@ -309,6 +311,7 @@ PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResourceHandler::CreateResource((wxXmlNode*) object_pointer0_0, (wxObject*) object_pointer0_1, (wxObject*) object_pointer0_2) to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return3;
 				value_to_return3 = (wxObject_php*) ((wxXmlResourceHandler_php*)_this)->CreateResource((wxXmlNode*) object_pointer0_0, (wxObject*) object_pointer0_1, (wxObject*) object_pointer0_2);
 
@@ -496,6 +499,7 @@ PHP_METHOD(php_wxXmlResourceHandler, SetParentResource)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&res0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &res0 ) == SUCCESS)
 		{
@@ -530,6 +534,7 @@ PHP_METHOD(php_wxXmlResourceHandler, SetParentResource)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResourceHandler::SetParentResource((wxXmlResource*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxXmlResourceHandler_php*)_this)->SetParentResource((wxXmlResource*) object_pointer0_0);
 
 				references->AddReference(res0, "wxXmlResourceHandler::SetParentResource at call with 1 argument(s)");
@@ -581,6 +586,7 @@ PHP_METHOD(php_wxXmlResourceHandler, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -595,6 +601,7 @@ PHP_METHOD(php_wxXmlResourceHandler, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxXmlResourceHandler_php();
 
 				((wxXmlResourceHandler_php*) _this)->references.Initialize();
@@ -620,7 +627,7 @@ PHP_METHOD(php_wxXmlResourceHandler, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxXmlResourceHandler::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxXmlResourceHandler::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -669,6 +676,7 @@ void php_wxXmlResource_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxXmlResource::AddHandler(wxXmlResourceHandler &handler)
    Initializes only a specific handler (or custom handler). */
 PHP_METHOD(php_wxXmlResource, AddHandler)
@@ -735,6 +743,7 @@ PHP_METHOD(php_wxXmlResource, AddHandler)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&handler0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
@@ -769,6 +778,7 @@ PHP_METHOD(php_wxXmlResource, AddHandler)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::AddHandler((wxXmlResourceHandler*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxXmlResource_php*)_this)->AddHandler((wxXmlResourceHandler*) object_pointer0_0);
 
 				references->AddReference(handler0, "wxXmlResource::AddHandler at call with 1 argument(s)");
@@ -858,6 +868,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sz|z' (&name0, &name_len0, &control0, &parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sz|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0, &control0, &parent0 ) == SUCCESS)
 		{
@@ -908,6 +919,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1));
 
 				references->AddReference(control0, "wxXmlResource::AttachUnknownControl at call with 2 argument(s)");
@@ -920,6 +932,7 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1, (wxWindow*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->AttachUnknownControl(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1, (wxWindow*) object_pointer0_2));
 
 				references->AddReference(control0, "wxXmlResource::AttachUnknownControl at call with 3 argument(s)");
@@ -1004,6 +1017,7 @@ PHP_METHOD(php_wxXmlResource, ClearHandlers)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1018,6 +1032,7 @@ PHP_METHOD(php_wxXmlResource, ClearHandlers)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::ClearHandlers()\n\n");
 				#endif
+
 				((wxXmlResource_php*)_this)->ClearHandlers();
 
 
@@ -1104,6 +1119,7 @@ PHP_METHOD(php_wxXmlResource, CompareVersion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&major0, &minor0, &release0, &revision0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &major0, &minor0, &release0, &revision0 ) == SUCCESS)
 		{
@@ -1122,6 +1138,7 @@ PHP_METHOD(php_wxXmlResource, CompareVersion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxXmlResource::CompareVersion((int) major0, (int) minor0, (int) release0, (int) revision0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxXmlResource_php*)_this)->CompareVersion((int) major0, (int) minor0, (int) release0, (int) revision0));
 
 
@@ -1303,6 +1320,7 @@ PHP_METHOD(php_wxXmlResource, FindXRCIDById)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&numId0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numId0 ) == SUCCESS)
 		{
@@ -1322,6 +1340,7 @@ PHP_METHOD(php_wxXmlResource, FindXRCIDById)
 				php_printf("Static ");
 				php_printf("Executing RETURN_STRING(wxXmlResource::FindXRCIDById((int) numId0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxXmlResource::FindXRCIDById((int) numId0);
 				char* temp_string1;
@@ -1410,6 +1429,7 @@ PHP_METHOD(php_wxXmlResource, Get)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1425,6 +1445,7 @@ PHP_METHOD(php_wxXmlResource, Get)
 				php_printf("Static ");
 				php_printf("Executing wxXmlResource::Get() to return object pointer\n\n");
 				#endif
+
 				wxXmlResource_php* value_to_return0;
 				value_to_return0 = (wxXmlResource_php*) wxXmlResource::Get();
 				if(value_to_return0 == NULL){
@@ -1526,6 +1547,7 @@ PHP_METHOD(php_wxXmlResource, GetDomain)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1540,6 +1562,7 @@ PHP_METHOD(php_wxXmlResource, GetDomain)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxXmlResource::GetDomain().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxXmlResource_php*)_this)->GetDomain();
 				char* temp_string0;
@@ -1628,6 +1651,7 @@ PHP_METHOD(php_wxXmlResource, GetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1642,6 +1666,7 @@ PHP_METHOD(php_wxXmlResource, GetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxXmlResource::GetFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxXmlResource_php*)_this)->GetFlags());
 
 
@@ -1726,6 +1751,7 @@ PHP_METHOD(php_wxXmlResource, GetResourceNode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -1744,6 +1770,7 @@ PHP_METHOD(php_wxXmlResource, GetResourceNode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::GetResourceNode(wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxXmlNode_php* value_to_return1;
 				value_to_return1 = (wxXmlNode_php*) ((wxXmlResource_php*)_this)->GetResourceNode(wxString(name0, wxConvUTF8));
 
@@ -1849,6 +1876,7 @@ PHP_METHOD(php_wxXmlResource, GetVersion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1863,6 +1891,7 @@ PHP_METHOD(php_wxXmlResource, GetVersion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxXmlResource::GetVersion())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxXmlResource_php*)_this)->GetVersion());
 
 
@@ -1948,6 +1977,7 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&str_id0, &str_id_len0, &value_if_not_found0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str_id0, &str_id_len0, &value_if_not_found0 ) == SUCCESS)
 		{
@@ -1967,6 +1997,7 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
 				php_printf("Static ");
 				php_printf("Executing RETURN_LONG(wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8)));
 
 
@@ -1979,6 +2010,7 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
 				php_printf("Static ");
 				php_printf("Executing RETURN_LONG(wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8), (int) value_if_not_found0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxXmlResource::GetXRCID(wxString(str_id0, wxConvUTF8), (int) value_if_not_found0));
 
 
@@ -2061,6 +2093,7 @@ PHP_METHOD(php_wxXmlResource, InitAllHandlers)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2075,6 +2108,7 @@ PHP_METHOD(php_wxXmlResource, InitAllHandlers)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::InitAllHandlers()\n\n");
 				#endif
+
 				((wxXmlResource_php*)_this)->InitAllHandlers();
 
 
@@ -2159,6 +2193,7 @@ PHP_METHOD(php_wxXmlResource, Load)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filemask0, &filemask_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filemask0, &filemask_len0 ) == SUCCESS)
 		{
@@ -2177,6 +2212,7 @@ PHP_METHOD(php_wxXmlResource, Load)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::Load(wxString(filemask0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->Load(wxString(filemask0, wxConvUTF8)));
 
 
@@ -2261,6 +2297,7 @@ PHP_METHOD(php_wxXmlResource, LoadAllFiles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&dirname0, &dirname_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, &dirname_len0 ) == SUCCESS)
 		{
@@ -2279,6 +2316,7 @@ PHP_METHOD(php_wxXmlResource, LoadAllFiles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadAllFiles(wxString(dirname0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadAllFiles(wxString(dirname0, wxConvUTF8)));
 
 
@@ -2363,6 +2401,7 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -2381,6 +2420,7 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadBitmap(wxString(name0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxBitmap value_to_return1;
 				value_to_return1 = ((wxXmlResource_php*)_this)->LoadBitmap(wxString(name0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -2480,6 +2520,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&parent0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -2512,6 +2553,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zzs' (&dlg1, &parent1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dlg1, &parent1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -2562,6 +2604,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadDialog((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxDialog_php* value_to_return2;
 				value_to_return2 = (wxDialog_php*) ((wxXmlResource_php*)_this)->LoadDialog((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
@@ -2604,6 +2647,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadDialog((wxDialog*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadDialog((wxDialog*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
 
 				references->AddReference(dlg1, "wxXmlResource::LoadDialog at call with 3 argument(s)");
@@ -2690,6 +2734,7 @@ PHP_METHOD(php_wxXmlResource, LoadFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&file0, php_wxFileName_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, php_wxFileName_entry ) == SUCCESS)
 		{
@@ -2724,6 +2769,7 @@ PHP_METHOD(php_wxXmlResource, LoadFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadFile(*(wxFileName*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadFile(*(wxFileName*) object_pointer0_0));
 
 				references->AddReference(file0, "wxXmlResource::LoadFile at call with 1 argument(s)");
@@ -2813,6 +2859,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zzs' (&frame0, &parent0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0, &parent0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -2863,6 +2910,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1, wxString(name0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadFrame((wxFrame*) object_pointer0_0, (wxWindow*) object_pointer0_1, wxString(name0, wxConvUTF8)));
 
 				references->AddReference(frame0, "wxXmlResource::LoadFrame at call with 3 argument(s)");
@@ -2949,6 +2997,7 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -2967,6 +3016,7 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadIcon(wxString(name0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxIcon value_to_return1;
 				value_to_return1 = ((wxXmlResource_php*)_this)->LoadIcon(wxString(name0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -3056,6 +3106,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -3074,6 +3125,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadMenu(wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return1;
 				value_to_return1 = (wxMenu_php*) ((wxXmlResource_php*)_this)->LoadMenu(wxString(name0, wxConvUTF8));
 
@@ -3187,6 +3239,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&parent0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -3219,6 +3272,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -3237,6 +3291,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadMenuBar((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuBar_php* value_to_return2;
 				value_to_return2 = (wxMenuBar_php*) ((wxXmlResource_php*)_this)->LoadMenuBar((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
@@ -3279,6 +3334,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadMenuBar(wxString(name1, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuBar_php* value_to_return1;
 				value_to_return1 = (wxMenuBar_php*) ((wxXmlResource_php*)_this)->LoadMenuBar(wxString(name1, wxConvUTF8));
 
@@ -3400,6 +3456,7 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zss' (&parent0, &name0, &name_len0, &classname0, &classname_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &name0, &name_len0, &classname0, &classname_len0 ) == SUCCESS)
 		{
@@ -3432,6 +3489,7 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zzss' (&instance1, &parent1, &name1, &name_len1, &classname1, &classname_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zzss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &instance1, &parent1, &name1, &name_len1, &classname1, &classname_len1 ) == SUCCESS)
 		{
@@ -3482,6 +3540,7 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadObject((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8), wxString(classname0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return3;
 				value_to_return3 = (wxObject_php*) ((wxXmlResource_php*)_this)->LoadObject((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8), wxString(classname0, wxConvUTF8));
 
@@ -3524,6 +3583,7 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadObject((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadObject((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
 
 				references->AddReference(instance1, "wxXmlResource::LoadObject at call with 4 argument(s)");
@@ -3624,6 +3684,7 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zss' (&parent0, &name0, &name_len0, &classname0, &classname_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &name0, &name_len0, &classname0, &classname_len0 ) == SUCCESS)
 		{
@@ -3656,6 +3717,7 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zzss' (&instance1, &parent1, &name1, &name_len1, &classname1, &classname_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zzss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &instance1, &parent1, &name1, &name_len1, &classname1, &classname_len1 ) == SUCCESS)
 		{
@@ -3706,6 +3768,7 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadObjectRecursively((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8), wxString(classname0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return3;
 				value_to_return3 = (wxObject_php*) ((wxXmlResource_php*)_this)->LoadObjectRecursively((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8), wxString(classname0, wxConvUTF8));
 
@@ -3748,6 +3811,7 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadObjectRecursively((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadObjectRecursively((wxObject*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8), wxString(classname1, wxConvUTF8)));
 
 				references->AddReference(instance1, "wxXmlResource::LoadObjectRecursively at call with 4 argument(s)");
@@ -3844,6 +3908,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&parent0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -3876,6 +3941,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zzs' (&panel1, &parent1, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &panel1, &parent1, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -3926,6 +3992,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadPanel((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxPanel_php* value_to_return2;
 				value_to_return2 = (wxPanel_php*) ((wxXmlResource_php*)_this)->LoadPanel((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
@@ -3968,6 +4035,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::LoadPanel((wxPanel*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->LoadPanel((wxPanel*) object_pointer1_0, (wxWindow*) object_pointer1_1, wxString(name1, wxConvUTF8)));
 
 				references->AddReference(panel1, "wxXmlResource::LoadPanel at call with 3 argument(s)");
@@ -4056,6 +4124,7 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&parent0, &name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -4090,6 +4159,7 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::LoadToolBar((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxToolBar_php* value_to_return2;
 				value_to_return2 = (wxToolBar_php*) ((wxXmlResource_php*)_this)->LoadToolBar((wxWindow*) object_pointer0_0, wxString(name0, wxConvUTF8));
 
@@ -4198,6 +4268,7 @@ PHP_METHOD(php_wxXmlResource, Set)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&res0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &res0 ) == SUCCESS)
 		{
@@ -4233,6 +4304,7 @@ PHP_METHOD(php_wxXmlResource, Set)
 				php_printf("Static ");
 				php_printf("Executing wxXmlResource::Set((wxXmlResource*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxXmlResource_php* value_to_return1;
 				value_to_return1 = (wxXmlResource_php*) wxXmlResource::Set((wxXmlResource*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -4336,6 +4408,7 @@ PHP_METHOD(php_wxXmlResource, SetDomain)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&domain0, &domain_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &domain0, &domain_len0 ) == SUCCESS)
 		{
@@ -4354,6 +4427,7 @@ PHP_METHOD(php_wxXmlResource, SetDomain)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::SetDomain(wxString(domain0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxXmlResource_php*)_this)->SetDomain(wxString(domain0, wxConvUTF8));
 
 
@@ -4437,6 +4511,7 @@ PHP_METHOD(php_wxXmlResource, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -4455,6 +4530,7 @@ PHP_METHOD(php_wxXmlResource, SetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxXmlResource::SetFlags((int) flags0)\n\n");
 				#endif
+
 				((wxXmlResource_php*)_this)->SetFlags((int) flags0);
 
 
@@ -4539,6 +4615,7 @@ PHP_METHOD(php_wxXmlResource, Unload)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
 		{
@@ -4557,6 +4634,7 @@ PHP_METHOD(php_wxXmlResource, Unload)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxXmlResource::Unload(wxString(filename0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxXmlResource_php*)_this)->Unload(wxString(filename0, wxConvUTF8)));
 
 
@@ -4617,6 +4695,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|ls' (&filemask0, &filemask_len0, &flags0, &domain0, &domain_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filemask0, &filemask_len0, &flags0, &domain0, &domain_len0 ) == SUCCESS)
 		{
@@ -4633,6 +4712,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ls' (&flags1, &domain1, &domain_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags1, &domain1, &domain_len1 ) == SUCCESS)
 		{
@@ -4651,6 +4731,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(filemask0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxXmlResource_php(wxString(filemask0, wxConvUTF8));
 
 				((wxXmlResource_php*) _this)->references.Initialize();
@@ -4661,6 +4742,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(filemask0, wxConvUTF8), (int) flags0)\n");
 				#endif
+
 				_this = new wxXmlResource_php(wxString(filemask0, wxConvUTF8), (int) flags0);
 
 				((wxXmlResource_php*) _this)->references.Initialize();
@@ -4671,6 +4753,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(filemask0, wxConvUTF8), (int) flags0, wxString(domain0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxXmlResource_php(wxString(filemask0, wxConvUTF8), (int) flags0, wxString(domain0, wxConvUTF8));
 
 				((wxXmlResource_php*) _this)->references.Initialize();
@@ -4688,6 +4771,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxXmlResource_php();
 
 				((wxXmlResource_php*) _this)->references.Initialize();
@@ -4698,6 +4782,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) flags1)\n");
 				#endif
+
 				_this = new wxXmlResource_php((int) flags1);
 
 				((wxXmlResource_php*) _this)->references.Initialize();
@@ -4708,6 +4793,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((int) flags1, wxString(domain1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxXmlResource_php((int) flags1, wxString(domain1, wxConvUTF8));
 
 				((wxXmlResource_php*) _this)->references.Initialize();
@@ -4733,7 +4819,7 @@ PHP_METHOD(php_wxXmlResource, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxXmlResource::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxXmlResource::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

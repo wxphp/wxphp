@@ -58,6 +58,7 @@ void php_wxMenuBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxMenuBar::wxMenuBar(int style)
    Construct an empty menu bar. */
 PHP_METHOD(php_wxMenuBar, __construct)
@@ -91,6 +92,7 @@ PHP_METHOD(php_wxMenuBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -109,6 +111,7 @@ PHP_METHOD(php_wxMenuBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxMenuBar_php();
 
 				((wxMenuBar_php*) _this)->references.Initialize();
@@ -119,6 +122,7 @@ PHP_METHOD(php_wxMenuBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((long) style0)\n");
 				#endif
+
 				_this = new wxMenuBar_php((long) style0);
 
 				((wxMenuBar_php*) _this)->references.Initialize();
@@ -144,7 +148,7 @@ PHP_METHOD(php_wxMenuBar, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMenuBar::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMenuBar::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -221,6 +225,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&menu0, &title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -255,6 +260,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuBar::Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
 
 				references->AddReference(menu0, "wxMenuBar::Append at call with 2 argument(s)");
@@ -339,6 +345,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&frame0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0 ) == SUCCESS)
 		{
@@ -373,6 +380,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Attach((wxFrame*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Attach((wxFrame*) object_pointer0_0);
 
 				references->AddReference(frame0, "wxMenuBar::Attach at call with 1 argument(s)");
@@ -458,6 +466,7 @@ PHP_METHOD(php_wxMenuBar, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &check0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &check0 ) == SUCCESS)
 		{
@@ -476,6 +485,7 @@ PHP_METHOD(php_wxMenuBar, Check)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Check((int) id0, check0)\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Check((int) id0, check0);
 
 
@@ -557,6 +567,7 @@ PHP_METHOD(php_wxMenuBar, Detach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -571,6 +582,7 @@ PHP_METHOD(php_wxMenuBar, Detach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Detach()\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Detach();
 
 
@@ -655,6 +667,7 @@ PHP_METHOD(php_wxMenuBar, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &enable0 ) == SUCCESS)
 		{
@@ -673,6 +686,7 @@ PHP_METHOD(php_wxMenuBar, Enable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Enable((int) id0, enable0)\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Enable((int) id0, enable0);
 
 
@@ -757,6 +771,7 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&pos0, &enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &enable0 ) == SUCCESS)
 		{
@@ -775,6 +790,7 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::EnableTop((size_t) pos0, enable0)\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->EnableTop((size_t) pos0, enable0);
 
 
@@ -859,6 +875,7 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -877,6 +894,7 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenuBar::FindMenu(wxString(title0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenuBar_php*)_this)->FindMenu(wxString(title0, wxConvUTF8)));
 
 
@@ -963,6 +981,7 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&menuString0, &menuString_len0, &itemString0, &itemString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuString0, &menuString_len0, &itemString0, &itemString_len0 ) == SUCCESS)
 		{
@@ -981,6 +1000,7 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenuBar::FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenuBar_php*)_this)->FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
 
 
@@ -1062,6 +1082,7 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1076,6 +1097,7 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::GetFrame() to return object pointer\n\n");
 				#endif
+
 				wxFrame_php* value_to_return0;
 				value_to_return0 = (wxFrame_php*) ((wxMenuBar_php*)_this)->GetFrame();
 
@@ -1182,6 +1204,7 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -1200,6 +1223,7 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuBar::GetHelpString((int) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenuBar_php*)_this)->GetHelpString((int) id0);
 				char* temp_string1;
@@ -1289,6 +1313,7 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -1307,6 +1332,7 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuBar::GetLabel((int) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenuBar_php*)_this)->GetLabel((int) id0);
 				char* temp_string1;
@@ -1396,6 +1422,7 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -1414,6 +1441,7 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuBar::GetLabelTop((size_t) pos0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenuBar_php*)_this)->GetLabelTop((size_t) pos0);
 				char* temp_string1;
@@ -1503,6 +1531,7 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&menuIndex0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuIndex0 ) == SUCCESS)
 		{
@@ -1521,6 +1550,7 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::GetMenu((size_t) menuIndex0) to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return1;
 				value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)_this)->GetMenu((size_t) menuIndex0);
 
@@ -1626,6 +1656,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1640,6 +1671,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenuBar::GetMenuCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenuBar_php*)_this)->GetMenuCount());
 
 
@@ -1723,6 +1755,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -1741,6 +1774,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuBar::GetMenuLabel((size_t) pos0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenuBar_php*)_this)->GetMenuLabel((size_t) pos0);
 				char* temp_string1;
@@ -1830,6 +1864,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -1848,6 +1883,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuBar::GetMenuLabelText((size_t) pos0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenuBar_php*)_this)->GetMenuLabelText((size_t) pos0);
 				char* temp_string1;
@@ -1941,6 +1977,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs' (&pos0, &menu0, &title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -1975,6 +2012,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuBar::Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
 				references->AddReference(menu0, "wxMenuBar::Insert at call with 3 argument(s)");
@@ -2057,6 +2095,7 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2071,6 +2110,7 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuBar::IsAttached())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->IsAttached());
 
 
@@ -2154,6 +2194,7 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -2172,6 +2213,7 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuBar::IsChecked((int) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->IsChecked((int) id0));
 
 
@@ -2255,6 +2297,7 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -2273,6 +2316,7 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuBar::IsEnabled((int) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->IsEnabled((int) id0));
 
 
@@ -2358,6 +2402,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|bz' (&eraseBackground0, &rect0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|bz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eraseBackground0, &rect0 ) == SUCCESS)
 		{
@@ -2392,6 +2437,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Refresh()\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Refresh();
 
 
@@ -2403,6 +2449,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Refresh(eraseBackground0)\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Refresh(eraseBackground0);
 
 
@@ -2414,6 +2461,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Refresh(eraseBackground0, (const wxRect*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->Refresh(eraseBackground0, (const wxRect*) object_pointer0_1);
 
 				references->AddReference(rect0, "wxMenuBar::Refresh at call with 2 argument(s)");
@@ -2498,6 +2546,7 @@ PHP_METHOD(php_wxMenuBar, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -2516,6 +2565,7 @@ PHP_METHOD(php_wxMenuBar, Remove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Remove((size_t) pos0) to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return1;
 				value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)_this)->Remove((size_t) pos0);
 
@@ -2626,6 +2676,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs' (&pos0, &menu0, &title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lzs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -2660,6 +2711,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::Replace((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return3;
 				value_to_return3 = (wxMenu_php*) ((wxMenuBar_php*)_this)->Replace((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8));
 
@@ -2769,6 +2821,7 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -2787,6 +2840,7 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::SetHelpString((int) id0, wxString(helpString0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->SetHelpString((int) id0, wxString(helpString0, wxConvUTF8));
 
 
@@ -2872,6 +2926,7 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -2890,6 +2945,7 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::SetLabel((int) id0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->SetLabel((int) id0, wxString(label0, wxConvUTF8));
 
 
@@ -2975,6 +3031,7 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -2993,6 +3050,7 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::SetLabelTop((size_t) pos0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->SetLabelTop((size_t) pos0, wxString(label0, wxConvUTF8));
 
 
@@ -3078,6 +3136,7 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -3096,6 +3155,7 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuBar::SetMenuLabel((size_t) pos0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuBar_php*)_this)->SetMenuLabel((size_t) pos0, wxString(label0, wxConvUTF8));
 
 
@@ -3121,6 +3181,7 @@ void php_wxMenu_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxMenu::wxMenu(int style)
    Constructs a wxMenu object. */
 PHP_METHOD(php_wxMenu, __construct)
@@ -3161,6 +3222,7 @@ PHP_METHOD(php_wxMenu, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -3177,6 +3239,7 @@ PHP_METHOD(php_wxMenu, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&title1, &title_len1, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title1, &title_len1, &style1 ) == SUCCESS)
 		{
@@ -3193,6 +3256,7 @@ PHP_METHOD(php_wxMenu, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload2_called = true;
 		already_called = true;
 	}
@@ -3207,6 +3271,7 @@ PHP_METHOD(php_wxMenu, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((long) style0)\n");
 				#endif
+
 				_this = new wxMenu_php((long) style0);
 
 				((wxMenu_php*) _this)->references.Initialize();
@@ -3224,6 +3289,7 @@ PHP_METHOD(php_wxMenu, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxMenu_php(wxString(title1, wxConvUTF8));
 
 				((wxMenu_php*) _this)->references.Initialize();
@@ -3234,6 +3300,7 @@ PHP_METHOD(php_wxMenu, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8), (long) style1)\n");
 				#endif
+
 				_this = new wxMenu_php(wxString(title1, wxConvUTF8), (long) style1);
 
 				((wxMenu_php*) _this)->references.Initialize();
@@ -3251,6 +3318,7 @@ PHP_METHOD(php_wxMenu, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxMenu_php();
 
 				((wxMenu_php*) _this)->references.Initialize();
@@ -3276,7 +3344,7 @@ PHP_METHOD(php_wxMenu, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMenu::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMenu::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -3351,6 +3419,7 @@ PHP_METHOD(php_wxMenu, SetTitle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&title0, &title_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0 ) == SUCCESS)
 		{
@@ -3369,6 +3438,7 @@ PHP_METHOD(php_wxMenu, SetTitle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::SetTitle(wxString(title0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->SetTitle(wxString(title0, wxConvUTF8));
 
 
@@ -3452,6 +3522,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
@@ -3486,6 +3557,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::SetParent((wxMenu*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->SetParent((wxMenu*) object_pointer0_0);
 
 				references->AddReference(parent0, "wxMenu::SetParent at call with 1 argument(s)");
@@ -3572,6 +3644,7 @@ PHP_METHOD(php_wxMenu, SetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -3590,6 +3663,7 @@ PHP_METHOD(php_wxMenu, SetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::SetLabel((int) id0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->SetLabel((int) id0, wxString(label0, wxConvUTF8));
 
 
@@ -3673,6 +3747,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&win0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
@@ -3707,6 +3782,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::SetInvokingWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->SetInvokingWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(win0, "wxMenu::SetInvokingWindow at call with 1 argument(s)");
@@ -3793,6 +3869,7 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -3811,6 +3888,7 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::SetHelpString((int) id0, wxString(helpString0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->SetHelpString((int) id0, wxString(helpString0, wxConvUTF8));
 
 
@@ -3898,6 +3976,7 @@ PHP_METHOD(php_wxMenu, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
@@ -3930,6 +4009,7 @@ PHP_METHOD(php_wxMenu, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id1)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1 ) == SUCCESS)
 		{
@@ -3948,6 +4028,7 @@ PHP_METHOD(php_wxMenu, Remove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Remove((wxMenuItem*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Remove((wxMenuItem*) object_pointer0_0);
 
@@ -3990,6 +4071,7 @@ PHP_METHOD(php_wxMenu, Remove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Remove((int) id1) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Remove((int) id1);
 
@@ -4095,6 +4177,7 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4109,6 +4192,7 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::PrependSeparator() to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return0;
 				value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependSeparator();
 
@@ -4219,6 +4303,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -4237,6 +4322,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::PrependRadioItem((int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8));
 
@@ -4271,6 +4357,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::PrependRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
@@ -4381,6 +4468,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -4399,6 +4487,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::PrependCheckItem((int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8));
 
@@ -4433,6 +4522,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::PrependCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
@@ -4548,6 +4638,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|ssl' (&id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0 ) == SUCCESS)
 		{
@@ -4564,6 +4655,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
@@ -4598,6 +4690,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Prepend((int) id0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0);
 
@@ -4632,6 +4725,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Prepend((int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0, wxString(item0, wxConvUTF8));
 
@@ -4666,6 +4760,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
@@ -4700,6 +4795,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return4;
 				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
@@ -4741,6 +4837,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Prepend((wxMenuItem*) object_pointer1_0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((wxMenuItem*) object_pointer1_0);
 
@@ -4866,6 +4963,7 @@ PHP_METHOD(php_wxMenu, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|ssl' (&id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0 ) == SUCCESS)
 		{
@@ -4882,6 +4980,7 @@ PHP_METHOD(php_wxMenu, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsz|s' (&id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsz|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1 ) == SUCCESS)
 		{
@@ -4914,6 +5013,7 @@ PHP_METHOD(php_wxMenu, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menuItem2)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuItem2 ) == SUCCESS)
 		{
@@ -4948,6 +5048,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((int) id0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0);
 
@@ -4982,6 +5083,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0, wxString(item0, wxConvUTF8));
 
@@ -5016,6 +5118,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
@@ -5050,6 +5153,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return4;
 				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
@@ -5091,6 +5195,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2);
 
@@ -5126,6 +5231,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return4;
 				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8));
 
@@ -5168,6 +5274,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Append((wxMenuItem*) object_pointer2_0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((wxMenuItem*) object_pointer2_0);
 
@@ -5279,6 +5386,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &help0, &help_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &help0, &help_len0 ) == SUCCESS)
 		{
@@ -5297,6 +5405,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendCheckItem((int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8));
 
@@ -5331,6 +5440,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
@@ -5441,6 +5551,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &help0, &help_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &help0, &help_len0 ) == SUCCESS)
 		{
@@ -5459,6 +5570,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendRadioItem((int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8));
 
@@ -5493,6 +5605,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
@@ -5598,6 +5711,7 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5612,6 +5726,7 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendSeparator() to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return0;
 				value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendSeparator();
 
@@ -5723,6 +5838,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|s' (&submenu0, &text0, &text_len0, &help0, &help_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &submenu0, &text0, &text_len0, &help0, &help_len0 ) == SUCCESS)
 		{
@@ -5757,6 +5873,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8));
 
@@ -5792,6 +5909,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8), wxString(help0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
@@ -5899,6 +6017,7 @@ PHP_METHOD(php_wxMenu, Attach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menubar0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menubar0 ) == SUCCESS)
 		{
@@ -5933,6 +6052,7 @@ PHP_METHOD(php_wxMenu, Attach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Attach((wxMenuBar*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->Attach((wxMenuBar*) object_pointer0_0);
 
 				references->AddReference(menubar0, "wxMenu::Attach at call with 1 argument(s)");
@@ -6016,6 +6136,7 @@ PHP_METHOD(php_wxMenu, Break)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6030,6 +6151,7 @@ PHP_METHOD(php_wxMenu, Break)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Break()\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->Break();
 
 
@@ -6114,6 +6236,7 @@ PHP_METHOD(php_wxMenu, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &check0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &check0 ) == SUCCESS)
 		{
@@ -6132,6 +6255,7 @@ PHP_METHOD(php_wxMenu, Check)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Check((int) id0, check0)\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->Check((int) id0, check0);
 
 
@@ -6219,6 +6343,7 @@ PHP_METHOD(php_wxMenu, Delete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -6235,6 +6360,7 @@ PHP_METHOD(php_wxMenu, Delete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
@@ -6269,6 +6395,7 @@ PHP_METHOD(php_wxMenu, Delete)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::Delete((int) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Delete((int) id0));
 
 
@@ -6287,6 +6414,7 @@ PHP_METHOD(php_wxMenu, Delete)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::Delete((wxMenuItem*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Delete((wxMenuItem*) object_pointer1_0));
 
 				references->AddReference(item1, "wxMenu::Delete at call with 1 argument(s)");
@@ -6375,6 +6503,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -6391,6 +6520,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
@@ -6425,6 +6555,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::Destroy((int) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Destroy((int) id0));
 
 
@@ -6443,6 +6574,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::Destroy((wxMenuItem*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Destroy((wxMenuItem*) object_pointer1_0));
 
 				references->AddReference(item1, "wxMenu::Destroy at call with 1 argument(s)");
@@ -6525,6 +6657,7 @@ PHP_METHOD(php_wxMenu, Detach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6539,6 +6672,7 @@ PHP_METHOD(php_wxMenu, Detach)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Detach()\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->Detach();
 
 
@@ -6623,6 +6757,7 @@ PHP_METHOD(php_wxMenu, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &enable0 ) == SUCCESS)
 		{
@@ -6641,6 +6776,7 @@ PHP_METHOD(php_wxMenu, Enable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Enable((int) id0, enable0)\n\n");
 				#endif
+
 				((wxMenu_php*)_this)->Enable((int) id0, enable0);
 
 
@@ -6725,6 +6861,7 @@ PHP_METHOD(php_wxMenu, FindItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&itemString0, &itemString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &itemString0, &itemString_len0 ) == SUCCESS)
 		{
@@ -6743,6 +6880,7 @@ PHP_METHOD(php_wxMenu, FindItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenu::FindItem(wxString(itemString0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenu_php*)_this)->FindItem(wxString(itemString0, wxConvUTF8)));
 
 
@@ -6826,6 +6964,7 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&position0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &position0 ) == SUCCESS)
 		{
@@ -6844,6 +6983,7 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::FindItemByPosition((size_t) position0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->FindItemByPosition((size_t) position0);
 
@@ -6950,6 +7090,7 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -6968,6 +7109,7 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenu::GetHelpString((int) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenu_php*)_this)->GetHelpString((int) id0);
 				char* temp_string1;
@@ -7055,6 +7197,7 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7069,6 +7212,7 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::GetInvokingWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxMenu_php*)_this)->GetInvokingWindow();
 
@@ -7175,6 +7319,7 @@ PHP_METHOD(php_wxMenu, GetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -7193,6 +7338,7 @@ PHP_METHOD(php_wxMenu, GetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenu::GetLabel((int) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenu_php*)_this)->GetLabel((int) id0);
 				char* temp_string1;
@@ -7282,6 +7428,7 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -7300,6 +7447,7 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenu::GetLabelText((int) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = ((wxMenu_php*)_this)->GetLabelText((int) id0);
 				char* temp_string1;
@@ -7388,6 +7536,7 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7402,6 +7551,7 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenu::GetMenuItemCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenu_php*)_this)->GetMenuItemCount());
 
 
@@ -7483,6 +7633,7 @@ PHP_METHOD(php_wxMenu, GetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7497,6 +7648,7 @@ PHP_METHOD(php_wxMenu, GetParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::GetParent() to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return0;
 				value_to_return0 = (wxMenu_php*) ((wxMenu_php*)_this)->GetParent();
 
@@ -7601,6 +7753,7 @@ PHP_METHOD(php_wxMenu, GetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7615,6 +7768,7 @@ PHP_METHOD(php_wxMenu, GetStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenu::GetStyle())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenu_php*)_this)->GetStyle());
 
 
@@ -7697,6 +7851,7 @@ PHP_METHOD(php_wxMenu, GetTitle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7711,6 +7866,7 @@ PHP_METHOD(php_wxMenu, GetTitle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenu::GetTitle().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenu_php*)_this)->GetTitle();
 				char* temp_string0;
@@ -7798,6 +7954,7 @@ PHP_METHOD(php_wxMenu, GetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7812,6 +7969,7 @@ PHP_METHOD(php_wxMenu, GetWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::GetWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) ((wxMenu_php*)_this)->GetWindow();
 
@@ -7929,6 +8087,7 @@ PHP_METHOD(php_wxMenu, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&pos0, &menuItem0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menuItem0 ) == SUCCESS)
 		{
@@ -7961,6 +8120,7 @@ PHP_METHOD(php_wxMenu, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|ssl' (&pos1, &id1, &item1, &item_len1, &helpString1, &helpString_len1, &kind1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll|ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos1, &id1, &item1, &item_len1, &helpString1, &helpString_len1, &kind1 ) == SUCCESS)
 		{
@@ -7979,6 +8139,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Insert((size_t) pos0, (wxMenuItem*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos0, (wxMenuItem*) object_pointer0_1);
 
@@ -8021,6 +8182,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Insert((size_t) pos1, (int) id1) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1);
 
@@ -8055,6 +8217,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8));
 
@@ -8089,6 +8252,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return4;
 				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8));
 
@@ -8123,6 +8287,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8), (wxItemKind) kind1) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return5;
 				value_to_return5 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8), (wxItemKind) kind1);
 
@@ -8234,6 +8399,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls|s' (&pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -8252,6 +8418,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
 
@@ -8286,6 +8453,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return4;
 				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
@@ -8397,6 +8565,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls|s' (&pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lls|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -8415,6 +8584,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return3;
 				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
 
@@ -8449,6 +8619,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return4;
 				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
@@ -8555,6 +8726,7 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
@@ -8573,6 +8745,7 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::InsertSeparator((size_t) pos0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertSeparator((size_t) pos0);
 
@@ -8677,6 +8850,7 @@ PHP_METHOD(php_wxMenu, IsAttached)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8691,6 +8865,7 @@ PHP_METHOD(php_wxMenu, IsAttached)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::IsAttached())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->IsAttached());
 
 
@@ -8774,6 +8949,7 @@ PHP_METHOD(php_wxMenu, IsChecked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -8792,6 +8968,7 @@ PHP_METHOD(php_wxMenu, IsChecked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::IsChecked((int) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->IsChecked((int) id0));
 
 
@@ -8875,6 +9052,7 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -8893,6 +9071,7 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenu::IsEnabled((int) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->IsEnabled((int) id0));
 
 
@@ -8978,6 +9157,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&id0, pos0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, pos0 ) == SUCCESS)
 		{
@@ -8999,6 +9179,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::FindChildItem((int) id0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return1;
 				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->FindChildItem((int) id0);
 
@@ -9033,6 +9214,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenu::FindChildItem((int) id0, (size_t*) pos0) to return object pointer\n\n");
 				#endif
+
 				wxMenuItem_php* value_to_return2;
 				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->FindChildItem((int) id0, (size_t*) pos0);
 
@@ -9087,6 +9269,7 @@ void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxMenuItem::wxMenuItem(wxMenu &parentMenu, int id, string text, string helpString, wxItemKind kind, wxMenu &subMenu)
    Constructs a wxMenuItem object. */
 PHP_METHOD(php_wxMenuItem, __construct)
@@ -9129,6 +9312,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|zlsslz' (&parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|zlsslz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0 ) == SUCCESS)
 		{
@@ -9179,6 +9363,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxMenuItem_php();
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9189,6 +9374,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9200,6 +9386,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0)\n");
 				#endif
+
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9211,6 +9398,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8));
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9222,6 +9410,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9233,6 +9422,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0)\n");
 				#endif
+
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9244,6 +9434,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5)\n");
 				#endif
+
 				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5);
 
 				((wxMenuItem_php*) _this)->references.Initialize();
@@ -9271,7 +9462,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMenuItem::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxMenuItem::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -9346,6 +9537,7 @@ PHP_METHOD(php_wxMenuItem, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -9364,6 +9556,7 @@ PHP_METHOD(php_wxMenuItem, SetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::SetText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->SetText(wxString(text0, wxConvUTF8));
 
 
@@ -9448,6 +9641,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
@@ -9482,6 +9676,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::SetSubMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->SetSubMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxMenuItem::SetSubMenu at call with 1 argument(s)");
@@ -9567,6 +9762,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
@@ -9601,6 +9797,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::SetMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->SetMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxMenuItem::SetMenu at call with 1 argument(s)");
@@ -9686,6 +9883,7 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&label0, &label_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &label0, &label_len0 ) == SUCCESS)
 		{
@@ -9704,6 +9902,7 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::SetItemLabel(wxString(label0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->SetItemLabel(wxString(label0, wxConvUTF8));
 
 
@@ -9788,6 +9987,7 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&helpString0, &helpString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
@@ -9806,6 +10006,7 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::SetHelp(wxString(helpString0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->SetHelp(wxString(helpString0, wxConvUTF8));
 
 
@@ -9888,6 +10089,7 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9902,6 +10104,7 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsSubMenu())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsSubMenu());
 
 
@@ -9984,6 +10187,7 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9998,6 +10202,7 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsSeparator())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsSeparator());
 
 
@@ -10081,6 +10286,7 @@ PHP_METHOD(php_wxMenuItem, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&check0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &check0 ) == SUCCESS)
 		{
@@ -10099,6 +10305,7 @@ PHP_METHOD(php_wxMenuItem, Check)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::Check()\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->Check();
 
 
@@ -10110,6 +10317,7 @@ PHP_METHOD(php_wxMenuItem, Check)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::Check(check0)\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->Check(check0);
 
 
@@ -10193,6 +10401,7 @@ PHP_METHOD(php_wxMenuItem, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -10211,6 +10420,7 @@ PHP_METHOD(php_wxMenuItem, Enable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::Enable()\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->Enable();
 
 
@@ -10222,6 +10432,7 @@ PHP_METHOD(php_wxMenuItem, Enable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::Enable(enable0)\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->Enable(enable0);
 
 
@@ -10304,6 +10515,7 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10318,6 +10530,7 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetHelp().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenuItem_php*)_this)->GetHelp();
 				char* temp_string0;
@@ -10406,6 +10619,7 @@ PHP_METHOD(php_wxMenuItem, GetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10420,6 +10634,7 @@ PHP_METHOD(php_wxMenuItem, GetId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenuItem::GetId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenuItem_php*)_this)->GetId());
 
 
@@ -10502,6 +10717,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10516,6 +10732,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetItemLabel().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenuItem_php*)_this)->GetItemLabel();
 				char* temp_string0;
@@ -10604,6 +10821,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10618,6 +10836,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetItemLabelText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenuItem_php*)_this)->GetItemLabelText();
 				char* temp_string0;
@@ -10706,6 +10925,7 @@ PHP_METHOD(php_wxMenuItem, GetKind)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10720,6 +10940,7 @@ PHP_METHOD(php_wxMenuItem, GetKind)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxMenuItem::GetKind())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxMenuItem_php*)_this)->GetKind());
 
 
@@ -10802,6 +11023,7 @@ PHP_METHOD(php_wxMenuItem, GetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10816,6 +11038,7 @@ PHP_METHOD(php_wxMenuItem, GetLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetLabel().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenuItem_php*)_this)->GetLabel();
 				char* temp_string0;
@@ -10905,6 +11128,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -10924,6 +11148,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 				php_printf("Static ");
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetLabelFromText(wxString(text0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxMenuItem::GetLabelFromText(wxString(text0, wxConvUTF8));
 				char* temp_string1;
@@ -11014,6 +11239,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -11033,6 +11259,7 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 				php_printf("Static ");
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetLabelText(wxString(text0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxMenuItem::GetLabelText(wxString(text0, wxConvUTF8));
 				char* temp_string1;
@@ -11121,6 +11348,7 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11135,6 +11363,7 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::GetMenu() to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return0;
 				value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)_this)->GetMenu();
 
@@ -11240,6 +11469,7 @@ PHP_METHOD(php_wxMenuItem, GetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11254,6 +11484,7 @@ PHP_METHOD(php_wxMenuItem, GetName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenuItem_php*)_this)->GetName();
 				char* temp_string0;
@@ -11342,6 +11573,7 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11356,6 +11588,7 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::GetSubMenu() to return object pointer\n\n");
 				#endif
+
 				wxMenu_php* value_to_return0;
 				value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)_this)->GetSubMenu();
 
@@ -11461,6 +11694,7 @@ PHP_METHOD(php_wxMenuItem, GetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11475,6 +11709,7 @@ PHP_METHOD(php_wxMenuItem, GetText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxMenuItem::GetText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxMenuItem_php*)_this)->GetText();
 				char* temp_string0;
@@ -11563,6 +11798,7 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11577,6 +11813,7 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsCheckable())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsCheckable());
 
 
@@ -11659,6 +11896,7 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11673,6 +11911,7 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsChecked())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsChecked());
 
 
@@ -11755,6 +11994,7 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11769,6 +12009,7 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsEnabled())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsEnabled());
 
 
@@ -11853,6 +12094,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bmp0, php_wxBitmap_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
@@ -11887,6 +12129,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxMenuItem::SetBitmap(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxMenuItem_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bmp0, "wxMenuItem::SetBitmap at call with 1 argument(s)");

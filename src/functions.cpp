@@ -191,6 +191,7 @@ PHP_FUNCTION(php_wxHandleFatalExceptions)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&doIt0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &doIt0 ) == SUCCESS)
 		{
@@ -209,6 +210,7 @@ PHP_FUNCTION(php_wxHandleFatalExceptions)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxHandleFatalExceptions())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxHandleFatalExceptions());
 
 
@@ -220,6 +222,7 @@ PHP_FUNCTION(php_wxHandleFatalExceptions)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxHandleFatalExceptions(doIt0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxHandleFatalExceptions(doIt0));
 
 
@@ -272,6 +275,7 @@ PHP_FUNCTION(php_wxUninitialize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -284,6 +288,7 @@ PHP_FUNCTION(php_wxUninitialize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -298,6 +303,7 @@ PHP_FUNCTION(php_wxUninitialize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxUninitialize()\n\n");
 				#endif
+
 				wxUninitialize();
 
 
@@ -316,6 +322,7 @@ PHP_FUNCTION(php_wxUninitialize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxUninitialize()\n\n");
 				#endif
+
 				wxUninitialize();
 
 
@@ -366,6 +373,7 @@ PHP_FUNCTION(php_wxWakeUpIdle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -380,6 +388,7 @@ PHP_FUNCTION(php_wxWakeUpIdle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxWakeUpIdle()\n\n");
 				#endif
+
 				wxWakeUpIdle();
 
 
@@ -430,6 +439,7 @@ PHP_FUNCTION(php_wxYield)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -444,6 +454,7 @@ PHP_FUNCTION(php_wxYield)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxYield())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxYield());
 
 
@@ -497,6 +508,7 @@ PHP_FUNCTION(php_wxSafeYield)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|zb' (&win0, &onlyIfNeeded0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|zb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0, &onlyIfNeeded0 ) == SUCCESS)
 		{
@@ -531,6 +543,7 @@ PHP_FUNCTION(php_wxSafeYield)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxSafeYield())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSafeYield());
 
 
@@ -542,6 +555,7 @@ PHP_FUNCTION(php_wxSafeYield)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxSafeYield((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSafeYield((wxWindow*) object_pointer0_0));
 
 
@@ -553,6 +567,7 @@ PHP_FUNCTION(php_wxSafeYield)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxSafeYield((wxWindow*) object_pointer0_0, onlyIfNeeded0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSafeYield((wxWindow*) object_pointer0_0, onlyIfNeeded0));
 
 
@@ -603,6 +618,7 @@ PHP_FUNCTION(php_wxExit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -617,6 +633,7 @@ PHP_FUNCTION(php_wxExit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxExit()\n\n");
 				#endif
+
 				wxExit();
 
 
@@ -668,6 +685,7 @@ PHP_FUNCTION(php_wxIsDragResultOk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&res0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &res0 ) == SUCCESS)
 		{
@@ -686,6 +704,7 @@ PHP_FUNCTION(php_wxIsDragResultOk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsDragResultOk((wxDragResult) res0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsDragResultOk((wxDragResult) res0));
 
 
@@ -746,6 +765,7 @@ PHP_FUNCTION(php_wxFromString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sz' (&string0, &string_len0, &font0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0, &font0 ) == SUCCESS)
 		{
@@ -778,6 +798,7 @@ PHP_FUNCTION(php_wxFromString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sz' (&string1, &string_len1, &colour1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string1, &string_len1, &colour1 ) == SUCCESS)
 		{
@@ -812,6 +833,7 @@ PHP_FUNCTION(php_wxFromString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxFromString(wxString(string0, wxConvUTF8), (wxFont*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxFromString(wxString(string0, wxConvUTF8), (wxFont*) object_pointer0_1));
 
 
@@ -830,6 +852,7 @@ PHP_FUNCTION(php_wxFromString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxFromString(wxString(string1, wxConvUTF8), (wxColour*) object_pointer1_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxFromString(wxString(string1, wxConvUTF8), (wxColour*) object_pointer1_1));
 
 
@@ -886,6 +909,7 @@ PHP_FUNCTION(php_wxToString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
@@ -918,6 +942,7 @@ PHP_FUNCTION(php_wxToString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour1, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour1, php_wxColour_entry ) == SUCCESS)
 		{
@@ -952,6 +977,7 @@ PHP_FUNCTION(php_wxToString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxToString(*(wxFont*) object_pointer0_0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxToString(*(wxFont*) object_pointer0_0);
 				char* temp_string1;
@@ -976,6 +1002,7 @@ PHP_FUNCTION(php_wxToString)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxToString(*(wxColour*) object_pointer1_0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxToString(*(wxColour*) object_pointer1_0);
 				char* temp_string1;
@@ -1036,6 +1063,7 @@ PHP_FUNCTION(php_wxSafeShowMessage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&title0, &title_len0, &text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -1054,6 +1082,7 @@ PHP_FUNCTION(php_wxSafeShowMessage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxSafeShowMessage(wxString(title0, wxConvUTF8), wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				wxSafeShowMessage(wxString(title0, wxConvUTF8), wxString(text0, wxConvUTF8));
 
 
@@ -1104,6 +1133,7 @@ PHP_FUNCTION(php_wxSysErrorCode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1118,6 +1148,7 @@ PHP_FUNCTION(php_wxSysErrorCode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxSysErrorCode())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxSysErrorCode());
 
 
@@ -1168,6 +1199,7 @@ PHP_FUNCTION(php_wxIsMainThread)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1182,6 +1214,7 @@ PHP_FUNCTION(php_wxIsMainThread)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsMainThread())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsMainThread());
 
 
@@ -1232,6 +1265,7 @@ PHP_FUNCTION(php_wxMutexGuiEnter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1246,6 +1280,7 @@ PHP_FUNCTION(php_wxMutexGuiEnter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxMutexGuiEnter()\n\n");
 				#endif
+
 				wxMutexGuiEnter();
 
 
@@ -1296,6 +1331,7 @@ PHP_FUNCTION(php_wxMutexGuiLeave)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1310,6 +1346,7 @@ PHP_FUNCTION(php_wxMutexGuiLeave)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxMutexGuiLeave()\n\n");
 				#endif
+
 				wxMutexGuiLeave();
 
 
@@ -1372,6 +1409,7 @@ PHP_FUNCTION(php_wxBase64Encode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'slsl' (&dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0)\n");
 		#endif
+
 		char parse_parameters_string[] = "slsl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0 ) == SUCCESS)
 		{
@@ -1391,6 +1429,7 @@ PHP_FUNCTION(php_wxBase64Encode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&src1, &src_len1, &srcLen1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &src1, &src_len1, &srcLen1 ) == SUCCESS)
 		{
@@ -1409,6 +1448,7 @@ PHP_FUNCTION(php_wxBase64Encode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Encode(dst0, (size_t) dstLen0, (const void*) src0, (size_t) srcLen0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Encode(dst0, (size_t) dstLen0, (const void*) src0, (size_t) srcLen0));
 
 				ZVAL_STRING(dst0_ref, dst0, 1);
@@ -1428,6 +1468,7 @@ PHP_FUNCTION(php_wxBase64Encode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxBase64Encode((const void*) src1, (size_t) srcLen1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxBase64Encode((const void*) src1, (size_t) srcLen1);
 				char* temp_string2;
@@ -1485,6 +1526,7 @@ PHP_FUNCTION(php_wxBase64DecodedSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&srcLen0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &srcLen0 ) == SUCCESS)
 		{
@@ -1503,6 +1545,7 @@ PHP_FUNCTION(php_wxBase64DecodedSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64DecodedSize((size_t) srcLen0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64DecodedSize((size_t) srcLen0));
 
 
@@ -1554,6 +1597,7 @@ PHP_FUNCTION(php_wxBase64EncodedSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &len0 ) == SUCCESS)
 		{
@@ -1572,6 +1616,7 @@ PHP_FUNCTION(php_wxBase64EncodedSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64EncodedSize((size_t) len0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64EncodedSize((size_t) len0));
 
 
@@ -1643,6 +1688,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sls|lll' (&dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0, &mode0, posErr0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sls|lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0, &mode0, posErr0 ) == SUCCESS)
 		{
@@ -1662,6 +1708,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sls|ll' (&dst1, &dst_len1, &dstLen1, &str1, &str_len1, &mode1, posErr1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sls|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dst1, &dst_len1, &dstLen1, &str1, &str_len1, &mode1, posErr1 ) == SUCCESS)
 		{
@@ -1683,6 +1730,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0));
 
 				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
@@ -1695,6 +1743,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0));
 
 				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
@@ -1707,6 +1756,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0));
 
 				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
@@ -1719,6 +1769,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0, (size_t*) posErr0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0, (size_t*) posErr0));
 
 				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
@@ -1744,6 +1795,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8)));
 
 				ZVAL_STRING(dst1_ref, (char*) dst1, 1);
@@ -1756,6 +1808,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1));
 
 				ZVAL_STRING(dst1_ref, (char*) dst1, 1);
@@ -1768,6 +1821,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1, (size_t*) posErr1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1, (size_t*) posErr1));
 
 				ZVAL_STRING(dst1_ref, (char*) dst1, 1);
@@ -1875,6 +1929,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssa|zllblll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
 		{
@@ -1907,6 +1962,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssla|zllblll' (&message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssla|zllblll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1 ) == SUCCESS)
 		{
@@ -1939,6 +1995,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssal|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2 ) == SUCCESS)
 		{
@@ -1971,6 +2028,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sslal|z' (&message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3)\n");
 		#endif
+
 		char parse_parameters_string[] = "sslal|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3 ) == SUCCESS)
 		{
@@ -2023,6 +2081,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2));
 
 
@@ -2049,6 +2108,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3));
 
 
@@ -2075,6 +2135,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0));
 
 
@@ -2101,6 +2162,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0));
 
 
@@ -2127,6 +2189,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0));
 
 
@@ -2153,6 +2216,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0));
 
 
@@ -2179,6 +2243,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0));
 
 
@@ -2205,6 +2270,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0));
 
 
@@ -2248,6 +2314,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3));
 
 				delete[] strings_array1_3;
@@ -2275,6 +2342,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4));
 
 				delete[] strings_array1_3;
@@ -2302,6 +2370,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1));
 
 				delete[] strings_array1_3;
@@ -2329,6 +2398,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1));
 
 				delete[] strings_array1_3;
@@ -2356,6 +2426,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1));
 
 				delete[] strings_array1_3;
@@ -2383,6 +2454,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1));
 
 				delete[] strings_array1_3;
@@ -2410,6 +2482,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1));
 
 				delete[] strings_array1_3;
@@ -2437,6 +2510,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1));
 
 				delete[] strings_array1_3;
@@ -2474,6 +2548,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2));
 
 
@@ -2500,6 +2575,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4));
 
 
@@ -2543,6 +2619,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3));
 
 				delete[] strings_array3_3;
@@ -2570,6 +2647,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5));
 
 				delete[] strings_array3_3;
@@ -2671,6 +2749,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssa|zllblll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
 		{
@@ -2703,6 +2782,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssla|zllblll' (&message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssla|zllblll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1 ) == SUCCESS)
 		{
@@ -2735,6 +2815,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssal|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2 ) == SUCCESS)
 		{
@@ -2767,6 +2848,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sslal|z' (&message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3)\n");
 		#endif
+
 		char parse_parameters_string[] = "sslal|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3 ) == SUCCESS)
 		{
@@ -2819,6 +2901,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2);
 				char* temp_string3;
@@ -2851,6 +2934,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3);
 				char* temp_string4;
@@ -2883,6 +2967,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0);
 				char* temp_string5;
@@ -2915,6 +3000,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
 				char* temp_string6;
@@ -2947,6 +3033,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return7;
 				value_to_return7 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
 				char* temp_string7;
@@ -2979,6 +3066,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return8;
 				value_to_return8 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0);
 				char* temp_string8;
@@ -3011,6 +3099,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return9;
 				value_to_return9 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0);
 				char* temp_string9;
@@ -3043,6 +3132,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return10;
 				value_to_return10 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0);
 				char* temp_string10;
@@ -3092,6 +3182,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3);
 				char* temp_string4;
@@ -3125,6 +3216,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4);
 				char* temp_string5;
@@ -3158,6 +3250,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1);
 				char* temp_string6;
@@ -3191,6 +3284,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return7;
 				value_to_return7 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1);
 				char* temp_string7;
@@ -3224,6 +3318,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return8;
 				value_to_return8 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1);
 				char* temp_string8;
@@ -3257,6 +3352,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return9;
 				value_to_return9 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1);
 				char* temp_string9;
@@ -3290,6 +3386,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return10;
 				value_to_return10 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1);
 				char* temp_string10;
@@ -3323,6 +3420,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return11;
 				value_to_return11 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1);
 				char* temp_string11;
@@ -3366,6 +3464,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2);
 				char* temp_string4;
@@ -3398,6 +3497,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4);
 				char* temp_string5;
@@ -3447,6 +3547,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3);
 				char* temp_string5;
@@ -3480,6 +3581,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5);
 				char* temp_string6;
@@ -3545,6 +3647,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|sz' (&parent0, &colInit0, php_wxColour_entry, &caption0, &caption_len0, &data0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &colInit0, php_wxColour_entry, &caption0, &caption_len0, &data0 ) == SUCCESS)
 		{
@@ -3611,6 +3714,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return2;
 				value_to_return2 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1);
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -3627,6 +3731,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return3;
 				value_to_return3 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -3643,6 +3748,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8), (wxColourData*) object_pointer0_3) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return4;
 				value_to_return4 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8), (wxColourData*) object_pointer0_3);
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
@@ -3698,6 +3804,7 @@ PHP_FUNCTION(php_wxAbort)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3712,6 +3819,7 @@ PHP_FUNCTION(php_wxAbort)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxAbort()\n\n");
 				#endif
+
 				wxAbort();
 
 
@@ -3762,6 +3870,7 @@ PHP_FUNCTION(php_wxDisableAsserts)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3776,6 +3885,7 @@ PHP_FUNCTION(php_wxDisableAsserts)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxDisableAsserts()\n\n");
 				#endif
+
 				wxDisableAsserts();
 
 
@@ -3826,6 +3936,7 @@ PHP_FUNCTION(php_wxIsDebuggerRunning)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3840,6 +3951,7 @@ PHP_FUNCTION(php_wxIsDebuggerRunning)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsDebuggerRunning())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsDebuggerRunning());
 
 
@@ -3890,6 +4002,7 @@ PHP_FUNCTION(php_wxSetDefaultAssertHandler)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3904,6 +4017,7 @@ PHP_FUNCTION(php_wxSetDefaultAssertHandler)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxSetDefaultAssertHandler()\n\n");
 				#endif
+
 				wxSetDefaultAssertHandler();
 
 
@@ -3954,6 +4068,7 @@ PHP_FUNCTION(php_wxTrap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3968,6 +4083,7 @@ PHP_FUNCTION(php_wxTrap)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxTrap()\n\n");
 				#endif
+
 				wxTrap();
 
 
@@ -4027,6 +4143,7 @@ PHP_FUNCTION(php_wxDirSelector)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|sslOz' (&message0, &message_len0, &default_path0, &default_path_len0, &style0, &pos0, php_wxPoint_entry, &parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|sslOz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &default_path0, &default_path_len0, &style0, &pos0, php_wxPoint_entry, &parent0 ) == SUCCESS)
 		{
@@ -4077,6 +4194,7 @@ PHP_FUNCTION(php_wxDirSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxDirSelector().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxDirSelector();
 				char* temp_string0;
@@ -4094,6 +4212,7 @@ PHP_FUNCTION(php_wxDirSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxDirSelector(wxString(message0, wxConvUTF8));
 				char* temp_string1;
@@ -4111,6 +4230,7 @@ PHP_FUNCTION(php_wxDirSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
 				char* temp_string2;
@@ -4128,6 +4248,7 @@ PHP_FUNCTION(php_wxDirSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0);
 				char* temp_string3;
@@ -4145,6 +4266,7 @@ PHP_FUNCTION(php_wxDirSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3);
 				char* temp_string4;
@@ -4162,6 +4284,7 @@ PHP_FUNCTION(php_wxDirSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3, (wxWindow*) object_pointer0_4).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3, (wxWindow*) object_pointer0_4);
 				char* temp_string5;
@@ -4218,6 +4341,7 @@ PHP_FUNCTION(php_wxNewEventType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4232,6 +4356,7 @@ PHP_FUNCTION(php_wxNewEventType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxNewEventType())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxNewEventType());
 
 
@@ -4286,6 +4411,7 @@ PHP_FUNCTION(php_wxPostEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO' (&dest0, &event0, php_wxEvent_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &event0, php_wxEvent_entry ) == SUCCESS)
 		{
@@ -4336,6 +4462,7 @@ PHP_FUNCTION(php_wxPostEvent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxPostEvent((wxEvtHandler*) object_pointer0_0, *(wxEvent*) object_pointer0_1)\n\n");
 				#endif
+
 				wxPostEvent((wxEvtHandler*) object_pointer0_0, *(wxEvent*) object_pointer0_1);
 
 
@@ -4390,6 +4517,7 @@ PHP_FUNCTION(php_wxQueueEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zz' (&dest0, &event0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &event0 ) == SUCCESS)
 		{
@@ -4440,6 +4568,7 @@ PHP_FUNCTION(php_wxQueueEvent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxQueueEvent((wxEvtHandler*) object_pointer0_0, (wxEvent*) object_pointer0_1)\n\n");
 				#endif
+
 				wxQueueEvent((wxEvtHandler*) object_pointer0_0, (wxEvent*) object_pointer0_1);
 
 
@@ -4505,6 +4634,7 @@ PHP_FUNCTION(php_wxFileSelector)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sssslzll' (&message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, &default_extension0, &default_extension_len0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sssslzll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, &default_extension0, &default_extension_len0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0 ) == SUCCESS)
 		{
@@ -4539,6 +4669,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxFileSelector(wxString(message0, wxConvUTF8));
 				char* temp_string1;
@@ -4556,6 +4687,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
 				char* temp_string2;
@@ -4573,6 +4705,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8));
 				char* temp_string3;
@@ -4590,6 +4723,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8));
 				char* temp_string4;
@@ -4607,6 +4741,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
 				char* temp_string5;
@@ -4624,6 +4759,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0);
 				char* temp_string6;
@@ -4641,6 +4777,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return7;
 				value_to_return7 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6);
 				char* temp_string7;
@@ -4658,6 +4795,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return8;
 				value_to_return8 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0);
 				char* temp_string8;
@@ -4675,6 +4813,7 @@ PHP_FUNCTION(php_wxFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return9;
 				value_to_return9 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0);
 				char* temp_string9;
@@ -4746,6 +4885,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ssslslzll' (&message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, indexDefaultExtension0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ssslslzll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, indexDefaultExtension0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0 ) == SUCCESS)
 		{
@@ -4783,6 +4923,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxFileSelectorEx();
 				char* temp_string0;
@@ -4800,6 +4941,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxFileSelectorEx(wxString(message0, wxConvUTF8));
 				char* temp_string1;
@@ -4817,6 +4959,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
 				char* temp_string2;
@@ -4834,6 +4977,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8));
 				char* temp_string3;
@@ -4851,6 +4995,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0);
 				char* temp_string4;
@@ -4874,6 +5019,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8));
 				char* temp_string5;
@@ -4897,6 +5043,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0);
 				char* temp_string6;
@@ -4920,6 +5067,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return7;
 				value_to_return7 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6);
 				char* temp_string7;
@@ -4943,6 +5091,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return8;
 				value_to_return8 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0);
 				char* temp_string8;
@@ -4966,6 +5115,7 @@ PHP_FUNCTION(php_wxFileSelectorEx)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return9;
 				value_to_return9 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0);
 				char* temp_string9;
@@ -5036,6 +5186,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|sz' (&what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0 ) == SUCCESS)
 		{
@@ -5070,6 +5221,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8));
 				char* temp_string2;
@@ -5087,6 +5239,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8));
 				char* temp_string3;
@@ -5104,6 +5257,7 @@ PHP_FUNCTION(php_wxLoadFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3);
 				char* temp_string4;
@@ -5168,6 +5322,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|sz' (&what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|sz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0 ) == SUCCESS)
 		{
@@ -5202,6 +5357,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8));
 				char* temp_string2;
@@ -5219,6 +5375,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8));
 				char* temp_string3;
@@ -5236,6 +5393,7 @@ PHP_FUNCTION(php_wxSaveFileSelector)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3);
 				char* temp_string4;
@@ -5292,6 +5450,7 @@ PHP_FUNCTION(php_wxGetOSDirectory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5306,6 +5465,7 @@ PHP_FUNCTION(php_wxGetOSDirectory)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetOSDirectory().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxGetOSDirectory();
 				char* temp_string0;
@@ -5368,6 +5528,7 @@ PHP_FUNCTION(php_wxParseCommonDialogsFilter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'saa' (&wildCard0, &wildCard_len0, &descriptions0, &filters0)\n");
 		#endif
+
 		char parse_parameters_string[] = "saa";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wildCard0, &wildCard_len0, &descriptions0, &filters0 ) == SUCCESS)
 		{
@@ -5422,6 +5583,7 @@ PHP_FUNCTION(php_wxParseCommonDialogsFilter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxParseCommonDialogsFilter(wxString(wildCard0, wxConvUTF8), strings_array0_1, strings_array0_2))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxParseCommonDialogsFilter(wxString(wildCard0, wxConvUTF8), strings_array0_1, strings_array0_2));
 
 				char* temp_string0_1;
@@ -5494,6 +5656,7 @@ PHP_FUNCTION(php_wxDirExists)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&dirname0, &dirname_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, &dirname_len0 ) == SUCCESS)
 		{
@@ -5512,6 +5675,7 @@ PHP_FUNCTION(php_wxDirExists)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxDirExists(wxString(dirname0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxDirExists(wxString(dirname0, wxConvUTF8)));
 
 
@@ -5572,6 +5736,7 @@ PHP_FUNCTION(php_wxSplitPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssss' (&fullname0, &fullname_len0, &path0, &path_len0, &name0, &name_len0, &ext0, &ext_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fullname0, &fullname_len0, &path0, &path_len0, &name0, &name_len0, &ext0, &ext_len0 ) == SUCCESS)
 		{
@@ -5596,6 +5761,7 @@ PHP_FUNCTION(php_wxSplitPath)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxSplitPath(wxString(fullname0, wxConvUTF8), &string_arg0_1, &string_arg0_2, &string_arg0_3)\n\n");
 				#endif
+
 				wxSplitPath(wxString(fullname0, wxConvUTF8), &string_arg0_1, &string_arg0_2, &string_arg0_3);
 
 				char* temp_string0_1;
@@ -5669,6 +5835,7 @@ PHP_FUNCTION(php_wxRenameFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|b' (&file10, &file1_len0, &file20, &file2_len0, &overwrite0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file10, &file1_len0, &file20, &file2_len0, &overwrite0 ) == SUCCESS)
 		{
@@ -5687,6 +5854,7 @@ PHP_FUNCTION(php_wxRenameFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)));
 
 
@@ -5698,6 +5866,7 @@ PHP_FUNCTION(php_wxRenameFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0));
 
 
@@ -5753,6 +5922,7 @@ PHP_FUNCTION(php_wxCopyFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|b' (&file10, &file1_len0, &file20, &file2_len0, &overwrite0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file10, &file1_len0, &file20, &file2_len0, &overwrite0 ) == SUCCESS)
 		{
@@ -5771,6 +5941,7 @@ PHP_FUNCTION(php_wxCopyFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)));
 
 
@@ -5782,6 +5953,7 @@ PHP_FUNCTION(php_wxCopyFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0));
 
 
@@ -5834,6 +6006,7 @@ PHP_FUNCTION(php_wxFileExists)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
 		{
@@ -5852,6 +6025,7 @@ PHP_FUNCTION(php_wxFileExists)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxFileExists(wxString(filename0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxFileExists(wxString(filename0, wxConvUTF8)));
 
 
@@ -5907,6 +6081,7 @@ PHP_FUNCTION(php_wxMatchWild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssb' (&pattern0, &pattern_len0, &text0, &text_len0, &dot_special0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pattern0, &pattern_len0, &text0, &text_len0, &dot_special0 ) == SUCCESS)
 		{
@@ -5925,6 +6100,7 @@ PHP_FUNCTION(php_wxMatchWild)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxMatchWild(wxString(pattern0, wxConvUTF8), wxString(text0, wxConvUTF8), dot_special0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxMatchWild(wxString(pattern0, wxConvUTF8), wxString(text0, wxConvUTF8), dot_special0));
 
 
@@ -5977,6 +6153,7 @@ PHP_FUNCTION(php_wxPathOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -5995,6 +6172,7 @@ PHP_FUNCTION(php_wxPathOnly)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxPathOnly(wxString(path0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxPathOnly(wxString(path0, wxConvUTF8));
 				char* temp_string1;
@@ -6053,6 +6231,7 @@ PHP_FUNCTION(php_wxIsWild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&pattern0, &pattern_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pattern0, &pattern_len0 ) == SUCCESS)
 		{
@@ -6071,6 +6250,7 @@ PHP_FUNCTION(php_wxIsWild)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsWild(wxString(pattern0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsWild(wxString(pattern0, wxConvUTF8)));
 
 
@@ -6123,6 +6303,7 @@ PHP_FUNCTION(php_wxIsAbsolutePath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
 		{
@@ -6141,6 +6322,7 @@ PHP_FUNCTION(php_wxIsAbsolutePath)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsAbsolutePath(wxString(filename0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsAbsolutePath(wxString(filename0, wxConvUTF8)));
 
 
@@ -6191,6 +6373,7 @@ PHP_FUNCTION(php_wxGetCwd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6205,6 +6388,7 @@ PHP_FUNCTION(php_wxGetCwd)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetCwd().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxGetCwd();
 				char* temp_string0;
@@ -6263,6 +6447,7 @@ PHP_FUNCTION(php_wxSetWorkingDirectory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&dir0, &dir_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0, &dir_len0 ) == SUCCESS)
 		{
@@ -6281,6 +6466,7 @@ PHP_FUNCTION(php_wxSetWorkingDirectory)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxSetWorkingDirectory(wxString(dir0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSetWorkingDirectory(wxString(dir0, wxConvUTF8)));
 
 
@@ -6337,6 +6523,7 @@ PHP_FUNCTION(php_wxConcatFiles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sss' (&file10, &file1_len0, &file20, &file2_len0, &file30, &file3_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file10, &file1_len0, &file20, &file2_len0, &file30, &file3_len0 ) == SUCCESS)
 		{
@@ -6355,6 +6542,7 @@ PHP_FUNCTION(php_wxConcatFiles)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxConcatFiles(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), wxString(file30, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxConcatFiles(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), wxString(file30, wxConvUTF8)));
 
 
@@ -6407,6 +6595,7 @@ PHP_FUNCTION(php_wxRemoveFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&file0, &file_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0 ) == SUCCESS)
 		{
@@ -6425,6 +6614,7 @@ PHP_FUNCTION(php_wxRemoveFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxRemoveFile(wxString(file0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxRemoveFile(wxString(file0, wxConvUTF8)));
 
 
@@ -6478,6 +6668,7 @@ PHP_FUNCTION(php_wxMkdir)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&dir0, &dir_len0, &perm0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0, &dir_len0, &perm0 ) == SUCCESS)
 		{
@@ -6496,6 +6687,7 @@ PHP_FUNCTION(php_wxMkdir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxMkdir(wxString(dir0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxMkdir(wxString(dir0, wxConvUTF8)));
 
 
@@ -6507,6 +6699,7 @@ PHP_FUNCTION(php_wxMkdir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxMkdir(wxString(dir0, wxConvUTF8), (int) perm0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxMkdir(wxString(dir0, wxConvUTF8), (int) perm0));
 
 
@@ -6560,6 +6753,7 @@ PHP_FUNCTION(php_wxRmdir)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&dir0, &dir_len0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0, &dir_len0, &flags0 ) == SUCCESS)
 		{
@@ -6578,6 +6772,7 @@ PHP_FUNCTION(php_wxRmdir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxRmdir(wxString(dir0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxRmdir(wxString(dir0, wxConvUTF8)));
 
 
@@ -6589,6 +6784,7 @@ PHP_FUNCTION(php_wxRmdir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxRmdir(wxString(dir0, wxConvUTF8), (int) flags0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxRmdir(wxString(dir0, wxConvUTF8), (int) flags0));
 
 
@@ -6639,6 +6835,7 @@ PHP_FUNCTION(php_wxFindNextFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6653,6 +6850,7 @@ PHP_FUNCTION(php_wxFindNextFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFindNextFile().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxFindNextFile();
 				char* temp_string0;
@@ -6712,6 +6910,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&spec0, &spec_len0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &spec0, &spec_len0, &flags0 ) == SUCCESS)
 		{
@@ -6730,6 +6929,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFindFirstFile(wxString(spec0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxFindFirstFile(wxString(spec0, wxConvUTF8));
 				char* temp_string1;
@@ -6747,6 +6947,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxFindFirstFile(wxString(spec0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxFindFirstFile(wxString(spec0, wxConvUTF8), (int) flags0);
 				char* temp_string2;
@@ -6804,6 +7005,7 @@ PHP_FUNCTION(php_wxGetFileKind)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&fd0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fd0 ) == SUCCESS)
 		{
@@ -6822,6 +7024,7 @@ PHP_FUNCTION(php_wxGetFileKind)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetFileKind((int) fd0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetFileKind((int) fd0));
 
 
@@ -6878,6 +7081,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zO|s' (&parent0, &fontInit0, php_wxFont_entry, &caption0, &caption_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zO|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &fontInit0, php_wxFont_entry, &caption0, &caption_len0 ) == SUCCESS)
 		{
@@ -6928,6 +7132,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1) to return new object\n\n");
 				#endif
+
 				wxFont value_to_return2;
 				value_to_return2 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1);
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -6944,6 +7149,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8)) to return new object\n\n");
 				#endif
+
 				wxFont value_to_return3;
 				value_to_return3 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -6999,6 +7205,7 @@ PHP_FUNCTION(php_wxColourDisplay)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7013,6 +7220,7 @@ PHP_FUNCTION(php_wxColourDisplay)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxColourDisplay())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxColourDisplay());
 
 
@@ -7063,6 +7271,7 @@ PHP_FUNCTION(php_wxDisplayDepth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7077,6 +7286,7 @@ PHP_FUNCTION(php_wxDisplayDepth)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxDisplayDepth())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxDisplayDepth());
 
 
@@ -7129,6 +7339,7 @@ PHP_FUNCTION(php_wxSetCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&cursor0, php_wxCursor_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0, php_wxCursor_entry ) == SUCCESS)
 		{
@@ -7163,6 +7374,7 @@ PHP_FUNCTION(php_wxSetCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxSetCursor(*(wxCursor*) object_pointer0_0)\n\n");
 				#endif
+
 				wxSetCursor(*(wxCursor*) object_pointer0_0);
 
 
@@ -7221,6 +7433,7 @@ PHP_FUNCTION(php_wxClientDisplayRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (x0, y0, width0, height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x0, y0, width0, height0 ) == SUCCESS)
 		{
@@ -7242,6 +7455,7 @@ PHP_FUNCTION(php_wxClientDisplayRect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxClientDisplayRect((int*) x0, (int*) y0, (int*) width0, (int*) height0)\n\n");
 				#endif
+
 				wxClientDisplayRect((int*) x0, (int*) y0, (int*) width0, (int*) height0);
 
 				size_t elements_returned0_0 = sizeof(x0)/sizeof(*x0);
@@ -7315,6 +7529,7 @@ PHP_FUNCTION(php_wxGetClientDisplayRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7329,6 +7544,7 @@ PHP_FUNCTION(php_wxGetClientDisplayRect)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetClientDisplayRect() to return new object\n\n");
 				#endif
+
 				wxRect value_to_return0;
 				value_to_return0 = wxGetClientDisplayRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
@@ -7384,6 +7600,7 @@ PHP_FUNCTION(php_wxGetDisplayPPI)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7398,6 +7615,7 @@ PHP_FUNCTION(php_wxGetDisplayPPI)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetDisplayPPI() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = wxGetDisplayPPI();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7457,6 +7675,7 @@ PHP_FUNCTION(php_wxDisplaySize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (width0, height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, width0, height0 ) == SUCCESS)
 		{
@@ -7478,6 +7697,7 @@ PHP_FUNCTION(php_wxDisplaySize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxDisplaySize((int*) width0, (int*) height0)\n\n");
 				#endif
+
 				wxDisplaySize((int*) width0, (int*) height0);
 
 				size_t elements_returned0_0 = sizeof(width0)/sizeof(*width0);
@@ -7539,6 +7759,7 @@ PHP_FUNCTION(php_wxGetDisplaySize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7553,6 +7774,7 @@ PHP_FUNCTION(php_wxGetDisplaySize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetDisplaySize() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = wxGetDisplaySize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7612,6 +7834,7 @@ PHP_FUNCTION(php_wxDisplaySizeMM)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (width0, height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, width0, height0 ) == SUCCESS)
 		{
@@ -7633,6 +7856,7 @@ PHP_FUNCTION(php_wxDisplaySizeMM)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxDisplaySizeMM((int*) width0, (int*) height0)\n\n");
 				#endif
+
 				wxDisplaySizeMM((int*) width0, (int*) height0);
 
 				size_t elements_returned0_0 = sizeof(width0)/sizeof(*width0);
@@ -7694,6 +7918,7 @@ PHP_FUNCTION(php_wxGetDisplaySizeMM)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7708,6 +7933,7 @@ PHP_FUNCTION(php_wxGetDisplaySizeMM)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetDisplaySizeMM() to return new object\n\n");
 				#endif
+
 				wxSize value_to_return0;
 				value_to_return0 = wxGetDisplaySizeMM();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7763,6 +7989,7 @@ PHP_FUNCTION(php_wxEntryCleanup)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7777,6 +8004,7 @@ PHP_FUNCTION(php_wxEntryCleanup)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxEntryCleanup()\n\n");
 				#endif
+
 				wxEntryCleanup();
 
 
@@ -7828,6 +8056,7 @@ PHP_FUNCTION(php_wxFinite)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -7846,6 +8075,7 @@ PHP_FUNCTION(php_wxFinite)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxFinite(x0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxFinite(x0));
 
 
@@ -7897,6 +8127,7 @@ PHP_FUNCTION(php_wxIsNaN)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -7915,6 +8146,7 @@ PHP_FUNCTION(php_wxIsNaN)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsNaN(x0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsNaN(x0));
 
 
@@ -7966,6 +8198,7 @@ PHP_FUNCTION(php_wxRound)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -7984,6 +8217,7 @@ PHP_FUNCTION(php_wxRound)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxRound(x0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxRound(x0));
 
 
@@ -8036,6 +8270,7 @@ PHP_FUNCTION(php_wxIsSameDouble)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'dd' (&x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "dd";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
@@ -8054,6 +8289,7 @@ PHP_FUNCTION(php_wxIsSameDouble)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsSameDouble(x0, y0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsSameDouble(x0, y0));
 
 
@@ -8105,6 +8341,7 @@ PHP_FUNCTION(php_wxIsNullDouble)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (&x0)\n");
 		#endif
+
 		char parse_parameters_string[] = "d";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
@@ -8123,6 +8360,7 @@ PHP_FUNCTION(php_wxIsNullDouble)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsNullDouble(x0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsNullDouble(x0));
 
 
@@ -8182,6 +8420,7 @@ PHP_FUNCTION(php_wxMessageBox)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|slzll' (&message0, &message_len0, &caption0, &caption_len0, &style0, &parent0, &x0, &y0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|slzll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &style0, &parent0, &x0, &y0 ) == SUCCESS)
 		{
@@ -8216,6 +8455,7 @@ PHP_FUNCTION(php_wxMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8)));
 
 
@@ -8227,6 +8467,7 @@ PHP_FUNCTION(php_wxMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)));
 
 
@@ -8238,6 +8479,7 @@ PHP_FUNCTION(php_wxMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0));
 
 
@@ -8249,6 +8491,7 @@ PHP_FUNCTION(php_wxMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3));
 
 
@@ -8260,6 +8503,7 @@ PHP_FUNCTION(php_wxMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0));
 
 
@@ -8271,6 +8515,7 @@ PHP_FUNCTION(php_wxMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0, (int) y0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0, (int) y0));
 
 
@@ -8323,6 +8568,7 @@ PHP_FUNCTION(php_wxCreateDynamicObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&className0, &className_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &className0, &className_len0 ) == SUCCESS)
 		{
@@ -8341,6 +8587,7 @@ PHP_FUNCTION(php_wxCreateDynamicObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxCreateDynamicObject(wxString(className0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxObject_php* value_to_return1;
 				value_to_return1 = (wxObject_php*) wxCreateDynamicObject(wxString(className0, wxConvUTF8));
 				if(value_to_return1 == NULL){
@@ -8412,6 +8659,7 @@ PHP_FUNCTION(php_wxFindWindowAtPointer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -8446,6 +8694,7 @@ PHP_FUNCTION(php_wxFindWindowAtPointer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				value_to_return1 = (wxWindow_php*) wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -8515,6 +8764,7 @@ PHP_FUNCTION(php_wxGetActiveWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8529,6 +8779,7 @@ PHP_FUNCTION(php_wxGetActiveWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetActiveWindow() to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return0;
 				value_to_return0 = (wxWindow_php*) wxGetActiveWindow();
 				if(value_to_return0 == NULL){
@@ -8600,6 +8851,7 @@ PHP_FUNCTION(php_wxGetTopLevelParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
@@ -8634,6 +8886,7 @@ PHP_FUNCTION(php_wxGetTopLevelParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetTopLevelParent((wxWindow*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				value_to_return1 = (wxWindow_php*) wxGetTopLevelParent((wxWindow*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -8704,6 +8957,7 @@ PHP_FUNCTION(php_wxRichTextHasStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&flags0, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &style0 ) == SUCCESS)
 		{
@@ -8722,6 +8976,7 @@ PHP_FUNCTION(php_wxRichTextHasStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxRichTextHasStyle((int) flags0, (int) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxRichTextHasStyle((int) flags0, (int) style0));
 
 
@@ -8774,6 +9029,7 @@ PHP_FUNCTION(php_wxGetStockLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&id0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &flags0 ) == SUCCESS)
 		{
@@ -8792,6 +9048,7 @@ PHP_FUNCTION(php_wxGetStockLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetStockLabel((wxWindowID) id0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxGetStockLabel((wxWindowID) id0);
 				char* temp_string1;
@@ -8809,6 +9066,7 @@ PHP_FUNCTION(php_wxGetStockLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetStockLabel((wxWindowID) id0, (long) flags0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxGetStockLabel((wxWindowID) id0, (long) flags0);
 				char* temp_string2;
@@ -8876,6 +9134,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sszllb' (&message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sszllb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0 ) == SUCCESS)
 		{
@@ -8910,6 +9169,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxGetTextFromUser(wxString(message0, wxConvUTF8));
 				char* temp_string1;
@@ -8927,6 +9187,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
 				char* temp_string2;
@@ -8944,6 +9205,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8));
 				char* temp_string3;
@@ -8961,6 +9223,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3);
 				char* temp_string4;
@@ -8978,6 +9241,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0);
 				char* temp_string5;
@@ -8995,6 +9259,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
 				char* temp_string6;
@@ -9012,6 +9277,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return7;
 				value_to_return7 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
 				char* temp_string7;
@@ -9079,6 +9345,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sszllb' (&message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sszllb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0 ) == SUCCESS)
 		{
@@ -9113,6 +9380,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8));
 				char* temp_string1;
@@ -9130,6 +9398,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
 				char* temp_string2;
@@ -9147,6 +9416,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8));
 				char* temp_string3;
@@ -9164,6 +9434,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3);
 				char* temp_string4;
@@ -9181,6 +9452,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return5;
 				value_to_return5 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0);
 				char* temp_string5;
@@ -9198,6 +9470,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return6;
 				value_to_return6 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
 				char* temp_string6;
@@ -9215,6 +9488,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return7;
 				value_to_return7 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
 				char* temp_string7;
@@ -9271,6 +9545,7 @@ PHP_FUNCTION(php_wxGetTimeZone)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9285,6 +9560,7 @@ PHP_FUNCTION(php_wxGetTimeZone)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetTimeZone())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetTimeZone());
 
 
@@ -9335,6 +9611,7 @@ PHP_FUNCTION(php_wxGetLocalTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9349,6 +9626,7 @@ PHP_FUNCTION(php_wxGetLocalTime)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetLocalTime())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetLocalTime());
 
 
@@ -9399,6 +9677,7 @@ PHP_FUNCTION(php_wxGetUTCTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9413,6 +9692,7 @@ PHP_FUNCTION(php_wxGetUTCTime)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetUTCTime())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetUTCTime());
 
 
@@ -9468,6 +9748,7 @@ PHP_FUNCTION(php_wxStringTokenize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sl' (&str0, &str_len0, &delims0, &delims_len0, &mode0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &delims0, &delims_len0, &mode0 ) == SUCCESS)
 		{
@@ -9486,6 +9767,7 @@ PHP_FUNCTION(php_wxStringTokenize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxStringTokenize(wxString(str0, wxConvUTF8)) to return strings array\n\n");
 				#endif
+
 				wxArrayString value_to_return1;
 				value_to_return1 = wxStringTokenize(wxString(str0, wxConvUTF8));
 				char* temp_string1;
@@ -9507,6 +9789,7 @@ PHP_FUNCTION(php_wxStringTokenize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8)) to return strings array\n\n");
 				#endif
+
 				wxArrayString value_to_return2;
 				value_to_return2 = wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8));
 				char* temp_string2;
@@ -9528,6 +9811,7 @@ PHP_FUNCTION(php_wxStringTokenize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8), (wxStringTokenizerMode) mode0) to return strings array\n\n");
 				#endif
+
 				wxArrayString value_to_return3;
 				value_to_return3 = wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8), (wxStringTokenizerMode) mode0);
 				char* temp_string3;
@@ -9601,6 +9885,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&string0, &string_len0, &domain0, &domain_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0, &domain0, &domain_len0 ) == SUCCESS)
 		{
@@ -9617,6 +9902,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl|s' (&string1, &string_len1, &plural1, &plural_len1, &n1, &domain1, &domain_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string1, &string_len1, &plural1, &plural_len1, &n1, &domain1, &domain_len1 ) == SUCCESS)
 		{
@@ -9635,6 +9921,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxGetTranslation(wxString(string0, wxConvUTF8));
 				char* temp_string1;
@@ -9652,6 +9939,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string0, wxConvUTF8), wxString(domain0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxGetTranslation(wxString(string0, wxConvUTF8), wxString(domain0, wxConvUTF8));
 				char* temp_string2;
@@ -9676,6 +9964,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return3;
 				value_to_return3 = wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1);
 				char* temp_string3;
@@ -9693,6 +9982,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1, wxString(domain1, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return4;
 				value_to_return4 = wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1, wxString(domain1, wxConvUTF8));
 				char* temp_string4;
@@ -9751,6 +10041,7 @@ PHP_FUNCTION(php_wxBeginBusyCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&cursor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0 ) == SUCCESS)
 		{
@@ -9785,6 +10076,7 @@ PHP_FUNCTION(php_wxBeginBusyCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxBeginBusyCursor()\n\n");
 				#endif
+
 				wxBeginBusyCursor();
 
 
@@ -9796,6 +10088,7 @@ PHP_FUNCTION(php_wxBeginBusyCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxBeginBusyCursor((const wxCursor*) object_pointer0_0)\n\n");
 				#endif
+
 				wxBeginBusyCursor((const wxCursor*) object_pointer0_0);
 
 
@@ -9846,6 +10139,7 @@ PHP_FUNCTION(php_wxEndBusyCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9860,6 +10154,7 @@ PHP_FUNCTION(php_wxEndBusyCursor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxEndBusyCursor()\n\n");
 				#endif
+
 				wxEndBusyCursor();
 
 
@@ -9910,6 +10205,7 @@ PHP_FUNCTION(php_wxIsBusy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9924,6 +10220,7 @@ PHP_FUNCTION(php_wxIsBusy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsBusy())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsBusy());
 
 
@@ -9974,6 +10271,7 @@ PHP_FUNCTION(php_wxBell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9988,6 +10286,7 @@ PHP_FUNCTION(php_wxBell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxBell()\n\n");
 				#endif
+
 				wxBell();
 
 
@@ -10040,6 +10339,7 @@ PHP_FUNCTION(php_wxInfoMessageBox)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
@@ -10074,6 +10374,7 @@ PHP_FUNCTION(php_wxInfoMessageBox)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxInfoMessageBox((wxWindow*) object_pointer0_0)\n\n");
 				#endif
+
 				wxInfoMessageBox((wxWindow*) object_pointer0_0);
 
 
@@ -10124,6 +10425,7 @@ PHP_FUNCTION(php_wxGetLibraryVersionInfo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10138,6 +10440,7 @@ PHP_FUNCTION(php_wxGetLibraryVersionInfo)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetLibraryVersionInfo() to return new object\n\n");
 				#endif
+
 				wxVersionInfo value_to_return0;
 				value_to_return0 = wxGetLibraryVersionInfo();
 				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
@@ -10198,6 +10501,7 @@ PHP_FUNCTION(php_wxGetenv)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -10214,6 +10518,7 @@ PHP_FUNCTION(php_wxGetenv)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -10232,6 +10537,7 @@ PHP_FUNCTION(php_wxGetenv)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetenv(name0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return1;
 				value_to_return1 = wxGetenv(name0);
 				ZVAL_STRING(return_value, value_to_return1, 1);
@@ -10252,6 +10558,7 @@ PHP_FUNCTION(php_wxGetenv)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetenv(wxString(name1, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return1;
 				value_to_return1 = wxGetenv(wxString(name1, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return1, 1);
@@ -10308,6 +10615,7 @@ PHP_FUNCTION(php_wxSetEnv)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&var0, &var_len0, &value0, &value_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &var0, &var_len0, &value0, &value_len0 ) == SUCCESS)
 		{
@@ -10326,6 +10634,7 @@ PHP_FUNCTION(php_wxSetEnv)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxSetEnv(wxString(var0, wxConvUTF8), wxString(value0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxSetEnv(wxString(var0, wxConvUTF8), wxString(value0, wxConvUTF8)));
 
 
@@ -10378,6 +10687,7 @@ PHP_FUNCTION(php_wxUnsetEnv)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&var0, &var_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &var0, &var_len0 ) == SUCCESS)
 		{
@@ -10396,6 +10706,7 @@ PHP_FUNCTION(php_wxUnsetEnv)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxUnsetEnv(wxString(var0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxUnsetEnv(wxString(var0, wxConvUTF8)));
 
 
@@ -10446,6 +10757,7 @@ PHP_FUNCTION(php_wxGetBatteryState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10460,6 +10772,7 @@ PHP_FUNCTION(php_wxGetBatteryState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetBatteryState())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetBatteryState());
 
 
@@ -10510,6 +10823,7 @@ PHP_FUNCTION(php_wxGetPowerType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10524,6 +10838,7 @@ PHP_FUNCTION(php_wxGetPowerType)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetPowerType())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetPowerType());
 
 
@@ -10575,6 +10890,7 @@ PHP_FUNCTION(php_wxGetKeyState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&key0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0 ) == SUCCESS)
 		{
@@ -10593,6 +10909,7 @@ PHP_FUNCTION(php_wxGetKeyState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxGetKeyState((wxKeyCode) key0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxGetKeyState((wxKeyCode) key0));
 
 
@@ -10643,6 +10960,7 @@ PHP_FUNCTION(php_wxGetMousePosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10657,6 +10975,7 @@ PHP_FUNCTION(php_wxGetMousePosition)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetMousePosition() to return new object\n\n");
 				#endif
+
 				wxPoint value_to_return0;
 				value_to_return0 = wxGetMousePosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
@@ -10712,6 +11031,7 @@ PHP_FUNCTION(php_wxGetMouseState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10726,6 +11046,7 @@ PHP_FUNCTION(php_wxGetMouseState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetMouseState() to return new object\n\n");
 				#endif
+
 				wxMouseState value_to_return0;
 				value_to_return0 = wxGetMouseState();
 				void* ptr = safe_emalloc(1, sizeof(wxMouseState_php), 0);
@@ -10782,6 +11103,7 @@ PHP_FUNCTION(php_wxEnableTopLevelWindows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -10800,6 +11122,7 @@ PHP_FUNCTION(php_wxEnableTopLevelWindows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxEnableTopLevelWindows()\n\n");
 				#endif
+
 				wxEnableTopLevelWindows();
 
 
@@ -10811,6 +11134,7 @@ PHP_FUNCTION(php_wxEnableTopLevelWindows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxEnableTopLevelWindows(enable0)\n\n");
 				#endif
+
 				wxEnableTopLevelWindows(enable0);
 
 
@@ -10863,6 +11187,7 @@ PHP_FUNCTION(php_wxFindWindowAtPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
@@ -10897,6 +11222,7 @@ PHP_FUNCTION(php_wxFindWindowAtPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				value_to_return1 = (wxWindow_php*) wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -10969,6 +11295,7 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|z' (&label0, &label_len0, &parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &label0, &label_len0, &parent0 ) == SUCCESS)
 		{
@@ -11003,6 +11330,7 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByLabel(wxString(label0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				value_to_return1 = (wxWindow_php*) wxFindWindowByLabel(wxString(label0, wxConvUTF8));
 				if(value_to_return1 == NULL){
@@ -11033,6 +11361,7 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return2;
 				value_to_return2 = (wxWindow_php*) wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1);
 				if(value_to_return2 == NULL){
@@ -11105,6 +11434,7 @@ PHP_FUNCTION(php_wxFindWindowByName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|z' (&name0, &name_len0, &parent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0, &parent0 ) == SUCCESS)
 		{
@@ -11139,6 +11469,7 @@ PHP_FUNCTION(php_wxFindWindowByName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByName(wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return1;
 				value_to_return1 = (wxWindow_php*) wxFindWindowByName(wxString(name0, wxConvUTF8));
 				if(value_to_return1 == NULL){
@@ -11169,6 +11500,7 @@ PHP_FUNCTION(php_wxFindWindowByName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxWindow_php* value_to_return2;
 				value_to_return2 = (wxWindow_php*) wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1);
 				if(value_to_return2 == NULL){
@@ -11244,6 +11576,7 @@ PHP_FUNCTION(php_wxFindMenuItemId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zss' (&frame0, &menuString0, &menuString_len0, &itemString0, &itemString_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0, &menuString0, &menuString_len0, &itemString0, &itemString_len0 ) == SUCCESS)
 		{
@@ -11278,6 +11611,7 @@ PHP_FUNCTION(php_wxFindMenuItemId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxFindMenuItemId((wxFrame*) object_pointer0_0, wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxFindMenuItemId((wxFrame*) object_pointer0_0, wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
 
 
@@ -11327,6 +11661,7 @@ PHP_FUNCTION(php_wxNewId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11341,6 +11676,7 @@ PHP_FUNCTION(php_wxNewId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxNewId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxNewId());
 
 
@@ -11392,6 +11728,7 @@ PHP_FUNCTION(php_wxRegisterId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -11410,6 +11747,7 @@ PHP_FUNCTION(php_wxRegisterId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxRegisterId((long) id0)\n\n");
 				#endif
+
 				wxRegisterId((long) id0);
 
 
@@ -11463,6 +11801,7 @@ PHP_FUNCTION(php_wxLaunchDefaultApplication)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&document0, &document_len0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &document0, &document_len0, &flags0 ) == SUCCESS)
 		{
@@ -11481,6 +11820,7 @@ PHP_FUNCTION(php_wxLaunchDefaultApplication)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultApplication(wxString(document0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLaunchDefaultApplication(wxString(document0, wxConvUTF8)));
 
 
@@ -11492,6 +11832,7 @@ PHP_FUNCTION(php_wxLaunchDefaultApplication)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultApplication(wxString(document0, wxConvUTF8), (int) flags0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLaunchDefaultApplication(wxString(document0, wxConvUTF8), (int) flags0));
 
 
@@ -11545,6 +11886,7 @@ PHP_FUNCTION(php_wxLaunchDefaultBrowser)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&url0, &url_len0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0, &flags0 ) == SUCCESS)
 		{
@@ -11563,6 +11905,7 @@ PHP_FUNCTION(php_wxLaunchDefaultBrowser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8)));
 
 
@@ -11574,6 +11917,7 @@ PHP_FUNCTION(php_wxLaunchDefaultBrowser)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8), (int) flags0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8), (int) flags0));
 
 
@@ -11627,6 +11971,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&str0, &str_len0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &flags0 ) == SUCCESS)
 		{
@@ -11645,6 +11990,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStripMenuCodes(wxString(str0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxStripMenuCodes(wxString(str0, wxConvUTF8));
 				char* temp_string1;
@@ -11662,6 +12008,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStripMenuCodes(wxString(str0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return2;
 				value_to_return2 = wxStripMenuCodes(wxString(str0, wxConvUTF8), (int) flags0);
 				char* temp_string2;
@@ -11718,6 +12065,7 @@ PHP_FUNCTION(php_wxGetHomeDir)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11732,6 +12080,7 @@ PHP_FUNCTION(php_wxGetHomeDir)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetHomeDir().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxGetHomeDir();
 				char* temp_string0;
@@ -11788,6 +12137,7 @@ PHP_FUNCTION(php_wxGetFullHostName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11802,6 +12152,7 @@ PHP_FUNCTION(php_wxGetFullHostName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetFullHostName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxGetFullHostName();
 				char* temp_string0;
@@ -11860,6 +12211,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&user0, &user_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &user0, &user_len0 ) == SUCCESS)
 		{
@@ -11878,6 +12230,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetUserHome().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxGetUserHome();
 				char* temp_string0;
@@ -11895,6 +12248,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetUserHome(wxString(user0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return1;
 				value_to_return1 = wxGetUserHome(wxString(user0, wxConvUTF8));
 				char* temp_string1;
@@ -11951,6 +12305,7 @@ PHP_FUNCTION(php_wxGetOsDescription)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11965,6 +12320,7 @@ PHP_FUNCTION(php_wxGetOsDescription)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxGetOsDescription().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxGetOsDescription();
 				char* temp_string0;
@@ -12025,6 +12381,7 @@ PHP_FUNCTION(php_wxGetOsVersion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (major0, minor0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, major0, minor0 ) == SUCCESS)
 		{
@@ -12046,6 +12403,7 @@ PHP_FUNCTION(php_wxGetOsVersion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetOsVersion())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetOsVersion());
 
 
@@ -12057,6 +12415,7 @@ PHP_FUNCTION(php_wxGetOsVersion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetOsVersion((int*) major0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetOsVersion((int*) major0));
 
 				size_t elements_returned0_0 = sizeof(major0)/sizeof(*major0);
@@ -12074,6 +12433,7 @@ PHP_FUNCTION(php_wxGetOsVersion)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetOsVersion((int*) major0, (int*) minor0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetOsVersion((int*) major0, (int*) minor0));
 
 				size_t elements_returned0_0 = sizeof(major0)/sizeof(*major0);
@@ -12136,6 +12496,7 @@ PHP_FUNCTION(php_wxIsPlatform64Bit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12150,6 +12511,7 @@ PHP_FUNCTION(php_wxIsPlatform64Bit)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsPlatform64Bit())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsPlatform64Bit());
 
 
@@ -12200,6 +12562,7 @@ PHP_FUNCTION(php_wxIsPlatformLittleEndian)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12214,6 +12577,7 @@ PHP_FUNCTION(php_wxIsPlatformLittleEndian)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsPlatformLittleEndian())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsPlatformLittleEndian());
 
 
@@ -12264,6 +12628,7 @@ PHP_FUNCTION(php_wxGetProcessId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12278,6 +12643,7 @@ PHP_FUNCTION(php_wxGetProcessId)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxGetProcessId())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxGetProcessId());
 
 
@@ -12333,6 +12699,7 @@ PHP_FUNCTION(php_wxKill)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|lll' (&pid0, &sig0, rc0, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|lll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pid0, &sig0, rc0, &flags0 ) == SUCCESS)
 		{
@@ -12354,6 +12721,7 @@ PHP_FUNCTION(php_wxKill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxKill((long) pid0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxKill((long) pid0));
 
 
@@ -12365,6 +12733,7 @@ PHP_FUNCTION(php_wxKill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxKill((long) pid0, (wxSignal) sig0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxKill((long) pid0, (wxSignal) sig0));
 
 
@@ -12376,6 +12745,7 @@ PHP_FUNCTION(php_wxKill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0));
 
 				size_t elements_returned0_2 = sizeof(rc0)/sizeof(*rc0);
@@ -12393,6 +12763,7 @@ PHP_FUNCTION(php_wxKill)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0, (int) flags0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0, (int) flags0));
 
 				size_t elements_returned0_2 = sizeof(rc0)/sizeof(*rc0);
@@ -12451,6 +12822,7 @@ PHP_FUNCTION(php_wxShell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&command0, &command_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command0, &command_len0 ) == SUCCESS)
 		{
@@ -12469,6 +12841,7 @@ PHP_FUNCTION(php_wxShell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxShell())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxShell());
 
 
@@ -12480,6 +12853,7 @@ PHP_FUNCTION(php_wxShell)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxShell(wxString(command0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxShell(wxString(command0, wxConvUTF8)));
 
 
@@ -12531,6 +12905,7 @@ PHP_FUNCTION(php_wxShutdown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -12549,6 +12924,7 @@ PHP_FUNCTION(php_wxShutdown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxShutdown())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxShutdown());
 
 
@@ -12560,6 +12936,7 @@ PHP_FUNCTION(php_wxShutdown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxShutdown((int) flags0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxShutdown((int) flags0));
 
 
@@ -12611,6 +12988,7 @@ PHP_FUNCTION(php_wxMicroSleep)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&microseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &microseconds0 ) == SUCCESS)
 		{
@@ -12629,6 +13007,7 @@ PHP_FUNCTION(php_wxMicroSleep)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxMicroSleep((unsigned long) microseconds0)\n\n");
 				#endif
+
 				wxMicroSleep((unsigned long) microseconds0);
 
 
@@ -12680,6 +13059,7 @@ PHP_FUNCTION(php_wxMilliSleep)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
 		{
@@ -12698,6 +13078,7 @@ PHP_FUNCTION(php_wxMilliSleep)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxMilliSleep((unsigned long) milliseconds0)\n\n");
 				#endif
+
 				wxMilliSleep((unsigned long) milliseconds0);
 
 
@@ -12748,6 +13129,7 @@ PHP_FUNCTION(php_wxNow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12762,6 +13144,7 @@ PHP_FUNCTION(php_wxNow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxNow().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxNow();
 				char* temp_string0;
@@ -12819,6 +13202,7 @@ PHP_FUNCTION(php_wxSleep)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&secs0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &secs0 ) == SUCCESS)
 		{
@@ -12837,6 +13221,7 @@ PHP_FUNCTION(php_wxSleep)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxSleep((int) secs0)\n\n");
 				#endif
+
 				wxSleep((int) secs0);
 
 
@@ -12887,6 +13272,7 @@ PHP_FUNCTION(php_wxUsleep)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
 		{
@@ -12905,6 +13291,7 @@ PHP_FUNCTION(php_wxUsleep)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxUsleep((unsigned long) milliseconds0)\n\n");
 				#endif
+
 				wxUsleep((unsigned long) milliseconds0);
 
 
@@ -12960,6 +13347,7 @@ PHP_FUNCTION(php_wxIsEmpty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -12976,6 +13364,7 @@ PHP_FUNCTION(php_wxIsEmpty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s1, &s_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1 ) == SUCCESS)
 		{
@@ -12994,6 +13383,7 @@ PHP_FUNCTION(php_wxIsEmpty)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsEmpty(s0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsEmpty(s0));
 
 
@@ -13012,6 +13402,7 @@ PHP_FUNCTION(php_wxIsEmpty)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(::wxIsEmpty(wxString(s1, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxIsEmpty(wxString(s1, wxConvUTF8)));
 
 
@@ -13065,6 +13456,7 @@ PHP_FUNCTION(php_wxTmemchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sll' (&s0, &s_len0, &c0, &len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &c0, &len0 ) == SUCCESS)
 		{
@@ -13083,6 +13475,7 @@ PHP_FUNCTION(php_wxTmemchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxTmemchr(s0, (char) c0, (size_t) len0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxTmemchr(s0, (char) c0, (size_t) len0);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -13139,6 +13532,7 @@ PHP_FUNCTION(php_wxTmemcmp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&sz10, &sz1_len0, &sz20, &sz2_len0, &len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sz10, &sz1_len0, &sz20, &sz2_len0, &len0 ) == SUCCESS)
 		{
@@ -13157,6 +13551,7 @@ PHP_FUNCTION(php_wxTmemcmp)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxTmemcmp(sz10, sz20, (size_t) len0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxTmemcmp(sz10, sz20, (size_t) len0));
 
 
@@ -13212,6 +13607,7 @@ PHP_FUNCTION(php_wxTmemcpy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0 ) == SUCCESS)
 		{
@@ -13233,6 +13629,7 @@ PHP_FUNCTION(php_wxTmemcpy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxTmemcpy(szOut0, szIn0, (size_t) len0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxTmemcpy(szOut0, szIn0, (size_t) len0);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -13291,6 +13688,7 @@ PHP_FUNCTION(php_wxTmemmove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0 ) == SUCCESS)
 		{
@@ -13312,6 +13710,7 @@ PHP_FUNCTION(php_wxTmemmove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxTmemmove(szOut0, szIn0, (size_t) len0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxTmemmove(szOut0, szIn0, (size_t) len0);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -13369,6 +13768,7 @@ PHP_FUNCTION(php_wxTmemset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sll' (&szOut0, &szOut_len0, &cIn0, &len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &szOut0, &szOut_len0, &cIn0, &len0 ) == SUCCESS)
 		{
@@ -13390,6 +13790,7 @@ PHP_FUNCTION(php_wxTmemset)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxTmemset(szOut0, (const char) cIn0, (size_t) len0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxTmemset(szOut0, (const char) cIn0, (size_t) len0);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -13445,6 +13846,7 @@ PHP_FUNCTION(php_wxSetlocale)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&category0, &locale0, &locale_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &category0, &locale0, &locale_len0 ) == SUCCESS)
 		{
@@ -13463,6 +13865,7 @@ PHP_FUNCTION(php_wxSetlocale)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxSetlocale((int) category0, wxString(locale0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxSetlocale((int) category0, wxString(locale0, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -13516,6 +13919,7 @@ PHP_FUNCTION(php_wxStrlen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -13534,6 +13938,7 @@ PHP_FUNCTION(php_wxStrlen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxStrlen(wxString(s0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxStrlen(wxString(s0, wxConvUTF8)));
 
 
@@ -13586,6 +13991,7 @@ PHP_FUNCTION(php_wxStrnlen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&str0, &str_len0, &maxlen0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &maxlen0 ) == SUCCESS)
 		{
@@ -13604,6 +14010,7 @@ PHP_FUNCTION(php_wxStrnlen)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxStrnlen(str0, (size_t) maxlen0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxStrnlen(str0, (size_t) maxlen0));
 
 
@@ -13655,6 +14062,7 @@ PHP_FUNCTION(php_wxStrdup)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
 		{
@@ -13673,6 +14081,7 @@ PHP_FUNCTION(php_wxStrdup)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrdup(wxString(s0, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return1;
 				value_to_return1 = wxStrdup(wxString(s0, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return1, 1);
@@ -13736,6 +14145,7 @@ PHP_FUNCTION(php_wxStrcpy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&dest0, &dest_len0, &src0, &src_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0 ) == SUCCESS)
 		{
@@ -13755,6 +14165,7 @@ PHP_FUNCTION(php_wxStrcpy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&dest1, &dest_len1, &src1, &src_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1 ) == SUCCESS)
 		{
@@ -13776,6 +14187,7 @@ PHP_FUNCTION(php_wxStrcpy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrcpy(dest0, src0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrcpy(dest0, src0);
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -13797,6 +14209,7 @@ PHP_FUNCTION(php_wxStrcpy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrcpy(dest1, wxString(src1, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrcpy(dest1, wxString(src1, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -13863,6 +14276,7 @@ PHP_FUNCTION(php_wxStrncpy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
 		{
@@ -13882,6 +14296,7 @@ PHP_FUNCTION(php_wxStrncpy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest1, &dest_len1, &src1, &src_len1, &n1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1, &n1 ) == SUCCESS)
 		{
@@ -13903,6 +14318,7 @@ PHP_FUNCTION(php_wxStrncpy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrncpy(dest0, src0, (size_t) n0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxStrncpy(dest0, src0, (size_t) n0);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -13924,6 +14340,7 @@ PHP_FUNCTION(php_wxStrncpy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrncpy(dest1, wxString(src1, wxConvUTF8), (size_t) n1).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxStrncpy(dest1, wxString(src1, wxConvUTF8), (size_t) n1);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -13982,6 +14399,7 @@ PHP_FUNCTION(php_wxStrlcpy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
 		{
@@ -14003,6 +14421,7 @@ PHP_FUNCTION(php_wxStrlcpy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxStrlcpy(dest0, src0, (size_t) n0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxStrlcpy(dest0, src0, (size_t) n0));
 
 				ZVAL_STRING(dest0_ref, dest0, 1);
@@ -14065,6 +14484,7 @@ PHP_FUNCTION(php_wxStrcat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&dest0, &dest_len0, &src0, &src_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0 ) == SUCCESS)
 		{
@@ -14084,6 +14504,7 @@ PHP_FUNCTION(php_wxStrcat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&dest1, &dest_len1, &src1, &src_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1 ) == SUCCESS)
 		{
@@ -14105,6 +14526,7 @@ PHP_FUNCTION(php_wxStrcat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrcat(dest0, src0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrcat(dest0, src0);
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14126,6 +14548,7 @@ PHP_FUNCTION(php_wxStrcat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrcat(dest1, wxString(src1, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrcat(dest1, wxString(src1, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14192,6 +14615,7 @@ PHP_FUNCTION(php_wxStrncat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
 		{
@@ -14211,6 +14635,7 @@ PHP_FUNCTION(php_wxStrncat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest1, &dest_len1, &src1, &src_len1, &n1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1, &n1 ) == SUCCESS)
 		{
@@ -14232,6 +14657,7 @@ PHP_FUNCTION(php_wxStrncat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrncat(dest0, src0, (size_t) n0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxStrncat(dest0, src0, (size_t) n0);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -14253,6 +14679,7 @@ PHP_FUNCTION(php_wxStrncat)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrncat(dest1, wxString(src1, wxConvUTF8), (size_t) n1).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return3;
 				value_to_return3 = wxStrncat(dest1, wxString(src1, wxConvUTF8), (size_t) n1);
 				ZVAL_STRING(return_value, value_to_return3, 1);
@@ -14319,6 +14746,7 @@ PHP_FUNCTION(php_wxStrxfrm)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
 		{
@@ -14338,6 +14766,7 @@ PHP_FUNCTION(php_wxStrxfrm)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ssl' (&dest1, &dest_len1, &src1, &src_len1, &n1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ssl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1, &n1 ) == SUCCESS)
 		{
@@ -14359,6 +14788,7 @@ PHP_FUNCTION(php_wxStrxfrm)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxStrxfrm(dest0, src0, (size_t) n0))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxStrxfrm(dest0, src0, (size_t) n0));
 
 				ZVAL_STRING(dest0_ref, dest0, 1);
@@ -14378,6 +14808,7 @@ PHP_FUNCTION(php_wxStrxfrm)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxStrxfrm(dest1, wxString(src1, wxConvUTF8), (size_t) n1))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxStrxfrm(dest1, wxString(src1, wxConvUTF8), (size_t) n1));
 
 				ZVAL_STRING(dest1_ref, dest1, 1);
@@ -14464,6 +14895,7 @@ PHP_FUNCTION(php_wxStrstr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&haystack0, &haystack_len0, &needle0, &needle_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack0, &haystack_len0, &needle0, &needle_len0 ) == SUCCESS)
 		{
@@ -14480,6 +14912,7 @@ PHP_FUNCTION(php_wxStrstr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&haystack1, &haystack_len1, &needle1, &needle_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack1, &haystack_len1, &needle1, &needle_len1 ) == SUCCESS)
 		{
@@ -14496,6 +14929,7 @@ PHP_FUNCTION(php_wxStrstr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&haystack2, &haystack_len2, &needle2, &needle_len2)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack2, &haystack_len2, &needle2, &needle_len2 ) == SUCCESS)
 		{
@@ -14512,6 +14946,7 @@ PHP_FUNCTION(php_wxStrstr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&haystack3, &haystack_len3, &needle3, &needle_len3)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack3, &haystack_len3, &needle3, &needle_len3 ) == SUCCESS)
 		{
@@ -14528,6 +14963,7 @@ PHP_FUNCTION(php_wxStrstr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&haystack4, &haystack_len4, &needle4, &needle_len4)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack4, &haystack_len4, &needle4, &needle_len4 ) == SUCCESS)
 		{
@@ -14547,6 +14983,7 @@ PHP_FUNCTION(php_wxStrstr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&haystack5, &haystack_len5, &needle5, &needle_len5)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack5, &haystack_len5, &needle5, &needle_len5 ) == SUCCESS)
 		{
@@ -14568,6 +15005,7 @@ PHP_FUNCTION(php_wxStrstr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrstr(haystack0, needle0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrstr(haystack0, needle0));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14588,6 +15026,7 @@ PHP_FUNCTION(php_wxStrstr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrstr(haystack1, wxString(needle1, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrstr(haystack1, wxString(needle1, wxConvUTF8)));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14608,6 +15047,7 @@ PHP_FUNCTION(php_wxStrstr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack2, wxConvUTF8), wxString(needle2, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrstr(wxString(haystack2, wxConvUTF8), wxString(needle2, wxConvUTF8)));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14628,6 +15068,7 @@ PHP_FUNCTION(php_wxStrstr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack3, wxConvUTF8), needle3).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrstr(wxString(haystack3, wxConvUTF8), needle3));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14648,6 +15089,7 @@ PHP_FUNCTION(php_wxStrstr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrstr(haystack4, needle4).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrstr(haystack4, needle4);
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14669,6 +15111,7 @@ PHP_FUNCTION(php_wxStrstr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrstr(haystack5, wxString(needle5, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrstr(haystack5, wxString(needle5, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14740,6 +15183,7 @@ PHP_FUNCTION(php_wxStrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s0, &s_len0, &c0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &c0 ) == SUCCESS)
 		{
@@ -14756,6 +15200,7 @@ PHP_FUNCTION(php_wxStrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s1, &s_len1, &c1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1, &c1 ) == SUCCESS)
 		{
@@ -14772,6 +15217,7 @@ PHP_FUNCTION(php_wxStrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s2, &s_len2, &c2)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s2, &s_len2, &c2 ) == SUCCESS)
 		{
@@ -14788,6 +15234,7 @@ PHP_FUNCTION(php_wxStrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s3, &s_len3, &c3)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s3, &s_len3, &c3 ) == SUCCESS)
 		{
@@ -14809,6 +15256,7 @@ PHP_FUNCTION(php_wxStrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrchr(s0, (char) c0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrchr(s0, (char) c0));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14829,6 +15277,7 @@ PHP_FUNCTION(php_wxStrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s1, wxConvUTF8), (char) c1).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrchr(wxString(s1, wxConvUTF8), (char) c1));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14849,6 +15298,7 @@ PHP_FUNCTION(php_wxStrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s2, wxConvUTF8), (int) c2).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrchr(wxString(s2, wxConvUTF8), (int) c2));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14869,6 +15319,7 @@ PHP_FUNCTION(php_wxStrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrchr(s3, (char) c3).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrchr(s3, (char) c3);
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -14940,6 +15391,7 @@ PHP_FUNCTION(php_wxStrrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s0, &s_len0, &c0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &c0 ) == SUCCESS)
 		{
@@ -14956,6 +15408,7 @@ PHP_FUNCTION(php_wxStrrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s1, &s_len1, &c1)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1, &c1 ) == SUCCESS)
 		{
@@ -14972,6 +15425,7 @@ PHP_FUNCTION(php_wxStrrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s2, &s_len2, &c2)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s2, &s_len2, &c2 ) == SUCCESS)
 		{
@@ -14988,6 +15442,7 @@ PHP_FUNCTION(php_wxStrrchr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&s3, &s_len3, &c3)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s3, &s_len3, &c3 ) == SUCCESS)
 		{
@@ -15009,6 +15464,7 @@ PHP_FUNCTION(php_wxStrrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrrchr(s0, (char) c0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrrchr(s0, (char) c0));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15029,6 +15485,7 @@ PHP_FUNCTION(php_wxStrrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s1, wxConvUTF8), (char) c1).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrrchr(wxString(s1, wxConvUTF8), (char) c1));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15049,6 +15506,7 @@ PHP_FUNCTION(php_wxStrrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s2, wxConvUTF8), (int) c2).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrrchr(wxString(s2, wxConvUTF8), (int) c2));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15069,6 +15527,7 @@ PHP_FUNCTION(php_wxStrrchr)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrrchr(s3, (char) c3).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrrchr(s3, (char) c3);
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15157,6 +15616,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&s0, &s_len0, &accept0, &accept_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &accept0, &accept_len0 ) == SUCCESS)
 		{
@@ -15173,6 +15633,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&s1, &s_len1, &accept1, &accept_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1, &accept1, &accept_len1 ) == SUCCESS)
 		{
@@ -15189,6 +15650,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&s2, &s_len2, &accept2, &accept_len2)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s2, &s_len2, &accept2, &accept_len2 ) == SUCCESS)
 		{
@@ -15205,6 +15667,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&s3, &s_len3, &accept3, &accept_len3)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s3, &s_len3, &accept3, &accept_len3 ) == SUCCESS)
 		{
@@ -15221,6 +15684,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&s4, &s_len4, &accept4, &accept_len4)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s4, &s_len4, &accept4, &accept_len4 ) == SUCCESS)
 		{
@@ -15240,6 +15704,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&s5, &s_len5, &accept5, &accept_len5)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s5, &s_len5, &accept5, &accept_len5 ) == SUCCESS)
 		{
@@ -15261,6 +15726,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrpbrk(s0, accept0).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrpbrk(s0, accept0));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15281,6 +15747,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrpbrk(s1, wxString(accept1, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrpbrk(s1, wxString(accept1, wxConvUTF8)));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15301,6 +15768,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s2, wxConvUTF8), wxString(accept2, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrpbrk(wxString(s2, wxConvUTF8), wxString(accept2, wxConvUTF8)));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15321,6 +15789,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s3, wxConvUTF8), accept3).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = const_cast<char*>(wxStrpbrk(wxString(s3, wxConvUTF8), accept3));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15341,6 +15810,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrpbrk(s4, accept4).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrpbrk(s4, accept4);
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15362,6 +15832,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(::wxStrpbrk(s5, wxString(accept5, wxConvUTF8)).fn_str(), 1)\n\n");
 				#endif
+
 				char* value_to_return2;
 				value_to_return2 = wxStrpbrk(s5, wxString(accept5, wxConvUTF8));
 				ZVAL_STRING(return_value, value_to_return2, 1);
@@ -15416,6 +15887,7 @@ PHP_FUNCTION(php_wxRemove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
 		{
@@ -15434,6 +15906,7 @@ PHP_FUNCTION(php_wxRemove)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxRemove(wxString(path0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxRemove(wxString(path0, wxConvUTF8)));
 
 
@@ -15487,6 +15960,7 @@ PHP_FUNCTION(php_wxRename)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&oldpath0, &oldpath_len0, &newpath0, &newpath_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ss";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &oldpath0, &oldpath_len0, &newpath0, &newpath_len0 ) == SUCCESS)
 		{
@@ -15505,6 +15979,7 @@ PHP_FUNCTION(php_wxRename)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxRename(wxString(oldpath0, wxConvUTF8), wxString(newpath0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxRename(wxString(oldpath0, wxConvUTF8), wxString(newpath0, wxConvUTF8)));
 
 
@@ -15556,6 +16031,7 @@ PHP_FUNCTION(php_wxAtoi)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
 		{
@@ -15574,6 +16050,7 @@ PHP_FUNCTION(php_wxAtoi)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxAtoi(wxString(str0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxAtoi(wxString(str0, wxConvUTF8)));
 
 
@@ -15625,6 +16102,7 @@ PHP_FUNCTION(php_wxAtol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
 		{
@@ -15643,6 +16121,7 @@ PHP_FUNCTION(php_wxAtol)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxAtol(wxString(str0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxAtol(wxString(str0, wxConvUTF8)));
 
 
@@ -15694,6 +16173,7 @@ PHP_FUNCTION(php_wxAtof)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
 		{
@@ -15712,6 +16192,7 @@ PHP_FUNCTION(php_wxAtof)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxAtof(wxString(str0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_DOUBLE(return_value, wxAtof(wxString(str0, wxConvUTF8)));
 
 
@@ -15763,6 +16244,7 @@ PHP_FUNCTION(php_wxSystem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
 		{
@@ -15781,6 +16263,7 @@ PHP_FUNCTION(php_wxSystem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(::wxSystem(wxString(str0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxSystem(wxString(str0, wxConvUTF8)));
 
 

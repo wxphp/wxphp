@@ -44,7 +44,7 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("msvcrt.lib", "wxwidgets") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\include") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\setup.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\lib\\vc_lib\\mswu") &&
-		CHECK_HEADER_ADD_INCLUDE("php_wxwidgets.h", "CFLAGS_WXWIDGETS", configure_module_dirname + "\\includes")) {
+		CHECK_HEADER_ADD_INCLUDE("references.h", "CFLAGS_WXWIDGETS", configure_module_dirname + "\\includes")) {
 		
 		//Compiler flags
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/Ox ");
@@ -79,7 +79,11 @@ if (PHP_WXWIDGETS != "no") {
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/INCREMENTAL:NO");
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/SUBSYSTEM:WINDOWS");
 		
-		EXTENSION("wxwidgets", "src\\app.cpp src\\references.cpp <?=str_replace("/", "\\\\", $source_files)?> src\\functions.cpp src\\wxwidgets.cpp", true, null, null, configure_module_dirname);
+		//Declare extension
+		EXTENSION("wxwidgets", "wxwidgets.cpp", true, null, null);
+		
+		//Add extra sources
+		ADD_SOURCES(configure_module_dirname + "\\src", "app.cpp references.cpp <?=str_replace("src/", "", $source_files)?> functions.cpp", "wxwidgets");
 	}
 	else {
 		WARNING("wxWidgets not enabled; libraries and headers not found");

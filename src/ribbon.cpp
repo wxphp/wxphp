@@ -91,6 +91,7 @@ void php_wxRibbonArtProvider_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+
 /* {{{ proto wxRibbonArtProvider wxRibbonArtProvider::Clone()
    Create a new art provider which is a clone of this one. */
 wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
@@ -1368,6 +1369,7 @@ PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
@@ -1386,6 +1388,7 @@ PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonArtProvider::GetColor((int) id0) to return new object\n\n");
 				#endif
+
 				wxColour value_to_return1;
 				if(parent_rsrc_type == le_wxRibbonArtProvider)
 				{
@@ -2681,6 +2684,7 @@ PHP_METHOD(php_wxRibbonArtProvider, SetColor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&id0, &color0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &color0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -2715,6 +2719,7 @@ PHP_METHOD(php_wxRibbonArtProvider, SetColor)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonArtProvider::SetColor((int) id0, *(wxColour*) object_pointer0_1)\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxRibbonArtProvider)
 				{
 					((wxRibbonArtProvider_php*)_this)->SetColor((int) id0, *(wxColour*) object_pointer0_1);
@@ -3272,6 +3277,7 @@ void php_wxRibbonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxRibbonBar::ArePanelsShown()
    Indicates whether the panel area of the ribbon bar is shown. */
 PHP_METHOD(php_wxRibbonBar, ArePanelsShown)
@@ -3336,6 +3342,7 @@ PHP_METHOD(php_wxRibbonBar, ArePanelsShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3350,6 +3357,7 @@ PHP_METHOD(php_wxRibbonBar, ArePanelsShown)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::ArePanelsShown())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->ArePanelsShown());
 
 
@@ -3440,6 +3448,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -3506,6 +3515,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxRibbonBar::Create at call with 1 argument(s)");
@@ -3518,6 +3528,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxRibbonBar::Create at call with 2 argument(s)");
@@ -3530,6 +3541,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxRibbonBar::Create at call with 3 argument(s)");
@@ -3543,6 +3555,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxRibbonBar::Create at call with 4 argument(s)");
@@ -3557,6 +3570,7 @@ PHP_METHOD(php_wxRibbonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxRibbonBar::Create at call with 5 argument(s)");
@@ -3642,6 +3656,7 @@ PHP_METHOD(php_wxRibbonBar, DismissExpandedPanel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3656,6 +3671,7 @@ PHP_METHOD(php_wxRibbonBar, DismissExpandedPanel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::DismissExpandedPanel())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->DismissExpandedPanel());
 
 
@@ -3738,6 +3754,7 @@ PHP_METHOD(php_wxRibbonBar, GetActivePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3752,6 +3769,7 @@ PHP_METHOD(php_wxRibbonBar, GetActivePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxRibbonBar::GetActivePage())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxRibbonBar_php*)_this)->GetActivePage());
 
 
@@ -3835,6 +3853,7 @@ PHP_METHOD(php_wxRibbonBar, GetPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
 		{
@@ -3853,6 +3872,7 @@ PHP_METHOD(php_wxRibbonBar, GetPage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonBar::GetPage((int) n0) to return object pointer\n\n");
 				#endif
+
 				wxRibbonPage_php* value_to_return1;
 				value_to_return1 = (wxRibbonPage_php*) ((wxRibbonBar_php*)_this)->GetPage((int) n0);
 
@@ -3958,6 +3978,7 @@ PHP_METHOD(php_wxRibbonBar, HidePanels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3972,6 +3993,7 @@ PHP_METHOD(php_wxRibbonBar, HidePanels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonBar::HidePanels()\n\n");
 				#endif
+
 				((wxRibbonBar_php*)_this)->HidePanels();
 
 
@@ -4054,6 +4076,7 @@ PHP_METHOD(php_wxRibbonBar, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4068,6 +4091,7 @@ PHP_METHOD(php_wxRibbonBar, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::Realize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->Realize());
 
 
@@ -4155,6 +4179,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&page0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
@@ -4171,6 +4196,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&page1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page1 ) == SUCCESS)
 		{
@@ -4205,6 +4231,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::SetActivePage((size_t) page0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->SetActivePage((size_t) page0));
 
 
@@ -4223,6 +4250,7 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonBar::SetActivePage((wxRibbonPage*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonBar_php*)_this)->SetActivePage((wxRibbonPage*) object_pointer1_0));
 
 				references->AddReference(page1, "wxRibbonBar::SetActivePage at call with 1 argument(s)");
@@ -4308,6 +4336,7 @@ PHP_METHOD(php_wxRibbonBar, SetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&art0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &art0 ) == SUCCESS)
 		{
@@ -4342,6 +4371,7 @@ PHP_METHOD(php_wxRibbonBar, SetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonBar::SetArtProvider((wxRibbonArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonBar_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
 				references->AddReference(art0, "wxRibbonBar::SetArtProvider at call with 1 argument(s)");
@@ -4427,6 +4457,7 @@ PHP_METHOD(php_wxRibbonBar, SetTabCtrlMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&left0, &right0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &left0, &right0 ) == SUCCESS)
 		{
@@ -4445,6 +4476,7 @@ PHP_METHOD(php_wxRibbonBar, SetTabCtrlMargins)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonBar::SetTabCtrlMargins((int) left0, (int) right0)\n\n");
 				#endif
+
 				((wxRibbonBar_php*)_this)->SetTabCtrlMargins((int) left0, (int) right0);
 
 
@@ -4528,6 +4560,7 @@ PHP_METHOD(php_wxRibbonBar, ShowPanels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -4546,6 +4579,7 @@ PHP_METHOD(php_wxRibbonBar, ShowPanels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonBar::ShowPanels()\n\n");
 				#endif
+
 				((wxRibbonBar_php*)_this)->ShowPanels();
 
 
@@ -4557,6 +4591,7 @@ PHP_METHOD(php_wxRibbonBar, ShowPanels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonBar::ShowPanels(show0)\n\n");
 				#endif
+
 				((wxRibbonBar_php*)_this)->ShowPanels(show0);
 
 
@@ -4617,6 +4652,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4629,6 +4665,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1 ) == SUCCESS)
 		{
@@ -4695,6 +4732,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonBar_php();
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
@@ -4712,6 +4750,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
@@ -4723,6 +4762,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
@@ -4734,6 +4774,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
@@ -4746,6 +4787,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
@@ -4759,6 +4801,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonBar_php*) _this)->references.Initialize();
@@ -4787,7 +4830,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonBar::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonBar::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -4803,6 +4846,7 @@ void php_wxRibbonButtonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxRibbonButtonBarButtonBase wxRibbonButtonBar::AddDropdownButton(int button_id, string label, wxBitmap bitmap, string help_string)
    Add a dropdown button to the button bar (simple version). */
 PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
@@ -4874,6 +4918,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsO|s' (&button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsO|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -4908,6 +4953,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddDropdownButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddDropdownButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
@@ -4943,6 +4989,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddDropdownButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddDropdownButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
@@ -5056,6 +5103,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsO|s' (&button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsO|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -5090,6 +5138,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddHybridButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddHybridButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
@@ -5125,6 +5174,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddHybridButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddHybridButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
@@ -5238,6 +5288,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsO|s' (&button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsO|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -5272,6 +5323,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddToggleButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddToggleButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2);
 
@@ -5307,6 +5359,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddToggleButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddToggleButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
@@ -5413,6 +5466,7 @@ PHP_METHOD(php_wxRibbonButtonBar, ClearButtons)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5427,6 +5481,7 @@ PHP_METHOD(php_wxRibbonButtonBar, ClearButtons)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::ClearButtons()\n\n");
 				#endif
+
 				((wxRibbonButtonBar_php*)_this)->ClearButtons();
 
 
@@ -5517,6 +5572,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -5583,6 +5639,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 1 argument(s)");
@@ -5595,6 +5652,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 2 argument(s)");
@@ -5607,6 +5665,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 3 argument(s)");
@@ -5620,6 +5679,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 4 argument(s)");
@@ -5634,6 +5694,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxRibbonButtonBar::Create at call with 5 argument(s)");
@@ -5720,6 +5781,7 @@ PHP_METHOD(php_wxRibbonButtonBar, DeleteButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&button_id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0 ) == SUCCESS)
 		{
@@ -5738,6 +5800,7 @@ PHP_METHOD(php_wxRibbonButtonBar, DeleteButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::DeleteButton((int) button_id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->DeleteButton((int) button_id0));
 
 
@@ -5822,6 +5885,7 @@ PHP_METHOD(php_wxRibbonButtonBar, EnableButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&button_id0, &enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0, &enable0 ) == SUCCESS)
 		{
@@ -5840,6 +5904,7 @@ PHP_METHOD(php_wxRibbonButtonBar, EnableButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::EnableButton((int) button_id0)\n\n");
 				#endif
+
 				((wxRibbonButtonBar_php*)_this)->EnableButton((int) button_id0);
 
 
@@ -5851,6 +5916,7 @@ PHP_METHOD(php_wxRibbonButtonBar, EnableButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::EnableButton((int) button_id0, enable0)\n\n");
 				#endif
+
 				((wxRibbonButtonBar_php*)_this)->EnableButton((int) button_id0, enable0);
 
 
@@ -5933,6 +5999,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5947,6 +6014,7 @@ PHP_METHOD(php_wxRibbonButtonBar, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonButtonBar::Realize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonButtonBar_php*)_this)->Realize());
 
 
@@ -6031,6 +6099,7 @@ PHP_METHOD(php_wxRibbonButtonBar, ToggleButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&button_id0, &checked0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0, &checked0 ) == SUCCESS)
 		{
@@ -6049,6 +6118,7 @@ PHP_METHOD(php_wxRibbonButtonBar, ToggleButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::ToggleButton((int) button_id0, checked0)\n\n");
 				#endif
+
 				((wxRibbonButtonBar_php*)_this)->ToggleButton((int) button_id0, checked0);
 
 
@@ -6109,6 +6179,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6121,6 +6192,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1 ) == SUCCESS)
 		{
@@ -6187,6 +6259,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonButtonBar_php();
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
@@ -6204,6 +6277,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
@@ -6215,6 +6289,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
@@ -6226,6 +6301,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
@@ -6238,6 +6314,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
@@ -6251,6 +6328,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonButtonBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonButtonBar_php*) _this)->references.Initialize();
@@ -6279,7 +6357,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonButtonBar::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonButtonBar::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6378,6 +6456,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsOs|l' (&button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0, &kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsOs|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id0, &label0, &label_len0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0, &kind0 ) == SUCCESS)
 		{
@@ -6410,6 +6489,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsO|OOOlsz' (&button_id1, &label1, &label_len1, &bitmap1, php_wxBitmap_entry, &bitmap_small1, php_wxBitmap_entry, &bitmap_disabled1, php_wxBitmap_entry, &bitmap_small_disabled1, php_wxBitmap_entry, &kind1, &help_string1, &help_string_len1, &client_data1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lsO|OOOlsz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button_id1, &label1, &label_len1, &bitmap1, php_wxBitmap_entry, &bitmap_small1, php_wxBitmap_entry, &bitmap_disabled1, php_wxBitmap_entry, &bitmap_small_disabled1, php_wxBitmap_entry, &kind1, &help_string1, &help_string_len1, &client_data1 ) == SUCCESS)
 		{
@@ -6508,6 +6588,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8));
 
@@ -6543,6 +6624,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8), (wxRibbonButtonKind) kind0) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return5;
 				value_to_return5 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_2, wxString(help_string0, wxConvUTF8), (wxRibbonButtonKind) kind0);
 
@@ -6585,6 +6667,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2);
 
@@ -6620,6 +6703,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3);
 
@@ -6656,6 +6740,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return5;
 				value_to_return5 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4);
 
@@ -6693,6 +6778,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return6;
 				value_to_return6 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5);
 
@@ -6731,6 +6817,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return7;
 				value_to_return7 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1);
 
@@ -6769,6 +6856,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1, wxString(help_string1, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return8;
 				value_to_return8 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1, wxString(help_string1, wxConvUTF8));
 
@@ -6807,6 +6895,7 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonButtonBar::AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1, wxString(help_string1, wxConvUTF8), (wxObject*) object_pointer1_8) to return object pointer\n\n");
 				#endif
+
 				wxRibbonButtonBarButtonBase_php* value_to_return9;
 				value_to_return9 = (wxRibbonButtonBarButtonBase_php*) ((wxRibbonButtonBar_php*)_this)->AddButton((int) button_id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_2, *(wxBitmap*) object_pointer1_3, *(wxBitmap*) object_pointer1_4, *(wxBitmap*) object_pointer1_5, (wxRibbonButtonKind) kind1, wxString(help_string1, wxConvUTF8), (wxObject*) object_pointer1_8);
 
@@ -6860,6 +6949,7 @@ void php_wxRibbonControl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxSize wxRibbonControl::DoGetNextLargerSize(wxOrientation direction, wxSize relative_to)
    Implementation of GetNextLargerSize(). */
 wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize relative_to)const
@@ -7150,6 +7240,7 @@ PHP_METHOD(php_wxRibbonControl, GetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7164,6 +7255,7 @@ PHP_METHOD(php_wxRibbonControl, GetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonControl::GetArtProvider() to return object pointer\n\n");
 				#endif
+
 				wxRibbonArtProvider_php* value_to_return0;
 				value_to_return0 = (wxRibbonArtProvider_php*) ((wxRibbonControl_php*)_this)->GetArtProvider();
 
@@ -7299,6 +7391,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -7315,6 +7408,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&direction1, &relative_to1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction1, &relative_to1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -7349,6 +7443,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonControl::GetNextLargerSize((wxOrientation) direction0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = ((wxRibbonControl_php*)_this)->GetNextLargerSize((wxOrientation) direction0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7372,6 +7467,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonControl::GetNextLargerSize((wxOrientation) direction1, *(wxSize*) object_pointer1_1) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return2;
 				value_to_return2 = ((wxRibbonControl_php*)_this)->GetNextLargerSize((wxOrientation) direction1, *(wxSize*) object_pointer1_1);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7489,6 +7585,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&direction0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
@@ -7505,6 +7602,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&direction1, &relative_to1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction1, &relative_to1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -7539,6 +7637,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonControl::GetNextSmallerSize((wxOrientation) direction0) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return1;
 				value_to_return1 = ((wxRibbonControl_php*)_this)->GetNextSmallerSize((wxOrientation) direction0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7562,6 +7661,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonControl::GetNextSmallerSize((wxOrientation) direction1, *(wxSize*) object_pointer1_1) to return new object\n\n");
 				#endif
+
 				wxSize value_to_return2;
 				value_to_return2 = ((wxRibbonControl_php*)_this)->GetNextSmallerSize((wxOrientation) direction1, *(wxSize*) object_pointer1_1);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
@@ -7672,6 +7772,7 @@ PHP_METHOD(php_wxRibbonControl, IsSizingContinuous)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7686,6 +7787,7 @@ PHP_METHOD(php_wxRibbonControl, IsSizingContinuous)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonControl::IsSizingContinuous())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonControl_php*)_this)->IsSizingContinuous());
 
 
@@ -7792,6 +7894,7 @@ PHP_METHOD(php_wxRibbonControl, Realise)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7806,6 +7909,7 @@ PHP_METHOD(php_wxRibbonControl, Realise)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonControl::Realise())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonControl_php*)_this)->Realise());
 
 
@@ -7912,6 +8016,7 @@ PHP_METHOD(php_wxRibbonControl, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7926,6 +8031,7 @@ PHP_METHOD(php_wxRibbonControl, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonControl::Realize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonControl_php*)_this)->Realize());
 
 
@@ -8034,6 +8140,7 @@ PHP_METHOD(php_wxRibbonControl, SetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&art0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &art0 ) == SUCCESS)
 		{
@@ -8068,6 +8175,7 @@ PHP_METHOD(php_wxRibbonControl, SetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonControl::SetArtProvider((wxRibbonArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonControl_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
 				references->AddReference(art0, "wxRibbonControl::SetArtProvider at call with 1 argument(s)");
@@ -8133,6 +8241,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8145,6 +8254,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOlOs' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &validator1, php_wxValidator_entry, &name1, &name_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "zl|OOlOs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &validator1, php_wxValidator_entry, &name1, &name_len1 ) == SUCCESS)
 		{
@@ -8227,6 +8337,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonControl_php();
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8244,6 +8355,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8255,6 +8367,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8267,6 +8380,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8280,6 +8394,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8293,6 +8408,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, *(wxValidator*) object_pointer1_5)\n");
 				#endif
+
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, *(wxValidator*) object_pointer1_5);
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8307,6 +8423,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, *(wxValidator*) object_pointer1_5, wxString(name1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxRibbonControl_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1, *(wxValidator*) object_pointer1_5, wxString(name1, wxConvUTF8));
 
 				((wxRibbonControl_php*) _this)->references.Initialize();
@@ -8336,7 +8453,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonControl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonControl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -8352,6 +8469,7 @@ void php_wxRibbonGallery_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxRibbonGalleryItem wxRibbonGallery::Append(wxBitmap bitmap, int id)
    Add an item to the gallery (with no client data). */
 PHP_METHOD(php_wxRibbonGallery, Append)
@@ -8434,6 +8552,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Ol' (&bitmap0, php_wxBitmap_entry, &id0)\n");
 		#endif
+
 		char parse_parameters_string[] = "Ol";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry, &id0 ) == SUCCESS)
 		{
@@ -8466,6 +8585,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Ols' (&bitmap1, php_wxBitmap_entry, &id1, &clientData1, &clientData_len1)\n");
 		#endif
+
 		char parse_parameters_string[] = "Ols";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap1, php_wxBitmap_entry, &id1, &clientData1, &clientData_len1 ) == SUCCESS)
 		{
@@ -8501,6 +8621,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Olz' (&bitmap2, php_wxBitmap_entry, &id2, &clientData2)\n");
 		#endif
+
 		char parse_parameters_string[] = "Olz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap2, php_wxBitmap_entry, &id2, &clientData2 ) == SUCCESS)
 		{
@@ -8551,6 +8672,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::Append(*(wxBitmap*) object_pointer0_0, (int) id0) to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return2;
 				value_to_return2 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->Append(*(wxBitmap*) object_pointer0_0, (int) id0);
 
@@ -8593,6 +8715,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::Append(*(wxBitmap*) object_pointer1_0, (int) id1, (void*) clientData1) to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return3;
 				value_to_return3 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->Append(*(wxBitmap*) object_pointer1_0, (int) id1, (void*) clientData1);
 
@@ -8636,6 +8759,7 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::Append(*(wxBitmap*) object_pointer2_0, (int) id2, (wxClientData*) object_pointer2_2) to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return3;
 				value_to_return3 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->Append(*(wxBitmap*) object_pointer2_0, (int) id2, (wxClientData*) object_pointer2_2);
 
@@ -8743,6 +8867,7 @@ PHP_METHOD(php_wxRibbonGallery, Clear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8757,6 +8882,7 @@ PHP_METHOD(php_wxRibbonGallery, Clear)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::Clear()\n\n");
 				#endif
+
 				((wxRibbonGallery_php*)_this)->Clear();
 
 
@@ -8847,6 +8973,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -8913,6 +9040,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxRibbonGallery::Create at call with 1 argument(s)");
@@ -8925,6 +9053,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxRibbonGallery::Create at call with 2 argument(s)");
@@ -8937,6 +9066,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxRibbonGallery::Create at call with 3 argument(s)");
@@ -8950,6 +9080,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxRibbonGallery::Create at call with 4 argument(s)");
@@ -8964,6 +9095,7 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxRibbonGallery::Create at call with 5 argument(s)");
@@ -9051,6 +9183,7 @@ PHP_METHOD(php_wxRibbonGallery, EnsureVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
@@ -9085,6 +9218,7 @@ PHP_METHOD(php_wxRibbonGallery, EnsureVisible)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::EnsureVisible((const wxRibbonGalleryItem*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonGallery_php*)_this)->EnsureVisible((const wxRibbonGalleryItem*) object_pointer0_0);
 
 				references->AddReference(item0, "wxRibbonGallery::EnsureVisible at call with 1 argument(s)");
@@ -9168,6 +9302,7 @@ PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9182,6 +9317,7 @@ PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::GetActiveItem() to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return0;
 				value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->GetActiveItem();
 
@@ -9287,6 +9423,7 @@ PHP_METHOD(php_wxRibbonGallery, GetCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9301,6 +9438,7 @@ PHP_METHOD(php_wxRibbonGallery, GetCount)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxRibbonGallery::GetCount())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxRibbonGallery_php*)_this)->GetCount());
 
 
@@ -9383,6 +9521,7 @@ PHP_METHOD(php_wxRibbonGallery, GetDownButtonState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9397,6 +9536,7 @@ PHP_METHOD(php_wxRibbonGallery, GetDownButtonState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxRibbonGallery::GetDownButtonState())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxRibbonGallery_php*)_this)->GetDownButtonState());
 
 
@@ -9479,6 +9619,7 @@ PHP_METHOD(php_wxRibbonGallery, GetExtensionButtonState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9493,6 +9634,7 @@ PHP_METHOD(php_wxRibbonGallery, GetExtensionButtonState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxRibbonGallery::GetExtensionButtonState())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxRibbonGallery_php*)_this)->GetExtensionButtonState());
 
 
@@ -9575,6 +9717,7 @@ PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -9589,6 +9732,7 @@ PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::GetHoveredItem() to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return0;
 				value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->GetHoveredItem();
 
@@ -9695,6 +9839,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
 		{
@@ -9713,6 +9858,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItem)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::GetItem((unsigned int) n0) to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return1;
 				value_to_return1 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->GetItem((unsigned int) n0);
 
@@ -9820,6 +9966,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
@@ -9854,6 +10001,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::GetItemClientData((const wxRibbonGalleryItem*) object_pointer0_0)\n\n");
 				#endif
+
 				ZVAL_STRING(return_value, (char*) ((wxRibbonGallery_php*)_this)->GetItemClientData((const wxRibbonGalleryItem*) object_pointer0_0), 1);
 
 				references->AddReference(item0, "wxRibbonGallery::GetItemClientData at call with 1 argument(s)");
@@ -9939,6 +10087,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
@@ -9973,6 +10122,7 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::GetItemClientObject((const wxRibbonGalleryItem*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxClientData_php* value_to_return1;
 				value_to_return1 = (wxClientData_php*) ((wxRibbonGallery_php*)_this)->GetItemClientObject((const wxRibbonGalleryItem*) object_pointer0_0);
 
@@ -10079,6 +10229,7 @@ PHP_METHOD(php_wxRibbonGallery, GetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10093,6 +10244,7 @@ PHP_METHOD(php_wxRibbonGallery, GetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::GetSelection() to return object pointer\n\n");
 				#endif
+
 				wxRibbonGalleryItem_php* value_to_return0;
 				value_to_return0 = (wxRibbonGalleryItem_php*) ((wxRibbonGallery_php*)_this)->GetSelection();
 
@@ -10198,6 +10350,7 @@ PHP_METHOD(php_wxRibbonGallery, GetUpButtonState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10212,6 +10365,7 @@ PHP_METHOD(php_wxRibbonGallery, GetUpButtonState)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxRibbonGallery::GetUpButtonState())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxRibbonGallery_php*)_this)->GetUpButtonState());
 
 
@@ -10294,6 +10448,7 @@ PHP_METHOD(php_wxRibbonGallery, IsEmpty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10308,6 +10463,7 @@ PHP_METHOD(php_wxRibbonGallery, IsEmpty)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::IsEmpty())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->IsEmpty());
 
 
@@ -10390,6 +10546,7 @@ PHP_METHOD(php_wxRibbonGallery, IsHovered)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -10404,6 +10561,7 @@ PHP_METHOD(php_wxRibbonGallery, IsHovered)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::IsHovered())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->IsHovered());
 
 
@@ -10487,6 +10645,7 @@ PHP_METHOD(php_wxRibbonGallery, ScrollLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lines0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lines0 ) == SUCCESS)
 		{
@@ -10505,6 +10664,7 @@ PHP_METHOD(php_wxRibbonGallery, ScrollLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::ScrollLines((int) lines0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->ScrollLines((int) lines0));
 
 
@@ -10588,6 +10748,7 @@ PHP_METHOD(php_wxRibbonGallery, ScrollPixels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixels0 ) == SUCCESS)
 		{
@@ -10606,6 +10767,7 @@ PHP_METHOD(php_wxRibbonGallery, ScrollPixels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonGallery::ScrollPixels((int) pixels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonGallery_php*)_this)->ScrollPixels((int) pixels0));
 
 
@@ -10693,6 +10855,7 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&item0, &data0, &data_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, &data0, &data_len0 ) == SUCCESS)
 		{
@@ -10730,6 +10893,7 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientData)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::SetItemClientData((wxRibbonGalleryItem*) object_pointer0_0, (void*) data0)\n\n");
 				#endif
+
 				((wxRibbonGallery_php*)_this)->SetItemClientData((wxRibbonGalleryItem*) object_pointer0_0, (void*) data0);
 
 				references->AddReference(item0, "wxRibbonGallery::SetItemClientData at call with 2 argument(s)");
@@ -10818,6 +10982,7 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zz' (&item0, &data0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0, &data0 ) == SUCCESS)
 		{
@@ -10868,6 +11033,7 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::SetItemClientObject((wxRibbonGalleryItem*) object_pointer0_0, (wxClientData*) object_pointer0_1)\n\n");
 				#endif
+
 				((wxRibbonGallery_php*)_this)->SetItemClientObject((wxRibbonGalleryItem*) object_pointer0_0, (wxClientData*) object_pointer0_1);
 
 				references->AddReference(item0, "wxRibbonGallery::SetItemClientObject at call with 2 argument(s)");
@@ -10954,6 +11120,7 @@ PHP_METHOD(php_wxRibbonGallery, SetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
@@ -10988,6 +11155,7 @@ PHP_METHOD(php_wxRibbonGallery, SetSelection)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonGallery::SetSelection((wxRibbonGalleryItem*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonGallery_php*)_this)->SetSelection((wxRibbonGalleryItem*) object_pointer0_0);
 
 				references->AddReference(item0, "wxRibbonGallery::SetSelection at call with 1 argument(s)");
@@ -11049,6 +11217,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11061,6 +11230,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1 ) == SUCCESS)
 		{
@@ -11127,6 +11297,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonGallery_php();
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
@@ -11144,6 +11315,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
@@ -11155,6 +11327,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
@@ -11166,6 +11339,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
@@ -11178,6 +11352,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
@@ -11191,6 +11366,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonGallery_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonGallery_php*) _this)->references.Initialize();
@@ -11219,7 +11395,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonGallery::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonGallery::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -11235,6 +11411,7 @@ void php_wxRibbonPage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto  wxRibbonPage::AdjustRectToIncludeScrollButtons(wxRect &rect)
    Expand a rectangle of the page to include external scroll buttons (if any). */
 PHP_METHOD(php_wxRibbonPage, AdjustRectToIncludeScrollButtons)
@@ -11301,6 +11478,7 @@ PHP_METHOD(php_wxRibbonPage, AdjustRectToIncludeScrollButtons)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&rect0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0 ) == SUCCESS)
 		{
@@ -11335,6 +11513,7 @@ PHP_METHOD(php_wxRibbonPage, AdjustRectToIncludeScrollButtons)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPage::AdjustRectToIncludeScrollButtons((wxRect*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonPage_php*)_this)->AdjustRectToIncludeScrollButtons((wxRect*) object_pointer0_0);
 
 				references->AddReference(rect0, "wxRibbonPage::AdjustRectToIncludeScrollButtons at call with 1 argument(s)");
@@ -11426,6 +11605,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lsOl' (&parent0, &id0, &label0, &label_len0, &icon0, php_wxBitmap_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lsOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &label0, &label_len0, &icon0, php_wxBitmap_entry, &style0 ) == SUCCESS)
 		{
@@ -11476,6 +11656,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxRibbonPage::Create at call with 1 argument(s)");
@@ -11488,6 +11669,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxRibbonPage::Create at call with 2 argument(s)");
@@ -11500,6 +11682,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxRibbonPage::Create at call with 3 argument(s)");
@@ -11512,6 +11695,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxRibbonPage::Create at call with 4 argument(s)");
@@ -11525,6 +11709,7 @@ PHP_METHOD(php_wxRibbonPage, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Create((wxRibbonBar*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxRibbonPage::Create at call with 5 argument(s)");
@@ -11609,6 +11794,7 @@ PHP_METHOD(php_wxRibbonPage, DismissExpandedPanel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11623,6 +11809,7 @@ PHP_METHOD(php_wxRibbonPage, DismissExpandedPanel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::DismissExpandedPanel())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->DismissExpandedPanel());
 
 
@@ -11705,6 +11892,7 @@ PHP_METHOD(php_wxRibbonPage, GetIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11719,6 +11907,7 @@ PHP_METHOD(php_wxRibbonPage, GetIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPage::GetIcon() to return object reference\n\n");
 				#endif
+
 				wxBitmap_php* value_to_return0;
 				value_to_return0 = (wxBitmap_php*) &((wxRibbonPage_php*)_this)->GetIcon();
 
@@ -11821,6 +12010,7 @@ PHP_METHOD(php_wxRibbonPage, GetMajorAxis)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11835,6 +12025,7 @@ PHP_METHOD(php_wxRibbonPage, GetMajorAxis)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxRibbonPage::GetMajorAxis())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxRibbonPage_php*)_this)->GetMajorAxis());
 
 
@@ -11917,6 +12108,7 @@ PHP_METHOD(php_wxRibbonPage, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -11931,6 +12123,7 @@ PHP_METHOD(php_wxRibbonPage, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::Realize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->Realize());
 
 
@@ -12014,6 +12207,7 @@ PHP_METHOD(php_wxRibbonPage, ScrollLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lines0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lines0 ) == SUCCESS)
 		{
@@ -12032,6 +12226,7 @@ PHP_METHOD(php_wxRibbonPage, ScrollLines)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::ScrollLines((int) lines0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->ScrollLines((int) lines0));
 
 
@@ -12115,6 +12310,7 @@ PHP_METHOD(php_wxRibbonPage, ScrollPixels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixels0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixels0 ) == SUCCESS)
 		{
@@ -12133,6 +12329,7 @@ PHP_METHOD(php_wxRibbonPage, ScrollPixels)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPage::ScrollPixels((int) pixels0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPage_php*)_this)->ScrollPixels((int) pixels0));
 
 
@@ -12217,6 +12414,7 @@ PHP_METHOD(php_wxRibbonPage, SetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&art0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &art0 ) == SUCCESS)
 		{
@@ -12251,6 +12449,7 @@ PHP_METHOD(php_wxRibbonPage, SetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPage::SetArtProvider((wxRibbonArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonPage_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
 				references->AddReference(art0, "wxRibbonPage::SetArtProvider at call with 1 argument(s)");
@@ -12338,6 +12537,7 @@ PHP_METHOD(php_wxRibbonPage, SetSizeWithScrollButtonAdjustment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&x0, &y0, &width0, &height0)\n");
 		#endif
+
 		char parse_parameters_string[] = "llll";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &width0, &height0 ) == SUCCESS)
 		{
@@ -12356,6 +12556,7 @@ PHP_METHOD(php_wxRibbonPage, SetSizeWithScrollButtonAdjustment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPage::SetSizeWithScrollButtonAdjustment((int) x0, (int) y0, (int) width0, (int) height0)\n\n");
 				#endif
+
 				((wxRibbonPage_php*)_this)->SetSizeWithScrollButtonAdjustment((int) x0, (int) y0, (int) width0, (int) height0);
 
 
@@ -12416,6 +12617,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12428,6 +12630,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lsOl' (&parent1, &id1, &label1, &label_len1, &icon1, php_wxBitmap_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lsOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &label1, &label_len1, &icon1, php_wxBitmap_entry, &style1 ) == SUCCESS)
 		{
@@ -12478,6 +12681,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonPage_php();
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
@@ -12495,6 +12699,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxRibbonBar*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
@@ -12506,6 +12711,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
@@ -12517,6 +12723,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8));
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
@@ -12528,6 +12735,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
@@ -12540,6 +12748,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonPage_php((wxRibbonBar*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, (long) style1);
 
 				((wxRibbonPage_php*) _this)->references.Initialize();
@@ -12567,7 +12776,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonPage::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonPage::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -12583,6 +12792,7 @@ void php_wxRibbonPanel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto bool wxRibbonPanel::CanAutoMinimise()
    Query if the panel can automatically minimise itself at small sizes. */
 PHP_METHOD(php_wxRibbonPanel, CanAutoMinimise)
@@ -12647,6 +12857,7 @@ PHP_METHOD(php_wxRibbonPanel, CanAutoMinimise)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -12661,6 +12872,7 @@ PHP_METHOD(php_wxRibbonPanel, CanAutoMinimise)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::CanAutoMinimise())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->CanAutoMinimise());
 
 
@@ -12755,6 +12967,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lsOOOl' (&parent0, &id0, &label0, &label_len0, &icon0, php_wxBitmap_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lsOOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &label0, &label_len0, &icon0, php_wxBitmap_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -12837,6 +13050,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 1 argument(s)");
@@ -12849,6 +13063,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 2 argument(s)");
@@ -12861,6 +13076,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8)));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 3 argument(s)");
@@ -12873,6 +13089,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 4 argument(s)");
@@ -12886,6 +13103,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 5 argument(s)");
@@ -12900,6 +13118,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 6 argument(s)");
@@ -12915,6 +13134,7 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(label0, wxConvUTF8), *(wxBitmap*) object_pointer0_3, *(wxPoint*) object_pointer0_4, *(wxSize*) object_pointer0_5, (long) style0));
 
 				references->AddReference(parent0, "wxRibbonPanel::Create at call with 7 argument(s)");
@@ -13001,6 +13221,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13015,6 +13236,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPanel::GetExpandedDummy() to return object pointer\n\n");
 				#endif
+
 				wxRibbonPanel_php* value_to_return0;
 				value_to_return0 = (wxRibbonPanel_php*) ((wxRibbonPanel_php*)_this)->GetExpandedDummy();
 
@@ -13120,6 +13342,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13134,6 +13357,7 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPanel::GetExpandedPanel() to return object pointer\n\n");
 				#endif
+
 				wxRibbonPanel_php* value_to_return0;
 				value_to_return0 = (wxRibbonPanel_php*) ((wxRibbonPanel_php*)_this)->GetExpandedPanel();
 
@@ -13241,6 +13465,7 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13253,6 +13478,7 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload1_called = true;
 		already_called = true;
 	}
@@ -13267,6 +13493,7 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPanel::GetMinimisedIcon() to return object reference\n\n");
 				#endif
+
 				wxBitmap_php* value_to_return0;
 				value_to_return0 = (wxBitmap_php*) &((wxRibbonPanel_php*)_this)->GetMinimisedIcon();
 
@@ -13305,6 +13532,7 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPanel::GetMinimisedIcon() to return object reference\n\n");
 				#endif
+
 				wxBitmap_php* value_to_return0;
 				value_to_return0 = (wxBitmap_php*) &((wxRibbonPanel_php*)_this)->GetMinimisedIcon();
 
@@ -13407,6 +13635,7 @@ PHP_METHOD(php_wxRibbonPanel, HideExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13421,6 +13650,7 @@ PHP_METHOD(php_wxRibbonPanel, HideExpanded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::HideExpanded())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->HideExpanded());
 
 
@@ -13503,6 +13733,7 @@ PHP_METHOD(php_wxRibbonPanel, IsHovered)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13517,6 +13748,7 @@ PHP_METHOD(php_wxRibbonPanel, IsHovered)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::IsHovered())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->IsHovered());
 
 
@@ -13603,6 +13835,7 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13615,6 +13848,7 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&at_size1, php_wxSize_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &at_size1, php_wxSize_entry ) == SUCCESS)
 		{
@@ -13649,6 +13883,7 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::IsMinimised())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->IsMinimised());
 
 
@@ -13667,6 +13902,7 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::IsMinimised(*(wxSize*) object_pointer1_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->IsMinimised(*(wxSize*) object_pointer1_0));
 
 
@@ -13749,6 +13985,7 @@ PHP_METHOD(php_wxRibbonPanel, Realize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13763,6 +14000,7 @@ PHP_METHOD(php_wxRibbonPanel, Realize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::Realize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->Realize());
 
 
@@ -13847,6 +14085,7 @@ PHP_METHOD(php_wxRibbonPanel, SetArtProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&art0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &art0 ) == SUCCESS)
 		{
@@ -13881,6 +14120,7 @@ PHP_METHOD(php_wxRibbonPanel, SetArtProvider)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonPanel::SetArtProvider((wxRibbonArtProvider*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxRibbonPanel_php*)_this)->SetArtProvider((wxRibbonArtProvider*) object_pointer0_0);
 
 				references->AddReference(art0, "wxRibbonPanel::SetArtProvider at call with 1 argument(s)");
@@ -13964,6 +14204,7 @@ PHP_METHOD(php_wxRibbonPanel, ShowExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -13978,6 +14219,7 @@ PHP_METHOD(php_wxRibbonPanel, ShowExpanded)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonPanel::ShowExpanded())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonPanel_php*)_this)->ShowExpanded());
 
 
@@ -14042,6 +14284,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14054,6 +14297,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lsOOOl' (&parent1, &id1, &label1, &label_len1, &minimised_icon1, php_wxBitmap_entry, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lsOOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &label1, &label_len1, &minimised_icon1, php_wxBitmap_entry, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1 ) == SUCCESS)
 		{
@@ -14136,6 +14380,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonPanel_php();
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14153,6 +14398,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14164,6 +14410,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14175,6 +14422,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8));
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14186,6 +14434,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14198,6 +14447,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4)\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14211,6 +14461,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, *(wxSize*) object_pointer1_5)\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, *(wxSize*) object_pointer1_5);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14225,6 +14476,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, *(wxSize*) object_pointer1_5, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonPanel_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(label1, wxConvUTF8), *(wxBitmap*) object_pointer1_3, *(wxPoint*) object_pointer1_4, *(wxSize*) object_pointer1_5, (long) style1);
 
 				((wxRibbonPanel_php*) _this)->references.Initialize();
@@ -14254,7 +14506,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonPanel::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonPanel::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -14270,6 +14522,7 @@ void php_wxRibbonToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+
 /* {{{ proto wxRibbonToolBarToolBase wxRibbonToolBar::AddDropdownTool(int tool_id, wxBitmap bitmap, string help_string)
    Add a dropdown tool to the tool bar (simple version). */
 PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
@@ -14339,6 +14592,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO|s' (&tool_id0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -14373,6 +14627,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddDropdownTool((int) tool_id0, *(wxBitmap*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return2;
 				value_to_return2 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddDropdownTool((int) tool_id0, *(wxBitmap*) object_pointer0_1);
 
@@ -14408,6 +14663,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddDropdownTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddDropdownTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8));
 
@@ -14519,6 +14775,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO|s' (&tool_id0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO|s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0 ) == SUCCESS)
 		{
@@ -14553,6 +14810,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddHybridTool((int) tool_id0, *(wxBitmap*) object_pointer0_1) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return2;
 				value_to_return2 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddHybridTool((int) tool_id0, *(wxBitmap*) object_pointer0_1);
 
@@ -14588,6 +14846,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddHybridTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddHybridTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8));
 
@@ -14694,6 +14953,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -14708,6 +14968,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddSeparator() to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return0;
 				value_to_return0 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddSeparator();
 
@@ -14831,6 +15092,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lOs|l' (&tool_id0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0, &kind0)\n");
 		#endif
+
 		char parse_parameters_string[] = "lOs|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id0, &bitmap0, php_wxBitmap_entry, &help_string0, &help_string_len0, &kind0 ) == SUCCESS)
 		{
@@ -14863,6 +15125,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO|Oslz' (&tool_id1, &bitmap1, php_wxBitmap_entry, &bitmap_disabled1, php_wxBitmap_entry, &help_string1, &help_string_len1, &kind1, &client_data1)\n");
 		#endif
+
 		char parse_parameters_string[] = "lO|Oslz";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tool_id1, &bitmap1, php_wxBitmap_entry, &bitmap_disabled1, php_wxBitmap_entry, &help_string1, &help_string_len1, &kind1, &client_data1 ) == SUCCESS)
 		{
@@ -14929,6 +15192,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8));
 
@@ -14964,6 +15228,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8), (wxRibbonButtonKind) kind0) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id0, *(wxBitmap*) object_pointer0_1, wxString(help_string0, wxConvUTF8), (wxRibbonButtonKind) kind0);
 
@@ -15006,6 +15271,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return2;
 				value_to_return2 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1);
 
@@ -15041,6 +15307,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return3;
 				value_to_return3 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2);
 
@@ -15077,6 +15344,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8)) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return4;
 				value_to_return4 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8));
 
@@ -15113,6 +15381,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8), (wxRibbonButtonKind) kind1) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return5;
 				value_to_return5 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8), (wxRibbonButtonKind) kind1);
 
@@ -15149,6 +15418,7 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8), (wxRibbonButtonKind) kind1, (wxObject*) object_pointer1_5) to return object pointer\n\n");
 				#endif
+
 				wxRibbonToolBarToolBase_php* value_to_return6;
 				value_to_return6 = (wxRibbonToolBarToolBase_php*) ((wxRibbonToolBar_php*)_this)->AddTool((int) tool_id1, *(wxBitmap*) object_pointer1_1, *(wxBitmap*) object_pointer1_2, wxString(help_string1, wxConvUTF8), (wxRibbonButtonKind) kind1, (wxObject*) object_pointer1_5);
 
@@ -15265,6 +15535,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
@@ -15331,6 +15602,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0));
 
 				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 1 argument(s)");
@@ -15343,6 +15615,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0));
 
 				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 2 argument(s)");
@@ -15355,6 +15628,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2));
 
 				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 3 argument(s)");
@@ -15368,6 +15642,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3));
 
 				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 4 argument(s)");
@@ -15382,6 +15657,7 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxRibbonToolBar::Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxRibbonToolBar_php*)_this)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0));
 
 				references->AddReference(parent0, "wxRibbonToolBar::Create at call with 5 argument(s)");
@@ -15469,6 +15745,7 @@ PHP_METHOD(php_wxRibbonToolBar, SetRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&nMin0, &nMax0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &nMin0, &nMax0 ) == SUCCESS)
 		{
@@ -15487,6 +15764,7 @@ PHP_METHOD(php_wxRibbonToolBar, SetRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::SetRows((int) nMin0)\n\n");
 				#endif
+
 				((wxRibbonToolBar_php*)_this)->SetRows((int) nMin0);
 
 
@@ -15498,6 +15776,7 @@ PHP_METHOD(php_wxRibbonToolBar, SetRows)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxRibbonToolBar::SetRows((int) nMin0, (int) nMax0)\n\n");
 				#endif
+
 				((wxRibbonToolBar_php*)_this)->SetRows((int) nMin0, (int) nMax0);
 
 
@@ -15558,6 +15837,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -15570,6 +15850,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOl' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1)\n");
 		#endif
+
 		char parse_parameters_string[] = "z|lOOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1 ) == SUCCESS)
 		{
@@ -15636,6 +15917,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxRibbonToolBar_php();
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
@@ -15653,6 +15935,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
@@ -15664,6 +15947,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1)\n");
 				#endif
+
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
@@ -15675,6 +15959,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
@@ -15687,6 +15972,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3)\n");
 				#endif
+
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
@@ -15700,6 +15986,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1)\n");
 				#endif
+
 				_this = new wxRibbonToolBar_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, *(wxPoint*) object_pointer1_2, *(wxSize*) object_pointer1_3, (long) style1);
 
 				((wxRibbonToolBar_php*) _this)->references.Initialize();
@@ -15728,7 +16015,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonToolBar::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonToolBar::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG

@@ -91,6 +91,7 @@ void php_wxTextAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxTextAttr::wxTextAttr(wxTextAttr attr)
    Constructors. */
 PHP_METHOD(php_wxTextAttr, __construct)
@@ -136,6 +137,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&attr0, php_wxTextAttr_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, php_wxTextAttr_entry ) == SUCCESS)
 		{
@@ -168,6 +170,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|OOl' (&colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &alignment1)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|OOl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &alignment1 ) == SUCCESS)
 		{
@@ -232,6 +235,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload2_called = true;
 		already_called = true;
 	}
@@ -246,6 +250,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxTextAttr*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxTextAttr_php(*(wxTextAttr*) object_pointer0_0);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
@@ -264,6 +269,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0)\n");
 				#endif
+
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
@@ -275,6 +281,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1)\n");
 				#endif
+
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
@@ -287,6 +294,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2)\n");
 				#endif
+
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
@@ -300,6 +308,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1)\n");
 				#endif
+
 				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1);
 
 				((wxTextAttr_php*) _this)->references.Initialize();
@@ -320,6 +329,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxTextAttr_php();
 
 				((wxTextAttr_php*) _this)->references.Initialize();
@@ -345,7 +355,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTextAttr::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTextAttr::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -420,6 +430,7 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&url0, &url_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0 ) == SUCCESS)
 		{
@@ -438,6 +449,7 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetURL(wxString(url0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetURL(wxString(url0, wxConvUTF8));
 
 
@@ -521,6 +533,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&effects0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &effects0 ) == SUCCESS)
 		{
@@ -539,6 +552,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetTextEffects((int) effects0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetTextEffects((int) effects0);
 
 
@@ -622,6 +636,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -640,6 +655,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetTextEffectFlags((int) flags0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetTextEffectFlags((int) flags0);
 
 
@@ -724,6 +740,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colText0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -758,6 +775,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetTextColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colText0, "wxTextAttr::SetTextColour at call with 1 argument(s)");
@@ -842,6 +860,7 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indent0 ) == SUCCESS)
 		{
@@ -860,6 +879,7 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetRightIndent((int) indent0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetRightIndent((int) indent0);
 
 
@@ -944,6 +964,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -962,6 +983,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetParagraphStyleName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetParagraphStyleName(wxString(name0, wxConvUTF8));
 
 
@@ -1045,6 +1067,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&spacing0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &spacing0 ) == SUCCESS)
 		{
@@ -1063,6 +1086,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetParagraphSpacingBefore((int) spacing0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetParagraphSpacingBefore((int) spacing0);
 
 
@@ -1146,6 +1170,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&spacing0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &spacing0 ) == SUCCESS)
 		{
@@ -1164,6 +1189,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetParagraphSpacingAfter((int) spacing0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetParagraphSpacingAfter((int) spacing0);
 
 
@@ -1247,6 +1273,7 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&level0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &level0 ) == SUCCESS)
 		{
@@ -1265,6 +1292,7 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetOutlineLevel((int) level0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetOutlineLevel((int) level0);
 
 
@@ -1349,6 +1377,7 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -1367,6 +1396,7 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetListStyleName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetListStyleName(wxString(name0, wxConvUTF8));
 
 
@@ -1450,6 +1480,7 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&spacing0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &spacing0 ) == SUCCESS)
 		{
@@ -1468,6 +1499,7 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetLineSpacing((int) spacing0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetLineSpacing((int) spacing0);
 
 
@@ -1552,6 +1584,7 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&indent0, &subIndent0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indent0, &subIndent0 ) == SUCCESS)
 		{
@@ -1570,6 +1603,7 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetLeftIndent((int) indent0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetLeftIndent((int) indent0);
 
 
@@ -1581,6 +1615,7 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetLeftIndent((int) indent0, (int) subIndent0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetLeftIndent((int) indent0, (int) subIndent0);
 
 
@@ -1664,6 +1699,7 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&fontWeight0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fontWeight0 ) == SUCCESS)
 		{
@@ -1682,6 +1718,7 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontWeight((wxFontWeight) fontWeight0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontWeight((wxFontWeight) fontWeight0);
 
 
@@ -1765,6 +1802,7 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&underlined0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &underlined0 ) == SUCCESS)
 		{
@@ -1783,6 +1821,7 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontUnderlined(underlined0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontUnderlined(underlined0);
 
 
@@ -1866,6 +1905,7 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&fontStyle0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fontStyle0 ) == SUCCESS)
 		{
@@ -1884,6 +1924,7 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontStyle((wxFontStyle) fontStyle0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontStyle((wxFontStyle) fontStyle0);
 
 
@@ -1967,6 +2008,7 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pointSize0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pointSize0 ) == SUCCESS)
 		{
@@ -1985,6 +2027,7 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontSize((int) pointSize0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontSize((int) pointSize0);
 
 
@@ -2071,6 +2114,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|z' (&style0, php_wxTextAttr_entry, &compareWith0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, php_wxTextAttr_entry, &compareWith0 ) == SUCCESS)
 		{
@@ -2121,6 +2165,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::Apply(*(wxTextAttr*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->Apply(*(wxTextAttr*) object_pointer0_0));
 
 				references->AddReference(style0, "wxTextAttr::Apply at call with 1 argument(s)");
@@ -2133,6 +2178,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
 
 				references->AddReference(style0, "wxTextAttr::Apply at call with 2 argument(s)");
@@ -2217,6 +2263,7 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2231,6 +2278,7 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetAlignment())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetAlignment());
 
 
@@ -2313,6 +2361,7 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2327,6 +2376,7 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::GetBackgroundColour() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				value_to_return0 = (wxColour_php*) &((wxTextAttr_php*)_this)->GetBackgroundColour();
 
@@ -2429,6 +2479,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2443,6 +2494,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetBulletFont().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetBulletFont();
 				char* temp_string0;
@@ -2531,6 +2583,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2545,6 +2598,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetBulletName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetBulletName();
 				char* temp_string0;
@@ -2633,6 +2687,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2647,6 +2702,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetBulletNumber())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetBulletNumber());
 
 
@@ -2729,6 +2785,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2743,6 +2800,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetBulletStyle())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetBulletStyle());
 
 
@@ -2825,6 +2883,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2839,6 +2898,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetBulletText().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetBulletText();
 				char* temp_string0;
@@ -2927,6 +2987,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2941,6 +3002,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetCharacterStyleName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetCharacterStyleName();
 				char* temp_string0;
@@ -3029,6 +3091,7 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3043,6 +3106,7 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFlags());
 
 
@@ -3125,6 +3189,7 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3139,6 +3204,7 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::GetFont() to return new object\n\n");
 				#endif
+
 				wxFont value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetFont();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
@@ -3229,6 +3295,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&font0, php_wxFont_entry, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
@@ -3263,6 +3330,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontAttributes(*(wxFont*) object_pointer0_0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontAttributes(*(wxFont*) object_pointer0_0));
 
 				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 1 argument(s)");
@@ -3275,6 +3343,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
 
 				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 2 argument(s)");
@@ -3358,6 +3427,7 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3372,6 +3442,7 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontEncoding())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontEncoding());
 
 
@@ -3454,6 +3525,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3468,6 +3540,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetFontFaceName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetFontFaceName();
 				char* temp_string0;
@@ -3556,6 +3629,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3570,6 +3644,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontFamily())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontFamily());
 
 
@@ -3652,6 +3727,7 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3666,6 +3742,7 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontSize())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontSize());
 
 
@@ -3748,6 +3825,7 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3762,6 +3840,7 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontStyle())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontStyle());
 
 
@@ -3844,6 +3923,7 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3858,6 +3938,7 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontUnderlined())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontUnderlined());
 
 
@@ -3940,6 +4021,7 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3954,6 +4036,7 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontWeight())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontWeight());
 
 
@@ -4036,6 +4119,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4050,6 +4134,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetLeftIndent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetLeftIndent());
 
 
@@ -4132,6 +4217,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4146,6 +4232,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetLeftSubIndent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetLeftSubIndent());
 
 
@@ -4228,6 +4315,7 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4242,6 +4330,7 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetLineSpacing())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetLineSpacing());
 
 
@@ -4324,6 +4413,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4338,6 +4428,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetListStyleName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetListStyleName();
 				char* temp_string0;
@@ -4426,6 +4517,7 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4440,6 +4532,7 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetOutlineLevel())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetOutlineLevel());
 
 
@@ -4522,6 +4615,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4536,6 +4630,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetParagraphSpacingAfter())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetParagraphSpacingAfter());
 
 
@@ -4618,6 +4713,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4632,6 +4728,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetParagraphSpacingBefore())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetParagraphSpacingBefore());
 
 
@@ -4714,6 +4811,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4728,6 +4826,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetParagraphStyleName().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetParagraphStyleName();
 				char* temp_string0;
@@ -4816,6 +4915,7 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4830,6 +4930,7 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetRightIndent())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetRightIndent());
 
 
@@ -4912,6 +5013,7 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4926,6 +5028,7 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::GetTextColour() to return object reference\n\n");
 				#endif
+
 				wxColour_php* value_to_return0;
 				value_to_return0 = (wxColour_php*) &((wxTextAttr_php*)_this)->GetTextColour();
 
@@ -5028,6 +5131,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5042,6 +5146,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetTextEffectFlags())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetTextEffectFlags());
 
 
@@ -5124,6 +5229,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5138,6 +5244,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetTextEffects())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetTextEffects());
 
 
@@ -5220,6 +5327,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5234,6 +5342,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxTextAttr::GetURL().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)_this)->GetURL();
 				char* temp_string0;
@@ -5322,6 +5431,7 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5336,6 +5446,7 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasAlignment())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasAlignment());
 
 
@@ -5418,6 +5529,7 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5432,6 +5544,7 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBackgroundColour())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBackgroundColour());
 
 
@@ -5514,6 +5627,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5528,6 +5642,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletName())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletName());
 
 
@@ -5610,6 +5725,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5624,6 +5740,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletNumber())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletNumber());
 
 
@@ -5706,6 +5823,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5720,6 +5838,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletStyle())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletStyle());
 
 
@@ -5802,6 +5921,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5816,6 +5936,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletText())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletText());
 
 
@@ -5898,6 +6019,7 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5912,6 +6034,7 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasCharacterStyleName())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasCharacterStyleName());
 
 
@@ -5995,6 +6118,7 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flag0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flag0 ) == SUCCESS)
 		{
@@ -6013,6 +6137,7 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFlag((long) flag0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFlag((long) flag0));
 
 
@@ -6095,6 +6220,7 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6109,6 +6235,7 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFont())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFont());
 
 
@@ -6191,6 +6318,7 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6205,6 +6333,7 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontEncoding())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontEncoding());
 
 
@@ -6287,6 +6416,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6301,6 +6431,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontFaceName())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontFaceName());
 
 
@@ -6383,6 +6514,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6397,6 +6529,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontFamily())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontFamily());
 
 
@@ -6479,6 +6612,7 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6493,6 +6627,7 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontItalic())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontItalic());
 
 
@@ -6575,6 +6710,7 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6589,6 +6725,7 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontSize())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontSize());
 
 
@@ -6671,6 +6808,7 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6685,6 +6823,7 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontUnderlined())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontUnderlined());
 
 
@@ -6767,6 +6906,7 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6781,6 +6921,7 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontWeight())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontWeight());
 
 
@@ -6863,6 +7004,7 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6877,6 +7019,7 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasLeftIndent())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasLeftIndent());
 
 
@@ -6959,6 +7102,7 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -6973,6 +7117,7 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasLineSpacing())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasLineSpacing());
 
 
@@ -7055,6 +7200,7 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7069,6 +7215,7 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasListStyleName())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasListStyleName());
 
 
@@ -7151,6 +7298,7 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7165,6 +7313,7 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasOutlineLevel())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasOutlineLevel());
 
 
@@ -7247,6 +7396,7 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7261,6 +7411,7 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasPageBreak())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasPageBreak());
 
 
@@ -7343,6 +7494,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7357,6 +7509,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphSpacingAfter())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasParagraphSpacingAfter());
 
 
@@ -7439,6 +7592,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7453,6 +7607,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphSpacingBefore())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasParagraphSpacingBefore());
 
 
@@ -7535,6 +7690,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7549,6 +7705,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphStyleName())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasParagraphStyleName());
 
 
@@ -7631,6 +7788,7 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7645,6 +7803,7 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasRightIndent())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasRightIndent());
 
 
@@ -7727,6 +7886,7 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7741,6 +7901,7 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasTabs())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasTabs());
 
 
@@ -7823,6 +7984,7 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7837,6 +7999,7 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasTextColour())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasTextColour());
 
 
@@ -7919,6 +8082,7 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -7933,6 +8097,7 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasTextEffects())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasTextEffects());
 
 
@@ -8015,6 +8180,7 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8029,6 +8195,7 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasURL())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasURL());
 
 
@@ -8111,6 +8278,7 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8125,6 +8293,7 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::IsCharacterStyle())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->IsCharacterStyle());
 
 
@@ -8207,6 +8376,7 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8221,6 +8391,7 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::IsDefault())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->IsDefault());
 
 
@@ -8303,6 +8474,7 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -8317,6 +8489,7 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxTextAttr::IsParagraphStyle())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->IsParagraphStyle());
 
 
@@ -8407,6 +8580,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&overlay0, php_wxTextAttr_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &overlay0, php_wxTextAttr_entry ) == SUCCESS)
 		{
@@ -8439,6 +8613,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OO' (&base1, php_wxTextAttr_entry, &overlay1, php_wxTextAttr_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "OO";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &base1, php_wxTextAttr_entry, &overlay1, php_wxTextAttr_entry ) == SUCCESS)
 		{
@@ -8489,6 +8664,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::Merge(*(wxTextAttr*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->Merge(*(wxTextAttr*) object_pointer0_0);
 
 				references->AddReference(overlay0, "wxTextAttr::Merge at call with 1 argument(s)");
@@ -8509,6 +8685,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				php_printf("Static ");
 				php_printf("Executing wxTextAttr::Merge(*(wxTextAttr*) object_pointer1_0, *(wxTextAttr*) object_pointer1_1) to return new object\n\n");
 				#endif
+
 				wxTextAttr value_to_return2;
 				value_to_return2 = wxTextAttr::Merge(*(wxTextAttr*) object_pointer1_0, *(wxTextAttr*) object_pointer1_1);
 				void* ptr = safe_emalloc(1, sizeof(wxTextAttr_php), 0);
@@ -8599,6 +8776,7 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alignment0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alignment0 ) == SUCCESS)
 		{
@@ -8617,6 +8795,7 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetAlignment((wxTextAttrAlignment) alignment0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetAlignment((wxTextAttrAlignment) alignment0);
 
 
@@ -8701,6 +8880,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colBack0, php_wxColour_entry)\n");
 		#endif
+
 		char parse_parameters_string[] = "O";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
@@ -8735,6 +8915,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetBackgroundColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colBack0, "wxTextAttr::SetBackgroundColour at call with 1 argument(s)");
@@ -8820,6 +9001,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&font0, &font_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, &font_len0 ) == SUCCESS)
 		{
@@ -8838,6 +9020,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetBulletFont(wxString(font0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetBulletFont(wxString(font0, wxConvUTF8));
 
 
@@ -8922,6 +9105,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -8940,6 +9124,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetBulletName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetBulletName(wxString(name0, wxConvUTF8));
 
 
@@ -9023,6 +9208,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&n0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
 		{
@@ -9041,6 +9227,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetBulletNumber((int) n0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetBulletNumber((int) n0);
 
 
@@ -9124,6 +9311,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
@@ -9142,6 +9330,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetBulletStyle((int) style0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetBulletStyle((int) style0);
 
 
@@ -9226,6 +9415,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
@@ -9244,6 +9434,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetBulletText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetBulletText(wxString(text0, wxConvUTF8));
 
 
@@ -9328,6 +9519,7 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
@@ -9346,6 +9538,7 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetCharacterStyleName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetCharacterStyleName(wxString(name0, wxConvUTF8));
 
 
@@ -9429,6 +9622,7 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
@@ -9447,6 +9641,7 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFlags((long) flags0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFlags((long) flags0);
 
 
@@ -9532,6 +9727,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&font0, php_wxFont_entry, &flags0)\n");
 		#endif
+
 		char parse_parameters_string[] = "O|l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
@@ -9566,6 +9762,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxTextAttr::SetFont at call with 1 argument(s)");
@@ -9578,6 +9775,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0, (int) flags0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
 
 				references->AddReference(font0, "wxTextAttr::SetFont at call with 2 argument(s)");
@@ -9662,6 +9860,7 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&encoding0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &encoding0 ) == SUCCESS)
 		{
@@ -9680,6 +9879,7 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontEncoding((wxFontEncoding) encoding0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontEncoding((wxFontEncoding) encoding0);
 
 
@@ -9764,6 +9964,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&faceName0, &faceName_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &faceName0, &faceName_len0 ) == SUCCESS)
 		{
@@ -9782,6 +9983,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontFaceName(wxString(faceName0, wxConvUTF8))\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontFaceName(wxString(faceName0, wxConvUTF8));
 
 
@@ -9865,6 +10067,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&family0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &family0 ) == SUCCESS)
 		{
@@ -9883,6 +10086,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetFontFamily((wxFontFamily) family0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetFontFamily((wxFontFamily) family0);
 
 
@@ -9966,6 +10170,7 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&pageBreak0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageBreak0 ) == SUCCESS)
 		{
@@ -9984,6 +10189,7 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetPageBreak()\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetPageBreak();
 
 
@@ -9995,6 +10201,7 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxTextAttr::SetPageBreak(pageBreak0)\n\n");
 				#endif
+
 				((wxTextAttr_php*)_this)->SetPageBreak(pageBreak0);
 
 

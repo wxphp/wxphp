@@ -44,7 +44,7 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("msvcrt.lib", "wxwidgets") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\include") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\setup.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\lib\\vc_lib\\mswu") &&
-		CHECK_HEADER_ADD_INCLUDE("php_wxwidgets.h", "CFLAGS_WXWIDGETS", configure_module_dirname + "\\includes")) {
+		CHECK_HEADER_ADD_INCLUDE("references.h", "CFLAGS_WXWIDGETS", configure_module_dirname + "\\includes")) {
 		
 		//Compiler flags
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/Ox ");
@@ -79,7 +79,11 @@ if (PHP_WXWIDGETS != "no") {
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/INCREMENTAL:NO");
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/SUBSYSTEM:WINDOWS");
 		
-		EXTENSION("wxwidgets", "src\\app.cpp src\\references.cpp src\\appmanagement.cpp src\\cfg.cpp src\\bookctrl.cpp src\\dnd.cpp src\\cmndlg.cpp src\\containers.cpp src\\ctrl.cpp src\\data.cpp src\\dc.cpp src\\docview.cpp src\\events.cpp src\\file.cpp src\\gdi.cpp src\\grid.cpp src\\html.cpp src\\help.cpp src\\logging.cpp src\\managedwnd.cpp src\\menus.cpp src\\misc.cpp src\\miscwnd.cpp src\\media.cpp src\\pickers.cpp src\\printing.cpp src\\ribbon.cpp src\\richtext.cpp src\\rtti.cpp src\\stc.cpp src\\streams.cpp src\\threading.cpp src\\validator.cpp src\\vfs.cpp src\\webview.cpp src\\aui.cpp src\\winlayout.cpp src\\xml.cpp src\\xrc.cpp src\\dvc.cpp src\\others.cpp src\\functions.cpp src\\wxwidgets.cpp", true, null, null, configure_module_dirname);
+		//Declare extension
+		EXTENSION("wxwidgets", "wxwidgets.cpp", true, null, null);
+		
+		//Add extra sources
+		ADD_SOURCES(configure_module_dirname + "\\src", "app.cpp references.cpp appmanagement.cpp cfg.cpp bookctrl.cpp dnd.cpp cmndlg.cpp containers.cpp ctrl.cpp data.cpp dc.cpp docview.cpp events.cpp file.cpp gdi.cpp grid.cpp html.cpp help.cpp logging.cpp managedwnd.cpp menus.cpp misc.cpp miscwnd.cpp media.cpp pickers.cpp printing.cpp ribbon.cpp richtext.cpp rtti.cpp stc.cpp streams.cpp threading.cpp validator.cpp vfs.cpp webview.cpp aui.cpp winlayout.cpp xml.cpp xrc.cpp dvc.cpp others.cpp functions.cpp", "wxwidgets");
 	}
 	else {
 		WARNING("wxWidgets not enabled; libraries and headers not found");

@@ -91,6 +91,7 @@ void php_wxLogWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto wxFrame wxLogWindow::GetFrame()
    Returns the associated log frame window. */
 PHP_METHOD(php_wxLogWindow, GetFrame)
@@ -155,6 +156,7 @@ PHP_METHOD(php_wxLogWindow, GetFrame)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -169,6 +171,7 @@ PHP_METHOD(php_wxLogWindow, GetFrame)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogWindow::GetFrame() to return object pointer\n\n");
 				#endif
+
 				wxFrame_php* value_to_return0;
 				value_to_return0 = (wxFrame_php*) ((wxLogWindow_php*)_this)->GetFrame();
 
@@ -545,6 +548,7 @@ PHP_METHOD(php_wxLogWindow, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&show0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
@@ -563,6 +567,7 @@ PHP_METHOD(php_wxLogWindow, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogWindow::Show()\n\n");
 				#endif
+
 				((wxLogWindow_php*)_this)->Show();
 
 
@@ -574,6 +579,7 @@ PHP_METHOD(php_wxLogWindow, Show)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogWindow::Show(show0)\n\n");
 				#endif
+
 				((wxLogWindow_php*)_this)->Show(show0);
 
 
@@ -630,6 +636,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|bb' (&pParent0, &szTitle0, &szTitle_len0, &show0, &passToOld0)\n");
 		#endif
+
 		char parse_parameters_string[] = "zs|bb";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pParent0, &szTitle0, &szTitle_len0, &show0, &passToOld0 ) == SUCCESS)
 		{
@@ -664,6 +671,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8))\n");
 				#endif
+
 				_this = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8));
 
 				((wxLogWindow_php*) _this)->references.Initialize();
@@ -675,6 +683,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0)\n");
 				#endif
+
 				_this = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0);
 
 				((wxLogWindow_php*) _this)->references.Initialize();
@@ -686,6 +695,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0, passToOld0)\n");
 				#endif
+
 				_this = new wxLogWindow_php((wxWindow*) object_pointer0_0, wxString(szTitle0, wxConvUTF8), show0, passToOld0);
 
 				((wxLogWindow_php*) _this)->references.Initialize();
@@ -712,7 +722,7 @@ PHP_METHOD(php_wxLogWindow, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogWindow::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogWindow::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -761,6 +771,7 @@ void php_wxLogChain_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxLogChain::DetachOldLog()
    Detaches the old log target so it won't be destroyed when the wxLogChain object is destroyed. */
 PHP_METHOD(php_wxLogChain, DetachOldLog)
@@ -833,6 +844,7 @@ PHP_METHOD(php_wxLogChain, DetachOldLog)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -847,6 +859,7 @@ PHP_METHOD(php_wxLogChain, DetachOldLog)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogChain::DetachOldLog()\n\n");
 				#endif
+
 				((wxLogChain_php*)_this)->DetachOldLog();
 
 
@@ -937,6 +950,7 @@ PHP_METHOD(php_wxLogChain, GetOldLog)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -951,6 +965,7 @@ PHP_METHOD(php_wxLogChain, GetOldLog)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogChain::GetOldLog() to return object pointer\n\n");
 				#endif
+
 				wxLog_php* value_to_return0;
 				value_to_return0 = (wxLog_php*) ((wxLogChain_php*)_this)->GetOldLog();
 
@@ -1064,6 +1079,7 @@ PHP_METHOD(php_wxLogChain, IsPassingMessages)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1078,6 +1094,7 @@ PHP_METHOD(php_wxLogChain, IsPassingMessages)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_BOOL(wxLogChain::IsPassingMessages())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, ((wxLogChain_php*)_this)->IsPassingMessages());
 
 
@@ -1169,6 +1186,7 @@ PHP_METHOD(php_wxLogChain, PassMessages)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&passMessages0)\n");
 		#endif
+
 		char parse_parameters_string[] = "b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &passMessages0 ) == SUCCESS)
 		{
@@ -1187,6 +1205,7 @@ PHP_METHOD(php_wxLogChain, PassMessages)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogChain::PassMessages(passMessages0)\n\n");
 				#endif
+
 				((wxLogChain_php*)_this)->PassMessages(passMessages0);
 
 
@@ -1279,6 +1298,7 @@ PHP_METHOD(php_wxLogChain, SetLog)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&logger0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logger0 ) == SUCCESS)
 		{
@@ -1313,6 +1333,7 @@ PHP_METHOD(php_wxLogChain, SetLog)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogChain::SetLog((wxLog*) object_pointer0_0)\n\n");
 				#endif
+
 				((wxLogChain_php*)_this)->SetLog((wxLog*) object_pointer0_0);
 
 				references->AddReference(logger0, "wxLogChain::SetLog at call with 1 argument(s)");
@@ -1366,6 +1387,7 @@ PHP_METHOD(php_wxLogChain, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&logger0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logger0 ) == SUCCESS)
 		{
@@ -1400,6 +1422,7 @@ PHP_METHOD(php_wxLogChain, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxLog*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxLogChain_php((wxLog*) object_pointer0_0);
 
 				((wxLogChain_php*) _this)->references.Initialize();
@@ -1426,7 +1449,7 @@ PHP_METHOD(php_wxLogChain, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogChain::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogChain::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1475,6 +1498,7 @@ void php_wxLogGui_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxLogGui::Flush()
    Presents the accumulated log messages, if any, to the user. */
 PHP_METHOD(php_wxLogGui, Flush)
@@ -1539,6 +1563,7 @@ PHP_METHOD(php_wxLogGui, Flush)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1553,6 +1578,7 @@ PHP_METHOD(php_wxLogGui, Flush)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogGui::Flush()\n\n");
 				#endif
+
 				((wxLogGui_php*)_this)->Flush();
 
 
@@ -1603,6 +1629,7 @@ PHP_METHOD(php_wxLogGui, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1617,6 +1644,7 @@ PHP_METHOD(php_wxLogGui, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxLogGui_php();
 
 				((wxLogGui_php*) _this)->references.Initialize();
@@ -1642,7 +1670,7 @@ PHP_METHOD(php_wxLogGui, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogGui::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogGui::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1769,6 +1797,7 @@ void php_wxLogBuffer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxLogBuffer::Flush()
    Shows all the messages collected so far to the user (using a message box in the GUI applications or by printing them out to the console in text mode) and clears the internal buffer. */
 PHP_METHOD(php_wxLogBuffer, Flush)
@@ -1833,6 +1862,7 @@ PHP_METHOD(php_wxLogBuffer, Flush)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1847,6 +1877,7 @@ PHP_METHOD(php_wxLogBuffer, Flush)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLogBuffer::Flush()\n\n");
 				#endif
+
 				((wxLogBuffer_php*)_this)->Flush();
 
 
@@ -1929,6 +1960,7 @@ PHP_METHOD(php_wxLogBuffer, GetBuffer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -1943,6 +1975,7 @@ PHP_METHOD(php_wxLogBuffer, GetBuffer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_STRING(wxLogBuffer::GetBuffer().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = ((wxLogBuffer_php*)_this)->GetBuffer();
 				char* temp_string0;
@@ -1999,6 +2032,7 @@ PHP_METHOD(php_wxLogBuffer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2013,6 +2047,7 @@ PHP_METHOD(php_wxLogBuffer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxLogBuffer_php();
 
 				((wxLogBuffer_php*) _this)->references.Initialize();
@@ -2038,7 +2073,7 @@ PHP_METHOD(php_wxLogBuffer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogBuffer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogBuffer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2087,6 +2122,7 @@ void php_wxLogInterposer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+
 /* {{{ proto  wxLogInterposer::wxLogInterposer()
    The default constructor installs this object as the current active log target. */
 PHP_METHOD(php_wxLogInterposer, __construct)
@@ -2119,6 +2155,7 @@ PHP_METHOD(php_wxLogInterposer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2133,6 +2170,7 @@ PHP_METHOD(php_wxLogInterposer, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct()\n");
 				#endif
+
 				_this = new wxLogInterposer_php();
 
 				((wxLogInterposer_php*) _this)->references.Initialize();
@@ -2158,7 +2196,7 @@ PHP_METHOD(php_wxLogInterposer, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogInterposer::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogInterposer::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2207,6 +2245,7 @@ void php_wxLogTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxLogTextCtrl::wxLogTextCtrl(wxTextCtrl &pTextCtrl)
    Constructs a log target which sends all the log messages to the given text control. */
 PHP_METHOD(php_wxLogTextCtrl, __construct)
@@ -2241,6 +2280,7 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&pTextCtrl0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pTextCtrl0 ) == SUCCESS)
 		{
@@ -2275,6 +2315,7 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing __construct((wxTextCtrl*) object_pointer0_0)\n");
 				#endif
+
 				_this = new wxLogTextCtrl_php((wxTextCtrl*) object_pointer0_0);
 
 				((wxLogTextCtrl_php*) _this)->references.Initialize();
@@ -2301,7 +2342,7 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 	}
 	else
 	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogTextCtrl::__constructor\n");
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxLogTextCtrl::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2350,6 +2391,7 @@ void php_wxLog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+
 /* {{{ proto  wxLog::AddTraceMask(string mask)
    Add the mask to the list of allowed masks for wxLogTrace(). */
 PHP_METHOD(php_wxLog, AddTraceMask)
@@ -2440,6 +2482,7 @@ PHP_METHOD(php_wxLog, AddTraceMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&mask0, &mask_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mask0, &mask_len0 ) == SUCCESS)
 		{
@@ -2459,6 +2502,7 @@ PHP_METHOD(php_wxLog, AddTraceMask)
 				php_printf("Static ");
 				php_printf("Executing wxLog::AddTraceMask(wxString(mask0, wxConvUTF8))\n\n");
 				#endif
+
 				wxLog::AddTraceMask(wxString(mask0, wxConvUTF8));
 
 
@@ -2565,6 +2609,7 @@ PHP_METHOD(php_wxLog, ClearTraceMasks)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2580,6 +2625,7 @@ PHP_METHOD(php_wxLog, ClearTraceMasks)
 				php_printf("Static ");
 				php_printf("Executing wxLog::ClearTraceMasks()\n\n");
 				#endif
+
 				wxLog::ClearTraceMasks();
 
 
@@ -2686,6 +2732,7 @@ PHP_METHOD(php_wxLog, DisableTimestamp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -2701,6 +2748,7 @@ PHP_METHOD(php_wxLog, DisableTimestamp)
 				php_printf("Static ");
 				php_printf("Executing wxLog::DisableTimestamp()\n\n");
 				#endif
+
 				wxLog::DisableTimestamp();
 
 
@@ -2992,6 +3040,7 @@ PHP_METHOD(php_wxLog, DontCreateOnDemand)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3007,6 +3056,7 @@ PHP_METHOD(php_wxLog, DontCreateOnDemand)
 				php_printf("Static ");
 				php_printf("Executing wxLog::DontCreateOnDemand()\n\n");
 				#endif
+
 				wxLog::DontCreateOnDemand();
 
 
@@ -3114,6 +3164,7 @@ PHP_METHOD(php_wxLog, EnableLogging)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
@@ -3133,6 +3184,7 @@ PHP_METHOD(php_wxLog, EnableLogging)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::EnableLogging())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::EnableLogging());
 
 
@@ -3145,6 +3197,7 @@ PHP_METHOD(php_wxLog, EnableLogging)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::EnableLogging(enable0))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::EnableLogging(enable0));
 
 
@@ -3251,6 +3304,7 @@ PHP_METHOD(php_wxLog, Flush)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3265,6 +3319,7 @@ PHP_METHOD(php_wxLog, Flush)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing wxLog::Flush()\n\n");
 				#endif
+
 				if(parent_rsrc_type == le_wxLogChain)
 				{
 					((wxLogChain_php*)_this)->Flush();
@@ -3390,6 +3445,7 @@ PHP_METHOD(php_wxLog, FlushActive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3405,6 +3461,7 @@ PHP_METHOD(php_wxLog, FlushActive)
 				php_printf("Static ");
 				php_printf("Executing wxLog::FlushActive()\n\n");
 				#endif
+
 				wxLog::FlushActive();
 
 
@@ -3511,6 +3568,7 @@ PHP_METHOD(php_wxLog, GetActiveTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3526,6 +3584,7 @@ PHP_METHOD(php_wxLog, GetActiveTarget)
 				php_printf("Static ");
 				php_printf("Executing wxLog::GetActiveTarget() to return object pointer\n\n");
 				#endif
+
 				wxLog_php* value_to_return0;
 				value_to_return0 = (wxLog_php*) wxLog::GetActiveTarget();
 				if(value_to_return0 == NULL){
@@ -3651,6 +3710,7 @@ PHP_METHOD(php_wxLog, GetLogLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3666,6 +3726,7 @@ PHP_METHOD(php_wxLog, GetLogLevel)
 				php_printf("Static ");
 				php_printf("Executing RETURN_LONG(wxLog::GetLogLevel())\n\n");
 				#endif
+
 				ZVAL_LONG(return_value, wxLog::GetLogLevel());
 
 
@@ -3772,6 +3833,7 @@ PHP_METHOD(php_wxLog, GetRepetitionCounting)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3787,6 +3849,7 @@ PHP_METHOD(php_wxLog, GetRepetitionCounting)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::GetRepetitionCounting())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::GetRepetitionCounting());
 
 
@@ -3893,6 +3956,7 @@ PHP_METHOD(php_wxLog, GetTimestamp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -3908,6 +3972,7 @@ PHP_METHOD(php_wxLog, GetTimestamp)
 				php_printf("Static ");
 				php_printf("Executing RETURN_STRING(wxLog::GetTimestamp().fn_str(), 1)\n\n");
 				#endif
+
 				wxString value_to_return0;
 				value_to_return0 = wxLog::GetTimestamp();
 				char* temp_string0;
@@ -4020,6 +4085,7 @@ PHP_METHOD(php_wxLog, GetTraceMasks)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4035,6 +4101,7 @@ PHP_METHOD(php_wxLog, GetTraceMasks)
 				php_printf("Static ");
 				php_printf("Executing wxLog::GetTraceMasks() to return strings array\n\n");
 				#endif
+
 				wxArrayString value_to_return0;
 				value_to_return0 = wxLog::GetTraceMasks();
 				char* temp_string0;
@@ -4151,6 +4218,7 @@ PHP_METHOD(php_wxLog, GetVerbose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4166,6 +4234,7 @@ PHP_METHOD(php_wxLog, GetVerbose)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::GetVerbose())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::GetVerbose());
 
 
@@ -4274,6 +4343,7 @@ PHP_METHOD(php_wxLog, IsAllowedTraceMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&mask0, &mask_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mask0, &mask_len0 ) == SUCCESS)
 		{
@@ -4293,6 +4363,7 @@ PHP_METHOD(php_wxLog, IsAllowedTraceMask)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::IsAllowedTraceMask(wxString(mask0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::IsAllowedTraceMask(wxString(mask0, wxConvUTF8)));
 
 
@@ -4399,6 +4470,7 @@ PHP_METHOD(php_wxLog, IsEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4414,6 +4486,7 @@ PHP_METHOD(php_wxLog, IsEnabled)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::IsEnabled())\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::IsEnabled());
 
 
@@ -4523,6 +4596,7 @@ PHP_METHOD(php_wxLog, IsLevelEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&level0, &component0, &component_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "ls";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &level0, &component0, &component_len0 ) == SUCCESS)
 		{
@@ -4542,6 +4616,7 @@ PHP_METHOD(php_wxLog, IsLevelEnabled)
 				php_printf("Static ");
 				php_printf("Executing RETURN_BOOL(wxLog::IsLevelEnabled((wxLogLevel) level0, wxString(component0, wxConvUTF8)))\n\n");
 				#endif
+
 				ZVAL_BOOL(return_value, wxLog::IsLevelEnabled((wxLogLevel) level0, wxString(component0, wxConvUTF8)));
 
 
@@ -4650,6 +4725,7 @@ PHP_METHOD(php_wxLog, RemoveTraceMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&mask0, &mask_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mask0, &mask_len0 ) == SUCCESS)
 		{
@@ -4669,6 +4745,7 @@ PHP_METHOD(php_wxLog, RemoveTraceMask)
 				php_printf("Static ");
 				php_printf("Executing wxLog::RemoveTraceMask(wxString(mask0, wxConvUTF8))\n\n");
 				#endif
+
 				wxLog::RemoveTraceMask(wxString(mask0, wxConvUTF8));
 
 
@@ -4775,6 +4852,7 @@ PHP_METHOD(php_wxLog, Resume)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -4790,6 +4868,7 @@ PHP_METHOD(php_wxLog, Resume)
 				php_printf("Static ");
 				php_printf("Executing wxLog::Resume()\n\n");
 				#endif
+
 				wxLog::Resume();
 
 
@@ -4898,6 +4977,7 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&logtarget0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logtarget0 ) == SUCCESS)
 		{
@@ -4933,6 +5013,7 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetActiveTarget((wxLog*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxLog_php* value_to_return1;
 				value_to_return1 = (wxLog_php*) wxLog::SetActiveTarget((wxLog*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -5061,6 +5142,7 @@ PHP_METHOD(php_wxLog, SetComponentLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sl' (&component0, &component_len0, &level0)\n");
 		#endif
+
 		char parse_parameters_string[] = "sl";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &component0, &component_len0, &level0 ) == SUCCESS)
 		{
@@ -5080,6 +5162,7 @@ PHP_METHOD(php_wxLog, SetComponentLevel)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetComponentLevel(wxString(component0, wxConvUTF8), (wxLogLevel) level0)\n\n");
 				#endif
+
 				wxLog::SetComponentLevel(wxString(component0, wxConvUTF8), (wxLogLevel) level0);
 
 
@@ -5187,6 +5270,7 @@ PHP_METHOD(php_wxLog, SetLogLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&logLevel0)\n");
 		#endif
+
 		char parse_parameters_string[] = "l";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logLevel0 ) == SUCCESS)
 		{
@@ -5206,6 +5290,7 @@ PHP_METHOD(php_wxLog, SetLogLevel)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetLogLevel((wxLogLevel) logLevel0)\n\n");
 				#endif
+
 				wxLog::SetLogLevel((wxLogLevel) logLevel0);
 
 
@@ -5313,6 +5398,7 @@ PHP_METHOD(php_wxLog, SetRepetitionCounting)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&repetCounting0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &repetCounting0 ) == SUCCESS)
 		{
@@ -5332,6 +5418,7 @@ PHP_METHOD(php_wxLog, SetRepetitionCounting)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetRepetitionCounting()\n\n");
 				#endif
+
 				wxLog::SetRepetitionCounting();
 
 
@@ -5344,6 +5431,7 @@ PHP_METHOD(php_wxLog, SetRepetitionCounting)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetRepetitionCounting(repetCounting0)\n\n");
 				#endif
+
 				wxLog::SetRepetitionCounting(repetCounting0);
 
 
@@ -5452,6 +5540,7 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&logger0)\n");
 		#endif
+
 		char parse_parameters_string[] = "z";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &logger0 ) == SUCCESS)
 		{
@@ -5487,6 +5576,7 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetThreadActiveTarget((wxLog*) object_pointer0_0) to return object pointer\n\n");
 				#endif
+
 				wxLog_php* value_to_return1;
 				value_to_return1 = (wxLog_php*) wxLog::SetThreadActiveTarget((wxLog*) object_pointer0_0);
 				if(value_to_return1 == NULL){
@@ -5614,6 +5704,7 @@ PHP_METHOD(php_wxLog, SetTimestamp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&format0, &format_len0)\n");
 		#endif
+
 		char parse_parameters_string[] = "s";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, &format_len0 ) == SUCCESS)
 		{
@@ -5633,6 +5724,7 @@ PHP_METHOD(php_wxLog, SetTimestamp)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetTimestamp(wxString(format0, wxConvUTF8))\n\n");
 				#endif
+
 				wxLog::SetTimestamp(wxString(format0, wxConvUTF8));
 
 
@@ -5740,6 +5832,7 @@ PHP_METHOD(php_wxLog, SetVerbose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&verbose0)\n");
 		#endif
+
 		char parse_parameters_string[] = "|b";
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &verbose0 ) == SUCCESS)
 		{
@@ -5759,6 +5852,7 @@ PHP_METHOD(php_wxLog, SetVerbose)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetVerbose()\n\n");
 				#endif
+
 				wxLog::SetVerbose();
 
 
@@ -5771,6 +5865,7 @@ PHP_METHOD(php_wxLog, SetVerbose)
 				php_printf("Static ");
 				php_printf("Executing wxLog::SetVerbose(verbose0)\n\n");
 				#endif
+
 				wxLog::SetVerbose(verbose0);
 
 
@@ -5877,6 +5972,7 @@ PHP_METHOD(php_wxLog, Suspend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '' ()\n");
 		#endif
+
 		overload0_called = true;
 		already_called = true;
 	}
@@ -5892,6 +5988,7 @@ PHP_METHOD(php_wxLog, Suspend)
 				php_printf("Static ");
 				php_printf("Executing wxLog::Suspend()\n\n");
 				#endif
+
 				wxLog::Suspend();
 
 
