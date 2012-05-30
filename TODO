@@ -47,6 +47,11 @@ Short term TODO
 * Possibly declare char _wxResource[] = "wxResource" and other char
   strings passed to functions as const.
   
+* Add zend_error on event connect in case user passes wrong count of
+  arguments
+
+* Fix segmentation fault on wxGTK when no wxApp is initialized.
+  
   
 Long term TODO
 ==============================
