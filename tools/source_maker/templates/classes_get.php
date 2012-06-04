@@ -5,31 +5,27 @@ PHP_METHOD(php_<?=$class_name?>, __get)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
 	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
+	zo_<?=$class_name?>* current_object;
+	<?=$class_name?>_php* native_object;
 	
 	char* name;
 	int name_len;
 	
-	//Get pointer of object that called this method if not a static method
+	//Get native object of the php object that called the method
 	if (getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_<?=$class_name?>*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called <?=$class_name . "::" . $method_name ?>\n");
+			zend_error(E_ERROR, "Failed to get the native object for <?=$class_name . "::" . $method_name ?> call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
 		}
 	}
 	else

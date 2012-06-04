@@ -18,6 +18,53 @@
 #include <ApplicationServices/ApplicationServices.h>
 #endif
 
+BEGIN_EXTERN_C()
+void php_wxApp_free(void *object TSRMLS_DC) 
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxApp_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+    zo_wxApp* custom_object = (zo_wxApp*) object;
+    //delete custom_object->native_object;
+    zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
+}
+
+zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxApp_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+    zend_object_value retval;
+    zo_wxApp* custom_object;
+    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	zval *temp;
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXAPP_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxApp_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
+
 int wxAppWrapper::OnExit()
 {
 	zval *retval;
@@ -27,7 +74,7 @@ int wxAppWrapper::OnExit()
 	
 	if(call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC) == FAILURE)
 	{
-		wxMessageBox(_T("Failed Call!\n"));
+		wxMessageBox(_T("Failed Call to wxApp::OnExit()!\n"));
 	}
 	return 0;
 }
@@ -43,7 +90,7 @@ bool wxAppWrapper::OnInit()
 	
 	if(call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC) == FAILURE)
 	{
-		wxMessageBox(_T("Failed Call!\n"));
+		wxMessageBox(_T("Failed Call to wxApp::OnInit()!\n"));
 	}
 
 	return true;
@@ -57,23 +104,27 @@ IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
    Constructor. */
 PHP_METHOD(php_wxApp, __construct)
 {
-	wxAppWrapper* my = new wxAppWrapper();
-	my->phpObj = getThis();
+	zo_wxApp* current_object;
+	
+	wxAppWrapper* native_object = new wxAppWrapper();
+	native_object->phpObj = getThis();
 	
 	#ifdef ZTS
-	my->tsrm_ls = tsrm_ls;
+	native_object->tsrm_ls = tsrm_ls;
 	#endif
 	
-	add_property_resource(getThis(),(char *)"wxResource", zend_list_insert(my, le_wxApp));
+	current_object = (zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+	current_object->native_object = native_object;
+		
+	current_object->is_user_initialized = 1;
 }
+/* }}} */
 
 /* {{{ proto void wxApp::SetInstance(wxApp app) 
    Allows external code to modify global wxTheApp, but you should really know what you're doing if you call it.*/
 PHP_METHOD(php_wxApp, SetInstance)
 {
-	zval **tmp;
-	int id_to_find;
-	void *property;
 	zval *objvar;
 	
 	if(zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, (char *)"O", &objvar, php_wxApp_entry) == FAILURE)
@@ -81,16 +132,7 @@ PHP_METHOD(php_wxApp, SetInstance)
 		RETURN_NULL();
 	}
 	
-	if(zend_hash_find(Z_OBJPROP_P(objvar), (char *)"wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
-	{
-		return;
-	}
-	
-	id_to_find = Z_LVAL_PP(tmp);
-	
-	property = zend_list_find(id_to_find, &le_wxApp);
-	
-	wxApp::SetInstance((wxAppWrapper*) property);
+	wxApp::SetInstance((wxAppWrapper*) ((zo_wxApp*) zend_object_store_get_object(objvar TSRMLS_CC))->native_object);
         
     #ifdef __WXMAC__
     /* In order to correctly receive keyboard input we need to explicitly
@@ -104,38 +146,16 @@ PHP_METHOD(php_wxApp, SetInstance)
     TransformProcessType(&PSN,kProcessTransformToForegroundApplication);
     #endif
 }
+/* }}} */
 
 /* {{{ proto bool wxApp::Yield() */
 PHP_METHOD(php_wxApp, Yield)
 {
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	void *_this;
+	wxAppWrapper* native_object = ((zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC))->native_object;
 	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), (char *)"wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
-	{
+	if (zend_parse_parameters_none() == FAILURE)
 		return;
-	}
-	
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = zend_list_find(id_to_find, &rsrc_type);
-	
-	if (ZEND_NUM_ARGS()==0)
-	{
-		bool ret0;
-		int gr = ZEND_NUM_ARGS();
-		switch(gr)
-		{
-			case 0:
-				ret0 =  ((wxApp*)_this)->Yield();
-				break;
-			default:
-				break;
-		}
-		RETURN_BOOL(ret0)
-	}
 
+	RETURN_BOOL(((wxApp*)native_object)->Yield())
 }
-
-
+/* }}} */

@@ -13,13 +13,13 @@
 #define WXPHP_FILE_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_file_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxFFile;
-extern zend_class_entry *php_wxFFile_entry;
+extern zend_class_entry* php_wxFFile_entry;
 void php_wxFFile_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFFile_php: public wxFFile{
@@ -37,6 +37,19 @@ class wxFFile_php: public wxFFile{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFFile 
+{
+    zend_object zo;
+    wxFFile_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFFile_free(void *object TSRMLS_DC);
+zend_object_value php_wxFFile_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFile_functions[] = {
@@ -59,8 +72,7 @@ static zend_function_entry php_wxFFile_functions[] = {
 };
 #endif
 
-extern int le_wxFile;
-extern zend_class_entry *php_wxFile_entry;
+extern zend_class_entry* php_wxFile_entry;
 void php_wxFile_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFile_php: public wxFile{
@@ -79,6 +91,19 @@ class wxFile_php: public wxFile{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFile 
+{
+    zend_object zo;
+    wxFile_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFile_free(void *object TSRMLS_DC);
+zend_object_value php_wxFile_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFile_functions[] = {
@@ -106,8 +131,7 @@ static zend_function_entry php_wxFile_functions[] = {
 };
 #endif
 
-extern int le_wxPathList;
-extern zend_class_entry *php_wxPathList_entry;
+extern zend_class_entry* php_wxPathList_entry;
 void php_wxPathList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPathList_php: public wxPathList{
@@ -126,6 +150,19 @@ class wxPathList_php: public wxPathList{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxPathList 
+{
+    zend_object zo;
+    wxPathList_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxPathList_free(void *object TSRMLS_DC);
+zend_object_value php_wxPathList_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPathList_functions[] = {
 	PHP_ME(php_wxPathList, Add, NULL, ZEND_ACC_PUBLIC)
@@ -138,8 +175,7 @@ static zend_function_entry php_wxPathList_functions[] = {
 };
 #endif
 
-extern int le_wxFileName;
-extern zend_class_entry *php_wxFileName_entry;
+extern zend_class_entry* php_wxFileName_entry;
 void php_wxFileName_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileName_php: public wxFileName{
@@ -161,6 +197,19 @@ class wxFileName_php: public wxFileName{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileName 
+{
+    zend_object zo;
+    wxFileName_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileName_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileName_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileName_functions[] = {
@@ -241,8 +290,7 @@ static zend_function_entry php_wxFileName_functions[] = {
 };
 #endif
 
-extern int le_wxFSFile;
-extern zend_class_entry *php_wxFSFile_entry;
+extern zend_class_entry* php_wxFSFile_entry;
 void php_wxFSFile_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFSFile_php: public wxFSFile{
@@ -259,6 +307,19 @@ class wxFSFile_php: public wxFSFile{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFSFile 
+{
+    zend_object zo;
+    wxFSFile_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFSFile_free(void *object TSRMLS_DC);
+zend_object_value php_wxFSFile_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFSFile_functions[] = {
@@ -279,8 +340,7 @@ static zend_function_entry php_wxFSFile_functions[] = {
 };
 #endif
 
-extern int le_wxFileSystemWatcher;
-extern zend_class_entry *php_wxFileSystemWatcher_entry;
+extern zend_class_entry* php_wxFileSystemWatcher_entry;
 void php_wxFileSystemWatcher_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileSystemWatcher_php: public wxFileSystemWatcher{
@@ -297,6 +357,19 @@ class wxFileSystemWatcher_php: public wxFileSystemWatcher{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileSystemWatcher 
+{
+    zend_object zo;
+    wxFileSystemWatcher_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileSystemWatcher_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileSystemWatcher_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystemWatcher_functions[] = {
@@ -336,8 +409,7 @@ static zend_function_entry php_wxFileSystemWatcher_functions[] = {
 };
 #endif
 
-extern int le_wxStandardPaths;
-extern zend_class_entry *php_wxStandardPaths_entry;
+extern zend_class_entry* php_wxStandardPaths_entry;
 void php_wxStandardPaths_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxStandardPaths_php: public wxStandardPaths{
@@ -353,6 +425,19 @@ class wxStandardPaths_php: public wxStandardPaths{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxStandardPaths 
+{
+    zend_object zo;
+    wxStandardPaths_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxStandardPaths_free(void *object TSRMLS_DC);
+zend_object_value php_wxStandardPaths_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStandardPaths_functions[] = {

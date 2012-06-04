@@ -51,32 +51,33 @@
 #include "others.h"
 
 
-void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxFileHistory_free(void *object TSRMLS_DC) 
 {
+    zo_wxFileHistory* custom_object = (zo_wxFileHistory*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileHistory_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxFileHistory_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxFileHistory_php* object = static_cast<wxFileHistory_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -90,7 +91,43 @@ void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxFileHistory_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxFileHistory_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxFileHistory* custom_object;
+    custom_object = (zo_wxFileHistory*) emalloc(sizeof(zo_wxFileHistory));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFILEHISTORY_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileHistory_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxFileHistory::AddFileToHistory(string filename)
    Adds a file to the file history list, if the object has a pointer to an appropriate file menu. */
@@ -101,39 +138,38 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::AddFileToHistory\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::AddFileToHistory call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -178,7 +214,7 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 				php_printf("Executing wxFileHistory::AddFileToHistory(wxString(filename0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->AddFileToHistory(wxString(filename0, wxConvUTF8));
+				((wxFileHistory_php*)native_object)->AddFileToHistory(wxString(filename0, wxConvUTF8));
 
 
 				return;
@@ -205,39 +241,38 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::AddFilesToMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::AddFilesToMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -253,7 +288,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* menu1 = 0;
-	void* object_pointer1_0 = 0;
+	wxMenu* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -282,18 +317,19 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu1) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -313,7 +349,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 				php_printf("Executing wxFileHistory::AddFilesToMenu()\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->AddFilesToMenu();
+				((wxFileHistory_php*)native_object)->AddFilesToMenu();
 
 
 				return;
@@ -332,7 +368,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 				php_printf("Executing wxFileHistory::AddFilesToMenu((wxMenu*) object_pointer1_0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->AddFilesToMenu((wxMenu*) object_pointer1_0);
+				((wxFileHistory_php*)native_object)->AddFilesToMenu((wxMenu*) object_pointer1_0);
 
 				references->AddReference(menu1, "wxFileHistory::AddFilesToMenu at call with 1 argument(s)");
 
@@ -360,39 +396,38 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::GetBaseId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::GetBaseId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -431,7 +466,7 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 				php_printf("Executing RETURN_LONG(wxFileHistory::GetBaseId())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxFileHistory_php*)_this)->GetBaseId());
+				ZVAL_LONG(return_value, ((wxFileHistory_php*)native_object)->GetBaseId());
 
 
 				return;
@@ -458,39 +493,38 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::GetCount\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::GetCount call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -529,7 +563,7 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 				php_printf("Executing RETURN_LONG(wxFileHistory::GetCount())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxFileHistory_php*)_this)->GetCount());
+				ZVAL_LONG(return_value, ((wxFileHistory_php*)native_object)->GetCount());
 
 
 				return;
@@ -556,39 +590,38 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::GetHistoryFile\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::GetHistoryFile call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -633,7 +666,7 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxFileHistory_php*)_this)->GetHistoryFile((size_t) index0);
+				value_to_return1 = ((wxFileHistory_php*)native_object)->GetHistoryFile((size_t) index0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -665,39 +698,38 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::GetMaxFiles\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::GetMaxFiles call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -736,7 +768,7 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 				php_printf("Executing RETURN_LONG(wxFileHistory::GetMaxFiles())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxFileHistory_php*)_this)->GetMaxFiles());
+				ZVAL_LONG(return_value, ((wxFileHistory_php*)native_object)->GetMaxFiles());
 
 
 				return;
@@ -763,39 +795,38 @@ PHP_METHOD(php_wxFileHistory, Load)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::Load\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::Load call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -809,7 +840,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 	
 	//Parameters for overload 0
 	zval* config0 = 0;
-	void* object_pointer0_0 = 0;
+	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -825,18 +856,19 @@ PHP_METHOD(php_wxFileHistory, Load)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(config0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(config0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(config0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(config0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -856,7 +888,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 				php_printf("Executing wxFileHistory::Load(*(wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->Load(*(wxConfigBase*) object_pointer0_0);
+				((wxFileHistory_php*)native_object)->Load(*(wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(config0, "wxFileHistory::Load at call with 1 argument(s)");
 
@@ -884,39 +916,38 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::RemoveFileFromHistory\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::RemoveFileFromHistory call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -960,7 +991,7 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 				php_printf("Executing wxFileHistory::RemoveFileFromHistory((size_t) i0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->RemoveFileFromHistory((size_t) i0);
+				((wxFileHistory_php*)native_object)->RemoveFileFromHistory((size_t) i0);
 
 
 				return;
@@ -987,39 +1018,38 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::RemoveMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::RemoveMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1033,7 +1063,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	
 	//Parameters for overload 0
 	zval* menu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -1049,18 +1079,19 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -1080,7 +1111,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 				php_printf("Executing wxFileHistory::RemoveMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->RemoveMenu((wxMenu*) object_pointer0_0);
+				((wxFileHistory_php*)native_object)->RemoveMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxFileHistory::RemoveMenu at call with 1 argument(s)");
 
@@ -1108,39 +1139,38 @@ PHP_METHOD(php_wxFileHistory, Save)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::Save\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::Save call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1154,7 +1184,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 	
 	//Parameters for overload 0
 	zval* config0 = 0;
-	void* object_pointer0_0 = 0;
+	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -1170,18 +1200,19 @@ PHP_METHOD(php_wxFileHistory, Save)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(config0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(config0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(config0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(config0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -1201,7 +1232,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 				php_printf("Executing wxFileHistory::Save(*(wxConfigBase*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->Save(*(wxConfigBase*) object_pointer0_0);
+				((wxFileHistory_php*)native_object)->Save(*(wxConfigBase*) object_pointer0_0);
 
 				references->AddReference(config0, "wxFileHistory::Save at call with 1 argument(s)");
 
@@ -1229,39 +1260,38 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::SetBaseId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::SetBaseId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1305,7 +1335,7 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 				php_printf("Executing wxFileHistory::SetBaseId((wxWindowID) baseId0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->SetBaseId((wxWindowID) baseId0);
+				((wxFileHistory_php*)native_object)->SetBaseId((wxWindowID) baseId0);
 
 
 				return;
@@ -1332,39 +1362,38 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxphp_object_type current_object_type;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileHistory::UseMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileHistory::UseMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileHistory){
-				references = &((wxFileHistory_php*)_this)->references;
+			if(current_object_type == PHP_WXFILEHISTORY_TYPE){
+				references = &((wxFileHistory_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1378,7 +1407,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	
 	//Parameters for overload 0
 	zval* menu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -1394,18 +1423,19 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -1425,7 +1455,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 				php_printf("Executing wxFileHistory::UseMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxFileHistory_php*)_this)->UseMenu((wxMenu*) object_pointer0_0);
+				((wxFileHistory_php*)native_object)->UseMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxFileHistory::UseMenu at call with 1 argument(s)");
 
@@ -1453,17 +1483,15 @@ PHP_METHOD(php_wxFileHistory, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileHistory* current_object;
+	wxFileHistory_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	long maxFiles0;
@@ -1498,9 +1526,9 @@ PHP_METHOD(php_wxFileHistory, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxFileHistory_php();
+				native_object = new wxFileHistory_php();
 
-				((wxFileHistory_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 1:
@@ -1509,9 +1537,9 @@ PHP_METHOD(php_wxFileHistory, __construct)
 				php_printf("Executing __construct((size_t) maxFiles0)\n");
 				#endif
 
-				_this = new wxFileHistory_php((size_t) maxFiles0);
+				native_object = new wxFileHistory_php((size_t) maxFiles0);
 
-				((wxFileHistory_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 2:
@@ -1520,9 +1548,9 @@ PHP_METHOD(php_wxFileHistory, __construct)
 				php_printf("Executing __construct((size_t) maxFiles0, (wxWindowID) idBase0)\n");
 				#endif
 
-				_this = new wxFileHistory_php((size_t) maxFiles0, (wxWindowID) idBase0);
+				native_object = new wxFileHistory_php((size_t) maxFiles0, (wxWindowID) idBase0);
 
-				((wxFileHistory_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -1531,16 +1559,18 @@ PHP_METHOD(php_wxFileHistory, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxFileHistory);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxFileHistory_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxFileHistory_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxFileHistory_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else

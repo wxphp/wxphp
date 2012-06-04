@@ -13,13 +13,13 @@
 #define WXPHP_VFS_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_vfs_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxFileSystem;
-extern zend_class_entry *php_wxFileSystem_entry;
+extern zend_class_entry* php_wxFileSystem_entry;
 void php_wxFileSystem_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileSystem_php: public wxFileSystem{
@@ -36,6 +36,19 @@ class wxFileSystem_php: public wxFileSystem{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileSystem 
+{
+    zend_object zo;
+    wxFileSystem_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileSystem_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystem_functions[] = {
@@ -60,8 +73,7 @@ static zend_function_entry php_wxFileSystem_functions[] = {
 };
 #endif
 
-extern int le_wxFileSystemHandler;
-extern zend_class_entry *php_wxFileSystemHandler_entry;
+extern zend_class_entry* php_wxFileSystemHandler_entry;
 void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileSystemHandler_php: public wxFileSystemHandler{
@@ -80,6 +92,19 @@ class wxFileSystemHandler_php: public wxFileSystemHandler{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileSystemHandler 
+{
+    zend_object zo;
+    wxFileSystemHandler_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileSystemHandler_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileSystemHandler_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystemHandler_functions[] = {

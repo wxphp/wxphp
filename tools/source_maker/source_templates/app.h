@@ -13,8 +13,9 @@
 #ifndef WXPHP_APP_H_GUARD
 #define WXPHP_APP_H_GUARD
 
+#include "object_types.h"
+
 extern zend_class_entry *php_wxApp_entry;
-extern int le_wxApp;
 
 class wxAppWrapper : public wxApp
 {
@@ -24,6 +25,19 @@ class wxAppWrapper : public wxApp
 		zval* phpObj;
 		void ***tsrm_ls;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxApp
+{
+    zend_object zo;
+    wxAppWrapper* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxApp_free(void *object TSRMLS_DC);
+zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 static zend_function_entry php_wxApp_functions[] = {
 	PHP_ME(php_wxApp, SetInstance ,NULL,ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)

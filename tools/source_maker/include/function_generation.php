@@ -40,6 +40,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 			
 			$declaration_modifier = "";
 			$standard_parameter_type = parameter_type($parameter_type, $parameter_is_array, $method_name, $class_name, $declaration_modifier);
+			$plain_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
 			
 			switch($standard_parameter_type)
 			{
@@ -255,7 +256,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 				case "object":
 				{
 					$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . " = 0;\n";
-					$parameters .= "\tvoid* object_pointer{$declaration_index}_{$parameter_index} = 0;\n";
+					$parameters .= "\t{$plain_type}* object_pointer{$declaration_index}_{$parameter_index} = 0;\n";
 					break;
 				}	
 				default: 
@@ -334,7 +335,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 			
 			$declaration_modifier = "";
 			$standard_parameter_type = parameter_type($declaration[$parameter_types][$parameter_index], $parameter_is_array, $method_name, $class_name, $declaration_modifier);
-			$argument_parameter_type = str_replace(array("const ", "*", "&"), "", $declaration[$parameter_types][$parameter_index]);
+			$argument_plain_type = str_replace(array("const ", "*", "&"), "", $declaration[$parameter_types][$parameter_index]);
 			
 			switch($standard_parameter_type)
 			{
@@ -594,11 +595,11 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					{
 						$zend_parse_parameters_string .= "z";
 						
-						$typeVerifier = derivationsOfClass($argument_parameter_type);
+						$typeVerifier = derivationsOfClass($argument_plain_type);
 						
 						foreach($typeVerifier as $argument_parent_class => $v)
 						{
-							$typeVerifierStr[] = "rsrc_type != le_".$argument_parent_class;
+							$typeVerifierStr[] = "argument_type != PHP_".strtoupper($argument_parent_class)."_TYPE";
 						}
 						
 						$typeVerifierStr = trim(join(" && ", $typeVerifierStr));
@@ -606,14 +607,15 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					else
 					{
 						$zend_parse_parameters_string .= "O";
-						$zend_parse_parameters .= "php_{$argument_parameter_type}_entry" . ", ";
+						$zend_parse_parameters .= "php_{$argument_plain_type}_entry" . ", ";
 					}
 			
 					$object_retrieve_code .= "\t\t\tif(arguments_received >= ".($parameter_index+1)."){\n";
-					$object_retrieve_code .= "\t\t\t\tif(Z_TYPE_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index."), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)\n";
+					$object_retrieve_code .= "\t\t\t\tif(Z_TYPE_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") == IS_OBJECT)\n";
 					$object_retrieve_code .= "\t\t\t\t{\n";
-					$object_retrieve_code .= "\t\t\t\t\tid_to_find = Z_RESVAL_P(*tmp);\n";
-					$object_retrieve_code .= "\t\t\t\t\tobject_pointer{$declaration_index}_{$parameter_index} = zend_list_find(id_to_find, &rsrc_type);\n";
+					$object_retrieve_code .= "\t\t\t\t\twxphp_object_type argument_type = ((zo_$argument_plain_type*) zend_object_store_get_object(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC))->object_type;\n";
+					$object_retrieve_code .= "\t\t\t\t\targument_native_object = (void*) ((zo_$argument_plain_type*) zend_object_store_get_object(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC))->native_object;\n";
+					$object_retrieve_code .= "\t\t\t\t\tobject_pointer{$declaration_index}_{$parameter_index} = ($argument_plain_type*) argument_native_object;\n";
 					$object_retrieve_code .= "\t\t\t\t\tif (!object_pointer{$declaration_index}_{$parameter_index} ";
 					if(trim($typeVerifierStr) != "") 
 					{
@@ -628,7 +630,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					}
 					else
 					{
-						$object_retrieve_code .= "\t\t\t\t\t\tzend_error(E_ERROR, \"Parameter $paramenter_index could not be retreived correctly.\");\n";
+						$object_retrieve_code .= "\t\t\t\t\t\tzend_error(E_ERROR, \"Parameter '".$declaration[$parameter_names][$parameter_index]."' could not be retreived correctly.\");\n";
 					}
 					
 					$object_retrieve_code .= "\t\t\t\t\t}\n";
@@ -638,11 +640,11 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					
 					if(($declaration_index+1) != $declarations_count && $declarations_count > 1)
 					{
-						$object_retrieve_code .= "\t\t\t\t\t\tgoto overload".($declaration_index+1).";\n";
+						$object_retrieve_code .= "\t\t\t\t\tgoto overload".($declaration_index+1).";\n";
 					}
 					else
 					{
-						$object_retrieve_code .= "\t\t\t\t\t\tzend_error(E_ERROR, \"Parameter $paramenter_index could not be retreived correctly.\");\n";
+						$object_retrieve_code .= "\t\t\t\t\tzend_error(E_ERROR, \"Parameter '".$declaration[$parameter_names][$parameter_index]."' not null, could not be retreived correctly.\");\n";
 					}
 					
 					$object_retrieve_code .= "\t\t\t\t}\n";
@@ -889,7 +891,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 								$parameters_string .= "bools_array{$declaration_index}_{$parameter_index}, ";
 								
-								$after_return_called_overload .= "\t\t\t\tdelete[] bools_array{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "delete[] bools_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //bool&	
@@ -907,16 +909,16 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= "\t\t\t\tsize_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
-								$after_return_called_overload .= "\t\t\t\tarray_init($reference_name);\n";
-								$after_return_called_overload .= "\t\t\t\tfor(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
-								$after_return_called_overload .= "\t\t\t\t{\n";
-								$after_return_called_overload .= "\t\t\t\t\tadd_next_index_long($reference_name, {$variable_name}[i]);\n";
-								$after_return_called_overload .= "\t\t\t\t}\n";
+								$after_return_called_overload .= tabs(4) . "size_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "array_init($reference_name);\n";
+								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
+								$after_return_called_overload .= tabs(4) . "{\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_long($reference_name, {$variable_name}[i]);\n";
+								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 								
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tZVAL_BOOL($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_BOOL($reference_name, $variable_name);\n";
 								break;	
 						}
 						break;
@@ -958,7 +960,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 								$parameters_string .= "(".$integer_type.") " . "integers_array{$declaration_index}_{$parameter_index}, ";
 								
-								$after_return_called_overload .= "\t\t\t\tdelete[] integers_array{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "delete[] integers_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //integer&	
@@ -976,16 +978,16 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= "\t\t\t\tsize_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
-								$after_return_called_overload .= "\t\t\t\tarray_init($reference_name);\n";
-								$after_return_called_overload .= "\t\t\t\tfor(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
-								$after_return_called_overload .= "\t\t\t\t{\n";
-								$after_return_called_overload .= "\t\t\t\t\tadd_next_index_long($reference_name, {$variable_name}[i]);\n";
-								$after_return_called_overload .= "\t\t\t\t}\n";
+								$after_return_called_overload .= tabs(4) . "size_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "array_init($reference_name);\n";
+								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
+								$after_return_called_overload .= tabs(4) . "{\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_long($reference_name, {$variable_name}[i]);\n";
+								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 								
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tZVAL_LONG($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_LONG($reference_name, $variable_name);\n";
 								break;	
 						}
 						break;
@@ -1017,7 +1019,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 								$parameters_string .= "(".$declaration[$parameter_types][$parameter_index].") " . "floats_array{$declaration_index}_{$parameter_index}, ";
 								
-								$after_return_called_overload .= "\t\t\t\tdelete[] floats_array{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "delete[] floats_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //double&	
@@ -1035,16 +1037,16 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= "\t\t\t\tsize_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
-								$after_return_called_overload .= "\t\t\t\tarray_init($reference_name);\n";
-								$after_return_called_overload .= "\t\t\t\tfor(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
-								$after_return_called_overload .= "\t\t\t\t{\n";
-								$after_return_called_overload .= "\t\t\t\t\tadd_next_index_long($reference_name, {$variable_name}[i]);\n";
-								$after_return_called_overload .= "\t\t\t\t}\n";
+								$after_return_called_overload .= tabs(4) . "size_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "array_init($reference_name);\n";
+								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
+								$after_return_called_overload .= tabs(4) . "{\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_long($reference_name, {$variable_name}[i]);\n";
+								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 								
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tZVAL_DOUBLE($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_DOUBLE($reference_name, $variable_name);\n";
 								break;	
 						}
 						break;
@@ -1073,11 +1075,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= "\t\t\t\tZVAL_STRING($reference_name, $variable_name, 1);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_STRING($reference_name, $variable_name, 1);\n";
 								break;
 								
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tZVAL_LONG($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_LONG($reference_name, $variable_name);\n";
 								break;	
 						}
 						break;
@@ -1102,7 +1104,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= "\t\t\t\tZVAL_STRING($reference_name, (char*) $variable_name, 1);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_STRING($reference_name, (char*) $variable_name, 1);\n";
 								break;
 						}
 						break;
@@ -1135,7 +1137,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 								$parameters_string .= "dates_array{$declaration_index}_{$parameter_index}, ";
 								
-								$after_return_called_overload .= "\t\t\t\tdelete[] dates_array{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "delete[] dates_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //date&	
@@ -1155,7 +1157,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tZVAL_LONG($reference_name, date_time{$declaration_index}_{$parameter_index}.GetTicks());\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_LONG($reference_name, date_time{$declaration_index}_{$parameter_index}.GetTicks());\n";
 								break;	
 						}
 						break;
@@ -1191,7 +1193,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 								$parameters_string .= "strings_array{$declaration_index}_{$parameter_index}, ";
 								
-								$after_return_called_overload .= "\t\t\t\tdelete[] strings_array{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "delete[] strings_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //wxString&	
@@ -1211,11 +1213,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tchar* temp_string{$declaration_index}_{$parameter_index};\n";
-								$after_return_called_overload .= "\t\t\t\ttemp_string{$declaration_index}_{$parameter_index} = (char*)malloc(sizeof(wxChar)*(string_arg{$declaration_index}_{$parameter_index}.size()+1));\n";
-								$after_return_called_overload .= "\t\t\t\tstrcpy (temp_string{$declaration_index}_{$parameter_index}, (const char *) string_arg{$declaration_index}_{$parameter_index}.char_str() );\n";
-								$after_return_called_overload .= "\t\t\t\tZVAL_STRING($reference_name, (char*) temp_string{$declaration_index}_{$parameter_index}, 1);\n";
-								$after_return_called_overload .= "\t\t\t\tfree(temp_string{$declaration_index}_{$parameter_index});\n\n";
+								$after_return_called_overload .= tabs(4) . "char* temp_string{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "temp_string{$declaration_index}_{$parameter_index} = (char*)malloc(sizeof(wxChar)*(string_arg{$declaration_index}_{$parameter_index}.size()+1));\n";
+								$after_return_called_overload .= tabs(4) . "strcpy (temp_string{$declaration_index}_{$parameter_index}, (const char *) string_arg{$declaration_index}_{$parameter_index}.char_str() );\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_STRING($reference_name, (char*) temp_string{$declaration_index}_{$parameter_index}, 1);\n";
+								$after_return_called_overload .= tabs(4) . "free(temp_string{$declaration_index}_{$parameter_index});\n\n";
 								break;	
 						}
 						break;
@@ -1258,15 +1260,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "reference":
-								$after_return_called_overload .= "\t\t\t\tchar* temp_string{$declaration_index}_{$parameter_index};\n";
-								$after_return_called_overload .= "\t\t\t\tarray_init($variable_name);\n";
-								$after_return_called_overload .= "\t\t\t\tfor(size_t i=0; i<strings_array{$declaration_index}_{$parameter_index}.GetCount(); i++)\n";
-								$after_return_called_overload .= "\t\t\t\t{\n";
-								$after_return_called_overload .= "\t\t\t\t\ttemp_string{$declaration_index}_{$parameter_index} = (char*)malloc(sizeof(wxChar)*(strings_array{$declaration_index}_{$parameter_index}[i].size()+1));\n";
-								$after_return_called_overload .= "\t\t\t\t\tstrcpy (temp_string{$declaration_index}_{$parameter_index}, (const char *) strings_array{$declaration_index}_{$parameter_index}[i].char_str() );\n";
-								$after_return_called_overload .= "\t\t\t\t\tadd_next_index_string($variable_name, (char*) temp_string{$declaration_index}_{$parameter_index}, 1);\n";
-								$after_return_called_overload .= "\t\t\t\t\tfree(temp_string{$declaration_index}_{$parameter_index});\n\n";
-								$after_return_called_overload .= "\t\t\t\t}\n";
+								$after_return_called_overload .= tabs(4) . "char* temp_string{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "array_init($variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<strings_array{$declaration_index}_{$parameter_index}.GetCount(); i++)\n";
+								$after_return_called_overload .= tabs(4) . "{\n";
+								$after_return_called_overload .= tabs(5) . "temp_string{$declaration_index}_{$parameter_index} = (char*)malloc(sizeof(wxChar)*(strings_array{$declaration_index}_{$parameter_index}[i].size()+1));\n";
+								$after_return_called_overload .= tabs(5) . "strcpy (temp_string{$declaration_index}_{$parameter_index}, (const char *) strings_array{$declaration_index}_{$parameter_index}[i].char_str() );\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_string($variable_name, (char*) temp_string{$declaration_index}_{$parameter_index}, 1);\n";
+								$after_return_called_overload .= tabs(5) . "free(temp_string{$declaration_index}_{$parameter_index});\n\n";
+								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 						}
 						break;
@@ -1281,7 +1283,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								if(!$declaration["static"] && $class_name && !$is_constructor)
 									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								else if($is_constructor)
-									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) native_object)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								break;
 								
 							case "reference": //object&	
@@ -1291,7 +1293,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								if(!$declaration["static"] && $class_name && !$is_constructor)
 									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								else if($is_constructor)
-									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) native_object)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 								break;
 								
 							case "none": //char
@@ -1317,13 +1319,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 				{
 					case	"bool":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_BOOL($class_name::$method_name($parameters_string))\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_BOOL($class_name::$method_name($parameters_string))\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1339,11 +1341,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							{
 								case "pointer":
 								case "const_pointer":
-									$return_called_overload .= "\t\t\t\tZVAL_BOOL(return_value, *($class_name::$method_name($parameters_string)));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_BOOL(return_value, *($class_name::$method_name($parameters_string)));\n";
 									break;
 									
 								default:
-									$return_called_overload .= "\t\t\t\tZVAL_BOOL(return_value, $class_name::$method_name($parameters_string));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_BOOL(return_value, $class_name::$method_name($parameters_string));\n";
 									break;
 							}
 						}
@@ -1353,13 +1355,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					case	"class_enum":
 					case	"global_enum":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_LONG($class_name::$method_name($parameters_string))\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_LONG($class_name::$method_name($parameters_string))\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1375,11 +1377,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							{
 								case "pointer":
 								case "const_pointer":
-									$return_called_overload .= "\t\t\t\tZVAL_LONG(return_value, *($class_name::$method_name($parameters_string)));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_LONG(return_value, *($class_name::$method_name($parameters_string)));\n";
 									break;
 									
 								default:
-									$return_called_overload .= "\t\t\t\tZVAL_LONG(return_value, $class_name::$method_name($parameters_string));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_LONG(return_value, $class_name::$method_name($parameters_string));\n";
 									break;
 							}
 						}
@@ -1387,13 +1389,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					}	
 					case	"float":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_LONG($class_name::$method_name($parameters_string))\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_LONG($class_name::$method_name($parameters_string))\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1409,11 +1411,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							{
 								case "pointer":
 								case "const_pointer":
-									$return_called_overload .= "\t\t\t\tZVAL_DOUBLE(return_value, *($class_name::$method_name($parameters_string)));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_DOUBLE(return_value, *($class_name::$method_name($parameters_string)));\n";
 									break;
 									
 								default:
-									$return_called_overload .= "\t\t\t\tZVAL_DOUBLE(return_value, $class_name::$method_name($parameters_string));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_DOUBLE(return_value, $class_name::$method_name($parameters_string));\n";
 									break;
 							}
 						}
@@ -1421,15 +1423,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					}
 					case	"characters":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_STRING($class_name::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_STRING($class_name::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
-						$return_called_overload .= "\t\t\t\t" . $return_type . "* value_to_return{$required_parameters};\n";
+						$return_called_overload .= tabs(4) . $return_type . "* value_to_return{$required_parameters};\n";
 						
 						if($class_name == null)
 						{
@@ -1441,20 +1443,20 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						}
 						else
 						{
-							$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
+							$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
 						}
-						$return_called_overload .= "\t\t\t\tZVAL_STRING(return_value, value_to_return{$required_parameters}, 1);\n";
+						$return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, value_to_return{$required_parameters}, 1);\n";
 						break;
 					}
 					case "void":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string)\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string)\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
 						if($class_name == null)
 						{
@@ -1466,23 +1468,23 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						}
 						else
 						{
-							$return_called_overload .= "\t\t\t\t$class_name::$method_name($parameters_string);\n";
+							$return_called_overload .= tabs(4) . "$class_name::$method_name($parameters_string);\n";
 						}
 						break;	
 					}
 					case "date":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return timestamp\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return timestamp\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
 						$return_type = "long";
 						
-						$return_called_overload .= "\t\t\t\t" . $return_type . " value_to_return{$required_parameters};\n";
+						$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 						
 						if($class_name == null)
 						{
@@ -1494,22 +1496,22 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						}
 						else
 						{
-							$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = $class_name::$method_name($parameters_string).GetTicks();\n";
+							$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string).GetTicks();\n";
 						}
-						$return_called_overload .= "\t\t\t\tZVAL_LONG(return_value, value_to_return{$required_parameters});\n";
+						$return_called_overload .= tabs(4) . "ZVAL_LONG(return_value, value_to_return{$required_parameters});\n";
 						break;
 					}
 					case	"string":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing RETURN_STRING($class_name::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing RETURN_STRING($class_name::$method_name($parameters_string).fn_str(), 1)\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
-						$return_called_overload .= "\t\t\t\t" . $return_type . " value_to_return{$required_parameters};\n";
+						$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 						
 						if($class_name == null)
 						{
@@ -1521,28 +1523,28 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						}
 						else
 						{
-							$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
+							$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
 						}
-						$return_called_overload .= "\t\t\t\tchar* temp_string{$required_parameters};\n";
-						$return_called_overload .= "\t\t\t\ttemp_string{$required_parameters} = (char*)malloc(sizeof(wxChar)*(value_to_return{$required_parameters}.size()+1));\n";
-						$return_called_overload .= "\t\t\t\tstrcpy (temp_string{$required_parameters}, (const char *) value_to_return{$required_parameters}.char_str() );\n";
-						$return_called_overload .= "\t\t\t\tZVAL_STRING(return_value, temp_string{$required_parameters}, 1);\n";
-						$return_called_overload .= "\t\t\t\tfree(temp_string{$required_parameters});\n";
+						$return_called_overload .= tabs(4) . "char* temp_string{$required_parameters};\n";
+						$return_called_overload .= tabs(4) . "temp_string{$required_parameters} = (char*)malloc(sizeof(wxChar)*(value_to_return{$required_parameters}.size()+1));\n";
+						$return_called_overload .= tabs(4) . "strcpy (temp_string{$required_parameters}, (const char *) value_to_return{$required_parameters}.char_str() );\n";
+						$return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, temp_string{$required_parameters}, 1);\n";
+						$return_called_overload .= tabs(4) . "free(temp_string{$required_parameters});\n";
 						break;
 					}
 					case "strings_array":
 					{
-						$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+						$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 						if($declaration["static"])
 						{
-							$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+							$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 						}
-						$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return strings array\\n\\n\");\n";
-						$return_called_overload .= "\t\t\t\t#endif\n\n";
+						$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return strings array\\n\\n\");\n";
+						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
 						$return_type = str_replace(array("const", " ", "&"), "", $declaration[$function_return_types]);
 						
-						$return_called_overload .= "\t\t\t\t" . $return_type . " value_to_return{$required_parameters};\n";
+						$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 						
 						if($class_name == null)
 						{
@@ -1554,18 +1556,18 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						}
 						else
 						{
-							$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
+							$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
 						}
 						
-						$return_called_overload .= "\t\t\t\tchar* temp_string{$required_parameters};\n";
-						$return_called_overload .= "\t\t\t\tarray_init(return_value);\n";
-						$return_called_overload .= "\t\t\t\tfor(size_t i=0; i<value_to_return{$required_parameters}.GetCount(); i++)\n";
-						$return_called_overload .= "\t\t\t\t{\n";
-						$return_called_overload .= "\t\t\t\t\ttemp_string{$required_parameters} = (char*)malloc(sizeof(wxChar)*(value_to_return{$required_parameters}[i].size()+1));\n";
-						$return_called_overload .= "\t\t\t\t\tstrcpy (temp_string{$required_parameters}, (const char *) value_to_return{$required_parameters}[i].char_str() );\n";
-						$return_called_overload .= "\t\t\t\t\tadd_next_index_string(return_value, (char*) temp_string{$required_parameters}, 1);\n";
-						$return_called_overload .= "\t\t\t\t\tfree(temp_string{$required_parameters});\n";
-						$return_called_overload .= "\t\t\t\t}\n";
+						$return_called_overload .= tabs(4) . "char* temp_string{$required_parameters};\n";
+						$return_called_overload .= tabs(4) . "array_init(return_value);\n";
+						$return_called_overload .= tabs(4) . "for(size_t i=0; i<value_to_return{$required_parameters}.GetCount(); i++)\n";
+						$return_called_overload .= tabs(4) . "{\n";
+						$return_called_overload .= tabs(5) . "temp_string{$required_parameters} = (char*)malloc(sizeof(wxChar)*(value_to_return{$required_parameters}[i].size()+1));\n";
+						$return_called_overload .= tabs(5) . "strcpy (temp_string{$required_parameters}, (const char *) value_to_return{$required_parameters}[i].char_str() );\n";
+						$return_called_overload .= tabs(5) . "add_next_index_string(return_value, (char*) temp_string{$required_parameters}, 1);\n";
+						$return_called_overload .= tabs(5) . "free(temp_string{$required_parameters});\n";
+						$return_called_overload .= tabs(4) . "}\n";
 						break;
 					}
 					case "object":
@@ -1574,15 +1576,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "const_pointer":	
-								$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+								$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 								if($declaration["static"])
 								{
-									$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+									$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 								}
-								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return object pointer\\n\\n\");\n";
-								$return_called_overload .= "\t\t\t\t#endif\n\n";
+								$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return object pointer\\n\\n\");\n";
+								$return_called_overload .= tabs(4) . "#endif\n\n";
 								
-								$return_called_overload .= "\t\t\t\t" . $return_type . "_php* value_to_return{$required_parameters};\n";
+								$return_called_overload .= tabs(4) . $return_type . "_php* value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
 								{
@@ -1594,7 +1596,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								}
 								else
 								{
-									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = ({$return_type}_php*) $class_name::$method_name($parameters_string);\n";
+									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = ({$return_type}_php*) $class_name::$method_name($parameters_string);\n";
 								}
 								$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters} == NULL){\n";
 								$return_called_overload .= tabs(5) . "ZVAL_NULL(return_value);\n";
@@ -1610,13 +1612,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(4) . "}\n";
 								$return_called_overload .= tabs(4) . "else{\n";
-								$return_called_overload .= tabs(5) . "object_init_ex(return_value,php_{$return_type}_entry);\n";
-								$return_called_overload .= tabs(5) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(value_to_return{$required_parameters}, le_{$return_type}));\n";
+								$return_called_overload .= tabs(5) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
+								$return_called_overload .= tabs(5) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) value_to_return{$required_parameters};\n";
 								$return_called_overload .= tabs(4) . "}\n\n";
 								
 								if(!$declaration["static"] && $class_name)
 								{
-									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL && value_to_return{$required_parameters} != _this && return_is_user_initialized){\n";
+									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return{$required_parameters} != (void*)native_object && return_is_user_initialized){\n";
 									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
@@ -1625,15 +1627,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 							case "const_reference":
 							case "reference":
-								$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+								$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 								if($declaration["static"])
 								{
-									$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+									$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 								}
-								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return object reference\\n\\n\");\n";
-								$return_called_overload .= "\t\t\t\t#endif\n\n";
+								$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return object reference\\n\\n\");\n";
+								$return_called_overload .= tabs(4) . "#endif\n\n";
 								
-								$return_called_overload .= "\t\t\t\t" . $return_type . "_php* value_to_return{$required_parameters};\n";
+								$return_called_overload .= tabs(4) . $return_type . "_php* value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
 								{
@@ -1645,7 +1647,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								}
 								else
 								{
-									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = ({$return_type}_php*) &$class_name::$method_name($parameters_string);\n";
+									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = ({$return_type}_php*) &$class_name::$method_name($parameters_string);\n";
 								}
 								$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
 								$return_called_overload .= tabs(5) . "if(value_to_return{$required_parameters}->phpObj != NULL){\n";
@@ -1659,12 +1661,12 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								$return_called_overload .= tabs(4) . "else{\n";
 								$return_called_overload .= tabs(5) . "object_init_ex(return_value,php_{$return_type}_entry);\n";
-								$return_called_overload .= tabs(5) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(value_to_return{$required_parameters}, le_{$return_type}));\n";
+								$return_called_overload .= tabs(5) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) value_to_return{$required_parameters};\n";
 								$return_called_overload .= tabs(4) . "}\n\n";
 								
 								if(!$declaration["static"] && $class_name)
 								{
-									$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters} != _this && return_is_user_initialized){ //Prevent adding references to it self\n";
+									$return_called_overload .= tabs(4) . "if((void*)value_to_return{$required_parameters} != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self\n";
 									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
@@ -1673,15 +1675,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 							case "const_none":
 							case "none":
-								$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
+								$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
 								if($declaration["static"])
 								{
-									$return_called_overload .= "\t\t\t\tphp_printf(\"Static \");\n";
+									$return_called_overload .= tabs(4) . "php_printf(\"Static \");\n";
 								}
-								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return new object\\n\\n\");\n";
-								$return_called_overload .= "\t\t\t\t#endif\n\n";
+								$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return new object\\n\\n\");\n";
+								$return_called_overload .= tabs(4) . "#endif\n\n";
 								
-								$return_called_overload .= "\t\t\t\t" . $return_type . " value_to_return{$required_parameters};\n";
+								$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
 								{
@@ -1698,7 +1700,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= tabs(4) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 									$return_called_overload .= tabs(4) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-									$return_called_overload .= tabs(4) . "add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_{$return_type}));\n";
+									$return_called_overload .= tabs(4) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
 								}
@@ -1709,25 +1711,25 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 				}
 				
 				$return_called_overload .= "\n" . $after_return_called_overload . "\n";
-				$return_called_overload .= "\t\t\t\treturn;\n";
+				$return_called_overload .= tabs(4) . "return;\n";
 			}
 			else
 			{
-				$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
-				$return_called_overload .= "\t\t\t\tphp_printf(\"Executing __construct($parameters_string)\\n\");\n";
-				$return_called_overload .= "\t\t\t\t#endif\n\n";
-				$return_called_overload .= "\t\t\t\t_this = new {$method_name}_php($parameters_string);\n\n";
-				$return_called_overload .= tabs(4) . "(({$class_name}_php*) _this)->references.Initialize();\n";
+				$return_called_overload .= tabs(4) . "#ifdef USE_WXPHP_DEBUG\n";
+				$return_called_overload .= tabs(4) . "php_printf(\"Executing __construct($parameters_string)\\n\");\n";
+				$return_called_overload .= tabs(4) . "#endif\n\n";
+				$return_called_overload .= tabs(4) . "native_object = new {$method_name}_php($parameters_string);\n\n";
+				$return_called_overload .= tabs(4) . "native_object->references.Initialize();\n";
 				$return_called_overload .= $after_constructor_called;
 			}
 
 			
-			$return_called_overload .= "\t\t\t\tbreak;\n";
-			$return_called_overload .= "\t\t\t}\n";
+			$return_called_overload .= tabs(4) . "break;\n";
+			$return_called_overload .= tabs(3) . "}\n";
 		}
 		
-		$return_called_overload .= "\t\t}\n";
-		$return_called_overload .= "\t}\n";
+		$return_called_overload .= tabs(2) . "}\n";
+		$return_called_overload .= tabs(1) . "}\n";
 		
 		$return_called_overload .= "\n\t";
 	}
@@ -1922,7 +1924,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
 					$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 					$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 					$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-					$call_code .= tabs($t) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$return_type}));\n";
+					$call_code .= tabs($t) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
 					break;
 			}
 			break;
@@ -1992,7 +1994,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				$call_code .= tabs(4) . "else if(";
 			}
 			
-			$call_code .= "parent_rsrc_type == le_{$derivation_class_name}";
+			$call_code .= "current_object_type == PHP_".strtoupper($derivation_class_name)."_TYPE";
 								
 			$call_code .= ")\n";
 			
@@ -2010,17 +2012,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, *((({$derivation_class_name}_php*)_this)->$method_name($parameters_string)));\n";
+						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, (({$derivation_class_name}_php*)_this)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, (({$derivation_class_name}_php*)_this)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 				}
 				break;
@@ -2033,17 +2035,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_LONG(return_value, *((({$derivation_class_name}_php*)_this)->$method_name($parameters_string)));\n";
+						$call_code .= tabs($t) . "ZVAL_LONG(return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "ZVAL_LONG(return_value, (({$derivation_class_name}_php*)_this)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_LONG(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "ZVAL_LONG(return_value, (({$derivation_class_name}_php*)_this)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_LONG(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 				}
 				break;
@@ -2054,17 +2056,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, *((({$derivation_class_name}_php*)_this)->$method_name($parameters_string)));\n";
+						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, (({$derivation_class_name}_php*)_this)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, (({$derivation_class_name}_php*)_this)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 				}
 				break;
@@ -2074,22 +2076,22 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				switch($return_modifier)
 				{
 					case "const_pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (char*) (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 						
 					case "pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "char value_to_return_temp{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "char value_to_return_temp{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						$call_code .= tabs($t) . "value_to_return{$required_parameters} = &value_to_return_temp{$required_parameters};\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "char value_to_return_temp{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "char value_to_return_temp{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						$call_code .= tabs($t) . "value_to_return{$required_parameters} = &value_to_return_temp{$required_parameters};\n";
 						break;
 				}
@@ -2101,12 +2103,12 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_STRING(return_value, (char*) (({$derivation_class_name}_php*)_this)->$method_name($parameters_string), 1);\n";
+						$call_code .= tabs($t) . "ZVAL_STRING(return_value, (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string), 1);\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "(({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "(({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 				}
 				break;
@@ -2117,17 +2119,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string)->GetTicks();\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)->GetTicks();\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string).GetTicks();\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string).GetTicks();\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string).GetTicks();\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string).GetTicks();\n";
 						break;
 				}
 				break;
@@ -2138,17 +2140,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 				}
 				break;
@@ -2159,17 +2161,17 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 						
 					case "const_none":
 					case "none":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 						break;
 				}
 				break;
@@ -2180,24 +2182,24 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) &(({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) &(({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n\n";
 						break;
 						
 					case "const_none":
 					case "none":
 						$return_type = str_replace(array("const", " "), "", $method_return_type);
 						
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
 
 						$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 						$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 						$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-						$call_code .= tabs($t) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$return_type}));\n";
+						$call_code .= tabs($t) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
 						break;
 				}
 				break;
@@ -2232,15 +2234,15 @@ function references_cast_code($class_name)
 	//Instead of using elseif we have to break it in multiple if since
 	//MS Visual C++ compiler doesnt supports a very deep elseif sequence.
 	$code .= "bool reference_type_found = false;\n\n";
-	$code .= tabs(3) . "if(parent_rsrc_type == le_{$class_name}){\n";
-	$code .= tabs(4) . "references = &(({$class_name}_php*)_this)->references;\n";
+	$code .= tabs(3) . "if(current_object_type == PHP_".strtoupper($class_name)."_TYPE){\n";
+	$code .= tabs(4) . "references = &(({$class_name}_php*)native_object)->references;\n";
 	$code .= tabs(4) . "reference_type_found = true;\n";
 	$code .= tabs(3) . "}\n";
 	
 	foreach($derivations as $derivation_name=>$derivation_value)
 	{
-		$code .= tabs(3) . "if((parent_rsrc_type == le_{$derivation_name}) && (!reference_type_found)){\n";
-		$code .= tabs(4) . "references = &(({$derivation_name}_php*)_this)->references;\n";
+		$code .= tabs(3) . "if((current_object_type == PHP_".strtoupper($derivation_name)."_TYPE) && (!reference_type_found)){\n";
+		$code .= tabs(4) . "references = &(({$derivation_name}_php*)native_object)->references;\n";
 		$code .= tabs(4) . "reference_type_found = true;\n";
 		$code .= tabs(3) . "}\n";
 	}

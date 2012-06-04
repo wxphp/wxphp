@@ -57,12 +57,12 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= tabs(2) . "RETVAL_BOOL(*((bool*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])));\n";
+							$code .= tabs(2) . "RETVAL_BOOL(*((bool*) *((void**) native_object->properties[$property_index])));\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= tabs(2) . "RETVAL_BOOL(*((bool*)(({$class_name}_php*) _this)->properties[$property_index]));\n";
+							$code .= tabs(2) . "RETVAL_BOOL(*((bool*) native_object->properties[$property_index]));\n";
 							break;
 					}
 					break;
@@ -74,12 +74,12 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= tabs(2) . "RETVAL_LONG(*(($property_type*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])));\n";
+							$code .= tabs(2) . "RETVAL_LONG(*(($property_type*) *((void**) native_object->properties[$property_index])));\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= tabs(2) . "RETVAL_LONG(*(($property_type*)(({$class_name}_php*) _this)->properties[$property_index]));\n";
+							$code .= tabs(2) . "RETVAL_LONG(*(($property_type*) native_object->properties[$property_index]));\n";
 							break;
 					}
 					break;
@@ -89,12 +89,12 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= tabs(2) . "RETVAL_DOUBLE(*(($property_type*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])));\n";
+							$code .= tabs(2) . "RETVAL_DOUBLE(*(($property_type*) *((void**) native_object->properties[$property_index])));\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= tabs(2) . "RETVAL_DOUBLE(*(($property_type*)(({$class_name}_php*) _this)->properties[$property_index]));\n";
+							$code .= tabs(2) . "RETVAL_DOUBLE(*(($property_type*) native_object->properties[$property_index]));\n";
 							break;
 					}
 					break;
@@ -104,12 +104,12 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= tabs(2) . "RETVAL_STRING(((char*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])));\n";
+							$code .= tabs(2) . "RETVAL_STRING(((char*) *((void**) native_object->properties[$property_index])));\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= tabs(2) . "RETVAL_LONG(*((char*)(({$class_name}_php*) _this)->properties[$property_index]));\n";
+							$code .= tabs(2) . "RETVAL_LONG(*((char*) native_object->properties[$property_index]));\n";
 							break;
 					}
 					break;
@@ -119,12 +119,12 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= tabs(2) . "RETVAL_LONG(*((wxDateTime*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])).GetTicks());\n";
+							$code .= tabs(2) . "RETVAL_LONG(*((wxDateTime*) *((void**) native_object->properties[$property_index])).GetTicks());\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= tabs(2) . "RETVAL_LONG(*((wxDateTime*)(({$class_name}_php*) _this)->properties[$property_index]).GetTicks());\n";
+							$code .= tabs(2) . "RETVAL_LONG(*((wxDateTime*) native_object->properties[$property_index]).GetTicks());\n";
 							break;
 					}
 					break;
@@ -134,12 +134,12 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= tabs(2) . "RETVAL_STRING(*((wxString*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])).char_str());\n";
+							$code .= tabs(2) . "RETVAL_STRING(*((wxString*) *((void**) native_object->properties[$property_index])).char_str());\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= tabs(2) . "RETVAL_STRING(*((wxString*)(({$class_name}_php*) _this)->properties[$property_index]).char_str());\n";
+							$code .= tabs(2) . "RETVAL_STRING(*((wxString*) native_object->properties[$property_index]).char_str());\n";
 							break;
 					}
 					break;
@@ -149,16 +149,16 @@ function classes_get_property_code($class_name)
 					{
 						case "pointer":
 						case "pointer_pointer":
-							$code .= "\tobject_init_ex(return_value, php_{$property_type}_entry);\n";
-							$code .= "\tadd_property_resource(return_value, \"wxResource\", zend_list_insert((($property_type*) *((void**)(({$class_name}_php*) _this)->properties[$property_index])), le_{$property_type}));\n";
-							$code .= "\treturn;\n";
+							$code .= tabs(2) . "object_init_ex(return_value, php_{$property_type}_entry);\n";
+							$code .= tabs(2) . "((zo_{$class_name}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (({$property_type}_php*) *((void**) native_object->properties[$property_index]));\n";
+							$code .= tabs(2) . "return;\n";
 							break;
 							
 						case "reference":
 						case "none":
-							$code .= "\tobject_init_ex(return_value, php_{$property_type}_entry);\n";
-							$code .= "\tadd_property_resource(return_value, \"wxResource\", zend_list_insert((($property_type*)(({$class_name}_php*) _this)->properties[$property_index]), le_{$property_type}));\n";
-							$code .= "\treturn;\n";
+							$code .= tabs(2) . "object_init_ex(return_value, php_{$property_type}_entry);\n";
+							$code .= tabs(2) . "((zo_{$class_name}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (({$property_type}_php*) native_object->properties[$property_index]);\n";
+							$code .= tabs(2) . "return;\n";
 							break;
 					}
 					break;

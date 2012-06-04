@@ -75,7 +75,7 @@ if(file_exists("./../../json/functions.json"))
 	//Manually defined as a template
 	$defFunctions["wxDynamicCast"] = array();
 	
-	//blacklist functions
+	//Blacklist functions
 	include("include/functions_blacklist.php");
 }
 
@@ -141,7 +141,7 @@ if(file_exists("./../../json/consts.json"))
 		foreach($enumList as $enumIndex=>$enumValue)
 		{	
 			//Temporary measure to skip some constants (we need to 
-			//compile wxWidgets with wxWebView suuport)
+			//compile wxWidgets with other features)
 			if("".stripos($enumValue, "ASCII")."" != "" ||
 				"".stripos($enumValue, "BINARY")."" != "" ||
 				"".stripos($enumValue, "NONE")."" != "" ||
@@ -349,7 +349,8 @@ foreach($defClassGroups as $file_name => $class_list)
 	$classes_header_code .= "#ifndef WXPHP_".strtoupper($file_name)."_H_GUARD\n";
 	$classes_header_code .= "#define WXPHP_".strtoupper($file_name)."_H_GUARD\n\n";
 	
-	$classes_header_code .= "#include \"references.h\"\n\n";
+	$classes_header_code .= "#include \"references.h\"\n";
+	$classes_header_code .= "#include \"object_types.h\"\n\n";
 	
 	$classes_header_code .= "ZEND_BEGIN_ARG_INFO_EX(wxphp_{$file_name}_get_args, 0, 0, 1)\n";
 	$classes_header_code .= tabs(1) . "ZEND_ARG_INFO(0, name)\n";
@@ -416,6 +417,23 @@ ob_end_clean();
 file_put_contents_if_different("./../../src/functions.cpp", $functions_cpp_source);
 
 
+//Generate list of object types for wxphp_object_type enum
+$object_types = "";
+foreach($defIni as $class_name=>$methods)
+{
+	$object_types .= tabs(1) . "PHP_".strtoupper($class_name)."_TYPE,\n";
+}
+$object_types = rtrim($object_types, ",\n") . "\n";
+
+echo "Generating object_types.h\n";
+ob_start();
+	include("source_templates/object_types.h");
+	$object_types_h_source .= ob_get_contents();
+ob_end_clean();
+
+file_put_contents_if_different("./../../includes/object_types.h", $object_types_h_source);
+
+
 //Update wxwidgets.cpp by just upgrading the code betewen 
 //entries ---> code <--- entries and classes ---> code <--- classes
 echo "Generating wxwidgets.cpp...\n";
@@ -427,8 +445,9 @@ $entries .= "\n";
 foreach($defIni as $class_name => $class_methods)
 {
 	$entries .= "zend_class_entry* php_{$class_name}_entry;\n";
-	$entries .= "int le_{$class_name};\n\n";
 }
+
+$entries .= "\n";
 
 //Generate classes and constants initialization code for the MINIT function
 $classes = "";
@@ -436,8 +455,8 @@ foreach($defIni as $class_name => $class_methods)
 {
 	$classes .= "\tchar PHP_{$class_name}_name[] = \"$class_name\";\n";
 	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_name, php_{$class_name}_functions);\n";
+	$classes .= "\tce.create_object = php_{$class_name}_new;\n";
 	$classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
-	$classes .= "\tle_{$class_name} = zend_register_list_destructors_ex(php_{$class_name}_destruction_handler, NULL, (char*) \"native $class_name\", module_number);\n";
 	$classes .= "\n";
 }
 
@@ -487,8 +506,11 @@ foreach($defGlobals as $variable_name => $variable_type)
 	//defined as #define wxTransparentColour wxColour(0, 0, 0, wxALPHA_TRANSPARENT) on wx/colour.h
 	if($variable_name == "wxTransparentColour")
 	{
+		$object_constants .= tabs(2) . "zval z_wx_transparent_color;\n";
 		$object_constants .= tabs(2) . "wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n";
-		$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"wxTransparentColour\", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);\n";
+		$object_constants .= tabs(2) . "object_init_ex(&z_wx_transparent_color, php_wxColour_entry);\n";
+		$object_constants .= tabs(2) . "((zo_wxColour*) zend_object_store_get_object(&z_wx_transparent_color TSRMLS_CC))->native_object = (wxColour_php*) _wx_transparent_color;\n";
+		$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);\n";
 		continue;
 	}
 	
@@ -623,22 +645,20 @@ foreach($defGlobals as $variable_name => $variable_type)
 			{
 				case "pointer":
 				case "const_pointer":
-					/*$object_constants .= tabs(2) . "void* {$variable_name}_copy = malloc(sizeof({$plain_type}_php));\n";
-					$object_constants .= tabs(2) . "memcpy({$variable_name}_copy, $variable_name, sizeof({$plain_type}));\n";
-					$object_constants .= tabs(2) . "{$plain_type}_php* {$variable_name}_ptr = ({$plain_type}_php*) {$variable_name}_copy;\n";
-					$object_constants .= tabs(2) . "{$variable_name}_ptr->references.UnInitialize();\n";*/
-					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n\n";
+					$object_constants .= tabs(2) . "zval z_{$variable_name};\n";
+					$object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
+					$object_constants .= tabs(2) . "((zo_{$plain_type}*) zend_object_store_get_object(&z_{$variable_name} TSRMLS_CC))->native_object = ({$plain_type}_php*) {$variable_name};\n";
+					$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
 					break;
 					
 				case "reference":
 				case "const_reference":
 				case "none":
 				case "const_none":
-					/*$object_constants .= tabs(2) . "void* {$variable_name}_copy = malloc(sizeof({$plain_type}_php));\n";
-					$object_constants .= tabs(2) . "memcpy({$variable_name}_copy, &{$variable_name}, sizeof({$plain_type}));\n";
-					$object_constants .= tabs(2) . "{$plain_type}_php* {$variable_name}_ptr = ({$plain_type}_php*) {$variable_name}_copy;\n";
-					$object_constants .= tabs(2) . "{$variable_name}_ptr->references.UnInitialize();\n";*/
-					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) &{$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n\n";
+					$object_constants .= tabs(2) . "zval z_{$variable_name};\n";
+					$object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
+					$object_constants .= tabs(2) . "((zo_{$plain_type}*) zend_object_store_get_object(&z_{$variable_name} TSRMLS_CC))->native_object = ({$plain_type}_php*) &{$variable_name};\n";
+					$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
 					break;
 			}
 			break;

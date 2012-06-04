@@ -30,11 +30,7 @@
 	zval function_name;
 	ZVAL_STRING(&function_name, "<?=$method_name?>", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	<?=class_virtual_method_parameters_to_zvals($method_definition, $method_name, $class_name)?>
@@ -50,7 +46,6 @@
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, <?=count($method_definition["parameters_type"])?>, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "<?=$method_name?>", <?=strlen($method_name)?>, &return_value, <?=count($method_definition["parameters_type"])?>, params TSRMLS_CC);
@@ -77,7 +72,7 @@
 		#endif
 		
 <? if($method_definition["pure_virtual"]){ ?>
-		wxMessageBox("Failed to call virtual method '<?=$class_name?>::<?=$method_name?>'!", "Error");
+		wxMessageBox("Failed to call virtual method '<?=$class_name?>::<?=$method_name?>'!", "Error", wxOK|wxICON_ERROR);
 <? } ?>
 	}
 <? if(!$method_definition["pure_virtual"]){ ?>

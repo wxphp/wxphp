@@ -67,1428 +67,489 @@
 #include "others.h"
 
 zend_class_entry* php_wxScrolledWindow_entry;
-int le_wxScrolledWindow;
-
 zend_class_entry* php_wxRibbonButtonBarButtonBase_entry;
-int le_wxRibbonButtonBarButtonBase;
-
 zend_class_entry* php_wxRibbonGalleryItem_entry;
-int le_wxRibbonGalleryItem;
-
 zend_class_entry* php_wxRibbonToolBarToolBase_entry;
-int le_wxRibbonToolBarToolBase;
-
 zend_class_entry* php_wxAboutDialogInfo_entry;
-int le_wxAboutDialogInfo;
-
 zend_class_entry* php_wxFrame_entry;
-int le_wxFrame;
-
 zend_class_entry* php_wxTopLevelWindow_entry;
-int le_wxTopLevelWindow;
-
 zend_class_entry* php_wxNonOwnedWindow_entry;
-int le_wxNonOwnedWindow;
-
 zend_class_entry* php_wxWindow_entry;
-int le_wxWindow;
-
 zend_class_entry* php_wxSize_entry;
-int le_wxSize;
-
 zend_class_entry* php_wxPoint_entry;
-int le_wxPoint;
-
 zend_class_entry* php_wxRealPoint_entry;
-int le_wxRealPoint;
-
 zend_class_entry* php_wxEvtHandler_entry;
-int le_wxEvtHandler;
-
 zend_class_entry* php_wxStatusBar_entry;
-int le_wxStatusBar;
-
 zend_class_entry* php_wxButton_entry;
-int le_wxButton;
-
 zend_class_entry* php_wxAnyButton_entry;
-int le_wxAnyButton;
-
 zend_class_entry* php_wxControl_entry;
-int le_wxControl;
-
 zend_class_entry* php_wxValidator_entry;
-int le_wxValidator;
-
 zend_class_entry* php_wxBitmapHandler_entry;
-int le_wxBitmapHandler;
-
 zend_class_entry* php_wxBitmap_entry;
-int le_wxBitmap;
-
 zend_class_entry* php_wxPalette_entry;
-int le_wxPalette;
-
 zend_class_entry* php_wxImage_entry;
-int le_wxImage;
-
 zend_class_entry* php_wxIcon_entry;
-int le_wxIcon;
-
 zend_class_entry* php_wxSplitterWindow_entry;
-int le_wxSplitterWindow;
-
 zend_class_entry* php_wxBoxSizer_entry;
-int le_wxBoxSizer;
-
 zend_class_entry* php_wxSizer_entry;
-int le_wxSizer;
-
 zend_class_entry* php_wxSizerItem_entry;
-int le_wxSizerItem;
-
 zend_class_entry* php_wxSizerFlags_entry;
-int le_wxSizerFlags;
-
 zend_class_entry* php_wxRect_entry;
-int le_wxRect;
-
 zend_class_entry* php_wxTreeCtrl_entry;
-int le_wxTreeCtrl;
-
 zend_class_entry* php_wxTreeItemId_entry;
-int le_wxTreeItemId;
-
 zend_class_entry* php_wxTreeItemData_entry;
-int le_wxTreeItemData;
-
 zend_class_entry* php_wxClientData_entry;
-int le_wxClientData;
-
 zend_class_entry* php_wxImageList_entry;
-int le_wxImageList;
-
 zend_class_entry* php_wxDC_entry;
-int le_wxDC;
-
 zend_class_entry* php_wxColour_entry;
-int le_wxColour;
-
 zend_class_entry* php_wxFont_entry;
-int le_wxFont;
-
 zend_class_entry* php_wxPanel_entry;
-int le_wxPanel;
-
 zend_class_entry* php_wxCheckListBox_entry;
-int le_wxCheckListBox;
-
 zend_class_entry* php_wxListBox_entry;
-int le_wxListBox;
-
 zend_class_entry* php_wxControlWithItems_entry;
-int le_wxControlWithItems;
-
 zend_class_entry* php_wxMenuBar_entry;
-int le_wxMenuBar;
-
 zend_class_entry* php_wxMenuEvent_entry;
-int le_wxMenuEvent;
-
 zend_class_entry* php_wxMenuItem_entry;
-int le_wxMenuItem;
-
 zend_class_entry* php_wxMenu_entry;
-int le_wxMenu;
-
 zend_class_entry* php_wxEvent_entry;
-int le_wxEvent;
-
 zend_class_entry* php_wxTreeEvent_entry;
-int le_wxTreeEvent;
-
 zend_class_entry* php_wxKeyEvent_entry;
-int le_wxKeyEvent;
-
 zend_class_entry* php_wxKeyboardState_entry;
-int le_wxKeyboardState;
-
 zend_class_entry* php_wxNotifyEvent_entry;
-int le_wxNotifyEvent;
-
 zend_class_entry* php_wxCommandEvent_entry;
-int le_wxCommandEvent;
-
 zend_class_entry* php_wxCloseEvent_entry;
-int le_wxCloseEvent;
-
 zend_class_entry* php_wxActivateEvent_entry;
-int le_wxActivateEvent;
-
 zend_class_entry* php_wxAuiManager_entry;
-int le_wxAuiManager;
-
 zend_class_entry* php_wxAuiDockArt_entry;
-int le_wxAuiDockArt;
-
 zend_class_entry* php_wxAuiPaneInfo_entry;
-int le_wxAuiPaneInfo;
-
 zend_class_entry* php_wxAuiManagerEvent_entry;
-int le_wxAuiManagerEvent;
-
 zend_class_entry* php_wxAuiNotebook_entry;
-int le_wxAuiNotebook;
-
 zend_class_entry* php_wxAuiNotebookEvent_entry;
-int le_wxAuiNotebookEvent;
-
 zend_class_entry* php_wxBookCtrlEvent_entry;
-int le_wxBookCtrlEvent;
-
 zend_class_entry* php_wxAuiDefaultToolBarArt_entry;
-int le_wxAuiDefaultToolBarArt;
-
 zend_class_entry* php_wxBookCtrlBase_entry;
-int le_wxBookCtrlBase;
-
 zend_class_entry* php_wxWithImages_entry;
-int le_wxWithImages;
-
 zend_class_entry* php_wxAcceleratorEntry_entry;
-int le_wxAcceleratorEntry;
-
 zend_class_entry* php_wxAcceleratorTable_entry;
-int le_wxAcceleratorTable;
-
 zend_class_entry* php_wxGDIObject_entry;
-int le_wxGDIObject;
-
 zend_class_entry* php_wxAnimation_entry;
-int le_wxAnimation;
-
 zend_class_entry* php_wxAnimationCtrl_entry;
-int le_wxAnimationCtrl;
-
 zend_class_entry* php_wxArtProvider_entry;
-int le_wxArtProvider;
-
 zend_class_entry* php_wxIconBundle_entry;
-int le_wxIconBundle;
-
 zend_class_entry* php_wxStyledTextCtrl_entry;
-int le_wxStyledTextCtrl;
-
 zend_class_entry* php_wxStyledTextEvent_entry;
-int le_wxStyledTextEvent;
-
 zend_class_entry* php_wxVersionInfo_entry;
-int le_wxVersionInfo;
-
 zend_class_entry* php_wxScrollBar_entry;
-int le_wxScrollBar;
-
 zend_class_entry* php_wxStaticText_entry;
-int le_wxStaticText;
-
 zend_class_entry* php_wxStatusBarPane_entry;
-int le_wxStatusBarPane;
-
 zend_class_entry* php_wxStaticLine_entry;
-int le_wxStaticLine;
-
 zend_class_entry* php_wxStaticBoxSizer_entry;
-int le_wxStaticBoxSizer;
-
 zend_class_entry* php_wxStaticBox_entry;
-int le_wxStaticBox;
-
 zend_class_entry* php_wxStaticBitmap_entry;
-int le_wxStaticBitmap;
-
 zend_class_entry* php_wxAuiToolBarItem_entry;
-int le_wxAuiToolBarItem;
-
 zend_class_entry* php_wxCheckBox_entry;
-int le_wxCheckBox;
-
 zend_class_entry* php_wxWrapSizer_entry;
-int le_wxWrapSizer;
-
 zend_class_entry* php_wxBitmapButton_entry;
-int le_wxBitmapButton;
-
 zend_class_entry* php_wxTextEntry_entry;
-int le_wxTextEntry;
-
 zend_class_entry* php_wxTextCompleter_entry;
-int le_wxTextCompleter;
-
 zend_class_entry* php_wxTextCtrl_entry;
-int le_wxTextCtrl;
-
 zend_class_entry* php_wxTextAttr_entry;
-int le_wxTextAttr;
-
 zend_class_entry* php_wxTextEntryDialog_entry;
-int le_wxTextEntryDialog;
-
 zend_class_entry* php_wxComboBox_entry;
-int le_wxComboBox;
-
 zend_class_entry* php_wxItemContainer_entry;
-int le_wxItemContainer;
-
 zend_class_entry* php_wxItemContainerImmutable_entry;
-int le_wxItemContainerImmutable;
-
 zend_class_entry* php_wxBitmapComboBox_entry;
-int le_wxBitmapComboBox;
-
 zend_class_entry* php_wxAuiToolBarEvent_entry;
-int le_wxAuiToolBarEvent;
-
 zend_class_entry* php_wxAuiToolBar_entry;
-int le_wxAuiToolBar;
-
 zend_class_entry* php_wxBannerWindow_entry;
-int le_wxBannerWindow;
-
 zend_class_entry* php_wxChoice_entry;
-int le_wxChoice;
-
 zend_class_entry* php_wxListEvent_entry;
-int le_wxListEvent;
-
 zend_class_entry* php_wxListCtrl_entry;
-int le_wxListCtrl;
-
 zend_class_entry* php_wxListItemAttr_entry;
-int le_wxListItemAttr;
-
 zend_class_entry* php_wxListItem_entry;
-int le_wxListItem;
-
 zend_class_entry* php_wxListbook_entry;
-int le_wxListbook;
-
 zend_class_entry* php_wxChildFocusEvent_entry;
-int le_wxChildFocusEvent;
-
 zend_class_entry* php_wxChoicebook_entry;
-int le_wxChoicebook;
-
 zend_class_entry* php_wxRadioBox_entry;
-int le_wxRadioBox;
-
 zend_class_entry* php_wxRadioButton_entry;
-int le_wxRadioButton;
-
 zend_class_entry* php_wxRearrangeCtrl_entry;
-int le_wxRearrangeCtrl;
-
 zend_class_entry* php_wxRearrangeDialog_entry;
-int le_wxRearrangeDialog;
-
 zend_class_entry* php_wxRearrangeList_entry;
-int le_wxRearrangeList;
-
 zend_class_entry* php_wxSlider_entry;
-int le_wxSlider;
-
 zend_class_entry* php_wxSpinCtrl_entry;
-int le_wxSpinCtrl;
-
 zend_class_entry* php_wxSpinButton_entry;
-int le_wxSpinButton;
-
 zend_class_entry* php_wxSpinEvent_entry;
-int le_wxSpinEvent;
-
 zend_class_entry* php_wxSplitterEvent_entry;
-int le_wxSplitterEvent;
-
 zend_class_entry* php_wxSplashScreen_entry;
-int le_wxSplashScreen;
-
 zend_class_entry* php_wxSizeEvent_entry;
-int le_wxSizeEvent;
-
 zend_class_entry* php_wxGauge_entry;
-int le_wxGauge;
-
 zend_class_entry* php_wxHtmlWindow_entry;
-int le_wxHtmlWindow;
-
 zend_class_entry* php_wxHtmlContainerCell_entry;
-int le_wxHtmlContainerCell;
-
 zend_class_entry* php_wxHtmlCell_entry;
-int le_wxHtmlCell;
-
 zend_class_entry* php_wxHtmlCellEvent_entry;
-int le_wxHtmlCellEvent;
-
 zend_class_entry* php_wxHtmlColourCell_entry;
-int le_wxHtmlColourCell;
-
 zend_class_entry* php_wxHtmlEasyPrinting_entry;
-int le_wxHtmlEasyPrinting;
-
 zend_class_entry* php_wxHtmlLinkEvent_entry;
-int le_wxHtmlLinkEvent;
-
 zend_class_entry* php_wxHtmlLinkInfo_entry;
-int le_wxHtmlLinkInfo;
-
 zend_class_entry* php_wxMouseEvent_entry;
-int le_wxMouseEvent;
-
 zend_class_entry* php_wxMouseState_entry;
-int le_wxMouseState;
-
 zend_class_entry* php_wxMoveEvent_entry;
-int le_wxMoveEvent;
-
 zend_class_entry* php_wxMouseEventsManager_entry;
-int le_wxMouseEventsManager;
-
 zend_class_entry* php_wxMessageDialog_entry;
-int le_wxMessageDialog;
-
 zend_class_entry* php_wxHtmlListBox_entry;
-int le_wxHtmlListBox;
-
 zend_class_entry* php_wxVListBox_entry;
-int le_wxVListBox;
-
 zend_class_entry* php_wxHtmlTag_entry;
-int le_wxHtmlTag;
-
 zend_class_entry* php_wxHyperlinkCtrl_entry;
-int le_wxHyperlinkCtrl;
-
 zend_class_entry* php_wxHyperlinkEvent_entry;
-int le_wxHyperlinkEvent;
-
 zend_class_entry* php_wxCursor_entry;
-int le_wxCursor;
-
 zend_class_entry* php_wxToggleButton_entry;
-int le_wxToggleButton;
-
 zend_class_entry* php_wxTimer_entry;
-int le_wxTimer;
-
 zend_class_entry* php_wxTimerEvent_entry;
-int le_wxTimerEvent;
-
 zend_class_entry* php_wxThreadEvent_entry;
-int le_wxThreadEvent;
-
 zend_class_entry* php_wxSearchCtrl_entry;
-int le_wxSearchCtrl;
-
 zend_class_entry* php_wxColourPickerEvent_entry;
-int le_wxColourPickerEvent;
-
 zend_class_entry* php_wxColourPickerCtrl_entry;
-int le_wxColourPickerCtrl;
-
 zend_class_entry* php_wxFontPickerCtrl_entry;
-int le_wxFontPickerCtrl;
-
 zend_class_entry* php_wxFontPickerEvent_entry;
-int le_wxFontPickerEvent;
-
 zend_class_entry* php_wxFilePickerCtrl_entry;
-int le_wxFilePickerCtrl;
-
 zend_class_entry* php_wxFindReplaceDialog_entry;
-int le_wxFindReplaceDialog;
-
 zend_class_entry* php_wxFindReplaceData_entry;
-int le_wxFindReplaceData;
-
 zend_class_entry* php_wxDirPickerCtrl_entry;
-int le_wxDirPickerCtrl;
-
 zend_class_entry* php_wxDirDialog_entry;
-int le_wxDirDialog;
-
 zend_class_entry* php_wxSpinDoubleEvent_entry;
-int le_wxSpinDoubleEvent;
-
 zend_class_entry* php_wxSpinCtrlDouble_entry;
-int le_wxSpinCtrlDouble;
-
 zend_class_entry* php_wxGenericDirCtrl_entry;
-int le_wxGenericDirCtrl;
-
 zend_class_entry* php_wxFileName_entry;
-int le_wxFileName;
-
 zend_class_entry* php_wxGridSizeEvent_entry;
-int le_wxGridSizeEvent;
-
 zend_class_entry* php_wxGridSizer_entry;
-int le_wxGridSizer;
-
 zend_class_entry* php_wxFlexGridSizer_entry;
-int le_wxFlexGridSizer;
-
 zend_class_entry* php_wxGridBagSizer_entry;
-int le_wxGridBagSizer;
-
 zend_class_entry* php_wxStdDialogButtonSizer_entry;
-int le_wxStdDialogButtonSizer;
-
 zend_class_entry* php_wxScrollEvent_entry;
-int le_wxScrollEvent;
-
 zend_class_entry* php_wxScrollWinEvent_entry;
-int le_wxScrollWinEvent;
-
 zend_class_entry* php_wxNotebook_entry;
-int le_wxNotebook;
-
 zend_class_entry* php_wxDialog_entry;
-int le_wxDialog;
-
 zend_class_entry* php_wxSysColourChangedEvent_entry;
-int le_wxSysColourChangedEvent;
-
 zend_class_entry* php_wxSymbolPickerDialog_entry;
-int le_wxSymbolPickerDialog;
-
 zend_class_entry* php_wxGBPosition_entry;
-int le_wxGBPosition;
-
 zend_class_entry* php_wxGBSpan_entry;
-int le_wxGBSpan;
-
 zend_class_entry* php_wxGBSizerItem_entry;
-int le_wxGBSizerItem;
-
 zend_class_entry* php_wxPopupWindow_entry;
-int le_wxPopupWindow;
-
 zend_class_entry* php_wxMDIChildFrame_entry;
-int le_wxMDIChildFrame;
-
 zend_class_entry* php_wxMDIClientWindow_entry;
-int le_wxMDIClientWindow;
-
 zend_class_entry* php_wxMDIParentFrame_entry;
-int le_wxMDIParentFrame;
-
 zend_class_entry* php_wxMiniFrame_entry;
-int le_wxMiniFrame;
-
 zend_class_entry* php_wxPropertySheetDialog_entry;
-int le_wxPropertySheetDialog;
-
 zend_class_entry* php_wxWizard_entry;
-int le_wxWizard;
-
 zend_class_entry* php_wxWizardEvent_entry;
-int le_wxWizardEvent;
-
 zend_class_entry* php_wxWizardPage_entry;
-int le_wxWizardPage;
-
 zend_class_entry* php_wxWizardPageSimple_entry;
-int le_wxWizardPageSimple;
-
 zend_class_entry* php_wxWindowModalDialogEvent_entry;
-int le_wxWindowModalDialogEvent;
-
 zend_class_entry* php_wxTreeListItem_entry;
-int le_wxTreeListItem;
-
 zend_class_entry* php_wxTreebook_entry;
-int le_wxTreebook;
-
 zend_class_entry* php_wxTreeListCtrl_entry;
-int le_wxTreeListCtrl;
-
 zend_class_entry* php_wxSound_entry;
-int le_wxSound;
-
 zend_class_entry* php_wxSimpleHtmlListBox_entry;
-int le_wxSimpleHtmlListBox;
-
 zend_class_entry* php_wxFileSystem_entry;
-int le_wxFileSystem;
-
 zend_class_entry* php_wxFileSystemHandler_entry;
-int le_wxFileSystemHandler;
-
 zend_class_entry* php_wxNativeFontInfo_entry;
-int le_wxNativeFontInfo;
-
 zend_class_entry* php_wxDateEvent_entry;
-int le_wxDateEvent;
-
 zend_class_entry* php_wxBitmapToggleButton_entry;
-int le_wxBitmapToggleButton;
-
 zend_class_entry* php_wxCalendarDateAttr_entry;
-int le_wxCalendarDateAttr;
-
 zend_class_entry* php_wxCalendarCtrl_entry;
-int le_wxCalendarCtrl;
-
 zend_class_entry* php_wxMask_entry;
-int le_wxMask;
-
 zend_class_entry* php_wxToolTip_entry;
-int le_wxToolTip;
-
 zend_class_entry* php_wxCaret_entry;
-int le_wxCaret;
-
 zend_class_entry* php_wxRegion_entry;
-int le_wxRegion;
-
 zend_class_entry* php_wxPoint2DDouble_entry;
-int le_wxPoint2DDouble;
-
 zend_class_entry* php_wxPoint2DInt_entry;
-int le_wxPoint2DInt;
-
 zend_class_entry* php_wxPopupTransientWindow_entry;
-int le_wxPopupTransientWindow;
-
 zend_class_entry* php_wxProcessEvent_entry;
-int le_wxProcessEvent;
-
 zend_class_entry* php_wxProgressDialog_entry;
-int le_wxProgressDialog;
-
 zend_class_entry* php_wxGraphicsMatrix_entry;
-int le_wxGraphicsMatrix;
-
 zend_class_entry* php_wxGraphicsRenderer_entry;
-int le_wxGraphicsRenderer;
-
 zend_class_entry* php_wxWindowDC_entry;
-int le_wxWindowDC;
-
 zend_class_entry* php_wxWindowCreateEvent_entry;
-int le_wxWindowCreateEvent;
-
 zend_class_entry* php_wxWindowDestroyEvent_entry;
-int le_wxWindowDestroyEvent;
-
 zend_class_entry* php_wxGraphicsGradientStop_entry;
-int le_wxGraphicsGradientStop;
-
 zend_class_entry* php_wxGraphicsGradientStops_entry;
-int le_wxGraphicsGradientStops;
-
 zend_class_entry* php_wxEventFilter_entry;
-int le_wxEventFilter;
-
 zend_class_entry* php_wxEventBlocker_entry;
-int le_wxEventBlocker;
-
 zend_class_entry* php_wxEraseEvent_entry;
-int le_wxEraseEvent;
-
 zend_class_entry* php_wxEventLoopActivator_entry;
-int le_wxEventLoopActivator;
-
 zend_class_entry* php_wxEventLoopBase_entry;
-int le_wxEventLoopBase;
-
 zend_class_entry* php_wxPickerBase_entry;
-int le_wxPickerBase;
-
 zend_class_entry* php_wxGridEvent_entry;
-int le_wxGridEvent;
-
 zend_class_entry* php_wxUpdateUIEvent_entry;
-int le_wxUpdateUIEvent;
-
 zend_class_entry* php_wxHelpEvent_entry;
-int le_wxHelpEvent;
-
 zend_class_entry* php_wxLayoutConstraints_entry;
-int le_wxLayoutConstraints;
-
 zend_class_entry* php_wxDropTarget_entry;
-int le_wxDropTarget;
-
 zend_class_entry* php_wxObject_entry;
-int le_wxObject;
-
 zend_class_entry* php_wxFFile_entry;
-int le_wxFFile;
-
 zend_class_entry* php_wxFSFile_entry;
-int le_wxFSFile;
-
 zend_class_entry* php_wxInputStream_entry;
-int le_wxInputStream;
-
 zend_class_entry* php_wxStreamBase_entry;
-int le_wxStreamBase;
-
 zend_class_entry* php_wxThread_entry;
-int le_wxThread;
-
 zend_class_entry* php_wxTimePickerCtrl_entry;
-int le_wxTimePickerCtrl;
-
 zend_class_entry* php_wxOutputStream_entry;
-int le_wxOutputStream;
-
 zend_class_entry* php_wxColourDialog_entry;
-int le_wxColourDialog;
-
 zend_class_entry* php_wxColourData_entry;
-int le_wxColourData;
-
 zend_class_entry* php_wxFileDialog_entry;
-int le_wxFileDialog;
-
 zend_class_entry* php_wxFontData_entry;
-int le_wxFontData;
-
 zend_class_entry* php_wxFontDialog_entry;
-int le_wxFontDialog;
-
 zend_class_entry* php_wxThreadHelper_entry;
-int le_wxThreadHelper;
-
 zend_class_entry* php_wxToolBar_entry;
-int le_wxToolBar;
-
 zend_class_entry* php_wxAuiTabArt_entry;
-int le_wxAuiTabArt;
-
 zend_class_entry* php_wxCalendarEvent_entry;
-int le_wxCalendarEvent;
-
 zend_class_entry* php_wxGrid_entry;
-int le_wxGrid;
-
 zend_class_entry* php_wxGridCellAttr_entry;
-int le_wxGridCellAttr;
-
 zend_class_entry* php_wxGridCellAttrProvider_entry;
-int le_wxGridCellAttrProvider;
-
 zend_class_entry* php_wxGridCellBoolEditor_entry;
-int le_wxGridCellBoolEditor;
-
 zend_class_entry* php_wxGridCellChoiceEditor_entry;
-int le_wxGridCellChoiceEditor;
-
 zend_class_entry* php_wxGridCellDateTimeRenderer_entry;
-int le_wxGridCellDateTimeRenderer;
-
 zend_class_entry* php_wxGridCellBoolRenderer_entry;
-int le_wxGridCellBoolRenderer;
-
 zend_class_entry* php_wxGridCellAutoWrapStringRenderer_entry;
-int le_wxGridCellAutoWrapStringRenderer;
-
 zend_class_entry* php_wxGridCellAutoWrapStringEditor_entry;
-int le_wxGridCellAutoWrapStringEditor;
-
 zend_class_entry* php_wxGridCellEditor_entry;
-int le_wxGridCellEditor;
-
 zend_class_entry* php_wxGridCellEnumEditor_entry;
-int le_wxGridCellEnumEditor;
-
 zend_class_entry* php_wxGridCellEnumRenderer_entry;
-int le_wxGridCellEnumRenderer;
-
 zend_class_entry* php_wxGridCellFloatEditor_entry;
-int le_wxGridCellFloatEditor;
-
 zend_class_entry* php_wxGridCellFloatRenderer_entry;
-int le_wxGridCellFloatRenderer;
-
 zend_class_entry* php_wxGridCellNumberEditor_entry;
-int le_wxGridCellNumberEditor;
-
 zend_class_entry* php_wxGridCellNumberRenderer_entry;
-int le_wxGridCellNumberRenderer;
-
 zend_class_entry* php_wxGridCellRenderer_entry;
-int le_wxGridCellRenderer;
-
 zend_class_entry* php_wxGridCellStringRenderer_entry;
-int le_wxGridCellStringRenderer;
-
 zend_class_entry* php_wxGridCellTextEditor_entry;
-int le_wxGridCellTextEditor;
-
 zend_class_entry* php_wxGridColumnHeaderRenderer_entry;
-int le_wxGridColumnHeaderRenderer;
-
 zend_class_entry* php_wxGridColumnHeaderRendererDefault_entry;
-int le_wxGridColumnHeaderRendererDefault;
-
 zend_class_entry* php_wxGridCornerHeaderRenderer_entry;
-int le_wxGridCornerHeaderRenderer;
-
 zend_class_entry* php_wxGridCornerHeaderRendererDefault_entry;
-int le_wxGridCornerHeaderRendererDefault;
-
 zend_class_entry* php_wxGridEditorCreatedEvent_entry;
-int le_wxGridEditorCreatedEvent;
-
 zend_class_entry* php_wxGridHeaderLabelsRenderer_entry;
-int le_wxGridHeaderLabelsRenderer;
-
 zend_class_entry* php_wxGridRangeSelectEvent_entry;
-int le_wxGridRangeSelectEvent;
-
 zend_class_entry* php_wxGridRowHeaderRenderer_entry;
-int le_wxGridRowHeaderRenderer;
-
 zend_class_entry* php_wxGridRowHeaderRendererDefault_entry;
-int le_wxGridRowHeaderRendererDefault;
-
 zend_class_entry* php_wxGridSizesInfo_entry;
-int le_wxGridSizesInfo;
-
 zend_class_entry* php_wxGridTableBase_entry;
-int le_wxGridTableBase;
-
 zend_class_entry* php_wxGridUpdateLocker_entry;
-int le_wxGridUpdateLocker;
-
 zend_class_entry* php_wxDatePickerCtrl_entry;
-int le_wxDatePickerCtrl;
-
 zend_class_entry* php_wxPasswordEntryDialog_entry;
-int le_wxPasswordEntryDialog;
-
 zend_class_entry* php_wxScreenDC_entry;
-int le_wxScreenDC;
-
 zend_class_entry* php_wxCollapsiblePane_entry;
-int le_wxCollapsiblePane;
-
 zend_class_entry* php_wxCollapsiblePaneEvent_entry;
-int le_wxCollapsiblePaneEvent;
-
 zend_class_entry* php_wxComboCtrl_entry;
-int le_wxComboCtrl;
-
 zend_class_entry* php_wxComboPopup_entry;
-int le_wxComboPopup;
-
 zend_class_entry* php_wxDataViewCtrl_entry;
-int le_wxDataViewCtrl;
-
 zend_class_entry* php_wxDataViewItem_entry;
-int le_wxDataViewItem;
-
 zend_class_entry* php_wxDataViewColumn_entry;
-int le_wxDataViewColumn;
-
 zend_class_entry* php_wxDataViewRenderer_entry;
-int le_wxDataViewRenderer;
-
 zend_class_entry* php_wxDataViewModel_entry;
-int le_wxDataViewModel;
-
 zend_class_entry* php_wxDataViewModelNotifier_entry;
-int le_wxDataViewModelNotifier;
-
 zend_class_entry* php_wxRefCounter_entry;
-int le_wxRefCounter;
-
 zend_class_entry* php_wxDataViewListCtrl_entry;
-int le_wxDataViewListCtrl;
-
 zend_class_entry* php_wxDataViewListStore_entry;
-int le_wxDataViewListStore;
-
 zend_class_entry* php_wxDataViewListModel_entry;
-int le_wxDataViewListModel;
-
 zend_class_entry* php_wxDataViewEvent_entry;
-int le_wxDataViewEvent;
-
 zend_class_entry* php_wxDataFormat_entry;
-int le_wxDataFormat;
-
 zend_class_entry* php_wxDataInputStream_entry;
-int le_wxDataInputStream;
-
 zend_class_entry* php_wxDataObject_entry;
-int le_wxDataObject;
-
 zend_class_entry* php_wxDataObjectComposite_entry;
-int le_wxDataObjectComposite;
-
 zend_class_entry* php_wxDataObjectSimple_entry;
-int le_wxDataObjectSimple;
-
 zend_class_entry* php_wxDataOutputStream_entry;
-int le_wxDataOutputStream;
-
 zend_class_entry* php_wxDataViewBitmapRenderer_entry;
-int le_wxDataViewBitmapRenderer;
-
 zend_class_entry* php_wxDataViewChoiceRenderer_entry;
-int le_wxDataViewChoiceRenderer;
-
 zend_class_entry* php_wxDataViewCustomRenderer_entry;
-int le_wxDataViewCustomRenderer;
-
 zend_class_entry* php_wxDataViewDateRenderer_entry;
-int le_wxDataViewDateRenderer;
-
 zend_class_entry* php_wxDataViewIconText_entry;
-int le_wxDataViewIconText;
-
 zend_class_entry* php_wxDataViewIconTextRenderer_entry;
-int le_wxDataViewIconTextRenderer;
-
 zend_class_entry* php_wxDataViewIndexListModel_entry;
-int le_wxDataViewIndexListModel;
-
 zend_class_entry* php_wxDataViewItemAttr_entry;
-int le_wxDataViewItemAttr;
-
 zend_class_entry* php_wxDataViewProgressRenderer_entry;
-int le_wxDataViewProgressRenderer;
-
 zend_class_entry* php_wxDataViewSpinRenderer_entry;
-int le_wxDataViewSpinRenderer;
-
 zend_class_entry* php_wxDataViewTextRenderer_entry;
-int le_wxDataViewTextRenderer;
-
 zend_class_entry* php_wxDataViewToggleRenderer_entry;
-int le_wxDataViewToggleRenderer;
-
 zend_class_entry* php_wxDataViewTreeCtrl_entry;
-int le_wxDataViewTreeCtrl;
-
 zend_class_entry* php_wxDataViewTreeStore_entry;
-int le_wxDataViewTreeStore;
-
 zend_class_entry* php_wxDataViewVirtualListModel_entry;
-int le_wxDataViewVirtualListModel;
-
 zend_class_entry* php_wxVariant_entry;
-int le_wxVariant;
-
 zend_class_entry* php_wxVariantData_entry;
-int le_wxVariantData;
-
 zend_class_entry* php_wxClassInfo_entry;
-int le_wxClassInfo;
-
 zend_class_entry* php_wxColourDatabase_entry;
-int le_wxColourDatabase;
-
 zend_class_entry* php_wxClipboard_entry;
-int le_wxClipboard;
-
 zend_class_entry* php_wxClipboardTextEvent_entry;
-int le_wxClipboardTextEvent;
-
 zend_class_entry* php_wxListView_entry;
-int le_wxListView;
-
 zend_class_entry* php_wxConfigBase_entry;
-int le_wxConfigBase;
-
 zend_class_entry* php_wxHeaderCtrlEvent_entry;
-int le_wxHeaderCtrlEvent;
-
 zend_class_entry* php_wxHeaderCtrl_entry;
-int le_wxHeaderCtrl;
-
 zend_class_entry* php_wxHeaderColumn_entry;
-int le_wxHeaderColumn;
-
 zend_class_entry* php_wxHeaderCtrlSimple_entry;
-int le_wxHeaderCtrlSimple;
-
 zend_class_entry* php_wxHeaderColumnSimple_entry;
-int le_wxHeaderColumnSimple;
-
 zend_class_entry* php_wxSettableHeaderColumn_entry;
-int le_wxSettableHeaderColumn;
-
 zend_class_entry* php_wxSetCursorEvent_entry;
-int le_wxSetCursorEvent;
-
 zend_class_entry* php_wxIdleEvent_entry;
-int le_wxIdleEvent;
-
 zend_class_entry* php_wxPen_entry;
-int le_wxPen;
-
 zend_class_entry* php_wxEditableListBox_entry;
-int le_wxEditableListBox;
-
 zend_class_entry* php_wxFileCtrlEvent_entry;
-int le_wxFileCtrlEvent;
-
 zend_class_entry* php_wxFileCtrl_entry;
-int le_wxFileCtrl;
-
 zend_class_entry* php_wxProcess_entry;
-int le_wxProcess;
-
 zend_class_entry* php_wxTextValidator_entry;
-int le_wxTextValidator;
-
 zend_class_entry* php_wxHScrolledWindow_entry;
-int le_wxHScrolledWindow;
-
 zend_class_entry* php_wxInfoBar_entry;
-int le_wxInfoBar;
-
 zend_class_entry* php_wxRichToolTip_entry;
-int le_wxRichToolTip;
-
 zend_class_entry* php_wxPosition_entry;
-int le_wxPosition;
-
 zend_class_entry* php_wxMutex_entry;
-int le_wxMutex;
-
 zend_class_entry* php_wxMutexLocker_entry;
-int le_wxMutexLocker;
-
 zend_class_entry* php_wxXmlResource_entry;
-int le_wxXmlResource;
-
 zend_class_entry* php_wxGenericValidator_entry;
-int le_wxGenericValidator;
-
 zend_class_entry* php_wxSashWindow_entry;
-int le_wxSashWindow;
-
 zend_class_entry* php_wxSashEvent_entry;
-int le_wxSashEvent;
-
 zend_class_entry* php_wxSashLayoutWindow_entry;
-int le_wxSashLayoutWindow;
-
 zend_class_entry* php_wxSemaphore_entry;
-int le_wxSemaphore;
-
 zend_class_entry* php_wxAuiToolBarArt_entry;
-int le_wxAuiToolBarArt;
-
 zend_class_entry* php_wxBrush_entry;
-int le_wxBrush;
-
 zend_class_entry* php_wxPlatformInfo_entry;
-int le_wxPlatformInfo;
-
 zend_class_entry* php_wxPageSetupDialog_entry;
-int le_wxPageSetupDialog;
-
 zend_class_entry* php_wxPageSetupDialogData_entry;
-int le_wxPageSetupDialogData;
-
 zend_class_entry* php_wxPrintDialog_entry;
-int le_wxPrintDialog;
-
 zend_class_entry* php_wxPrintDialogData_entry;
-int le_wxPrintDialogData;
-
 zend_class_entry* php_wxPrintData_entry;
-int le_wxPrintData;
-
 zend_class_entry* php_wxPostScriptDC_entry;
-int le_wxPostScriptDC;
-
 zend_class_entry* php_wxPrintPreview_entry;
-int le_wxPrintPreview;
-
 zend_class_entry* php_wxPrinter_entry;
-int le_wxPrinter;
-
 zend_class_entry* php_wxPrinterDC_entry;
-int le_wxPrinterDC;
-
 zend_class_entry* php_wxPrintout_entry;
-int le_wxPrintout;
-
 zend_class_entry* php_wxPreviewFrame_entry;
-int le_wxPreviewFrame;
-
 zend_class_entry* php_wxPreviewControlBar_entry;
-int le_wxPreviewControlBar;
-
 zend_class_entry* php_wxPreviewCanvas_entry;
-int le_wxPreviewCanvas;
-
 zend_class_entry* php_wxSingleChoiceDialog_entry;
-int le_wxSingleChoiceDialog;
-
 zend_class_entry* php_wxHtmlDCRenderer_entry;
-int le_wxHtmlDCRenderer;
-
 zend_class_entry* php_wxHtmlFilter_entry;
-int le_wxHtmlFilter;
-
 zend_class_entry* php_wxHtmlHelpController_entry;
-int le_wxHtmlHelpController;
-
 zend_class_entry* php_wxHtmlHelpData_entry;
-int le_wxHtmlHelpData;
-
 zend_class_entry* php_wxHtmlHelpDialog_entry;
-int le_wxHtmlHelpDialog;
-
 zend_class_entry* php_wxHtmlHelpFrame_entry;
-int le_wxHtmlHelpFrame;
-
 zend_class_entry* php_wxHtmlHelpWindow_entry;
-int le_wxHtmlHelpWindow;
-
 zend_class_entry* php_wxHtmlModalHelp_entry;
-int le_wxHtmlModalHelp;
-
 zend_class_entry* php_wxHtmlPrintout_entry;
-int le_wxHtmlPrintout;
-
 zend_class_entry* php_wxHtmlRenderingInfo_entry;
-int le_wxHtmlRenderingInfo;
-
 zend_class_entry* php_wxHtmlRenderingStyle_entry;
-int le_wxHtmlRenderingStyle;
-
 zend_class_entry* php_wxHtmlTagHandler_entry;
-int le_wxHtmlTagHandler;
-
 zend_class_entry* php_wxHtmlTagsModule_entry;
-int le_wxHtmlTagsModule;
-
 zend_class_entry* php_wxModule_entry;
-int le_wxModule;
-
 zend_class_entry* php_wxHtmlWidgetCell_entry;
-int le_wxHtmlWidgetCell;
-
 zend_class_entry* php_wxHtmlWinParser_entry;
-int le_wxHtmlWinParser;
-
 zend_class_entry* php_wxHtmlWinTagHandler_entry;
-int le_wxHtmlWinTagHandler;
-
 zend_class_entry* php_wxAutoBufferedPaintDC_entry;
-int le_wxAutoBufferedPaintDC;
-
 zend_class_entry* php_wxBufferedDC_entry;
-int le_wxBufferedDC;
-
 zend_class_entry* php_wxBufferedPaintDC_entry;
-int le_wxBufferedPaintDC;
-
 zend_class_entry* php_wxClientDC_entry;
-int le_wxClientDC;
-
 zend_class_entry* php_wxPaintEvent_entry;
-int le_wxPaintEvent;
-
 zend_class_entry* php_wxPaintDC_entry;
-int le_wxPaintDC;
-
 zend_class_entry* php_wxMemoryDC_entry;
-int le_wxMemoryDC;
-
 zend_class_entry* php_wxMirrorDC_entry;
-int le_wxMirrorDC;
-
 zend_class_entry* php_wxDCClipper_entry;
-int le_wxDCClipper;
-
 zend_class_entry* php_wxFontList_entry;
-int le_wxFontList;
-
 zend_class_entry* php_wxPenList_entry;
-int le_wxPenList;
-
 zend_class_entry* php_wxPaletteChangedEvent_entry;
-int le_wxPaletteChangedEvent;
-
 zend_class_entry* php_wxRendererNative_entry;
-int le_wxRendererNative;
-
 zend_class_entry* php_wxImageHandler_entry;
-int le_wxImageHandler;
-
 zend_class_entry* php_wxInitDialogEvent_entry;
-int le_wxInitDialogEvent;
-
 zend_class_entry* php_wxMaximizeEvent_entry;
-int le_wxMaximizeEvent;
-
 zend_class_entry* php_wxNavigationKeyEvent_entry;
-int le_wxNavigationKeyEvent;
-
 zend_class_entry* php_wxPathList_entry;
-int le_wxPathList;
-
 zend_class_entry* php_wxCriticalSection_entry;
-int le_wxCriticalSection;
-
 zend_class_entry* php_wxCriticalSectionLocker_entry;
-int le_wxCriticalSectionLocker;
-
 zend_class_entry* php_wxCondition_entry;
-int le_wxCondition;
-
 zend_class_entry* php_wxBusyCursor_entry;
-int le_wxBusyCursor;
-
 zend_class_entry* php_wxBusyInfo_entry;
-int le_wxBusyInfo;
-
 zend_class_entry* php_wxXmlResourceHandler_entry;
-int le_wxXmlResourceHandler;
-
 zend_class_entry* php_wxXmlNode_entry;
-int le_wxXmlNode;
-
 zend_class_entry* php_wxXmlDocument_entry;
-int le_wxXmlDocument;
-
 zend_class_entry* php_wxXmlAttribute_entry;
-int le_wxXmlAttribute;
-
 zend_class_entry* php_wxLayoutAlgorithm_entry;
-int le_wxLayoutAlgorithm;
-
 zend_class_entry* php_wxFocusEvent_entry;
-int le_wxFocusEvent;
-
 zend_class_entry* php_wxFontMapper_entry;
-int le_wxFontMapper;
-
 zend_class_entry* php_wxFontEnumerator_entry;
-int le_wxFontEnumerator;
-
 zend_class_entry* php_wxFFileInputStream_entry;
-int le_wxFFileInputStream;
-
 zend_class_entry* php_wxFFileOutputStream_entry;
-int le_wxFFileOutputStream;
-
 zend_class_entry* php_wxFFileStream_entry;
-int le_wxFFileStream;
-
 zend_class_entry* php_wxFile_entry;
-int le_wxFile;
-
 zend_class_entry* php_wxFileConfig_entry;
-int le_wxFileConfig;
-
 zend_class_entry* php_wxFileDirPickerEvent_entry;
-int le_wxFileDirPickerEvent;
-
 zend_class_entry* php_wxFileHistory_entry;
-int le_wxFileHistory;
-
 zend_class_entry* php_wxFileInputStream_entry;
-int le_wxFileInputStream;
-
 zend_class_entry* php_wxFileDropTarget_entry;
-int le_wxFileDropTarget;
-
 zend_class_entry* php_wxFileOutputStream_entry;
-int le_wxFileOutputStream;
-
 zend_class_entry* php_wxFileStream_entry;
-int le_wxFileStream;
-
 zend_class_entry* php_wxFileSystemWatcher_entry;
-int le_wxFileSystemWatcher;
-
 zend_class_entry* php_wxFileSystemWatcherEvent_entry;
-int le_wxFileSystemWatcherEvent;
-
 zend_class_entry* php_wxFileType_entry;
-int le_wxFileType;
-
 zend_class_entry* php_wxFileTypeInfo_entry;
-int le_wxFileTypeInfo;
-
 zend_class_entry* php_wxStopWatch_entry;
-int le_wxStopWatch;
-
 zend_class_entry* php_wxSingleInstanceChecker_entry;
-int le_wxSingleInstanceChecker;
-
 zend_class_entry* php_wxStandardPaths_entry;
-int le_wxStandardPaths;
-
 zend_class_entry* php_wxLog_entry;
-int le_wxLog;
-
 zend_class_entry* php_wxLogBuffer_entry;
-int le_wxLogBuffer;
-
 zend_class_entry* php_wxLogChain_entry;
-int le_wxLogChain;
-
 zend_class_entry* php_wxLogGui_entry;
-int le_wxLogGui;
-
 zend_class_entry* php_wxLogInterposer_entry;
-int le_wxLogInterposer;
-
 zend_class_entry* php_wxLogWindow_entry;
-int le_wxLogWindow;
-
 zend_class_entry* php_wxLogTextCtrl_entry;
-int le_wxLogTextCtrl;
-
 zend_class_entry* php_wxTextDataObject_entry;
-int le_wxTextDataObject;
-
 zend_class_entry* php_wxFileDataObject_entry;
-int le_wxFileDataObject;
-
 zend_class_entry* php_wxBitmapDataObject_entry;
-int le_wxBitmapDataObject;
-
 zend_class_entry* php_wxURLDataObject_entry;
-int le_wxURLDataObject;
-
 zend_class_entry* php_wxCustomDataObject_entry;
-int le_wxCustomDataObject;
-
 zend_class_entry* php_wxTextDropTarget_entry;
-int le_wxTextDropTarget;
-
 zend_class_entry* php_wxDisplay_entry;
-int le_wxDisplay;
-
 zend_class_entry* php_wxDisplayChangedEvent_entry;
-int le_wxDisplayChangedEvent;
-
 zend_class_entry* php_wxCalculateLayoutEvent_entry;
-int le_wxCalculateLayoutEvent;
-
 zend_class_entry* php_wxContextMenuEvent_entry;
-int le_wxContextMenuEvent;
-
 zend_class_entry* php_wxQueryLayoutInfoEvent_entry;
-int le_wxQueryLayoutInfoEvent;
-
 zend_class_entry* php_wxToolbook_entry;
-int le_wxToolbook;
-
 zend_class_entry* php_wxVideoMode_entry;
-int le_wxVideoMode;
-
 zend_class_entry* php_wxRibbonControl_entry;
-int le_wxRibbonControl;
-
 zend_class_entry* php_wxRibbonBar_entry;
-int le_wxRibbonBar;
-
 zend_class_entry* php_wxRibbonBarEvent_entry;
-int le_wxRibbonBarEvent;
-
 zend_class_entry* php_wxRibbonButtonBar_entry;
-int le_wxRibbonButtonBar;
-
 zend_class_entry* php_wxRibbonButtonBarEvent_entry;
-int le_wxRibbonButtonBarEvent;
-
 zend_class_entry* php_wxRibbonArtProvider_entry;
-int le_wxRibbonArtProvider;
-
 zend_class_entry* php_wxRibbonGallery_entry;
-int le_wxRibbonGallery;
-
 zend_class_entry* php_wxRibbonGalleryEvent_entry;
-int le_wxRibbonGalleryEvent;
-
 zend_class_entry* php_wxRibbonPage_entry;
-int le_wxRibbonPage;
-
 zend_class_entry* php_wxRibbonPanel_entry;
-int le_wxRibbonPanel;
-
 zend_class_entry* php_wxRibbonToolBar_entry;
-int le_wxRibbonToolBar;
-
 zend_class_entry* php_wxTaskBarIcon_entry;
-int le_wxTaskBarIcon;
-
 zend_class_entry* php_wxTaskBarIconEvent_entry;
-int le_wxTaskBarIconEvent;
-
 zend_class_entry* php_wxTimerRunner_entry;
-int le_wxTimerRunner;
-
 zend_class_entry* php_wxNotificationMessage_entry;
-int le_wxNotificationMessage;
-
 zend_class_entry* php_wxSystemOptions_entry;
-int le_wxSystemOptions;
-
 zend_class_entry* php_wxSystemSettings_entry;
-int le_wxSystemSettings;
-
 zend_class_entry* php_wxWindowDisabler_entry;
-int le_wxWindowDisabler;
-
 zend_class_entry* php_wxGenericProgressDialog_entry;
-int le_wxGenericProgressDialog;
-
 zend_class_entry* php_wxToolBarToolBase_entry;
-int le_wxToolBarToolBase;
-
 zend_class_entry* php_wxWebViewHistoryItem_entry;
-int le_wxWebViewHistoryItem;
-
 zend_class_entry* php_wxWebViewHandler_entry;
-int le_wxWebViewHandler;
-
 zend_class_entry* php_wxWebViewEvent_entry;
-int le_wxWebViewEvent;
-
 zend_class_entry* php_wxWebViewArchiveHandler_entry;
-int le_wxWebViewArchiveHandler;
-
 zend_class_entry* php_wxWebView_entry;
-int le_wxWebView;
-
 zend_class_entry* php_wxTextCompleterSimple_entry;
-int le_wxTextCompleterSimple;
 
 
 /**
  * Predefined handcoded class entry for wxApp
  */
 zend_class_entry *php_wxApp_entry;
-int le_wxApp;
 
 /**
  * Custom function to register global objects as constants
  */
 BEGIN_EXTERN_C()
-void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
+void wxphp_register_object_constant(const char *name, uint name_len, zval object, int flags, int module_number TSRMLS_DC)
 {
 	zend_constant c;
-	char _wxResource[] = "wxResource";
 	
-	object_init_ex(&c.value, class_entry);
-	add_property_resource(&c.value, _wxResource, zend_list_insert(resource, list_entry));
-	
+	c.value = object;
 	c.value.type = IS_OBJECT;
 	c.flags = flags;
 	c.name = zend_strndup(name, name_len-1);
@@ -1605,11 +666,8 @@ END_EXTERN_C()
  * Global functions table entry used on the module initialization code
  */
 static zend_function_entry php_wxWidgets_functions[] = {
-	PHP_FALIAS(wxInitAllImageHandlers, php_wxInitAllImageHandlers, NULL)
 	PHP_FALIAS(wxExecute, php_wxExecute, NULL)
-	PHP_FALIAS(wxInitialize, php_wxInitialize, NULL)
 	PHP_FALIAS(wxEntry, php_wxEntry, NULL)
-	PHP_FALIAS(wxAboutBox, php_wxAboutBox, NULL)
 	PHP_FALIAS(wxC2D, php_wxC2D, NULL)
 	
 	/**
@@ -1617,6 +675,7 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	 * autogenerated functions
 	 */
 	PHP_FALIAS(wxHandleFatalExceptions, php_wxHandleFatalExceptions, NULL)
+	PHP_FALIAS(wxInitialize, php_wxInitialize, NULL)
 	PHP_FALIAS(wxUninitialize, php_wxUninitialize, NULL)
 	PHP_FALIAS(wxWakeUpIdle, php_wxWakeUpIdle, NULL)
 	PHP_FALIAS(wxYield, php_wxYield, NULL)
@@ -1630,6 +689,7 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxIsMainThread, php_wxIsMainThread, NULL)
 	PHP_FALIAS(wxMutexGuiEnter, php_wxMutexGuiEnter, NULL)
 	PHP_FALIAS(wxMutexGuiLeave, php_wxMutexGuiLeave, NULL)
+	PHP_FALIAS(wxAboutBox, php_wxAboutBox, NULL)
 	PHP_FALIAS(wxBase64Encode, php_wxBase64Encode, NULL)
 	PHP_FALIAS(wxBase64DecodedSize, php_wxBase64DecodedSize, NULL)
 	PHP_FALIAS(wxBase64EncodedSize, php_wxBase64EncodedSize, NULL)
@@ -1681,6 +741,7 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxGetDisplaySize, php_wxGetDisplaySize, NULL)
 	PHP_FALIAS(wxDisplaySizeMM, php_wxDisplaySizeMM, NULL)
 	PHP_FALIAS(wxGetDisplaySizeMM, php_wxGetDisplaySizeMM, NULL)
+	PHP_FALIAS(wxInitAllImageHandlers, php_wxInitAllImageHandlers, NULL)
 	PHP_FALIAS(wxEntryCleanup, php_wxEntryCleanup, NULL)
 	PHP_FALIAS(wxFinite, php_wxFinite, NULL)
 	PHP_FALIAS(wxIsNaN, php_wxIsNaN, NULL)
@@ -1795,127 +856,310 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
 	{
 		wxInitialize();
 	 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBitmap", (void*) &wxNullBitmap, php_wxBitmap_entry, le_wxBitmap, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullBitmap;
+		object_init_ex(&z_wxNullBitmap, php_wxBitmap_entry);
+		((zo_wxBitmap*) zend_object_store_get_object(&z_wxNullBitmap TSRMLS_CC))->native_object = (wxBitmap_php*) &wxNullBitmap;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullBitmap", z_wxNullBitmap, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullFont", (void*) &wxNullFont, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullFont;
+		object_init_ex(&z_wxNullFont, php_wxFont_entry);
+		((zo_wxFont*) zend_object_store_get_object(&z_wxNullFont TSRMLS_CC))->native_object = (wxFont_php*) &wxNullFont;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullFont", z_wxNullFont, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNORMAL_FONT", (void*) wxNORMAL_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNORMAL_FONT;
+		object_init_ex(&z_wxNORMAL_FONT, php_wxFont_entry);
+		((zo_wxFont*) zend_object_store_get_object(&z_wxNORMAL_FONT TSRMLS_CC))->native_object = (wxFont_php*) wxNORMAL_FONT;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNORMAL_FONT", z_wxNORMAL_FONT, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSMALL_FONT", (void*) wxSMALL_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		zval z_wxSMALL_FONT;
+		object_init_ex(&z_wxSMALL_FONT, php_wxFont_entry);
+		((zo_wxFont*) zend_object_store_get_object(&z_wxSMALL_FONT TSRMLS_CC))->native_object = (wxFont_php*) wxSMALL_FONT;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxSMALL_FONT", z_wxSMALL_FONT, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxITALIC_FONT", (void*) wxITALIC_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		zval z_wxITALIC_FONT;
+		object_init_ex(&z_wxITALIC_FONT, php_wxFont_entry);
+		((zo_wxFont*) zend_object_store_get_object(&z_wxITALIC_FONT TSRMLS_CC))->native_object = (wxFont_php*) wxITALIC_FONT;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxITALIC_FONT", z_wxITALIC_FONT, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSWISS_FONT", (void*) wxSWISS_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		zval z_wxSWISS_FONT;
+		object_init_ex(&z_wxSWISS_FONT, php_wxFont_entry);
+		((zo_wxFont*) zend_object_store_get_object(&z_wxSWISS_FONT TSRMLS_CC))->native_object = (wxFont_php*) wxSWISS_FONT;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxSWISS_FONT", z_wxSWISS_FONT, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheFontList", (void*) wxTheFontList, php_wxFontList_entry, le_wxFontList, CONST_CS | CONST_PERSISTENT);
+		zval z_wxTheFontList;
+		object_init_ex(&z_wxTheFontList, php_wxFontList_entry);
+		((zo_wxFontList*) zend_object_store_get_object(&z_wxTheFontList TSRMLS_CC))->native_object = (wxFontList_php*) wxTheFontList;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTheFontList", z_wxTheFontList, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullAnimation", (void*) &wxNullAnimation, php_wxAnimation_entry, le_wxAnimation, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullAnimation;
+		object_init_ex(&z_wxNullAnimation, php_wxAnimation_entry);
+		((zo_wxAnimation*) zend_object_store_get_object(&z_wxNullAnimation TSRMLS_CC))->native_object = (wxAnimation_php*) &wxNullAnimation;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullAnimation", z_wxNullAnimation, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBrush", (void*) &wxNullBrush, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullBrush;
+		object_init_ex(&z_wxNullBrush, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxNullBrush TSRMLS_CC))->native_object = (wxBrush_php*) &wxNullBrush;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullBrush", z_wxNullBrush, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_BRUSH", (void*) wxBLUE_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLUE_BRUSH;
+		object_init_ex(&z_wxBLUE_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxBLUE_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxBLUE_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE_BRUSH", z_wxBLUE_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_BRUSH", (void*) wxGREEN_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxGREEN_BRUSH;
+		object_init_ex(&z_wxGREEN_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxGREEN_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxGREEN_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN_BRUSH", z_wxGREEN_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_BRUSH", (void*) wxYELLOW_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxYELLOW_BRUSH;
+		object_init_ex(&z_wxYELLOW_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxYELLOW_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxYELLOW_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW_BRUSH", z_wxYELLOW_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_BRUSH", (void*) wxWHITE_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxWHITE_BRUSH;
+		object_init_ex(&z_wxWHITE_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxWHITE_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxWHITE_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE_BRUSH", z_wxWHITE_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_BRUSH", (void*) wxBLACK_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLACK_BRUSH;
+		object_init_ex(&z_wxBLACK_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxBLACK_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxBLACK_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_BRUSH", z_wxBLACK_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_BRUSH", (void*) wxGREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxGREY_BRUSH;
+		object_init_ex(&z_wxGREY_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxGREY_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxGREY_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxGREY_BRUSH", z_wxGREY_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_BRUSH", (void*) wxMEDIUM_GREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxMEDIUM_GREY_BRUSH;
+		object_init_ex(&z_wxMEDIUM_GREY_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxMEDIUM_GREY_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxMEDIUM_GREY_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxMEDIUM_GREY_BRUSH", z_wxMEDIUM_GREY_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_BRUSH", (void*) wxLIGHT_GREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxLIGHT_GREY_BRUSH;
+		object_init_ex(&z_wxLIGHT_GREY_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxLIGHT_GREY_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxLIGHT_GREY_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY_BRUSH", z_wxLIGHT_GREY_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_BRUSH", (void*) wxTRANSPARENT_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxTRANSPARENT_BRUSH;
+		object_init_ex(&z_wxTRANSPARENT_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxTRANSPARENT_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxTRANSPARENT_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTRANSPARENT_BRUSH", z_wxTRANSPARENT_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_BRUSH", (void*) wxCYAN_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxCYAN_BRUSH;
+		object_init_ex(&z_wxCYAN_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxCYAN_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxCYAN_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN_BRUSH", z_wxCYAN_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_BRUSH", (void*) wxRED_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		zval z_wxRED_BRUSH;
+		object_init_ex(&z_wxRED_BRUSH, php_wxBrush_entry);
+		((zo_wxBrush*) zend_object_store_get_object(&z_wxRED_BRUSH TSRMLS_CC))->native_object = (wxBrush_php*) wxRED_BRUSH;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxRED_BRUSH", z_wxRED_BRUSH, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullColour", (void*) &wxNullColour, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullColour;
+		object_init_ex(&z_wxNullColour, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxNullColour TSRMLS_CC))->native_object = (wxColour_php*) &wxNullColour;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullColour", z_wxNullColour, CONST_CS | CONST_PERSISTENT);
 
+		zval z_wx_transparent_color;
 		wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTransparentColour", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK", (void*) wxBLACK, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		object_init_ex(&z_wx_transparent_color, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wx_transparent_color TSRMLS_CC))->native_object = (wxColour_php*) _wx_transparent_color;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTransparentColour", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLACK;
+		object_init_ex(&z_wxBLACK, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxBLACK TSRMLS_CC))->native_object = (wxColour_php*) wxBLACK;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK", z_wxBLACK, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE", (void*) wxBLUE, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLUE;
+		object_init_ex(&z_wxBLUE, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxBLUE TSRMLS_CC))->native_object = (wxColour_php*) wxBLUE;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE", z_wxBLUE, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN", (void*) wxCYAN, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxCYAN;
+		object_init_ex(&z_wxCYAN, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxCYAN TSRMLS_CC))->native_object = (wxColour_php*) wxCYAN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN", z_wxCYAN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN", (void*) wxGREEN, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxGREEN;
+		object_init_ex(&z_wxGREEN, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxGREEN TSRMLS_CC))->native_object = (wxColour_php*) wxGREEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN", z_wxGREEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW", (void*) wxYELLOW, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxYELLOW;
+		object_init_ex(&z_wxYELLOW, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxYELLOW TSRMLS_CC))->native_object = (wxColour_php*) wxYELLOW;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW", z_wxYELLOW, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY", (void*) wxLIGHT_GREY, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxLIGHT_GREY;
+		object_init_ex(&z_wxLIGHT_GREY, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxLIGHT_GREY TSRMLS_CC))->native_object = (wxColour_php*) wxLIGHT_GREY;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY", z_wxLIGHT_GREY, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED", (void*) wxRED, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxRED;
+		object_init_ex(&z_wxRED, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxRED TSRMLS_CC))->native_object = (wxColour_php*) wxRED;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxRED", z_wxRED, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE", (void*) wxWHITE, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		zval z_wxWHITE;
+		object_init_ex(&z_wxWHITE, php_wxColour_entry);
+		((zo_wxColour*) zend_object_store_get_object(&z_wxWHITE TSRMLS_CC))->native_object = (wxColour_php*) wxWHITE;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE", z_wxWHITE, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullCursor", (void*) &wxNullCursor, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullCursor;
+		object_init_ex(&z_wxNullCursor, php_wxCursor_entry);
+		((zo_wxCursor*) zend_object_store_get_object(&z_wxNullCursor TSRMLS_CC))->native_object = (wxCursor_php*) &wxNullCursor;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullCursor", z_wxNullCursor, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSTANDARD_CURSOR", (void*) wxSTANDARD_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		zval z_wxSTANDARD_CURSOR;
+		object_init_ex(&z_wxSTANDARD_CURSOR, php_wxCursor_entry);
+		((zo_wxCursor*) zend_object_store_get_object(&z_wxSTANDARD_CURSOR TSRMLS_CC))->native_object = (wxCursor_php*) wxSTANDARD_CURSOR;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxSTANDARD_CURSOR", z_wxSTANDARD_CURSOR, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxHOURGLASS_CURSOR", (void*) wxHOURGLASS_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		zval z_wxHOURGLASS_CURSOR;
+		object_init_ex(&z_wxHOURGLASS_CURSOR, php_wxCursor_entry);
+		((zo_wxCursor*) zend_object_store_get_object(&z_wxHOURGLASS_CURSOR TSRMLS_CC))->native_object = (wxCursor_php*) wxHOURGLASS_CURSOR;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxHOURGLASS_CURSOR", z_wxHOURGLASS_CURSOR, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCROSS_CURSOR", (void*) wxCROSS_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		zval z_wxCROSS_CURSOR;
+		object_init_ex(&z_wxCROSS_CURSOR, php_wxCursor_entry);
+		((zo_wxCursor*) zend_object_store_get_object(&z_wxCROSS_CURSOR TSRMLS_CC))->native_object = (wxCursor_php*) wxCROSS_CURSOR;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxCROSS_CURSOR", z_wxCROSS_CURSOR, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSpan", (void*) &wxDefaultSpan, php_wxGBSpan_entry, le_wxGBSpan, CONST_CS | CONST_PERSISTENT);
+		zval z_wxDefaultSpan;
+		object_init_ex(&z_wxDefaultSpan, php_wxGBSpan_entry);
+		((zo_wxGBSpan*) zend_object_store_get_object(&z_wxDefaultSpan TSRMLS_CC))->native_object = (wxGBSpan_php*) &wxDefaultSpan;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultSpan", z_wxDefaultSpan, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultPosition", (void*) &wxDefaultPosition, php_wxPoint_entry, le_wxPoint, CONST_CS | CONST_PERSISTENT);
+		zval z_wxDefaultPosition;
+		object_init_ex(&z_wxDefaultPosition, php_wxPoint_entry);
+		((zo_wxPoint*) zend_object_store_get_object(&z_wxDefaultPosition TSRMLS_CC))->native_object = (wxPoint_php*) &wxDefaultPosition;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultPosition", z_wxDefaultPosition, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheColourDatabase", (void*) wxTheColourDatabase, php_wxColourDatabase_entry, le_wxColourDatabase, CONST_CS | CONST_PERSISTENT);
+		zval z_wxTheColourDatabase;
+		object_init_ex(&z_wxTheColourDatabase, php_wxColourDatabase_entry);
+		((zo_wxColourDatabase*) zend_object_store_get_object(&z_wxTheColourDatabase TSRMLS_CC))->native_object = (wxColourDatabase_php*) wxTheColourDatabase;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTheColourDatabase", z_wxTheColourDatabase, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSize", (void*) &wxDefaultSize, php_wxSize_entry, le_wxSize, CONST_CS | CONST_PERSISTENT);
+		zval z_wxDefaultSize;
+		object_init_ex(&z_wxDefaultSize, php_wxSize_entry);
+		((zo_wxSize*) zend_object_store_get_object(&z_wxDefaultSize TSRMLS_CC))->native_object = (wxSize_php*) &wxDefaultSize;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultSize", z_wxDefaultSize, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullGraphicsMatrix", (void*) &wxNullGraphicsMatrix, php_wxGraphicsMatrix_entry, le_wxGraphicsMatrix, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullGraphicsMatrix;
+		object_init_ex(&z_wxNullGraphicsMatrix, php_wxGraphicsMatrix_entry);
+		((zo_wxGraphicsMatrix*) zend_object_store_get_object(&z_wxNullGraphicsMatrix TSRMLS_CC))->native_object = (wxGraphicsMatrix_php*) &wxNullGraphicsMatrix;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullGraphicsMatrix", z_wxNullGraphicsMatrix, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIcon", (void*) &wxNullIcon, php_wxIcon_entry, le_wxIcon, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullIcon;
+		object_init_ex(&z_wxNullIcon, php_wxIcon_entry);
+		((zo_wxIcon*) zend_object_store_get_object(&z_wxNullIcon TSRMLS_CC))->native_object = (wxIcon_php*) &wxNullIcon;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullIcon", z_wxNullIcon, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIconBundle", (void*) &wxNullIconBundle, php_wxIconBundle_entry, le_wxIconBundle, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullIconBundle;
+		object_init_ex(&z_wxNullIconBundle, php_wxIconBundle_entry);
+		((zo_wxIconBundle*) zend_object_store_get_object(&z_wxNullIconBundle TSRMLS_CC))->native_object = (wxIconBundle_php*) &wxNullIconBundle;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullIconBundle", z_wxNullIconBundle, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullImage", (void*) &wxNullImage, php_wxImage_entry, le_wxImage, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullImage;
+		object_init_ex(&z_wxNullImage, php_wxImage_entry);
+		((zo_wxImage*) zend_object_store_get_object(&z_wxNullImage TSRMLS_CC))->native_object = (wxImage_php*) &wxNullImage;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullImage", z_wxNullImage, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPalette", (void*) &wxNullPalette, php_wxPalette_entry, le_wxPalette, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullPalette;
+		object_init_ex(&z_wxNullPalette, php_wxPalette_entry);
+		((zo_wxPalette*) zend_object_store_get_object(&z_wxNullPalette TSRMLS_CC))->native_object = (wxPalette_php*) &wxNullPalette;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullPalette", z_wxNullPalette, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPen", (void*) &wxNullPen, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxNullPen;
+		object_init_ex(&z_wxNullPen, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxNullPen TSRMLS_CC))->native_object = (wxPen_php*) &wxNullPen;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxNullPen", z_wxNullPen, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_PEN", (void*) wxRED_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxRED_PEN;
+		object_init_ex(&z_wxRED_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxRED_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxRED_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxRED_PEN", z_wxRED_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_PEN", (void*) wxBLUE_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLUE_PEN;
+		object_init_ex(&z_wxBLUE_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxBLUE_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxBLUE_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLUE_PEN", z_wxBLUE_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_PEN", (void*) wxCYAN_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxCYAN_PEN;
+		object_init_ex(&z_wxCYAN_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxCYAN_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxCYAN_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxCYAN_PEN", z_wxCYAN_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_PEN", (void*) wxGREEN_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxGREEN_PEN;
+		object_init_ex(&z_wxGREEN_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxGREEN_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxGREEN_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxGREEN_PEN", z_wxGREEN_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_PEN", (void*) wxYELLOW_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxYELLOW_PEN;
+		object_init_ex(&z_wxYELLOW_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxYELLOW_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxYELLOW_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxYELLOW_PEN", z_wxYELLOW_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_PEN", (void*) wxBLACK_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLACK_PEN;
+		object_init_ex(&z_wxBLACK_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxBLACK_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxBLACK_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_PEN", z_wxBLACK_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_PEN", (void*) wxWHITE_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxWHITE_PEN;
+		object_init_ex(&z_wxWHITE_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxWHITE_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxWHITE_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxWHITE_PEN", z_wxWHITE_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_PEN", (void*) wxTRANSPARENT_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxTRANSPARENT_PEN;
+		object_init_ex(&z_wxTRANSPARENT_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxTRANSPARENT_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxTRANSPARENT_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTRANSPARENT_PEN", z_wxTRANSPARENT_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_DASHED_PEN", (void*) wxBLACK_DASHED_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxBLACK_DASHED_PEN;
+		object_init_ex(&z_wxBLACK_DASHED_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxBLACK_DASHED_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxBLACK_DASHED_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxBLACK_DASHED_PEN", z_wxBLACK_DASHED_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_PEN", (void*) wxGREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxGREY_PEN;
+		object_init_ex(&z_wxGREY_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxGREY_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxGREY_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxGREY_PEN", z_wxGREY_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_PEN", (void*) wxMEDIUM_GREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxMEDIUM_GREY_PEN;
+		object_init_ex(&z_wxMEDIUM_GREY_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxMEDIUM_GREY_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxMEDIUM_GREY_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxMEDIUM_GREY_PEN", z_wxMEDIUM_GREY_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_PEN", (void*) wxLIGHT_GREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		zval z_wxLIGHT_GREY_PEN;
+		object_init_ex(&z_wxLIGHT_GREY_PEN, php_wxPen_entry);
+		((zo_wxPen*) zend_object_store_get_object(&z_wxLIGHT_GREY_PEN TSRMLS_CC))->native_object = (wxPen_php*) wxLIGHT_GREY_PEN;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxLIGHT_GREY_PEN", z_wxLIGHT_GREY_PEN, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxThePenList", (void*) wxThePenList, php_wxPenList_entry, le_wxPenList, CONST_CS | CONST_PERSISTENT);
+		zval z_wxThePenList;
+		object_init_ex(&z_wxThePenList, php_wxPenList_entry);
+		((zo_wxPenList*) zend_object_store_get_object(&z_wxThePenList TSRMLS_CC))->native_object = (wxPenList_php*) wxThePenList;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxThePenList", z_wxThePenList, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_FIRST", (void*) &wxTLI_FIRST, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
+		zval z_wxTLI_FIRST;
+		object_init_ex(&z_wxTLI_FIRST, php_wxTreeListItem_entry);
+		((zo_wxTreeListItem*) zend_object_store_get_object(&z_wxTLI_FIRST TSRMLS_CC))->native_object = (wxTreeListItem_php*) &wxTLI_FIRST;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTLI_FIRST", z_wxTLI_FIRST, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_LAST", (void*) &wxTLI_LAST, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
+		zval z_wxTLI_LAST;
+		object_init_ex(&z_wxTLI_LAST, php_wxTreeListItem_entry);
+		((zo_wxTreeListItem*) zend_object_store_get_object(&z_wxTLI_LAST TSRMLS_CC))->native_object = (wxTreeListItem_php*) &wxTLI_LAST;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxTLI_LAST", z_wxTLI_LAST, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultValidator", (void*) &wxDefaultValidator, php_wxValidator_entry, le_wxValidator, CONST_CS | CONST_PERSISTENT);
+		zval z_wxDefaultValidator;
+		object_init_ex(&z_wxDefaultValidator, php_wxValidator_entry);
+		((zo_wxValidator*) zend_object_store_get_object(&z_wxDefaultValidator TSRMLS_CC))->native_object = (wxValidator_php*) &wxDefaultValidator;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultValidator", z_wxDefaultValidator, CONST_CS | CONST_PERSISTENT);
 
-		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultVideoMode", (void*) &wxDefaultVideoMode, php_wxVideoMode_entry, le_wxVideoMode, CONST_CS | CONST_PERSISTENT);
+		zval z_wxDefaultVideoMode;
+		object_init_ex(&z_wxDefaultVideoMode, php_wxVideoMode_entry);
+		((zo_wxVideoMode*) zend_object_store_get_object(&z_wxDefaultVideoMode TSRMLS_CC))->native_object = (wxVideoMode_php*) &wxDefaultVideoMode;
+		wxPHP_REGISTER_OBJECT_CONSTANT("wxDefaultVideoMode", z_wxDefaultVideoMode, CONST_CS | CONST_PERSISTENT);
 
 		
 		objects_intialized = 1;
@@ -1933,8 +1177,8 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	 */
 	char PHP_wxApp_name[] = "wxApp";
 	INIT_CLASS_ENTRY(ce, PHP_wxApp_name, php_wxApp_functions);
+	ce.create_object = php_wxApp_new;
 	php_wxApp_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxApp = zend_register_list_destructors_ex(NULL,NULL, (char*) "native wxApp", module_number);
 	
 	/**
 	 * Space reserved for the initialization of autogenerated classes,
@@ -1943,2343 +1187,2343 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	  
 	char PHP_wxScrolledWindow_name[] = "wxScrolledWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxScrolledWindow_name, php_wxScrolledWindow_functions);
+	ce.create_object = php_wxScrolledWindow_new;
 	php_wxScrolledWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxScrolledWindow = zend_register_list_destructors_ex(php_wxScrolledWindow_destruction_handler, NULL, (char*) "native wxScrolledWindow", module_number);
 
 	char PHP_wxRibbonButtonBarButtonBase_name[] = "wxRibbonButtonBarButtonBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBarButtonBase_name, php_wxRibbonButtonBarButtonBase_functions);
+	ce.create_object = php_wxRibbonButtonBarButtonBase_new;
 	php_wxRibbonButtonBarButtonBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonButtonBarButtonBase = zend_register_list_destructors_ex(php_wxRibbonButtonBarButtonBase_destruction_handler, NULL, (char*) "native wxRibbonButtonBarButtonBase", module_number);
 
 	char PHP_wxRibbonGalleryItem_name[] = "wxRibbonGalleryItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGalleryItem_name, php_wxRibbonGalleryItem_functions);
+	ce.create_object = php_wxRibbonGalleryItem_new;
 	php_wxRibbonGalleryItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonGalleryItem = zend_register_list_destructors_ex(php_wxRibbonGalleryItem_destruction_handler, NULL, (char*) "native wxRibbonGalleryItem", module_number);
 
 	char PHP_wxRibbonToolBarToolBase_name[] = "wxRibbonToolBarToolBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonToolBarToolBase_name, php_wxRibbonToolBarToolBase_functions);
+	ce.create_object = php_wxRibbonToolBarToolBase_new;
 	php_wxRibbonToolBarToolBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonToolBarToolBase = zend_register_list_destructors_ex(php_wxRibbonToolBarToolBase_destruction_handler, NULL, (char*) "native wxRibbonToolBarToolBase", module_number);
 
 	char PHP_wxAboutDialogInfo_name[] = "wxAboutDialogInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxAboutDialogInfo_name, php_wxAboutDialogInfo_functions);
+	ce.create_object = php_wxAboutDialogInfo_new;
 	php_wxAboutDialogInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAboutDialogInfo = zend_register_list_destructors_ex(php_wxAboutDialogInfo_destruction_handler, NULL, (char*) "native wxAboutDialogInfo", module_number);
 
 	char PHP_wxFrame_name[] = "wxFrame";
 	INIT_CLASS_ENTRY(ce, PHP_wxFrame_name, php_wxFrame_functions);
+	ce.create_object = php_wxFrame_new;
 	php_wxFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFrame = zend_register_list_destructors_ex(php_wxFrame_destruction_handler, NULL, (char*) "native wxFrame", module_number);
 
 	char PHP_wxTopLevelWindow_name[] = "wxTopLevelWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxTopLevelWindow_name, php_wxTopLevelWindow_functions);
+	ce.create_object = php_wxTopLevelWindow_new;
 	php_wxTopLevelWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTopLevelWindow = zend_register_list_destructors_ex(php_wxTopLevelWindow_destruction_handler, NULL, (char*) "native wxTopLevelWindow", module_number);
 
 	char PHP_wxNonOwnedWindow_name[] = "wxNonOwnedWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxNonOwnedWindow_name, php_wxNonOwnedWindow_functions);
+	ce.create_object = php_wxNonOwnedWindow_new;
 	php_wxNonOwnedWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxNonOwnedWindow = zend_register_list_destructors_ex(php_wxNonOwnedWindow_destruction_handler, NULL, (char*) "native wxNonOwnedWindow", module_number);
 
 	char PHP_wxWindow_name[] = "wxWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxWindow_name, php_wxWindow_functions);
+	ce.create_object = php_wxWindow_new;
 	php_wxWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWindow = zend_register_list_destructors_ex(php_wxWindow_destruction_handler, NULL, (char*) "native wxWindow", module_number);
 
 	char PHP_wxSize_name[] = "wxSize";
 	INIT_CLASS_ENTRY(ce, PHP_wxSize_name, php_wxSize_functions);
+	ce.create_object = php_wxSize_new;
 	php_wxSize_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSize = zend_register_list_destructors_ex(php_wxSize_destruction_handler, NULL, (char*) "native wxSize", module_number);
 
 	char PHP_wxPoint_name[] = "wxPoint";
 	INIT_CLASS_ENTRY(ce, PHP_wxPoint_name, php_wxPoint_functions);
+	ce.create_object = php_wxPoint_new;
 	php_wxPoint_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPoint = zend_register_list_destructors_ex(php_wxPoint_destruction_handler, NULL, (char*) "native wxPoint", module_number);
 
 	char PHP_wxRealPoint_name[] = "wxRealPoint";
 	INIT_CLASS_ENTRY(ce, PHP_wxRealPoint_name, php_wxRealPoint_functions);
+	ce.create_object = php_wxRealPoint_new;
 	php_wxRealPoint_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRealPoint = zend_register_list_destructors_ex(php_wxRealPoint_destruction_handler, NULL, (char*) "native wxRealPoint", module_number);
 
 	char PHP_wxEvtHandler_name[] = "wxEvtHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxEvtHandler_name, php_wxEvtHandler_functions);
+	ce.create_object = php_wxEvtHandler_new;
 	php_wxEvtHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEvtHandler = zend_register_list_destructors_ex(php_wxEvtHandler_destruction_handler, NULL, (char*) "native wxEvtHandler", module_number);
 
 	char PHP_wxStatusBar_name[] = "wxStatusBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxStatusBar_name, php_wxStatusBar_functions);
+	ce.create_object = php_wxStatusBar_new;
 	php_wxStatusBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStatusBar = zend_register_list_destructors_ex(php_wxStatusBar_destruction_handler, NULL, (char*) "native wxStatusBar", module_number);
 
 	char PHP_wxButton_name[] = "wxButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxButton_name, php_wxButton_functions);
+	ce.create_object = php_wxButton_new;
 	php_wxButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxButton = zend_register_list_destructors_ex(php_wxButton_destruction_handler, NULL, (char*) "native wxButton", module_number);
 
 	char PHP_wxAnyButton_name[] = "wxAnyButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxAnyButton_name, php_wxAnyButton_functions);
+	ce.create_object = php_wxAnyButton_new;
 	php_wxAnyButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAnyButton = zend_register_list_destructors_ex(php_wxAnyButton_destruction_handler, NULL, (char*) "native wxAnyButton", module_number);
 
 	char PHP_wxControl_name[] = "wxControl";
 	INIT_CLASS_ENTRY(ce, PHP_wxControl_name, php_wxControl_functions);
+	ce.create_object = php_wxControl_new;
 	php_wxControl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxControl = zend_register_list_destructors_ex(php_wxControl_destruction_handler, NULL, (char*) "native wxControl", module_number);
 
 	char PHP_wxValidator_name[] = "wxValidator";
 	INIT_CLASS_ENTRY(ce, PHP_wxValidator_name, php_wxValidator_functions);
+	ce.create_object = php_wxValidator_new;
 	php_wxValidator_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxValidator = zend_register_list_destructors_ex(php_wxValidator_destruction_handler, NULL, (char*) "native wxValidator", module_number);
 
 	char PHP_wxBitmapHandler_name[] = "wxBitmapHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxBitmapHandler_name, php_wxBitmapHandler_functions);
+	ce.create_object = php_wxBitmapHandler_new;
 	php_wxBitmapHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBitmapHandler = zend_register_list_destructors_ex(php_wxBitmapHandler_destruction_handler, NULL, (char*) "native wxBitmapHandler", module_number);
 
 	char PHP_wxBitmap_name[] = "wxBitmap";
 	INIT_CLASS_ENTRY(ce, PHP_wxBitmap_name, php_wxBitmap_functions);
+	ce.create_object = php_wxBitmap_new;
 	php_wxBitmap_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBitmap = zend_register_list_destructors_ex(php_wxBitmap_destruction_handler, NULL, (char*) "native wxBitmap", module_number);
 
 	char PHP_wxPalette_name[] = "wxPalette";
 	INIT_CLASS_ENTRY(ce, PHP_wxPalette_name, php_wxPalette_functions);
+	ce.create_object = php_wxPalette_new;
 	php_wxPalette_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPalette = zend_register_list_destructors_ex(php_wxPalette_destruction_handler, NULL, (char*) "native wxPalette", module_number);
 
 	char PHP_wxImage_name[] = "wxImage";
 	INIT_CLASS_ENTRY(ce, PHP_wxImage_name, php_wxImage_functions);
+	ce.create_object = php_wxImage_new;
 	php_wxImage_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxImage = zend_register_list_destructors_ex(php_wxImage_destruction_handler, NULL, (char*) "native wxImage", module_number);
 
 	char PHP_wxIcon_name[] = "wxIcon";
 	INIT_CLASS_ENTRY(ce, PHP_wxIcon_name, php_wxIcon_functions);
+	ce.create_object = php_wxIcon_new;
 	php_wxIcon_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxIcon = zend_register_list_destructors_ex(php_wxIcon_destruction_handler, NULL, (char*) "native wxIcon", module_number);
 
 	char PHP_wxSplitterWindow_name[] = "wxSplitterWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxSplitterWindow_name, php_wxSplitterWindow_functions);
+	ce.create_object = php_wxSplitterWindow_new;
 	php_wxSplitterWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSplitterWindow = zend_register_list_destructors_ex(php_wxSplitterWindow_destruction_handler, NULL, (char*) "native wxSplitterWindow", module_number);
 
 	char PHP_wxBoxSizer_name[] = "wxBoxSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxBoxSizer_name, php_wxBoxSizer_functions);
+	ce.create_object = php_wxBoxSizer_new;
 	php_wxBoxSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBoxSizer = zend_register_list_destructors_ex(php_wxBoxSizer_destruction_handler, NULL, (char*) "native wxBoxSizer", module_number);
 
 	char PHP_wxSizer_name[] = "wxSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxSizer_name, php_wxSizer_functions);
+	ce.create_object = php_wxSizer_new;
 	php_wxSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSizer = zend_register_list_destructors_ex(php_wxSizer_destruction_handler, NULL, (char*) "native wxSizer", module_number);
 
 	char PHP_wxSizerItem_name[] = "wxSizerItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxSizerItem_name, php_wxSizerItem_functions);
+	ce.create_object = php_wxSizerItem_new;
 	php_wxSizerItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSizerItem = zend_register_list_destructors_ex(php_wxSizerItem_destruction_handler, NULL, (char*) "native wxSizerItem", module_number);
 
 	char PHP_wxSizerFlags_name[] = "wxSizerFlags";
 	INIT_CLASS_ENTRY(ce, PHP_wxSizerFlags_name, php_wxSizerFlags_functions);
+	ce.create_object = php_wxSizerFlags_new;
 	php_wxSizerFlags_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSizerFlags = zend_register_list_destructors_ex(php_wxSizerFlags_destruction_handler, NULL, (char*) "native wxSizerFlags", module_number);
 
 	char PHP_wxRect_name[] = "wxRect";
 	INIT_CLASS_ENTRY(ce, PHP_wxRect_name, php_wxRect_functions);
+	ce.create_object = php_wxRect_new;
 	php_wxRect_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRect = zend_register_list_destructors_ex(php_wxRect_destruction_handler, NULL, (char*) "native wxRect", module_number);
 
 	char PHP_wxTreeCtrl_name[] = "wxTreeCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreeCtrl_name, php_wxTreeCtrl_functions);
+	ce.create_object = php_wxTreeCtrl_new;
 	php_wxTreeCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreeCtrl = zend_register_list_destructors_ex(php_wxTreeCtrl_destruction_handler, NULL, (char*) "native wxTreeCtrl", module_number);
 
 	char PHP_wxTreeItemId_name[] = "wxTreeItemId";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreeItemId_name, php_wxTreeItemId_functions);
+	ce.create_object = php_wxTreeItemId_new;
 	php_wxTreeItemId_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreeItemId = zend_register_list_destructors_ex(php_wxTreeItemId_destruction_handler, NULL, (char*) "native wxTreeItemId", module_number);
 
 	char PHP_wxTreeItemData_name[] = "wxTreeItemData";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreeItemData_name, php_wxTreeItemData_functions);
+	ce.create_object = php_wxTreeItemData_new;
 	php_wxTreeItemData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreeItemData = zend_register_list_destructors_ex(php_wxTreeItemData_destruction_handler, NULL, (char*) "native wxTreeItemData", module_number);
 
 	char PHP_wxClientData_name[] = "wxClientData";
 	INIT_CLASS_ENTRY(ce, PHP_wxClientData_name, php_wxClientData_functions);
+	ce.create_object = php_wxClientData_new;
 	php_wxClientData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxClientData = zend_register_list_destructors_ex(php_wxClientData_destruction_handler, NULL, (char*) "native wxClientData", module_number);
 
 	char PHP_wxImageList_name[] = "wxImageList";
 	INIT_CLASS_ENTRY(ce, PHP_wxImageList_name, php_wxImageList_functions);
+	ce.create_object = php_wxImageList_new;
 	php_wxImageList_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxImageList = zend_register_list_destructors_ex(php_wxImageList_destruction_handler, NULL, (char*) "native wxImageList", module_number);
 
 	char PHP_wxDC_name[] = "wxDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxDC_name, php_wxDC_functions);
+	ce.create_object = php_wxDC_new;
 	php_wxDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDC = zend_register_list_destructors_ex(php_wxDC_destruction_handler, NULL, (char*) "native wxDC", module_number);
 
 	char PHP_wxColour_name[] = "wxColour";
 	INIT_CLASS_ENTRY(ce, PHP_wxColour_name, php_wxColour_functions);
+	ce.create_object = php_wxColour_new;
 	php_wxColour_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxColour = zend_register_list_destructors_ex(php_wxColour_destruction_handler, NULL, (char*) "native wxColour", module_number);
 
 	char PHP_wxFont_name[] = "wxFont";
 	INIT_CLASS_ENTRY(ce, PHP_wxFont_name, php_wxFont_functions);
+	ce.create_object = php_wxFont_new;
 	php_wxFont_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFont = zend_register_list_destructors_ex(php_wxFont_destruction_handler, NULL, (char*) "native wxFont", module_number);
 
 	char PHP_wxPanel_name[] = "wxPanel";
 	INIT_CLASS_ENTRY(ce, PHP_wxPanel_name, php_wxPanel_functions);
+	ce.create_object = php_wxPanel_new;
 	php_wxPanel_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPanel = zend_register_list_destructors_ex(php_wxPanel_destruction_handler, NULL, (char*) "native wxPanel", module_number);
 
 	char PHP_wxCheckListBox_name[] = "wxCheckListBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxCheckListBox_name, php_wxCheckListBox_functions);
+	ce.create_object = php_wxCheckListBox_new;
 	php_wxCheckListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCheckListBox = zend_register_list_destructors_ex(php_wxCheckListBox_destruction_handler, NULL, (char*) "native wxCheckListBox", module_number);
 
 	char PHP_wxListBox_name[] = "wxListBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxListBox_name, php_wxListBox_functions);
+	ce.create_object = php_wxListBox_new;
 	php_wxListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListBox = zend_register_list_destructors_ex(php_wxListBox_destruction_handler, NULL, (char*) "native wxListBox", module_number);
 
 	char PHP_wxControlWithItems_name[] = "wxControlWithItems";
 	INIT_CLASS_ENTRY(ce, PHP_wxControlWithItems_name, php_wxControlWithItems_functions);
+	ce.create_object = php_wxControlWithItems_new;
 	php_wxControlWithItems_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxControlWithItems = zend_register_list_destructors_ex(php_wxControlWithItems_destruction_handler, NULL, (char*) "native wxControlWithItems", module_number);
 
 	char PHP_wxMenuBar_name[] = "wxMenuBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxMenuBar_name, php_wxMenuBar_functions);
+	ce.create_object = php_wxMenuBar_new;
 	php_wxMenuBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMenuBar = zend_register_list_destructors_ex(php_wxMenuBar_destruction_handler, NULL, (char*) "native wxMenuBar", module_number);
 
 	char PHP_wxMenuEvent_name[] = "wxMenuEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxMenuEvent_name, php_wxMenuEvent_functions);
+	ce.create_object = php_wxMenuEvent_new;
 	php_wxMenuEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMenuEvent = zend_register_list_destructors_ex(php_wxMenuEvent_destruction_handler, NULL, (char*) "native wxMenuEvent", module_number);
 
 	char PHP_wxMenuItem_name[] = "wxMenuItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxMenuItem_name, php_wxMenuItem_functions);
+	ce.create_object = php_wxMenuItem_new;
 	php_wxMenuItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMenuItem = zend_register_list_destructors_ex(php_wxMenuItem_destruction_handler, NULL, (char*) "native wxMenuItem", module_number);
 
 	char PHP_wxMenu_name[] = "wxMenu";
 	INIT_CLASS_ENTRY(ce, PHP_wxMenu_name, php_wxMenu_functions);
+	ce.create_object = php_wxMenu_new;
 	php_wxMenu_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMenu = zend_register_list_destructors_ex(php_wxMenu_destruction_handler, NULL, (char*) "native wxMenu", module_number);
 
 	char PHP_wxEvent_name[] = "wxEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxEvent_name, php_wxEvent_functions);
+	ce.create_object = php_wxEvent_new;
 	php_wxEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEvent = zend_register_list_destructors_ex(php_wxEvent_destruction_handler, NULL, (char*) "native wxEvent", module_number);
 
 	char PHP_wxTreeEvent_name[] = "wxTreeEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreeEvent_name, php_wxTreeEvent_functions);
+	ce.create_object = php_wxTreeEvent_new;
 	php_wxTreeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreeEvent = zend_register_list_destructors_ex(php_wxTreeEvent_destruction_handler, NULL, (char*) "native wxTreeEvent", module_number);
 
 	char PHP_wxKeyEvent_name[] = "wxKeyEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxKeyEvent_name, php_wxKeyEvent_functions);
+	ce.create_object = php_wxKeyEvent_new;
 	php_wxKeyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxKeyEvent = zend_register_list_destructors_ex(php_wxKeyEvent_destruction_handler, NULL, (char*) "native wxKeyEvent", module_number);
 
 	char PHP_wxKeyboardState_name[] = "wxKeyboardState";
 	INIT_CLASS_ENTRY(ce, PHP_wxKeyboardState_name, php_wxKeyboardState_functions);
+	ce.create_object = php_wxKeyboardState_new;
 	php_wxKeyboardState_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxKeyboardState = zend_register_list_destructors_ex(php_wxKeyboardState_destruction_handler, NULL, (char*) "native wxKeyboardState", module_number);
 
 	char PHP_wxNotifyEvent_name[] = "wxNotifyEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxNotifyEvent_name, php_wxNotifyEvent_functions);
+	ce.create_object = php_wxNotifyEvent_new;
 	php_wxNotifyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxNotifyEvent = zend_register_list_destructors_ex(php_wxNotifyEvent_destruction_handler, NULL, (char*) "native wxNotifyEvent", module_number);
 
 	char PHP_wxCommandEvent_name[] = "wxCommandEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxCommandEvent_name, php_wxCommandEvent_functions);
+	ce.create_object = php_wxCommandEvent_new;
 	php_wxCommandEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCommandEvent = zend_register_list_destructors_ex(php_wxCommandEvent_destruction_handler, NULL, (char*) "native wxCommandEvent", module_number);
 
 	char PHP_wxCloseEvent_name[] = "wxCloseEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxCloseEvent_name, php_wxCloseEvent_functions);
+	ce.create_object = php_wxCloseEvent_new;
 	php_wxCloseEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCloseEvent = zend_register_list_destructors_ex(php_wxCloseEvent_destruction_handler, NULL, (char*) "native wxCloseEvent", module_number);
 
 	char PHP_wxActivateEvent_name[] = "wxActivateEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxActivateEvent_name, php_wxActivateEvent_functions);
+	ce.create_object = php_wxActivateEvent_new;
 	php_wxActivateEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxActivateEvent = zend_register_list_destructors_ex(php_wxActivateEvent_destruction_handler, NULL, (char*) "native wxActivateEvent", module_number);
 
 	char PHP_wxAuiManager_name[] = "wxAuiManager";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiManager_name, php_wxAuiManager_functions);
+	ce.create_object = php_wxAuiManager_new;
 	php_wxAuiManager_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiManager = zend_register_list_destructors_ex(php_wxAuiManager_destruction_handler, NULL, (char*) "native wxAuiManager", module_number);
 
 	char PHP_wxAuiDockArt_name[] = "wxAuiDockArt";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiDockArt_name, php_wxAuiDockArt_functions);
+	ce.create_object = php_wxAuiDockArt_new;
 	php_wxAuiDockArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiDockArt = zend_register_list_destructors_ex(php_wxAuiDockArt_destruction_handler, NULL, (char*) "native wxAuiDockArt", module_number);
 
 	char PHP_wxAuiPaneInfo_name[] = "wxAuiPaneInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiPaneInfo_name, php_wxAuiPaneInfo_functions);
+	ce.create_object = php_wxAuiPaneInfo_new;
 	php_wxAuiPaneInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiPaneInfo = zend_register_list_destructors_ex(php_wxAuiPaneInfo_destruction_handler, NULL, (char*) "native wxAuiPaneInfo", module_number);
 
 	char PHP_wxAuiManagerEvent_name[] = "wxAuiManagerEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiManagerEvent_name, php_wxAuiManagerEvent_functions);
+	ce.create_object = php_wxAuiManagerEvent_new;
 	php_wxAuiManagerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiManagerEvent = zend_register_list_destructors_ex(php_wxAuiManagerEvent_destruction_handler, NULL, (char*) "native wxAuiManagerEvent", module_number);
 
 	char PHP_wxAuiNotebook_name[] = "wxAuiNotebook";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiNotebook_name, php_wxAuiNotebook_functions);
+	ce.create_object = php_wxAuiNotebook_new;
 	php_wxAuiNotebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiNotebook = zend_register_list_destructors_ex(php_wxAuiNotebook_destruction_handler, NULL, (char*) "native wxAuiNotebook", module_number);
 
 	char PHP_wxAuiNotebookEvent_name[] = "wxAuiNotebookEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiNotebookEvent_name, php_wxAuiNotebookEvent_functions);
+	ce.create_object = php_wxAuiNotebookEvent_new;
 	php_wxAuiNotebookEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiNotebookEvent = zend_register_list_destructors_ex(php_wxAuiNotebookEvent_destruction_handler, NULL, (char*) "native wxAuiNotebookEvent", module_number);
 
 	char PHP_wxBookCtrlEvent_name[] = "wxBookCtrlEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxBookCtrlEvent_name, php_wxBookCtrlEvent_functions);
+	ce.create_object = php_wxBookCtrlEvent_new;
 	php_wxBookCtrlEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBookCtrlEvent = zend_register_list_destructors_ex(php_wxBookCtrlEvent_destruction_handler, NULL, (char*) "native wxBookCtrlEvent", module_number);
 
 	char PHP_wxAuiDefaultToolBarArt_name[] = "wxAuiDefaultToolBarArt";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiDefaultToolBarArt_name, php_wxAuiDefaultToolBarArt_functions);
+	ce.create_object = php_wxAuiDefaultToolBarArt_new;
 	php_wxAuiDefaultToolBarArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiDefaultToolBarArt = zend_register_list_destructors_ex(php_wxAuiDefaultToolBarArt_destruction_handler, NULL, (char*) "native wxAuiDefaultToolBarArt", module_number);
 
 	char PHP_wxBookCtrlBase_name[] = "wxBookCtrlBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxBookCtrlBase_name, php_wxBookCtrlBase_functions);
+	ce.create_object = php_wxBookCtrlBase_new;
 	php_wxBookCtrlBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBookCtrlBase = zend_register_list_destructors_ex(php_wxBookCtrlBase_destruction_handler, NULL, (char*) "native wxBookCtrlBase", module_number);
 
 	char PHP_wxWithImages_name[] = "wxWithImages";
 	INIT_CLASS_ENTRY(ce, PHP_wxWithImages_name, php_wxWithImages_functions);
+	ce.create_object = php_wxWithImages_new;
 	php_wxWithImages_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWithImages = zend_register_list_destructors_ex(php_wxWithImages_destruction_handler, NULL, (char*) "native wxWithImages", module_number);
 
 	char PHP_wxAcceleratorEntry_name[] = "wxAcceleratorEntry";
 	INIT_CLASS_ENTRY(ce, PHP_wxAcceleratorEntry_name, php_wxAcceleratorEntry_functions);
+	ce.create_object = php_wxAcceleratorEntry_new;
 	php_wxAcceleratorEntry_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAcceleratorEntry = zend_register_list_destructors_ex(php_wxAcceleratorEntry_destruction_handler, NULL, (char*) "native wxAcceleratorEntry", module_number);
 
 	char PHP_wxAcceleratorTable_name[] = "wxAcceleratorTable";
 	INIT_CLASS_ENTRY(ce, PHP_wxAcceleratorTable_name, php_wxAcceleratorTable_functions);
+	ce.create_object = php_wxAcceleratorTable_new;
 	php_wxAcceleratorTable_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAcceleratorTable = zend_register_list_destructors_ex(php_wxAcceleratorTable_destruction_handler, NULL, (char*) "native wxAcceleratorTable", module_number);
 
 	char PHP_wxGDIObject_name[] = "wxGDIObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxGDIObject_name, php_wxGDIObject_functions);
+	ce.create_object = php_wxGDIObject_new;
 	php_wxGDIObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGDIObject = zend_register_list_destructors_ex(php_wxGDIObject_destruction_handler, NULL, (char*) "native wxGDIObject", module_number);
 
 	char PHP_wxAnimation_name[] = "wxAnimation";
 	INIT_CLASS_ENTRY(ce, PHP_wxAnimation_name, php_wxAnimation_functions);
+	ce.create_object = php_wxAnimation_new;
 	php_wxAnimation_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAnimation = zend_register_list_destructors_ex(php_wxAnimation_destruction_handler, NULL, (char*) "native wxAnimation", module_number);
 
 	char PHP_wxAnimationCtrl_name[] = "wxAnimationCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxAnimationCtrl_name, php_wxAnimationCtrl_functions);
+	ce.create_object = php_wxAnimationCtrl_new;
 	php_wxAnimationCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAnimationCtrl = zend_register_list_destructors_ex(php_wxAnimationCtrl_destruction_handler, NULL, (char*) "native wxAnimationCtrl", module_number);
 
 	char PHP_wxArtProvider_name[] = "wxArtProvider";
 	INIT_CLASS_ENTRY(ce, PHP_wxArtProvider_name, php_wxArtProvider_functions);
+	ce.create_object = php_wxArtProvider_new;
 	php_wxArtProvider_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxArtProvider = zend_register_list_destructors_ex(php_wxArtProvider_destruction_handler, NULL, (char*) "native wxArtProvider", module_number);
 
 	char PHP_wxIconBundle_name[] = "wxIconBundle";
 	INIT_CLASS_ENTRY(ce, PHP_wxIconBundle_name, php_wxIconBundle_functions);
+	ce.create_object = php_wxIconBundle_new;
 	php_wxIconBundle_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxIconBundle = zend_register_list_destructors_ex(php_wxIconBundle_destruction_handler, NULL, (char*) "native wxIconBundle", module_number);
 
 	char PHP_wxStyledTextCtrl_name[] = "wxStyledTextCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxStyledTextCtrl_name, php_wxStyledTextCtrl_functions);
+	ce.create_object = php_wxStyledTextCtrl_new;
 	php_wxStyledTextCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStyledTextCtrl = zend_register_list_destructors_ex(php_wxStyledTextCtrl_destruction_handler, NULL, (char*) "native wxStyledTextCtrl", module_number);
 
 	char PHP_wxStyledTextEvent_name[] = "wxStyledTextEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxStyledTextEvent_name, php_wxStyledTextEvent_functions);
+	ce.create_object = php_wxStyledTextEvent_new;
 	php_wxStyledTextEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStyledTextEvent = zend_register_list_destructors_ex(php_wxStyledTextEvent_destruction_handler, NULL, (char*) "native wxStyledTextEvent", module_number);
 
 	char PHP_wxVersionInfo_name[] = "wxVersionInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxVersionInfo_name, php_wxVersionInfo_functions);
+	ce.create_object = php_wxVersionInfo_new;
 	php_wxVersionInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxVersionInfo = zend_register_list_destructors_ex(php_wxVersionInfo_destruction_handler, NULL, (char*) "native wxVersionInfo", module_number);
 
 	char PHP_wxScrollBar_name[] = "wxScrollBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxScrollBar_name, php_wxScrollBar_functions);
+	ce.create_object = php_wxScrollBar_new;
 	php_wxScrollBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxScrollBar = zend_register_list_destructors_ex(php_wxScrollBar_destruction_handler, NULL, (char*) "native wxScrollBar", module_number);
 
 	char PHP_wxStaticText_name[] = "wxStaticText";
 	INIT_CLASS_ENTRY(ce, PHP_wxStaticText_name, php_wxStaticText_functions);
+	ce.create_object = php_wxStaticText_new;
 	php_wxStaticText_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStaticText = zend_register_list_destructors_ex(php_wxStaticText_destruction_handler, NULL, (char*) "native wxStaticText", module_number);
 
 	char PHP_wxStatusBarPane_name[] = "wxStatusBarPane";
 	INIT_CLASS_ENTRY(ce, PHP_wxStatusBarPane_name, php_wxStatusBarPane_functions);
+	ce.create_object = php_wxStatusBarPane_new;
 	php_wxStatusBarPane_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStatusBarPane = zend_register_list_destructors_ex(php_wxStatusBarPane_destruction_handler, NULL, (char*) "native wxStatusBarPane", module_number);
 
 	char PHP_wxStaticLine_name[] = "wxStaticLine";
 	INIT_CLASS_ENTRY(ce, PHP_wxStaticLine_name, php_wxStaticLine_functions);
+	ce.create_object = php_wxStaticLine_new;
 	php_wxStaticLine_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStaticLine = zend_register_list_destructors_ex(php_wxStaticLine_destruction_handler, NULL, (char*) "native wxStaticLine", module_number);
 
 	char PHP_wxStaticBoxSizer_name[] = "wxStaticBoxSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxStaticBoxSizer_name, php_wxStaticBoxSizer_functions);
+	ce.create_object = php_wxStaticBoxSizer_new;
 	php_wxStaticBoxSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStaticBoxSizer = zend_register_list_destructors_ex(php_wxStaticBoxSizer_destruction_handler, NULL, (char*) "native wxStaticBoxSizer", module_number);
 
 	char PHP_wxStaticBox_name[] = "wxStaticBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxStaticBox_name, php_wxStaticBox_functions);
+	ce.create_object = php_wxStaticBox_new;
 	php_wxStaticBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStaticBox = zend_register_list_destructors_ex(php_wxStaticBox_destruction_handler, NULL, (char*) "native wxStaticBox", module_number);
 
 	char PHP_wxStaticBitmap_name[] = "wxStaticBitmap";
 	INIT_CLASS_ENTRY(ce, PHP_wxStaticBitmap_name, php_wxStaticBitmap_functions);
+	ce.create_object = php_wxStaticBitmap_new;
 	php_wxStaticBitmap_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStaticBitmap = zend_register_list_destructors_ex(php_wxStaticBitmap_destruction_handler, NULL, (char*) "native wxStaticBitmap", module_number);
 
 	char PHP_wxAuiToolBarItem_name[] = "wxAuiToolBarItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarItem_name, php_wxAuiToolBarItem_functions);
+	ce.create_object = php_wxAuiToolBarItem_new;
 	php_wxAuiToolBarItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiToolBarItem = zend_register_list_destructors_ex(php_wxAuiToolBarItem_destruction_handler, NULL, (char*) "native wxAuiToolBarItem", module_number);
 
 	char PHP_wxCheckBox_name[] = "wxCheckBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxCheckBox_name, php_wxCheckBox_functions);
+	ce.create_object = php_wxCheckBox_new;
 	php_wxCheckBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCheckBox = zend_register_list_destructors_ex(php_wxCheckBox_destruction_handler, NULL, (char*) "native wxCheckBox", module_number);
 
 	char PHP_wxWrapSizer_name[] = "wxWrapSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxWrapSizer_name, php_wxWrapSizer_functions);
+	ce.create_object = php_wxWrapSizer_new;
 	php_wxWrapSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWrapSizer = zend_register_list_destructors_ex(php_wxWrapSizer_destruction_handler, NULL, (char*) "native wxWrapSizer", module_number);
 
 	char PHP_wxBitmapButton_name[] = "wxBitmapButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxBitmapButton_name, php_wxBitmapButton_functions);
+	ce.create_object = php_wxBitmapButton_new;
 	php_wxBitmapButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBitmapButton = zend_register_list_destructors_ex(php_wxBitmapButton_destruction_handler, NULL, (char*) "native wxBitmapButton", module_number);
 
 	char PHP_wxTextEntry_name[] = "wxTextEntry";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextEntry_name, php_wxTextEntry_functions);
+	ce.create_object = php_wxTextEntry_new;
 	php_wxTextEntry_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextEntry = zend_register_list_destructors_ex(php_wxTextEntry_destruction_handler, NULL, (char*) "native wxTextEntry", module_number);
 
 	char PHP_wxTextCompleter_name[] = "wxTextCompleter";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextCompleter_name, php_wxTextCompleter_functions);
+	ce.create_object = php_wxTextCompleter_new;
 	php_wxTextCompleter_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextCompleter = zend_register_list_destructors_ex(php_wxTextCompleter_destruction_handler, NULL, (char*) "native wxTextCompleter", module_number);
 
 	char PHP_wxTextCtrl_name[] = "wxTextCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextCtrl_name, php_wxTextCtrl_functions);
+	ce.create_object = php_wxTextCtrl_new;
 	php_wxTextCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextCtrl = zend_register_list_destructors_ex(php_wxTextCtrl_destruction_handler, NULL, (char*) "native wxTextCtrl", module_number);
 
 	char PHP_wxTextAttr_name[] = "wxTextAttr";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextAttr_name, php_wxTextAttr_functions);
+	ce.create_object = php_wxTextAttr_new;
 	php_wxTextAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextAttr = zend_register_list_destructors_ex(php_wxTextAttr_destruction_handler, NULL, (char*) "native wxTextAttr", module_number);
 
 	char PHP_wxTextEntryDialog_name[] = "wxTextEntryDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextEntryDialog_name, php_wxTextEntryDialog_functions);
+	ce.create_object = php_wxTextEntryDialog_new;
 	php_wxTextEntryDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextEntryDialog = zend_register_list_destructors_ex(php_wxTextEntryDialog_destruction_handler, NULL, (char*) "native wxTextEntryDialog", module_number);
 
 	char PHP_wxComboBox_name[] = "wxComboBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxComboBox_name, php_wxComboBox_functions);
+	ce.create_object = php_wxComboBox_new;
 	php_wxComboBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxComboBox = zend_register_list_destructors_ex(php_wxComboBox_destruction_handler, NULL, (char*) "native wxComboBox", module_number);
 
 	char PHP_wxItemContainer_name[] = "wxItemContainer";
 	INIT_CLASS_ENTRY(ce, PHP_wxItemContainer_name, php_wxItemContainer_functions);
+	ce.create_object = php_wxItemContainer_new;
 	php_wxItemContainer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxItemContainer = zend_register_list_destructors_ex(php_wxItemContainer_destruction_handler, NULL, (char*) "native wxItemContainer", module_number);
 
 	char PHP_wxItemContainerImmutable_name[] = "wxItemContainerImmutable";
 	INIT_CLASS_ENTRY(ce, PHP_wxItemContainerImmutable_name, php_wxItemContainerImmutable_functions);
+	ce.create_object = php_wxItemContainerImmutable_new;
 	php_wxItemContainerImmutable_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxItemContainerImmutable = zend_register_list_destructors_ex(php_wxItemContainerImmutable_destruction_handler, NULL, (char*) "native wxItemContainerImmutable", module_number);
 
 	char PHP_wxBitmapComboBox_name[] = "wxBitmapComboBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxBitmapComboBox_name, php_wxBitmapComboBox_functions);
+	ce.create_object = php_wxBitmapComboBox_new;
 	php_wxBitmapComboBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBitmapComboBox = zend_register_list_destructors_ex(php_wxBitmapComboBox_destruction_handler, NULL, (char*) "native wxBitmapComboBox", module_number);
 
 	char PHP_wxAuiToolBarEvent_name[] = "wxAuiToolBarEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarEvent_name, php_wxAuiToolBarEvent_functions);
+	ce.create_object = php_wxAuiToolBarEvent_new;
 	php_wxAuiToolBarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiToolBarEvent = zend_register_list_destructors_ex(php_wxAuiToolBarEvent_destruction_handler, NULL, (char*) "native wxAuiToolBarEvent", module_number);
 
 	char PHP_wxAuiToolBar_name[] = "wxAuiToolBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBar_name, php_wxAuiToolBar_functions);
+	ce.create_object = php_wxAuiToolBar_new;
 	php_wxAuiToolBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiToolBar = zend_register_list_destructors_ex(php_wxAuiToolBar_destruction_handler, NULL, (char*) "native wxAuiToolBar", module_number);
 
 	char PHP_wxBannerWindow_name[] = "wxBannerWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxBannerWindow_name, php_wxBannerWindow_functions);
+	ce.create_object = php_wxBannerWindow_new;
 	php_wxBannerWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBannerWindow = zend_register_list_destructors_ex(php_wxBannerWindow_destruction_handler, NULL, (char*) "native wxBannerWindow", module_number);
 
 	char PHP_wxChoice_name[] = "wxChoice";
 	INIT_CLASS_ENTRY(ce, PHP_wxChoice_name, php_wxChoice_functions);
+	ce.create_object = php_wxChoice_new;
 	php_wxChoice_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxChoice = zend_register_list_destructors_ex(php_wxChoice_destruction_handler, NULL, (char*) "native wxChoice", module_number);
 
 	char PHP_wxListEvent_name[] = "wxListEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxListEvent_name, php_wxListEvent_functions);
+	ce.create_object = php_wxListEvent_new;
 	php_wxListEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListEvent = zend_register_list_destructors_ex(php_wxListEvent_destruction_handler, NULL, (char*) "native wxListEvent", module_number);
 
 	char PHP_wxListCtrl_name[] = "wxListCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxListCtrl_name, php_wxListCtrl_functions);
+	ce.create_object = php_wxListCtrl_new;
 	php_wxListCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListCtrl = zend_register_list_destructors_ex(php_wxListCtrl_destruction_handler, NULL, (char*) "native wxListCtrl", module_number);
 
 	char PHP_wxListItemAttr_name[] = "wxListItemAttr";
 	INIT_CLASS_ENTRY(ce, PHP_wxListItemAttr_name, php_wxListItemAttr_functions);
+	ce.create_object = php_wxListItemAttr_new;
 	php_wxListItemAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListItemAttr = zend_register_list_destructors_ex(php_wxListItemAttr_destruction_handler, NULL, (char*) "native wxListItemAttr", module_number);
 
 	char PHP_wxListItem_name[] = "wxListItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxListItem_name, php_wxListItem_functions);
+	ce.create_object = php_wxListItem_new;
 	php_wxListItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListItem = zend_register_list_destructors_ex(php_wxListItem_destruction_handler, NULL, (char*) "native wxListItem", module_number);
 
 	char PHP_wxListbook_name[] = "wxListbook";
 	INIT_CLASS_ENTRY(ce, PHP_wxListbook_name, php_wxListbook_functions);
+	ce.create_object = php_wxListbook_new;
 	php_wxListbook_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListbook = zend_register_list_destructors_ex(php_wxListbook_destruction_handler, NULL, (char*) "native wxListbook", module_number);
 
 	char PHP_wxChildFocusEvent_name[] = "wxChildFocusEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxChildFocusEvent_name, php_wxChildFocusEvent_functions);
+	ce.create_object = php_wxChildFocusEvent_new;
 	php_wxChildFocusEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxChildFocusEvent = zend_register_list_destructors_ex(php_wxChildFocusEvent_destruction_handler, NULL, (char*) "native wxChildFocusEvent", module_number);
 
 	char PHP_wxChoicebook_name[] = "wxChoicebook";
 	INIT_CLASS_ENTRY(ce, PHP_wxChoicebook_name, php_wxChoicebook_functions);
+	ce.create_object = php_wxChoicebook_new;
 	php_wxChoicebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxChoicebook = zend_register_list_destructors_ex(php_wxChoicebook_destruction_handler, NULL, (char*) "native wxChoicebook", module_number);
 
 	char PHP_wxRadioBox_name[] = "wxRadioBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxRadioBox_name, php_wxRadioBox_functions);
+	ce.create_object = php_wxRadioBox_new;
 	php_wxRadioBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRadioBox = zend_register_list_destructors_ex(php_wxRadioBox_destruction_handler, NULL, (char*) "native wxRadioBox", module_number);
 
 	char PHP_wxRadioButton_name[] = "wxRadioButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxRadioButton_name, php_wxRadioButton_functions);
+	ce.create_object = php_wxRadioButton_new;
 	php_wxRadioButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRadioButton = zend_register_list_destructors_ex(php_wxRadioButton_destruction_handler, NULL, (char*) "native wxRadioButton", module_number);
 
 	char PHP_wxRearrangeCtrl_name[] = "wxRearrangeCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeCtrl_name, php_wxRearrangeCtrl_functions);
+	ce.create_object = php_wxRearrangeCtrl_new;
 	php_wxRearrangeCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRearrangeCtrl = zend_register_list_destructors_ex(php_wxRearrangeCtrl_destruction_handler, NULL, (char*) "native wxRearrangeCtrl", module_number);
 
 	char PHP_wxRearrangeDialog_name[] = "wxRearrangeDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeDialog_name, php_wxRearrangeDialog_functions);
+	ce.create_object = php_wxRearrangeDialog_new;
 	php_wxRearrangeDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRearrangeDialog = zend_register_list_destructors_ex(php_wxRearrangeDialog_destruction_handler, NULL, (char*) "native wxRearrangeDialog", module_number);
 
 	char PHP_wxRearrangeList_name[] = "wxRearrangeList";
 	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeList_name, php_wxRearrangeList_functions);
+	ce.create_object = php_wxRearrangeList_new;
 	php_wxRearrangeList_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRearrangeList = zend_register_list_destructors_ex(php_wxRearrangeList_destruction_handler, NULL, (char*) "native wxRearrangeList", module_number);
 
 	char PHP_wxSlider_name[] = "wxSlider";
 	INIT_CLASS_ENTRY(ce, PHP_wxSlider_name, php_wxSlider_functions);
+	ce.create_object = php_wxSlider_new;
 	php_wxSlider_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSlider = zend_register_list_destructors_ex(php_wxSlider_destruction_handler, NULL, (char*) "native wxSlider", module_number);
 
 	char PHP_wxSpinCtrl_name[] = "wxSpinCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxSpinCtrl_name, php_wxSpinCtrl_functions);
+	ce.create_object = php_wxSpinCtrl_new;
 	php_wxSpinCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSpinCtrl = zend_register_list_destructors_ex(php_wxSpinCtrl_destruction_handler, NULL, (char*) "native wxSpinCtrl", module_number);
 
 	char PHP_wxSpinButton_name[] = "wxSpinButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxSpinButton_name, php_wxSpinButton_functions);
+	ce.create_object = php_wxSpinButton_new;
 	php_wxSpinButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSpinButton = zend_register_list_destructors_ex(php_wxSpinButton_destruction_handler, NULL, (char*) "native wxSpinButton", module_number);
 
 	char PHP_wxSpinEvent_name[] = "wxSpinEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSpinEvent_name, php_wxSpinEvent_functions);
+	ce.create_object = php_wxSpinEvent_new;
 	php_wxSpinEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSpinEvent = zend_register_list_destructors_ex(php_wxSpinEvent_destruction_handler, NULL, (char*) "native wxSpinEvent", module_number);
 
 	char PHP_wxSplitterEvent_name[] = "wxSplitterEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSplitterEvent_name, php_wxSplitterEvent_functions);
+	ce.create_object = php_wxSplitterEvent_new;
 	php_wxSplitterEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSplitterEvent = zend_register_list_destructors_ex(php_wxSplitterEvent_destruction_handler, NULL, (char*) "native wxSplitterEvent", module_number);
 
 	char PHP_wxSplashScreen_name[] = "wxSplashScreen";
 	INIT_CLASS_ENTRY(ce, PHP_wxSplashScreen_name, php_wxSplashScreen_functions);
+	ce.create_object = php_wxSplashScreen_new;
 	php_wxSplashScreen_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSplashScreen = zend_register_list_destructors_ex(php_wxSplashScreen_destruction_handler, NULL, (char*) "native wxSplashScreen", module_number);
 
 	char PHP_wxSizeEvent_name[] = "wxSizeEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSizeEvent_name, php_wxSizeEvent_functions);
+	ce.create_object = php_wxSizeEvent_new;
 	php_wxSizeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSizeEvent = zend_register_list_destructors_ex(php_wxSizeEvent_destruction_handler, NULL, (char*) "native wxSizeEvent", module_number);
 
 	char PHP_wxGauge_name[] = "wxGauge";
 	INIT_CLASS_ENTRY(ce, PHP_wxGauge_name, php_wxGauge_functions);
+	ce.create_object = php_wxGauge_new;
 	php_wxGauge_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGauge = zend_register_list_destructors_ex(php_wxGauge_destruction_handler, NULL, (char*) "native wxGauge", module_number);
 
 	char PHP_wxHtmlWindow_name[] = "wxHtmlWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWindow_name, php_wxHtmlWindow_functions);
+	ce.create_object = php_wxHtmlWindow_new;
 	php_wxHtmlWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlWindow = zend_register_list_destructors_ex(php_wxHtmlWindow_destruction_handler, NULL, (char*) "native wxHtmlWindow", module_number);
 
 	char PHP_wxHtmlContainerCell_name[] = "wxHtmlContainerCell";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlContainerCell_name, php_wxHtmlContainerCell_functions);
+	ce.create_object = php_wxHtmlContainerCell_new;
 	php_wxHtmlContainerCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlContainerCell = zend_register_list_destructors_ex(php_wxHtmlContainerCell_destruction_handler, NULL, (char*) "native wxHtmlContainerCell", module_number);
 
 	char PHP_wxHtmlCell_name[] = "wxHtmlCell";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlCell_name, php_wxHtmlCell_functions);
+	ce.create_object = php_wxHtmlCell_new;
 	php_wxHtmlCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlCell = zend_register_list_destructors_ex(php_wxHtmlCell_destruction_handler, NULL, (char*) "native wxHtmlCell", module_number);
 
 	char PHP_wxHtmlCellEvent_name[] = "wxHtmlCellEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlCellEvent_name, php_wxHtmlCellEvent_functions);
+	ce.create_object = php_wxHtmlCellEvent_new;
 	php_wxHtmlCellEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlCellEvent = zend_register_list_destructors_ex(php_wxHtmlCellEvent_destruction_handler, NULL, (char*) "native wxHtmlCellEvent", module_number);
 
 	char PHP_wxHtmlColourCell_name[] = "wxHtmlColourCell";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlColourCell_name, php_wxHtmlColourCell_functions);
+	ce.create_object = php_wxHtmlColourCell_new;
 	php_wxHtmlColourCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlColourCell = zend_register_list_destructors_ex(php_wxHtmlColourCell_destruction_handler, NULL, (char*) "native wxHtmlColourCell", module_number);
 
 	char PHP_wxHtmlEasyPrinting_name[] = "wxHtmlEasyPrinting";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlEasyPrinting_name, php_wxHtmlEasyPrinting_functions);
+	ce.create_object = php_wxHtmlEasyPrinting_new;
 	php_wxHtmlEasyPrinting_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlEasyPrinting = zend_register_list_destructors_ex(php_wxHtmlEasyPrinting_destruction_handler, NULL, (char*) "native wxHtmlEasyPrinting", module_number);
 
 	char PHP_wxHtmlLinkEvent_name[] = "wxHtmlLinkEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlLinkEvent_name, php_wxHtmlLinkEvent_functions);
+	ce.create_object = php_wxHtmlLinkEvent_new;
 	php_wxHtmlLinkEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlLinkEvent = zend_register_list_destructors_ex(php_wxHtmlLinkEvent_destruction_handler, NULL, (char*) "native wxHtmlLinkEvent", module_number);
 
 	char PHP_wxHtmlLinkInfo_name[] = "wxHtmlLinkInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlLinkInfo_name, php_wxHtmlLinkInfo_functions);
+	ce.create_object = php_wxHtmlLinkInfo_new;
 	php_wxHtmlLinkInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlLinkInfo = zend_register_list_destructors_ex(php_wxHtmlLinkInfo_destruction_handler, NULL, (char*) "native wxHtmlLinkInfo", module_number);
 
 	char PHP_wxMouseEvent_name[] = "wxMouseEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxMouseEvent_name, php_wxMouseEvent_functions);
+	ce.create_object = php_wxMouseEvent_new;
 	php_wxMouseEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMouseEvent = zend_register_list_destructors_ex(php_wxMouseEvent_destruction_handler, NULL, (char*) "native wxMouseEvent", module_number);
 
 	char PHP_wxMouseState_name[] = "wxMouseState";
 	INIT_CLASS_ENTRY(ce, PHP_wxMouseState_name, php_wxMouseState_functions);
+	ce.create_object = php_wxMouseState_new;
 	php_wxMouseState_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMouseState = zend_register_list_destructors_ex(php_wxMouseState_destruction_handler, NULL, (char*) "native wxMouseState", module_number);
 
 	char PHP_wxMoveEvent_name[] = "wxMoveEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxMoveEvent_name, php_wxMoveEvent_functions);
+	ce.create_object = php_wxMoveEvent_new;
 	php_wxMoveEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMoveEvent = zend_register_list_destructors_ex(php_wxMoveEvent_destruction_handler, NULL, (char*) "native wxMoveEvent", module_number);
 
 	char PHP_wxMouseEventsManager_name[] = "wxMouseEventsManager";
 	INIT_CLASS_ENTRY(ce, PHP_wxMouseEventsManager_name, php_wxMouseEventsManager_functions);
+	ce.create_object = php_wxMouseEventsManager_new;
 	php_wxMouseEventsManager_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMouseEventsManager = zend_register_list_destructors_ex(php_wxMouseEventsManager_destruction_handler, NULL, (char*) "native wxMouseEventsManager", module_number);
 
 	char PHP_wxMessageDialog_name[] = "wxMessageDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxMessageDialog_name, php_wxMessageDialog_functions);
+	ce.create_object = php_wxMessageDialog_new;
 	php_wxMessageDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMessageDialog = zend_register_list_destructors_ex(php_wxMessageDialog_destruction_handler, NULL, (char*) "native wxMessageDialog", module_number);
 
 	char PHP_wxHtmlListBox_name[] = "wxHtmlListBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlListBox_name, php_wxHtmlListBox_functions);
+	ce.create_object = php_wxHtmlListBox_new;
 	php_wxHtmlListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlListBox = zend_register_list_destructors_ex(php_wxHtmlListBox_destruction_handler, NULL, (char*) "native wxHtmlListBox", module_number);
 
 	char PHP_wxVListBox_name[] = "wxVListBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxVListBox_name, php_wxVListBox_functions);
+	ce.create_object = php_wxVListBox_new;
 	php_wxVListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxVListBox = zend_register_list_destructors_ex(php_wxVListBox_destruction_handler, NULL, (char*) "native wxVListBox", module_number);
 
 	char PHP_wxHtmlTag_name[] = "wxHtmlTag";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTag_name, php_wxHtmlTag_functions);
+	ce.create_object = php_wxHtmlTag_new;
 	php_wxHtmlTag_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlTag = zend_register_list_destructors_ex(php_wxHtmlTag_destruction_handler, NULL, (char*) "native wxHtmlTag", module_number);
 
 	char PHP_wxHyperlinkCtrl_name[] = "wxHyperlinkCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxHyperlinkCtrl_name, php_wxHyperlinkCtrl_functions);
+	ce.create_object = php_wxHyperlinkCtrl_new;
 	php_wxHyperlinkCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHyperlinkCtrl = zend_register_list_destructors_ex(php_wxHyperlinkCtrl_destruction_handler, NULL, (char*) "native wxHyperlinkCtrl", module_number);
 
 	char PHP_wxHyperlinkEvent_name[] = "wxHyperlinkEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxHyperlinkEvent_name, php_wxHyperlinkEvent_functions);
+	ce.create_object = php_wxHyperlinkEvent_new;
 	php_wxHyperlinkEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHyperlinkEvent = zend_register_list_destructors_ex(php_wxHyperlinkEvent_destruction_handler, NULL, (char*) "native wxHyperlinkEvent", module_number);
 
 	char PHP_wxCursor_name[] = "wxCursor";
 	INIT_CLASS_ENTRY(ce, PHP_wxCursor_name, php_wxCursor_functions);
+	ce.create_object = php_wxCursor_new;
 	php_wxCursor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCursor = zend_register_list_destructors_ex(php_wxCursor_destruction_handler, NULL, (char*) "native wxCursor", module_number);
 
 	char PHP_wxToggleButton_name[] = "wxToggleButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxToggleButton_name, php_wxToggleButton_functions);
+	ce.create_object = php_wxToggleButton_new;
 	php_wxToggleButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxToggleButton = zend_register_list_destructors_ex(php_wxToggleButton_destruction_handler, NULL, (char*) "native wxToggleButton", module_number);
 
 	char PHP_wxTimer_name[] = "wxTimer";
 	INIT_CLASS_ENTRY(ce, PHP_wxTimer_name, php_wxTimer_functions);
+	ce.create_object = php_wxTimer_new;
 	php_wxTimer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTimer = zend_register_list_destructors_ex(php_wxTimer_destruction_handler, NULL, (char*) "native wxTimer", module_number);
 
 	char PHP_wxTimerEvent_name[] = "wxTimerEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxTimerEvent_name, php_wxTimerEvent_functions);
+	ce.create_object = php_wxTimerEvent_new;
 	php_wxTimerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTimerEvent = zend_register_list_destructors_ex(php_wxTimerEvent_destruction_handler, NULL, (char*) "native wxTimerEvent", module_number);
 
 	char PHP_wxThreadEvent_name[] = "wxThreadEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxThreadEvent_name, php_wxThreadEvent_functions);
+	ce.create_object = php_wxThreadEvent_new;
 	php_wxThreadEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxThreadEvent = zend_register_list_destructors_ex(php_wxThreadEvent_destruction_handler, NULL, (char*) "native wxThreadEvent", module_number);
 
 	char PHP_wxSearchCtrl_name[] = "wxSearchCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxSearchCtrl_name, php_wxSearchCtrl_functions);
+	ce.create_object = php_wxSearchCtrl_new;
 	php_wxSearchCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSearchCtrl = zend_register_list_destructors_ex(php_wxSearchCtrl_destruction_handler, NULL, (char*) "native wxSearchCtrl", module_number);
 
 	char PHP_wxColourPickerEvent_name[] = "wxColourPickerEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxColourPickerEvent_name, php_wxColourPickerEvent_functions);
+	ce.create_object = php_wxColourPickerEvent_new;
 	php_wxColourPickerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxColourPickerEvent = zend_register_list_destructors_ex(php_wxColourPickerEvent_destruction_handler, NULL, (char*) "native wxColourPickerEvent", module_number);
 
 	char PHP_wxColourPickerCtrl_name[] = "wxColourPickerCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxColourPickerCtrl_name, php_wxColourPickerCtrl_functions);
+	ce.create_object = php_wxColourPickerCtrl_new;
 	php_wxColourPickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxColourPickerCtrl = zend_register_list_destructors_ex(php_wxColourPickerCtrl_destruction_handler, NULL, (char*) "native wxColourPickerCtrl", module_number);
 
 	char PHP_wxFontPickerCtrl_name[] = "wxFontPickerCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontPickerCtrl_name, php_wxFontPickerCtrl_functions);
+	ce.create_object = php_wxFontPickerCtrl_new;
 	php_wxFontPickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontPickerCtrl = zend_register_list_destructors_ex(php_wxFontPickerCtrl_destruction_handler, NULL, (char*) "native wxFontPickerCtrl", module_number);
 
 	char PHP_wxFontPickerEvent_name[] = "wxFontPickerEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontPickerEvent_name, php_wxFontPickerEvent_functions);
+	ce.create_object = php_wxFontPickerEvent_new;
 	php_wxFontPickerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontPickerEvent = zend_register_list_destructors_ex(php_wxFontPickerEvent_destruction_handler, NULL, (char*) "native wxFontPickerEvent", module_number);
 
 	char PHP_wxFilePickerCtrl_name[] = "wxFilePickerCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxFilePickerCtrl_name, php_wxFilePickerCtrl_functions);
+	ce.create_object = php_wxFilePickerCtrl_new;
 	php_wxFilePickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFilePickerCtrl = zend_register_list_destructors_ex(php_wxFilePickerCtrl_destruction_handler, NULL, (char*) "native wxFilePickerCtrl", module_number);
 
 	char PHP_wxFindReplaceDialog_name[] = "wxFindReplaceDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxFindReplaceDialog_name, php_wxFindReplaceDialog_functions);
+	ce.create_object = php_wxFindReplaceDialog_new;
 	php_wxFindReplaceDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFindReplaceDialog = zend_register_list_destructors_ex(php_wxFindReplaceDialog_destruction_handler, NULL, (char*) "native wxFindReplaceDialog", module_number);
 
 	char PHP_wxFindReplaceData_name[] = "wxFindReplaceData";
 	INIT_CLASS_ENTRY(ce, PHP_wxFindReplaceData_name, php_wxFindReplaceData_functions);
+	ce.create_object = php_wxFindReplaceData_new;
 	php_wxFindReplaceData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFindReplaceData = zend_register_list_destructors_ex(php_wxFindReplaceData_destruction_handler, NULL, (char*) "native wxFindReplaceData", module_number);
 
 	char PHP_wxDirPickerCtrl_name[] = "wxDirPickerCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxDirPickerCtrl_name, php_wxDirPickerCtrl_functions);
+	ce.create_object = php_wxDirPickerCtrl_new;
 	php_wxDirPickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDirPickerCtrl = zend_register_list_destructors_ex(php_wxDirPickerCtrl_destruction_handler, NULL, (char*) "native wxDirPickerCtrl", module_number);
 
 	char PHP_wxDirDialog_name[] = "wxDirDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxDirDialog_name, php_wxDirDialog_functions);
+	ce.create_object = php_wxDirDialog_new;
 	php_wxDirDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDirDialog = zend_register_list_destructors_ex(php_wxDirDialog_destruction_handler, NULL, (char*) "native wxDirDialog", module_number);
 
 	char PHP_wxSpinDoubleEvent_name[] = "wxSpinDoubleEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSpinDoubleEvent_name, php_wxSpinDoubleEvent_functions);
+	ce.create_object = php_wxSpinDoubleEvent_new;
 	php_wxSpinDoubleEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSpinDoubleEvent = zend_register_list_destructors_ex(php_wxSpinDoubleEvent_destruction_handler, NULL, (char*) "native wxSpinDoubleEvent", module_number);
 
 	char PHP_wxSpinCtrlDouble_name[] = "wxSpinCtrlDouble";
 	INIT_CLASS_ENTRY(ce, PHP_wxSpinCtrlDouble_name, php_wxSpinCtrlDouble_functions);
+	ce.create_object = php_wxSpinCtrlDouble_new;
 	php_wxSpinCtrlDouble_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSpinCtrlDouble = zend_register_list_destructors_ex(php_wxSpinCtrlDouble_destruction_handler, NULL, (char*) "native wxSpinCtrlDouble", module_number);
 
 	char PHP_wxGenericDirCtrl_name[] = "wxGenericDirCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxGenericDirCtrl_name, php_wxGenericDirCtrl_functions);
+	ce.create_object = php_wxGenericDirCtrl_new;
 	php_wxGenericDirCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGenericDirCtrl = zend_register_list_destructors_ex(php_wxGenericDirCtrl_destruction_handler, NULL, (char*) "native wxGenericDirCtrl", module_number);
 
 	char PHP_wxFileName_name[] = "wxFileName";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileName_name, php_wxFileName_functions);
+	ce.create_object = php_wxFileName_new;
 	php_wxFileName_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileName = zend_register_list_destructors_ex(php_wxFileName_destruction_handler, NULL, (char*) "native wxFileName", module_number);
 
 	char PHP_wxGridSizeEvent_name[] = "wxGridSizeEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridSizeEvent_name, php_wxGridSizeEvent_functions);
+	ce.create_object = php_wxGridSizeEvent_new;
 	php_wxGridSizeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridSizeEvent = zend_register_list_destructors_ex(php_wxGridSizeEvent_destruction_handler, NULL, (char*) "native wxGridSizeEvent", module_number);
 
 	char PHP_wxGridSizer_name[] = "wxGridSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridSizer_name, php_wxGridSizer_functions);
+	ce.create_object = php_wxGridSizer_new;
 	php_wxGridSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridSizer = zend_register_list_destructors_ex(php_wxGridSizer_destruction_handler, NULL, (char*) "native wxGridSizer", module_number);
 
 	char PHP_wxFlexGridSizer_name[] = "wxFlexGridSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxFlexGridSizer_name, php_wxFlexGridSizer_functions);
+	ce.create_object = php_wxFlexGridSizer_new;
 	php_wxFlexGridSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFlexGridSizer = zend_register_list_destructors_ex(php_wxFlexGridSizer_destruction_handler, NULL, (char*) "native wxFlexGridSizer", module_number);
 
 	char PHP_wxGridBagSizer_name[] = "wxGridBagSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridBagSizer_name, php_wxGridBagSizer_functions);
+	ce.create_object = php_wxGridBagSizer_new;
 	php_wxGridBagSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridBagSizer = zend_register_list_destructors_ex(php_wxGridBagSizer_destruction_handler, NULL, (char*) "native wxGridBagSizer", module_number);
 
 	char PHP_wxStdDialogButtonSizer_name[] = "wxStdDialogButtonSizer";
 	INIT_CLASS_ENTRY(ce, PHP_wxStdDialogButtonSizer_name, php_wxStdDialogButtonSizer_functions);
+	ce.create_object = php_wxStdDialogButtonSizer_new;
 	php_wxStdDialogButtonSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStdDialogButtonSizer = zend_register_list_destructors_ex(php_wxStdDialogButtonSizer_destruction_handler, NULL, (char*) "native wxStdDialogButtonSizer", module_number);
 
 	char PHP_wxScrollEvent_name[] = "wxScrollEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxScrollEvent_name, php_wxScrollEvent_functions);
+	ce.create_object = php_wxScrollEvent_new;
 	php_wxScrollEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxScrollEvent = zend_register_list_destructors_ex(php_wxScrollEvent_destruction_handler, NULL, (char*) "native wxScrollEvent", module_number);
 
 	char PHP_wxScrollWinEvent_name[] = "wxScrollWinEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxScrollWinEvent_name, php_wxScrollWinEvent_functions);
+	ce.create_object = php_wxScrollWinEvent_new;
 	php_wxScrollWinEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxScrollWinEvent = zend_register_list_destructors_ex(php_wxScrollWinEvent_destruction_handler, NULL, (char*) "native wxScrollWinEvent", module_number);
 
 	char PHP_wxNotebook_name[] = "wxNotebook";
 	INIT_CLASS_ENTRY(ce, PHP_wxNotebook_name, php_wxNotebook_functions);
+	ce.create_object = php_wxNotebook_new;
 	php_wxNotebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxNotebook = zend_register_list_destructors_ex(php_wxNotebook_destruction_handler, NULL, (char*) "native wxNotebook", module_number);
 
 	char PHP_wxDialog_name[] = "wxDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxDialog_name, php_wxDialog_functions);
+	ce.create_object = php_wxDialog_new;
 	php_wxDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDialog = zend_register_list_destructors_ex(php_wxDialog_destruction_handler, NULL, (char*) "native wxDialog", module_number);
 
 	char PHP_wxSysColourChangedEvent_name[] = "wxSysColourChangedEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSysColourChangedEvent_name, php_wxSysColourChangedEvent_functions);
+	ce.create_object = php_wxSysColourChangedEvent_new;
 	php_wxSysColourChangedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSysColourChangedEvent = zend_register_list_destructors_ex(php_wxSysColourChangedEvent_destruction_handler, NULL, (char*) "native wxSysColourChangedEvent", module_number);
 
 	char PHP_wxSymbolPickerDialog_name[] = "wxSymbolPickerDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxSymbolPickerDialog_name, php_wxSymbolPickerDialog_functions);
+	ce.create_object = php_wxSymbolPickerDialog_new;
 	php_wxSymbolPickerDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSymbolPickerDialog = zend_register_list_destructors_ex(php_wxSymbolPickerDialog_destruction_handler, NULL, (char*) "native wxSymbolPickerDialog", module_number);
 
 	char PHP_wxGBPosition_name[] = "wxGBPosition";
 	INIT_CLASS_ENTRY(ce, PHP_wxGBPosition_name, php_wxGBPosition_functions);
+	ce.create_object = php_wxGBPosition_new;
 	php_wxGBPosition_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGBPosition = zend_register_list_destructors_ex(php_wxGBPosition_destruction_handler, NULL, (char*) "native wxGBPosition", module_number);
 
 	char PHP_wxGBSpan_name[] = "wxGBSpan";
 	INIT_CLASS_ENTRY(ce, PHP_wxGBSpan_name, php_wxGBSpan_functions);
+	ce.create_object = php_wxGBSpan_new;
 	php_wxGBSpan_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGBSpan = zend_register_list_destructors_ex(php_wxGBSpan_destruction_handler, NULL, (char*) "native wxGBSpan", module_number);
 
 	char PHP_wxGBSizerItem_name[] = "wxGBSizerItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxGBSizerItem_name, php_wxGBSizerItem_functions);
+	ce.create_object = php_wxGBSizerItem_new;
 	php_wxGBSizerItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGBSizerItem = zend_register_list_destructors_ex(php_wxGBSizerItem_destruction_handler, NULL, (char*) "native wxGBSizerItem", module_number);
 
 	char PHP_wxPopupWindow_name[] = "wxPopupWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxPopupWindow_name, php_wxPopupWindow_functions);
+	ce.create_object = php_wxPopupWindow_new;
 	php_wxPopupWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPopupWindow = zend_register_list_destructors_ex(php_wxPopupWindow_destruction_handler, NULL, (char*) "native wxPopupWindow", module_number);
 
 	char PHP_wxMDIChildFrame_name[] = "wxMDIChildFrame";
 	INIT_CLASS_ENTRY(ce, PHP_wxMDIChildFrame_name, php_wxMDIChildFrame_functions);
+	ce.create_object = php_wxMDIChildFrame_new;
 	php_wxMDIChildFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMDIChildFrame = zend_register_list_destructors_ex(php_wxMDIChildFrame_destruction_handler, NULL, (char*) "native wxMDIChildFrame", module_number);
 
 	char PHP_wxMDIClientWindow_name[] = "wxMDIClientWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxMDIClientWindow_name, php_wxMDIClientWindow_functions);
+	ce.create_object = php_wxMDIClientWindow_new;
 	php_wxMDIClientWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMDIClientWindow = zend_register_list_destructors_ex(php_wxMDIClientWindow_destruction_handler, NULL, (char*) "native wxMDIClientWindow", module_number);
 
 	char PHP_wxMDIParentFrame_name[] = "wxMDIParentFrame";
 	INIT_CLASS_ENTRY(ce, PHP_wxMDIParentFrame_name, php_wxMDIParentFrame_functions);
+	ce.create_object = php_wxMDIParentFrame_new;
 	php_wxMDIParentFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMDIParentFrame = zend_register_list_destructors_ex(php_wxMDIParentFrame_destruction_handler, NULL, (char*) "native wxMDIParentFrame", module_number);
 
 	char PHP_wxMiniFrame_name[] = "wxMiniFrame";
 	INIT_CLASS_ENTRY(ce, PHP_wxMiniFrame_name, php_wxMiniFrame_functions);
+	ce.create_object = php_wxMiniFrame_new;
 	php_wxMiniFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMiniFrame = zend_register_list_destructors_ex(php_wxMiniFrame_destruction_handler, NULL, (char*) "native wxMiniFrame", module_number);
 
 	char PHP_wxPropertySheetDialog_name[] = "wxPropertySheetDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxPropertySheetDialog_name, php_wxPropertySheetDialog_functions);
+	ce.create_object = php_wxPropertySheetDialog_new;
 	php_wxPropertySheetDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPropertySheetDialog = zend_register_list_destructors_ex(php_wxPropertySheetDialog_destruction_handler, NULL, (char*) "native wxPropertySheetDialog", module_number);
 
 	char PHP_wxWizard_name[] = "wxWizard";
 	INIT_CLASS_ENTRY(ce, PHP_wxWizard_name, php_wxWizard_functions);
+	ce.create_object = php_wxWizard_new;
 	php_wxWizard_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWizard = zend_register_list_destructors_ex(php_wxWizard_destruction_handler, NULL, (char*) "native wxWizard", module_number);
 
 	char PHP_wxWizardEvent_name[] = "wxWizardEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxWizardEvent_name, php_wxWizardEvent_functions);
+	ce.create_object = php_wxWizardEvent_new;
 	php_wxWizardEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWizardEvent = zend_register_list_destructors_ex(php_wxWizardEvent_destruction_handler, NULL, (char*) "native wxWizardEvent", module_number);
 
 	char PHP_wxWizardPage_name[] = "wxWizardPage";
 	INIT_CLASS_ENTRY(ce, PHP_wxWizardPage_name, php_wxWizardPage_functions);
+	ce.create_object = php_wxWizardPage_new;
 	php_wxWizardPage_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWizardPage = zend_register_list_destructors_ex(php_wxWizardPage_destruction_handler, NULL, (char*) "native wxWizardPage", module_number);
 
 	char PHP_wxWizardPageSimple_name[] = "wxWizardPageSimple";
 	INIT_CLASS_ENTRY(ce, PHP_wxWizardPageSimple_name, php_wxWizardPageSimple_functions);
+	ce.create_object = php_wxWizardPageSimple_new;
 	php_wxWizardPageSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWizardPageSimple = zend_register_list_destructors_ex(php_wxWizardPageSimple_destruction_handler, NULL, (char*) "native wxWizardPageSimple", module_number);
 
 	char PHP_wxWindowModalDialogEvent_name[] = "wxWindowModalDialogEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxWindowModalDialogEvent_name, php_wxWindowModalDialogEvent_functions);
+	ce.create_object = php_wxWindowModalDialogEvent_new;
 	php_wxWindowModalDialogEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWindowModalDialogEvent = zend_register_list_destructors_ex(php_wxWindowModalDialogEvent_destruction_handler, NULL, (char*) "native wxWindowModalDialogEvent", module_number);
 
 	char PHP_wxTreeListItem_name[] = "wxTreeListItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreeListItem_name, php_wxTreeListItem_functions);
+	ce.create_object = php_wxTreeListItem_new;
 	php_wxTreeListItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreeListItem = zend_register_list_destructors_ex(php_wxTreeListItem_destruction_handler, NULL, (char*) "native wxTreeListItem", module_number);
 
 	char PHP_wxTreebook_name[] = "wxTreebook";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreebook_name, php_wxTreebook_functions);
+	ce.create_object = php_wxTreebook_new;
 	php_wxTreebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreebook = zend_register_list_destructors_ex(php_wxTreebook_destruction_handler, NULL, (char*) "native wxTreebook", module_number);
 
 	char PHP_wxTreeListCtrl_name[] = "wxTreeListCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxTreeListCtrl_name, php_wxTreeListCtrl_functions);
+	ce.create_object = php_wxTreeListCtrl_new;
 	php_wxTreeListCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTreeListCtrl = zend_register_list_destructors_ex(php_wxTreeListCtrl_destruction_handler, NULL, (char*) "native wxTreeListCtrl", module_number);
 
 	char PHP_wxSound_name[] = "wxSound";
 	INIT_CLASS_ENTRY(ce, PHP_wxSound_name, php_wxSound_functions);
+	ce.create_object = php_wxSound_new;
 	php_wxSound_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSound = zend_register_list_destructors_ex(php_wxSound_destruction_handler, NULL, (char*) "native wxSound", module_number);
 
 	char PHP_wxSimpleHtmlListBox_name[] = "wxSimpleHtmlListBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxSimpleHtmlListBox_name, php_wxSimpleHtmlListBox_functions);
+	ce.create_object = php_wxSimpleHtmlListBox_new;
 	php_wxSimpleHtmlListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSimpleHtmlListBox = zend_register_list_destructors_ex(php_wxSimpleHtmlListBox_destruction_handler, NULL, (char*) "native wxSimpleHtmlListBox", module_number);
 
 	char PHP_wxFileSystem_name[] = "wxFileSystem";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileSystem_name, php_wxFileSystem_functions);
+	ce.create_object = php_wxFileSystem_new;
 	php_wxFileSystem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileSystem = zend_register_list_destructors_ex(php_wxFileSystem_destruction_handler, NULL, (char*) "native wxFileSystem", module_number);
 
 	char PHP_wxFileSystemHandler_name[] = "wxFileSystemHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemHandler_name, php_wxFileSystemHandler_functions);
+	ce.create_object = php_wxFileSystemHandler_new;
 	php_wxFileSystemHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileSystemHandler = zend_register_list_destructors_ex(php_wxFileSystemHandler_destruction_handler, NULL, (char*) "native wxFileSystemHandler", module_number);
 
 	char PHP_wxNativeFontInfo_name[] = "wxNativeFontInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxNativeFontInfo_name, php_wxNativeFontInfo_functions);
+	ce.create_object = php_wxNativeFontInfo_new;
 	php_wxNativeFontInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxNativeFontInfo = zend_register_list_destructors_ex(php_wxNativeFontInfo_destruction_handler, NULL, (char*) "native wxNativeFontInfo", module_number);
 
 	char PHP_wxDateEvent_name[] = "wxDateEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxDateEvent_name, php_wxDateEvent_functions);
+	ce.create_object = php_wxDateEvent_new;
 	php_wxDateEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDateEvent = zend_register_list_destructors_ex(php_wxDateEvent_destruction_handler, NULL, (char*) "native wxDateEvent", module_number);
 
 	char PHP_wxBitmapToggleButton_name[] = "wxBitmapToggleButton";
 	INIT_CLASS_ENTRY(ce, PHP_wxBitmapToggleButton_name, php_wxBitmapToggleButton_functions);
+	ce.create_object = php_wxBitmapToggleButton_new;
 	php_wxBitmapToggleButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBitmapToggleButton = zend_register_list_destructors_ex(php_wxBitmapToggleButton_destruction_handler, NULL, (char*) "native wxBitmapToggleButton", module_number);
 
 	char PHP_wxCalendarDateAttr_name[] = "wxCalendarDateAttr";
 	INIT_CLASS_ENTRY(ce, PHP_wxCalendarDateAttr_name, php_wxCalendarDateAttr_functions);
+	ce.create_object = php_wxCalendarDateAttr_new;
 	php_wxCalendarDateAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCalendarDateAttr = zend_register_list_destructors_ex(php_wxCalendarDateAttr_destruction_handler, NULL, (char*) "native wxCalendarDateAttr", module_number);
 
 	char PHP_wxCalendarCtrl_name[] = "wxCalendarCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxCalendarCtrl_name, php_wxCalendarCtrl_functions);
+	ce.create_object = php_wxCalendarCtrl_new;
 	php_wxCalendarCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCalendarCtrl = zend_register_list_destructors_ex(php_wxCalendarCtrl_destruction_handler, NULL, (char*) "native wxCalendarCtrl", module_number);
 
 	char PHP_wxMask_name[] = "wxMask";
 	INIT_CLASS_ENTRY(ce, PHP_wxMask_name, php_wxMask_functions);
+	ce.create_object = php_wxMask_new;
 	php_wxMask_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMask = zend_register_list_destructors_ex(php_wxMask_destruction_handler, NULL, (char*) "native wxMask", module_number);
 
 	char PHP_wxToolTip_name[] = "wxToolTip";
 	INIT_CLASS_ENTRY(ce, PHP_wxToolTip_name, php_wxToolTip_functions);
+	ce.create_object = php_wxToolTip_new;
 	php_wxToolTip_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxToolTip = zend_register_list_destructors_ex(php_wxToolTip_destruction_handler, NULL, (char*) "native wxToolTip", module_number);
 
 	char PHP_wxCaret_name[] = "wxCaret";
 	INIT_CLASS_ENTRY(ce, PHP_wxCaret_name, php_wxCaret_functions);
+	ce.create_object = php_wxCaret_new;
 	php_wxCaret_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCaret = zend_register_list_destructors_ex(php_wxCaret_destruction_handler, NULL, (char*) "native wxCaret", module_number);
 
 	char PHP_wxRegion_name[] = "wxRegion";
 	INIT_CLASS_ENTRY(ce, PHP_wxRegion_name, php_wxRegion_functions);
+	ce.create_object = php_wxRegion_new;
 	php_wxRegion_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRegion = zend_register_list_destructors_ex(php_wxRegion_destruction_handler, NULL, (char*) "native wxRegion", module_number);
 
 	char PHP_wxPoint2DDouble_name[] = "wxPoint2DDouble";
 	INIT_CLASS_ENTRY(ce, PHP_wxPoint2DDouble_name, php_wxPoint2DDouble_functions);
+	ce.create_object = php_wxPoint2DDouble_new;
 	php_wxPoint2DDouble_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPoint2DDouble = zend_register_list_destructors_ex(php_wxPoint2DDouble_destruction_handler, NULL, (char*) "native wxPoint2DDouble", module_number);
 
 	char PHP_wxPoint2DInt_name[] = "wxPoint2DInt";
 	INIT_CLASS_ENTRY(ce, PHP_wxPoint2DInt_name, php_wxPoint2DInt_functions);
+	ce.create_object = php_wxPoint2DInt_new;
 	php_wxPoint2DInt_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPoint2DInt = zend_register_list_destructors_ex(php_wxPoint2DInt_destruction_handler, NULL, (char*) "native wxPoint2DInt", module_number);
 
 	char PHP_wxPopupTransientWindow_name[] = "wxPopupTransientWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxPopupTransientWindow_name, php_wxPopupTransientWindow_functions);
+	ce.create_object = php_wxPopupTransientWindow_new;
 	php_wxPopupTransientWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPopupTransientWindow = zend_register_list_destructors_ex(php_wxPopupTransientWindow_destruction_handler, NULL, (char*) "native wxPopupTransientWindow", module_number);
 
 	char PHP_wxProcessEvent_name[] = "wxProcessEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxProcessEvent_name, php_wxProcessEvent_functions);
+	ce.create_object = php_wxProcessEvent_new;
 	php_wxProcessEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxProcessEvent = zend_register_list_destructors_ex(php_wxProcessEvent_destruction_handler, NULL, (char*) "native wxProcessEvent", module_number);
 
 	char PHP_wxProgressDialog_name[] = "wxProgressDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxProgressDialog_name, php_wxProgressDialog_functions);
+	ce.create_object = php_wxProgressDialog_new;
 	php_wxProgressDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxProgressDialog = zend_register_list_destructors_ex(php_wxProgressDialog_destruction_handler, NULL, (char*) "native wxProgressDialog", module_number);
 
 	char PHP_wxGraphicsMatrix_name[] = "wxGraphicsMatrix";
 	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsMatrix_name, php_wxGraphicsMatrix_functions);
+	ce.create_object = php_wxGraphicsMatrix_new;
 	php_wxGraphicsMatrix_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGraphicsMatrix = zend_register_list_destructors_ex(php_wxGraphicsMatrix_destruction_handler, NULL, (char*) "native wxGraphicsMatrix", module_number);
 
 	char PHP_wxGraphicsRenderer_name[] = "wxGraphicsRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsRenderer_name, php_wxGraphicsRenderer_functions);
+	ce.create_object = php_wxGraphicsRenderer_new;
 	php_wxGraphicsRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGraphicsRenderer = zend_register_list_destructors_ex(php_wxGraphicsRenderer_destruction_handler, NULL, (char*) "native wxGraphicsRenderer", module_number);
 
 	char PHP_wxWindowDC_name[] = "wxWindowDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxWindowDC_name, php_wxWindowDC_functions);
+	ce.create_object = php_wxWindowDC_new;
 	php_wxWindowDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWindowDC = zend_register_list_destructors_ex(php_wxWindowDC_destruction_handler, NULL, (char*) "native wxWindowDC", module_number);
 
 	char PHP_wxWindowCreateEvent_name[] = "wxWindowCreateEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxWindowCreateEvent_name, php_wxWindowCreateEvent_functions);
+	ce.create_object = php_wxWindowCreateEvent_new;
 	php_wxWindowCreateEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWindowCreateEvent = zend_register_list_destructors_ex(php_wxWindowCreateEvent_destruction_handler, NULL, (char*) "native wxWindowCreateEvent", module_number);
 
 	char PHP_wxWindowDestroyEvent_name[] = "wxWindowDestroyEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxWindowDestroyEvent_name, php_wxWindowDestroyEvent_functions);
+	ce.create_object = php_wxWindowDestroyEvent_new;
 	php_wxWindowDestroyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWindowDestroyEvent = zend_register_list_destructors_ex(php_wxWindowDestroyEvent_destruction_handler, NULL, (char*) "native wxWindowDestroyEvent", module_number);
 
 	char PHP_wxGraphicsGradientStop_name[] = "wxGraphicsGradientStop";
 	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsGradientStop_name, php_wxGraphicsGradientStop_functions);
+	ce.create_object = php_wxGraphicsGradientStop_new;
 	php_wxGraphicsGradientStop_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGraphicsGradientStop = zend_register_list_destructors_ex(php_wxGraphicsGradientStop_destruction_handler, NULL, (char*) "native wxGraphicsGradientStop", module_number);
 
 	char PHP_wxGraphicsGradientStops_name[] = "wxGraphicsGradientStops";
 	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsGradientStops_name, php_wxGraphicsGradientStops_functions);
+	ce.create_object = php_wxGraphicsGradientStops_new;
 	php_wxGraphicsGradientStops_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGraphicsGradientStops = zend_register_list_destructors_ex(php_wxGraphicsGradientStops_destruction_handler, NULL, (char*) "native wxGraphicsGradientStops", module_number);
 
 	char PHP_wxEventFilter_name[] = "wxEventFilter";
 	INIT_CLASS_ENTRY(ce, PHP_wxEventFilter_name, php_wxEventFilter_functions);
+	ce.create_object = php_wxEventFilter_new;
 	php_wxEventFilter_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEventFilter = zend_register_list_destructors_ex(php_wxEventFilter_destruction_handler, NULL, (char*) "native wxEventFilter", module_number);
 
 	char PHP_wxEventBlocker_name[] = "wxEventBlocker";
 	INIT_CLASS_ENTRY(ce, PHP_wxEventBlocker_name, php_wxEventBlocker_functions);
+	ce.create_object = php_wxEventBlocker_new;
 	php_wxEventBlocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEventBlocker = zend_register_list_destructors_ex(php_wxEventBlocker_destruction_handler, NULL, (char*) "native wxEventBlocker", module_number);
 
 	char PHP_wxEraseEvent_name[] = "wxEraseEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxEraseEvent_name, php_wxEraseEvent_functions);
+	ce.create_object = php_wxEraseEvent_new;
 	php_wxEraseEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEraseEvent = zend_register_list_destructors_ex(php_wxEraseEvent_destruction_handler, NULL, (char*) "native wxEraseEvent", module_number);
 
 	char PHP_wxEventLoopActivator_name[] = "wxEventLoopActivator";
 	INIT_CLASS_ENTRY(ce, PHP_wxEventLoopActivator_name, php_wxEventLoopActivator_functions);
+	ce.create_object = php_wxEventLoopActivator_new;
 	php_wxEventLoopActivator_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEventLoopActivator = zend_register_list_destructors_ex(php_wxEventLoopActivator_destruction_handler, NULL, (char*) "native wxEventLoopActivator", module_number);
 
 	char PHP_wxEventLoopBase_name[] = "wxEventLoopBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxEventLoopBase_name, php_wxEventLoopBase_functions);
+	ce.create_object = php_wxEventLoopBase_new;
 	php_wxEventLoopBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEventLoopBase = zend_register_list_destructors_ex(php_wxEventLoopBase_destruction_handler, NULL, (char*) "native wxEventLoopBase", module_number);
 
 	char PHP_wxPickerBase_name[] = "wxPickerBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxPickerBase_name, php_wxPickerBase_functions);
+	ce.create_object = php_wxPickerBase_new;
 	php_wxPickerBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPickerBase = zend_register_list_destructors_ex(php_wxPickerBase_destruction_handler, NULL, (char*) "native wxPickerBase", module_number);
 
 	char PHP_wxGridEvent_name[] = "wxGridEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridEvent_name, php_wxGridEvent_functions);
+	ce.create_object = php_wxGridEvent_new;
 	php_wxGridEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridEvent = zend_register_list_destructors_ex(php_wxGridEvent_destruction_handler, NULL, (char*) "native wxGridEvent", module_number);
 
 	char PHP_wxUpdateUIEvent_name[] = "wxUpdateUIEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxUpdateUIEvent_name, php_wxUpdateUIEvent_functions);
+	ce.create_object = php_wxUpdateUIEvent_new;
 	php_wxUpdateUIEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxUpdateUIEvent = zend_register_list_destructors_ex(php_wxUpdateUIEvent_destruction_handler, NULL, (char*) "native wxUpdateUIEvent", module_number);
 
 	char PHP_wxHelpEvent_name[] = "wxHelpEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxHelpEvent_name, php_wxHelpEvent_functions);
+	ce.create_object = php_wxHelpEvent_new;
 	php_wxHelpEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHelpEvent = zend_register_list_destructors_ex(php_wxHelpEvent_destruction_handler, NULL, (char*) "native wxHelpEvent", module_number);
 
 	char PHP_wxLayoutConstraints_name[] = "wxLayoutConstraints";
 	INIT_CLASS_ENTRY(ce, PHP_wxLayoutConstraints_name, php_wxLayoutConstraints_functions);
+	ce.create_object = php_wxLayoutConstraints_new;
 	php_wxLayoutConstraints_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLayoutConstraints = zend_register_list_destructors_ex(php_wxLayoutConstraints_destruction_handler, NULL, (char*) "native wxLayoutConstraints", module_number);
 
 	char PHP_wxDropTarget_name[] = "wxDropTarget";
 	INIT_CLASS_ENTRY(ce, PHP_wxDropTarget_name, php_wxDropTarget_functions);
+	ce.create_object = php_wxDropTarget_new;
 	php_wxDropTarget_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDropTarget = zend_register_list_destructors_ex(php_wxDropTarget_destruction_handler, NULL, (char*) "native wxDropTarget", module_number);
 
 	char PHP_wxObject_name[] = "wxObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxObject_name, php_wxObject_functions);
+	ce.create_object = php_wxObject_new;
 	php_wxObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxObject = zend_register_list_destructors_ex(php_wxObject_destruction_handler, NULL, (char*) "native wxObject", module_number);
 
 	char PHP_wxFFile_name[] = "wxFFile";
 	INIT_CLASS_ENTRY(ce, PHP_wxFFile_name, php_wxFFile_functions);
+	ce.create_object = php_wxFFile_new;
 	php_wxFFile_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFFile = zend_register_list_destructors_ex(php_wxFFile_destruction_handler, NULL, (char*) "native wxFFile", module_number);
 
 	char PHP_wxFSFile_name[] = "wxFSFile";
 	INIT_CLASS_ENTRY(ce, PHP_wxFSFile_name, php_wxFSFile_functions);
+	ce.create_object = php_wxFSFile_new;
 	php_wxFSFile_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFSFile = zend_register_list_destructors_ex(php_wxFSFile_destruction_handler, NULL, (char*) "native wxFSFile", module_number);
 
 	char PHP_wxInputStream_name[] = "wxInputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxInputStream_name, php_wxInputStream_functions);
+	ce.create_object = php_wxInputStream_new;
 	php_wxInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxInputStream = zend_register_list_destructors_ex(php_wxInputStream_destruction_handler, NULL, (char*) "native wxInputStream", module_number);
 
 	char PHP_wxStreamBase_name[] = "wxStreamBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxStreamBase_name, php_wxStreamBase_functions);
+	ce.create_object = php_wxStreamBase_new;
 	php_wxStreamBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStreamBase = zend_register_list_destructors_ex(php_wxStreamBase_destruction_handler, NULL, (char*) "native wxStreamBase", module_number);
 
 	char PHP_wxThread_name[] = "wxThread";
 	INIT_CLASS_ENTRY(ce, PHP_wxThread_name, php_wxThread_functions);
+	ce.create_object = php_wxThread_new;
 	php_wxThread_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxThread = zend_register_list_destructors_ex(php_wxThread_destruction_handler, NULL, (char*) "native wxThread", module_number);
 
 	char PHP_wxTimePickerCtrl_name[] = "wxTimePickerCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxTimePickerCtrl_name, php_wxTimePickerCtrl_functions);
+	ce.create_object = php_wxTimePickerCtrl_new;
 	php_wxTimePickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTimePickerCtrl = zend_register_list_destructors_ex(php_wxTimePickerCtrl_destruction_handler, NULL, (char*) "native wxTimePickerCtrl", module_number);
 
 	char PHP_wxOutputStream_name[] = "wxOutputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxOutputStream_name, php_wxOutputStream_functions);
+	ce.create_object = php_wxOutputStream_new;
 	php_wxOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxOutputStream = zend_register_list_destructors_ex(php_wxOutputStream_destruction_handler, NULL, (char*) "native wxOutputStream", module_number);
 
 	char PHP_wxColourDialog_name[] = "wxColourDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxColourDialog_name, php_wxColourDialog_functions);
+	ce.create_object = php_wxColourDialog_new;
 	php_wxColourDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxColourDialog = zend_register_list_destructors_ex(php_wxColourDialog_destruction_handler, NULL, (char*) "native wxColourDialog", module_number);
 
 	char PHP_wxColourData_name[] = "wxColourData";
 	INIT_CLASS_ENTRY(ce, PHP_wxColourData_name, php_wxColourData_functions);
+	ce.create_object = php_wxColourData_new;
 	php_wxColourData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxColourData = zend_register_list_destructors_ex(php_wxColourData_destruction_handler, NULL, (char*) "native wxColourData", module_number);
 
 	char PHP_wxFileDialog_name[] = "wxFileDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileDialog_name, php_wxFileDialog_functions);
+	ce.create_object = php_wxFileDialog_new;
 	php_wxFileDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileDialog = zend_register_list_destructors_ex(php_wxFileDialog_destruction_handler, NULL, (char*) "native wxFileDialog", module_number);
 
 	char PHP_wxFontData_name[] = "wxFontData";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontData_name, php_wxFontData_functions);
+	ce.create_object = php_wxFontData_new;
 	php_wxFontData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontData = zend_register_list_destructors_ex(php_wxFontData_destruction_handler, NULL, (char*) "native wxFontData", module_number);
 
 	char PHP_wxFontDialog_name[] = "wxFontDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontDialog_name, php_wxFontDialog_functions);
+	ce.create_object = php_wxFontDialog_new;
 	php_wxFontDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontDialog = zend_register_list_destructors_ex(php_wxFontDialog_destruction_handler, NULL, (char*) "native wxFontDialog", module_number);
 
 	char PHP_wxThreadHelper_name[] = "wxThreadHelper";
 	INIT_CLASS_ENTRY(ce, PHP_wxThreadHelper_name, php_wxThreadHelper_functions);
+	ce.create_object = php_wxThreadHelper_new;
 	php_wxThreadHelper_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxThreadHelper = zend_register_list_destructors_ex(php_wxThreadHelper_destruction_handler, NULL, (char*) "native wxThreadHelper", module_number);
 
 	char PHP_wxToolBar_name[] = "wxToolBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxToolBar_name, php_wxToolBar_functions);
+	ce.create_object = php_wxToolBar_new;
 	php_wxToolBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxToolBar = zend_register_list_destructors_ex(php_wxToolBar_destruction_handler, NULL, (char*) "native wxToolBar", module_number);
 
 	char PHP_wxAuiTabArt_name[] = "wxAuiTabArt";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiTabArt_name, php_wxAuiTabArt_functions);
+	ce.create_object = php_wxAuiTabArt_new;
 	php_wxAuiTabArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiTabArt = zend_register_list_destructors_ex(php_wxAuiTabArt_destruction_handler, NULL, (char*) "native wxAuiTabArt", module_number);
 
 	char PHP_wxCalendarEvent_name[] = "wxCalendarEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxCalendarEvent_name, php_wxCalendarEvent_functions);
+	ce.create_object = php_wxCalendarEvent_new;
 	php_wxCalendarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCalendarEvent = zend_register_list_destructors_ex(php_wxCalendarEvent_destruction_handler, NULL, (char*) "native wxCalendarEvent", module_number);
 
 	char PHP_wxGrid_name[] = "wxGrid";
 	INIT_CLASS_ENTRY(ce, PHP_wxGrid_name, php_wxGrid_functions);
+	ce.create_object = php_wxGrid_new;
 	php_wxGrid_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGrid = zend_register_list_destructors_ex(php_wxGrid_destruction_handler, NULL, (char*) "native wxGrid", module_number);
 
 	char PHP_wxGridCellAttr_name[] = "wxGridCellAttr";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAttr_name, php_wxGridCellAttr_functions);
+	ce.create_object = php_wxGridCellAttr_new;
 	php_wxGridCellAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellAttr = zend_register_list_destructors_ex(php_wxGridCellAttr_destruction_handler, NULL, (char*) "native wxGridCellAttr", module_number);
 
 	char PHP_wxGridCellAttrProvider_name[] = "wxGridCellAttrProvider";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAttrProvider_name, php_wxGridCellAttrProvider_functions);
+	ce.create_object = php_wxGridCellAttrProvider_new;
 	php_wxGridCellAttrProvider_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellAttrProvider = zend_register_list_destructors_ex(php_wxGridCellAttrProvider_destruction_handler, NULL, (char*) "native wxGridCellAttrProvider", module_number);
 
 	char PHP_wxGridCellBoolEditor_name[] = "wxGridCellBoolEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellBoolEditor_name, php_wxGridCellBoolEditor_functions);
+	ce.create_object = php_wxGridCellBoolEditor_new;
 	php_wxGridCellBoolEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellBoolEditor = zend_register_list_destructors_ex(php_wxGridCellBoolEditor_destruction_handler, NULL, (char*) "native wxGridCellBoolEditor", module_number);
 
 	char PHP_wxGridCellChoiceEditor_name[] = "wxGridCellChoiceEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellChoiceEditor_name, php_wxGridCellChoiceEditor_functions);
+	ce.create_object = php_wxGridCellChoiceEditor_new;
 	php_wxGridCellChoiceEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellChoiceEditor = zend_register_list_destructors_ex(php_wxGridCellChoiceEditor_destruction_handler, NULL, (char*) "native wxGridCellChoiceEditor", module_number);
 
 	char PHP_wxGridCellDateTimeRenderer_name[] = "wxGridCellDateTimeRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellDateTimeRenderer_name, php_wxGridCellDateTimeRenderer_functions);
+	ce.create_object = php_wxGridCellDateTimeRenderer_new;
 	php_wxGridCellDateTimeRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellDateTimeRenderer = zend_register_list_destructors_ex(php_wxGridCellDateTimeRenderer_destruction_handler, NULL, (char*) "native wxGridCellDateTimeRenderer", module_number);
 
 	char PHP_wxGridCellBoolRenderer_name[] = "wxGridCellBoolRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellBoolRenderer_name, php_wxGridCellBoolRenderer_functions);
+	ce.create_object = php_wxGridCellBoolRenderer_new;
 	php_wxGridCellBoolRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellBoolRenderer = zend_register_list_destructors_ex(php_wxGridCellBoolRenderer_destruction_handler, NULL, (char*) "native wxGridCellBoolRenderer", module_number);
 
 	char PHP_wxGridCellAutoWrapStringRenderer_name[] = "wxGridCellAutoWrapStringRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAutoWrapStringRenderer_name, php_wxGridCellAutoWrapStringRenderer_functions);
+	ce.create_object = php_wxGridCellAutoWrapStringRenderer_new;
 	php_wxGridCellAutoWrapStringRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellAutoWrapStringRenderer = zend_register_list_destructors_ex(php_wxGridCellAutoWrapStringRenderer_destruction_handler, NULL, (char*) "native wxGridCellAutoWrapStringRenderer", module_number);
 
 	char PHP_wxGridCellAutoWrapStringEditor_name[] = "wxGridCellAutoWrapStringEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAutoWrapStringEditor_name, php_wxGridCellAutoWrapStringEditor_functions);
+	ce.create_object = php_wxGridCellAutoWrapStringEditor_new;
 	php_wxGridCellAutoWrapStringEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellAutoWrapStringEditor = zend_register_list_destructors_ex(php_wxGridCellAutoWrapStringEditor_destruction_handler, NULL, (char*) "native wxGridCellAutoWrapStringEditor", module_number);
 
 	char PHP_wxGridCellEditor_name[] = "wxGridCellEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEditor_name, php_wxGridCellEditor_functions);
+	ce.create_object = php_wxGridCellEditor_new;
 	php_wxGridCellEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellEditor = zend_register_list_destructors_ex(php_wxGridCellEditor_destruction_handler, NULL, (char*) "native wxGridCellEditor", module_number);
 
 	char PHP_wxGridCellEnumEditor_name[] = "wxGridCellEnumEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEnumEditor_name, php_wxGridCellEnumEditor_functions);
+	ce.create_object = php_wxGridCellEnumEditor_new;
 	php_wxGridCellEnumEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellEnumEditor = zend_register_list_destructors_ex(php_wxGridCellEnumEditor_destruction_handler, NULL, (char*) "native wxGridCellEnumEditor", module_number);
 
 	char PHP_wxGridCellEnumRenderer_name[] = "wxGridCellEnumRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEnumRenderer_name, php_wxGridCellEnumRenderer_functions);
+	ce.create_object = php_wxGridCellEnumRenderer_new;
 	php_wxGridCellEnumRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellEnumRenderer = zend_register_list_destructors_ex(php_wxGridCellEnumRenderer_destruction_handler, NULL, (char*) "native wxGridCellEnumRenderer", module_number);
 
 	char PHP_wxGridCellFloatEditor_name[] = "wxGridCellFloatEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellFloatEditor_name, php_wxGridCellFloatEditor_functions);
+	ce.create_object = php_wxGridCellFloatEditor_new;
 	php_wxGridCellFloatEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellFloatEditor = zend_register_list_destructors_ex(php_wxGridCellFloatEditor_destruction_handler, NULL, (char*) "native wxGridCellFloatEditor", module_number);
 
 	char PHP_wxGridCellFloatRenderer_name[] = "wxGridCellFloatRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellFloatRenderer_name, php_wxGridCellFloatRenderer_functions);
+	ce.create_object = php_wxGridCellFloatRenderer_new;
 	php_wxGridCellFloatRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellFloatRenderer = zend_register_list_destructors_ex(php_wxGridCellFloatRenderer_destruction_handler, NULL, (char*) "native wxGridCellFloatRenderer", module_number);
 
 	char PHP_wxGridCellNumberEditor_name[] = "wxGridCellNumberEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellNumberEditor_name, php_wxGridCellNumberEditor_functions);
+	ce.create_object = php_wxGridCellNumberEditor_new;
 	php_wxGridCellNumberEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellNumberEditor = zend_register_list_destructors_ex(php_wxGridCellNumberEditor_destruction_handler, NULL, (char*) "native wxGridCellNumberEditor", module_number);
 
 	char PHP_wxGridCellNumberRenderer_name[] = "wxGridCellNumberRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellNumberRenderer_name, php_wxGridCellNumberRenderer_functions);
+	ce.create_object = php_wxGridCellNumberRenderer_new;
 	php_wxGridCellNumberRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellNumberRenderer = zend_register_list_destructors_ex(php_wxGridCellNumberRenderer_destruction_handler, NULL, (char*) "native wxGridCellNumberRenderer", module_number);
 
 	char PHP_wxGridCellRenderer_name[] = "wxGridCellRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellRenderer_name, php_wxGridCellRenderer_functions);
+	ce.create_object = php_wxGridCellRenderer_new;
 	php_wxGridCellRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellRenderer = zend_register_list_destructors_ex(php_wxGridCellRenderer_destruction_handler, NULL, (char*) "native wxGridCellRenderer", module_number);
 
 	char PHP_wxGridCellStringRenderer_name[] = "wxGridCellStringRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellStringRenderer_name, php_wxGridCellStringRenderer_functions);
+	ce.create_object = php_wxGridCellStringRenderer_new;
 	php_wxGridCellStringRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellStringRenderer = zend_register_list_destructors_ex(php_wxGridCellStringRenderer_destruction_handler, NULL, (char*) "native wxGridCellStringRenderer", module_number);
 
 	char PHP_wxGridCellTextEditor_name[] = "wxGridCellTextEditor";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCellTextEditor_name, php_wxGridCellTextEditor_functions);
+	ce.create_object = php_wxGridCellTextEditor_new;
 	php_wxGridCellTextEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCellTextEditor = zend_register_list_destructors_ex(php_wxGridCellTextEditor_destruction_handler, NULL, (char*) "native wxGridCellTextEditor", module_number);
 
 	char PHP_wxGridColumnHeaderRenderer_name[] = "wxGridColumnHeaderRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridColumnHeaderRenderer_name, php_wxGridColumnHeaderRenderer_functions);
+	ce.create_object = php_wxGridColumnHeaderRenderer_new;
 	php_wxGridColumnHeaderRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridColumnHeaderRenderer = zend_register_list_destructors_ex(php_wxGridColumnHeaderRenderer_destruction_handler, NULL, (char*) "native wxGridColumnHeaderRenderer", module_number);
 
 	char PHP_wxGridColumnHeaderRendererDefault_name[] = "wxGridColumnHeaderRendererDefault";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridColumnHeaderRendererDefault_name, php_wxGridColumnHeaderRendererDefault_functions);
+	ce.create_object = php_wxGridColumnHeaderRendererDefault_new;
 	php_wxGridColumnHeaderRendererDefault_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridColumnHeaderRendererDefault = zend_register_list_destructors_ex(php_wxGridColumnHeaderRendererDefault_destruction_handler, NULL, (char*) "native wxGridColumnHeaderRendererDefault", module_number);
 
 	char PHP_wxGridCornerHeaderRenderer_name[] = "wxGridCornerHeaderRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCornerHeaderRenderer_name, php_wxGridCornerHeaderRenderer_functions);
+	ce.create_object = php_wxGridCornerHeaderRenderer_new;
 	php_wxGridCornerHeaderRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCornerHeaderRenderer = zend_register_list_destructors_ex(php_wxGridCornerHeaderRenderer_destruction_handler, NULL, (char*) "native wxGridCornerHeaderRenderer", module_number);
 
 	char PHP_wxGridCornerHeaderRendererDefault_name[] = "wxGridCornerHeaderRendererDefault";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridCornerHeaderRendererDefault_name, php_wxGridCornerHeaderRendererDefault_functions);
+	ce.create_object = php_wxGridCornerHeaderRendererDefault_new;
 	php_wxGridCornerHeaderRendererDefault_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridCornerHeaderRendererDefault = zend_register_list_destructors_ex(php_wxGridCornerHeaderRendererDefault_destruction_handler, NULL, (char*) "native wxGridCornerHeaderRendererDefault", module_number);
 
 	char PHP_wxGridEditorCreatedEvent_name[] = "wxGridEditorCreatedEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridEditorCreatedEvent_name, php_wxGridEditorCreatedEvent_functions);
+	ce.create_object = php_wxGridEditorCreatedEvent_new;
 	php_wxGridEditorCreatedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridEditorCreatedEvent = zend_register_list_destructors_ex(php_wxGridEditorCreatedEvent_destruction_handler, NULL, (char*) "native wxGridEditorCreatedEvent", module_number);
 
 	char PHP_wxGridHeaderLabelsRenderer_name[] = "wxGridHeaderLabelsRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridHeaderLabelsRenderer_name, php_wxGridHeaderLabelsRenderer_functions);
+	ce.create_object = php_wxGridHeaderLabelsRenderer_new;
 	php_wxGridHeaderLabelsRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridHeaderLabelsRenderer = zend_register_list_destructors_ex(php_wxGridHeaderLabelsRenderer_destruction_handler, NULL, (char*) "native wxGridHeaderLabelsRenderer", module_number);
 
 	char PHP_wxGridRangeSelectEvent_name[] = "wxGridRangeSelectEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridRangeSelectEvent_name, php_wxGridRangeSelectEvent_functions);
+	ce.create_object = php_wxGridRangeSelectEvent_new;
 	php_wxGridRangeSelectEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridRangeSelectEvent = zend_register_list_destructors_ex(php_wxGridRangeSelectEvent_destruction_handler, NULL, (char*) "native wxGridRangeSelectEvent", module_number);
 
 	char PHP_wxGridRowHeaderRenderer_name[] = "wxGridRowHeaderRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridRowHeaderRenderer_name, php_wxGridRowHeaderRenderer_functions);
+	ce.create_object = php_wxGridRowHeaderRenderer_new;
 	php_wxGridRowHeaderRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridRowHeaderRenderer = zend_register_list_destructors_ex(php_wxGridRowHeaderRenderer_destruction_handler, NULL, (char*) "native wxGridRowHeaderRenderer", module_number);
 
 	char PHP_wxGridRowHeaderRendererDefault_name[] = "wxGridRowHeaderRendererDefault";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridRowHeaderRendererDefault_name, php_wxGridRowHeaderRendererDefault_functions);
+	ce.create_object = php_wxGridRowHeaderRendererDefault_new;
 	php_wxGridRowHeaderRendererDefault_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridRowHeaderRendererDefault = zend_register_list_destructors_ex(php_wxGridRowHeaderRendererDefault_destruction_handler, NULL, (char*) "native wxGridRowHeaderRendererDefault", module_number);
 
 	char PHP_wxGridSizesInfo_name[] = "wxGridSizesInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridSizesInfo_name, php_wxGridSizesInfo_functions);
+	ce.create_object = php_wxGridSizesInfo_new;
 	php_wxGridSizesInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridSizesInfo = zend_register_list_destructors_ex(php_wxGridSizesInfo_destruction_handler, NULL, (char*) "native wxGridSizesInfo", module_number);
 
 	char PHP_wxGridTableBase_name[] = "wxGridTableBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridTableBase_name, php_wxGridTableBase_functions);
+	ce.create_object = php_wxGridTableBase_new;
 	php_wxGridTableBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridTableBase = zend_register_list_destructors_ex(php_wxGridTableBase_destruction_handler, NULL, (char*) "native wxGridTableBase", module_number);
 
 	char PHP_wxGridUpdateLocker_name[] = "wxGridUpdateLocker";
 	INIT_CLASS_ENTRY(ce, PHP_wxGridUpdateLocker_name, php_wxGridUpdateLocker_functions);
+	ce.create_object = php_wxGridUpdateLocker_new;
 	php_wxGridUpdateLocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGridUpdateLocker = zend_register_list_destructors_ex(php_wxGridUpdateLocker_destruction_handler, NULL, (char*) "native wxGridUpdateLocker", module_number);
 
 	char PHP_wxDatePickerCtrl_name[] = "wxDatePickerCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxDatePickerCtrl_name, php_wxDatePickerCtrl_functions);
+	ce.create_object = php_wxDatePickerCtrl_new;
 	php_wxDatePickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDatePickerCtrl = zend_register_list_destructors_ex(php_wxDatePickerCtrl_destruction_handler, NULL, (char*) "native wxDatePickerCtrl", module_number);
 
 	char PHP_wxPasswordEntryDialog_name[] = "wxPasswordEntryDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxPasswordEntryDialog_name, php_wxPasswordEntryDialog_functions);
+	ce.create_object = php_wxPasswordEntryDialog_new;
 	php_wxPasswordEntryDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPasswordEntryDialog = zend_register_list_destructors_ex(php_wxPasswordEntryDialog_destruction_handler, NULL, (char*) "native wxPasswordEntryDialog", module_number);
 
 	char PHP_wxScreenDC_name[] = "wxScreenDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxScreenDC_name, php_wxScreenDC_functions);
+	ce.create_object = php_wxScreenDC_new;
 	php_wxScreenDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxScreenDC = zend_register_list_destructors_ex(php_wxScreenDC_destruction_handler, NULL, (char*) "native wxScreenDC", module_number);
 
 	char PHP_wxCollapsiblePane_name[] = "wxCollapsiblePane";
 	INIT_CLASS_ENTRY(ce, PHP_wxCollapsiblePane_name, php_wxCollapsiblePane_functions);
+	ce.create_object = php_wxCollapsiblePane_new;
 	php_wxCollapsiblePane_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCollapsiblePane = zend_register_list_destructors_ex(php_wxCollapsiblePane_destruction_handler, NULL, (char*) "native wxCollapsiblePane", module_number);
 
 	char PHP_wxCollapsiblePaneEvent_name[] = "wxCollapsiblePaneEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxCollapsiblePaneEvent_name, php_wxCollapsiblePaneEvent_functions);
+	ce.create_object = php_wxCollapsiblePaneEvent_new;
 	php_wxCollapsiblePaneEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCollapsiblePaneEvent = zend_register_list_destructors_ex(php_wxCollapsiblePaneEvent_destruction_handler, NULL, (char*) "native wxCollapsiblePaneEvent", module_number);
 
 	char PHP_wxComboCtrl_name[] = "wxComboCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxComboCtrl_name, php_wxComboCtrl_functions);
+	ce.create_object = php_wxComboCtrl_new;
 	php_wxComboCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxComboCtrl = zend_register_list_destructors_ex(php_wxComboCtrl_destruction_handler, NULL, (char*) "native wxComboCtrl", module_number);
 
 	char PHP_wxComboPopup_name[] = "wxComboPopup";
 	INIT_CLASS_ENTRY(ce, PHP_wxComboPopup_name, php_wxComboPopup_functions);
+	ce.create_object = php_wxComboPopup_new;
 	php_wxComboPopup_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxComboPopup = zend_register_list_destructors_ex(php_wxComboPopup_destruction_handler, NULL, (char*) "native wxComboPopup", module_number);
 
 	char PHP_wxDataViewCtrl_name[] = "wxDataViewCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewCtrl_name, php_wxDataViewCtrl_functions);
+	ce.create_object = php_wxDataViewCtrl_new;
 	php_wxDataViewCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewCtrl = zend_register_list_destructors_ex(php_wxDataViewCtrl_destruction_handler, NULL, (char*) "native wxDataViewCtrl", module_number);
 
 	char PHP_wxDataViewItem_name[] = "wxDataViewItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewItem_name, php_wxDataViewItem_functions);
+	ce.create_object = php_wxDataViewItem_new;
 	php_wxDataViewItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewItem = zend_register_list_destructors_ex(php_wxDataViewItem_destruction_handler, NULL, (char*) "native wxDataViewItem", module_number);
 
 	char PHP_wxDataViewColumn_name[] = "wxDataViewColumn";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewColumn_name, php_wxDataViewColumn_functions);
+	ce.create_object = php_wxDataViewColumn_new;
 	php_wxDataViewColumn_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewColumn = zend_register_list_destructors_ex(php_wxDataViewColumn_destruction_handler, NULL, (char*) "native wxDataViewColumn", module_number);
 
 	char PHP_wxDataViewRenderer_name[] = "wxDataViewRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewRenderer_name, php_wxDataViewRenderer_functions);
+	ce.create_object = php_wxDataViewRenderer_new;
 	php_wxDataViewRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewRenderer = zend_register_list_destructors_ex(php_wxDataViewRenderer_destruction_handler, NULL, (char*) "native wxDataViewRenderer", module_number);
 
 	char PHP_wxDataViewModel_name[] = "wxDataViewModel";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewModel_name, php_wxDataViewModel_functions);
+	ce.create_object = php_wxDataViewModel_new;
 	php_wxDataViewModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewModel = zend_register_list_destructors_ex(php_wxDataViewModel_destruction_handler, NULL, (char*) "native wxDataViewModel", module_number);
 
 	char PHP_wxDataViewModelNotifier_name[] = "wxDataViewModelNotifier";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewModelNotifier_name, php_wxDataViewModelNotifier_functions);
+	ce.create_object = php_wxDataViewModelNotifier_new;
 	php_wxDataViewModelNotifier_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewModelNotifier = zend_register_list_destructors_ex(php_wxDataViewModelNotifier_destruction_handler, NULL, (char*) "native wxDataViewModelNotifier", module_number);
 
 	char PHP_wxRefCounter_name[] = "wxRefCounter";
 	INIT_CLASS_ENTRY(ce, PHP_wxRefCounter_name, php_wxRefCounter_functions);
+	ce.create_object = php_wxRefCounter_new;
 	php_wxRefCounter_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRefCounter = zend_register_list_destructors_ex(php_wxRefCounter_destruction_handler, NULL, (char*) "native wxRefCounter", module_number);
 
 	char PHP_wxDataViewListCtrl_name[] = "wxDataViewListCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListCtrl_name, php_wxDataViewListCtrl_functions);
+	ce.create_object = php_wxDataViewListCtrl_new;
 	php_wxDataViewListCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewListCtrl = zend_register_list_destructors_ex(php_wxDataViewListCtrl_destruction_handler, NULL, (char*) "native wxDataViewListCtrl", module_number);
 
 	char PHP_wxDataViewListStore_name[] = "wxDataViewListStore";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListStore_name, php_wxDataViewListStore_functions);
+	ce.create_object = php_wxDataViewListStore_new;
 	php_wxDataViewListStore_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewListStore = zend_register_list_destructors_ex(php_wxDataViewListStore_destruction_handler, NULL, (char*) "native wxDataViewListStore", module_number);
 
 	char PHP_wxDataViewListModel_name[] = "wxDataViewListModel";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListModel_name, php_wxDataViewListModel_functions);
+	ce.create_object = php_wxDataViewListModel_new;
 	php_wxDataViewListModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewListModel = zend_register_list_destructors_ex(php_wxDataViewListModel_destruction_handler, NULL, (char*) "native wxDataViewListModel", module_number);
 
 	char PHP_wxDataViewEvent_name[] = "wxDataViewEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewEvent_name, php_wxDataViewEvent_functions);
+	ce.create_object = php_wxDataViewEvent_new;
 	php_wxDataViewEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewEvent = zend_register_list_destructors_ex(php_wxDataViewEvent_destruction_handler, NULL, (char*) "native wxDataViewEvent", module_number);
 
 	char PHP_wxDataFormat_name[] = "wxDataFormat";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataFormat_name, php_wxDataFormat_functions);
+	ce.create_object = php_wxDataFormat_new;
 	php_wxDataFormat_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataFormat = zend_register_list_destructors_ex(php_wxDataFormat_destruction_handler, NULL, (char*) "native wxDataFormat", module_number);
 
 	char PHP_wxDataInputStream_name[] = "wxDataInputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataInputStream_name, php_wxDataInputStream_functions);
+	ce.create_object = php_wxDataInputStream_new;
 	php_wxDataInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataInputStream = zend_register_list_destructors_ex(php_wxDataInputStream_destruction_handler, NULL, (char*) "native wxDataInputStream", module_number);
 
 	char PHP_wxDataObject_name[] = "wxDataObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataObject_name, php_wxDataObject_functions);
+	ce.create_object = php_wxDataObject_new;
 	php_wxDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataObject = zend_register_list_destructors_ex(php_wxDataObject_destruction_handler, NULL, (char*) "native wxDataObject", module_number);
 
 	char PHP_wxDataObjectComposite_name[] = "wxDataObjectComposite";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataObjectComposite_name, php_wxDataObjectComposite_functions);
+	ce.create_object = php_wxDataObjectComposite_new;
 	php_wxDataObjectComposite_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataObjectComposite = zend_register_list_destructors_ex(php_wxDataObjectComposite_destruction_handler, NULL, (char*) "native wxDataObjectComposite", module_number);
 
 	char PHP_wxDataObjectSimple_name[] = "wxDataObjectSimple";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataObjectSimple_name, php_wxDataObjectSimple_functions);
+	ce.create_object = php_wxDataObjectSimple_new;
 	php_wxDataObjectSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataObjectSimple = zend_register_list_destructors_ex(php_wxDataObjectSimple_destruction_handler, NULL, (char*) "native wxDataObjectSimple", module_number);
 
 	char PHP_wxDataOutputStream_name[] = "wxDataOutputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataOutputStream_name, php_wxDataOutputStream_functions);
+	ce.create_object = php_wxDataOutputStream_new;
 	php_wxDataOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataOutputStream = zend_register_list_destructors_ex(php_wxDataOutputStream_destruction_handler, NULL, (char*) "native wxDataOutputStream", module_number);
 
 	char PHP_wxDataViewBitmapRenderer_name[] = "wxDataViewBitmapRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewBitmapRenderer_name, php_wxDataViewBitmapRenderer_functions);
+	ce.create_object = php_wxDataViewBitmapRenderer_new;
 	php_wxDataViewBitmapRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewBitmapRenderer = zend_register_list_destructors_ex(php_wxDataViewBitmapRenderer_destruction_handler, NULL, (char*) "native wxDataViewBitmapRenderer", module_number);
 
 	char PHP_wxDataViewChoiceRenderer_name[] = "wxDataViewChoiceRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewChoiceRenderer_name, php_wxDataViewChoiceRenderer_functions);
+	ce.create_object = php_wxDataViewChoiceRenderer_new;
 	php_wxDataViewChoiceRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewChoiceRenderer = zend_register_list_destructors_ex(php_wxDataViewChoiceRenderer_destruction_handler, NULL, (char*) "native wxDataViewChoiceRenderer", module_number);
 
 	char PHP_wxDataViewCustomRenderer_name[] = "wxDataViewCustomRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewCustomRenderer_name, php_wxDataViewCustomRenderer_functions);
+	ce.create_object = php_wxDataViewCustomRenderer_new;
 	php_wxDataViewCustomRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewCustomRenderer = zend_register_list_destructors_ex(php_wxDataViewCustomRenderer_destruction_handler, NULL, (char*) "native wxDataViewCustomRenderer", module_number);
 
 	char PHP_wxDataViewDateRenderer_name[] = "wxDataViewDateRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewDateRenderer_name, php_wxDataViewDateRenderer_functions);
+	ce.create_object = php_wxDataViewDateRenderer_new;
 	php_wxDataViewDateRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewDateRenderer = zend_register_list_destructors_ex(php_wxDataViewDateRenderer_destruction_handler, NULL, (char*) "native wxDataViewDateRenderer", module_number);
 
 	char PHP_wxDataViewIconText_name[] = "wxDataViewIconText";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIconText_name, php_wxDataViewIconText_functions);
+	ce.create_object = php_wxDataViewIconText_new;
 	php_wxDataViewIconText_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewIconText = zend_register_list_destructors_ex(php_wxDataViewIconText_destruction_handler, NULL, (char*) "native wxDataViewIconText", module_number);
 
 	char PHP_wxDataViewIconTextRenderer_name[] = "wxDataViewIconTextRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIconTextRenderer_name, php_wxDataViewIconTextRenderer_functions);
+	ce.create_object = php_wxDataViewIconTextRenderer_new;
 	php_wxDataViewIconTextRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewIconTextRenderer = zend_register_list_destructors_ex(php_wxDataViewIconTextRenderer_destruction_handler, NULL, (char*) "native wxDataViewIconTextRenderer", module_number);
 
 	char PHP_wxDataViewIndexListModel_name[] = "wxDataViewIndexListModel";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIndexListModel_name, php_wxDataViewIndexListModel_functions);
+	ce.create_object = php_wxDataViewIndexListModel_new;
 	php_wxDataViewIndexListModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewIndexListModel = zend_register_list_destructors_ex(php_wxDataViewIndexListModel_destruction_handler, NULL, (char*) "native wxDataViewIndexListModel", module_number);
 
 	char PHP_wxDataViewItemAttr_name[] = "wxDataViewItemAttr";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewItemAttr_name, php_wxDataViewItemAttr_functions);
+	ce.create_object = php_wxDataViewItemAttr_new;
 	php_wxDataViewItemAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewItemAttr = zend_register_list_destructors_ex(php_wxDataViewItemAttr_destruction_handler, NULL, (char*) "native wxDataViewItemAttr", module_number);
 
 	char PHP_wxDataViewProgressRenderer_name[] = "wxDataViewProgressRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewProgressRenderer_name, php_wxDataViewProgressRenderer_functions);
+	ce.create_object = php_wxDataViewProgressRenderer_new;
 	php_wxDataViewProgressRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewProgressRenderer = zend_register_list_destructors_ex(php_wxDataViewProgressRenderer_destruction_handler, NULL, (char*) "native wxDataViewProgressRenderer", module_number);
 
 	char PHP_wxDataViewSpinRenderer_name[] = "wxDataViewSpinRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewSpinRenderer_name, php_wxDataViewSpinRenderer_functions);
+	ce.create_object = php_wxDataViewSpinRenderer_new;
 	php_wxDataViewSpinRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewSpinRenderer = zend_register_list_destructors_ex(php_wxDataViewSpinRenderer_destruction_handler, NULL, (char*) "native wxDataViewSpinRenderer", module_number);
 
 	char PHP_wxDataViewTextRenderer_name[] = "wxDataViewTextRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTextRenderer_name, php_wxDataViewTextRenderer_functions);
+	ce.create_object = php_wxDataViewTextRenderer_new;
 	php_wxDataViewTextRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewTextRenderer = zend_register_list_destructors_ex(php_wxDataViewTextRenderer_destruction_handler, NULL, (char*) "native wxDataViewTextRenderer", module_number);
 
 	char PHP_wxDataViewToggleRenderer_name[] = "wxDataViewToggleRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewToggleRenderer_name, php_wxDataViewToggleRenderer_functions);
+	ce.create_object = php_wxDataViewToggleRenderer_new;
 	php_wxDataViewToggleRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewToggleRenderer = zend_register_list_destructors_ex(php_wxDataViewToggleRenderer_destruction_handler, NULL, (char*) "native wxDataViewToggleRenderer", module_number);
 
 	char PHP_wxDataViewTreeCtrl_name[] = "wxDataViewTreeCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTreeCtrl_name, php_wxDataViewTreeCtrl_functions);
+	ce.create_object = php_wxDataViewTreeCtrl_new;
 	php_wxDataViewTreeCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewTreeCtrl = zend_register_list_destructors_ex(php_wxDataViewTreeCtrl_destruction_handler, NULL, (char*) "native wxDataViewTreeCtrl", module_number);
 
 	char PHP_wxDataViewTreeStore_name[] = "wxDataViewTreeStore";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTreeStore_name, php_wxDataViewTreeStore_functions);
+	ce.create_object = php_wxDataViewTreeStore_new;
 	php_wxDataViewTreeStore_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewTreeStore = zend_register_list_destructors_ex(php_wxDataViewTreeStore_destruction_handler, NULL, (char*) "native wxDataViewTreeStore", module_number);
 
 	char PHP_wxDataViewVirtualListModel_name[] = "wxDataViewVirtualListModel";
 	INIT_CLASS_ENTRY(ce, PHP_wxDataViewVirtualListModel_name, php_wxDataViewVirtualListModel_functions);
+	ce.create_object = php_wxDataViewVirtualListModel_new;
 	php_wxDataViewVirtualListModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDataViewVirtualListModel = zend_register_list_destructors_ex(php_wxDataViewVirtualListModel_destruction_handler, NULL, (char*) "native wxDataViewVirtualListModel", module_number);
 
 	char PHP_wxVariant_name[] = "wxVariant";
 	INIT_CLASS_ENTRY(ce, PHP_wxVariant_name, php_wxVariant_functions);
+	ce.create_object = php_wxVariant_new;
 	php_wxVariant_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxVariant = zend_register_list_destructors_ex(php_wxVariant_destruction_handler, NULL, (char*) "native wxVariant", module_number);
 
 	char PHP_wxVariantData_name[] = "wxVariantData";
 	INIT_CLASS_ENTRY(ce, PHP_wxVariantData_name, php_wxVariantData_functions);
+	ce.create_object = php_wxVariantData_new;
 	php_wxVariantData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxVariantData = zend_register_list_destructors_ex(php_wxVariantData_destruction_handler, NULL, (char*) "native wxVariantData", module_number);
 
 	char PHP_wxClassInfo_name[] = "wxClassInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxClassInfo_name, php_wxClassInfo_functions);
+	ce.create_object = php_wxClassInfo_new;
 	php_wxClassInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxClassInfo = zend_register_list_destructors_ex(php_wxClassInfo_destruction_handler, NULL, (char*) "native wxClassInfo", module_number);
 
 	char PHP_wxColourDatabase_name[] = "wxColourDatabase";
 	INIT_CLASS_ENTRY(ce, PHP_wxColourDatabase_name, php_wxColourDatabase_functions);
+	ce.create_object = php_wxColourDatabase_new;
 	php_wxColourDatabase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxColourDatabase = zend_register_list_destructors_ex(php_wxColourDatabase_destruction_handler, NULL, (char*) "native wxColourDatabase", module_number);
 
 	char PHP_wxClipboard_name[] = "wxClipboard";
 	INIT_CLASS_ENTRY(ce, PHP_wxClipboard_name, php_wxClipboard_functions);
+	ce.create_object = php_wxClipboard_new;
 	php_wxClipboard_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxClipboard = zend_register_list_destructors_ex(php_wxClipboard_destruction_handler, NULL, (char*) "native wxClipboard", module_number);
 
 	char PHP_wxClipboardTextEvent_name[] = "wxClipboardTextEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxClipboardTextEvent_name, php_wxClipboardTextEvent_functions);
+	ce.create_object = php_wxClipboardTextEvent_new;
 	php_wxClipboardTextEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxClipboardTextEvent = zend_register_list_destructors_ex(php_wxClipboardTextEvent_destruction_handler, NULL, (char*) "native wxClipboardTextEvent", module_number);
 
 	char PHP_wxListView_name[] = "wxListView";
 	INIT_CLASS_ENTRY(ce, PHP_wxListView_name, php_wxListView_functions);
+	ce.create_object = php_wxListView_new;
 	php_wxListView_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxListView = zend_register_list_destructors_ex(php_wxListView_destruction_handler, NULL, (char*) "native wxListView", module_number);
 
 	char PHP_wxConfigBase_name[] = "wxConfigBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxConfigBase_name, php_wxConfigBase_functions);
+	ce.create_object = php_wxConfigBase_new;
 	php_wxConfigBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxConfigBase = zend_register_list_destructors_ex(php_wxConfigBase_destruction_handler, NULL, (char*) "native wxConfigBase", module_number);
 
 	char PHP_wxHeaderCtrlEvent_name[] = "wxHeaderCtrlEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrlEvent_name, php_wxHeaderCtrlEvent_functions);
+	ce.create_object = php_wxHeaderCtrlEvent_new;
 	php_wxHeaderCtrlEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHeaderCtrlEvent = zend_register_list_destructors_ex(php_wxHeaderCtrlEvent_destruction_handler, NULL, (char*) "native wxHeaderCtrlEvent", module_number);
 
 	char PHP_wxHeaderCtrl_name[] = "wxHeaderCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrl_name, php_wxHeaderCtrl_functions);
+	ce.create_object = php_wxHeaderCtrl_new;
 	php_wxHeaderCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHeaderCtrl = zend_register_list_destructors_ex(php_wxHeaderCtrl_destruction_handler, NULL, (char*) "native wxHeaderCtrl", module_number);
 
 	char PHP_wxHeaderColumn_name[] = "wxHeaderColumn";
 	INIT_CLASS_ENTRY(ce, PHP_wxHeaderColumn_name, php_wxHeaderColumn_functions);
+	ce.create_object = php_wxHeaderColumn_new;
 	php_wxHeaderColumn_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHeaderColumn = zend_register_list_destructors_ex(php_wxHeaderColumn_destruction_handler, NULL, (char*) "native wxHeaderColumn", module_number);
 
 	char PHP_wxHeaderCtrlSimple_name[] = "wxHeaderCtrlSimple";
 	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrlSimple_name, php_wxHeaderCtrlSimple_functions);
+	ce.create_object = php_wxHeaderCtrlSimple_new;
 	php_wxHeaderCtrlSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHeaderCtrlSimple = zend_register_list_destructors_ex(php_wxHeaderCtrlSimple_destruction_handler, NULL, (char*) "native wxHeaderCtrlSimple", module_number);
 
 	char PHP_wxHeaderColumnSimple_name[] = "wxHeaderColumnSimple";
 	INIT_CLASS_ENTRY(ce, PHP_wxHeaderColumnSimple_name, php_wxHeaderColumnSimple_functions);
+	ce.create_object = php_wxHeaderColumnSimple_new;
 	php_wxHeaderColumnSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHeaderColumnSimple = zend_register_list_destructors_ex(php_wxHeaderColumnSimple_destruction_handler, NULL, (char*) "native wxHeaderColumnSimple", module_number);
 
 	char PHP_wxSettableHeaderColumn_name[] = "wxSettableHeaderColumn";
 	INIT_CLASS_ENTRY(ce, PHP_wxSettableHeaderColumn_name, php_wxSettableHeaderColumn_functions);
+	ce.create_object = php_wxSettableHeaderColumn_new;
 	php_wxSettableHeaderColumn_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSettableHeaderColumn = zend_register_list_destructors_ex(php_wxSettableHeaderColumn_destruction_handler, NULL, (char*) "native wxSettableHeaderColumn", module_number);
 
 	char PHP_wxSetCursorEvent_name[] = "wxSetCursorEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSetCursorEvent_name, php_wxSetCursorEvent_functions);
+	ce.create_object = php_wxSetCursorEvent_new;
 	php_wxSetCursorEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSetCursorEvent = zend_register_list_destructors_ex(php_wxSetCursorEvent_destruction_handler, NULL, (char*) "native wxSetCursorEvent", module_number);
 
 	char PHP_wxIdleEvent_name[] = "wxIdleEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxIdleEvent_name, php_wxIdleEvent_functions);
+	ce.create_object = php_wxIdleEvent_new;
 	php_wxIdleEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxIdleEvent = zend_register_list_destructors_ex(php_wxIdleEvent_destruction_handler, NULL, (char*) "native wxIdleEvent", module_number);
 
 	char PHP_wxPen_name[] = "wxPen";
 	INIT_CLASS_ENTRY(ce, PHP_wxPen_name, php_wxPen_functions);
+	ce.create_object = php_wxPen_new;
 	php_wxPen_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPen = zend_register_list_destructors_ex(php_wxPen_destruction_handler, NULL, (char*) "native wxPen", module_number);
 
 	char PHP_wxEditableListBox_name[] = "wxEditableListBox";
 	INIT_CLASS_ENTRY(ce, PHP_wxEditableListBox_name, php_wxEditableListBox_functions);
+	ce.create_object = php_wxEditableListBox_new;
 	php_wxEditableListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxEditableListBox = zend_register_list_destructors_ex(php_wxEditableListBox_destruction_handler, NULL, (char*) "native wxEditableListBox", module_number);
 
 	char PHP_wxFileCtrlEvent_name[] = "wxFileCtrlEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileCtrlEvent_name, php_wxFileCtrlEvent_functions);
+	ce.create_object = php_wxFileCtrlEvent_new;
 	php_wxFileCtrlEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileCtrlEvent = zend_register_list_destructors_ex(php_wxFileCtrlEvent_destruction_handler, NULL, (char*) "native wxFileCtrlEvent", module_number);
 
 	char PHP_wxFileCtrl_name[] = "wxFileCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileCtrl_name, php_wxFileCtrl_functions);
+	ce.create_object = php_wxFileCtrl_new;
 	php_wxFileCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileCtrl = zend_register_list_destructors_ex(php_wxFileCtrl_destruction_handler, NULL, (char*) "native wxFileCtrl", module_number);
 
 	char PHP_wxProcess_name[] = "wxProcess";
 	INIT_CLASS_ENTRY(ce, PHP_wxProcess_name, php_wxProcess_functions);
+	ce.create_object = php_wxProcess_new;
 	php_wxProcess_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxProcess = zend_register_list_destructors_ex(php_wxProcess_destruction_handler, NULL, (char*) "native wxProcess", module_number);
 
 	char PHP_wxTextValidator_name[] = "wxTextValidator";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextValidator_name, php_wxTextValidator_functions);
+	ce.create_object = php_wxTextValidator_new;
 	php_wxTextValidator_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextValidator = zend_register_list_destructors_ex(php_wxTextValidator_destruction_handler, NULL, (char*) "native wxTextValidator", module_number);
 
 	char PHP_wxHScrolledWindow_name[] = "wxHScrolledWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxHScrolledWindow_name, php_wxHScrolledWindow_functions);
+	ce.create_object = php_wxHScrolledWindow_new;
 	php_wxHScrolledWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHScrolledWindow = zend_register_list_destructors_ex(php_wxHScrolledWindow_destruction_handler, NULL, (char*) "native wxHScrolledWindow", module_number);
 
 	char PHP_wxInfoBar_name[] = "wxInfoBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxInfoBar_name, php_wxInfoBar_functions);
+	ce.create_object = php_wxInfoBar_new;
 	php_wxInfoBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxInfoBar = zend_register_list_destructors_ex(php_wxInfoBar_destruction_handler, NULL, (char*) "native wxInfoBar", module_number);
 
 	char PHP_wxRichToolTip_name[] = "wxRichToolTip";
 	INIT_CLASS_ENTRY(ce, PHP_wxRichToolTip_name, php_wxRichToolTip_functions);
+	ce.create_object = php_wxRichToolTip_new;
 	php_wxRichToolTip_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRichToolTip = zend_register_list_destructors_ex(php_wxRichToolTip_destruction_handler, NULL, (char*) "native wxRichToolTip", module_number);
 
 	char PHP_wxPosition_name[] = "wxPosition";
 	INIT_CLASS_ENTRY(ce, PHP_wxPosition_name, php_wxPosition_functions);
+	ce.create_object = php_wxPosition_new;
 	php_wxPosition_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPosition = zend_register_list_destructors_ex(php_wxPosition_destruction_handler, NULL, (char*) "native wxPosition", module_number);
 
 	char PHP_wxMutex_name[] = "wxMutex";
 	INIT_CLASS_ENTRY(ce, PHP_wxMutex_name, php_wxMutex_functions);
+	ce.create_object = php_wxMutex_new;
 	php_wxMutex_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMutex = zend_register_list_destructors_ex(php_wxMutex_destruction_handler, NULL, (char*) "native wxMutex", module_number);
 
 	char PHP_wxMutexLocker_name[] = "wxMutexLocker";
 	INIT_CLASS_ENTRY(ce, PHP_wxMutexLocker_name, php_wxMutexLocker_functions);
+	ce.create_object = php_wxMutexLocker_new;
 	php_wxMutexLocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMutexLocker = zend_register_list_destructors_ex(php_wxMutexLocker_destruction_handler, NULL, (char*) "native wxMutexLocker", module_number);
 
 	char PHP_wxXmlResource_name[] = "wxXmlResource";
 	INIT_CLASS_ENTRY(ce, PHP_wxXmlResource_name, php_wxXmlResource_functions);
+	ce.create_object = php_wxXmlResource_new;
 	php_wxXmlResource_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxXmlResource = zend_register_list_destructors_ex(php_wxXmlResource_destruction_handler, NULL, (char*) "native wxXmlResource", module_number);
 
 	char PHP_wxGenericValidator_name[] = "wxGenericValidator";
 	INIT_CLASS_ENTRY(ce, PHP_wxGenericValidator_name, php_wxGenericValidator_functions);
+	ce.create_object = php_wxGenericValidator_new;
 	php_wxGenericValidator_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGenericValidator = zend_register_list_destructors_ex(php_wxGenericValidator_destruction_handler, NULL, (char*) "native wxGenericValidator", module_number);
 
 	char PHP_wxSashWindow_name[] = "wxSashWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxSashWindow_name, php_wxSashWindow_functions);
+	ce.create_object = php_wxSashWindow_new;
 	php_wxSashWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSashWindow = zend_register_list_destructors_ex(php_wxSashWindow_destruction_handler, NULL, (char*) "native wxSashWindow", module_number);
 
 	char PHP_wxSashEvent_name[] = "wxSashEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxSashEvent_name, php_wxSashEvent_functions);
+	ce.create_object = php_wxSashEvent_new;
 	php_wxSashEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSashEvent = zend_register_list_destructors_ex(php_wxSashEvent_destruction_handler, NULL, (char*) "native wxSashEvent", module_number);
 
 	char PHP_wxSashLayoutWindow_name[] = "wxSashLayoutWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxSashLayoutWindow_name, php_wxSashLayoutWindow_functions);
+	ce.create_object = php_wxSashLayoutWindow_new;
 	php_wxSashLayoutWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSashLayoutWindow = zend_register_list_destructors_ex(php_wxSashLayoutWindow_destruction_handler, NULL, (char*) "native wxSashLayoutWindow", module_number);
 
 	char PHP_wxSemaphore_name[] = "wxSemaphore";
 	INIT_CLASS_ENTRY(ce, PHP_wxSemaphore_name, php_wxSemaphore_functions);
+	ce.create_object = php_wxSemaphore_new;
 	php_wxSemaphore_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSemaphore = zend_register_list_destructors_ex(php_wxSemaphore_destruction_handler, NULL, (char*) "native wxSemaphore", module_number);
 
 	char PHP_wxAuiToolBarArt_name[] = "wxAuiToolBarArt";
 	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarArt_name, php_wxAuiToolBarArt_functions);
+	ce.create_object = php_wxAuiToolBarArt_new;
 	php_wxAuiToolBarArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAuiToolBarArt = zend_register_list_destructors_ex(php_wxAuiToolBarArt_destruction_handler, NULL, (char*) "native wxAuiToolBarArt", module_number);
 
 	char PHP_wxBrush_name[] = "wxBrush";
 	INIT_CLASS_ENTRY(ce, PHP_wxBrush_name, php_wxBrush_functions);
+	ce.create_object = php_wxBrush_new;
 	php_wxBrush_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBrush = zend_register_list_destructors_ex(php_wxBrush_destruction_handler, NULL, (char*) "native wxBrush", module_number);
 
 	char PHP_wxPlatformInfo_name[] = "wxPlatformInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxPlatformInfo_name, php_wxPlatformInfo_functions);
+	ce.create_object = php_wxPlatformInfo_new;
 	php_wxPlatformInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPlatformInfo = zend_register_list_destructors_ex(php_wxPlatformInfo_destruction_handler, NULL, (char*) "native wxPlatformInfo", module_number);
 
 	char PHP_wxPageSetupDialog_name[] = "wxPageSetupDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxPageSetupDialog_name, php_wxPageSetupDialog_functions);
+	ce.create_object = php_wxPageSetupDialog_new;
 	php_wxPageSetupDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPageSetupDialog = zend_register_list_destructors_ex(php_wxPageSetupDialog_destruction_handler, NULL, (char*) "native wxPageSetupDialog", module_number);
 
 	char PHP_wxPageSetupDialogData_name[] = "wxPageSetupDialogData";
 	INIT_CLASS_ENTRY(ce, PHP_wxPageSetupDialogData_name, php_wxPageSetupDialogData_functions);
+	ce.create_object = php_wxPageSetupDialogData_new;
 	php_wxPageSetupDialogData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPageSetupDialogData = zend_register_list_destructors_ex(php_wxPageSetupDialogData_destruction_handler, NULL, (char*) "native wxPageSetupDialogData", module_number);
 
 	char PHP_wxPrintDialog_name[] = "wxPrintDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrintDialog_name, php_wxPrintDialog_functions);
+	ce.create_object = php_wxPrintDialog_new;
 	php_wxPrintDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrintDialog = zend_register_list_destructors_ex(php_wxPrintDialog_destruction_handler, NULL, (char*) "native wxPrintDialog", module_number);
 
 	char PHP_wxPrintDialogData_name[] = "wxPrintDialogData";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrintDialogData_name, php_wxPrintDialogData_functions);
+	ce.create_object = php_wxPrintDialogData_new;
 	php_wxPrintDialogData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrintDialogData = zend_register_list_destructors_ex(php_wxPrintDialogData_destruction_handler, NULL, (char*) "native wxPrintDialogData", module_number);
 
 	char PHP_wxPrintData_name[] = "wxPrintData";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrintData_name, php_wxPrintData_functions);
+	ce.create_object = php_wxPrintData_new;
 	php_wxPrintData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrintData = zend_register_list_destructors_ex(php_wxPrintData_destruction_handler, NULL, (char*) "native wxPrintData", module_number);
 
 	char PHP_wxPostScriptDC_name[] = "wxPostScriptDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxPostScriptDC_name, php_wxPostScriptDC_functions);
+	ce.create_object = php_wxPostScriptDC_new;
 	php_wxPostScriptDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPostScriptDC = zend_register_list_destructors_ex(php_wxPostScriptDC_destruction_handler, NULL, (char*) "native wxPostScriptDC", module_number);
 
 	char PHP_wxPrintPreview_name[] = "wxPrintPreview";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrintPreview_name, php_wxPrintPreview_functions);
+	ce.create_object = php_wxPrintPreview_new;
 	php_wxPrintPreview_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrintPreview = zend_register_list_destructors_ex(php_wxPrintPreview_destruction_handler, NULL, (char*) "native wxPrintPreview", module_number);
 
 	char PHP_wxPrinter_name[] = "wxPrinter";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrinter_name, php_wxPrinter_functions);
+	ce.create_object = php_wxPrinter_new;
 	php_wxPrinter_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrinter = zend_register_list_destructors_ex(php_wxPrinter_destruction_handler, NULL, (char*) "native wxPrinter", module_number);
 
 	char PHP_wxPrinterDC_name[] = "wxPrinterDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrinterDC_name, php_wxPrinterDC_functions);
+	ce.create_object = php_wxPrinterDC_new;
 	php_wxPrinterDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrinterDC = zend_register_list_destructors_ex(php_wxPrinterDC_destruction_handler, NULL, (char*) "native wxPrinterDC", module_number);
 
 	char PHP_wxPrintout_name[] = "wxPrintout";
 	INIT_CLASS_ENTRY(ce, PHP_wxPrintout_name, php_wxPrintout_functions);
+	ce.create_object = php_wxPrintout_new;
 	php_wxPrintout_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPrintout = zend_register_list_destructors_ex(php_wxPrintout_destruction_handler, NULL, (char*) "native wxPrintout", module_number);
 
 	char PHP_wxPreviewFrame_name[] = "wxPreviewFrame";
 	INIT_CLASS_ENTRY(ce, PHP_wxPreviewFrame_name, php_wxPreviewFrame_functions);
+	ce.create_object = php_wxPreviewFrame_new;
 	php_wxPreviewFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPreviewFrame = zend_register_list_destructors_ex(php_wxPreviewFrame_destruction_handler, NULL, (char*) "native wxPreviewFrame", module_number);
 
 	char PHP_wxPreviewControlBar_name[] = "wxPreviewControlBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxPreviewControlBar_name, php_wxPreviewControlBar_functions);
+	ce.create_object = php_wxPreviewControlBar_new;
 	php_wxPreviewControlBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPreviewControlBar = zend_register_list_destructors_ex(php_wxPreviewControlBar_destruction_handler, NULL, (char*) "native wxPreviewControlBar", module_number);
 
 	char PHP_wxPreviewCanvas_name[] = "wxPreviewCanvas";
 	INIT_CLASS_ENTRY(ce, PHP_wxPreviewCanvas_name, php_wxPreviewCanvas_functions);
+	ce.create_object = php_wxPreviewCanvas_new;
 	php_wxPreviewCanvas_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPreviewCanvas = zend_register_list_destructors_ex(php_wxPreviewCanvas_destruction_handler, NULL, (char*) "native wxPreviewCanvas", module_number);
 
 	char PHP_wxSingleChoiceDialog_name[] = "wxSingleChoiceDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxSingleChoiceDialog_name, php_wxSingleChoiceDialog_functions);
+	ce.create_object = php_wxSingleChoiceDialog_new;
 	php_wxSingleChoiceDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSingleChoiceDialog = zend_register_list_destructors_ex(php_wxSingleChoiceDialog_destruction_handler, NULL, (char*) "native wxSingleChoiceDialog", module_number);
 
 	char PHP_wxHtmlDCRenderer_name[] = "wxHtmlDCRenderer";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlDCRenderer_name, php_wxHtmlDCRenderer_functions);
+	ce.create_object = php_wxHtmlDCRenderer_new;
 	php_wxHtmlDCRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlDCRenderer = zend_register_list_destructors_ex(php_wxHtmlDCRenderer_destruction_handler, NULL, (char*) "native wxHtmlDCRenderer", module_number);
 
 	char PHP_wxHtmlFilter_name[] = "wxHtmlFilter";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlFilter_name, php_wxHtmlFilter_functions);
+	ce.create_object = php_wxHtmlFilter_new;
 	php_wxHtmlFilter_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlFilter = zend_register_list_destructors_ex(php_wxHtmlFilter_destruction_handler, NULL, (char*) "native wxHtmlFilter", module_number);
 
 	char PHP_wxHtmlHelpController_name[] = "wxHtmlHelpController";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpController_name, php_wxHtmlHelpController_functions);
+	ce.create_object = php_wxHtmlHelpController_new;
 	php_wxHtmlHelpController_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlHelpController = zend_register_list_destructors_ex(php_wxHtmlHelpController_destruction_handler, NULL, (char*) "native wxHtmlHelpController", module_number);
 
 	char PHP_wxHtmlHelpData_name[] = "wxHtmlHelpData";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpData_name, php_wxHtmlHelpData_functions);
+	ce.create_object = php_wxHtmlHelpData_new;
 	php_wxHtmlHelpData_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlHelpData = zend_register_list_destructors_ex(php_wxHtmlHelpData_destruction_handler, NULL, (char*) "native wxHtmlHelpData", module_number);
 
 	char PHP_wxHtmlHelpDialog_name[] = "wxHtmlHelpDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpDialog_name, php_wxHtmlHelpDialog_functions);
+	ce.create_object = php_wxHtmlHelpDialog_new;
 	php_wxHtmlHelpDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlHelpDialog = zend_register_list_destructors_ex(php_wxHtmlHelpDialog_destruction_handler, NULL, (char*) "native wxHtmlHelpDialog", module_number);
 
 	char PHP_wxHtmlHelpFrame_name[] = "wxHtmlHelpFrame";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpFrame_name, php_wxHtmlHelpFrame_functions);
+	ce.create_object = php_wxHtmlHelpFrame_new;
 	php_wxHtmlHelpFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlHelpFrame = zend_register_list_destructors_ex(php_wxHtmlHelpFrame_destruction_handler, NULL, (char*) "native wxHtmlHelpFrame", module_number);
 
 	char PHP_wxHtmlHelpWindow_name[] = "wxHtmlHelpWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpWindow_name, php_wxHtmlHelpWindow_functions);
+	ce.create_object = php_wxHtmlHelpWindow_new;
 	php_wxHtmlHelpWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlHelpWindow = zend_register_list_destructors_ex(php_wxHtmlHelpWindow_destruction_handler, NULL, (char*) "native wxHtmlHelpWindow", module_number);
 
 	char PHP_wxHtmlModalHelp_name[] = "wxHtmlModalHelp";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlModalHelp_name, php_wxHtmlModalHelp_functions);
+	ce.create_object = php_wxHtmlModalHelp_new;
 	php_wxHtmlModalHelp_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlModalHelp = zend_register_list_destructors_ex(php_wxHtmlModalHelp_destruction_handler, NULL, (char*) "native wxHtmlModalHelp", module_number);
 
 	char PHP_wxHtmlPrintout_name[] = "wxHtmlPrintout";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlPrintout_name, php_wxHtmlPrintout_functions);
+	ce.create_object = php_wxHtmlPrintout_new;
 	php_wxHtmlPrintout_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlPrintout = zend_register_list_destructors_ex(php_wxHtmlPrintout_destruction_handler, NULL, (char*) "native wxHtmlPrintout", module_number);
 
 	char PHP_wxHtmlRenderingInfo_name[] = "wxHtmlRenderingInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlRenderingInfo_name, php_wxHtmlRenderingInfo_functions);
+	ce.create_object = php_wxHtmlRenderingInfo_new;
 	php_wxHtmlRenderingInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlRenderingInfo = zend_register_list_destructors_ex(php_wxHtmlRenderingInfo_destruction_handler, NULL, (char*) "native wxHtmlRenderingInfo", module_number);
 
 	char PHP_wxHtmlRenderingStyle_name[] = "wxHtmlRenderingStyle";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlRenderingStyle_name, php_wxHtmlRenderingStyle_functions);
+	ce.create_object = php_wxHtmlRenderingStyle_new;
 	php_wxHtmlRenderingStyle_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlRenderingStyle = zend_register_list_destructors_ex(php_wxHtmlRenderingStyle_destruction_handler, NULL, (char*) "native wxHtmlRenderingStyle", module_number);
 
 	char PHP_wxHtmlTagHandler_name[] = "wxHtmlTagHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTagHandler_name, php_wxHtmlTagHandler_functions);
+	ce.create_object = php_wxHtmlTagHandler_new;
 	php_wxHtmlTagHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlTagHandler = zend_register_list_destructors_ex(php_wxHtmlTagHandler_destruction_handler, NULL, (char*) "native wxHtmlTagHandler", module_number);
 
 	char PHP_wxHtmlTagsModule_name[] = "wxHtmlTagsModule";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTagsModule_name, php_wxHtmlTagsModule_functions);
+	ce.create_object = php_wxHtmlTagsModule_new;
 	php_wxHtmlTagsModule_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlTagsModule = zend_register_list_destructors_ex(php_wxHtmlTagsModule_destruction_handler, NULL, (char*) "native wxHtmlTagsModule", module_number);
 
 	char PHP_wxModule_name[] = "wxModule";
 	INIT_CLASS_ENTRY(ce, PHP_wxModule_name, php_wxModule_functions);
+	ce.create_object = php_wxModule_new;
 	php_wxModule_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxModule = zend_register_list_destructors_ex(php_wxModule_destruction_handler, NULL, (char*) "native wxModule", module_number);
 
 	char PHP_wxHtmlWidgetCell_name[] = "wxHtmlWidgetCell";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWidgetCell_name, php_wxHtmlWidgetCell_functions);
+	ce.create_object = php_wxHtmlWidgetCell_new;
 	php_wxHtmlWidgetCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlWidgetCell = zend_register_list_destructors_ex(php_wxHtmlWidgetCell_destruction_handler, NULL, (char*) "native wxHtmlWidgetCell", module_number);
 
 	char PHP_wxHtmlWinParser_name[] = "wxHtmlWinParser";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWinParser_name, php_wxHtmlWinParser_functions);
+	ce.create_object = php_wxHtmlWinParser_new;
 	php_wxHtmlWinParser_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlWinParser = zend_register_list_destructors_ex(php_wxHtmlWinParser_destruction_handler, NULL, (char*) "native wxHtmlWinParser", module_number);
 
 	char PHP_wxHtmlWinTagHandler_name[] = "wxHtmlWinTagHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWinTagHandler_name, php_wxHtmlWinTagHandler_functions);
+	ce.create_object = php_wxHtmlWinTagHandler_new;
 	php_wxHtmlWinTagHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxHtmlWinTagHandler = zend_register_list_destructors_ex(php_wxHtmlWinTagHandler_destruction_handler, NULL, (char*) "native wxHtmlWinTagHandler", module_number);
 
 	char PHP_wxAutoBufferedPaintDC_name[] = "wxAutoBufferedPaintDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxAutoBufferedPaintDC_name, php_wxAutoBufferedPaintDC_functions);
+	ce.create_object = php_wxAutoBufferedPaintDC_new;
 	php_wxAutoBufferedPaintDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxAutoBufferedPaintDC = zend_register_list_destructors_ex(php_wxAutoBufferedPaintDC_destruction_handler, NULL, (char*) "native wxAutoBufferedPaintDC", module_number);
 
 	char PHP_wxBufferedDC_name[] = "wxBufferedDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxBufferedDC_name, php_wxBufferedDC_functions);
+	ce.create_object = php_wxBufferedDC_new;
 	php_wxBufferedDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBufferedDC = zend_register_list_destructors_ex(php_wxBufferedDC_destruction_handler, NULL, (char*) "native wxBufferedDC", module_number);
 
 	char PHP_wxBufferedPaintDC_name[] = "wxBufferedPaintDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxBufferedPaintDC_name, php_wxBufferedPaintDC_functions);
+	ce.create_object = php_wxBufferedPaintDC_new;
 	php_wxBufferedPaintDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBufferedPaintDC = zend_register_list_destructors_ex(php_wxBufferedPaintDC_destruction_handler, NULL, (char*) "native wxBufferedPaintDC", module_number);
 
 	char PHP_wxClientDC_name[] = "wxClientDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxClientDC_name, php_wxClientDC_functions);
+	ce.create_object = php_wxClientDC_new;
 	php_wxClientDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxClientDC = zend_register_list_destructors_ex(php_wxClientDC_destruction_handler, NULL, (char*) "native wxClientDC", module_number);
 
 	char PHP_wxPaintEvent_name[] = "wxPaintEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxPaintEvent_name, php_wxPaintEvent_functions);
+	ce.create_object = php_wxPaintEvent_new;
 	php_wxPaintEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPaintEvent = zend_register_list_destructors_ex(php_wxPaintEvent_destruction_handler, NULL, (char*) "native wxPaintEvent", module_number);
 
 	char PHP_wxPaintDC_name[] = "wxPaintDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxPaintDC_name, php_wxPaintDC_functions);
+	ce.create_object = php_wxPaintDC_new;
 	php_wxPaintDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPaintDC = zend_register_list_destructors_ex(php_wxPaintDC_destruction_handler, NULL, (char*) "native wxPaintDC", module_number);
 
 	char PHP_wxMemoryDC_name[] = "wxMemoryDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxMemoryDC_name, php_wxMemoryDC_functions);
+	ce.create_object = php_wxMemoryDC_new;
 	php_wxMemoryDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMemoryDC = zend_register_list_destructors_ex(php_wxMemoryDC_destruction_handler, NULL, (char*) "native wxMemoryDC", module_number);
 
 	char PHP_wxMirrorDC_name[] = "wxMirrorDC";
 	INIT_CLASS_ENTRY(ce, PHP_wxMirrorDC_name, php_wxMirrorDC_functions);
+	ce.create_object = php_wxMirrorDC_new;
 	php_wxMirrorDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMirrorDC = zend_register_list_destructors_ex(php_wxMirrorDC_destruction_handler, NULL, (char*) "native wxMirrorDC", module_number);
 
 	char PHP_wxDCClipper_name[] = "wxDCClipper";
 	INIT_CLASS_ENTRY(ce, PHP_wxDCClipper_name, php_wxDCClipper_functions);
+	ce.create_object = php_wxDCClipper_new;
 	php_wxDCClipper_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDCClipper = zend_register_list_destructors_ex(php_wxDCClipper_destruction_handler, NULL, (char*) "native wxDCClipper", module_number);
 
 	char PHP_wxFontList_name[] = "wxFontList";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontList_name, php_wxFontList_functions);
+	ce.create_object = php_wxFontList_new;
 	php_wxFontList_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontList = zend_register_list_destructors_ex(php_wxFontList_destruction_handler, NULL, (char*) "native wxFontList", module_number);
 
 	char PHP_wxPenList_name[] = "wxPenList";
 	INIT_CLASS_ENTRY(ce, PHP_wxPenList_name, php_wxPenList_functions);
+	ce.create_object = php_wxPenList_new;
 	php_wxPenList_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPenList = zend_register_list_destructors_ex(php_wxPenList_destruction_handler, NULL, (char*) "native wxPenList", module_number);
 
 	char PHP_wxPaletteChangedEvent_name[] = "wxPaletteChangedEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxPaletteChangedEvent_name, php_wxPaletteChangedEvent_functions);
+	ce.create_object = php_wxPaletteChangedEvent_new;
 	php_wxPaletteChangedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPaletteChangedEvent = zend_register_list_destructors_ex(php_wxPaletteChangedEvent_destruction_handler, NULL, (char*) "native wxPaletteChangedEvent", module_number);
 
 	char PHP_wxRendererNative_name[] = "wxRendererNative";
 	INIT_CLASS_ENTRY(ce, PHP_wxRendererNative_name, php_wxRendererNative_functions);
+	ce.create_object = php_wxRendererNative_new;
 	php_wxRendererNative_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRendererNative = zend_register_list_destructors_ex(php_wxRendererNative_destruction_handler, NULL, (char*) "native wxRendererNative", module_number);
 
 	char PHP_wxImageHandler_name[] = "wxImageHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxImageHandler_name, php_wxImageHandler_functions);
+	ce.create_object = php_wxImageHandler_new;
 	php_wxImageHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxImageHandler = zend_register_list_destructors_ex(php_wxImageHandler_destruction_handler, NULL, (char*) "native wxImageHandler", module_number);
 
 	char PHP_wxInitDialogEvent_name[] = "wxInitDialogEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxInitDialogEvent_name, php_wxInitDialogEvent_functions);
+	ce.create_object = php_wxInitDialogEvent_new;
 	php_wxInitDialogEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxInitDialogEvent = zend_register_list_destructors_ex(php_wxInitDialogEvent_destruction_handler, NULL, (char*) "native wxInitDialogEvent", module_number);
 
 	char PHP_wxMaximizeEvent_name[] = "wxMaximizeEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxMaximizeEvent_name, php_wxMaximizeEvent_functions);
+	ce.create_object = php_wxMaximizeEvent_new;
 	php_wxMaximizeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxMaximizeEvent = zend_register_list_destructors_ex(php_wxMaximizeEvent_destruction_handler, NULL, (char*) "native wxMaximizeEvent", module_number);
 
 	char PHP_wxNavigationKeyEvent_name[] = "wxNavigationKeyEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxNavigationKeyEvent_name, php_wxNavigationKeyEvent_functions);
+	ce.create_object = php_wxNavigationKeyEvent_new;
 	php_wxNavigationKeyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxNavigationKeyEvent = zend_register_list_destructors_ex(php_wxNavigationKeyEvent_destruction_handler, NULL, (char*) "native wxNavigationKeyEvent", module_number);
 
 	char PHP_wxPathList_name[] = "wxPathList";
 	INIT_CLASS_ENTRY(ce, PHP_wxPathList_name, php_wxPathList_functions);
+	ce.create_object = php_wxPathList_new;
 	php_wxPathList_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxPathList = zend_register_list_destructors_ex(php_wxPathList_destruction_handler, NULL, (char*) "native wxPathList", module_number);
 
 	char PHP_wxCriticalSection_name[] = "wxCriticalSection";
 	INIT_CLASS_ENTRY(ce, PHP_wxCriticalSection_name, php_wxCriticalSection_functions);
+	ce.create_object = php_wxCriticalSection_new;
 	php_wxCriticalSection_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCriticalSection = zend_register_list_destructors_ex(php_wxCriticalSection_destruction_handler, NULL, (char*) "native wxCriticalSection", module_number);
 
 	char PHP_wxCriticalSectionLocker_name[] = "wxCriticalSectionLocker";
 	INIT_CLASS_ENTRY(ce, PHP_wxCriticalSectionLocker_name, php_wxCriticalSectionLocker_functions);
+	ce.create_object = php_wxCriticalSectionLocker_new;
 	php_wxCriticalSectionLocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCriticalSectionLocker = zend_register_list_destructors_ex(php_wxCriticalSectionLocker_destruction_handler, NULL, (char*) "native wxCriticalSectionLocker", module_number);
 
 	char PHP_wxCondition_name[] = "wxCondition";
 	INIT_CLASS_ENTRY(ce, PHP_wxCondition_name, php_wxCondition_functions);
+	ce.create_object = php_wxCondition_new;
 	php_wxCondition_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCondition = zend_register_list_destructors_ex(php_wxCondition_destruction_handler, NULL, (char*) "native wxCondition", module_number);
 
 	char PHP_wxBusyCursor_name[] = "wxBusyCursor";
 	INIT_CLASS_ENTRY(ce, PHP_wxBusyCursor_name, php_wxBusyCursor_functions);
+	ce.create_object = php_wxBusyCursor_new;
 	php_wxBusyCursor_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBusyCursor = zend_register_list_destructors_ex(php_wxBusyCursor_destruction_handler, NULL, (char*) "native wxBusyCursor", module_number);
 
 	char PHP_wxBusyInfo_name[] = "wxBusyInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxBusyInfo_name, php_wxBusyInfo_functions);
+	ce.create_object = php_wxBusyInfo_new;
 	php_wxBusyInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBusyInfo = zend_register_list_destructors_ex(php_wxBusyInfo_destruction_handler, NULL, (char*) "native wxBusyInfo", module_number);
 
 	char PHP_wxXmlResourceHandler_name[] = "wxXmlResourceHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxXmlResourceHandler_name, php_wxXmlResourceHandler_functions);
+	ce.create_object = php_wxXmlResourceHandler_new;
 	php_wxXmlResourceHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxXmlResourceHandler = zend_register_list_destructors_ex(php_wxXmlResourceHandler_destruction_handler, NULL, (char*) "native wxXmlResourceHandler", module_number);
 
 	char PHP_wxXmlNode_name[] = "wxXmlNode";
 	INIT_CLASS_ENTRY(ce, PHP_wxXmlNode_name, php_wxXmlNode_functions);
+	ce.create_object = php_wxXmlNode_new;
 	php_wxXmlNode_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxXmlNode = zend_register_list_destructors_ex(php_wxXmlNode_destruction_handler, NULL, (char*) "native wxXmlNode", module_number);
 
 	char PHP_wxXmlDocument_name[] = "wxXmlDocument";
 	INIT_CLASS_ENTRY(ce, PHP_wxXmlDocument_name, php_wxXmlDocument_functions);
+	ce.create_object = php_wxXmlDocument_new;
 	php_wxXmlDocument_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxXmlDocument = zend_register_list_destructors_ex(php_wxXmlDocument_destruction_handler, NULL, (char*) "native wxXmlDocument", module_number);
 
 	char PHP_wxXmlAttribute_name[] = "wxXmlAttribute";
 	INIT_CLASS_ENTRY(ce, PHP_wxXmlAttribute_name, php_wxXmlAttribute_functions);
+	ce.create_object = php_wxXmlAttribute_new;
 	php_wxXmlAttribute_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxXmlAttribute = zend_register_list_destructors_ex(php_wxXmlAttribute_destruction_handler, NULL, (char*) "native wxXmlAttribute", module_number);
 
 	char PHP_wxLayoutAlgorithm_name[] = "wxLayoutAlgorithm";
 	INIT_CLASS_ENTRY(ce, PHP_wxLayoutAlgorithm_name, php_wxLayoutAlgorithm_functions);
+	ce.create_object = php_wxLayoutAlgorithm_new;
 	php_wxLayoutAlgorithm_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLayoutAlgorithm = zend_register_list_destructors_ex(php_wxLayoutAlgorithm_destruction_handler, NULL, (char*) "native wxLayoutAlgorithm", module_number);
 
 	char PHP_wxFocusEvent_name[] = "wxFocusEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxFocusEvent_name, php_wxFocusEvent_functions);
+	ce.create_object = php_wxFocusEvent_new;
 	php_wxFocusEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFocusEvent = zend_register_list_destructors_ex(php_wxFocusEvent_destruction_handler, NULL, (char*) "native wxFocusEvent", module_number);
 
 	char PHP_wxFontMapper_name[] = "wxFontMapper";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontMapper_name, php_wxFontMapper_functions);
+	ce.create_object = php_wxFontMapper_new;
 	php_wxFontMapper_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontMapper = zend_register_list_destructors_ex(php_wxFontMapper_destruction_handler, NULL, (char*) "native wxFontMapper", module_number);
 
 	char PHP_wxFontEnumerator_name[] = "wxFontEnumerator";
 	INIT_CLASS_ENTRY(ce, PHP_wxFontEnumerator_name, php_wxFontEnumerator_functions);
+	ce.create_object = php_wxFontEnumerator_new;
 	php_wxFontEnumerator_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFontEnumerator = zend_register_list_destructors_ex(php_wxFontEnumerator_destruction_handler, NULL, (char*) "native wxFontEnumerator", module_number);
 
 	char PHP_wxFFileInputStream_name[] = "wxFFileInputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxFFileInputStream_name, php_wxFFileInputStream_functions);
+	ce.create_object = php_wxFFileInputStream_new;
 	php_wxFFileInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFFileInputStream = zend_register_list_destructors_ex(php_wxFFileInputStream_destruction_handler, NULL, (char*) "native wxFFileInputStream", module_number);
 
 	char PHP_wxFFileOutputStream_name[] = "wxFFileOutputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxFFileOutputStream_name, php_wxFFileOutputStream_functions);
+	ce.create_object = php_wxFFileOutputStream_new;
 	php_wxFFileOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFFileOutputStream = zend_register_list_destructors_ex(php_wxFFileOutputStream_destruction_handler, NULL, (char*) "native wxFFileOutputStream", module_number);
 
 	char PHP_wxFFileStream_name[] = "wxFFileStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxFFileStream_name, php_wxFFileStream_functions);
+	ce.create_object = php_wxFFileStream_new;
 	php_wxFFileStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFFileStream = zend_register_list_destructors_ex(php_wxFFileStream_destruction_handler, NULL, (char*) "native wxFFileStream", module_number);
 
 	char PHP_wxFile_name[] = "wxFile";
 	INIT_CLASS_ENTRY(ce, PHP_wxFile_name, php_wxFile_functions);
+	ce.create_object = php_wxFile_new;
 	php_wxFile_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFile = zend_register_list_destructors_ex(php_wxFile_destruction_handler, NULL, (char*) "native wxFile", module_number);
 
 	char PHP_wxFileConfig_name[] = "wxFileConfig";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileConfig_name, php_wxFileConfig_functions);
+	ce.create_object = php_wxFileConfig_new;
 	php_wxFileConfig_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileConfig = zend_register_list_destructors_ex(php_wxFileConfig_destruction_handler, NULL, (char*) "native wxFileConfig", module_number);
 
 	char PHP_wxFileDirPickerEvent_name[] = "wxFileDirPickerEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileDirPickerEvent_name, php_wxFileDirPickerEvent_functions);
+	ce.create_object = php_wxFileDirPickerEvent_new;
 	php_wxFileDirPickerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileDirPickerEvent = zend_register_list_destructors_ex(php_wxFileDirPickerEvent_destruction_handler, NULL, (char*) "native wxFileDirPickerEvent", module_number);
 
 	char PHP_wxFileHistory_name[] = "wxFileHistory";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileHistory_name, php_wxFileHistory_functions);
+	ce.create_object = php_wxFileHistory_new;
 	php_wxFileHistory_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileHistory = zend_register_list_destructors_ex(php_wxFileHistory_destruction_handler, NULL, (char*) "native wxFileHistory", module_number);
 
 	char PHP_wxFileInputStream_name[] = "wxFileInputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileInputStream_name, php_wxFileInputStream_functions);
+	ce.create_object = php_wxFileInputStream_new;
 	php_wxFileInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileInputStream = zend_register_list_destructors_ex(php_wxFileInputStream_destruction_handler, NULL, (char*) "native wxFileInputStream", module_number);
 
 	char PHP_wxFileDropTarget_name[] = "wxFileDropTarget";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileDropTarget_name, php_wxFileDropTarget_functions);
+	ce.create_object = php_wxFileDropTarget_new;
 	php_wxFileDropTarget_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileDropTarget = zend_register_list_destructors_ex(php_wxFileDropTarget_destruction_handler, NULL, (char*) "native wxFileDropTarget", module_number);
 
 	char PHP_wxFileOutputStream_name[] = "wxFileOutputStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileOutputStream_name, php_wxFileOutputStream_functions);
+	ce.create_object = php_wxFileOutputStream_new;
 	php_wxFileOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileOutputStream = zend_register_list_destructors_ex(php_wxFileOutputStream_destruction_handler, NULL, (char*) "native wxFileOutputStream", module_number);
 
 	char PHP_wxFileStream_name[] = "wxFileStream";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileStream_name, php_wxFileStream_functions);
+	ce.create_object = php_wxFileStream_new;
 	php_wxFileStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileStream = zend_register_list_destructors_ex(php_wxFileStream_destruction_handler, NULL, (char*) "native wxFileStream", module_number);
 
 	char PHP_wxFileSystemWatcher_name[] = "wxFileSystemWatcher";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemWatcher_name, php_wxFileSystemWatcher_functions);
+	ce.create_object = php_wxFileSystemWatcher_new;
 	php_wxFileSystemWatcher_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileSystemWatcher = zend_register_list_destructors_ex(php_wxFileSystemWatcher_destruction_handler, NULL, (char*) "native wxFileSystemWatcher", module_number);
 
 	char PHP_wxFileSystemWatcherEvent_name[] = "wxFileSystemWatcherEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemWatcherEvent_name, php_wxFileSystemWatcherEvent_functions);
+	ce.create_object = php_wxFileSystemWatcherEvent_new;
 	php_wxFileSystemWatcherEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileSystemWatcherEvent = zend_register_list_destructors_ex(php_wxFileSystemWatcherEvent_destruction_handler, NULL, (char*) "native wxFileSystemWatcherEvent", module_number);
 
 	char PHP_wxFileType_name[] = "wxFileType";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileType_name, php_wxFileType_functions);
+	ce.create_object = php_wxFileType_new;
 	php_wxFileType_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileType = zend_register_list_destructors_ex(php_wxFileType_destruction_handler, NULL, (char*) "native wxFileType", module_number);
 
 	char PHP_wxFileTypeInfo_name[] = "wxFileTypeInfo";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileTypeInfo_name, php_wxFileTypeInfo_functions);
+	ce.create_object = php_wxFileTypeInfo_new;
 	php_wxFileTypeInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileTypeInfo = zend_register_list_destructors_ex(php_wxFileTypeInfo_destruction_handler, NULL, (char*) "native wxFileTypeInfo", module_number);
 
 	char PHP_wxStopWatch_name[] = "wxStopWatch";
 	INIT_CLASS_ENTRY(ce, PHP_wxStopWatch_name, php_wxStopWatch_functions);
+	ce.create_object = php_wxStopWatch_new;
 	php_wxStopWatch_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStopWatch = zend_register_list_destructors_ex(php_wxStopWatch_destruction_handler, NULL, (char*) "native wxStopWatch", module_number);
 
 	char PHP_wxSingleInstanceChecker_name[] = "wxSingleInstanceChecker";
 	INIT_CLASS_ENTRY(ce, PHP_wxSingleInstanceChecker_name, php_wxSingleInstanceChecker_functions);
+	ce.create_object = php_wxSingleInstanceChecker_new;
 	php_wxSingleInstanceChecker_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSingleInstanceChecker = zend_register_list_destructors_ex(php_wxSingleInstanceChecker_destruction_handler, NULL, (char*) "native wxSingleInstanceChecker", module_number);
 
 	char PHP_wxStandardPaths_name[] = "wxStandardPaths";
 	INIT_CLASS_ENTRY(ce, PHP_wxStandardPaths_name, php_wxStandardPaths_functions);
+	ce.create_object = php_wxStandardPaths_new;
 	php_wxStandardPaths_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxStandardPaths = zend_register_list_destructors_ex(php_wxStandardPaths_destruction_handler, NULL, (char*) "native wxStandardPaths", module_number);
 
 	char PHP_wxLog_name[] = "wxLog";
 	INIT_CLASS_ENTRY(ce, PHP_wxLog_name, php_wxLog_functions);
+	ce.create_object = php_wxLog_new;
 	php_wxLog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLog = zend_register_list_destructors_ex(php_wxLog_destruction_handler, NULL, (char*) "native wxLog", module_number);
 
 	char PHP_wxLogBuffer_name[] = "wxLogBuffer";
 	INIT_CLASS_ENTRY(ce, PHP_wxLogBuffer_name, php_wxLogBuffer_functions);
+	ce.create_object = php_wxLogBuffer_new;
 	php_wxLogBuffer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLogBuffer = zend_register_list_destructors_ex(php_wxLogBuffer_destruction_handler, NULL, (char*) "native wxLogBuffer", module_number);
 
 	char PHP_wxLogChain_name[] = "wxLogChain";
 	INIT_CLASS_ENTRY(ce, PHP_wxLogChain_name, php_wxLogChain_functions);
+	ce.create_object = php_wxLogChain_new;
 	php_wxLogChain_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLogChain = zend_register_list_destructors_ex(php_wxLogChain_destruction_handler, NULL, (char*) "native wxLogChain", module_number);
 
 	char PHP_wxLogGui_name[] = "wxLogGui";
 	INIT_CLASS_ENTRY(ce, PHP_wxLogGui_name, php_wxLogGui_functions);
+	ce.create_object = php_wxLogGui_new;
 	php_wxLogGui_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLogGui = zend_register_list_destructors_ex(php_wxLogGui_destruction_handler, NULL, (char*) "native wxLogGui", module_number);
 
 	char PHP_wxLogInterposer_name[] = "wxLogInterposer";
 	INIT_CLASS_ENTRY(ce, PHP_wxLogInterposer_name, php_wxLogInterposer_functions);
+	ce.create_object = php_wxLogInterposer_new;
 	php_wxLogInterposer_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLogInterposer = zend_register_list_destructors_ex(php_wxLogInterposer_destruction_handler, NULL, (char*) "native wxLogInterposer", module_number);
 
 	char PHP_wxLogWindow_name[] = "wxLogWindow";
 	INIT_CLASS_ENTRY(ce, PHP_wxLogWindow_name, php_wxLogWindow_functions);
+	ce.create_object = php_wxLogWindow_new;
 	php_wxLogWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLogWindow = zend_register_list_destructors_ex(php_wxLogWindow_destruction_handler, NULL, (char*) "native wxLogWindow", module_number);
 
 	char PHP_wxLogTextCtrl_name[] = "wxLogTextCtrl";
 	INIT_CLASS_ENTRY(ce, PHP_wxLogTextCtrl_name, php_wxLogTextCtrl_functions);
+	ce.create_object = php_wxLogTextCtrl_new;
 	php_wxLogTextCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxLogTextCtrl = zend_register_list_destructors_ex(php_wxLogTextCtrl_destruction_handler, NULL, (char*) "native wxLogTextCtrl", module_number);
 
 	char PHP_wxTextDataObject_name[] = "wxTextDataObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextDataObject_name, php_wxTextDataObject_functions);
+	ce.create_object = php_wxTextDataObject_new;
 	php_wxTextDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextDataObject = zend_register_list_destructors_ex(php_wxTextDataObject_destruction_handler, NULL, (char*) "native wxTextDataObject", module_number);
 
 	char PHP_wxFileDataObject_name[] = "wxFileDataObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxFileDataObject_name, php_wxFileDataObject_functions);
+	ce.create_object = php_wxFileDataObject_new;
 	php_wxFileDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxFileDataObject = zend_register_list_destructors_ex(php_wxFileDataObject_destruction_handler, NULL, (char*) "native wxFileDataObject", module_number);
 
 	char PHP_wxBitmapDataObject_name[] = "wxBitmapDataObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxBitmapDataObject_name, php_wxBitmapDataObject_functions);
+	ce.create_object = php_wxBitmapDataObject_new;
 	php_wxBitmapDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxBitmapDataObject = zend_register_list_destructors_ex(php_wxBitmapDataObject_destruction_handler, NULL, (char*) "native wxBitmapDataObject", module_number);
 
 	char PHP_wxURLDataObject_name[] = "wxURLDataObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxURLDataObject_name, php_wxURLDataObject_functions);
+	ce.create_object = php_wxURLDataObject_new;
 	php_wxURLDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxURLDataObject = zend_register_list_destructors_ex(php_wxURLDataObject_destruction_handler, NULL, (char*) "native wxURLDataObject", module_number);
 
 	char PHP_wxCustomDataObject_name[] = "wxCustomDataObject";
 	INIT_CLASS_ENTRY(ce, PHP_wxCustomDataObject_name, php_wxCustomDataObject_functions);
+	ce.create_object = php_wxCustomDataObject_new;
 	php_wxCustomDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCustomDataObject = zend_register_list_destructors_ex(php_wxCustomDataObject_destruction_handler, NULL, (char*) "native wxCustomDataObject", module_number);
 
 	char PHP_wxTextDropTarget_name[] = "wxTextDropTarget";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextDropTarget_name, php_wxTextDropTarget_functions);
+	ce.create_object = php_wxTextDropTarget_new;
 	php_wxTextDropTarget_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextDropTarget = zend_register_list_destructors_ex(php_wxTextDropTarget_destruction_handler, NULL, (char*) "native wxTextDropTarget", module_number);
 
 	char PHP_wxDisplay_name[] = "wxDisplay";
 	INIT_CLASS_ENTRY(ce, PHP_wxDisplay_name, php_wxDisplay_functions);
+	ce.create_object = php_wxDisplay_new;
 	php_wxDisplay_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDisplay = zend_register_list_destructors_ex(php_wxDisplay_destruction_handler, NULL, (char*) "native wxDisplay", module_number);
 
 	char PHP_wxDisplayChangedEvent_name[] = "wxDisplayChangedEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxDisplayChangedEvent_name, php_wxDisplayChangedEvent_functions);
+	ce.create_object = php_wxDisplayChangedEvent_new;
 	php_wxDisplayChangedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxDisplayChangedEvent = zend_register_list_destructors_ex(php_wxDisplayChangedEvent_destruction_handler, NULL, (char*) "native wxDisplayChangedEvent", module_number);
 
 	char PHP_wxCalculateLayoutEvent_name[] = "wxCalculateLayoutEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxCalculateLayoutEvent_name, php_wxCalculateLayoutEvent_functions);
+	ce.create_object = php_wxCalculateLayoutEvent_new;
 	php_wxCalculateLayoutEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxCalculateLayoutEvent = zend_register_list_destructors_ex(php_wxCalculateLayoutEvent_destruction_handler, NULL, (char*) "native wxCalculateLayoutEvent", module_number);
 
 	char PHP_wxContextMenuEvent_name[] = "wxContextMenuEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxContextMenuEvent_name, php_wxContextMenuEvent_functions);
+	ce.create_object = php_wxContextMenuEvent_new;
 	php_wxContextMenuEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxContextMenuEvent = zend_register_list_destructors_ex(php_wxContextMenuEvent_destruction_handler, NULL, (char*) "native wxContextMenuEvent", module_number);
 
 	char PHP_wxQueryLayoutInfoEvent_name[] = "wxQueryLayoutInfoEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxQueryLayoutInfoEvent_name, php_wxQueryLayoutInfoEvent_functions);
+	ce.create_object = php_wxQueryLayoutInfoEvent_new;
 	php_wxQueryLayoutInfoEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxQueryLayoutInfoEvent = zend_register_list_destructors_ex(php_wxQueryLayoutInfoEvent_destruction_handler, NULL, (char*) "native wxQueryLayoutInfoEvent", module_number);
 
 	char PHP_wxToolbook_name[] = "wxToolbook";
 	INIT_CLASS_ENTRY(ce, PHP_wxToolbook_name, php_wxToolbook_functions);
+	ce.create_object = php_wxToolbook_new;
 	php_wxToolbook_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxToolbook = zend_register_list_destructors_ex(php_wxToolbook_destruction_handler, NULL, (char*) "native wxToolbook", module_number);
 
 	char PHP_wxVideoMode_name[] = "wxVideoMode";
 	INIT_CLASS_ENTRY(ce, PHP_wxVideoMode_name, php_wxVideoMode_functions);
+	ce.create_object = php_wxVideoMode_new;
 	php_wxVideoMode_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxVideoMode = zend_register_list_destructors_ex(php_wxVideoMode_destruction_handler, NULL, (char*) "native wxVideoMode", module_number);
 
 	char PHP_wxRibbonControl_name[] = "wxRibbonControl";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonControl_name, php_wxRibbonControl_functions);
+	ce.create_object = php_wxRibbonControl_new;
 	php_wxRibbonControl_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonControl = zend_register_list_destructors_ex(php_wxRibbonControl_destruction_handler, NULL, (char*) "native wxRibbonControl", module_number);
 
 	char PHP_wxRibbonBar_name[] = "wxRibbonBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonBar_name, php_wxRibbonBar_functions);
+	ce.create_object = php_wxRibbonBar_new;
 	php_wxRibbonBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonBar = zend_register_list_destructors_ex(php_wxRibbonBar_destruction_handler, NULL, (char*) "native wxRibbonBar", module_number);
 
 	char PHP_wxRibbonBarEvent_name[] = "wxRibbonBarEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonBarEvent_name, php_wxRibbonBarEvent_functions);
+	ce.create_object = php_wxRibbonBarEvent_new;
 	php_wxRibbonBarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonBarEvent = zend_register_list_destructors_ex(php_wxRibbonBarEvent_destruction_handler, NULL, (char*) "native wxRibbonBarEvent", module_number);
 
 	char PHP_wxRibbonButtonBar_name[] = "wxRibbonButtonBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBar_name, php_wxRibbonButtonBar_functions);
+	ce.create_object = php_wxRibbonButtonBar_new;
 	php_wxRibbonButtonBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonButtonBar = zend_register_list_destructors_ex(php_wxRibbonButtonBar_destruction_handler, NULL, (char*) "native wxRibbonButtonBar", module_number);
 
 	char PHP_wxRibbonButtonBarEvent_name[] = "wxRibbonButtonBarEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBarEvent_name, php_wxRibbonButtonBarEvent_functions);
+	ce.create_object = php_wxRibbonButtonBarEvent_new;
 	php_wxRibbonButtonBarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonButtonBarEvent = zend_register_list_destructors_ex(php_wxRibbonButtonBarEvent_destruction_handler, NULL, (char*) "native wxRibbonButtonBarEvent", module_number);
 
 	char PHP_wxRibbonArtProvider_name[] = "wxRibbonArtProvider";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonArtProvider_name, php_wxRibbonArtProvider_functions);
+	ce.create_object = php_wxRibbonArtProvider_new;
 	php_wxRibbonArtProvider_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonArtProvider = zend_register_list_destructors_ex(php_wxRibbonArtProvider_destruction_handler, NULL, (char*) "native wxRibbonArtProvider", module_number);
 
 	char PHP_wxRibbonGallery_name[] = "wxRibbonGallery";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGallery_name, php_wxRibbonGallery_functions);
+	ce.create_object = php_wxRibbonGallery_new;
 	php_wxRibbonGallery_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonGallery = zend_register_list_destructors_ex(php_wxRibbonGallery_destruction_handler, NULL, (char*) "native wxRibbonGallery", module_number);
 
 	char PHP_wxRibbonGalleryEvent_name[] = "wxRibbonGalleryEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGalleryEvent_name, php_wxRibbonGalleryEvent_functions);
+	ce.create_object = php_wxRibbonGalleryEvent_new;
 	php_wxRibbonGalleryEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonGalleryEvent = zend_register_list_destructors_ex(php_wxRibbonGalleryEvent_destruction_handler, NULL, (char*) "native wxRibbonGalleryEvent", module_number);
 
 	char PHP_wxRibbonPage_name[] = "wxRibbonPage";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonPage_name, php_wxRibbonPage_functions);
+	ce.create_object = php_wxRibbonPage_new;
 	php_wxRibbonPage_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonPage = zend_register_list_destructors_ex(php_wxRibbonPage_destruction_handler, NULL, (char*) "native wxRibbonPage", module_number);
 
 	char PHP_wxRibbonPanel_name[] = "wxRibbonPanel";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonPanel_name, php_wxRibbonPanel_functions);
+	ce.create_object = php_wxRibbonPanel_new;
 	php_wxRibbonPanel_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonPanel = zend_register_list_destructors_ex(php_wxRibbonPanel_destruction_handler, NULL, (char*) "native wxRibbonPanel", module_number);
 
 	char PHP_wxRibbonToolBar_name[] = "wxRibbonToolBar";
 	INIT_CLASS_ENTRY(ce, PHP_wxRibbonToolBar_name, php_wxRibbonToolBar_functions);
+	ce.create_object = php_wxRibbonToolBar_new;
 	php_wxRibbonToolBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxRibbonToolBar = zend_register_list_destructors_ex(php_wxRibbonToolBar_destruction_handler, NULL, (char*) "native wxRibbonToolBar", module_number);
 
 	char PHP_wxTaskBarIcon_name[] = "wxTaskBarIcon";
 	INIT_CLASS_ENTRY(ce, PHP_wxTaskBarIcon_name, php_wxTaskBarIcon_functions);
+	ce.create_object = php_wxTaskBarIcon_new;
 	php_wxTaskBarIcon_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTaskBarIcon = zend_register_list_destructors_ex(php_wxTaskBarIcon_destruction_handler, NULL, (char*) "native wxTaskBarIcon", module_number);
 
 	char PHP_wxTaskBarIconEvent_name[] = "wxTaskBarIconEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxTaskBarIconEvent_name, php_wxTaskBarIconEvent_functions);
+	ce.create_object = php_wxTaskBarIconEvent_new;
 	php_wxTaskBarIconEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTaskBarIconEvent = zend_register_list_destructors_ex(php_wxTaskBarIconEvent_destruction_handler, NULL, (char*) "native wxTaskBarIconEvent", module_number);
 
 	char PHP_wxTimerRunner_name[] = "wxTimerRunner";
 	INIT_CLASS_ENTRY(ce, PHP_wxTimerRunner_name, php_wxTimerRunner_functions);
+	ce.create_object = php_wxTimerRunner_new;
 	php_wxTimerRunner_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTimerRunner = zend_register_list_destructors_ex(php_wxTimerRunner_destruction_handler, NULL, (char*) "native wxTimerRunner", module_number);
 
 	char PHP_wxNotificationMessage_name[] = "wxNotificationMessage";
 	INIT_CLASS_ENTRY(ce, PHP_wxNotificationMessage_name, php_wxNotificationMessage_functions);
+	ce.create_object = php_wxNotificationMessage_new;
 	php_wxNotificationMessage_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxNotificationMessage = zend_register_list_destructors_ex(php_wxNotificationMessage_destruction_handler, NULL, (char*) "native wxNotificationMessage", module_number);
 
 	char PHP_wxSystemOptions_name[] = "wxSystemOptions";
 	INIT_CLASS_ENTRY(ce, PHP_wxSystemOptions_name, php_wxSystemOptions_functions);
+	ce.create_object = php_wxSystemOptions_new;
 	php_wxSystemOptions_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSystemOptions = zend_register_list_destructors_ex(php_wxSystemOptions_destruction_handler, NULL, (char*) "native wxSystemOptions", module_number);
 
 	char PHP_wxSystemSettings_name[] = "wxSystemSettings";
 	INIT_CLASS_ENTRY(ce, PHP_wxSystemSettings_name, php_wxSystemSettings_functions);
+	ce.create_object = php_wxSystemSettings_new;
 	php_wxSystemSettings_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxSystemSettings = zend_register_list_destructors_ex(php_wxSystemSettings_destruction_handler, NULL, (char*) "native wxSystemSettings", module_number);
 
 	char PHP_wxWindowDisabler_name[] = "wxWindowDisabler";
 	INIT_CLASS_ENTRY(ce, PHP_wxWindowDisabler_name, php_wxWindowDisabler_functions);
+	ce.create_object = php_wxWindowDisabler_new;
 	php_wxWindowDisabler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWindowDisabler = zend_register_list_destructors_ex(php_wxWindowDisabler_destruction_handler, NULL, (char*) "native wxWindowDisabler", module_number);
 
 	char PHP_wxGenericProgressDialog_name[] = "wxGenericProgressDialog";
 	INIT_CLASS_ENTRY(ce, PHP_wxGenericProgressDialog_name, php_wxGenericProgressDialog_functions);
+	ce.create_object = php_wxGenericProgressDialog_new;
 	php_wxGenericProgressDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxGenericProgressDialog = zend_register_list_destructors_ex(php_wxGenericProgressDialog_destruction_handler, NULL, (char*) "native wxGenericProgressDialog", module_number);
 
 	char PHP_wxToolBarToolBase_name[] = "wxToolBarToolBase";
 	INIT_CLASS_ENTRY(ce, PHP_wxToolBarToolBase_name, php_wxToolBarToolBase_functions);
+	ce.create_object = php_wxToolBarToolBase_new;
 	php_wxToolBarToolBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxToolBarToolBase = zend_register_list_destructors_ex(php_wxToolBarToolBase_destruction_handler, NULL, (char*) "native wxToolBarToolBase", module_number);
 
 	char PHP_wxWebViewHistoryItem_name[] = "wxWebViewHistoryItem";
 	INIT_CLASS_ENTRY(ce, PHP_wxWebViewHistoryItem_name, php_wxWebViewHistoryItem_functions);
+	ce.create_object = php_wxWebViewHistoryItem_new;
 	php_wxWebViewHistoryItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWebViewHistoryItem = zend_register_list_destructors_ex(php_wxWebViewHistoryItem_destruction_handler, NULL, (char*) "native wxWebViewHistoryItem", module_number);
 
 	char PHP_wxWebViewHandler_name[] = "wxWebViewHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxWebViewHandler_name, php_wxWebViewHandler_functions);
+	ce.create_object = php_wxWebViewHandler_new;
 	php_wxWebViewHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWebViewHandler = zend_register_list_destructors_ex(php_wxWebViewHandler_destruction_handler, NULL, (char*) "native wxWebViewHandler", module_number);
 
 	char PHP_wxWebViewEvent_name[] = "wxWebViewEvent";
 	INIT_CLASS_ENTRY(ce, PHP_wxWebViewEvent_name, php_wxWebViewEvent_functions);
+	ce.create_object = php_wxWebViewEvent_new;
 	php_wxWebViewEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWebViewEvent = zend_register_list_destructors_ex(php_wxWebViewEvent_destruction_handler, NULL, (char*) "native wxWebViewEvent", module_number);
 
 	char PHP_wxWebViewArchiveHandler_name[] = "wxWebViewArchiveHandler";
 	INIT_CLASS_ENTRY(ce, PHP_wxWebViewArchiveHandler_name, php_wxWebViewArchiveHandler_functions);
+	ce.create_object = php_wxWebViewArchiveHandler_new;
 	php_wxWebViewArchiveHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWebViewArchiveHandler = zend_register_list_destructors_ex(php_wxWebViewArchiveHandler_destruction_handler, NULL, (char*) "native wxWebViewArchiveHandler", module_number);
 
 	char PHP_wxWebView_name[] = "wxWebView";
 	INIT_CLASS_ENTRY(ce, PHP_wxWebView_name, php_wxWebView_functions);
+	ce.create_object = php_wxWebView_new;
 	php_wxWebView_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxWebView = zend_register_list_destructors_ex(php_wxWebView_destruction_handler, NULL, (char*) "native wxWebView", module_number);
 
 	char PHP_wxTextCompleterSimple_name[] = "wxTextCompleterSimple";
 	INIT_CLASS_ENTRY(ce, PHP_wxTextCompleterSimple_name, php_wxTextCompleterSimple_functions);
+	ce.create_object = php_wxTextCompleterSimple_new;
 	php_wxTextCompleterSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxTextCompleterSimple = zend_register_list_destructors_ex(php_wxTextCompleterSimple_destruction_handler, NULL, (char*) "native wxTextCompleterSimple", module_number);
 
 
 	//Variables found on consts.json

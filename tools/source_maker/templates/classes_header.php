@@ -1,5 +1,4 @@
-extern int le_<?=$class_name?>;
-extern zend_class_entry *php_<?=$class_name?>_entry;
+extern zend_class_entry* php_<?=$class_name?>_entry;
 void php_<?=$class_name?>_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class <?=$class_name?>_php<?if(!$class_methods["_forward_declaration"]){?>: public <?=$class_name?><?}?>
@@ -24,6 +23,19 @@ class <?=$class_name?>_php<?if(!$class_methods["_forward_declaration"]){?>: publ
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_<?=$class_name?> 
+{
+    zend_object zo;
+    <?=$class_name?>_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_<?=$class_name?>_free(void *object TSRMLS_DC);
+zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_<?=$class_name?>_functions[] = {

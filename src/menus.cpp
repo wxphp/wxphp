@@ -51,13 +51,53 @@
 #include "others.h"
 
 
-void php_wxMenuBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxMenuBar_free(void *object TSRMLS_DC) 
 {
+    zo_wxMenuBar* custom_object = (zo_wxMenuBar*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate php_wxMenuBar_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Obviate delete call for wxMenuBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n\n");
 	#endif
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxMenuBar_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxMenuBar_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxMenuBar* custom_object;
+    custom_object = (zo_wxMenuBar*) emalloc(sizeof(zo_wxMenuBar));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXMENUBAR_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMenuBar_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxMenuBar::wxMenuBar(int style)
    Construct an empty menu bar. */
@@ -68,17 +108,15 @@ PHP_METHOD(php_wxMenuBar, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	long style0;
@@ -112,9 +150,9 @@ PHP_METHOD(php_wxMenuBar, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxMenuBar_php();
+				native_object = new wxMenuBar_php();
 
-				((wxMenuBar_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 1:
@@ -123,9 +161,9 @@ PHP_METHOD(php_wxMenuBar, __construct)
 				php_printf("Executing __construct((long) style0)\n");
 				#endif
 
-				_this = new wxMenuBar_php((long) style0);
+				native_object = new wxMenuBar_php((long) style0);
 
-				((wxMenuBar_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -134,16 +172,18 @@ PHP_METHOD(php_wxMenuBar, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxMenuBar);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxMenuBar_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxMenuBar_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxMenuBar_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -166,39 +206,38 @@ PHP_METHOD(php_wxMenuBar, Append)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Append\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Append call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -212,7 +251,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 	
 	//Parameters for overload 0
 	zval* menu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	char* title0;
 	long title_len0;
 	bool overload0_called = false;
@@ -230,18 +269,19 @@ PHP_METHOD(php_wxMenuBar, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -261,7 +301,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 				php_printf("Executing RETURN_BOOL(wxMenuBar::Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
+				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->Append((wxMenu*) object_pointer0_0, wxString(title0, wxConvUTF8)));
 
 				references->AddReference(menu0, "wxMenuBar::Append at call with 2 argument(s)");
 
@@ -288,39 +328,38 @@ PHP_METHOD(php_wxMenuBar, Attach)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Attach\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Attach call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -334,7 +373,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 	
 	//Parameters for overload 0
 	zval* frame0 = 0;
-	void* object_pointer0_0 = 0;
+	wxFrame* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -350,18 +389,19 @@ PHP_METHOD(php_wxMenuBar, Attach)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(frame0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(frame0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(frame0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame))
+					wxphp_object_type argument_type = ((zo_wxFrame*) zend_object_store_get_object(frame0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxFrame*) zend_object_store_get_object(frame0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxFrame*) argument_native_object;
+					if (!object_pointer0_0 || (argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'frame' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(frame0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'frame' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -381,7 +421,7 @@ PHP_METHOD(php_wxMenuBar, Attach)
 				php_printf("Executing wxMenuBar::Attach((wxFrame*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Attach((wxFrame*) object_pointer0_0);
+				((wxMenuBar_php*)native_object)->Attach((wxFrame*) object_pointer0_0);
 
 				references->AddReference(frame0, "wxMenuBar::Attach at call with 1 argument(s)");
 
@@ -409,39 +449,38 @@ PHP_METHOD(php_wxMenuBar, Check)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Check\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Check call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -486,7 +525,7 @@ PHP_METHOD(php_wxMenuBar, Check)
 				php_printf("Executing wxMenuBar::Check((int) id0, check0)\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Check((int) id0, check0);
+				((wxMenuBar_php*)native_object)->Check((int) id0, check0);
 
 
 				return;
@@ -512,39 +551,38 @@ PHP_METHOD(php_wxMenuBar, Detach)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Detach\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Detach call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -583,7 +621,7 @@ PHP_METHOD(php_wxMenuBar, Detach)
 				php_printf("Executing wxMenuBar::Detach()\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Detach();
+				((wxMenuBar_php*)native_object)->Detach();
 
 
 				return;
@@ -610,39 +648,38 @@ PHP_METHOD(php_wxMenuBar, Enable)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Enable\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Enable call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -687,7 +724,7 @@ PHP_METHOD(php_wxMenuBar, Enable)
 				php_printf("Executing wxMenuBar::Enable((int) id0, enable0)\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Enable((int) id0, enable0);
+				((wxMenuBar_php*)native_object)->Enable((int) id0, enable0);
 
 
 				return;
@@ -714,39 +751,38 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::EnableTop\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::EnableTop call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -791,7 +827,7 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 				php_printf("Executing wxMenuBar::EnableTop((size_t) pos0, enable0)\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->EnableTop((size_t) pos0, enable0);
+				((wxMenuBar_php*)native_object)->EnableTop((size_t) pos0, enable0);
 
 
 				return;
@@ -818,39 +854,38 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::FindMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::FindMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -895,7 +930,7 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 				php_printf("Executing RETURN_LONG(wxMenuBar::FindMenu(wxString(title0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenuBar_php*)_this)->FindMenu(wxString(title0, wxConvUTF8)));
+				ZVAL_LONG(return_value, ((wxMenuBar_php*)native_object)->FindMenu(wxString(title0, wxConvUTF8)));
 
 
 				return;
@@ -922,39 +957,38 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::FindMenuItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::FindMenuItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1001,7 +1035,7 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 				php_printf("Executing RETURN_LONG(wxMenuBar::FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenuBar_php*)_this)->FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
+				ZVAL_LONG(return_value, ((wxMenuBar_php*)native_object)->FindMenuItem(wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
 
 
 				return;
@@ -1027,39 +1061,38 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetFrame\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetFrame call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1099,7 +1132,7 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 				#endif
 
 				wxFrame_php* value_to_return0;
-				value_to_return0 = (wxFrame_php*) ((wxMenuBar_php*)_this)->GetFrame();
+				value_to_return0 = (wxFrame_php*) ((wxMenuBar_php*)native_object)->GetFrame();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -1115,11 +1148,11 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxFrame_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxFrame));
+					object_init_ex(return_value, php_wxFrame_entry);
+					((zo_wxFrame*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFrame_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenuBar::GetFrame at call with 0 argument(s)");
 				}
 
@@ -1148,39 +1181,38 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetHelpString\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetHelpString call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1225,7 +1257,7 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenuBar_php*)_this)->GetHelpString((int) id0);
+				value_to_return1 = ((wxMenuBar_php*)native_object)->GetHelpString((int) id0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -1257,39 +1289,38 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1334,7 +1365,7 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenuBar_php*)_this)->GetLabel((int) id0);
+				value_to_return1 = ((wxMenuBar_php*)native_object)->GetLabel((int) id0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -1366,39 +1397,38 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetLabelTop\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetLabelTop call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1443,7 +1473,7 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenuBar_php*)_this)->GetLabelTop((size_t) pos0);
+				value_to_return1 = ((wxMenuBar_php*)native_object)->GetLabelTop((size_t) pos0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -1475,39 +1505,38 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1552,7 +1581,7 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 				#endif
 
 				wxMenu_php* value_to_return1;
-				value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)_this)->GetMenu((size_t) menuIndex0);
+				value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)native_object)->GetMenu((size_t) menuIndex0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -1568,11 +1597,11 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenu_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenu));
+					object_init_ex(return_value, php_wxMenu_entry);
+					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenuBar::GetMenu at call with 1 argument(s)");
 				}
 
@@ -1601,39 +1630,38 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetMenuCount\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetMenuCount call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1672,7 +1700,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
 				php_printf("Executing RETURN_LONG(wxMenuBar::GetMenuCount())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenuBar_php*)_this)->GetMenuCount());
+				ZVAL_LONG(return_value, ((wxMenuBar_php*)native_object)->GetMenuCount());
 
 
 				return;
@@ -1699,39 +1727,38 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetMenuLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetMenuLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1776,7 +1803,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenuBar_php*)_this)->GetMenuLabel((size_t) pos0);
+				value_to_return1 = ((wxMenuBar_php*)native_object)->GetMenuLabel((size_t) pos0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -1808,39 +1835,38 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::GetMenuLabelText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::GetMenuLabelText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1885,7 +1911,7 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenuBar_php*)_this)->GetMenuLabelText((size_t) pos0);
+				value_to_return1 = ((wxMenuBar_php*)native_object)->GetMenuLabelText((size_t) pos0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -1917,39 +1943,38 @@ PHP_METHOD(php_wxMenuBar, Insert)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Insert\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Insert call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1964,7 +1989,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 	//Parameters for overload 0
 	long pos0;
 	zval* menu0 = 0;
-	void* object_pointer0_1 = 0;
+	wxMenu* object_pointer0_1 = 0;
 	char* title0;
 	long title_len0;
 	bool overload0_called = false;
@@ -1982,18 +2007,19 @@ PHP_METHOD(php_wxMenuBar, Insert)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -2013,7 +2039,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 				php_printf("Executing RETURN_BOOL(wxMenuBar::Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
+				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->Insert((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8)));
 
 				references->AddReference(menu0, "wxMenuBar::Insert at call with 3 argument(s)");
 
@@ -2040,39 +2066,38 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::IsAttached\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::IsAttached call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2111,7 +2136,7 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
 				php_printf("Executing RETURN_BOOL(wxMenuBar::IsAttached())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->IsAttached());
+				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->IsAttached());
 
 
 				return;
@@ -2138,39 +2163,38 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::IsChecked\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::IsChecked call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2214,7 +2238,7 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 				php_printf("Executing RETURN_BOOL(wxMenuBar::IsChecked((int) id0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->IsChecked((int) id0));
+				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->IsChecked((int) id0));
 
 
 				return;
@@ -2241,39 +2265,38 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::IsEnabled\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::IsEnabled call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2317,7 +2340,7 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 				php_printf("Executing RETURN_BOOL(wxMenuBar::IsEnabled((int) id0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuBar_php*)_this)->IsEnabled((int) id0));
+				ZVAL_BOOL(return_value, ((wxMenuBar_php*)native_object)->IsEnabled((int) id0));
 
 
 				return;
@@ -2344,39 +2367,38 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Refresh\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Refresh call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2391,7 +2413,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 	//Parameters for overload 0
 	bool eraseBackground0;
 	zval* rect0 = 0;
-	void* object_pointer0_1 = 0;
+	wxRect* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -2407,18 +2429,19 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eraseBackground0, &rect0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(rect0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rect0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(rect0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxRect*) zend_object_store_get_object(rect0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxRect*) zend_object_store_get_object(rect0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxRect*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'rect' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'rect' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -2438,7 +2461,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				php_printf("Executing wxMenuBar::Refresh()\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Refresh();
+				((wxMenuBar_php*)native_object)->Refresh();
 
 
 				return;
@@ -2450,7 +2473,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				php_printf("Executing wxMenuBar::Refresh(eraseBackground0)\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Refresh(eraseBackground0);
+				((wxMenuBar_php*)native_object)->Refresh(eraseBackground0);
 
 
 				return;
@@ -2462,7 +2485,7 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 				php_printf("Executing wxMenuBar::Refresh(eraseBackground0, (const wxRect*) object_pointer0_1)\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->Refresh(eraseBackground0, (const wxRect*) object_pointer0_1);
+				((wxMenuBar_php*)native_object)->Refresh(eraseBackground0, (const wxRect*) object_pointer0_1);
 
 				references->AddReference(rect0, "wxMenuBar::Refresh at call with 2 argument(s)");
 
@@ -2490,39 +2513,38 @@ PHP_METHOD(php_wxMenuBar, Remove)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Remove\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Remove call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2567,7 +2589,7 @@ PHP_METHOD(php_wxMenuBar, Remove)
 				#endif
 
 				wxMenu_php* value_to_return1;
-				value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)_this)->Remove((size_t) pos0);
+				value_to_return1 = (wxMenu_php*) ((wxMenuBar_php*)native_object)->Remove((size_t) pos0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -2583,11 +2605,11 @@ PHP_METHOD(php_wxMenuBar, Remove)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenu_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenu));
+					object_init_ex(return_value, php_wxMenu_entry);
+					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenuBar::Remove at call with 1 argument(s)");
 				}
 
@@ -2616,39 +2638,38 @@ PHP_METHOD(php_wxMenuBar, Replace)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::Replace\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::Replace call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2663,7 +2684,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 	//Parameters for overload 0
 	long pos0;
 	zval* menu0 = 0;
-	void* object_pointer0_1 = 0;
+	wxMenu* object_pointer0_1 = 0;
 	char* title0;
 	long title_len0;
 	bool overload0_called = false;
@@ -2681,18 +2702,19 @@ PHP_METHOD(php_wxMenuBar, Replace)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -2713,7 +2735,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 				#endif
 
 				wxMenu_php* value_to_return3;
-				value_to_return3 = (wxMenu_php*) ((wxMenuBar_php*)_this)->Replace((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8));
+				value_to_return3 = (wxMenu_php*) ((wxMenuBar_php*)native_object)->Replace((size_t) pos0, (wxMenu*) object_pointer0_1, wxString(title0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -2729,11 +2751,11 @@ PHP_METHOD(php_wxMenuBar, Replace)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenu_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenu));
+					object_init_ex(return_value, php_wxMenu_entry);
+					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenuBar::Replace at call with 3 argument(s)");
 				}
 
@@ -2763,39 +2785,38 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::SetHelpString\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::SetHelpString call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2841,7 +2862,7 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 				php_printf("Executing wxMenuBar::SetHelpString((int) id0, wxString(helpString0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->SetHelpString((int) id0, wxString(helpString0, wxConvUTF8));
+				((wxMenuBar_php*)native_object)->SetHelpString((int) id0, wxString(helpString0, wxConvUTF8));
 
 
 				return;
@@ -2868,39 +2889,38 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::SetLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::SetLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2946,7 +2966,7 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 				php_printf("Executing wxMenuBar::SetLabel((int) id0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->SetLabel((int) id0, wxString(label0, wxConvUTF8));
+				((wxMenuBar_php*)native_object)->SetLabel((int) id0, wxString(label0, wxConvUTF8));
 
 
 				return;
@@ -2973,39 +2993,38 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::SetLabelTop\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::SetLabelTop call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3051,7 +3070,7 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 				php_printf("Executing wxMenuBar::SetLabelTop((size_t) pos0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->SetLabelTop((size_t) pos0, wxString(label0, wxConvUTF8));
+				((wxMenuBar_php*)native_object)->SetLabelTop((size_t) pos0, wxString(label0, wxConvUTF8));
 
 
 				return;
@@ -3078,39 +3097,38 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuBar* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuBar_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuBar::SetMenuLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuBar::SetMenuLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuBar){
-				references = &((wxMenuBar_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUBAR_TYPE){
+				references = &((wxMenuBar_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3156,7 +3174,7 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 				php_printf("Executing wxMenuBar::SetMenuLabel((size_t) pos0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuBar_php*)_this)->SetMenuLabel((size_t) pos0, wxString(label0, wxConvUTF8));
+				((wxMenuBar_php*)native_object)->SetMenuLabel((size_t) pos0, wxString(label0, wxConvUTF8));
 
 
 				return;
@@ -3174,13 +3192,53 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 }
 /* }}} */
 
-void php_wxMenu_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxMenu_free(void *object TSRMLS_DC) 
 {
+    zo_wxMenu* custom_object = (zo_wxMenu*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate php_wxMenu_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Obviate delete call for wxMenu on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n\n");
 	#endif
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxMenu_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxMenu_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxMenu* custom_object;
+    custom_object = (zo_wxMenu*) emalloc(sizeof(zo_wxMenu));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXMENU_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMenu_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxMenu::wxMenu(int style)
    Constructs a wxMenu object. */
@@ -3191,17 +3249,15 @@ PHP_METHOD(php_wxMenu, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	long style0;
@@ -3272,9 +3328,9 @@ PHP_METHOD(php_wxMenu, __construct)
 				php_printf("Executing __construct((long) style0)\n");
 				#endif
 
-				_this = new wxMenu_php((long) style0);
+				native_object = new wxMenu_php((long) style0);
 
-				((wxMenu_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -3290,9 +3346,9 @@ PHP_METHOD(php_wxMenu, __construct)
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxMenu_php(wxString(title1, wxConvUTF8));
+				native_object = new wxMenu_php(wxString(title1, wxConvUTF8));
 
-				((wxMenu_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 2:
@@ -3301,9 +3357,9 @@ PHP_METHOD(php_wxMenu, __construct)
 				php_printf("Executing __construct(wxString(title1, wxConvUTF8), (long) style1)\n");
 				#endif
 
-				_this = new wxMenu_php(wxString(title1, wxConvUTF8), (long) style1);
+				native_object = new wxMenu_php(wxString(title1, wxConvUTF8), (long) style1);
 
-				((wxMenu_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -3319,9 +3375,9 @@ PHP_METHOD(php_wxMenu, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxMenu_php();
+				native_object = new wxMenu_php();
 
-				((wxMenu_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -3330,16 +3386,18 @@ PHP_METHOD(php_wxMenu, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxMenu);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxMenu_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxMenu_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxMenu_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -3362,39 +3420,38 @@ PHP_METHOD(php_wxMenu, SetTitle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::SetTitle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::SetTitle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3439,7 +3496,7 @@ PHP_METHOD(php_wxMenu, SetTitle)
 				php_printf("Executing wxMenu::SetTitle(wxString(title0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->SetTitle(wxString(title0, wxConvUTF8));
+				((wxMenu_php*)native_object)->SetTitle(wxString(title0, wxConvUTF8));
 
 
 				return;
@@ -3465,39 +3522,38 @@ PHP_METHOD(php_wxMenu, SetParent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::SetParent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::SetParent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3511,7 +3567,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 	
 	//Parameters for overload 0
 	zval* parent0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -3527,18 +3583,19 @@ PHP_METHOD(php_wxMenu, SetParent)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -3558,7 +3615,7 @@ PHP_METHOD(php_wxMenu, SetParent)
 				php_printf("Executing wxMenu::SetParent((wxMenu*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->SetParent((wxMenu*) object_pointer0_0);
+				((wxMenu_php*)native_object)->SetParent((wxMenu*) object_pointer0_0);
 
 				references->AddReference(parent0, "wxMenu::SetParent at call with 1 argument(s)");
 
@@ -3586,39 +3643,38 @@ PHP_METHOD(php_wxMenu, SetLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::SetLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::SetLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3664,7 +3720,7 @@ PHP_METHOD(php_wxMenu, SetLabel)
 				php_printf("Executing wxMenu::SetLabel((int) id0, wxString(label0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->SetLabel((int) id0, wxString(label0, wxConvUTF8));
+				((wxMenu_php*)native_object)->SetLabel((int) id0, wxString(label0, wxConvUTF8));
 
 
 				return;
@@ -3690,39 +3746,38 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::SetInvokingWindow\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::SetInvokingWindow call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3736,7 +3791,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 	
 	//Parameters for overload 0
 	zval* win0 = 0;
-	void* object_pointer0_0 = 0;
+	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -3752,18 +3807,19 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(win0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxWebView && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxWindow*) argument_native_object;
+					if (!object_pointer0_0 || (argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'win' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'win' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -3783,7 +3839,7 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 				php_printf("Executing wxMenu::SetInvokingWindow((wxWindow*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->SetInvokingWindow((wxWindow*) object_pointer0_0);
+				((wxMenu_php*)native_object)->SetInvokingWindow((wxWindow*) object_pointer0_0);
 
 				references->AddReference(win0, "wxMenu::SetInvokingWindow at call with 1 argument(s)");
 
@@ -3811,39 +3867,38 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::SetHelpString\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::SetHelpString call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3889,7 +3944,7 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 				php_printf("Executing wxMenu::SetHelpString((int) id0, wxString(helpString0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->SetHelpString((int) id0, wxString(helpString0, wxConvUTF8));
+				((wxMenu_php*)native_object)->SetHelpString((int) id0, wxString(helpString0, wxConvUTF8));
 
 
 				return;
@@ -3916,39 +3971,38 @@ PHP_METHOD(php_wxMenu, Remove)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Remove\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Remove call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3962,7 +4016,7 @@ PHP_METHOD(php_wxMenu, Remove)
 	
 	//Parameters for overload 0
 	zval* item0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenuItem* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	long id1;
@@ -3981,10 +4035,11 @@ PHP_METHOD(php_wxMenu, Remove)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(item0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(item0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(item0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(item0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
@@ -3992,7 +4047,7 @@ PHP_METHOD(php_wxMenu, Remove)
 				}
 				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
-						goto overload1;
+					goto overload1;
 				}
 			}
 
@@ -4030,7 +4085,7 @@ PHP_METHOD(php_wxMenu, Remove)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Remove((wxMenuItem*) object_pointer0_0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Remove((wxMenuItem*) object_pointer0_0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -4046,11 +4101,11 @@ PHP_METHOD(php_wxMenu, Remove)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Remove at call with 1 argument(s)");
 				}
 
@@ -4073,7 +4128,7 @@ PHP_METHOD(php_wxMenu, Remove)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Remove((int) id1);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Remove((int) id1);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -4089,11 +4144,11 @@ PHP_METHOD(php_wxMenu, Remove)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Remove at call with 1 argument(s)");
 				}
 
@@ -4122,39 +4177,38 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::PrependSeparator\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::PrependSeparator call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4194,7 +4248,7 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 				#endif
 
 				wxMenuItem_php* value_to_return0;
-				value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependSeparator();
+				value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependSeparator();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -4210,11 +4264,11 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::PrependSeparator at call with 0 argument(s)");
 				}
 
@@ -4243,39 +4297,38 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::PrependRadioItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::PrependRadioItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4324,7 +4377,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -4340,11 +4393,11 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::PrependRadioItem at call with 2 argument(s)");
 				}
 
@@ -4359,7 +4412,7 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -4375,11 +4428,11 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::PrependRadioItem at call with 3 argument(s)");
 				}
 
@@ -4408,39 +4461,38 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::PrependCheckItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::PrependCheckItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4489,7 +4541,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -4505,11 +4557,11 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::PrependCheckItem at call with 2 argument(s)");
 				}
 
@@ -4524,7 +4576,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->PrependCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -4540,11 +4592,11 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::PrependCheckItem at call with 3 argument(s)");
 				}
 
@@ -4573,39 +4625,38 @@ PHP_METHOD(php_wxMenu, Prepend)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Prepend\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Prepend call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4627,7 +4678,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* item1 = 0;
-	void* object_pointer1_0 = 0;
+	wxMenuItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -4660,18 +4711,19 @@ PHP_METHOD(php_wxMenu, Prepend)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(item1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(item1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(item1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -4692,7 +4744,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -4708,11 +4760,11 @@ PHP_METHOD(php_wxMenu, Prepend)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Prepend at call with 1 argument(s)");
 				}
 
@@ -4727,7 +4779,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0, wxString(item0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -4743,11 +4795,11 @@ PHP_METHOD(php_wxMenu, Prepend)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Prepend at call with 2 argument(s)");
 				}
 
@@ -4762,7 +4814,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -4778,11 +4830,11 @@ PHP_METHOD(php_wxMenu, Prepend)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Prepend at call with 3 argument(s)");
 				}
 
@@ -4797,7 +4849,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#endif
 
 				wxMenuItem_php* value_to_return4;
-				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
 				if(value_to_return4 == NULL){
 					ZVAL_NULL(return_value);
@@ -4813,11 +4865,11 @@ PHP_METHOD(php_wxMenu, Prepend)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return4, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Prepend at call with 4 argument(s)");
 				}
 
@@ -4839,7 +4891,7 @@ PHP_METHOD(php_wxMenu, Prepend)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Prepend((wxMenuItem*) object_pointer1_0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Prepend((wxMenuItem*) object_pointer1_0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -4855,11 +4907,11 @@ PHP_METHOD(php_wxMenu, Prepend)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Prepend at call with 1 argument(s)");
 				}
 
@@ -4889,39 +4941,38 @@ PHP_METHOD(php_wxMenu, Append)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Append\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Append call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4946,13 +4997,13 @@ PHP_METHOD(php_wxMenu, Append)
 	char* item1;
 	long item_len1;
 	zval* subMenu1 = 0;
-	void* object_pointer1_2 = 0;
+	wxMenu* object_pointer1_2 = 0;
 	char* helpString1;
 	long helpString_len1;
 	bool overload1_called = false;
 	//Parameters for overload 2
 	zval* menuItem2 = 0;
-	void* object_pointer2_0 = 0;
+	wxMenuItem* object_pointer2_0 = 0;
 	bool overload2_called = false;
 		
 	//Overload 0
@@ -4985,10 +5036,11 @@ PHP_METHOD(php_wxMenu, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(subMenu1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(subMenu1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(subMenu1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_2 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(subMenu1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(subMenu1 TSRMLS_CC))->native_object;
+					object_pointer1_2 = (wxMenu*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						goto overload2;
@@ -4996,7 +5048,7 @@ PHP_METHOD(php_wxMenu, Append)
 				}
 				else if(Z_TYPE_P(subMenu1) != IS_NULL)
 				{
-						goto overload2;
+					goto overload2;
 				}
 			}
 
@@ -5018,18 +5070,19 @@ PHP_METHOD(php_wxMenu, Append)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuItem2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menuItem2) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menuItem2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menuItem2) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer2_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(menuItem2 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(menuItem2 TSRMLS_CC))->native_object;
+					object_pointer2_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menuItem' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menuItem2) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menuItem' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -5050,7 +5103,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -5066,11 +5119,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 1 argument(s)");
 				}
 
@@ -5085,7 +5138,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0, wxString(item0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -5101,11 +5154,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 2 argument(s)");
 				}
 
@@ -5120,7 +5173,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -5136,11 +5189,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 3 argument(s)");
 				}
 
@@ -5155,7 +5208,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return4;
-				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
 				if(value_to_return4 == NULL){
 					ZVAL_NULL(return_value);
@@ -5171,11 +5224,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return4, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 4 argument(s)");
 				}
 
@@ -5197,7 +5250,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2);
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2);
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -5213,11 +5266,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 3 argument(s)");
 				}
 
@@ -5233,7 +5286,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return4;
-				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8));
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8));
 
 				if(value_to_return4 == NULL){
 					ZVAL_NULL(return_value);
@@ -5249,11 +5302,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return4, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 4 argument(s)");
 				}
 
@@ -5276,7 +5329,7 @@ PHP_METHOD(php_wxMenu, Append)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Append((wxMenuItem*) object_pointer2_0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((wxMenuItem*) object_pointer2_0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -5292,11 +5345,11 @@ PHP_METHOD(php_wxMenu, Append)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Append at call with 1 argument(s)");
 				}
 
@@ -5326,39 +5379,38 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::AppendCheckItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::AppendCheckItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5407,7 +5459,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -5423,11 +5475,11 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendCheckItem at call with 2 argument(s)");
 				}
 
@@ -5442,7 +5494,7 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendCheckItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -5458,11 +5510,11 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendCheckItem at call with 3 argument(s)");
 				}
 
@@ -5491,39 +5543,38 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::AppendRadioItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::AppendRadioItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5572,7 +5623,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -5588,11 +5639,11 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendRadioItem at call with 2 argument(s)");
 				}
 
@@ -5607,7 +5658,7 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendRadioItem((int) id0, wxString(item0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -5623,11 +5674,11 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendRadioItem at call with 3 argument(s)");
 				}
 
@@ -5656,39 +5707,38 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::AppendSeparator\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::AppendSeparator call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5728,7 +5778,7 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 				#endif
 
 				wxMenuItem_php* value_to_return0;
-				value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendSeparator();
+				value_to_return0 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendSeparator();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -5744,11 +5794,11 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendSeparator at call with 0 argument(s)");
 				}
 
@@ -5777,39 +5827,38 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::AppendSubMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::AppendSubMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5823,7 +5872,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 	
 	//Parameters for overload 0
 	zval* submenu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	char* text0;
 	long text_len0;
 	char* help0;
@@ -5843,18 +5892,19 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &submenu0, &text0, &text_len0, &help0, &help_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(submenu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(submenu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(submenu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(submenu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(submenu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'submenu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(submenu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'submenu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -5875,7 +5925,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8));
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8));
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -5891,11 +5941,11 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendSubMenu at call with 2 argument(s)");
 				}
 
@@ -5911,7 +5961,7 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8), wxString(help0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->AppendSubMenu((wxMenu*) object_pointer0_0, wxString(text0, wxConvUTF8), wxString(help0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -5927,11 +5977,11 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::AppendSubMenu at call with 3 argument(s)");
 				}
 
@@ -5960,39 +6010,38 @@ PHP_METHOD(php_wxMenu, Attach)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Attach\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Attach call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6006,7 +6055,7 @@ PHP_METHOD(php_wxMenu, Attach)
 	
 	//Parameters for overload 0
 	zval* menubar0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenuBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -6022,18 +6071,19 @@ PHP_METHOD(php_wxMenu, Attach)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menubar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menubar0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menubar0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menubar0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuBar*) zend_object_store_get_object(menubar0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuBar*) zend_object_store_get_object(menubar0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenuBar*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menubar' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menubar0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menubar' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -6053,7 +6103,7 @@ PHP_METHOD(php_wxMenu, Attach)
 				php_printf("Executing wxMenu::Attach((wxMenuBar*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->Attach((wxMenuBar*) object_pointer0_0);
+				((wxMenu_php*)native_object)->Attach((wxMenuBar*) object_pointer0_0);
 
 				references->AddReference(menubar0, "wxMenu::Attach at call with 1 argument(s)");
 
@@ -6081,39 +6131,38 @@ PHP_METHOD(php_wxMenu, Break)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Break\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Break call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6152,7 +6201,7 @@ PHP_METHOD(php_wxMenu, Break)
 				php_printf("Executing wxMenu::Break()\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->Break();
+				((wxMenu_php*)native_object)->Break();
 
 
 				return;
@@ -6179,39 +6228,38 @@ PHP_METHOD(php_wxMenu, Check)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Check\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Check call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6256,7 +6304,7 @@ PHP_METHOD(php_wxMenu, Check)
 				php_printf("Executing wxMenu::Check((int) id0, check0)\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->Check((int) id0, check0);
+				((wxMenu_php*)native_object)->Check((int) id0, check0);
 
 
 				return;
@@ -6283,39 +6331,38 @@ PHP_METHOD(php_wxMenu, Delete)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Delete\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Delete call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6332,7 +6379,7 @@ PHP_METHOD(php_wxMenu, Delete)
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* item1 = 0;
-	void* object_pointer1_0 = 0;
+	wxMenuItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -6365,18 +6412,19 @@ PHP_METHOD(php_wxMenu, Delete)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(item1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(item1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(item1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -6396,7 +6444,7 @@ PHP_METHOD(php_wxMenu, Delete)
 				php_printf("Executing RETURN_BOOL(wxMenu::Delete((int) id0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Delete((int) id0));
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Delete((int) id0));
 
 
 				return;
@@ -6415,7 +6463,7 @@ PHP_METHOD(php_wxMenu, Delete)
 				php_printf("Executing RETURN_BOOL(wxMenu::Delete((wxMenuItem*) object_pointer1_0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Delete((wxMenuItem*) object_pointer1_0));
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Delete((wxMenuItem*) object_pointer1_0));
 
 				references->AddReference(item1, "wxMenu::Delete at call with 1 argument(s)");
 
@@ -6443,39 +6491,38 @@ PHP_METHOD(php_wxMenu, Destroy)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Destroy\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Destroy call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6492,7 +6539,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* item1 = 0;
-	void* object_pointer1_0 = 0;
+	wxMenuItem* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -6525,18 +6572,19 @@ PHP_METHOD(php_wxMenu, Destroy)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(item1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(item1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(item1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(item1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'item' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'item' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -6556,7 +6604,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 				php_printf("Executing RETURN_BOOL(wxMenu::Destroy((int) id0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Destroy((int) id0));
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Destroy((int) id0));
 
 
 				return;
@@ -6575,7 +6623,7 @@ PHP_METHOD(php_wxMenu, Destroy)
 				php_printf("Executing RETURN_BOOL(wxMenu::Destroy((wxMenuItem*) object_pointer1_0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->Destroy((wxMenuItem*) object_pointer1_0));
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->Destroy((wxMenuItem*) object_pointer1_0));
 
 				references->AddReference(item1, "wxMenu::Destroy at call with 1 argument(s)");
 
@@ -6602,39 +6650,38 @@ PHP_METHOD(php_wxMenu, Detach)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Detach\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Detach call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6673,7 +6720,7 @@ PHP_METHOD(php_wxMenu, Detach)
 				php_printf("Executing wxMenu::Detach()\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->Detach();
+				((wxMenu_php*)native_object)->Detach();
 
 
 				return;
@@ -6700,39 +6747,38 @@ PHP_METHOD(php_wxMenu, Enable)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Enable\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Enable call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6777,7 +6823,7 @@ PHP_METHOD(php_wxMenu, Enable)
 				php_printf("Executing wxMenu::Enable((int) id0, enable0)\n\n");
 				#endif
 
-				((wxMenu_php*)_this)->Enable((int) id0, enable0);
+				((wxMenu_php*)native_object)->Enable((int) id0, enable0);
 
 
 				return;
@@ -6804,39 +6850,38 @@ PHP_METHOD(php_wxMenu, FindItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::FindItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::FindItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6881,7 +6926,7 @@ PHP_METHOD(php_wxMenu, FindItem)
 				php_printf("Executing RETURN_LONG(wxMenu::FindItem(wxString(itemString0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenu_php*)_this)->FindItem(wxString(itemString0, wxConvUTF8)));
+				ZVAL_LONG(return_value, ((wxMenu_php*)native_object)->FindItem(wxString(itemString0, wxConvUTF8)));
 
 
 				return;
@@ -6908,39 +6953,38 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::FindItemByPosition\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::FindItemByPosition call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6985,7 +7029,7 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->FindItemByPosition((size_t) position0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->FindItemByPosition((size_t) position0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -7001,11 +7045,11 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::FindItemByPosition at call with 1 argument(s)");
 				}
 
@@ -7034,39 +7078,38 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetHelpString\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetHelpString call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7111,7 +7154,7 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenu_php*)_this)->GetHelpString((int) id0);
+				value_to_return1 = ((wxMenu_php*)native_object)->GetHelpString((int) id0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -7142,39 +7185,38 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetInvokingWindow\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetInvokingWindow call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7214,7 +7256,7 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 				#endif
 
 				wxWindow_php* value_to_return0;
-				value_to_return0 = (wxWindow_php*) ((wxMenu_php*)_this)->GetInvokingWindow();
+				value_to_return0 = (wxWindow_php*) ((wxMenu_php*)native_object)->GetInvokingWindow();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -7230,11 +7272,11 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
+					object_init_ex(return_value, php_wxWindow_entry);
+					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::GetInvokingWindow at call with 0 argument(s)");
 				}
 
@@ -7263,39 +7305,38 @@ PHP_METHOD(php_wxMenu, GetLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7340,7 +7381,7 @@ PHP_METHOD(php_wxMenu, GetLabel)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenu_php*)_this)->GetLabel((int) id0);
+				value_to_return1 = ((wxMenu_php*)native_object)->GetLabel((int) id0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -7372,39 +7413,38 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetLabelText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetLabelText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7449,7 +7489,7 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 				#endif
 
 				wxString value_to_return1;
-				value_to_return1 = ((wxMenu_php*)_this)->GetLabelText((int) id0);
+				value_to_return1 = ((wxMenu_php*)native_object)->GetLabelText((int) id0);
 				char* temp_string1;
 				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
 				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
@@ -7481,39 +7521,38 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetMenuItemCount\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetMenuItemCount call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7552,7 +7591,7 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
 				php_printf("Executing RETURN_LONG(wxMenu::GetMenuItemCount())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenu_php*)_this)->GetMenuItemCount());
+				ZVAL_LONG(return_value, ((wxMenu_php*)native_object)->GetMenuItemCount());
 
 
 				return;
@@ -7578,39 +7617,38 @@ PHP_METHOD(php_wxMenu, GetParent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetParent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetParent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7650,7 +7688,7 @@ PHP_METHOD(php_wxMenu, GetParent)
 				#endif
 
 				wxMenu_php* value_to_return0;
-				value_to_return0 = (wxMenu_php*) ((wxMenu_php*)_this)->GetParent();
+				value_to_return0 = (wxMenu_php*) ((wxMenu_php*)native_object)->GetParent();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -7666,11 +7704,11 @@ PHP_METHOD(php_wxMenu, GetParent)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenu_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxMenu));
+					object_init_ex(return_value, php_wxMenu_entry);
+					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::GetParent at call with 0 argument(s)");
 				}
 
@@ -7698,39 +7736,38 @@ PHP_METHOD(php_wxMenu, GetStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7769,7 +7806,7 @@ PHP_METHOD(php_wxMenu, GetStyle)
 				php_printf("Executing RETURN_LONG(wxMenu::GetStyle())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenu_php*)_this)->GetStyle());
+				ZVAL_LONG(return_value, ((wxMenu_php*)native_object)->GetStyle());
 
 
 				return;
@@ -7796,39 +7833,38 @@ PHP_METHOD(php_wxMenu, GetTitle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetTitle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetTitle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7868,7 +7904,7 @@ PHP_METHOD(php_wxMenu, GetTitle)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenu_php*)_this)->GetTitle();
+				value_to_return0 = ((wxMenu_php*)native_object)->GetTitle();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -7899,39 +7935,38 @@ PHP_METHOD(php_wxMenu, GetWindow)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::GetWindow\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::GetWindow call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7971,7 +8006,7 @@ PHP_METHOD(php_wxMenu, GetWindow)
 				#endif
 
 				wxWindow_php* value_to_return0;
-				value_to_return0 = (wxWindow_php*) ((wxMenu_php*)_this)->GetWindow();
+				value_to_return0 = (wxWindow_php*) ((wxMenu_php*)native_object)->GetWindow();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -7987,11 +8022,11 @@ PHP_METHOD(php_wxMenu, GetWindow)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
+					object_init_ex(return_value, php_wxWindow_entry);
+					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::GetWindow at call with 0 argument(s)");
 				}
 
@@ -8020,39 +8055,38 @@ PHP_METHOD(php_wxMenu, Insert)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::Insert\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::Insert call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8067,7 +8101,7 @@ PHP_METHOD(php_wxMenu, Insert)
 	//Parameters for overload 0
 	long pos0;
 	zval* menuItem0 = 0;
-	void* object_pointer0_1 = 0;
+	wxMenuItem* object_pointer0_1 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	long pos1;
@@ -8092,10 +8126,11 @@ PHP_METHOD(php_wxMenu, Insert)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menuItem0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(menuItem0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menuItem0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menuItem0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(menuItem0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(menuItem0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxMenuItem*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						goto overload1;
@@ -8103,7 +8138,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				}
 				else if(Z_TYPE_P(menuItem0) != IS_NULL)
 				{
-						goto overload1;
+					goto overload1;
 				}
 			}
 
@@ -8141,7 +8176,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos0, (wxMenuItem*) object_pointer0_1);
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos0, (wxMenuItem*) object_pointer0_1);
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -8157,11 +8192,11 @@ PHP_METHOD(php_wxMenu, Insert)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Insert at call with 2 argument(s)");
 				}
 
@@ -8184,7 +8219,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1);
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1);
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -8200,11 +8235,11 @@ PHP_METHOD(php_wxMenu, Insert)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Insert at call with 2 argument(s)");
 				}
 
@@ -8219,7 +8254,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -8235,11 +8270,11 @@ PHP_METHOD(php_wxMenu, Insert)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Insert at call with 3 argument(s)");
 				}
 
@@ -8254,7 +8289,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#endif
 
 				wxMenuItem_php* value_to_return4;
-				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8));
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8));
 
 				if(value_to_return4 == NULL){
 					ZVAL_NULL(return_value);
@@ -8270,11 +8305,11 @@ PHP_METHOD(php_wxMenu, Insert)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return4, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Insert at call with 4 argument(s)");
 				}
 
@@ -8289,7 +8324,7 @@ PHP_METHOD(php_wxMenu, Insert)
 				#endif
 
 				wxMenuItem_php* value_to_return5;
-				value_to_return5 = (wxMenuItem_php*) ((wxMenu_php*)_this)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8), (wxItemKind) kind1);
+				value_to_return5 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Insert((size_t) pos1, (int) id1, wxString(item1, wxConvUTF8), wxString(helpString1, wxConvUTF8), (wxItemKind) kind1);
 
 				if(value_to_return5 == NULL){
 					ZVAL_NULL(return_value);
@@ -8305,11 +8340,11 @@ PHP_METHOD(php_wxMenu, Insert)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return5, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return5;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return5 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return5 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::Insert at call with 5 argument(s)");
 				}
 
@@ -8338,39 +8373,38 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::InsertCheckItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::InsertCheckItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8420,7 +8454,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -8436,11 +8470,11 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::InsertCheckItem at call with 3 argument(s)");
 				}
 
@@ -8455,7 +8489,7 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 				#endif
 
 				wxMenuItem_php* value_to_return4;
-				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertCheckItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				if(value_to_return4 == NULL){
 					ZVAL_NULL(return_value);
@@ -8471,11 +8505,11 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return4, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::InsertCheckItem at call with 4 argument(s)");
 				}
 
@@ -8504,39 +8538,38 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::InsertRadioItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::InsertRadioItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8586,7 +8619,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 				#endif
 
 				wxMenuItem_php* value_to_return3;
-				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8));
 
 				if(value_to_return3 == NULL){
 					ZVAL_NULL(return_value);
@@ -8602,11 +8635,11 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return3, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return3 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::InsertRadioItem at call with 3 argument(s)");
 				}
 
@@ -8621,7 +8654,7 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 				#endif
 
 				wxMenuItem_php* value_to_return4;
-				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertRadioItem((size_t) pos0, (int) id0, wxString(item0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
 				if(value_to_return4 == NULL){
 					ZVAL_NULL(return_value);
@@ -8637,11 +8670,11 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return4, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return4 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::InsertRadioItem at call with 4 argument(s)");
 				}
 
@@ -8670,39 +8703,38 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::InsertSeparator\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::InsertSeparator call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8747,7 +8779,7 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->InsertSeparator((size_t) pos0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->InsertSeparator((size_t) pos0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -8763,11 +8795,11 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::InsertSeparator at call with 1 argument(s)");
 				}
 
@@ -8795,39 +8827,38 @@ PHP_METHOD(php_wxMenu, IsAttached)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::IsAttached\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::IsAttached call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8866,7 +8897,7 @@ PHP_METHOD(php_wxMenu, IsAttached)
 				php_printf("Executing RETURN_BOOL(wxMenu::IsAttached())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->IsAttached());
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->IsAttached());
 
 
 				return;
@@ -8893,39 +8924,38 @@ PHP_METHOD(php_wxMenu, IsChecked)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::IsChecked\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::IsChecked call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8969,7 +8999,7 @@ PHP_METHOD(php_wxMenu, IsChecked)
 				php_printf("Executing RETURN_BOOL(wxMenu::IsChecked((int) id0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->IsChecked((int) id0));
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->IsChecked((int) id0));
 
 
 				return;
@@ -8996,39 +9026,38 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::IsEnabled\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::IsEnabled call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9072,7 +9101,7 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 				php_printf("Executing RETURN_BOOL(wxMenu::IsEnabled((int) id0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenu_php*)_this)->IsEnabled((int) id0));
+				ZVAL_BOOL(return_value, ((wxMenu_php*)native_object)->IsEnabled((int) id0));
 
 
 				return;
@@ -9099,39 +9128,38 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenu* current_object;
+	wxphp_object_type current_object_type;
+	wxMenu_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenu*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenu::FindChildItem\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenu::FindChildItem call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenu){
-				references = &((wxMenu_php*)_this)->references;
+			if(current_object_type == PHP_WXMENU_TYPE){
+				references = &((wxMenu_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9181,7 +9209,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)_this)->FindChildItem((int) id0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->FindChildItem((int) id0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -9197,11 +9225,11 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::FindChildItem at call with 1 argument(s)");
 				}
 
@@ -9216,7 +9244,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 				#endif
 
 				wxMenuItem_php* value_to_return2;
-				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)_this)->FindChildItem((int) id0, (size_t*) pos0);
+				value_to_return2 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->FindChildItem((int) id0, (size_t*) pos0);
 
 				if(value_to_return2 == NULL){
 					ZVAL_NULL(return_value);
@@ -9232,11 +9260,11 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenuItem_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxMenuItem));
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return2;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return2 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenu::FindChildItem at call with 2 argument(s)");
 				}
 
@@ -9262,13 +9290,53 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 }
 /* }}} */
 
-void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxMenuItem_free(void *object TSRMLS_DC) 
 {
+    zo_wxMenuItem* custom_object = (zo_wxMenuItem*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Obviate php_wxMenuItem_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Obviate delete call for wxMenuItem on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n\n");
 	#endif
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxMenuItem_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxMenuItem_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxMenuItem* custom_object;
+    custom_object = (zo_wxMenuItem*) emalloc(sizeof(zo_wxMenuItem));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXMENUITEM_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMenuItem_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxMenuItem::wxMenuItem(wxMenu &parentMenu, int id, string text, string helpString, wxItemKind kind, wxMenu &subMenu)
    Constructs a wxMenuItem object. */
@@ -9279,21 +9347,19 @@ PHP_METHOD(php_wxMenuItem, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	zval* parentMenu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	long id0;
 	char* text0;
 	long text_len0;
@@ -9301,7 +9367,7 @@ PHP_METHOD(php_wxMenuItem, __construct)
 	long helpString_len0;
 	long kind0;
 	zval* subMenu0 = 0;
-	void* object_pointer0_5 = 0;
+	wxMenu* object_pointer0_5 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -9317,34 +9383,36 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parentMenu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parentMenu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(parentMenu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(parentMenu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(parentMenu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'parentMenu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(parentMenu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'parentMenu' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE_P(subMenu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(subMenu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(subMenu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_5 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(subMenu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(subMenu0 TSRMLS_CC))->native_object;
+					object_pointer0_5 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'subMenu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(subMenu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'subMenu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -9364,9 +9432,9 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxMenuItem_php();
+				native_object = new wxMenuItem_php();
 
-				((wxMenuItem_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 1:
@@ -9375,10 +9443,10 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0)\n");
 				#endif
 
-				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0);
+				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0);
 
-				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 1 argument(s)");
+				native_object->references.Initialize();
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -9387,10 +9455,10 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0)\n");
 				#endif
 
-				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0);
+				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0);
 
-				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 2 argument(s)");
+				native_object->references.Initialize();
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -9399,10 +9467,10 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8));
+				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8));
 
-				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 3 argument(s)");
+				native_object->references.Initialize();
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -9411,10 +9479,10 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
+				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8));
 
-				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 4 argument(s)");
+				native_object->references.Initialize();
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -9423,10 +9491,10 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0)\n");
 				#endif
 
-				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
+				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0);
 
-				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 5 argument(s)");
+				native_object->references.Initialize();
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -9435,11 +9503,11 @@ PHP_METHOD(php_wxMenuItem, __construct)
 				php_printf("Executing __construct((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5)\n");
 				#endif
 
-				_this = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5);
+				native_object = new wxMenuItem_php((wxMenu*) object_pointer0_0, (int) id0, wxString(text0, wxConvUTF8), wxString(helpString0, wxConvUTF8), (wxItemKind) kind0, (wxMenu*) object_pointer0_5);
 
-				((wxMenuItem_php*) _this)->references.Initialize();
-				((wxMenuItem_php*) _this)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 6 argument(s)");
-				((wxMenuItem_php*) _this)->references.AddReference(subMenu0, "wxMenuItem::wxMenuItem at call with 6 argument(s)");
+				native_object->references.Initialize();
+				((wxMenuItem_php*) native_object)->references.AddReference(parentMenu0, "wxMenuItem::wxMenuItem at call with 6 argument(s)");
+				((wxMenuItem_php*) native_object)->references.AddReference(subMenu0, "wxMenuItem::wxMenuItem at call with 6 argument(s)");
 				break;
 			}
 		}
@@ -9448,16 +9516,18 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxMenuItem);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxMenuItem_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxMenuItem_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxMenuItem_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -9480,39 +9550,38 @@ PHP_METHOD(php_wxMenuItem, SetText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::SetText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::SetText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9557,7 +9626,7 @@ PHP_METHOD(php_wxMenuItem, SetText)
 				php_printf("Executing wxMenuItem::SetText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->SetText(wxString(text0, wxConvUTF8));
+				((wxMenuItem_php*)native_object)->SetText(wxString(text0, wxConvUTF8));
 
 
 				return;
@@ -9584,39 +9653,38 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::SetSubMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::SetSubMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9630,7 +9698,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 	
 	//Parameters for overload 0
 	zval* menu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -9646,18 +9714,19 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -9677,7 +9746,7 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 				php_printf("Executing wxMenuItem::SetSubMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->SetSubMenu((wxMenu*) object_pointer0_0);
+				((wxMenuItem_php*)native_object)->SetSubMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxMenuItem::SetSubMenu at call with 1 argument(s)");
 
@@ -9705,39 +9774,38 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::SetMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::SetMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9751,7 +9819,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 	
 	//Parameters for overload 0
 	zval* menu0 = 0;
-	void* object_pointer0_0 = 0;
+	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -9767,18 +9835,19 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(menu0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -9798,7 +9867,7 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 				php_printf("Executing wxMenuItem::SetMenu((wxMenu*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->SetMenu((wxMenu*) object_pointer0_0);
+				((wxMenuItem_php*)native_object)->SetMenu((wxMenu*) object_pointer0_0);
 
 				references->AddReference(menu0, "wxMenuItem::SetMenu at call with 1 argument(s)");
 
@@ -9826,39 +9895,38 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::SetItemLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::SetItemLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9903,7 +9971,7 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 				php_printf("Executing wxMenuItem::SetItemLabel(wxString(label0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->SetItemLabel(wxString(label0, wxConvUTF8));
+				((wxMenuItem_php*)native_object)->SetItemLabel(wxString(label0, wxConvUTF8));
 
 
 				return;
@@ -9930,39 +9998,38 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::SetHelp\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::SetHelp call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10007,7 +10074,7 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 				php_printf("Executing wxMenuItem::SetHelp(wxString(helpString0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->SetHelp(wxString(helpString0, wxConvUTF8));
+				((wxMenuItem_php*)native_object)->SetHelp(wxString(helpString0, wxConvUTF8));
 
 
 				return;
@@ -10034,39 +10101,38 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::IsSubMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::IsSubMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10105,7 +10171,7 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsSubMenu())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsSubMenu());
+				ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsSubMenu());
 
 
 				return;
@@ -10132,39 +10198,38 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::IsSeparator\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::IsSeparator call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10203,7 +10268,7 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsSeparator())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsSeparator());
+				ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsSeparator());
 
 
 				return;
@@ -10230,39 +10295,38 @@ PHP_METHOD(php_wxMenuItem, Check)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::Check\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::Check call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10306,7 +10370,7 @@ PHP_METHOD(php_wxMenuItem, Check)
 				php_printf("Executing wxMenuItem::Check()\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->Check();
+				((wxMenuItem_php*)native_object)->Check();
 
 
 				return;
@@ -10318,7 +10382,7 @@ PHP_METHOD(php_wxMenuItem, Check)
 				php_printf("Executing wxMenuItem::Check(check0)\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->Check(check0);
+				((wxMenuItem_php*)native_object)->Check(check0);
 
 
 				return;
@@ -10345,39 +10409,38 @@ PHP_METHOD(php_wxMenuItem, Enable)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::Enable\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::Enable call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10421,7 +10484,7 @@ PHP_METHOD(php_wxMenuItem, Enable)
 				php_printf("Executing wxMenuItem::Enable()\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->Enable();
+				((wxMenuItem_php*)native_object)->Enable();
 
 
 				return;
@@ -10433,7 +10496,7 @@ PHP_METHOD(php_wxMenuItem, Enable)
 				php_printf("Executing wxMenuItem::Enable(enable0)\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->Enable(enable0);
+				((wxMenuItem_php*)native_object)->Enable(enable0);
 
 
 				return;
@@ -10460,39 +10523,38 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetHelp\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetHelp call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10532,7 +10594,7 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenuItem_php*)_this)->GetHelp();
+				value_to_return0 = ((wxMenuItem_php*)native_object)->GetHelp();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -10564,39 +10626,38 @@ PHP_METHOD(php_wxMenuItem, GetId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10635,7 +10696,7 @@ PHP_METHOD(php_wxMenuItem, GetId)
 				php_printf("Executing RETURN_LONG(wxMenuItem::GetId())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenuItem_php*)_this)->GetId());
+				ZVAL_LONG(return_value, ((wxMenuItem_php*)native_object)->GetId());
 
 
 				return;
@@ -10662,39 +10723,38 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetItemLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetItemLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10734,7 +10794,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenuItem_php*)_this)->GetItemLabel();
+				value_to_return0 = ((wxMenuItem_php*)native_object)->GetItemLabel();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -10766,39 +10826,38 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetItemLabelText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetItemLabelText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10838,7 +10897,7 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenuItem_php*)_this)->GetItemLabelText();
+				value_to_return0 = ((wxMenuItem_php*)native_object)->GetItemLabelText();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -10870,39 +10929,38 @@ PHP_METHOD(php_wxMenuItem, GetKind)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetKind\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetKind call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10941,7 +10999,7 @@ PHP_METHOD(php_wxMenuItem, GetKind)
 				php_printf("Executing RETURN_LONG(wxMenuItem::GetKind())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMenuItem_php*)_this)->GetKind());
+				ZVAL_LONG(return_value, ((wxMenuItem_php*)native_object)->GetKind());
 
 
 				return;
@@ -10968,39 +11026,38 @@ PHP_METHOD(php_wxMenuItem, GetLabel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetLabel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetLabel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11040,7 +11097,7 @@ PHP_METHOD(php_wxMenuItem, GetLabel)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenuItem_php*)_this)->GetLabel();
+				value_to_return0 = ((wxMenuItem_php*)native_object)->GetLabel();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11071,39 +11128,38 @@ PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetLabelFromText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetLabelFromText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11182,39 +11238,38 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetLabelText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetLabelText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11293,39 +11348,38 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11365,7 +11419,7 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 				#endif
 
 				wxMenu_php* value_to_return0;
-				value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)_this)->GetMenu();
+				value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)native_object)->GetMenu();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -11381,11 +11435,11 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenu_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxMenu));
+					object_init_ex(return_value, php_wxMenu_entry);
+					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenuItem::GetMenu at call with 0 argument(s)");
 				}
 
@@ -11414,39 +11468,38 @@ PHP_METHOD(php_wxMenuItem, GetName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11486,7 +11539,7 @@ PHP_METHOD(php_wxMenuItem, GetName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenuItem_php*)_this)->GetName();
+				value_to_return0 = ((wxMenuItem_php*)native_object)->GetName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11518,39 +11571,38 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetSubMenu\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetSubMenu call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11590,7 +11642,7 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 				#endif
 
 				wxMenu_php* value_to_return0;
-				value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)_this)->GetSubMenu();
+				value_to_return0 = (wxMenu_php*) ((wxMenuItem_php*)native_object)->GetSubMenu();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -11606,11 +11658,11 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxMenu_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxMenu));
+					object_init_ex(return_value, php_wxMenu_entry);
+					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxMenuItem::GetSubMenu at call with 0 argument(s)");
 				}
 
@@ -11639,39 +11691,38 @@ PHP_METHOD(php_wxMenuItem, GetText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::GetText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11711,7 +11762,7 @@ PHP_METHOD(php_wxMenuItem, GetText)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxMenuItem_php*)_this)->GetText();
+				value_to_return0 = ((wxMenuItem_php*)native_object)->GetText();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11743,39 +11794,38 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::IsCheckable\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::IsCheckable call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11814,7 +11864,7 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsCheckable())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsCheckable());
+				ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsCheckable());
 
 
 				return;
@@ -11841,39 +11891,38 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::IsChecked\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::IsChecked call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11912,7 +11961,7 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsChecked())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsChecked());
+				ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsChecked());
 
 
 				return;
@@ -11939,39 +11988,38 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::IsEnabled\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::IsEnabled call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12010,7 +12058,7 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
 				php_printf("Executing RETURN_BOOL(wxMenuItem::IsEnabled())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMenuItem_php*)_this)->IsEnabled());
+				ZVAL_BOOL(return_value, ((wxMenuItem_php*)native_object)->IsEnabled());
 
 
 				return;
@@ -12037,39 +12085,38 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxMenuItem* current_object;
+	wxphp_object_type current_object_type;
+	wxMenuItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxMenuItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::SetBitmap\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxMenuItem::SetBitmap call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxMenuItem){
-				references = &((wxMenuItem_php*)_this)->references;
+			if(current_object_type == PHP_WXMENUITEM_TYPE){
+				references = &((wxMenuItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12083,7 +12130,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 	
 	//Parameters for overload 0
 	zval* bmp0 = 0;
-	void* object_pointer0_0 = 0;
+	wxBitmap* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -12099,18 +12146,19 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(bmp0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bmp0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(bmp0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxBitmap*) zend_object_store_get_object(bmp0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxBitmap*) zend_object_store_get_object(bmp0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'bmp' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'bmp' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -12130,7 +12178,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 				php_printf("Executing wxMenuItem::SetBitmap(*(wxBitmap*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMenuItem_php*)_this)->SetBitmap(*(wxBitmap*) object_pointer0_0);
+				((wxMenuItem_php*)native_object)->SetBitmap(*(wxBitmap*) object_pointer0_0);
 
 				references->AddReference(bmp0, "wxMenuItem::SetBitmap at call with 1 argument(s)");
 

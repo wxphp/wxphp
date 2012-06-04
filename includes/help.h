@@ -13,13 +13,13 @@
 #define WXPHP_HELP_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_help_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxToolTip;
-extern zend_class_entry *php_wxToolTip_entry;
+extern zend_class_entry* php_wxToolTip_entry;
 void php_wxToolTip_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxToolTip_php: public wxToolTip{
@@ -36,6 +36,19 @@ class wxToolTip_php: public wxToolTip{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxToolTip 
+{
+    zend_object zo;
+    wxToolTip_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxToolTip_free(void *object TSRMLS_DC);
+zend_object_value php_wxToolTip_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxToolTip_functions[] = {

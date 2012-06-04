@@ -13,13 +13,13 @@
 #define WXPHP_STREAMS_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_streams_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxDataOutputStream;
-extern zend_class_entry *php_wxDataOutputStream_entry;
+extern zend_class_entry* php_wxDataOutputStream_entry;
 void php_wxDataOutputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxDataOutputStream_php: public wxDataOutputStream{
@@ -36,6 +36,19 @@ class wxDataOutputStream_php: public wxDataOutputStream{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxDataOutputStream 
+{
+    zend_object zo;
+    wxDataOutputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxDataOutputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxDataOutputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataOutputStream_functions[] = {
 	PHP_ME(php_wxDataOutputStream, BigEndianOrdered, NULL, ZEND_ACC_PUBLIC)
@@ -48,8 +61,7 @@ static zend_function_entry php_wxDataOutputStream_functions[] = {
 };
 #endif
 
-extern int le_wxDataInputStream;
-extern zend_class_entry *php_wxDataInputStream_entry;
+extern zend_class_entry* php_wxDataInputStream_entry;
 void php_wxDataInputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxDataInputStream_php: public wxDataInputStream{
@@ -66,6 +78,19 @@ class wxDataInputStream_php: public wxDataInputStream{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxDataInputStream 
+{
+    zend_object zo;
+    wxDataInputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxDataInputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxDataInputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataInputStream_functions[] = {
 	PHP_ME(php_wxDataInputStream, ReadString, NULL, ZEND_ACC_PUBLIC)
@@ -78,8 +103,7 @@ static zend_function_entry php_wxDataInputStream_functions[] = {
 };
 #endif
 
-extern int le_wxStreamBase;
-extern zend_class_entry *php_wxStreamBase_entry;
+extern zend_class_entry* php_wxStreamBase_entry;
 void php_wxStreamBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxStreamBase_php: public wxStreamBase{
@@ -99,6 +123,19 @@ class wxStreamBase_php: public wxStreamBase{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxStreamBase 
+{
+    zend_object zo;
+    wxStreamBase_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxStreamBase_free(void *object TSRMLS_DC);
+zend_object_value php_wxStreamBase_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStreamBase_functions[] = {
 	PHP_ME(php_wxStreamBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -112,8 +149,7 @@ static zend_function_entry php_wxStreamBase_functions[] = {
 };
 #endif
 
-extern int le_wxOutputStream;
-extern zend_class_entry *php_wxOutputStream_entry;
+extern zend_class_entry* php_wxOutputStream_entry;
 void php_wxOutputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxOutputStream_php: public wxOutputStream{
@@ -130,6 +166,19 @@ class wxOutputStream_php: public wxOutputStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxOutputStream 
+{
+    zend_object zo;
+    wxOutputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxOutputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxOutputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxOutputStream_functions[] = {
@@ -150,8 +199,7 @@ static zend_function_entry php_wxOutputStream_functions[] = {
 };
 #endif
 
-extern int le_wxInputStream;
-extern zend_class_entry *php_wxInputStream_entry;
+extern zend_class_entry* php_wxInputStream_entry;
 void php_wxInputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxInputStream_php: public wxInputStream{
@@ -169,6 +217,19 @@ class wxInputStream_php: public wxInputStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxInputStream 
+{
+    zend_object zo;
+    wxInputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxInputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxInputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxInputStream_functions[] = {
@@ -192,8 +253,7 @@ static zend_function_entry php_wxInputStream_functions[] = {
 };
 #endif
 
-extern int le_wxFFileOutputStream;
-extern zend_class_entry *php_wxFFileOutputStream_entry;
+extern zend_class_entry* php_wxFFileOutputStream_entry;
 void php_wxFFileOutputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFFileOutputStream_php: public wxFFileOutputStream{
@@ -211,6 +271,19 @@ class wxFFileOutputStream_php: public wxFFileOutputStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFFileOutputStream 
+{
+    zend_object zo;
+    wxFFileOutputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFFileOutputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxFFileOutputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileOutputStream_functions[] = {
@@ -231,8 +304,7 @@ static zend_function_entry php_wxFFileOutputStream_functions[] = {
 };
 #endif
 
-extern int le_wxFileOutputStream;
-extern zend_class_entry *php_wxFileOutputStream_entry;
+extern zend_class_entry* php_wxFileOutputStream_entry;
 void php_wxFileOutputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileOutputStream_php: public wxFileOutputStream{
@@ -251,6 +323,19 @@ class wxFileOutputStream_php: public wxFileOutputStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileOutputStream 
+{
+    zend_object zo;
+    wxFileOutputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileOutputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileOutputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileOutputStream_functions[] = {
@@ -271,8 +356,7 @@ static zend_function_entry php_wxFileOutputStream_functions[] = {
 };
 #endif
 
-extern int le_wxFileInputStream;
-extern zend_class_entry *php_wxFileInputStream_entry;
+extern zend_class_entry* php_wxFileInputStream_entry;
 void php_wxFileInputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileInputStream_php: public wxFileInputStream{
@@ -291,6 +375,19 @@ class wxFileInputStream_php: public wxFileInputStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileInputStream 
+{
+    zend_object zo;
+    wxFileInputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileInputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileInputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileInputStream_functions[] = {
@@ -314,8 +411,7 @@ static zend_function_entry php_wxFileInputStream_functions[] = {
 };
 #endif
 
-extern int le_wxFFileInputStream;
-extern zend_class_entry *php_wxFFileInputStream_entry;
+extern zend_class_entry* php_wxFFileInputStream_entry;
 void php_wxFFileInputStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFFileInputStream_php: public wxFFileInputStream{
@@ -333,6 +429,19 @@ class wxFFileInputStream_php: public wxFFileInputStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFFileInputStream 
+{
+    zend_object zo;
+    wxFFileInputStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFFileInputStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxFFileInputStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileInputStream_functions[] = {
@@ -356,8 +465,7 @@ static zend_function_entry php_wxFFileInputStream_functions[] = {
 };
 #endif
 
-extern int le_wxFFileStream;
-extern zend_class_entry *php_wxFFileStream_entry;
+extern zend_class_entry* php_wxFFileStream_entry;
 void php_wxFFileStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFFileStream_php: public wxFFileStream{
@@ -374,6 +482,19 @@ class wxFFileStream_php: public wxFFileStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFFileStream 
+{
+    zend_object zo;
+    wxFFileStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFFileStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxFFileStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileStream_functions[] = {
@@ -403,8 +524,7 @@ static zend_function_entry php_wxFFileStream_functions[] = {
 };
 #endif
 
-extern int le_wxFileStream;
-extern zend_class_entry *php_wxFileStream_entry;
+extern zend_class_entry* php_wxFileStream_entry;
 void php_wxFileStream_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileStream_php: public wxFileStream{
@@ -421,6 +541,19 @@ class wxFileStream_php: public wxFileStream{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxFileStream 
+{
+    zend_object zo;
+    wxFileStream_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileStream_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileStream_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileStream_functions[] = {

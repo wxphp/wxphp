@@ -51,32 +51,33 @@
 #include "others.h"
 
 
-void php_wxConfigBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxConfigBase_free(void *object TSRMLS_DC) 
 {
+    zo_wxConfigBase* custom_object = (zo_wxConfigBase*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxConfigBase_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxConfigBase_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxConfigBase_php* object = static_cast<wxConfigBase_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -90,7 +91,43 @@ void php_wxConfigBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxConfigBase_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxConfigBase_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxConfigBase* custom_object;
+    custom_object = (zo_wxConfigBase*) emalloc(sizeof(zo_wxConfigBase));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXCONFIGBASE_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxConfigBase_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto wxConfigBase wxConfigBase::Create()
    Create a new config object and sets it as the current one. */
@@ -101,43 +138,42 @@ PHP_METHOD(php_wxConfigBase, Create)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::Create\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::Create call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -193,8 +229,8 @@ PHP_METHOD(php_wxConfigBase, Create)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxConfigBase_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxConfigBase));
+					object_init_ex(return_value, php_wxConfigBase_entry);
+					((zo_wxConfigBase*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxConfigBase_php*) value_to_return0;
 				}
 
 
@@ -236,11 +272,7 @@ bool wxConfigBase_php::DeleteAll()
 	zval function_name;
 	ZVAL_STRING(&function_name, "DeleteAll", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -250,7 +282,6 @@ bool wxConfigBase_php::DeleteAll()
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DeleteAll", 9, &return_value, 0, params TSRMLS_CC);
@@ -269,7 +300,7 @@ bool wxConfigBase_php::DeleteAll()
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteAll'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteAll'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -307,11 +338,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 	zval function_name;
 	ZVAL_STRING(&function_name, "DeleteEntry", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -330,7 +357,6 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DeleteEntry", 11, &return_value, 2, params TSRMLS_CC);
@@ -354,7 +380,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteEntry'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteEntry'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -392,11 +418,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 	zval function_name;
 	ZVAL_STRING(&function_name, "DeleteGroup", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -414,7 +436,6 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "DeleteGroup", 11, &return_value, 1, params TSRMLS_CC);
@@ -438,7 +459,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteGroup'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::DeleteGroup'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -459,43 +480,42 @@ PHP_METHOD(php_wxConfigBase, DontCreateOnDemand)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::DontCreateOnDemand\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::DontCreateOnDemand call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -561,43 +581,42 @@ PHP_METHOD(php_wxConfigBase, Exists)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::Exists\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::Exists call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -642,13 +661,13 @@ PHP_METHOD(php_wxConfigBase, Exists)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Exists(wxString(strName0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Exists(wxString(strName0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Exists(wxString(strName0, wxConvUTF8)));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Exists(wxString(strName0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Exists(wxString(strName0, wxConvUTF8)));
 				}
 
 
@@ -693,11 +712,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 	zval function_name;
 	ZVAL_STRING(&function_name, "Flush", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -712,7 +727,6 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Flush", 5, &return_value, 1, params TSRMLS_CC);
@@ -736,7 +750,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::Flush'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::Flush'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -757,43 +771,42 @@ PHP_METHOD(php_wxConfigBase, Get)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::Get\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::Get call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -854,8 +867,8 @@ PHP_METHOD(php_wxConfigBase, Get)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxConfigBase_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxConfigBase));
+					object_init_ex(return_value, php_wxConfigBase_entry);
+					((zo_wxConfigBase*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxConfigBase_php*) value_to_return0;
 				}
 
 
@@ -886,8 +899,8 @@ PHP_METHOD(php_wxConfigBase, Get)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxConfigBase_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxConfigBase));
+					object_init_ex(return_value, php_wxConfigBase_entry);
+					((zo_wxConfigBase*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxConfigBase_php*) value_to_return1;
 				}
 
 
@@ -916,43 +929,42 @@ PHP_METHOD(php_wxConfigBase, GetAppName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::GetAppName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::GetAppName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -992,13 +1004,13 @@ PHP_METHOD(php_wxConfigBase, GetAppName)
 				#endif
 
 				wxString value_to_return0;
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					value_to_return0 = ((wxFileConfig_php*)_this)->GetAppName();
+					value_to_return0 = ((wxFileConfig_php*)native_object)->GetAppName();
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					value_to_return0 = ((wxConfigBase_php*)_this)->GetAppName();
+					value_to_return0 = ((wxConfigBase_php*)native_object)->GetAppName();
 				}
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
@@ -1031,43 +1043,42 @@ PHP_METHOD(php_wxConfigBase, GetEntryType)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::GetEntryType\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::GetEntryType call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1112,13 +1123,13 @@ PHP_METHOD(php_wxConfigBase, GetEntryType)
 				php_printf("Executing RETURN_LONG(wxConfigBase::GetEntryType(wxString(name0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxFileConfig_php*)_this)->GetEntryType(wxString(name0, wxConvUTF8)));
+					ZVAL_LONG(return_value, ((wxFileConfig_php*)native_object)->GetEntryType(wxString(name0, wxConvUTF8)));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxConfigBase_php*)_this)->GetEntryType(wxString(name0, wxConvUTF8)));
+					ZVAL_LONG(return_value, ((wxConfigBase_php*)native_object)->GetEntryType(wxString(name0, wxConvUTF8)));
 				}
 
 
@@ -1163,11 +1174,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetFirstEntry", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1186,7 +1193,6 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFirstEntry", 13, &return_value, 2, params TSRMLS_CC);
@@ -1210,7 +1216,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetFirstEntry'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetFirstEntry'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1248,11 +1254,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetFirstGroup", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1271,7 +1273,6 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFirstGroup", 13, &return_value, 2, params TSRMLS_CC);
@@ -1295,7 +1296,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetFirstGroup'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetFirstGroup'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1333,11 +1334,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetNextEntry", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1356,7 +1353,6 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetNextEntry", 12, &return_value, 2, params TSRMLS_CC);
@@ -1380,7 +1376,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNextEntry'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNextEntry'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1418,11 +1414,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetNextGroup", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1441,7 +1433,6 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetNextGroup", 12, &return_value, 2, params TSRMLS_CC);
@@ -1465,7 +1456,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNextGroup'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNextGroup'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1503,11 +1494,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetNumberOfEntries", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1522,7 +1509,6 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetNumberOfEntries", 18, &return_value, 1, params TSRMLS_CC);
@@ -1546,7 +1532,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNumberOfEntries'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNumberOfEntries'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1584,11 +1570,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetNumberOfGroups", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1603,7 +1585,6 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetNumberOfGroups", 17, &return_value, 1, params TSRMLS_CC);
@@ -1627,7 +1608,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNumberOfGroups'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetNumberOfGroups'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1661,11 +1642,7 @@ const wxString& wxConfigBase_php::GetPath()const
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetPath", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1675,7 +1652,6 @@ const wxString& wxConfigBase_php::GetPath()const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetPath", 7, &return_value, 0, params TSRMLS_CC);
@@ -1694,7 +1670,7 @@ const wxString& wxConfigBase_php::GetPath()const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetPath'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::GetPath'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1715,43 +1691,42 @@ PHP_METHOD(php_wxConfigBase, GetVendorName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::GetVendorName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::GetVendorName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1791,13 +1766,13 @@ PHP_METHOD(php_wxConfigBase, GetVendorName)
 				#endif
 
 				wxString value_to_return0;
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					value_to_return0 = ((wxFileConfig_php*)_this)->GetVendorName();
+					value_to_return0 = ((wxFileConfig_php*)native_object)->GetVendorName();
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					value_to_return0 = ((wxConfigBase_php*)_this)->GetVendorName();
+					value_to_return0 = ((wxConfigBase_php*)native_object)->GetVendorName();
 				}
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
@@ -1846,11 +1821,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "HasEntry", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1868,7 +1839,6 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "HasEntry", 8, &return_value, 1, params TSRMLS_CC);
@@ -1892,7 +1862,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::HasEntry'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::HasEntry'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1929,11 +1899,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 	zval function_name;
 	ZVAL_STRING(&function_name, "HasGroup", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -1951,7 +1917,6 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "HasGroup", 8, &return_value, 1, params TSRMLS_CC);
@@ -1975,7 +1940,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::HasGroup'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::HasGroup'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -1996,43 +1961,42 @@ PHP_METHOD(php_wxConfigBase, IsExpandingEnvVars)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::IsExpandingEnvVars\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::IsExpandingEnvVars call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2071,13 +2035,13 @@ PHP_METHOD(php_wxConfigBase, IsExpandingEnvVars)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::IsExpandingEnvVars())\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->IsExpandingEnvVars());
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->IsExpandingEnvVars());
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->IsExpandingEnvVars());
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->IsExpandingEnvVars());
 				}
 
 
@@ -2105,43 +2069,42 @@ PHP_METHOD(php_wxConfigBase, IsRecordingDefaults)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::IsRecordingDefaults\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::IsRecordingDefaults call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2180,13 +2143,13 @@ PHP_METHOD(php_wxConfigBase, IsRecordingDefaults)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::IsRecordingDefaults())\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->IsRecordingDefaults());
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->IsRecordingDefaults());
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->IsRecordingDefaults());
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->IsRecordingDefaults());
 				}
 
 
@@ -2214,43 +2177,42 @@ PHP_METHOD(php_wxConfigBase, Read)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::Read\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::Read call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2566,13 +2528,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key0, wxConvUTF8), &string_arg0_1))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key0, wxConvUTF8), &string_arg0_1));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key0, wxConvUTF8), &string_arg0_1));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key0, wxConvUTF8), &string_arg0_1));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key0, wxConvUTF8), &string_arg0_1));
 				}
 
 				char* temp_string0_1;
@@ -2599,13 +2561,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key1, wxConvUTF8), &string_arg1_1, wxString(defaultVal1, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key1, wxConvUTF8), &string_arg1_1, wxString(defaultVal1, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key1, wxConvUTF8), &string_arg1_1, wxString(defaultVal1, wxConvUTF8)));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key1, wxConvUTF8), &string_arg1_1, wxString(defaultVal1, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key1, wxConvUTF8), &string_arg1_1, wxString(defaultVal1, wxConvUTF8)));
 				}
 
 				char* temp_string1_1;
@@ -2632,13 +2594,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				#endif
 
 				wxString value_to_return2;
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					value_to_return2 = ((wxFileConfig_php*)_this)->Read(wxString(key2, wxConvUTF8), wxString(defaultVal2, wxConvUTF8));
+					value_to_return2 = ((wxFileConfig_php*)native_object)->Read(wxString(key2, wxConvUTF8), wxString(defaultVal2, wxConvUTF8));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					value_to_return2 = ((wxConfigBase_php*)_this)->Read(wxString(key2, wxConvUTF8), wxString(defaultVal2, wxConvUTF8));
+					value_to_return2 = ((wxConfigBase_php*)native_object)->Read(wxString(key2, wxConvUTF8), wxString(defaultVal2, wxConvUTF8));
 				}
 				char* temp_string2;
 				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
@@ -2663,13 +2625,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key3, wxConvUTF8), (long*) l3))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key3, wxConvUTF8), (long*) l3));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key3, wxConvUTF8), (long*) l3));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key3, wxConvUTF8), (long*) l3));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key3, wxConvUTF8), (long*) l3));
 				}
 
 				size_t elements_returned3_1 = sizeof(l3)/sizeof(*l3);
@@ -2695,13 +2657,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key4, wxConvUTF8), (long*) l4, (long) defaultVal4))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key4, wxConvUTF8), (long*) l4, (long) defaultVal4));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key4, wxConvUTF8), (long*) l4, (long) defaultVal4));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key4, wxConvUTF8), (long*) l4, (long) defaultVal4));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key4, wxConvUTF8), (long*) l4, (long) defaultVal4));
 				}
 
 				size_t elements_returned4_1 = sizeof(l4)/sizeof(*l4);
@@ -2727,13 +2689,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key5, wxConvUTF8), d5))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key5, wxConvUTF8), d5));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key5, wxConvUTF8), d5));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key5, wxConvUTF8), d5));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key5, wxConvUTF8), d5));
 				}
 
 				size_t elements_returned5_1 = sizeof(d5)/sizeof(*d5);
@@ -2759,13 +2721,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key6, wxConvUTF8), d6, defaultVal6))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key6, wxConvUTF8), d6, defaultVal6));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key6, wxConvUTF8), d6, defaultVal6));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key6, wxConvUTF8), d6, defaultVal6));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key6, wxConvUTF8), d6, defaultVal6));
 				}
 
 				size_t elements_returned6_1 = sizeof(d6)/sizeof(*d6);
@@ -2791,13 +2753,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key7, wxConvUTF8), f7))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key7, wxConvUTF8), f7));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key7, wxConvUTF8), f7));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key7, wxConvUTF8), f7));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key7, wxConvUTF8), f7));
 				}
 
 				size_t elements_returned7_1 = sizeof(f7)/sizeof(*f7);
@@ -2823,13 +2785,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key8, wxConvUTF8), f8, defaultVal8))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key8, wxConvUTF8), f8, defaultVal8));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key8, wxConvUTF8), f8, defaultVal8));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key8, wxConvUTF8), f8, defaultVal8));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key8, wxConvUTF8), f8, defaultVal8));
 				}
 
 				size_t elements_returned8_1 = sizeof(f8)/sizeof(*f8);
@@ -2855,13 +2817,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key9, wxConvUTF8), b9))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key9, wxConvUTF8), b9));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key9, wxConvUTF8), b9));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key9, wxConvUTF8), b9));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key9, wxConvUTF8), b9));
 				}
 
 				size_t elements_returned9_1 = sizeof(b9)/sizeof(*b9);
@@ -2887,13 +2849,13 @@ PHP_METHOD(php_wxConfigBase, Read)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Read(wxString(key10, wxConvUTF8), d10, defaultVal10))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Read(wxString(key10, wxConvUTF8), d10, defaultVal10));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Read(wxString(key10, wxConvUTF8), d10, defaultVal10));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Read(wxString(key10, wxConvUTF8), d10, defaultVal10));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Read(wxString(key10, wxConvUTF8), d10, defaultVal10));
 				}
 
 				size_t elements_returned10_1 = sizeof(d10)/sizeof(*d10);
@@ -2927,43 +2889,42 @@ PHP_METHOD(php_wxConfigBase, ReadBool)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::ReadBool\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::ReadBool call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3009,13 +2970,13 @@ PHP_METHOD(php_wxConfigBase, ReadBool)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::ReadBool(wxString(key0, wxConvUTF8), defaultVal0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->ReadBool(wxString(key0, wxConvUTF8), defaultVal0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->ReadBool(wxString(key0, wxConvUTF8), defaultVal0));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->ReadBool(wxString(key0, wxConvUTF8), defaultVal0));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->ReadBool(wxString(key0, wxConvUTF8), defaultVal0));
 				}
 
 
@@ -3043,43 +3004,42 @@ PHP_METHOD(php_wxConfigBase, ReadDouble)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::ReadDouble\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::ReadDouble call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3125,13 +3085,13 @@ PHP_METHOD(php_wxConfigBase, ReadDouble)
 				php_printf("Executing RETURN_LONG(wxConfigBase::ReadDouble(wxString(key0, wxConvUTF8), defaultVal0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_DOUBLE(return_value, ((wxFileConfig_php*)_this)->ReadDouble(wxString(key0, wxConvUTF8), defaultVal0));
+					ZVAL_DOUBLE(return_value, ((wxFileConfig_php*)native_object)->ReadDouble(wxString(key0, wxConvUTF8), defaultVal0));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_DOUBLE(return_value, ((wxConfigBase_php*)_this)->ReadDouble(wxString(key0, wxConvUTF8), defaultVal0));
+					ZVAL_DOUBLE(return_value, ((wxConfigBase_php*)native_object)->ReadDouble(wxString(key0, wxConvUTF8), defaultVal0));
 				}
 
 
@@ -3159,43 +3119,42 @@ PHP_METHOD(php_wxConfigBase, ReadLong)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::ReadLong\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::ReadLong call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3241,13 +3200,13 @@ PHP_METHOD(php_wxConfigBase, ReadLong)
 				php_printf("Executing RETURN_LONG(wxConfigBase::ReadLong(wxString(key0, wxConvUTF8), (long) defaultVal0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxFileConfig_php*)_this)->ReadLong(wxString(key0, wxConvUTF8), (long) defaultVal0));
+					ZVAL_LONG(return_value, ((wxFileConfig_php*)native_object)->ReadLong(wxString(key0, wxConvUTF8), (long) defaultVal0));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxConfigBase_php*)_this)->ReadLong(wxString(key0, wxConvUTF8), (long) defaultVal0));
+					ZVAL_LONG(return_value, ((wxConfigBase_php*)native_object)->ReadLong(wxString(key0, wxConvUTF8), (long) defaultVal0));
 				}
 
 
@@ -3292,11 +3251,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 	zval function_name;
 	ZVAL_STRING(&function_name, "RenameEntry", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -3318,7 +3273,6 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "RenameEntry", 11, &return_value, 2, params TSRMLS_CC);
@@ -3342,7 +3296,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::RenameEntry'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::RenameEntry'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -3380,11 +3334,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 	zval function_name;
 	ZVAL_STRING(&function_name, "RenameGroup", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -3406,7 +3356,6 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "RenameGroup", 11, &return_value, 2, params TSRMLS_CC);
@@ -3430,7 +3379,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::RenameGroup'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::RenameGroup'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -3451,43 +3400,42 @@ PHP_METHOD(php_wxConfigBase, Set)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::Set\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::Set call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3501,7 +3449,7 @@ PHP_METHOD(php_wxConfigBase, Set)
 	
 	//Parameters for overload 0
 	zval* pConfig0 = 0;
-	void* object_pointer0_0 = 0;
+	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -3517,18 +3465,19 @@ PHP_METHOD(php_wxConfigBase, Set)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pConfig0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(pConfig0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pConfig0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(pConfig0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxFileConfig))
+					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(pConfig0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(pConfig0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxConfigBase*) argument_native_object;
+					if (!object_pointer0_0 || (argument_type != PHP_WXFILECONFIG_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'pConfig' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(pConfig0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'pConfig' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -3565,8 +3514,8 @@ PHP_METHOD(php_wxConfigBase, Set)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxConfigBase_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxConfigBase));
+					object_init_ex(return_value, php_wxConfigBase_entry);
+					((zo_wxConfigBase*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxConfigBase_php*) value_to_return1;
 				}
 
 
@@ -3595,43 +3544,42 @@ PHP_METHOD(php_wxConfigBase, SetExpandEnvVars)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::SetExpandEnvVars\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::SetExpandEnvVars call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3675,13 +3623,13 @@ PHP_METHOD(php_wxConfigBase, SetExpandEnvVars)
 				php_printf("Executing wxConfigBase::SetExpandEnvVars()\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					((wxFileConfig_php*)_this)->SetExpandEnvVars();
+					((wxFileConfig_php*)native_object)->SetExpandEnvVars();
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					((wxConfigBase_php*)_this)->SetExpandEnvVars();
+					((wxConfigBase_php*)native_object)->SetExpandEnvVars();
 				}
 
 
@@ -3694,13 +3642,13 @@ PHP_METHOD(php_wxConfigBase, SetExpandEnvVars)
 				php_printf("Executing wxConfigBase::SetExpandEnvVars(bDoIt0)\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					((wxFileConfig_php*)_this)->SetExpandEnvVars(bDoIt0);
+					((wxFileConfig_php*)native_object)->SetExpandEnvVars(bDoIt0);
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					((wxConfigBase_php*)_this)->SetExpandEnvVars(bDoIt0);
+					((wxConfigBase_php*)native_object)->SetExpandEnvVars(bDoIt0);
 				}
 
 
@@ -3745,11 +3693,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 	zval function_name;
 	ZVAL_STRING(&function_name, "SetPath", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -3767,7 +3711,6 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetPath", 7, &return_value, 1, params TSRMLS_CC);
@@ -3791,7 +3734,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxConfigBase::SetPath'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxConfigBase::SetPath'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
@@ -3812,43 +3755,42 @@ PHP_METHOD(php_wxConfigBase, SetRecordDefaults)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::SetRecordDefaults\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::SetRecordDefaults call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3892,13 +3834,13 @@ PHP_METHOD(php_wxConfigBase, SetRecordDefaults)
 				php_printf("Executing wxConfigBase::SetRecordDefaults()\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					((wxFileConfig_php*)_this)->SetRecordDefaults();
+					((wxFileConfig_php*)native_object)->SetRecordDefaults();
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					((wxConfigBase_php*)_this)->SetRecordDefaults();
+					((wxConfigBase_php*)native_object)->SetRecordDefaults();
 				}
 
 
@@ -3911,13 +3853,13 @@ PHP_METHOD(php_wxConfigBase, SetRecordDefaults)
 				php_printf("Executing wxConfigBase::SetRecordDefaults(bDoIt0)\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					((wxFileConfig_php*)_this)->SetRecordDefaults(bDoIt0);
+					((wxFileConfig_php*)native_object)->SetRecordDefaults(bDoIt0);
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					((wxConfigBase_php*)_this)->SetRecordDefaults(bDoIt0);
+					((wxConfigBase_php*)native_object)->SetRecordDefaults(bDoIt0);
 				}
 
 
@@ -3945,43 +3887,42 @@ PHP_METHOD(php_wxConfigBase, Write)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxConfigBase* current_object;
+	wxphp_object_type current_object_type;
+	wxConfigBase_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxConfigBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxConfigBase::Write\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxConfigBase::Write call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxConfigBase){
-				references = &((wxConfigBase_php*)_this)->references;
+			if(current_object_type == PHP_WXCONFIGBASE_TYPE){
+				references = &((wxConfigBase_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxFileConfig) && (!reference_type_found)){
-				references = &((wxFileConfig_php*)_this)->references;
+			if((current_object_type == PHP_WXFILECONFIG_TYPE) && (!reference_type_found)){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4094,13 +4035,13 @@ PHP_METHOD(php_wxConfigBase, Write)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Write(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Write(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Write(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8)));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Write(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Write(wxString(key0, wxConvUTF8), wxString(value0, wxConvUTF8)));
 				}
 
 
@@ -4120,13 +4061,13 @@ PHP_METHOD(php_wxConfigBase, Write)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Write(wxString(key1, wxConvUTF8), (long) value1))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Write(wxString(key1, wxConvUTF8), (long) value1));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Write(wxString(key1, wxConvUTF8), (long) value1));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Write(wxString(key1, wxConvUTF8), (long) value1));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Write(wxString(key1, wxConvUTF8), (long) value1));
 				}
 
 
@@ -4146,13 +4087,13 @@ PHP_METHOD(php_wxConfigBase, Write)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Write(wxString(key2, wxConvUTF8), value2))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Write(wxString(key2, wxConvUTF8), value2));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Write(wxString(key2, wxConvUTF8), value2));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Write(wxString(key2, wxConvUTF8), value2));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Write(wxString(key2, wxConvUTF8), value2));
 				}
 
 
@@ -4172,13 +4113,13 @@ PHP_METHOD(php_wxConfigBase, Write)
 				php_printf("Executing RETURN_BOOL(wxConfigBase::Write(wxString(key3, wxConvUTF8), value3))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Write(wxString(key3, wxConvUTF8), value3));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Write(wxString(key3, wxConvUTF8), value3));
 				}
-				else if(parent_rsrc_type == le_wxConfigBase)
+				else if(current_object_type == PHP_WXCONFIGBASE_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxConfigBase_php*)_this)->Write(wxString(key3, wxConvUTF8), value3));
+					ZVAL_BOOL(return_value, ((wxConfigBase_php*)native_object)->Write(wxString(key3, wxConvUTF8), value3));
 				}
 
 
@@ -4197,32 +4138,33 @@ PHP_METHOD(php_wxConfigBase, Write)
 }
 /* }}} */
 
-void php_wxDisplay_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxDisplay_free(void *object TSRMLS_DC) 
 {
+    zo_wxDisplay* custom_object = (zo_wxDisplay*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDisplay_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxDisplay_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxDisplay_php* object = static_cast<wxDisplay_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -4236,7 +4178,43 @@ void php_wxDisplay_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxDisplay_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxDisplay_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxDisplay* custom_object;
+    custom_object = (zo_wxDisplay*) emalloc(sizeof(zo_wxDisplay));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXDISPLAY_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDisplay_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto bool wxDisplay::ChangeMode(wxVideoMode mode)
    Changes the video mode of this display to the mode specified in the mode parameter. */
@@ -4247,39 +4225,38 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::ChangeMode\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::ChangeMode call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4293,7 +4270,7 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 	
 	//Parameters for overload 0
 	zval* mode0 = 0;
-	void* object_pointer0_0 = 0;
+	wxVideoMode* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -4309,18 +4286,19 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0, php_wxVideoMode_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(mode0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(mode0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(mode0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxVideoMode*) zend_object_store_get_object(mode0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxVideoMode*) zend_object_store_get_object(mode0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxVideoMode*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'mode' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(mode0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'mode' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -4340,7 +4318,7 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 				php_printf("Executing RETURN_BOOL(wxDisplay::ChangeMode())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxDisplay_php*)_this)->ChangeMode());
+				ZVAL_BOOL(return_value, ((wxDisplay_php*)native_object)->ChangeMode());
 
 
 				return;
@@ -4352,7 +4330,7 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 				php_printf("Executing RETURN_BOOL(wxDisplay::ChangeMode(*(wxVideoMode*) object_pointer0_0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxDisplay_php*)_this)->ChangeMode(*(wxVideoMode*) object_pointer0_0));
+				ZVAL_BOOL(return_value, ((wxDisplay_php*)native_object)->ChangeMode(*(wxVideoMode*) object_pointer0_0));
 
 				references->AddReference(mode0, "wxDisplay::ChangeMode at call with 1 argument(s)");
 
@@ -4380,39 +4358,38 @@ PHP_METHOD(php_wxDisplay, GetClientArea)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetClientArea\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetClientArea call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4452,11 +4429,11 @@ PHP_METHOD(php_wxDisplay, GetClientArea)
 				#endif
 
 				wxRect value_to_return0;
-				value_to_return0 = ((wxDisplay_php*)_this)->GetClientArea();
+				value_to_return0 = ((wxDisplay_php*)native_object)->GetClientArea();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
+				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
 
 
 				return;
@@ -4483,39 +4460,38 @@ PHP_METHOD(php_wxDisplay, GetCount)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetCount\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetCount call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4582,39 +4558,38 @@ PHP_METHOD(php_wxDisplay, GetCurrentMode)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetCurrentMode\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetCurrentMode call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4654,11 +4629,11 @@ PHP_METHOD(php_wxDisplay, GetCurrentMode)
 				#endif
 
 				wxVideoMode value_to_return0;
-				value_to_return0 = ((wxDisplay_php*)_this)->GetCurrentMode();
+				value_to_return0 = ((wxDisplay_php*)native_object)->GetCurrentMode();
 				void* ptr = safe_emalloc(1, sizeof(wxVideoMode_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxVideoMode));
 				object_init_ex(return_value, php_wxVideoMode_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxVideoMode));
+				((zo_wxVideoMode*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxVideoMode_php*) ptr;
 
 
 				return;
@@ -4685,39 +4660,38 @@ PHP_METHOD(php_wxDisplay, GetFromPoint)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetFromPoint\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetFromPoint call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4731,7 +4705,7 @@ PHP_METHOD(php_wxDisplay, GetFromPoint)
 	
 	//Parameters for overload 0
 	zval* pt0 = 0;
-	void* object_pointer0_0 = 0;
+	wxPoint* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -4747,18 +4721,19 @@ PHP_METHOD(php_wxDisplay, GetFromPoint)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(pt0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pt0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pt0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'pt' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'pt' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -4806,39 +4781,38 @@ PHP_METHOD(php_wxDisplay, GetFromWindow)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetFromWindow\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetFromWindow call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4852,7 +4826,7 @@ PHP_METHOD(php_wxDisplay, GetFromWindow)
 	
 	//Parameters for overload 0
 	zval* win0 = 0;
-	void* object_pointer0_0 = 0;
+	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -4868,18 +4842,19 @@ PHP_METHOD(php_wxDisplay, GetFromWindow)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(win0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxWebView && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxWindow*) argument_native_object;
+					if (!object_pointer0_0 || (argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'win' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'win' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -4927,39 +4902,38 @@ PHP_METHOD(php_wxDisplay, GetGeometry)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetGeometry\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetGeometry call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4999,11 +4973,11 @@ PHP_METHOD(php_wxDisplay, GetGeometry)
 				#endif
 
 				wxRect value_to_return0;
-				value_to_return0 = ((wxDisplay_php*)_this)->GetGeometry();
+				value_to_return0 = ((wxDisplay_php*)native_object)->GetGeometry();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
+				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
 
 
 				return;
@@ -5030,39 +5004,38 @@ PHP_METHOD(php_wxDisplay, GetName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::GetName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::GetName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5102,7 +5075,7 @@ PHP_METHOD(php_wxDisplay, GetName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxDisplay_php*)_this)->GetName();
+				value_to_return0 = ((wxDisplay_php*)native_object)->GetName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -5134,39 +5107,38 @@ PHP_METHOD(php_wxDisplay, IsPrimary)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxphp_object_type current_object_type;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDisplay::IsPrimary\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxDisplay::IsPrimary call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxDisplay){
-				references = &((wxDisplay_php*)_this)->references;
+			if(current_object_type == PHP_WXDISPLAY_TYPE){
+				references = &((wxDisplay_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5205,7 +5177,7 @@ PHP_METHOD(php_wxDisplay, IsPrimary)
 				php_printf("Executing RETURN_BOOL(wxDisplay::IsPrimary())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxDisplay_php*)_this)->IsPrimary());
+				ZVAL_BOOL(return_value, ((wxDisplay_php*)native_object)->IsPrimary());
 
 
 				return;
@@ -5232,17 +5204,15 @@ PHP_METHOD(php_wxDisplay, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxDisplay* current_object;
+	wxDisplay_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	long index0;
@@ -5276,9 +5246,9 @@ PHP_METHOD(php_wxDisplay, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxDisplay_php();
+				native_object = new wxDisplay_php();
 
-				((wxDisplay_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 1:
@@ -5287,9 +5257,9 @@ PHP_METHOD(php_wxDisplay, __construct)
 				php_printf("Executing __construct((unsigned int) index0)\n");
 				#endif
 
-				_this = new wxDisplay_php((unsigned int) index0);
+				native_object = new wxDisplay_php((unsigned int) index0);
 
-				((wxDisplay_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -5298,16 +5268,18 @@ PHP_METHOD(php_wxDisplay, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxDisplay);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxDisplay_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxDisplay*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxDisplay_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxDisplay_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -5321,32 +5293,33 @@ PHP_METHOD(php_wxDisplay, __construct)
 }
 /* }}} */
 
-void php_wxFileConfig_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxFileConfig_free(void *object TSRMLS_DC) 
 {
+    zo_wxFileConfig* custom_object = (zo_wxFileConfig*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFileConfig_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxFileConfig_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxFileConfig_php* object = static_cast<wxFileConfig_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -5360,7 +5333,43 @@ void php_wxFileConfig_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxFileConfig_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxFileConfig_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxFileConfig* custom_object;
+    custom_object = (zo_wxFileConfig*) emalloc(sizeof(zo_wxFileConfig));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFILECONFIG_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileConfig_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto bool wxFileConfig::DeleteAll()
    Delete the whole underlying object (disk file, registry key, ...). */
@@ -5371,39 +5380,38 @@ PHP_METHOD(php_wxFileConfig, DeleteAll)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::DeleteAll\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::DeleteAll call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5442,9 +5450,9 @@ PHP_METHOD(php_wxFileConfig, DeleteAll)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::DeleteAll())\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->DeleteAll());
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->DeleteAll());
 				}
 
 
@@ -5472,39 +5480,38 @@ PHP_METHOD(php_wxFileConfig, DeleteEntry)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::DeleteEntry\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::DeleteEntry call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5550,9 +5557,9 @@ PHP_METHOD(php_wxFileConfig, DeleteEntry)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::DeleteEntry(wxString(key0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->DeleteEntry(wxString(key0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->DeleteEntry(wxString(key0, wxConvUTF8)));
 				}
 
 
@@ -5565,9 +5572,9 @@ PHP_METHOD(php_wxFileConfig, DeleteEntry)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::DeleteEntry(wxString(key0, wxConvUTF8), bDeleteGroupIfEmpty0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->DeleteEntry(wxString(key0, wxConvUTF8), bDeleteGroupIfEmpty0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->DeleteEntry(wxString(key0, wxConvUTF8), bDeleteGroupIfEmpty0));
 				}
 
 
@@ -5595,39 +5602,38 @@ PHP_METHOD(php_wxFileConfig, DeleteGroup)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::DeleteGroup\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::DeleteGroup call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5672,9 +5678,9 @@ PHP_METHOD(php_wxFileConfig, DeleteGroup)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::DeleteGroup(wxString(key0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->DeleteGroup(wxString(key0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->DeleteGroup(wxString(key0, wxConvUTF8)));
 				}
 
 
@@ -5702,39 +5708,38 @@ PHP_METHOD(php_wxFileConfig, Flush)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::Flush\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::Flush call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5778,9 +5783,9 @@ PHP_METHOD(php_wxFileConfig, Flush)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::Flush())\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Flush());
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Flush());
 				}
 
 
@@ -5793,9 +5798,9 @@ PHP_METHOD(php_wxFileConfig, Flush)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::Flush(bCurrentOnly0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->Flush(bCurrentOnly0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->Flush(bCurrentOnly0));
 				}
 
 
@@ -5823,39 +5828,38 @@ PHP_METHOD(php_wxFileConfig, GetFirstEntry)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetFirstEntry\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetFirstEntry call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5907,9 +5911,9 @@ PHP_METHOD(php_wxFileConfig, GetFirstEntry)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::GetFirstEntry(string_arg0_0, (long&) index0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->GetFirstEntry(string_arg0_0, (long&) index0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetFirstEntry(string_arg0_0, (long&) index0));
 				}
 
 				char* temp_string0_0;
@@ -5944,39 +5948,38 @@ PHP_METHOD(php_wxFileConfig, GetFirstGroup)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetFirstGroup\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetFirstGroup call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6028,9 +6031,9 @@ PHP_METHOD(php_wxFileConfig, GetFirstGroup)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::GetFirstGroup(string_arg0_0, (long&) index0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->GetFirstGroup(string_arg0_0, (long&) index0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetFirstGroup(string_arg0_0, (long&) index0));
 				}
 
 				char* temp_string0_0;
@@ -6065,39 +6068,38 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetGlobalFile\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetGlobalFile call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6148,7 +6150,7 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxFileName));
+				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
 
@@ -6176,39 +6178,38 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFileName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetGlobalFileName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetGlobalFileName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6287,39 +6288,38 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetLocalFile\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetLocalFile call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6371,7 +6371,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxFileName));
+				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
 
@@ -6391,7 +6391,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxFileName));
+				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
 
@@ -6419,39 +6419,38 @@ PHP_METHOD(php_wxFileConfig, GetLocalFileName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetLocalFileName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetLocalFileName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6550,39 +6549,38 @@ PHP_METHOD(php_wxFileConfig, GetNextEntry)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetNextEntry\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetNextEntry call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6634,9 +6632,9 @@ PHP_METHOD(php_wxFileConfig, GetNextEntry)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::GetNextEntry(string_arg0_0, (long&) index0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->GetNextEntry(string_arg0_0, (long&) index0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetNextEntry(string_arg0_0, (long&) index0));
 				}
 
 				char* temp_string0_0;
@@ -6671,39 +6669,38 @@ PHP_METHOD(php_wxFileConfig, GetNextGroup)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetNextGroup\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetNextGroup call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6755,9 +6752,9 @@ PHP_METHOD(php_wxFileConfig, GetNextGroup)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::GetNextGroup(string_arg0_0, (long&) index0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->GetNextGroup(string_arg0_0, (long&) index0));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->GetNextGroup(string_arg0_0, (long&) index0));
 				}
 
 				char* temp_string0_0;
@@ -6792,39 +6789,38 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfEntries)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetNumberOfEntries\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetNumberOfEntries call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6868,9 +6864,9 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfEntries)
 				php_printf("Executing RETURN_LONG(wxFileConfig::GetNumberOfEntries())\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxFileConfig_php*)_this)->GetNumberOfEntries());
+					ZVAL_LONG(return_value, ((wxFileConfig_php*)native_object)->GetNumberOfEntries());
 				}
 
 
@@ -6883,9 +6879,9 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfEntries)
 				php_printf("Executing RETURN_LONG(wxFileConfig::GetNumberOfEntries(bRecursive0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxFileConfig_php*)_this)->GetNumberOfEntries(bRecursive0));
+					ZVAL_LONG(return_value, ((wxFileConfig_php*)native_object)->GetNumberOfEntries(bRecursive0));
 				}
 
 
@@ -6913,39 +6909,38 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfGroups)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetNumberOfGroups\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetNumberOfGroups call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6989,9 +6984,9 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfGroups)
 				php_printf("Executing RETURN_LONG(wxFileConfig::GetNumberOfGroups())\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxFileConfig_php*)_this)->GetNumberOfGroups());
+					ZVAL_LONG(return_value, ((wxFileConfig_php*)native_object)->GetNumberOfGroups());
 				}
 
 
@@ -7004,9 +6999,9 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfGroups)
 				php_printf("Executing RETURN_LONG(wxFileConfig::GetNumberOfGroups(bRecursive0))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_LONG(return_value, ((wxFileConfig_php*)_this)->GetNumberOfGroups(bRecursive0));
+					ZVAL_LONG(return_value, ((wxFileConfig_php*)native_object)->GetNumberOfGroups(bRecursive0));
 				}
 
 
@@ -7034,39 +7029,38 @@ PHP_METHOD(php_wxFileConfig, GetPath)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::GetPath\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::GetPath call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7106,9 +7100,9 @@ PHP_METHOD(php_wxFileConfig, GetPath)
 				#endif
 
 				wxString value_to_return0;
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					value_to_return0 = ((wxFileConfig_php*)_this)->GetPath();
+					value_to_return0 = ((wxFileConfig_php*)native_object)->GetPath();
 				}
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
@@ -7140,39 +7134,38 @@ PHP_METHOD(php_wxFileConfig, HasEntry)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::HasEntry\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::HasEntry call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7217,9 +7210,9 @@ PHP_METHOD(php_wxFileConfig, HasEntry)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::HasEntry(wxString(strName0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->HasEntry(wxString(strName0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->HasEntry(wxString(strName0, wxConvUTF8)));
 				}
 
 
@@ -7246,39 +7239,38 @@ PHP_METHOD(php_wxFileConfig, HasGroup)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::HasGroup\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::HasGroup call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7323,9 +7315,9 @@ PHP_METHOD(php_wxFileConfig, HasGroup)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::HasGroup(wxString(strName0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->HasGroup(wxString(strName0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->HasGroup(wxString(strName0, wxConvUTF8)));
 				}
 
 
@@ -7353,39 +7345,38 @@ PHP_METHOD(php_wxFileConfig, RenameEntry)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::RenameEntry\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::RenameEntry call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7432,9 +7423,9 @@ PHP_METHOD(php_wxFileConfig, RenameEntry)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::RenameEntry(wxString(oldName0, wxConvUTF8), wxString(newName0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->RenameEntry(wxString(oldName0, wxConvUTF8), wxString(newName0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->RenameEntry(wxString(oldName0, wxConvUTF8), wxString(newName0, wxConvUTF8)));
 				}
 
 
@@ -7462,39 +7453,38 @@ PHP_METHOD(php_wxFileConfig, RenameGroup)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::RenameGroup\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::RenameGroup call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7541,9 +7531,9 @@ PHP_METHOD(php_wxFileConfig, RenameGroup)
 				php_printf("Executing RETURN_BOOL(wxFileConfig::RenameGroup(wxString(oldName0, wxConvUTF8), wxString(newName0, wxConvUTF8)))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					ZVAL_BOOL(return_value, ((wxFileConfig_php*)_this)->RenameGroup(wxString(oldName0, wxConvUTF8), wxString(newName0, wxConvUTF8)));
+					ZVAL_BOOL(return_value, ((wxFileConfig_php*)native_object)->RenameGroup(wxString(oldName0, wxConvUTF8), wxString(newName0, wxConvUTF8)));
 				}
 
 
@@ -7571,39 +7561,38 @@ PHP_METHOD(php_wxFileConfig, SetPath)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::SetPath\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::SetPath call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7648,9 +7637,9 @@ PHP_METHOD(php_wxFileConfig, SetPath)
 				php_printf("Executing wxFileConfig::SetPath(wxString(strPath0, wxConvUTF8))\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					((wxFileConfig_php*)_this)->SetPath(wxString(strPath0, wxConvUTF8));
+					((wxFileConfig_php*)native_object)->SetPath(wxString(strPath0, wxConvUTF8));
 				}
 
 
@@ -7678,39 +7667,38 @@ PHP_METHOD(php_wxFileConfig, SetUmask)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFileConfig* current_object;
+	wxphp_object_type current_object_type;
+	wxFileConfig_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFileConfig*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFileConfig::SetUmask\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFileConfig::SetUmask call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFileConfig){
-				references = &((wxFileConfig_php*)_this)->references;
+			if(current_object_type == PHP_WXFILECONFIG_TYPE){
+				references = &((wxFileConfig_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7754,9 +7742,9 @@ PHP_METHOD(php_wxFileConfig, SetUmask)
 				php_printf("Executing wxFileConfig::SetUmask((int) mode0)\n\n");
 				#endif
 
-				if(parent_rsrc_type == le_wxFileConfig)
+				if(current_object_type == PHP_WXFILECONFIG_TYPE)
 				{
-					((wxFileConfig_php*)_this)->SetUmask((int) mode0);
+					((wxFileConfig_php*)native_object)->SetUmask((int) mode0);
 				}
 
 
@@ -7775,32 +7763,33 @@ PHP_METHOD(php_wxFileConfig, SetUmask)
 }
 /* }}} */
 
-void php_wxFontMapper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxFontMapper_free(void *object TSRMLS_DC) 
 {
+    zo_wxFontMapper* custom_object = (zo_wxFontMapper*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxFontMapper_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxFontMapper_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxFontMapper_php* object = static_cast<wxFontMapper_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -7814,7 +7803,43 @@ void php_wxFontMapper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxFontMapper_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxFontMapper_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxFontMapper* custom_object;
+    custom_object = (zo_wxFontMapper*) emalloc(sizeof(zo_wxFontMapper));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXFONTMAPPER_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontMapper_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto wxFontEncoding wxFontMapper::CharsetToEncoding(string charset, bool interactive)
    Returns the encoding for the given charset (in the form of RFC 2046) or wxFONTENCODING_SYSTEM if couldn't decode it. */
@@ -7825,39 +7850,38 @@ PHP_METHOD(php_wxFontMapper, CharsetToEncoding)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::CharsetToEncoding\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::CharsetToEncoding call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7903,7 +7927,7 @@ PHP_METHOD(php_wxFontMapper, CharsetToEncoding)
 				php_printf("Executing RETURN_LONG(wxFontMapper::CharsetToEncoding(wxString(charset0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxFontMapper_php*)_this)->CharsetToEncoding(wxString(charset0, wxConvUTF8)));
+				ZVAL_LONG(return_value, ((wxFontMapper_php*)native_object)->CharsetToEncoding(wxString(charset0, wxConvUTF8)));
 
 
 				return;
@@ -7915,7 +7939,7 @@ PHP_METHOD(php_wxFontMapper, CharsetToEncoding)
 				php_printf("Executing RETURN_LONG(wxFontMapper::CharsetToEncoding(wxString(charset0, wxConvUTF8), interactive0))\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxFontMapper_php*)_this)->CharsetToEncoding(wxString(charset0, wxConvUTF8), interactive0));
+				ZVAL_LONG(return_value, ((wxFontMapper_php*)native_object)->CharsetToEncoding(wxString(charset0, wxConvUTF8), interactive0));
 
 
 				return;
@@ -7942,39 +7966,38 @@ PHP_METHOD(php_wxFontMapper, Get)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::Get\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::Get call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8030,8 +8053,8 @@ PHP_METHOD(php_wxFontMapper, Get)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxFontMapper_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxFontMapper));
+					object_init_ex(return_value, php_wxFontMapper_entry);
+					((zo_wxFontMapper*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFontMapper_php*) value_to_return0;
 				}
 
 
@@ -8060,39 +8083,38 @@ PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::GetAltForEncoding\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::GetAltForEncoding call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8144,7 +8166,7 @@ PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
 				php_printf("Executing RETURN_BOOL(wxFontMapper::GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxFontMapper_php*)_this)->GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0));
+				ZVAL_BOOL(return_value, ((wxFontMapper_php*)native_object)->GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0));
 
 				size_t elements_returned0_1 = sizeof(alt_encoding0)/sizeof(*alt_encoding0);
 				array_init(alt_encoding0_ref);
@@ -8162,7 +8184,7 @@ PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
 				php_printf("Executing RETURN_BOOL(wxFontMapper::GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0, wxString(facename0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxFontMapper_php*)_this)->GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0, wxString(facename0, wxConvUTF8)));
+				ZVAL_BOOL(return_value, ((wxFontMapper_php*)native_object)->GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0, wxString(facename0, wxConvUTF8)));
 
 				size_t elements_returned0_1 = sizeof(alt_encoding0)/sizeof(*alt_encoding0);
 				array_init(alt_encoding0_ref);
@@ -8180,7 +8202,7 @@ PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
 				php_printf("Executing RETURN_BOOL(wxFontMapper::GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0, wxString(facename0, wxConvUTF8), interactive0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxFontMapper_php*)_this)->GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0, wxString(facename0, wxConvUTF8), interactive0));
+				ZVAL_BOOL(return_value, ((wxFontMapper_php*)native_object)->GetAltForEncoding((wxFontEncoding) encoding0, (wxFontEncoding*) alt_encoding0, wxString(facename0, wxConvUTF8), interactive0));
 
 				size_t elements_returned0_1 = sizeof(alt_encoding0)/sizeof(*alt_encoding0);
 				array_init(alt_encoding0_ref);
@@ -8213,39 +8235,38 @@ PHP_METHOD(php_wxFontMapper, GetEncoding)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::GetEncoding\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::GetEncoding call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8317,39 +8338,38 @@ PHP_METHOD(php_wxFontMapper, GetEncodingDescription)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::GetEncodingDescription\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::GetEncodingDescription call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8427,39 +8447,38 @@ PHP_METHOD(php_wxFontMapper, GetEncodingFromName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::GetEncodingFromName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::GetEncodingFromName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8532,39 +8551,38 @@ PHP_METHOD(php_wxFontMapper, GetEncodingName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::GetEncodingName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::GetEncodingName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8642,39 +8660,38 @@ PHP_METHOD(php_wxFontMapper, GetSupportedEncodingsCount)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::GetSupportedEncodingsCount\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::GetSupportedEncodingsCount call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8741,39 +8758,38 @@ PHP_METHOD(php_wxFontMapper, IsEncodingAvailable)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::IsEncodingAvailable\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::IsEncodingAvailable call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8819,7 +8835,7 @@ PHP_METHOD(php_wxFontMapper, IsEncodingAvailable)
 				php_printf("Executing RETURN_BOOL(wxFontMapper::IsEncodingAvailable((wxFontEncoding) encoding0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxFontMapper_php*)_this)->IsEncodingAvailable((wxFontEncoding) encoding0));
+				ZVAL_BOOL(return_value, ((wxFontMapper_php*)native_object)->IsEncodingAvailable((wxFontEncoding) encoding0));
 
 
 				return;
@@ -8831,7 +8847,7 @@ PHP_METHOD(php_wxFontMapper, IsEncodingAvailable)
 				php_printf("Executing RETURN_BOOL(wxFontMapper::IsEncodingAvailable((wxFontEncoding) encoding0, wxString(facename0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxFontMapper_php*)_this)->IsEncodingAvailable((wxFontEncoding) encoding0, wxString(facename0, wxConvUTF8)));
+				ZVAL_BOOL(return_value, ((wxFontMapper_php*)native_object)->IsEncodingAvailable((wxFontEncoding) encoding0, wxString(facename0, wxConvUTF8)));
 
 
 				return;
@@ -8858,39 +8874,38 @@ PHP_METHOD(php_wxFontMapper, Set)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::Set\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::Set call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8904,7 +8919,7 @@ PHP_METHOD(php_wxFontMapper, Set)
 	
 	//Parameters for overload 0
 	zval* mapper0 = 0;
-	void* object_pointer0_0 = 0;
+	wxFontMapper* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -8920,18 +8935,19 @@ PHP_METHOD(php_wxFontMapper, Set)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mapper0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(mapper0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(mapper0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(mapper0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxFontMapper*) zend_object_store_get_object(mapper0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxFontMapper*) zend_object_store_get_object(mapper0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxFontMapper*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'mapper' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(mapper0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'mapper' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -8968,8 +8984,8 @@ PHP_METHOD(php_wxFontMapper, Set)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxFontMapper_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxFontMapper));
+					object_init_ex(return_value, php_wxFontMapper_entry);
+					((zo_wxFontMapper*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFontMapper_php*) value_to_return1;
 				}
 
 
@@ -8998,39 +9014,38 @@ PHP_METHOD(php_wxFontMapper, SetConfigPath)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::SetConfigPath\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::SetConfigPath call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9075,7 +9090,7 @@ PHP_METHOD(php_wxFontMapper, SetConfigPath)
 				php_printf("Executing wxFontMapper::SetConfigPath(wxString(prefix0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxFontMapper_php*)_this)->SetConfigPath(wxString(prefix0, wxConvUTF8));
+				((wxFontMapper_php*)native_object)->SetConfigPath(wxString(prefix0, wxConvUTF8));
 
 
 				return;
@@ -9102,39 +9117,38 @@ PHP_METHOD(php_wxFontMapper, SetDialogParent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::SetDialogParent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::SetDialogParent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9148,7 +9162,7 @@ PHP_METHOD(php_wxFontMapper, SetDialogParent)
 	
 	//Parameters for overload 0
 	zval* parent0 = 0;
-	void* object_pointer0_0 = 0;
+	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -9164,18 +9178,19 @@ PHP_METHOD(php_wxFontMapper, SetDialogParent)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(parent0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxWebView && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxWindow*) argument_native_object;
+					if (!object_pointer0_0 || (argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -9195,7 +9210,7 @@ PHP_METHOD(php_wxFontMapper, SetDialogParent)
 				php_printf("Executing wxFontMapper::SetDialogParent((wxWindow*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxFontMapper_php*)_this)->SetDialogParent((wxWindow*) object_pointer0_0);
+				((wxFontMapper_php*)native_object)->SetDialogParent((wxWindow*) object_pointer0_0);
 
 				references->AddReference(parent0, "wxFontMapper::SetDialogParent at call with 1 argument(s)");
 
@@ -9223,39 +9238,38 @@ PHP_METHOD(php_wxFontMapper, SetDialogTitle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxphp_object_type current_object_type;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxFontMapper::SetDialogTitle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxFontMapper::SetDialogTitle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxFontMapper){
-				references = &((wxFontMapper_php*)_this)->references;
+			if(current_object_type == PHP_WXFONTMAPPER_TYPE){
+				references = &((wxFontMapper_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9300,7 +9314,7 @@ PHP_METHOD(php_wxFontMapper, SetDialogTitle)
 				php_printf("Executing wxFontMapper::SetDialogTitle(wxString(title0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxFontMapper_php*)_this)->SetDialogTitle(wxString(title0, wxConvUTF8));
+				((wxFontMapper_php*)native_object)->SetDialogTitle(wxString(title0, wxConvUTF8));
 
 
 				return;
@@ -9327,17 +9341,15 @@ PHP_METHOD(php_wxFontMapper, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxFontMapper* current_object;
+	wxFontMapper_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9366,9 +9378,9 @@ PHP_METHOD(php_wxFontMapper, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxFontMapper_php();
+				native_object = new wxFontMapper_php();
 
-				((wxFontMapper_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -9377,16 +9389,18 @@ PHP_METHOD(php_wxFontMapper, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxFontMapper);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxFontMapper_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxFontMapper*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxFontMapper_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxFontMapper_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -9400,32 +9414,33 @@ PHP_METHOD(php_wxFontMapper, __construct)
 }
 /* }}} */
 
-void php_wxPlatformInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxPlatformInfo_free(void *object TSRMLS_DC) 
 {
+    zo_wxPlatformInfo* custom_object = (zo_wxPlatformInfo*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxPlatformInfo_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxPlatformInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxPlatformInfo_php* object = static_cast<wxPlatformInfo_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -9439,7 +9454,43 @@ void php_wxPlatformInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxPlatformInfo_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxPlatformInfo_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxPlatformInfo* custom_object;
+    custom_object = (zo_wxPlatformInfo*) emalloc(sizeof(zo_wxPlatformInfo));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXPLATFORMINFO_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPlatformInfo_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxPlatformInfo::wxPlatformInfo()
    Initializes the instance with the values corresponding to the currently running platform. */
@@ -9450,17 +9501,15 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9516,9 +9565,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxPlatformInfo_php();
+				native_object = new wxPlatformInfo_php();
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -9534,9 +9583,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 2:
@@ -9545,9 +9594,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 3:
@@ -9556,9 +9605,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 4:
@@ -9567,9 +9616,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 5:
@@ -9578,9 +9627,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 6:
@@ -9589,9 +9638,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 7:
@@ -9600,9 +9649,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1, (wxArchitecture) arch1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1, (wxArchitecture) arch1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1, (wxArchitecture) arch1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 8:
@@ -9611,9 +9660,9 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 				php_printf("Executing __construct((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1, (wxArchitecture) arch1, (wxEndianness) endian1)\n");
 				#endif
 
-				_this = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1, (wxArchitecture) arch1, (wxEndianness) endian1);
+				native_object = new wxPlatformInfo_php((wxPortId) pid1, (int) tkMajor1, (int) tkMinor1, (wxOperatingSystemId) id1, (int) osMajor1, (int) osMinor1, (wxArchitecture) arch1, (wxEndianness) endian1);
 
-				((wxPlatformInfo_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -9622,16 +9671,18 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxPlatformInfo);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxPlatformInfo_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxPlatformInfo_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxPlatformInfo_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -9654,39 +9705,38 @@ PHP_METHOD(php_wxPlatformInfo, CheckOSVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::CheckOSVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::CheckOSVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9731,7 +9781,7 @@ PHP_METHOD(php_wxPlatformInfo, CheckOSVersion)
 				php_printf("Executing RETURN_BOOL(wxPlatformInfo::CheckOSVersion((int) major0, (int) minor0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)_this)->CheckOSVersion((int) major0, (int) minor0));
+				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)native_object)->CheckOSVersion((int) major0, (int) minor0));
 
 
 				return;
@@ -9758,39 +9808,38 @@ PHP_METHOD(php_wxPlatformInfo, CheckToolkitVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::CheckToolkitVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::CheckToolkitVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9835,7 +9884,7 @@ PHP_METHOD(php_wxPlatformInfo, CheckToolkitVersion)
 				php_printf("Executing RETURN_BOOL(wxPlatformInfo::CheckToolkitVersion((int) major0, (int) minor0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)_this)->CheckToolkitVersion((int) major0, (int) minor0));
+				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)native_object)->CheckToolkitVersion((int) major0, (int) minor0));
 
 
 				return;
@@ -9862,39 +9911,38 @@ PHP_METHOD(php_wxPlatformInfo, Get)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::Get\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::Get call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9948,7 +9996,7 @@ PHP_METHOD(php_wxPlatformInfo, Get)
 				}
 				else{
 					object_init_ex(return_value,php_wxPlatformInfo_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxPlatformInfo));
+					((zo_wxPlatformInfo*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPlatformInfo_php*) value_to_return0;
 				}
 
 
@@ -9977,39 +10025,38 @@ PHP_METHOD(php_wxPlatformInfo, GetArch)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetArch\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetArch call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10082,39 +10129,38 @@ PHP_METHOD(php_wxPlatformInfo, GetArchName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetArchName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetArchName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10174,7 +10220,7 @@ PHP_METHOD(php_wxPlatformInfo, GetArchName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetArchName();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetArchName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -10232,39 +10278,38 @@ PHP_METHOD(php_wxPlatformInfo, GetArchitecture)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetArchitecture\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetArchitecture call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10303,7 +10348,7 @@ PHP_METHOD(php_wxPlatformInfo, GetArchitecture)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetArchitecture())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetArchitecture());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetArchitecture());
 
 
 				return;
@@ -10330,39 +10375,38 @@ PHP_METHOD(php_wxPlatformInfo, GetDesktopEnvironment)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetDesktopEnvironment\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetDesktopEnvironment call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10402,7 +10446,7 @@ PHP_METHOD(php_wxPlatformInfo, GetDesktopEnvironment)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetDesktopEnvironment();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetDesktopEnvironment();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -10434,39 +10478,38 @@ PHP_METHOD(php_wxPlatformInfo, GetEndianness)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetEndianness\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetEndianness call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10526,7 +10569,7 @@ PHP_METHOD(php_wxPlatformInfo, GetEndianness)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetEndianness())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetEndianness());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetEndianness());
 
 
 				return;
@@ -10573,39 +10616,38 @@ PHP_METHOD(php_wxPlatformInfo, GetEndiannessName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetEndiannessName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetEndiannessName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10665,7 +10707,7 @@ PHP_METHOD(php_wxPlatformInfo, GetEndiannessName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetEndiannessName();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetEndiannessName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -10723,39 +10765,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOSMajorVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOSMajorVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOSMajorVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10794,7 +10835,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOSMajorVersion)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetOSMajorVersion())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetOSMajorVersion());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetOSMajorVersion());
 
 
 				return;
@@ -10821,39 +10862,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOSMinorVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOSMinorVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOSMinorVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10892,7 +10932,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOSMinorVersion)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetOSMinorVersion())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetOSMinorVersion());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetOSMinorVersion());
 
 
 				return;
@@ -10919,39 +10959,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDescription)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOperatingSystemDescription\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOperatingSystemDescription call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10991,7 +11030,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDescription)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetOperatingSystemDescription();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetOperatingSystemDescription();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11023,39 +11062,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDirectory)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOperatingSystemDirectory\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOperatingSystemDirectory call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11128,39 +11166,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemFamilyName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOperatingSystemFamilyName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOperatingSystemFamilyName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11220,7 +11257,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemFamilyName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetOperatingSystemFamilyName();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetOperatingSystemFamilyName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11278,39 +11315,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOperatingSystemId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOperatingSystemId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11370,7 +11406,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemId)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetOperatingSystemId())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetOperatingSystemId());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetOperatingSystemId());
 
 
 				return;
@@ -11417,39 +11453,38 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemIdName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetOperatingSystemIdName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetOperatingSystemIdName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11509,7 +11544,7 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemIdName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetOperatingSystemIdName();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetOperatingSystemIdName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11567,39 +11602,38 @@ PHP_METHOD(php_wxPlatformInfo, GetPortId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetPortId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetPortId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11659,7 +11693,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortId)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetPortId())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetPortId());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetPortId());
 
 
 				return;
@@ -11706,39 +11740,38 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetPortIdName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetPortIdName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11799,7 +11832,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetPortIdName();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetPortIdName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -11857,39 +11890,38 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdShortName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetPortIdShortName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetPortIdShortName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -11950,7 +11982,7 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdShortName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxPlatformInfo_php*)_this)->GetPortIdShortName();
+				value_to_return0 = ((wxPlatformInfo_php*)native_object)->GetPortIdShortName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -12008,39 +12040,38 @@ PHP_METHOD(php_wxPlatformInfo, GetToolkitMajorVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetToolkitMajorVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetToolkitMajorVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12079,7 +12110,7 @@ PHP_METHOD(php_wxPlatformInfo, GetToolkitMajorVersion)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetToolkitMajorVersion())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetToolkitMajorVersion());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetToolkitMajorVersion());
 
 
 				return;
@@ -12106,39 +12137,38 @@ PHP_METHOD(php_wxPlatformInfo, GetToolkitMinorVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::GetToolkitMinorVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::GetToolkitMinorVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12177,7 +12207,7 @@ PHP_METHOD(php_wxPlatformInfo, GetToolkitMinorVersion)
 				php_printf("Executing RETURN_LONG(wxPlatformInfo::GetToolkitMinorVersion())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)_this)->GetToolkitMinorVersion());
+				ZVAL_LONG(return_value, ((wxPlatformInfo_php*)native_object)->GetToolkitMinorVersion());
 
 
 				return;
@@ -12204,39 +12234,38 @@ PHP_METHOD(php_wxPlatformInfo, IsOk)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::IsOk\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::IsOk call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12275,7 +12304,7 @@ PHP_METHOD(php_wxPlatformInfo, IsOk)
 				php_printf("Executing RETURN_BOOL(wxPlatformInfo::IsOk())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)_this)->IsOk());
+				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)native_object)->IsOk());
 
 
 				return;
@@ -12302,39 +12331,38 @@ PHP_METHOD(php_wxPlatformInfo, IsUsingUniversalWidgets)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::IsUsingUniversalWidgets\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::IsUsingUniversalWidgets call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12373,7 +12401,7 @@ PHP_METHOD(php_wxPlatformInfo, IsUsingUniversalWidgets)
 				php_printf("Executing RETURN_BOOL(wxPlatformInfo::IsUsingUniversalWidgets())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)_this)->IsUsingUniversalWidgets());
+				ZVAL_BOOL(return_value, ((wxPlatformInfo_php*)native_object)->IsUsingUniversalWidgets());
 
 
 				return;
@@ -12400,39 +12428,38 @@ PHP_METHOD(php_wxPlatformInfo, SetArchitecture)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetArchitecture\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetArchitecture call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12476,7 +12503,7 @@ PHP_METHOD(php_wxPlatformInfo, SetArchitecture)
 				php_printf("Executing wxPlatformInfo::SetArchitecture((wxArchitecture) n0)\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetArchitecture((wxArchitecture) n0);
+				((wxPlatformInfo_php*)native_object)->SetArchitecture((wxArchitecture) n0);
 
 
 				return;
@@ -12503,39 +12530,38 @@ PHP_METHOD(php_wxPlatformInfo, SetDesktopEnvironment)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetDesktopEnvironment\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetDesktopEnvironment call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12580,7 +12606,7 @@ PHP_METHOD(php_wxPlatformInfo, SetDesktopEnvironment)
 				php_printf("Executing wxPlatformInfo::SetDesktopEnvironment(wxString(de0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetDesktopEnvironment(wxString(de0, wxConvUTF8));
+				((wxPlatformInfo_php*)native_object)->SetDesktopEnvironment(wxString(de0, wxConvUTF8));
 
 
 				return;
@@ -12607,39 +12633,38 @@ PHP_METHOD(php_wxPlatformInfo, SetEndianness)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetEndianness\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetEndianness call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12683,7 +12708,7 @@ PHP_METHOD(php_wxPlatformInfo, SetEndianness)
 				php_printf("Executing wxPlatformInfo::SetEndianness((wxEndianness) n0)\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetEndianness((wxEndianness) n0);
+				((wxPlatformInfo_php*)native_object)->SetEndianness((wxEndianness) n0);
 
 
 				return;
@@ -12710,39 +12735,38 @@ PHP_METHOD(php_wxPlatformInfo, SetOSVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetOSVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetOSVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12787,7 +12811,7 @@ PHP_METHOD(php_wxPlatformInfo, SetOSVersion)
 				php_printf("Executing wxPlatformInfo::SetOSVersion((int) major0, (int) minor0)\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetOSVersion((int) major0, (int) minor0);
+				((wxPlatformInfo_php*)native_object)->SetOSVersion((int) major0, (int) minor0);
 
 
 				return;
@@ -12814,39 +12838,38 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemDescription)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetOperatingSystemDescription\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetOperatingSystemDescription call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12891,7 +12914,7 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemDescription)
 				php_printf("Executing wxPlatformInfo::SetOperatingSystemDescription(wxString(desc0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetOperatingSystemDescription(wxString(desc0, wxConvUTF8));
+				((wxPlatformInfo_php*)native_object)->SetOperatingSystemDescription(wxString(desc0, wxConvUTF8));
 
 
 				return;
@@ -12918,39 +12941,38 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetOperatingSystemId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetOperatingSystemId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -12994,7 +13016,7 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemId)
 				php_printf("Executing wxPlatformInfo::SetOperatingSystemId((wxOperatingSystemId) n0)\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetOperatingSystemId((wxOperatingSystemId) n0);
+				((wxPlatformInfo_php*)native_object)->SetOperatingSystemId((wxOperatingSystemId) n0);
 
 
 				return;
@@ -13021,39 +13043,38 @@ PHP_METHOD(php_wxPlatformInfo, SetPortId)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetPortId\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetPortId call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13097,7 +13118,7 @@ PHP_METHOD(php_wxPlatformInfo, SetPortId)
 				php_printf("Executing wxPlatformInfo::SetPortId((wxPortId) n0)\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetPortId((wxPortId) n0);
+				((wxPlatformInfo_php*)native_object)->SetPortId((wxPortId) n0);
 
 
 				return;
@@ -13124,39 +13145,38 @@ PHP_METHOD(php_wxPlatformInfo, SetToolkitVersion)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxPlatformInfo* current_object;
+	wxphp_object_type current_object_type;
+	wxPlatformInfo_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxPlatformInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPlatformInfo::SetToolkitVersion\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxPlatformInfo::SetToolkitVersion call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxPlatformInfo){
-				references = &((wxPlatformInfo_php*)_this)->references;
+			if(current_object_type == PHP_WXPLATFORMINFO_TYPE){
+				references = &((wxPlatformInfo_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13201,7 +13221,7 @@ PHP_METHOD(php_wxPlatformInfo, SetToolkitVersion)
 				php_printf("Executing wxPlatformInfo::SetToolkitVersion((int) major0, (int) minor0)\n\n");
 				#endif
 
-				((wxPlatformInfo_php*)_this)->SetToolkitVersion((int) major0, (int) minor0);
+				((wxPlatformInfo_php*)native_object)->SetToolkitVersion((int) major0, (int) minor0);
 
 
 				return;
@@ -13219,32 +13239,33 @@ PHP_METHOD(php_wxPlatformInfo, SetToolkitVersion)
 }
 /* }}} */
 
-void php_wxSystemSettings_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxSystemSettings_free(void *object TSRMLS_DC) 
 {
+    zo_wxSystemSettings* custom_object = (zo_wxSystemSettings*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxSystemSettings_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxSystemSettings_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxSystemSettings_php* object = static_cast<wxSystemSettings_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -13258,7 +13279,43 @@ void php_wxSystemSettings_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxSystemSettings_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxSystemSettings_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxSystemSettings* custom_object;
+    custom_object = (zo_wxSystemSettings*) emalloc(sizeof(zo_wxSystemSettings));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXSYSTEMSETTINGS_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSystemSettings_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto wxColour wxSystemSettings::GetColour(wxSystemColour index)
    Returns a system colour. */
@@ -13269,39 +13326,38 @@ PHP_METHOD(php_wxSystemSettings, GetColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemSettings* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemSettings_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemSettings*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemSettings::GetColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemSettings::GetColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemSettings){
-				references = &((wxSystemSettings_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMSETTINGS_TYPE){
+				references = &((wxSystemSettings_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13351,7 +13407,7 @@ PHP_METHOD(php_wxSystemSettings, GetColour)
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
-				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxColour));
+				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
 				((wxColour_php*)ptr)->phpObj = return_value;
 				((wxColour_php*)ptr)->InitProperties();
 
@@ -13380,39 +13436,38 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemSettings* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemSettings_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemSettings*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemSettings::GetFont\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemSettings::GetFont call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemSettings){
-				references = &((wxSystemSettings_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMSETTINGS_TYPE){
+				references = &((wxSystemSettings_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13462,7 +13517,7 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
-				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxFont));
+				((zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFont_php*) ptr;
 				((wxFont_php*)ptr)->phpObj = return_value;
 				((wxFont_php*)ptr)->InitProperties();
 
@@ -13491,39 +13546,38 @@ PHP_METHOD(php_wxSystemSettings, GetMetric)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemSettings* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemSettings_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemSettings*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemSettings::GetMetric\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemSettings::GetMetric call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemSettings){
-				references = &((wxSystemSettings_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMSETTINGS_TYPE){
+				references = &((wxSystemSettings_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13538,7 +13592,7 @@ PHP_METHOD(php_wxSystemSettings, GetMetric)
 	//Parameters for overload 0
 	long index0;
 	zval* win0 = 0;
-	void* object_pointer0_1 = 0;
+	wxWindow* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -13554,18 +13608,19 @@ PHP_METHOD(php_wxSystemSettings, GetMetric)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(win0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxWebView && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxWindow*) argument_native_object;
+					if (!object_pointer0_1 || (argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'win' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'win' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -13626,39 +13681,38 @@ PHP_METHOD(php_wxSystemSettings, GetScreenType)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemSettings* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemSettings_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemSettings*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemSettings::GetScreenType\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemSettings::GetScreenType call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemSettings){
-				references = &((wxSystemSettings_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMSETTINGS_TYPE){
+				references = &((wxSystemSettings_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13725,39 +13779,38 @@ PHP_METHOD(php_wxSystemSettings, HasFeature)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemSettings* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemSettings_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemSettings*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemSettings::HasFeature\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemSettings::HasFeature call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemSettings){
-				references = &((wxSystemSettings_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMSETTINGS_TYPE){
+				references = &((wxSystemSettings_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13820,32 +13873,33 @@ PHP_METHOD(php_wxSystemSettings, HasFeature)
 }
 /* }}} */
 
-void php_wxSystemOptions_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxSystemOptions_free(void *object TSRMLS_DC) 
 {
+    zo_wxSystemOptions* custom_object = (zo_wxSystemOptions*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxSystemOptions_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxSystemOptions_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxSystemOptions_php* object = static_cast<wxSystemOptions_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -13859,7 +13913,43 @@ void php_wxSystemOptions_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxSystemOptions_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxSystemOptions_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxSystemOptions* custom_object;
+    custom_object = (zo_wxSystemOptions*) emalloc(sizeof(zo_wxSystemOptions));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXSYSTEMOPTIONS_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSystemOptions_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto string wxSystemOptions::GetOption(string name)
    Gets an option. */
@@ -13870,39 +13960,38 @@ PHP_METHOD(php_wxSystemOptions, GetOption)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemOptions* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemOptions_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemOptions*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemOptions::GetOption\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemOptions::GetOption call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemOptions){
-				references = &((wxSystemOptions_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMOPTIONS_TYPE){
+				references = &((wxSystemOptions_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -13981,39 +14070,38 @@ PHP_METHOD(php_wxSystemOptions, GetOptionInt)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemOptions* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemOptions_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemOptions*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemOptions::GetOptionInt\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemOptions::GetOptionInt call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemOptions){
-				references = &((wxSystemOptions_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMOPTIONS_TYPE){
+				references = &((wxSystemOptions_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14086,39 +14174,38 @@ PHP_METHOD(php_wxSystemOptions, HasOption)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemOptions* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemOptions_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemOptions*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemOptions::HasOption\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemOptions::HasOption call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemOptions){
-				references = &((wxSystemOptions_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMOPTIONS_TYPE){
+				references = &((wxSystemOptions_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14191,39 +14278,38 @@ PHP_METHOD(php_wxSystemOptions, IsFalse)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemOptions* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemOptions_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemOptions*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemOptions::IsFalse\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemOptions::IsFalse call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemOptions){
-				references = &((wxSystemOptions_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMOPTIONS_TYPE){
+				references = &((wxSystemOptions_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14296,39 +14382,38 @@ PHP_METHOD(php_wxSystemOptions, SetOption)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSystemOptions* current_object;
+	wxphp_object_type current_object_type;
+	wxSystemOptions_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSystemOptions*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSystemOptions::SetOption\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSystemOptions::SetOption call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSystemOptions){
-				references = &((wxSystemOptions_php*)_this)->references;
+			if(current_object_type == PHP_WXSYSTEMOPTIONS_TYPE){
+				references = &((wxSystemOptions_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14436,32 +14521,33 @@ PHP_METHOD(php_wxSystemOptions, SetOption)
 }
 /* }}} */
 
-void php_wxVideoMode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxVideoMode_free(void *object TSRMLS_DC) 
 {
+    zo_wxVideoMode* custom_object = (zo_wxVideoMode*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxVideoMode_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxVideoMode_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxVideoMode_php* object = static_cast<wxVideoMode_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -14475,7 +14561,43 @@ void php_wxVideoMode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxVideoMode_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxVideoMode_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxVideoMode* custom_object;
+    custom_object = (zo_wxVideoMode*) emalloc(sizeof(zo_wxVideoMode));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXVIDEOMODE_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxVideoMode_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxVideoMode::wxVideoMode(int width, int height, int depth, int freq)
    Constructs this class using the given parameters. */
@@ -14486,17 +14608,15 @@ PHP_METHOD(php_wxVideoMode, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxVideoMode* current_object;
+	wxVideoMode_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	long width0;
@@ -14533,9 +14653,9 @@ PHP_METHOD(php_wxVideoMode, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxVideoMode_php();
+				native_object = new wxVideoMode_php();
 
-				((wxVideoMode_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 1:
@@ -14544,9 +14664,9 @@ PHP_METHOD(php_wxVideoMode, __construct)
 				php_printf("Executing __construct((int) width0)\n");
 				#endif
 
-				_this = new wxVideoMode_php((int) width0);
+				native_object = new wxVideoMode_php((int) width0);
 
-				((wxVideoMode_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 2:
@@ -14555,9 +14675,9 @@ PHP_METHOD(php_wxVideoMode, __construct)
 				php_printf("Executing __construct((int) width0, (int) height0)\n");
 				#endif
 
-				_this = new wxVideoMode_php((int) width0, (int) height0);
+				native_object = new wxVideoMode_php((int) width0, (int) height0);
 
-				((wxVideoMode_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 3:
@@ -14566,9 +14686,9 @@ PHP_METHOD(php_wxVideoMode, __construct)
 				php_printf("Executing __construct((int) width0, (int) height0, (int) depth0)\n");
 				#endif
 
-				_this = new wxVideoMode_php((int) width0, (int) height0, (int) depth0);
+				native_object = new wxVideoMode_php((int) width0, (int) height0, (int) depth0);
 
-				((wxVideoMode_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 4:
@@ -14577,9 +14697,9 @@ PHP_METHOD(php_wxVideoMode, __construct)
 				php_printf("Executing __construct((int) width0, (int) height0, (int) depth0, (int) freq0)\n");
 				#endif
 
-				_this = new wxVideoMode_php((int) width0, (int) height0, (int) depth0, (int) freq0);
+				native_object = new wxVideoMode_php((int) width0, (int) height0, (int) depth0, (int) freq0);
 
-				((wxVideoMode_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -14588,16 +14708,18 @@ PHP_METHOD(php_wxVideoMode, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxVideoMode);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxVideoMode_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxVideoMode_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxVideoMode_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -14618,31 +14740,27 @@ PHP_METHOD(php_wxVideoMode, __get)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
 	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
+	zo_wxVideoMode* current_object;
+	wxVideoMode_php* native_object;
 	
 	char* name;
 	int name_len;
 	
-	//Get pointer of object that called this method if not a static method
+	//Get native object of the php object that called the method
 	if (getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::wxVideoMode\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxVideoMode::wxVideoMode call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
 		}
 	}
 	else
@@ -14665,19 +14783,19 @@ PHP_METHOD(php_wxVideoMode, __get)
 	if(false){}
 	else if(strcmp("w", name) == 0)
 	{
-		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[0]));
+		RETVAL_LONG(*((int*) native_object->properties[0]));
 	}
 	else if(strcmp("h", name) == 0)
 	{
-		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[1]));
+		RETVAL_LONG(*((int*) native_object->properties[1]));
 	}
 	else if(strcmp("bpp", name) == 0)
 	{
-		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[2]));
+		RETVAL_LONG(*((int*) native_object->properties[2]));
 	}
 	else if(strcmp("refresh", name) == 0)
 	{
-		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[3]));
+		RETVAL_LONG(*((int*) native_object->properties[3]));
 	}
 	else
 	{
@@ -14693,39 +14811,38 @@ PHP_METHOD(php_wxVideoMode, Matches)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxVideoMode* current_object;
+	wxphp_object_type current_object_type;
+	wxVideoMode_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::Matches\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxVideoMode::Matches call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxVideoMode){
-				references = &((wxVideoMode_php*)_this)->references;
+			if(current_object_type == PHP_WXVIDEOMODE_TYPE){
+				references = &((wxVideoMode_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14739,7 +14856,7 @@ PHP_METHOD(php_wxVideoMode, Matches)
 	
 	//Parameters for overload 0
 	zval* other0 = 0;
-	void* object_pointer0_0 = 0;
+	wxVideoMode* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -14755,18 +14872,19 @@ PHP_METHOD(php_wxVideoMode, Matches)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &other0, php_wxVideoMode_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(other0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(other0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(other0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxVideoMode*) zend_object_store_get_object(other0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxVideoMode*) zend_object_store_get_object(other0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxVideoMode*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'other' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(other0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'other' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -14786,7 +14904,7 @@ PHP_METHOD(php_wxVideoMode, Matches)
 				php_printf("Executing RETURN_BOOL(wxVideoMode::Matches(*(wxVideoMode*) object_pointer0_0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxVideoMode_php*)_this)->Matches(*(wxVideoMode*) object_pointer0_0));
+				ZVAL_BOOL(return_value, ((wxVideoMode_php*)native_object)->Matches(*(wxVideoMode*) object_pointer0_0));
 
 				references->AddReference(other0, "wxVideoMode::Matches at call with 1 argument(s)");
 
@@ -14814,39 +14932,38 @@ PHP_METHOD(php_wxVideoMode, IsOk)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxVideoMode* current_object;
+	wxphp_object_type current_object_type;
+	wxVideoMode_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::IsOk\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxVideoMode::IsOk call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxVideoMode){
-				references = &((wxVideoMode_php*)_this)->references;
+			if(current_object_type == PHP_WXVIDEOMODE_TYPE){
+				references = &((wxVideoMode_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14885,7 +15002,7 @@ PHP_METHOD(php_wxVideoMode, IsOk)
 				php_printf("Executing RETURN_BOOL(wxVideoMode::IsOk())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxVideoMode_php*)_this)->IsOk());
+				ZVAL_BOOL(return_value, ((wxVideoMode_php*)native_object)->IsOk());
 
 
 				return;
@@ -14912,39 +15029,38 @@ PHP_METHOD(php_wxVideoMode, GetWidth)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxVideoMode* current_object;
+	wxphp_object_type current_object_type;
+	wxVideoMode_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::GetWidth\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxVideoMode::GetWidth call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxVideoMode){
-				references = &((wxVideoMode_php*)_this)->references;
+			if(current_object_type == PHP_WXVIDEOMODE_TYPE){
+				references = &((wxVideoMode_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -14983,7 +15099,7 @@ PHP_METHOD(php_wxVideoMode, GetWidth)
 				php_printf("Executing RETURN_LONG(wxVideoMode::GetWidth())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxVideoMode_php*)_this)->GetWidth());
+				ZVAL_LONG(return_value, ((wxVideoMode_php*)native_object)->GetWidth());
 
 
 				return;
@@ -15010,39 +15126,38 @@ PHP_METHOD(php_wxVideoMode, GetHeight)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxVideoMode* current_object;
+	wxphp_object_type current_object_type;
+	wxVideoMode_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::GetHeight\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxVideoMode::GetHeight call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxVideoMode){
-				references = &((wxVideoMode_php*)_this)->references;
+			if(current_object_type == PHP_WXVIDEOMODE_TYPE){
+				references = &((wxVideoMode_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -15081,7 +15196,7 @@ PHP_METHOD(php_wxVideoMode, GetHeight)
 				php_printf("Executing RETURN_LONG(wxVideoMode::GetHeight())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxVideoMode_php*)_this)->GetHeight());
+				ZVAL_LONG(return_value, ((wxVideoMode_php*)native_object)->GetHeight());
 
 
 				return;
@@ -15108,39 +15223,38 @@ PHP_METHOD(php_wxVideoMode, GetDepth)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxVideoMode* current_object;
+	wxphp_object_type current_object_type;
+	wxVideoMode_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxVideoMode*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::GetDepth\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxVideoMode::GetDepth call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxVideoMode){
-				references = &((wxVideoMode_php*)_this)->references;
+			if(current_object_type == PHP_WXVIDEOMODE_TYPE){
+				references = &((wxVideoMode_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -15179,7 +15293,7 @@ PHP_METHOD(php_wxVideoMode, GetDepth)
 				php_printf("Executing RETURN_LONG(wxVideoMode::GetDepth())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxVideoMode_php*)_this)->GetDepth());
+				ZVAL_LONG(return_value, ((wxVideoMode_php*)native_object)->GetDepth());
 
 
 				return;

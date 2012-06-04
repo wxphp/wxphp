@@ -13,13 +13,13 @@
 #define WXPHP_MEDIA_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_media_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxSound;
-extern zend_class_entry *php_wxSound_entry;
+extern zend_class_entry* php_wxSound_entry;
 void php_wxSound_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxSound_php: public wxSound{
@@ -38,6 +38,19 @@ class wxSound_php: public wxSound{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxSound 
+{
+    zend_object zo;
+    wxSound_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxSound_free(void *object TSRMLS_DC);
+zend_object_value php_wxSound_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSound_functions[] = {

@@ -61,7 +61,7 @@ fi
 cd ../../
 
 # Get cpu cores for parallel faster build
-CPU_CORES=`grep -i processor /proc/cpuinfo | wc -l`
+CPU_CORES=`grep processor /proc/cpuinfo | wc -l`
 
 # Start the build process
 make -j $[(($CPU_CORES / 2) + 1)]
