@@ -280,6 +280,9 @@ wxVector< wxSharedPtr< wxWebViewHistoryItem > >	wxVector< wxSharedPtr< wxWebView
 
 Functions implementing unknown types
 
+wxChar**	bool wxInitialize(int argc, wxChar** argv)
+wxChar**	int wxEntry(int& argc, wxChar** argv)
+HINSTANCE	int wxEntry(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* pCmdLine, int nCmdShow)
 const wxChar*	const wxChar* wxSysErrorMsg(unsigned long errCode)
 ...	void wxLogGeneric(wxLogLevel level, const char* formatString, ...)
 va_list	void wxVLogGeneric(wxLogLevel level, const char* formatString, va_list argPtr)
@@ -359,6 +362,11 @@ wxEnvVariableHashMap*	bool wxGetEnvMap(wxEnvVariableHashMap* map)
 wxSortCallback	void wxQsort(void* pbase, size_t total_elems, size_t size, wxSortCallback cmp, const void* user_data)
 wxMemorySize	wxMemorySize wxGetFreeMemory()
 wxLinuxDistributionInfo	wxLinuxDistributionInfo wxGetLinuxDistributionInfo()
+const wxExecuteEnv*	long wxExecute(const wxString& command, int flags, wxProcess* callback, const wxExecuteEnv* env)
+const wxExecuteEnv*	long wxExecute(char** argv, int flags, wxProcess* callback, const wxExecuteEnv* env)
+wchar_t**	long wxExecute(wchar_t** argv, int flags, wxProcess* callback, const wxExecuteEnv* env)
+const wxExecuteEnv*	long wxExecute(const wxString& command, wxArrayString& output, int flags, const wxExecuteEnv* env)
+const wxExecuteEnv*	long wxExecute(const wxString& command, wxArrayString& output, wxArrayString& errors, int flags, const wxExecuteEnv* env)
 wxFloatingPointValidator< T >	wxFloatingPointValidator< T > wxMakeFloatingPointValidator(T* value, int style)
 wxFloatingPointValidator< T >	wxFloatingPointValidator< T > wxMakeFloatingPointValidator(int precision, T* value, int style)
 wxIntegerValidator< T >	wxIntegerValidator< T > wxMakeIntegerValidator(T* value, int style)

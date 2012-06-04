@@ -12,11 +12,11 @@
 */
 
 //Functions already defined by hand on wxwidgets.cpp
-unset($defFunctions['wxEntry']);
+/*unset($defFunctions['wxEntry']);
 unset($defFunctions['wxExecute']);
 unset($defFunctions['wxAboutBox']);
 unset($defFunctions['wxInitialize']);
-unset($defFunctions['wxInitAllImageHandlers']);
+unset($defFunctions['wxInitAllImageHandlers']);*/
 
 //Other functions not working correctly at the moment
 unset($defFunctions['wxGetApp']);

@@ -51,32 +51,33 @@
 #include "others.h"
 
 
-void php_wxSound_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxSound_free(void *object TSRMLS_DC) 
 {
+    zo_wxSound* custom_object = (zo_wxSound*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxSound_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxSound_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxSound_php* object = static_cast<wxSound_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -90,7 +91,43 @@ void php_wxSound_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxSound_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxSound_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxSound* custom_object;
+    custom_object = (zo_wxSound*) emalloc(sizeof(zo_wxSound));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXSOUND_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSound_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto bool wxSound::Create(string fileName, bool isResource)
    Constructs a wave object from a file or resource. */
@@ -101,39 +138,38 @@ PHP_METHOD(php_wxSound, Create)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSound* current_object;
+	wxphp_object_type current_object_type;
+	wxSound_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSound*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSound::Create\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSound::Create call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSound){
-				references = &((wxSound_php*)_this)->references;
+			if(current_object_type == PHP_WXSOUND_TYPE){
+				references = &((wxSound_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -179,7 +215,7 @@ PHP_METHOD(php_wxSound, Create)
 				php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8)))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Create(wxString(fileName0, wxConvUTF8)));
+				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8)));
 
 
 				return;
@@ -191,7 +227,7 @@ PHP_METHOD(php_wxSound, Create)
 				php_printf("Executing RETURN_BOOL(wxSound::Create(wxString(fileName0, wxConvUTF8), isResource0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Create(wxString(fileName0, wxConvUTF8), isResource0));
+				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Create(wxString(fileName0, wxConvUTF8), isResource0));
 
 
 				return;
@@ -218,39 +254,38 @@ PHP_METHOD(php_wxSound, IsOk)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSound* current_object;
+	wxphp_object_type current_object_type;
+	wxSound_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSound*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSound::IsOk\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSound::IsOk call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSound){
-				references = &((wxSound_php*)_this)->references;
+			if(current_object_type == PHP_WXSOUND_TYPE){
+				references = &((wxSound_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -289,7 +324,7 @@ PHP_METHOD(php_wxSound, IsOk)
 				php_printf("Executing RETURN_BOOL(wxSound::IsOk())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->IsOk());
+				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->IsOk());
 
 
 				return;
@@ -316,39 +351,38 @@ PHP_METHOD(php_wxSound, Play)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSound* current_object;
+	wxphp_object_type current_object_type;
+	wxSound_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSound*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSound::Play\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSound::Play call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSound){
-				references = &((wxSound_php*)_this)->references;
+			if(current_object_type == PHP_WXSOUND_TYPE){
+				references = &((wxSound_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -414,7 +448,7 @@ PHP_METHOD(php_wxSound, Play)
 				php_printf("Executing RETURN_BOOL(wxSound::Play())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Play());
+				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play());
 
 
 				return;
@@ -426,7 +460,7 @@ PHP_METHOD(php_wxSound, Play)
 				php_printf("Executing RETURN_BOOL(wxSound::Play((unsigned) flags0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->Play((unsigned) flags0));
+				ZVAL_BOOL(return_value, ((wxSound_php*)native_object)->Play((unsigned) flags0));
 
 
 				return;
@@ -486,39 +520,38 @@ PHP_METHOD(php_wxSound, Stop)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSound* current_object;
+	wxphp_object_type current_object_type;
+	wxSound_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxSound*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSound::Stop\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxSound::Stop call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxSound){
-				references = &((wxSound_php*)_this)->references;
+			if(current_object_type == PHP_WXSOUND_TYPE){
+				references = &((wxSound_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -585,17 +618,15 @@ PHP_METHOD(php_wxSound, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxSound* current_object;
+	wxSound_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -668,9 +699,9 @@ PHP_METHOD(php_wxSound, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxSound_php();
+				native_object = new wxSound_php();
 
-				((wxSound_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -686,9 +717,9 @@ PHP_METHOD(php_wxSound, __construct)
 				php_printf("Executing __construct(wxString(fileName1, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxSound_php(wxString(fileName1, wxConvUTF8));
+				native_object = new wxSound_php(wxString(fileName1, wxConvUTF8));
 
-				((wxSound_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 			case 2:
@@ -697,9 +728,9 @@ PHP_METHOD(php_wxSound, __construct)
 				php_printf("Executing __construct(wxString(fileName1, wxConvUTF8), isResource1)\n");
 				#endif
 
-				_this = new wxSound_php(wxString(fileName1, wxConvUTF8), isResource1);
+				native_object = new wxSound_php(wxString(fileName1, wxConvUTF8), isResource1);
 
-				((wxSound_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -715,9 +746,9 @@ PHP_METHOD(php_wxSound, __construct)
 				php_printf("Executing __construct((size_t) size2, (const void*) data2)\n");
 				#endif
 
-				_this = new wxSound_php((size_t) size2, (const void*) data2);
+				native_object = new wxSound_php((size_t) size2, (const void*) data2);
 
-				((wxSound_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -726,16 +757,18 @@ PHP_METHOD(php_wxSound, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxSound);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxSound_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxSound*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxSound_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxSound_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else

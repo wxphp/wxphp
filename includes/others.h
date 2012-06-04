@@ -13,13 +13,13 @@
 #define WXPHP_OTHERS_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_others_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxScrolledWindow;
-extern zend_class_entry *php_wxScrolledWindow_entry;
+extern zend_class_entry* php_wxScrolledWindow_entry;
 void php_wxScrolledWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxScrolledWindow_php: public wxScrolledWindow{
@@ -35,6 +35,19 @@ class wxScrolledWindow_php: public wxScrolledWindow{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxScrolledWindow 
+{
+    zend_object zo;
+    wxScrolledWindow_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxScrolledWindow_free(void *object TSRMLS_DC);
+zend_object_value php_wxScrolledWindow_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxScrolledWindow_functions[] = {
@@ -274,8 +287,7 @@ static zend_function_entry php_wxScrolledWindow_functions[] = {
 };
 #endif
 
-extern int le_wxRibbonButtonBarButtonBase;
-extern zend_class_entry *php_wxRibbonButtonBarButtonBase_entry;
+extern zend_class_entry* php_wxRibbonButtonBarButtonBase_entry;
 void php_wxRibbonButtonBarButtonBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxRibbonButtonBarButtonBase_php{
@@ -292,14 +304,26 @@ class wxRibbonButtonBarButtonBase_php{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxRibbonButtonBarButtonBase 
+{
+    zend_object zo;
+    wxRibbonButtonBarButtonBase_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxRibbonButtonBarButtonBase_free(void *object TSRMLS_DC);
+zend_object_value php_wxRibbonButtonBarButtonBase_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonButtonBarButtonBase_functions[] = {
 	PHP_FE_END
 };
 #endif
 
-extern int le_wxRibbonGalleryItem;
-extern zend_class_entry *php_wxRibbonGalleryItem_entry;
+extern zend_class_entry* php_wxRibbonGalleryItem_entry;
 void php_wxRibbonGalleryItem_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxRibbonGalleryItem_php{
@@ -316,14 +340,26 @@ class wxRibbonGalleryItem_php{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxRibbonGalleryItem 
+{
+    zend_object zo;
+    wxRibbonGalleryItem_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxRibbonGalleryItem_free(void *object TSRMLS_DC);
+zend_object_value php_wxRibbonGalleryItem_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonGalleryItem_functions[] = {
 	PHP_FE_END
 };
 #endif
 
-extern int le_wxRibbonToolBarToolBase;
-extern zend_class_entry *php_wxRibbonToolBarToolBase_entry;
+extern zend_class_entry* php_wxRibbonToolBarToolBase_entry;
 void php_wxRibbonToolBarToolBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxRibbonToolBarToolBase_php{
@@ -340,14 +376,26 @@ class wxRibbonToolBarToolBase_php{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxRibbonToolBarToolBase 
+{
+    zend_object zo;
+    wxRibbonToolBarToolBase_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxRibbonToolBarToolBase_free(void *object TSRMLS_DC);
+zend_object_value php_wxRibbonToolBarToolBase_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonToolBarToolBase_functions[] = {
 	PHP_FE_END
 };
 #endif
 
-extern int le_wxNonOwnedWindow;
-extern zend_class_entry *php_wxNonOwnedWindow_entry;
+extern zend_class_entry* php_wxNonOwnedWindow_entry;
 void php_wxNonOwnedWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxNonOwnedWindow_php: public wxNonOwnedWindow{
@@ -363,6 +411,19 @@ class wxNonOwnedWindow_php: public wxNonOwnedWindow{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxNonOwnedWindow 
+{
+    zend_object zo;
+    wxNonOwnedWindow_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxNonOwnedWindow_free(void *object TSRMLS_DC);
+zend_object_value php_wxNonOwnedWindow_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxNonOwnedWindow_functions[] = {
@@ -601,8 +662,7 @@ static zend_function_entry php_wxNonOwnedWindow_functions[] = {
 };
 #endif
 
-extern int le_wxAnyButton;
-extern zend_class_entry *php_wxAnyButton_entry;
+extern zend_class_entry* php_wxAnyButton_entry;
 void php_wxAnyButton_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxAnyButton_php: public wxAnyButton{
@@ -619,6 +679,19 @@ class wxAnyButton_php: public wxAnyButton{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxAnyButton 
+{
+    zend_object zo;
+    wxAnyButton_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxAnyButton_free(void *object TSRMLS_DC);
+zend_object_value php_wxAnyButton_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAnyButton_functions[] = {
@@ -879,8 +952,7 @@ static zend_function_entry php_wxAnyButton_functions[] = {
 };
 #endif
 
-extern int le_wxWithImages;
-extern zend_class_entry *php_wxWithImages_entry;
+extern zend_class_entry* php_wxWithImages_entry;
 void php_wxWithImages_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxWithImages_php: public wxWithImages{
@@ -898,6 +970,19 @@ class wxWithImages_php: public wxWithImages{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxWithImages 
+{
+    zend_object zo;
+    wxWithImages_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxWithImages_free(void *object TSRMLS_DC);
+zend_object_value php_wxWithImages_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWithImages_functions[] = {
 	PHP_ME(php_wxWithImages, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -908,8 +993,7 @@ static zend_function_entry php_wxWithImages_functions[] = {
 };
 #endif
 
-extern int le_wxTextCompleter;
-extern zend_class_entry *php_wxTextCompleter_entry;
+extern zend_class_entry* php_wxTextCompleter_entry;
 void php_wxTextCompleter_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxTextCompleter_php: public wxTextCompleter{
@@ -928,14 +1012,26 @@ class wxTextCompleter_php: public wxTextCompleter{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxTextCompleter 
+{
+    zend_object zo;
+    wxTextCompleter_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxTextCompleter_free(void *object TSRMLS_DC);
+zend_object_value php_wxTextCompleter_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextCompleter_functions[] = {
 	PHP_FE_END
 };
 #endif
 
-extern int le_wxWindowModalDialogEvent;
-extern zend_class_entry *php_wxWindowModalDialogEvent_entry;
+extern zend_class_entry* php_wxWindowModalDialogEvent_entry;
 void php_wxWindowModalDialogEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxWindowModalDialogEvent_php: public wxWindowModalDialogEvent{
@@ -952,6 +1048,19 @@ class wxWindowModalDialogEvent_php: public wxWindowModalDialogEvent{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxWindowModalDialogEvent 
+{
+    zend_object zo;
+    wxWindowModalDialogEvent_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxWindowModalDialogEvent_free(void *object TSRMLS_DC);
+zend_object_value php_wxWindowModalDialogEvent_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindowModalDialogEvent_functions[] = {
@@ -993,8 +1102,7 @@ static zend_function_entry php_wxWindowModalDialogEvent_functions[] = {
 };
 #endif
 
-extern int le_wxPoint2DDouble;
-extern zend_class_entry *php_wxPoint2DDouble_entry;
+extern zend_class_entry* php_wxPoint2DDouble_entry;
 void php_wxPoint2DDouble_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPoint2DDouble_php: public wxPoint2DDouble{
@@ -1021,6 +1129,19 @@ class wxPoint2DDouble_php: public wxPoint2DDouble{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxPoint2DDouble 
+{
+    zend_object zo;
+    wxPoint2DDouble_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxPoint2DDouble_free(void *object TSRMLS_DC);
+zend_object_value php_wxPoint2DDouble_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPoint2DDouble_functions[] = {
 	PHP_ME(php_wxPoint2DDouble, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -1040,8 +1161,7 @@ static zend_function_entry php_wxPoint2DDouble_functions[] = {
 };
 #endif
 
-extern int le_wxPoint2DInt;
-extern zend_class_entry *php_wxPoint2DInt_entry;
+extern zend_class_entry* php_wxPoint2DInt_entry;
 void php_wxPoint2DInt_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPoint2DInt_php: public wxPoint2DInt{
@@ -1067,6 +1187,19 @@ class wxPoint2DInt_php: public wxPoint2DInt{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxPoint2DInt 
+{
+    zend_object zo;
+    wxPoint2DInt_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxPoint2DInt_free(void *object TSRMLS_DC);
+zend_object_value php_wxPoint2DInt_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPoint2DInt_functions[] = {
 	PHP_ME(php_wxPoint2DInt, GetCrossProduct, NULL, ZEND_ACC_PUBLIC)
@@ -1086,8 +1219,7 @@ static zend_function_entry php_wxPoint2DInt_functions[] = {
 };
 #endif
 
-extern int le_wxProgressDialog;
-extern zend_class_entry *php_wxProgressDialog_entry;
+extern zend_class_entry* php_wxProgressDialog_entry;
 void php_wxProgressDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxProgressDialog_php: public wxProgressDialog{
@@ -1104,6 +1236,19 @@ class wxProgressDialog_php: public wxProgressDialog{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxProgressDialog 
+{
+    zend_object zo;
+    wxProgressDialog_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxProgressDialog_free(void *object TSRMLS_DC);
+zend_object_value php_wxProgressDialog_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxProgressDialog_functions[] = {
@@ -1399,8 +1544,7 @@ static zend_function_entry php_wxProgressDialog_functions[] = {
 };
 #endif
 
-extern int le_wxLayoutConstraints;
-extern zend_class_entry *php_wxLayoutConstraints_entry;
+extern zend_class_entry* php_wxLayoutConstraints_entry;
 void php_wxLayoutConstraints_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLayoutConstraints_php: public wxLayoutConstraints{
@@ -1429,6 +1573,19 @@ class wxLayoutConstraints_php: public wxLayoutConstraints{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxLayoutConstraints 
+{
+    zend_object zo;
+    wxLayoutConstraints_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLayoutConstraints_free(void *object TSRMLS_DC);
+zend_object_value php_wxLayoutConstraints_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLayoutConstraints_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
@@ -1445,8 +1602,7 @@ static zend_function_entry php_wxLayoutConstraints_functions[] = {
 };
 #endif
 
-extern int le_wxGridCellAttrProvider;
-extern zend_class_entry *php_wxGridCellAttrProvider_entry;
+extern zend_class_entry* php_wxGridCellAttrProvider_entry;
 void php_wxGridCellAttrProvider_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridCellAttrProvider_php: public wxGridCellAttrProvider{
@@ -1464,6 +1620,19 @@ class wxGridCellAttrProvider_php: public wxGridCellAttrProvider{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridCellAttrProvider 
+{
+    zend_object zo;
+    wxGridCellAttrProvider_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridCellAttrProvider_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridCellAttrProvider_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAttrProvider_functions[] = {
 	PHP_ME(php_wxGridCellAttrProvider, GetAttr, NULL, ZEND_ACC_PUBLIC)
@@ -1478,8 +1647,7 @@ static zend_function_entry php_wxGridCellAttrProvider_functions[] = {
 };
 #endif
 
-extern int le_wxGridColumnHeaderRenderer;
-extern zend_class_entry *php_wxGridColumnHeaderRenderer_entry;
+extern zend_class_entry* php_wxGridColumnHeaderRenderer_entry;
 void php_wxGridColumnHeaderRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridColumnHeaderRenderer_php: public wxGridColumnHeaderRenderer{
@@ -1496,6 +1664,19 @@ class wxGridColumnHeaderRenderer_php: public wxGridColumnHeaderRenderer{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridColumnHeaderRenderer 
+{
+    zend_object zo;
+    wxGridColumnHeaderRenderer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridColumnHeaderRenderer_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridColumnHeaderRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridColumnHeaderRenderer_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
@@ -1503,8 +1684,7 @@ static zend_function_entry php_wxGridColumnHeaderRenderer_functions[] = {
 };
 #endif
 
-extern int le_wxGridColumnHeaderRendererDefault;
-extern zend_class_entry *php_wxGridColumnHeaderRendererDefault_entry;
+extern zend_class_entry* php_wxGridColumnHeaderRendererDefault_entry;
 void php_wxGridColumnHeaderRendererDefault_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridColumnHeaderRendererDefault_php: public wxGridColumnHeaderRendererDefault{
@@ -1521,6 +1701,19 @@ class wxGridColumnHeaderRendererDefault_php: public wxGridColumnHeaderRendererDe
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridColumnHeaderRendererDefault 
+{
+    zend_object zo;
+    wxGridColumnHeaderRendererDefault_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridColumnHeaderRendererDefault_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridColumnHeaderRendererDefault_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridColumnHeaderRendererDefault_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
@@ -1529,8 +1722,7 @@ static zend_function_entry php_wxGridColumnHeaderRendererDefault_functions[] = {
 };
 #endif
 
-extern int le_wxGridCornerHeaderRenderer;
-extern zend_class_entry *php_wxGridCornerHeaderRenderer_entry;
+extern zend_class_entry* php_wxGridCornerHeaderRenderer_entry;
 void php_wxGridCornerHeaderRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridCornerHeaderRenderer_php: public wxGridCornerHeaderRenderer{
@@ -1548,14 +1740,26 @@ class wxGridCornerHeaderRenderer_php: public wxGridCornerHeaderRenderer{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridCornerHeaderRenderer 
+{
+    zend_object zo;
+    wxGridCornerHeaderRenderer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridCornerHeaderRenderer_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridCornerHeaderRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCornerHeaderRenderer_functions[] = {
 	PHP_FE_END
 };
 #endif
 
-extern int le_wxGridCornerHeaderRendererDefault;
-extern zend_class_entry *php_wxGridCornerHeaderRendererDefault_entry;
+extern zend_class_entry* php_wxGridCornerHeaderRendererDefault_entry;
 void php_wxGridCornerHeaderRendererDefault_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridCornerHeaderRendererDefault_php: public wxGridCornerHeaderRendererDefault{
@@ -1572,6 +1776,19 @@ class wxGridCornerHeaderRendererDefault_php: public wxGridCornerHeaderRendererDe
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridCornerHeaderRendererDefault 
+{
+    zend_object zo;
+    wxGridCornerHeaderRendererDefault_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridCornerHeaderRendererDefault_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridCornerHeaderRendererDefault_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCornerHeaderRendererDefault_functions[] = {
 	PHP_ME(php_wxGridCornerHeaderRendererDefault, DrawBorder, NULL, ZEND_ACC_PUBLIC)
@@ -1579,8 +1796,7 @@ static zend_function_entry php_wxGridCornerHeaderRendererDefault_functions[] = {
 };
 #endif
 
-extern int le_wxGridHeaderLabelsRenderer;
-extern zend_class_entry *php_wxGridHeaderLabelsRenderer_entry;
+extern zend_class_entry* php_wxGridHeaderLabelsRenderer_entry;
 void php_wxGridHeaderLabelsRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridHeaderLabelsRenderer_php: public wxGridHeaderLabelsRenderer{
@@ -1597,6 +1813,19 @@ class wxGridHeaderLabelsRenderer_php: public wxGridHeaderLabelsRenderer{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridHeaderLabelsRenderer 
+{
+    zend_object zo;
+    wxGridHeaderLabelsRenderer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridHeaderLabelsRenderer_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridHeaderLabelsRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridHeaderLabelsRenderer_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
@@ -1604,8 +1833,7 @@ static zend_function_entry php_wxGridHeaderLabelsRenderer_functions[] = {
 };
 #endif
 
-extern int le_wxGridRowHeaderRenderer;
-extern zend_class_entry *php_wxGridRowHeaderRenderer_entry;
+extern zend_class_entry* php_wxGridRowHeaderRenderer_entry;
 void php_wxGridRowHeaderRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridRowHeaderRenderer_php: public wxGridRowHeaderRenderer{
@@ -1622,6 +1850,19 @@ class wxGridRowHeaderRenderer_php: public wxGridRowHeaderRenderer{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridRowHeaderRenderer 
+{
+    zend_object zo;
+    wxGridRowHeaderRenderer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridRowHeaderRenderer_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridRowHeaderRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridRowHeaderRenderer_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
@@ -1629,8 +1870,7 @@ static zend_function_entry php_wxGridRowHeaderRenderer_functions[] = {
 };
 #endif
 
-extern int le_wxGridRowHeaderRendererDefault;
-extern zend_class_entry *php_wxGridRowHeaderRendererDefault_entry;
+extern zend_class_entry* php_wxGridRowHeaderRendererDefault_entry;
 void php_wxGridRowHeaderRendererDefault_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxGridRowHeaderRendererDefault_php: public wxGridRowHeaderRendererDefault{
@@ -1647,6 +1887,19 @@ class wxGridRowHeaderRendererDefault_php: public wxGridRowHeaderRendererDefault{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxGridRowHeaderRendererDefault 
+{
+    zend_object zo;
+    wxGridRowHeaderRendererDefault_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridRowHeaderRendererDefault_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridRowHeaderRendererDefault_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridRowHeaderRendererDefault_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
@@ -1655,8 +1908,7 @@ static zend_function_entry php_wxGridRowHeaderRendererDefault_functions[] = {
 };
 #endif
 
-extern int le_wxPaletteChangedEvent;
-extern zend_class_entry *php_wxPaletteChangedEvent_entry;
+extern zend_class_entry* php_wxPaletteChangedEvent_entry;
 void php_wxPaletteChangedEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPaletteChangedEvent_php: public wxPaletteChangedEvent{
@@ -1673,6 +1925,19 @@ class wxPaletteChangedEvent_php: public wxPaletteChangedEvent{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxPaletteChangedEvent 
+{
+    zend_object zo;
+    wxPaletteChangedEvent_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxPaletteChangedEvent_free(void *object TSRMLS_DC);
+zend_object_value php_wxPaletteChangedEvent_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPaletteChangedEvent_functions[] = {
@@ -1704,8 +1969,7 @@ static zend_function_entry php_wxPaletteChangedEvent_functions[] = {
 };
 #endif
 
-extern int le_wxFileTypeInfo;
-extern zend_class_entry *php_wxFileTypeInfo_entry;
+extern zend_class_entry* php_wxFileTypeInfo_entry;
 void php_wxFileTypeInfo_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxFileTypeInfo_php: public wxFileTypeInfo{
@@ -1724,6 +1988,19 @@ class wxFileTypeInfo_php: public wxFileTypeInfo{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxFileTypeInfo 
+{
+    zend_object zo;
+    wxFileTypeInfo_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxFileTypeInfo_free(void *object TSRMLS_DC);
+zend_object_value php_wxFileTypeInfo_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileTypeInfo_functions[] = {
 	PHP_ME(php_wxFileTypeInfo, AddExtension, NULL, ZEND_ACC_PUBLIC)
@@ -1736,8 +2013,7 @@ static zend_function_entry php_wxFileTypeInfo_functions[] = {
 };
 #endif
 
-extern int le_wxDisplayChangedEvent;
-extern zend_class_entry *php_wxDisplayChangedEvent_entry;
+extern zend_class_entry* php_wxDisplayChangedEvent_entry;
 void php_wxDisplayChangedEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxDisplayChangedEvent_php: public wxDisplayChangedEvent{
@@ -1754,6 +2030,19 @@ class wxDisplayChangedEvent_php: public wxDisplayChangedEvent{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxDisplayChangedEvent 
+{
+    zend_object zo;
+    wxDisplayChangedEvent_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxDisplayChangedEvent_free(void *object TSRMLS_DC);
+zend_object_value php_wxDisplayChangedEvent_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDisplayChangedEvent_functions[] = {
@@ -1783,8 +2072,7 @@ static zend_function_entry php_wxDisplayChangedEvent_functions[] = {
 };
 #endif
 
-extern int le_wxTimerRunner;
-extern zend_class_entry *php_wxTimerRunner_entry;
+extern zend_class_entry* php_wxTimerRunner_entry;
 void php_wxTimerRunner_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxTimerRunner_php: public wxTimerRunner{
@@ -1803,6 +2091,19 @@ class wxTimerRunner_php: public wxTimerRunner{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxTimerRunner 
+{
+    zend_object zo;
+    wxTimerRunner_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxTimerRunner_free(void *object TSRMLS_DC);
+zend_object_value php_wxTimerRunner_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTimerRunner_functions[] = {
 	PHP_ME(php_wxTimerRunner, Start, NULL, ZEND_ACC_PUBLIC)
@@ -1811,8 +2112,7 @@ static zend_function_entry php_wxTimerRunner_functions[] = {
 };
 #endif
 
-extern int le_wxToolBarToolBase;
-extern zend_class_entry *php_wxToolBarToolBase_entry;
+extern zend_class_entry* php_wxToolBarToolBase_entry;
 void php_wxToolBarToolBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxToolBarToolBase_php: public wxToolBarToolBase{
@@ -1828,6 +2128,19 @@ class wxToolBarToolBase_php: public wxToolBarToolBase{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxToolBarToolBase 
+{
+    zend_object zo;
+    wxToolBarToolBase_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxToolBarToolBase_free(void *object TSRMLS_DC);
+zend_object_value php_wxToolBarToolBase_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxToolBarToolBase_functions[] = {
@@ -1873,8 +2186,7 @@ static zend_function_entry php_wxToolBarToolBase_functions[] = {
 };
 #endif
 
-extern int le_wxTextCompleterSimple;
-extern zend_class_entry *php_wxTextCompleterSimple_entry;
+extern zend_class_entry* php_wxTextCompleterSimple_entry;
 void php_wxTextCompleterSimple_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxTextCompleterSimple_php: public wxTextCompleterSimple{
@@ -1891,6 +2203,19 @@ class wxTextCompleterSimple_php: public wxTextCompleterSimple{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxTextCompleterSimple 
+{
+    zend_object zo;
+    wxTextCompleterSimple_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxTextCompleterSimple_free(void *object TSRMLS_DC);
+zend_object_value php_wxTextCompleterSimple_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextCompleterSimple_functions[] = {

@@ -6,13 +6,9 @@ PHP_FUNCTION(php_<?=$function_name?>)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	void* argument_native_object = NULL;
 	
-	//Other variables used thru the code
+	//Variables used thru the code
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
@@ -27,7 +23,7 @@ PHP_FUNCTION(php_<?=$function_name?>)
 	//In case wrong type/count of parameters was passed
 	if(!already_called)
 	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: <?=$function_name?>\n");
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to <?=$function_name?>()\n");
 	}
 }
 <?=proto_end()?>

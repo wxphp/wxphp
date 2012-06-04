@@ -38,7 +38,7 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 		
 		$argument_type_modifier = "";
 		$standard_parameter_type = parameter_type($parameter_type, $parameter_is_array, $method_name, $class_name, $argument_type_modifier);
-		$return_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
+		$argument_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
 		
 		switch($standard_parameter_type)
 		{
@@ -162,20 +162,20 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= tabs(1) . "add_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
+						$output .= tabs(1) . "((zo_{$argument_type}*) zend_object_store_get_object(arguments[$parameter_index] TSRMLS_CC))->native_object = ({$argument_type}_php*) ".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 				
 					case "reference":
 					case "const_reference":
-						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= tabs(1) . "add_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
+						$output .= tabs(1) . "((zo_{$argument_type}*) zend_object_store_get_object(arguments[$parameter_index] TSRMLS_CC))->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 						
 					case "none":
 					case "const_none":
-						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= tabs(1) . "add_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
+						$output .= tabs(1) . "((zo_{$argument_type}*) zend_object_store_get_object(arguments[$parameter_index] TSRMLS_CC))->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 				}
 				break;
@@ -268,30 +268,28 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 			
 		case "object":
 		{
-			$plain_return_type = str_replace(array("const", " ", "&", "*"), "", $method_definition[$function_return_types]);
+			$output .= "if(Z_TYPE_P(return_value) == IS_OBJECT)\n";
+			$output .= tabs(1) . "{\n";
+			$output .= tabs(2) . "return_object = (void*) ((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;\n";
+			$output .= tabs(1) . "}\n\n";
 			
-			$output .= "if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)\n";
-			$output .= tabs(2) . "{\n";
-			$output .= tabs(3) . "id_to_find = Z_RESVAL_P(*tmp);\n";
-			$output .= tabs(3) . "return_object = zend_list_find(id_to_find, &rsrc_type);\n";
-			$output .= tabs(2) . "}\n\n";
-			
-			$output .= tabs(2) . "//Threat it as a normal object on the calling function and not a php user space intiialized one\n";
-			$output .= tabs(2) . "{$plain_return_type}_php* var = ({$plain_return_type}_php*) return_object;\n";
-			$output .= tabs(2) . "var->references.UnInitialize();\n\n";
+			$output .= tabs(1) . "//Threat it as a normal object on the calling function and not a php user space intiialized one\n";
+			$output .= tabs(1) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;\n";
+			$output .= tabs(1) . "{$return_type}_php* var = ({$return_type}_php*) return_object;\n";
+			$output .= tabs(1) . "var->references.UnInitialize();\n\n";
 			
 			switch($return_type_modifier)
 			{
 				case "const_pointer":
 				case "pointer":
-					$output .= tabs(2) . "return (".$method_definition[$function_return_types].") return_object;\n";
+					$output .= tabs(1) . "return (".$method_definition[$function_return_types].") return_object;\n";
 					break;
 					
 				case "const_reference":
 				case "reference":
 				case "const_none":
 				case "none":
-					$output .= tabs(2) . "return *(".$plain_return_type."*) return_object;\n";
+					$output .= tabs(1) . "return *(".$return_type."*) return_object;\n";
 			}
 			break;
 		}

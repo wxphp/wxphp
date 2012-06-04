@@ -6,17 +6,15 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_<?=$class_name?>* current_object;
+	<?=$class_name?>_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	<?=function_parameters($method_definitions, $method_name, $class_name)?>
 	
@@ -26,16 +24,18 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 	
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_<?=$class_name?>);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((<?=$class_name?>_php*) _this)->phpObj = getThis();
+		current_object = (zo_<?=$class_name?>*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((<?=$class_name?>_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((<?=$class_name?>_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else

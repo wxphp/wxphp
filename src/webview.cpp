@@ -51,32 +51,33 @@
 #include "others.h"
 
 
-void php_wxWebViewHistoryItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxWebViewHistoryItem_free(void *object TSRMLS_DC) 
 {
+    zo_wxWebViewHistoryItem* custom_object = (zo_wxWebViewHistoryItem*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxWebViewHistoryItem_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxWebViewHistoryItem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxWebViewHistoryItem_php* object = static_cast<wxWebViewHistoryItem_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -90,7 +91,43 @@ void php_wxWebViewHistoryItem_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxWebViewHistoryItem_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxWebViewHistoryItem_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxWebViewHistoryItem* custom_object;
+    custom_object = (zo_wxWebViewHistoryItem*) emalloc(sizeof(zo_wxWebViewHistoryItem));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXWEBVIEWHISTORYITEM_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewHistoryItem_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxWebViewHistoryItem::wxWebViewHistoryItem(string url, string title)
    Construtor. */
@@ -101,17 +138,15 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewHistoryItem* current_object;
+	wxWebViewHistoryItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	char* url0;
@@ -148,9 +183,9 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 				php_printf("Executing __construct(wxString(url0, wxConvUTF8), wxString(title0, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxWebViewHistoryItem_php(wxString(url0, wxConvUTF8), wxString(title0, wxConvUTF8));
+				native_object = new wxWebViewHistoryItem_php(wxString(url0, wxConvUTF8), wxString(title0, wxConvUTF8));
 
-				((wxWebViewHistoryItem_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -159,16 +194,18 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxWebViewHistoryItem);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxWebViewHistoryItem_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxWebViewHistoryItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxWebViewHistoryItem_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxWebViewHistoryItem_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -190,39 +227,38 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewHistoryItem* current_object;
+	wxphp_object_type current_object_type;
+	wxWebViewHistoryItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxWebViewHistoryItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxWebViewHistoryItem::GetUrl\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxWebViewHistoryItem::GetUrl call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxWebViewHistoryItem){
-				references = &((wxWebViewHistoryItem_php*)_this)->references;
+			if(current_object_type == PHP_WXWEBVIEWHISTORYITEM_TYPE){
+				references = &((wxWebViewHistoryItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -262,7 +298,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxWebViewHistoryItem_php*)_this)->GetUrl();
+				value_to_return0 = ((wxWebViewHistoryItem_php*)native_object)->GetUrl();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -293,39 +329,38 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewHistoryItem* current_object;
+	wxphp_object_type current_object_type;
+	wxWebViewHistoryItem_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxWebViewHistoryItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxWebViewHistoryItem::GetTitle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxWebViewHistoryItem::GetTitle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxWebViewHistoryItem){
-				references = &((wxWebViewHistoryItem_php*)_this)->references;
+			if(current_object_type == PHP_WXWEBVIEWHISTORYITEM_TYPE){
+				references = &((wxWebViewHistoryItem_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -365,7 +400,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxWebViewHistoryItem_php*)_this)->GetTitle();
+				value_to_return0 = ((wxWebViewHistoryItem_php*)native_object)->GetTitle();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -388,32 +423,33 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 }
 /* }}} */
 
-void php_wxWebViewHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxWebViewHandler_free(void *object TSRMLS_DC) 
 {
+    zo_wxWebViewHandler* custom_object = (zo_wxWebViewHandler*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxWebViewHandler_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxWebViewHandler_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxWebViewHandler_php* object = static_cast<wxWebViewHandler_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -427,7 +463,43 @@ void php_wxWebViewHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxWebViewHandler_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxWebViewHandler_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxWebViewHandler* custom_object;
+    custom_object = (zo_wxWebViewHandler*) emalloc(sizeof(zo_wxWebViewHandler));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXWEBVIEWHANDLER_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewHandler_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxWebViewHandler::wxWebViewHandler(string scheme)
    Constructor. */
@@ -438,17 +510,15 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewHandler* current_object;
+	wxWebViewHandler_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	char* scheme0;
@@ -483,9 +553,9 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 				php_printf("Executing __construct(wxString(scheme0, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxWebViewHandler_php(wxString(scheme0, wxConvUTF8));
+				native_object = new wxWebViewHandler_php(wxString(scheme0, wxConvUTF8));
 
-				((wxWebViewHandler_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -494,16 +564,18 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxWebViewHandler);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxWebViewHandler_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxWebViewHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxWebViewHandler_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxWebViewHandler_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -525,43 +597,42 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewHandler* current_object;
+	wxphp_object_type current_object_type;
+	wxWebViewHandler_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxWebViewHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxWebViewHandler::GetName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxWebViewHandler::GetName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxWebViewHandler){
-				references = &((wxWebViewHandler_php*)_this)->references;
+			if(current_object_type == PHP_WXWEBVIEWHANDLER_TYPE){
+				references = &((wxWebViewHandler_php*)native_object)->references;
 				reference_type_found = true;
 			}
-			if((parent_rsrc_type == le_wxWebViewArchiveHandler) && (!reference_type_found)){
-				references = &((wxWebViewArchiveHandler_php*)_this)->references;
+			if((current_object_type == PHP_WXWEBVIEWARCHIVEHANDLER_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewArchiveHandler_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -601,7 +672,7 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxWebViewHandler_php*)_this)->GetName();
+				value_to_return0 = ((wxWebViewHandler_php*)native_object)->GetName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -649,11 +720,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 	zval function_name;
 	ZVAL_STRING(&function_name, "GetFile", 0);
 	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
 	void* return_object;
-	int rsrc_type;
 	int function_called;
 	
 	//Parameters for conversion
@@ -671,7 +738,6 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	//function_called = call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 1, arguments TSRMLS_CC);
 	if(is_php_user_space_implemented)
 	{
 		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetFile", 7, &return_value, 1, params TSRMLS_CC);
@@ -695,54 +761,55 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxWebViewHandler::GetFile'!", "Error");
+		wxMessageBox("Failed to call virtual method 'wxWebViewHandler::GetFile'!", "Error", wxOK|wxICON_ERROR);
 	}
 
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Returning userspace value.\n");
 	#endif
 		
-	if(Z_TYPE_P(return_value) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(return_value), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			return_object = zend_list_find(id_to_find, &rsrc_type);
-		}
+	if(Z_TYPE_P(return_value) == IS_OBJECT)
+	{
+		return_object = (void*) ((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;
+	}
 
-		//Threat it as a normal object on the calling function and not a php user space intiialized one
-		wxFSFile_php* var = (wxFSFile_php*) return_object;
-		var->references.UnInitialize();
+	//Threat it as a normal object on the calling function and not a php user space intiialized one
+	((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;
+	wxFSFile_php* var = (wxFSFile_php*) return_object;
+	var->references.UnInitialize();
 
-		return (wxFSFile*) return_object;
+	return (wxFSFile*) return_object;
 	
 }
 /* }}} */
 
-void php_wxWebViewArchiveHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxWebViewArchiveHandler_free(void *object TSRMLS_DC) 
 {
+    zo_wxWebViewArchiveHandler* custom_object = (zo_wxWebViewArchiveHandler*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxWebViewArchiveHandler_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxWebViewArchiveHandler_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxWebViewArchiveHandler_php* object = static_cast<wxWebViewArchiveHandler_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -756,7 +823,43 @@ void php_wxWebViewArchiveHandler_destruction_handler(zend_rsrc_list_entry *rsrc 
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxWebViewArchiveHandler_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxWebViewArchiveHandler_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxWebViewArchiveHandler* custom_object;
+    custom_object = (zo_wxWebViewArchiveHandler*) emalloc(sizeof(zo_wxWebViewArchiveHandler));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXWEBVIEWARCHIVEHANDLER_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewArchiveHandler_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxWebViewArchiveHandler::wxWebViewArchiveHandler(string scheme)
    Constructor. */
@@ -767,17 +870,15 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewArchiveHandler* current_object;
+	wxWebViewArchiveHandler_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	char* scheme0;
@@ -812,9 +913,9 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 				php_printf("Executing __construct(wxString(scheme0, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxWebViewArchiveHandler_php(wxString(scheme0, wxConvUTF8));
+				native_object = new wxWebViewArchiveHandler_php(wxString(scheme0, wxConvUTF8));
 
-				((wxWebViewArchiveHandler_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -823,16 +924,18 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxWebViewArchiveHandler);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxWebViewArchiveHandler_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxWebViewArchiveHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxWebViewArchiveHandler_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxWebViewArchiveHandler_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -854,39 +957,38 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxWebViewArchiveHandler* current_object;
+	wxphp_object_type current_object_type;
+	wxWebViewArchiveHandler_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxWebViewArchiveHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxWebViewArchiveHandler::GetFile\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxWebViewArchiveHandler::GetFile call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxWebViewArchiveHandler){
-				references = &((wxWebViewArchiveHandler_php*)_this)->references;
+			if(current_object_type == PHP_WXWEBVIEWARCHIVEHANDLER_TYPE){
+				references = &((wxWebViewArchiveHandler_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -932,7 +1034,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 				#endif
 
 				wxFSFile_php* value_to_return1;
-				value_to_return1 = (wxFSFile_php*) ((wxWebViewArchiveHandler_php*)_this)->GetFile(wxString(uri0, wxConvUTF8));
+				value_to_return1 = (wxFSFile_php*) ((wxWebViewArchiveHandler_php*)native_object)->GetFile(wxString(uri0, wxConvUTF8));
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -948,11 +1050,11 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxFSFile_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxFSFile));
+					object_init_ex(return_value, php_wxFSFile_entry);
+					((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFSFile_php*) value_to_return1;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxWebViewArchiveHandler::GetFile at call with 1 argument(s)");
 				}
 

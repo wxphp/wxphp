@@ -13,13 +13,13 @@
 #define WXPHP_STC_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_stc_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxStyledTextCtrl;
-extern zend_class_entry *php_wxStyledTextCtrl_entry;
+extern zend_class_entry* php_wxStyledTextCtrl_entry;
 void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxStyledTextCtrl_php: public wxStyledTextCtrl{
@@ -36,6 +36,19 @@ class wxStyledTextCtrl_php: public wxStyledTextCtrl{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxStyledTextCtrl 
+{
+    zend_object zo;
+    wxStyledTextCtrl_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxStyledTextCtrl_free(void *object TSRMLS_DC);
+zend_object_value php_wxStyledTextCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStyledTextCtrl_functions[] = {

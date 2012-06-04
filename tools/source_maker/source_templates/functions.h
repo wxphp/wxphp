@@ -18,15 +18,10 @@
 /**
  * Predefined handcoded set of functions
  */
-PHP_FUNCTION(php_wxInitialize);
-
-PHP_FUNCTION(php_wxInitAllImageHandlers);
 
 PHP_FUNCTION(php_wxExecute);
 
 PHP_FUNCTION(php_wxEntry);
-
-PHP_FUNCTION(php_wxAboutBox);
 
 PHP_FUNCTION(php_wxC2D);
 

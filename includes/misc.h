@@ -13,13 +13,13 @@
 #define WXPHP_MISC_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_misc_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxArtProvider;
-extern zend_class_entry *php_wxArtProvider_entry;
+extern zend_class_entry* php_wxArtProvider_entry;
 void php_wxArtProvider_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxArtProvider_php: public wxArtProvider{
@@ -35,6 +35,19 @@ class wxArtProvider_php: public wxArtProvider{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxArtProvider 
+{
+    zend_object zo;
+    wxArtProvider_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxArtProvider_free(void *object TSRMLS_DC);
+zend_object_value php_wxArtProvider_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxArtProvider_functions[] = {
@@ -60,8 +73,7 @@ static zend_function_entry php_wxArtProvider_functions[] = {
 };
 #endif
 
-extern int le_wxCaret;
-extern zend_class_entry *php_wxCaret_entry;
+extern zend_class_entry* php_wxCaret_entry;
 void php_wxCaret_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxCaret_php: public wxCaret{
@@ -79,6 +91,19 @@ class wxCaret_php: public wxCaret{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxCaret 
+{
+    zend_object zo;
+    wxCaret_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxCaret_free(void *object TSRMLS_DC);
+zend_object_value php_wxCaret_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCaret_functions[] = {
@@ -98,8 +123,7 @@ static zend_function_entry php_wxCaret_functions[] = {
 };
 #endif
 
-extern int le_wxNotificationMessage;
-extern zend_class_entry *php_wxNotificationMessage_entry;
+extern zend_class_entry* php_wxNotificationMessage_entry;
 void php_wxNotificationMessage_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxNotificationMessage_php: public wxNotificationMessage{
@@ -117,6 +141,19 @@ class wxNotificationMessage_php: public wxNotificationMessage{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxNotificationMessage 
+{
+    zend_object zo;
+    wxNotificationMessage_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxNotificationMessage_free(void *object TSRMLS_DC);
+zend_object_value php_wxNotificationMessage_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxNotificationMessage_functions[] = {
@@ -155,8 +192,7 @@ static zend_function_entry php_wxNotificationMessage_functions[] = {
 };
 #endif
 
-extern int le_wxStopWatch;
-extern zend_class_entry *php_wxStopWatch_entry;
+extern zend_class_entry* php_wxStopWatch_entry;
 void php_wxStopWatch_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxStopWatch_php: public wxStopWatch{
@@ -174,6 +210,19 @@ class wxStopWatch_php: public wxStopWatch{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxStopWatch 
+{
+    zend_object zo;
+    wxStopWatch_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxStopWatch_free(void *object TSRMLS_DC);
+zend_object_value php_wxStopWatch_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStopWatch_functions[] = {
 	PHP_ME(php_wxStopWatch, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -185,8 +234,7 @@ static zend_function_entry php_wxStopWatch_functions[] = {
 };
 #endif
 
-extern int le_wxTaskBarIcon;
-extern zend_class_entry *php_wxTaskBarIcon_entry;
+extern zend_class_entry* php_wxTaskBarIcon_entry;
 void php_wxTaskBarIcon_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxTaskBarIcon_php: public wxTaskBarIcon{
@@ -204,6 +252,19 @@ class wxTaskBarIcon_php: public wxTaskBarIcon{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxTaskBarIcon 
+{
+    zend_object zo;
+    wxTaskBarIcon_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxTaskBarIcon_free(void *object TSRMLS_DC);
+zend_object_value php_wxTaskBarIcon_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTaskBarIcon_functions[] = {
@@ -243,8 +304,7 @@ static zend_function_entry php_wxTaskBarIcon_functions[] = {
 };
 #endif
 
-extern int le_wxTimer;
-extern zend_class_entry *php_wxTimer_entry;
+extern zend_class_entry* php_wxTimer_entry;
 void php_wxTimer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxTimer_php: public wxTimer{
@@ -262,6 +322,19 @@ class wxTimer_php: public wxTimer{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxTimer 
+{
+    zend_object zo;
+    wxTimer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxTimer_free(void *object TSRMLS_DC);
+zend_object_value php_wxTimer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTimer_functions[] = {
@@ -303,8 +376,7 @@ static zend_function_entry php_wxTimer_functions[] = {
 };
 #endif
 
-extern int le_wxWindowDisabler;
-extern zend_class_entry *php_wxWindowDisabler_entry;
+extern zend_class_entry* php_wxWindowDisabler_entry;
 void php_wxWindowDisabler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxWindowDisabler_php: public wxWindowDisabler{
@@ -323,6 +395,19 @@ class wxWindowDisabler_php: public wxWindowDisabler{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxWindowDisabler 
+{
+    zend_object zo;
+    wxWindowDisabler_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxWindowDisabler_free(void *object TSRMLS_DC);
+zend_object_value php_wxWindowDisabler_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindowDisabler_functions[] = {
 	PHP_ME(php_wxWindowDisabler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -330,8 +415,7 @@ static zend_function_entry php_wxWindowDisabler_functions[] = {
 };
 #endif
 
-extern int le_wxBusyCursor;
-extern zend_class_entry *php_wxBusyCursor_entry;
+extern zend_class_entry* php_wxBusyCursor_entry;
 void php_wxBusyCursor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxBusyCursor_php: public wxBusyCursor{
@@ -348,6 +432,19 @@ class wxBusyCursor_php: public wxBusyCursor{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxBusyCursor 
+{
+    zend_object zo;
+    wxBusyCursor_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxBusyCursor_free(void *object TSRMLS_DC);
+zend_object_value php_wxBusyCursor_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBusyCursor_functions[] = {

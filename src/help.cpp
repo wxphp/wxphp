@@ -51,32 +51,33 @@
 #include "others.h"
 
 
-void php_wxToolTip_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxToolTip_free(void *object TSRMLS_DC) 
 {
+    zo_wxToolTip* custom_object = (zo_wxToolTip*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxToolTip_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxToolTip_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxToolTip_php* object = static_cast<wxToolTip_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -90,7 +91,43 @@ void php_wxToolTip_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxToolTip_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxToolTip_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxToolTip* custom_object;
+    custom_object = (zo_wxToolTip*) emalloc(sizeof(zo_wxToolTip));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXTOOLTIP_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxToolTip_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxToolTip::wxToolTip(string tip)
    Constructor. */
@@ -101,17 +138,15 @@ PHP_METHOD(php_wxToolTip, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	char* tip0;
@@ -146,9 +181,9 @@ PHP_METHOD(php_wxToolTip, __construct)
 				php_printf("Executing __construct(wxString(tip0, wxConvUTF8))\n");
 				#endif
 
-				_this = new wxToolTip_php(wxString(tip0, wxConvUTF8));
+				native_object = new wxToolTip_php(wxString(tip0, wxConvUTF8));
 
-				((wxToolTip_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -157,16 +192,18 @@ PHP_METHOD(php_wxToolTip, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxToolTip);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxToolTip_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxToolTip_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxToolTip_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -189,39 +226,38 @@ PHP_METHOD(php_wxToolTip, SetTip)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::SetTip\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::SetTip call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -266,7 +302,7 @@ PHP_METHOD(php_wxToolTip, SetTip)
 				php_printf("Executing wxToolTip::SetTip(wxString(tip0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxToolTip_php*)_this)->SetTip(wxString(tip0, wxConvUTF8));
+				((wxToolTip_php*)native_object)->SetTip(wxString(tip0, wxConvUTF8));
 
 
 				return;
@@ -293,39 +329,38 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::SetReshow\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::SetReshow call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -397,39 +432,38 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::SetDelay\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::SetDelay call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -501,39 +535,38 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::SetAutoPop\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::SetAutoPop call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -605,39 +638,38 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::GetWindow\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::GetWindow call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -677,7 +709,7 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 				#endif
 
 				wxWindow_php* value_to_return0;
-				value_to_return0 = (wxWindow_php*) ((wxToolTip_php*)_this)->GetWindow();
+				value_to_return0 = (wxWindow_php*) ((wxToolTip_php*)native_object)->GetWindow();
 
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
@@ -693,11 +725,11 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 					}
 				}
 				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
+					object_init_ex(return_value, php_wxWindow_entry);
+					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return0;
 				}
 
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
 					references->AddReference(return_value, "wxToolTip::GetWindow at call with 0 argument(s)");
 				}
 
@@ -726,39 +758,38 @@ PHP_METHOD(php_wxToolTip, GetTip)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::GetTip\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::GetTip call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -798,7 +829,7 @@ PHP_METHOD(php_wxToolTip, GetTip)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxToolTip_php*)_this)->GetTip();
+				value_to_return0 = ((wxToolTip_php*)native_object)->GetTip();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -830,39 +861,38 @@ PHP_METHOD(php_wxToolTip, Enable)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxToolTip* current_object;
+	wxphp_object_type current_object_type;
+	wxToolTip_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxToolTip::Enable\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxToolTip::Enable call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxToolTip){
-				references = &((wxToolTip_php*)_this)->references;
+			if(current_object_type == PHP_WXTOOLTIP_TYPE){
+				references = &((wxToolTip_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}

@@ -51,32 +51,33 @@
 #include "others.h"
 
 
-void php_wxTextAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+BEGIN_EXTERN_C()
+void php_wxTextAttr_free(void *object TSRMLS_DC) 
 {
+    zo_wxTextAttr* custom_object = (zo_wxTextAttr*) object;
+    //delete custom_object->native_object;
+    
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxTextAttr_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("Calling php_wxTextAttr_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	
-	wxTextAttr_php* object = static_cast<wxTextAttr_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
+	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
 		#endif
 		
-		if(object->references.IsUserInitialized())
-		{	
+		if(custom_object->is_user_initialized)
+		{
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete object;
+			delete custom_object->native_object;
 			
-			rsrc->ptr = NULL;
+			custom_object->native_object = NULL;
 		}
 		
 		#ifdef USE_WXPHP_DEBUG
@@ -90,7 +91,43 @@ void php_wxTextAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
 }
+
+zend_object_value php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxTextAttr_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxTextAttr* custom_object;
+    custom_object = (zo_wxTextAttr*) emalloc(sizeof(zo_wxTextAttr));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXTEXTATTR_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextAttr_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
 
 /* {{{ proto  wxTextAttr::wxTextAttr(wxTextAttr attr)
    Constructors. */
@@ -101,29 +138,27 @@ PHP_METHOD(php_wxTextAttr, __construct)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
 	
 	//Parameters for overload 0
 	zval* attr0 = 0;
-	void* object_pointer0_0 = 0;
+	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* colText1 = 0;
-	void* object_pointer1_0 = 0;
+	wxColour* object_pointer1_0 = 0;
 	zval* colBack1 = 0;
-	void* object_pointer1_1 = 0;
+	wxColour* object_pointer1_1 = 0;
 	zval* font1 = 0;
-	void* object_pointer1_2 = 0;
+	wxFont* object_pointer1_2 = 0;
 	long alignment1;
 	bool overload1_called = false;
 	//Parameters for overload 2
@@ -142,10 +177,11 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(attr0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(attr0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
@@ -153,7 +189,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
-						goto overload1;
+					goto overload1;
 				}
 			}
 
@@ -175,10 +211,11 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &alignment1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(colText1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colText1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(colText1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colText1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colText1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
@@ -186,15 +223,16 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				}
 				else if(Z_TYPE_P(colText1) != IS_NULL)
 				{
-						goto overload2;
+					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(colBack1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colBack1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(colBack1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colBack1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colBack1 TSRMLS_CC))->native_object;
+					object_pointer1_1 = (wxColour*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						goto overload2;
@@ -202,15 +240,16 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				}
 				else if(Z_TYPE_P(colBack1) != IS_NULL)
 				{
-						goto overload2;
+					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(font1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(font1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_2 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font1 TSRMLS_CC))->native_object;
+					object_pointer1_2 = (wxFont*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						goto overload2;
@@ -218,7 +257,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				}
 				else if(Z_TYPE_P(font1) != IS_NULL)
 				{
-						goto overload2;
+					goto overload2;
 				}
 			}
 
@@ -251,10 +290,10 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				php_printf("Executing __construct(*(wxTextAttr*) object_pointer0_0)\n");
 				#endif
 
-				_this = new wxTextAttr_php(*(wxTextAttr*) object_pointer0_0);
+				native_object = new wxTextAttr_php(*(wxTextAttr*) object_pointer0_0);
 
-				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(attr0, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
+				native_object->references.Initialize();
+				((wxTextAttr_php*) native_object)->references.AddReference(attr0, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
 				break;
 			}
 		}
@@ -270,10 +309,10 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0)\n");
 				#endif
 
-				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0);
+				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0);
 
-				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
+				native_object->references.Initialize();
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -282,11 +321,11 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1)\n");
 				#endif
 
-				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
+				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
-				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
-				((wxTextAttr_php*) _this)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
+				native_object->references.Initialize();
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -295,12 +334,12 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2)\n");
 				#endif
 
-				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
+				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
-				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
-				((wxTextAttr_php*) _this)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
-				((wxTextAttr_php*) _this)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
+				native_object->references.Initialize();
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -309,12 +348,12 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				php_printf("Executing __construct(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1)\n");
 				#endif
 
-				_this = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1);
+				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1);
 
-				((wxTextAttr_php*) _this)->references.Initialize();
-				((wxTextAttr_php*) _this)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
-				((wxTextAttr_php*) _this)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
-				((wxTextAttr_php*) _this)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
+				native_object->references.Initialize();
+				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
 				break;
 			}
 		}
@@ -330,9 +369,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				php_printf("Executing __construct()\n");
 				#endif
 
-				_this = new wxTextAttr_php();
+				native_object = new wxTextAttr_php();
 
-				((wxTextAttr_php*) _this)->references.Initialize();
+				native_object->references.Initialize();
 				break;
 			}
 		}
@@ -341,16 +380,18 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		
 	if(already_called)
 	{
-		long id_to_find = zend_list_insert(_this, le_wxTextAttr);
+		native_object->phpObj = getThis();
 		
-		add_property_resource(getThis(), _wxResource, id_to_find);
+		native_object->InitProperties();
 		
-		((wxTextAttr_php*) _this)->phpObj = getThis();
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
-		((wxTextAttr_php*) _this)->InitProperties();
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
 		
 		#ifdef ZTS 
-		((wxTextAttr_php*) _this)->TSRMLS_C = TSRMLS_C;
+		native_object->TSRMLS_C = TSRMLS_C;
 		#endif
 	}
 	else
@@ -373,39 +414,38 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetURL\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetURL call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -450,7 +490,7 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 				php_printf("Executing wxTextAttr::SetURL(wxString(url0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetURL(wxString(url0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetURL(wxString(url0, wxConvUTF8));
 
 
 				return;
@@ -477,39 +517,38 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetTextEffects\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetTextEffects call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -553,7 +592,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 				php_printf("Executing wxTextAttr::SetTextEffects((int) effects0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetTextEffects((int) effects0);
+				((wxTextAttr_php*)native_object)->SetTextEffects((int) effects0);
 
 
 				return;
@@ -580,39 +619,38 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetTextEffectFlags\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetTextEffectFlags call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -656,7 +694,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 				php_printf("Executing wxTextAttr::SetTextEffectFlags((int) flags0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetTextEffectFlags((int) flags0);
+				((wxTextAttr_php*)native_object)->SetTextEffectFlags((int) flags0);
 
 
 				return;
@@ -683,39 +721,38 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetTextColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetTextColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -729,7 +766,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 	
 	//Parameters for overload 0
 	zval* colText0 = 0;
-	void* object_pointer0_0 = 0;
+	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -745,18 +782,19 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(colText0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colText0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(colText0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colText0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colText0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(colText0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -776,7 +814,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 				php_printf("Executing wxTextAttr::SetTextColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetTextColour(*(wxColour*) object_pointer0_0);
+				((wxTextAttr_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colText0, "wxTextAttr::SetTextColour at call with 1 argument(s)");
 
@@ -804,39 +842,38 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetRightIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetRightIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -880,7 +917,7 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 				php_printf("Executing wxTextAttr::SetRightIndent((int) indent0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetRightIndent((int) indent0);
+				((wxTextAttr_php*)native_object)->SetRightIndent((int) indent0);
 
 
 				return;
@@ -907,39 +944,38 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetParagraphStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetParagraphStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -984,7 +1020,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 				php_printf("Executing wxTextAttr::SetParagraphStyleName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetParagraphStyleName(wxString(name0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetParagraphStyleName(wxString(name0, wxConvUTF8));
 
 
 				return;
@@ -1011,39 +1047,38 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetParagraphSpacingBefore\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetParagraphSpacingBefore call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1087,7 +1122,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 				php_printf("Executing wxTextAttr::SetParagraphSpacingBefore((int) spacing0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetParagraphSpacingBefore((int) spacing0);
+				((wxTextAttr_php*)native_object)->SetParagraphSpacingBefore((int) spacing0);
 
 
 				return;
@@ -1114,39 +1149,38 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetParagraphSpacingAfter\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetParagraphSpacingAfter call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1190,7 +1224,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 				php_printf("Executing wxTextAttr::SetParagraphSpacingAfter((int) spacing0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetParagraphSpacingAfter((int) spacing0);
+				((wxTextAttr_php*)native_object)->SetParagraphSpacingAfter((int) spacing0);
 
 
 				return;
@@ -1217,39 +1251,38 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetOutlineLevel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetOutlineLevel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1293,7 +1326,7 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 				php_printf("Executing wxTextAttr::SetOutlineLevel((int) level0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetOutlineLevel((int) level0);
+				((wxTextAttr_php*)native_object)->SetOutlineLevel((int) level0);
 
 
 				return;
@@ -1320,39 +1353,38 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetListStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetListStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1397,7 +1429,7 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 				php_printf("Executing wxTextAttr::SetListStyleName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetListStyleName(wxString(name0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetListStyleName(wxString(name0, wxConvUTF8));
 
 
 				return;
@@ -1424,39 +1456,38 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetLineSpacing\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetLineSpacing call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1500,7 +1531,7 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 				php_printf("Executing wxTextAttr::SetLineSpacing((int) spacing0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetLineSpacing((int) spacing0);
+				((wxTextAttr_php*)native_object)->SetLineSpacing((int) spacing0);
 
 
 				return;
@@ -1527,39 +1558,38 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetLeftIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetLeftIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1604,7 +1634,7 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 				php_printf("Executing wxTextAttr::SetLeftIndent((int) indent0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetLeftIndent((int) indent0);
+				((wxTextAttr_php*)native_object)->SetLeftIndent((int) indent0);
 
 
 				return;
@@ -1616,7 +1646,7 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 				php_printf("Executing wxTextAttr::SetLeftIndent((int) indent0, (int) subIndent0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetLeftIndent((int) indent0, (int) subIndent0);
+				((wxTextAttr_php*)native_object)->SetLeftIndent((int) indent0, (int) subIndent0);
 
 
 				return;
@@ -1643,39 +1673,38 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontWeight\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontWeight call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1719,7 +1748,7 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 				php_printf("Executing wxTextAttr::SetFontWeight((wxFontWeight) fontWeight0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontWeight((wxFontWeight) fontWeight0);
+				((wxTextAttr_php*)native_object)->SetFontWeight((wxFontWeight) fontWeight0);
 
 
 				return;
@@ -1746,39 +1775,38 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontUnderlined\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontUnderlined call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1822,7 +1850,7 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 				php_printf("Executing wxTextAttr::SetFontUnderlined(underlined0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontUnderlined(underlined0);
+				((wxTextAttr_php*)native_object)->SetFontUnderlined(underlined0);
 
 
 				return;
@@ -1849,39 +1877,38 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -1925,7 +1952,7 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 				php_printf("Executing wxTextAttr::SetFontStyle((wxFontStyle) fontStyle0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontStyle((wxFontStyle) fontStyle0);
+				((wxTextAttr_php*)native_object)->SetFontStyle((wxFontStyle) fontStyle0);
 
 
 				return;
@@ -1952,39 +1979,38 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontSize\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontSize call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2028,7 +2054,7 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 				php_printf("Executing wxTextAttr::SetFontSize((int) pointSize0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontSize((int) pointSize0);
+				((wxTextAttr_php*)native_object)->SetFontSize((int) pointSize0);
 
 
 				return;
@@ -2055,39 +2081,38 @@ PHP_METHOD(php_wxTextAttr, Apply)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::Apply\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::Apply call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2101,9 +2126,9 @@ PHP_METHOD(php_wxTextAttr, Apply)
 	
 	//Parameters for overload 0
 	zval* style0 = 0;
-	void* object_pointer0_0 = 0;
+	wxTextAttr* object_pointer0_0 = 0;
 	zval* compareWith0 = 0;
-	void* object_pointer0_1 = 0;
+	wxTextAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -2119,34 +2144,36 @@ PHP_METHOD(php_wxTextAttr, Apply)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, php_wxTextAttr_entry, &compareWith0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(style0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(style0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(style0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(style0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(style0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(style0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(compareWith0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(compareWith0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(compareWith0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(compareWith0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(compareWith0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'compareWith' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(compareWith0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'compareWith' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -2166,7 +2193,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::Apply(*(wxTextAttr*) object_pointer0_0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->Apply(*(wxTextAttr*) object_pointer0_0));
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0));
 
 				references->AddReference(style0, "wxTextAttr::Apply at call with 1 argument(s)");
 
@@ -2179,7 +2206,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
 
 				references->AddReference(style0, "wxTextAttr::Apply at call with 2 argument(s)");
 				references->AddReference(compareWith0, "wxTextAttr::Apply at call with 2 argument(s)");
@@ -2208,39 +2235,38 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetAlignment\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetAlignment call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2279,7 +2305,7 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetAlignment())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetAlignment());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetAlignment());
 
 
 				return;
@@ -2306,39 +2332,38 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetBackgroundColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetBackgroundColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2378,7 +2403,7 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 				#endif
 
 				wxColour_php* value_to_return0;
-				value_to_return0 = (wxColour_php*) &((wxTextAttr_php*)_this)->GetBackgroundColour();
+				value_to_return0 = (wxColour_php*) &((wxTextAttr_php*)native_object)->GetBackgroundColour();
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
@@ -2392,10 +2417,10 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 				}
 				else{
 					object_init_ex(return_value,php_wxColour_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxColour));
+					((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) value_to_return0;
 				}
 
-				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
+				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value, "wxTextAttr::GetBackgroundColour at call with 0 argument(s)");
 				}
 
@@ -2424,39 +2449,38 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetBulletFont\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetBulletFont call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2496,7 +2520,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetBulletFont();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletFont();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -2528,39 +2552,38 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetBulletName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetBulletName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2600,7 +2623,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetBulletName();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -2632,39 +2655,38 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetBulletNumber\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetBulletNumber call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2703,7 +2725,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetBulletNumber())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetBulletNumber());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetBulletNumber());
 
 
 				return;
@@ -2730,39 +2752,38 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetBulletStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetBulletStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2801,7 +2822,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetBulletStyle())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetBulletStyle());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetBulletStyle());
 
 
 				return;
@@ -2828,39 +2849,38 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetBulletText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetBulletText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -2900,7 +2920,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetBulletText();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletText();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -2932,39 +2952,38 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetCharacterStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetCharacterStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3004,7 +3023,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetCharacterStyleName();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetCharacterStyleName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -3036,39 +3055,38 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFlags\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFlags call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3107,7 +3125,7 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFlags())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFlags());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFlags());
 
 
 				return;
@@ -3134,39 +3152,38 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFont\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFont call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3206,11 +3223,11 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				#endif
 
 				wxFont value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetFont();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetFont();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxFont));
+				((zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFont_php*) ptr;
 
 
 				return;
@@ -3237,39 +3254,38 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontAttributes\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontAttributes call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3283,7 +3299,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 	
 	//Parameters for overload 0
 	zval* font0 = 0;
-	void* object_pointer0_0 = 0;
+	wxFont* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
 		
@@ -3300,18 +3316,19 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -3331,7 +3348,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontAttributes(*(wxFont*) object_pointer0_0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontAttributes(*(wxFont*) object_pointer0_0));
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0));
 
 				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 1 argument(s)");
 
@@ -3344,7 +3361,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
 
 				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 2 argument(s)");
 
@@ -3372,39 +3389,38 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontEncoding\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontEncoding call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3443,7 +3459,7 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontEncoding())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontEncoding());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontEncoding());
 
 
 				return;
@@ -3470,39 +3486,38 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontFaceName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontFaceName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3542,7 +3557,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetFontFaceName();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetFontFaceName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -3574,39 +3589,38 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontFamily\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontFamily call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3645,7 +3659,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontFamily())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontFamily());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontFamily());
 
 
 				return;
@@ -3672,39 +3686,38 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontSize\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontSize call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3743,7 +3756,7 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontSize())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontSize());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontSize());
 
 
 				return;
@@ -3770,39 +3783,38 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3841,7 +3853,7 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontStyle())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontStyle());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontStyle());
 
 
 				return;
@@ -3868,39 +3880,38 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontUnderlined\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontUnderlined call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -3939,7 +3950,7 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::GetFontUnderlined())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->GetFontUnderlined());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontUnderlined());
 
 
 				return;
@@ -3966,39 +3977,38 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetFontWeight\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetFontWeight call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4037,7 +4047,7 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetFontWeight())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetFontWeight());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetFontWeight());
 
 
 				return;
@@ -4064,39 +4074,38 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetLeftIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetLeftIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4135,7 +4144,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetLeftIndent())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetLeftIndent());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetLeftIndent());
 
 
 				return;
@@ -4162,39 +4171,38 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetLeftSubIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetLeftSubIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4233,7 +4241,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetLeftSubIndent())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetLeftSubIndent());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetLeftSubIndent());
 
 
 				return;
@@ -4260,39 +4268,38 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetLineSpacing\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetLineSpacing call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4331,7 +4338,7 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetLineSpacing())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetLineSpacing());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetLineSpacing());
 
 
 				return;
@@ -4358,39 +4365,38 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetListStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetListStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4430,7 +4436,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetListStyleName();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetListStyleName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -4462,39 +4468,38 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetOutlineLevel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetOutlineLevel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4533,7 +4538,7 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetOutlineLevel())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetOutlineLevel());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetOutlineLevel());
 
 
 				return;
@@ -4560,39 +4565,38 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetParagraphSpacingAfter\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetParagraphSpacingAfter call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4631,7 +4635,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetParagraphSpacingAfter())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetParagraphSpacingAfter());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetParagraphSpacingAfter());
 
 
 				return;
@@ -4658,39 +4662,38 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetParagraphSpacingBefore\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetParagraphSpacingBefore call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4729,7 +4732,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetParagraphSpacingBefore())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetParagraphSpacingBefore());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetParagraphSpacingBefore());
 
 
 				return;
@@ -4756,39 +4759,38 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetParagraphStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetParagraphStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4828,7 +4830,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetParagraphStyleName();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetParagraphStyleName();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -4860,39 +4862,38 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetRightIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetRightIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -4931,7 +4932,7 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetRightIndent())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetRightIndent());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetRightIndent());
 
 
 				return;
@@ -4958,39 +4959,38 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetTextColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetTextColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5030,7 +5030,7 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 				#endif
 
 				wxColour_php* value_to_return0;
-				value_to_return0 = (wxColour_php*) &((wxTextAttr_php*)_this)->GetTextColour();
+				value_to_return0 = (wxColour_php*) &((wxTextAttr_php*)native_object)->GetTextColour();
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
@@ -5044,10 +5044,10 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 				}
 				else{
 					object_init_ex(return_value,php_wxColour_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxColour));
+					((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) value_to_return0;
 				}
 
-				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
+				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value, "wxTextAttr::GetTextColour at call with 0 argument(s)");
 				}
 
@@ -5076,39 +5076,38 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetTextEffectFlags\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetTextEffectFlags call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5147,7 +5146,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetTextEffectFlags())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetTextEffectFlags());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetTextEffectFlags());
 
 
 				return;
@@ -5174,39 +5173,38 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetTextEffects\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetTextEffects call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5245,7 +5243,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 				php_printf("Executing RETURN_LONG(wxTextAttr::GetTextEffects())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxTextAttr_php*)_this)->GetTextEffects());
+				ZVAL_LONG(return_value, ((wxTextAttr_php*)native_object)->GetTextEffects());
 
 
 				return;
@@ -5272,39 +5270,38 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::GetURL\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::GetURL call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5344,7 +5341,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 				#endif
 
 				wxString value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)_this)->GetURL();
+				value_to_return0 = ((wxTextAttr_php*)native_object)->GetURL();
 				char* temp_string0;
 				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
 				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
@@ -5376,39 +5373,38 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasAlignment\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasAlignment call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5447,7 +5443,7 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasAlignment())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasAlignment());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasAlignment());
 
 
 				return;
@@ -5474,39 +5470,38 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasBackgroundColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasBackgroundColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5545,7 +5540,7 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBackgroundColour())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBackgroundColour());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBackgroundColour());
 
 
 				return;
@@ -5572,39 +5567,38 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasBulletName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasBulletName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5643,7 +5637,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletName())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletName());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletName());
 
 
 				return;
@@ -5670,39 +5664,38 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasBulletNumber\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasBulletNumber call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5741,7 +5734,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletNumber())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletNumber());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletNumber());
 
 
 				return;
@@ -5768,39 +5761,38 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasBulletStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasBulletStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5839,7 +5831,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletStyle())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletStyle());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletStyle());
 
 
 				return;
@@ -5866,39 +5858,38 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasBulletText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasBulletText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -5937,7 +5928,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasBulletText())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasBulletText());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasBulletText());
 
 
 				return;
@@ -5964,39 +5955,38 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasCharacterStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasCharacterStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6035,7 +6025,7 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasCharacterStyleName())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasCharacterStyleName());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasCharacterStyleName());
 
 
 				return;
@@ -6062,39 +6052,38 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFlag\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFlag call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6138,7 +6127,7 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFlag((long) flag0))\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFlag((long) flag0));
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFlag((long) flag0));
 
 
 				return;
@@ -6165,39 +6154,38 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFont\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFont call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6236,7 +6224,7 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFont())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFont());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFont());
 
 
 				return;
@@ -6263,39 +6251,38 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontEncoding\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontEncoding call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6334,7 +6321,7 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontEncoding())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontEncoding());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontEncoding());
 
 
 				return;
@@ -6361,39 +6348,38 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontFaceName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontFaceName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6432,7 +6418,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontFaceName())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontFaceName());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontFaceName());
 
 
 				return;
@@ -6459,39 +6445,38 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontFamily\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontFamily call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6530,7 +6515,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontFamily())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontFamily());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontFamily());
 
 
 				return;
@@ -6557,39 +6542,38 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontItalic\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontItalic call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6628,7 +6612,7 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontItalic())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontItalic());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontItalic());
 
 
 				return;
@@ -6655,39 +6639,38 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontSize\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontSize call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6726,7 +6709,7 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontSize())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontSize());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontSize());
 
 
 				return;
@@ -6753,39 +6736,38 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontUnderlined\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontUnderlined call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6824,7 +6806,7 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontUnderlined())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontUnderlined());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontUnderlined());
 
 
 				return;
@@ -6851,39 +6833,38 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasFontWeight\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasFontWeight call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -6922,7 +6903,7 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasFontWeight())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasFontWeight());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasFontWeight());
 
 
 				return;
@@ -6949,39 +6930,38 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasLeftIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasLeftIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7020,7 +7000,7 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasLeftIndent())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasLeftIndent());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasLeftIndent());
 
 
 				return;
@@ -7047,39 +7027,38 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasLineSpacing\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasLineSpacing call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7118,7 +7097,7 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasLineSpacing())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasLineSpacing());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasLineSpacing());
 
 
 				return;
@@ -7145,39 +7124,38 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasListStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasListStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7216,7 +7194,7 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasListStyleName())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasListStyleName());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasListStyleName());
 
 
 				return;
@@ -7243,39 +7221,38 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasOutlineLevel\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasOutlineLevel call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7314,7 +7291,7 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasOutlineLevel())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasOutlineLevel());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasOutlineLevel());
 
 
 				return;
@@ -7341,39 +7318,38 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasPageBreak\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasPageBreak call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7412,7 +7388,7 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasPageBreak())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasPageBreak());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasPageBreak());
 
 
 				return;
@@ -7439,39 +7415,38 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasParagraphSpacingAfter\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasParagraphSpacingAfter call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7510,7 +7485,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphSpacingAfter())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasParagraphSpacingAfter());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasParagraphSpacingAfter());
 
 
 				return;
@@ -7537,39 +7512,38 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasParagraphSpacingBefore\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasParagraphSpacingBefore call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7608,7 +7582,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphSpacingBefore())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasParagraphSpacingBefore());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasParagraphSpacingBefore());
 
 
 				return;
@@ -7635,39 +7609,38 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasParagraphStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasParagraphStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7706,7 +7679,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasParagraphStyleName())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasParagraphStyleName());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasParagraphStyleName());
 
 
 				return;
@@ -7733,39 +7706,38 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasRightIndent\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasRightIndent call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7804,7 +7776,7 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasRightIndent())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasRightIndent());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasRightIndent());
 
 
 				return;
@@ -7831,39 +7803,38 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasTabs\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasTabs call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -7902,7 +7873,7 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasTabs())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasTabs());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasTabs());
 
 
 				return;
@@ -7929,39 +7900,38 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasTextColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasTextColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8000,7 +7970,7 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasTextColour())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasTextColour());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasTextColour());
 
 
 				return;
@@ -8027,39 +7997,38 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasTextEffects\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasTextEffects call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8098,7 +8067,7 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasTextEffects())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasTextEffects());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasTextEffects());
 
 
 				return;
@@ -8125,39 +8094,38 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::HasURL\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::HasURL call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8196,7 +8164,7 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::HasURL())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->HasURL());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->HasURL());
 
 
 				return;
@@ -8223,39 +8191,38 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::IsCharacterStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::IsCharacterStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8294,7 +8261,7 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::IsCharacterStyle())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->IsCharacterStyle());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->IsCharacterStyle());
 
 
 				return;
@@ -8321,39 +8288,38 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::IsDefault\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::IsDefault call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8392,7 +8358,7 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::IsDefault())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->IsDefault());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->IsDefault());
 
 
 				return;
@@ -8419,39 +8385,38 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::IsParagraphStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::IsParagraphStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8490,7 +8455,7 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 				php_printf("Executing RETURN_BOOL(wxTextAttr::IsParagraphStyle())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxTextAttr_php*)_this)->IsParagraphStyle());
+				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->IsParagraphStyle());
 
 
 				return;
@@ -8517,39 +8482,38 @@ PHP_METHOD(php_wxTextAttr, Merge)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::Merge\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::Merge call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8563,13 +8527,13 @@ PHP_METHOD(php_wxTextAttr, Merge)
 	
 	//Parameters for overload 0
 	zval* overlay0 = 0;
-	void* object_pointer0_0 = 0;
+	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* base1 = 0;
-	void* object_pointer1_0 = 0;
+	wxTextAttr* object_pointer1_0 = 0;
 	zval* overlay1 = 0;
-	void* object_pointer1_1 = 0;
+	wxTextAttr* object_pointer1_1 = 0;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -8585,10 +8549,11 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &overlay0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(overlay0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(overlay0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(overlay0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(overlay0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(overlay0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
@@ -8596,7 +8561,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				}
 				else if(Z_TYPE_P(overlay0) != IS_NULL)
 				{
-						goto overload1;
+					goto overload1;
 				}
 			}
 
@@ -8618,34 +8583,36 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &base1, php_wxTextAttr_entry, &overlay1, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(base1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(base1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(base1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(base1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(base1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'base' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(base1) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'base' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(overlay1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(overlay1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(overlay1) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_1 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(overlay1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(overlay1 TSRMLS_CC))->native_object;
+					object_pointer1_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'overlay' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(overlay1) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'overlay' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -8665,7 +8632,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				php_printf("Executing wxTextAttr::Merge(*(wxTextAttr*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->Merge(*(wxTextAttr*) object_pointer0_0);
+				((wxTextAttr_php*)native_object)->Merge(*(wxTextAttr*) object_pointer0_0);
 
 				references->AddReference(overlay0, "wxTextAttr::Merge at call with 1 argument(s)");
 
@@ -8691,7 +8658,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				void* ptr = safe_emalloc(1, sizeof(wxTextAttr_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxTextAttr));
 				object_init_ex(return_value, php_wxTextAttr_entry);
-				add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_wxTextAttr));
+				((zo_wxTextAttr*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxTextAttr_php*) ptr;
 				((wxTextAttr_php*)ptr)->phpObj = return_value;
 				((wxTextAttr_php*)ptr)->InitProperties();
 
@@ -8720,39 +8687,38 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetAlignment\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetAlignment call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8796,7 +8762,7 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 				php_printf("Executing wxTextAttr::SetAlignment((wxTextAttrAlignment) alignment0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetAlignment((wxTextAttrAlignment) alignment0);
+				((wxTextAttr_php*)native_object)->SetAlignment((wxTextAttrAlignment) alignment0);
 
 
 				return;
@@ -8823,39 +8789,38 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetBackgroundColour\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetBackgroundColour call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -8869,7 +8834,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 	
 	//Parameters for overload 0
 	zval* colBack0 = 0;
-	void* object_pointer0_0 = 0;
+	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -8885,18 +8850,19 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(colBack0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colBack0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(colBack0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colBack0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colBack0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(colBack0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -8916,7 +8882,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 				php_printf("Executing wxTextAttr::SetBackgroundColour(*(wxColour*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
+				((wxTextAttr_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
 				references->AddReference(colBack0, "wxTextAttr::SetBackgroundColour at call with 1 argument(s)");
 
@@ -8944,39 +8910,38 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetBulletFont\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetBulletFont call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9021,7 +8986,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 				php_printf("Executing wxTextAttr::SetBulletFont(wxString(font0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetBulletFont(wxString(font0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetBulletFont(wxString(font0, wxConvUTF8));
 
 
 				return;
@@ -9048,39 +9013,38 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetBulletName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetBulletName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9125,7 +9089,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 				php_printf("Executing wxTextAttr::SetBulletName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetBulletName(wxString(name0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetBulletName(wxString(name0, wxConvUTF8));
 
 
 				return;
@@ -9152,39 +9116,38 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetBulletNumber\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetBulletNumber call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9228,7 +9191,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 				php_printf("Executing wxTextAttr::SetBulletNumber((int) n0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetBulletNumber((int) n0);
+				((wxTextAttr_php*)native_object)->SetBulletNumber((int) n0);
 
 
 				return;
@@ -9255,39 +9218,38 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetBulletStyle\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetBulletStyle call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9331,7 +9293,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 				php_printf("Executing wxTextAttr::SetBulletStyle((int) style0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetBulletStyle((int) style0);
+				((wxTextAttr_php*)native_object)->SetBulletStyle((int) style0);
 
 
 				return;
@@ -9358,39 +9320,38 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetBulletText\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetBulletText call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9435,7 +9396,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 				php_printf("Executing wxTextAttr::SetBulletText(wxString(text0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetBulletText(wxString(text0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetBulletText(wxString(text0, wxConvUTF8));
 
 
 				return;
@@ -9462,39 +9423,38 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetCharacterStyleName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetCharacterStyleName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9539,7 +9499,7 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 				php_printf("Executing wxTextAttr::SetCharacterStyleName(wxString(name0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetCharacterStyleName(wxString(name0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetCharacterStyleName(wxString(name0, wxConvUTF8));
 
 
 				return;
@@ -9566,39 +9526,38 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFlags\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFlags call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9642,7 +9601,7 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 				php_printf("Executing wxTextAttr::SetFlags((long) flags0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFlags((long) flags0);
+				((wxTextAttr_php*)native_object)->SetFlags((long) flags0);
 
 
 				return;
@@ -9669,39 +9628,38 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFont\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFont call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9715,7 +9673,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 	
 	//Parameters for overload 0
 	zval* font0 = 0;
-	void* object_pointer0_0 = 0;
+	wxFont* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
 		
@@ -9732,18 +9690,19 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+				if(Z_TYPE_P(font0) == IS_OBJECT)
 				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
+					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
+					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
 			}
 
@@ -9763,7 +9722,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0);
+				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
 				references->AddReference(font0, "wxTextAttr::SetFont at call with 1 argument(s)");
 
@@ -9776,7 +9735,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0, (int) flags0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
+				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
 
 				references->AddReference(font0, "wxTextAttr::SetFont at call with 2 argument(s)");
 
@@ -9804,39 +9763,38 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontEncoding\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontEncoding call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9880,7 +9838,7 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 				php_printf("Executing wxTextAttr::SetFontEncoding((wxFontEncoding) encoding0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontEncoding((wxFontEncoding) encoding0);
+				((wxTextAttr_php*)native_object)->SetFontEncoding((wxFontEncoding) encoding0);
 
 
 				return;
@@ -9907,39 +9865,38 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontFaceName\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontFaceName call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -9984,7 +9941,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 				php_printf("Executing wxTextAttr::SetFontFaceName(wxString(faceName0, wxConvUTF8))\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontFaceName(wxString(faceName0, wxConvUTF8));
+				((wxTextAttr_php*)native_object)->SetFontFaceName(wxString(faceName0, wxConvUTF8));
 
 
 				return;
@@ -10011,39 +9968,38 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetFontFamily\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFontFamily call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10087,7 +10043,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 				php_printf("Executing wxTextAttr::SetFontFamily((wxFontFamily) family0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetFontFamily((wxFontFamily) family0);
+				((wxTextAttr_php*)native_object)->SetFontFamily((wxFontFamily) family0);
 
 
 				return;
@@ -10114,39 +10070,38 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 	php_printf("===========================================\n");
 	#endif
 	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
+	zval* dummy = NULL;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
 	bool return_is_user_initialized = false;
 	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextAttr::SetPageBreak\n");
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetPageBreak call\n");
 			
 			return;
 		}
 		else
 		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
 			
 			bool reference_type_found = false;
 
-			if(parent_rsrc_type == le_wxTextAttr){
-				references = &((wxTextAttr_php*)_this)->references;
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
 				reference_type_found = true;
 			}
 		}
@@ -10190,7 +10145,7 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 				php_printf("Executing wxTextAttr::SetPageBreak()\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetPageBreak();
+				((wxTextAttr_php*)native_object)->SetPageBreak();
 
 
 				return;
@@ -10202,7 +10157,7 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 				php_printf("Executing wxTextAttr::SetPageBreak(pageBreak0)\n\n");
 				#endif
 
-				((wxTextAttr_php*)_this)->SetPageBreak(pageBreak0);
+				((wxTextAttr_php*)native_object)->SetPageBreak(pageBreak0);
 
 
 				return;

@@ -13,13 +13,13 @@
 #define WXPHP_XML_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_xml_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxXmlNode;
-extern zend_class_entry *php_wxXmlNode_entry;
+extern zend_class_entry* php_wxXmlNode_entry;
 void php_wxXmlNode_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxXmlNode_php: public wxXmlNode{
@@ -38,6 +38,19 @@ class wxXmlNode_php: public wxXmlNode{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxXmlNode 
+{
+    zend_object zo;
+    wxXmlNode_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxXmlNode_free(void *object TSRMLS_DC);
+zend_object_value php_wxXmlNode_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlNode_functions[] = {
@@ -74,8 +87,7 @@ static zend_function_entry php_wxXmlNode_functions[] = {
 };
 #endif
 
-extern int le_wxXmlAttribute;
-extern zend_class_entry *php_wxXmlAttribute_entry;
+extern zend_class_entry* php_wxXmlAttribute_entry;
 void php_wxXmlAttribute_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxXmlAttribute_php: public wxXmlAttribute{
@@ -94,6 +106,19 @@ class wxXmlAttribute_php: public wxXmlAttribute{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxXmlAttribute 
+{
+    zend_object zo;
+    wxXmlAttribute_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxXmlAttribute_free(void *object TSRMLS_DC);
+zend_object_value php_wxXmlAttribute_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlAttribute_functions[] = {
 	PHP_ME(php_wxXmlAttribute, GetName, NULL, ZEND_ACC_PUBLIC)
@@ -107,8 +132,7 @@ static zend_function_entry php_wxXmlAttribute_functions[] = {
 };
 #endif
 
-extern int le_wxXmlDocument;
-extern zend_class_entry *php_wxXmlDocument_entry;
+extern zend_class_entry* php_wxXmlDocument_entry;
 void php_wxXmlDocument_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxXmlDocument_php: public wxXmlDocument{
@@ -128,6 +152,19 @@ class wxXmlDocument_php: public wxXmlDocument{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxXmlDocument 
+{
+    zend_object zo;
+    wxXmlDocument_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxXmlDocument_free(void *object TSRMLS_DC);
+zend_object_value php_wxXmlDocument_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlDocument_functions[] = {

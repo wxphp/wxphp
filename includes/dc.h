@@ -13,13 +13,13 @@
 #define WXPHP_DC_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_dc_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxDC;
-extern zend_class_entry *php_wxDC_entry;
+extern zend_class_entry* php_wxDC_entry;
 void php_wxDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxDC_php: public wxDC{
@@ -35,6 +35,19 @@ class wxDC_php: public wxDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxDC 
+{
+    zend_object zo;
+    wxDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDC_functions[] = {
@@ -135,8 +148,7 @@ static zend_function_entry php_wxDC_functions[] = {
 };
 #endif
 
-extern int le_wxBufferedDC;
-extern zend_class_entry *php_wxBufferedDC_entry;
+extern zend_class_entry* php_wxBufferedDC_entry;
 void php_wxBufferedDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxBufferedDC_php: public wxBufferedDC{
@@ -155,6 +167,19 @@ class wxBufferedDC_php: public wxBufferedDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxBufferedDC 
+{
+    zend_object zo;
+    wxBufferedDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxBufferedDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxBufferedDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBufferedDC_functions[] = {
@@ -259,8 +284,7 @@ static zend_function_entry php_wxBufferedDC_functions[] = {
 };
 #endif
 
-extern int le_wxAutoBufferedPaintDC;
-extern zend_class_entry *php_wxAutoBufferedPaintDC_entry;
+extern zend_class_entry* php_wxAutoBufferedPaintDC_entry;
 void php_wxAutoBufferedPaintDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxAutoBufferedPaintDC_php: public wxAutoBufferedPaintDC{
@@ -277,6 +301,19 @@ class wxAutoBufferedPaintDC_php: public wxAutoBufferedPaintDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxAutoBufferedPaintDC 
+{
+    zend_object zo;
+    wxAutoBufferedPaintDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxAutoBufferedPaintDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxAutoBufferedPaintDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAutoBufferedPaintDC_functions[] = {
@@ -381,8 +418,7 @@ static zend_function_entry php_wxAutoBufferedPaintDC_functions[] = {
 };
 #endif
 
-extern int le_wxBufferedPaintDC;
-extern zend_class_entry *php_wxBufferedPaintDC_entry;
+extern zend_class_entry* php_wxBufferedPaintDC_entry;
 void php_wxBufferedPaintDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxBufferedPaintDC_php: public wxBufferedPaintDC{
@@ -400,6 +436,19 @@ class wxBufferedPaintDC_php: public wxBufferedPaintDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxBufferedPaintDC 
+{
+    zend_object zo;
+    wxBufferedPaintDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxBufferedPaintDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxBufferedPaintDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBufferedPaintDC_functions[] = {
@@ -504,8 +553,7 @@ static zend_function_entry php_wxBufferedPaintDC_functions[] = {
 };
 #endif
 
-extern int le_wxPaintDC;
-extern zend_class_entry *php_wxPaintDC_entry;
+extern zend_class_entry* php_wxPaintDC_entry;
 void php_wxPaintDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPaintDC_php: public wxPaintDC{
@@ -522,6 +570,19 @@ class wxPaintDC_php: public wxPaintDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxPaintDC 
+{
+    zend_object zo;
+    wxPaintDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxPaintDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxPaintDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPaintDC_functions[] = {
@@ -623,8 +684,7 @@ static zend_function_entry php_wxPaintDC_functions[] = {
 };
 #endif
 
-extern int le_wxClientDC;
-extern zend_class_entry *php_wxClientDC_entry;
+extern zend_class_entry* php_wxClientDC_entry;
 void php_wxClientDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxClientDC_php: public wxClientDC{
@@ -641,6 +701,19 @@ class wxClientDC_php: public wxClientDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxClientDC 
+{
+    zend_object zo;
+    wxClientDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxClientDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxClientDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClientDC_functions[] = {
@@ -742,8 +815,7 @@ static zend_function_entry php_wxClientDC_functions[] = {
 };
 #endif
 
-extern int le_wxWindowDC;
-extern zend_class_entry *php_wxWindowDC_entry;
+extern zend_class_entry* php_wxWindowDC_entry;
 void php_wxWindowDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxWindowDC_php: public wxWindowDC{
@@ -760,6 +832,19 @@ class wxWindowDC_php: public wxWindowDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxWindowDC 
+{
+    zend_object zo;
+    wxWindowDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxWindowDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxWindowDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindowDC_functions[] = {
@@ -861,8 +946,7 @@ static zend_function_entry php_wxWindowDC_functions[] = {
 };
 #endif
 
-extern int le_wxMemoryDC;
-extern zend_class_entry *php_wxMemoryDC_entry;
+extern zend_class_entry* php_wxMemoryDC_entry;
 void php_wxMemoryDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxMemoryDC_php: public wxMemoryDC{
@@ -881,6 +965,19 @@ class wxMemoryDC_php: public wxMemoryDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxMemoryDC 
+{
+    zend_object zo;
+    wxMemoryDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxMemoryDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxMemoryDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMemoryDC_functions[] = {
@@ -984,8 +1081,7 @@ static zend_function_entry php_wxMemoryDC_functions[] = {
 };
 #endif
 
-extern int le_wxMirrorDC;
-extern zend_class_entry *php_wxMirrorDC_entry;
+extern zend_class_entry* php_wxMirrorDC_entry;
 void php_wxMirrorDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxMirrorDC_php: public wxMirrorDC{
@@ -1002,6 +1098,19 @@ class wxMirrorDC_php: public wxMirrorDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxMirrorDC 
+{
+    zend_object zo;
+    wxMirrorDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxMirrorDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxMirrorDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMirrorDC_functions[] = {
@@ -1103,8 +1212,7 @@ static zend_function_entry php_wxMirrorDC_functions[] = {
 };
 #endif
 
-extern int le_wxPostScriptDC;
-extern zend_class_entry *php_wxPostScriptDC_entry;
+extern zend_class_entry* php_wxPostScriptDC_entry;
 void php_wxPostScriptDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPostScriptDC_php: public wxPostScriptDC{
@@ -1122,6 +1230,19 @@ class wxPostScriptDC_php: public wxPostScriptDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxPostScriptDC 
+{
+    zend_object zo;
+    wxPostScriptDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxPostScriptDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxPostScriptDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPostScriptDC_functions[] = {
@@ -1223,8 +1344,7 @@ static zend_function_entry php_wxPostScriptDC_functions[] = {
 };
 #endif
 
-extern int le_wxScreenDC;
-extern zend_class_entry *php_wxScreenDC_entry;
+extern zend_class_entry* php_wxScreenDC_entry;
 void php_wxScreenDC_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxScreenDC_php: public wxScreenDC{
@@ -1241,6 +1361,19 @@ class wxScreenDC_php: public wxScreenDC{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxScreenDC 
+{
+    zend_object zo;
+    wxScreenDC_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxScreenDC_free(void *object TSRMLS_DC);
+zend_object_value php_wxScreenDC_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxScreenDC_functions[] = {

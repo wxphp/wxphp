@@ -13,13 +13,13 @@
 #define WXPHP_APPMANAGEMENT_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_appmanagement_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxEventLoopBase;
-extern zend_class_entry *php_wxEventLoopBase_entry;
+extern zend_class_entry* php_wxEventLoopBase_entry;
 void php_wxEventLoopBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxEventLoopBase_php: public wxEventLoopBase{
@@ -43,6 +43,19 @@ class wxEventLoopBase_php: public wxEventLoopBase{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxEventLoopBase 
+{
+    zend_object zo;
+    wxEventLoopBase_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxEventLoopBase_free(void *object TSRMLS_DC);
+zend_object_value php_wxEventLoopBase_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxEventLoopBase_functions[] = {
 	PHP_ME(php_wxEventLoopBase, GetActive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -60,8 +73,7 @@ static zend_function_entry php_wxEventLoopBase_functions[] = {
 };
 #endif
 
-extern int le_wxEventLoopActivator;
-extern zend_class_entry *php_wxEventLoopActivator_entry;
+extern zend_class_entry* php_wxEventLoopActivator_entry;
 void php_wxEventLoopActivator_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxEventLoopActivator_php: public wxEventLoopActivator{
@@ -79,6 +91,19 @@ class wxEventLoopActivator_php: public wxEventLoopActivator{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxEventLoopActivator 
+{
+    zend_object zo;
+    wxEventLoopActivator_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxEventLoopActivator_free(void *object TSRMLS_DC);
+zend_object_value php_wxEventLoopActivator_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxEventLoopActivator_functions[] = {
 	PHP_ME(php_wxEventLoopActivator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -86,8 +111,7 @@ static zend_function_entry php_wxEventLoopActivator_functions[] = {
 };
 #endif
 
-extern int le_wxModule;
-extern zend_class_entry *php_wxModule_entry;
+extern zend_class_entry* php_wxModule_entry;
 void php_wxModule_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxModule_php: public wxModule{
@@ -107,6 +131,19 @@ class wxModule_php: public wxModule{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxModule 
+{
+    zend_object zo;
+    wxModule_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxModule_free(void *object TSRMLS_DC);
+zend_object_value php_wxModule_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxModule_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
@@ -120,8 +157,7 @@ static zend_function_entry php_wxModule_functions[] = {
 };
 #endif
 
-extern int le_wxProcess;
-extern zend_class_entry *php_wxProcess_entry;
+extern zend_class_entry* php_wxProcess_entry;
 void php_wxProcess_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxProcess_php: public wxProcess{
@@ -140,6 +176,19 @@ class wxProcess_php: public wxProcess{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxProcess 
+{
+    zend_object zo;
+    wxProcess_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxProcess_free(void *object TSRMLS_DC);
+zend_object_value php_wxProcess_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxProcess_functions[] = {
@@ -185,8 +234,7 @@ static zend_function_entry php_wxProcess_functions[] = {
 };
 #endif
 
-extern int le_wxSingleInstanceChecker;
-extern zend_class_entry *php_wxSingleInstanceChecker_entry;
+extern zend_class_entry* php_wxSingleInstanceChecker_entry;
 void php_wxSingleInstanceChecker_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{
@@ -204,6 +252,19 @@ class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxSingleInstanceChecker 
+{
+    zend_object zo;
+    wxSingleInstanceChecker_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxSingleInstanceChecker_free(void *object TSRMLS_DC);
+zend_object_value php_wxSingleInstanceChecker_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSingleInstanceChecker_functions[] = {

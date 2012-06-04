@@ -256,7 +256,7 @@ function register_class_const_properties($class_name)
 							$code .= "\tzval* {$property_name}_zval;\n";
 							$code .= "\tMAKE_STD_ZVAL({$property_name}_zval)\n";
 							$code .= "\tobject_init_ex({$property_name}_zval, php_{$property_type}_entry);\n";
-							$code .= "\tadd_property_resource({$property_name}_zval, \"wxResource\", zend_list_insert({$property_name}, le_{$property_type}));\n";
+							$code .= "\t((zo_{$property_type}*) zend_object_store_get_object({$property_name}_zval TSRMLS_CC))->native_object = ({$property_type}_php*) {$property_name};\n";
 							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_CC);\n";
 							break;
 							
@@ -265,7 +265,7 @@ function register_class_const_properties($class_name)
 							$code .= "\tzval* {$property_name}_zval;\n";
 							$code .= "\tMAKE_STD_ZVAL({$property_name}_zval)\n";
 							$code .= "\tobject_init_ex({$property_name}_zval, php_{$property_type}_entry);\n";
-							$code .= "\tadd_property_resource({$property_name}_zval, \"wxResource\", zend_list_insert(&{$property_name}, le_{$property_type}));\n";
+							$code .= "\t((zo_{$property_type}*) zend_object_store_get_object({$property_name}_zval TSRMLS_CC))->native_object = ({$property_type}_php*) &{$property_name};\n";
 							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_CC);\n";
 							break;
 					}

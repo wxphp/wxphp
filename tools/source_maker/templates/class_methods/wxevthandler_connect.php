@@ -8,7 +8,6 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 	
 	zval *arg[1];
 	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
 	TSRMLS_FETCH();
 
 	if(0)
@@ -21,7 +20,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		#endif
 		
 		object_init_ex(arg[0], php_<?=$kevn?>_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_<?=$kevn?>));
+		((zo_<?=$kevn?>*) zend_object_store_get_object(arg[0] TSRMLS_CC))->native_object = (<?=$kevn?>_php*) &evnt;
 	}
 	<? } ?>
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxEvent")))
@@ -31,7 +30,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		#endif
 		
 		object_init_ex(arg[0], php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
+		((zo_wxEvent*) zend_object_store_get_object(arg[0] TSRMLS_CC))->native_object = (wxEvent_php*) &evnt;
 	}
 	else
 	{
@@ -42,7 +41,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		wxString errorMsg;
 		errorMsg += "Failed to pass as argument event of type: ";
 		errorMsg += evnt.GetClassInfo()->GetClassName();
-		wxMessageBox(errorMsg);
+		wxMessageBox(errorMsg, "Error", wxOK|wxICON_ERROR);
 	}
 
 	char* wxname;
@@ -67,14 +66,14 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		errorMessage += ce->GetString().char_str();
 		errorMessage += "'";
 		
-		wxMessageBox(errorMessage);
+		wxMessageBox(errorMessage, "Error", wxOK|wxICON_ERROR);
 	}
 	
 	efree(arg[0]);
 	efree(wxname);
 	zval_ptr_dtor(&fc_name);
-	
 }
+
 PHP_METHOD(php_<?=$class_name?>, Connect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -83,27 +82,29 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 	php_printf("Parameters received: %d\n", ZEND_NUM_ARGS());
 	#endif
 	
-	zval** tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxEvtHandler* _this;
-
-	if(getThis())
+	zo_<?=$class_name?>* current_object;
+	wxEvtHandler* native_object;
+	
+	//Get native object of the php object that called the method
+	if (getThis() != NULL) 
 	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		current_object = (zo_<?=$class_name?>*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
 		{
+			zend_error(E_ERROR, "Failed to get the native object for <?=$class_name . "::" . $method_name ?> call\n");
+			
 			return;
+		}
+		else
+		{
+			native_object = (wxEvtHandler*) current_object->native_object;
 		}
 	}
 	else
 	{
-		zend_error(E_ERROR, "Failed to get parent object of Connect method");
+		zend_error(E_ERROR, "Could not process Connect call as static\n");
 	}
-	
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxEvtHandler*) zend_list_find(id_to_find, &rsrc_type);
 
 	zval* fc;
 	long flag, id0 = 0, id1 = 0;
@@ -168,27 +169,30 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 	{
 		case 4:
 			#ifdef USE_WXPHP_DEBUG
-			php_printf("Executing: _this->Connect(id0, id1, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
+			php_printf("Executing: native_object->Connect(id0, id1, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
 			php_printf("Object id: %d Object last id: %d Event type: %d\n", (int)id0, (int)id1, (int)flag);
 			#endif
-			_this->Connect(id0, id1, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
+			
+			native_object->Connect(id0, id1, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
 			break;
 		case 3:
 			#ifdef USE_WXPHP_DEBUG
-			php_printf("Executing: _this->Connect(id0, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
+			php_printf("Executing: native_object->Connect(id0, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
 			php_printf("Object id: %d Event type: %d\n", (int)id0, (int)flag);
 			#endif
-			_this->Connect(id0, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
+			
+			native_object->Connect(id0, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
 			break;
 		case 2:
 			#ifdef USE_WXPHP_DEBUG
-			php_printf("Executing: _this->Connect(flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
+			php_printf("Executing: native_object->Connect(flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
 			php_printf("Event type: %d\n", (int)flag);
 			#endif
-			_this->Connect(flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
+			
+			native_object->Connect(flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
 			break;
 		default:
-			wxMessageBox(_T("Failed to create event\n"));
+			wxMessageBox("Failed to create event", "Error", wxOK|wxICON_ERROR);
 			break;
 	}	
 	

@@ -13,13 +13,13 @@
 #define WXPHP_XRC_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_xrc_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxXmlResourceHandler;
-extern zend_class_entry *php_wxXmlResourceHandler_entry;
+extern zend_class_entry* php_wxXmlResourceHandler_entry;
 void php_wxXmlResourceHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxXmlResourceHandler_php: public wxXmlResourceHandler{
@@ -39,6 +39,19 @@ class wxXmlResourceHandler_php: public wxXmlResourceHandler{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxXmlResourceHandler 
+{
+    zend_object zo;
+    wxXmlResourceHandler_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxXmlResourceHandler_free(void *object TSRMLS_DC);
+zend_object_value php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResourceHandler_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
@@ -54,8 +67,7 @@ static zend_function_entry php_wxXmlResourceHandler_functions[] = {
 };
 #endif
 
-extern int le_wxXmlResource;
-extern zend_class_entry *php_wxXmlResource_entry;
+extern zend_class_entry* php_wxXmlResource_entry;
 void php_wxXmlResource_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxXmlResource_php: public wxXmlResource{
@@ -74,6 +86,19 @@ class wxXmlResource_php: public wxXmlResource{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxXmlResource 
+{
+    zend_object zo;
+    wxXmlResource_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxXmlResource_free(void *object TSRMLS_DC);
+zend_object_value php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResource_functions[] = {

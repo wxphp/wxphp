@@ -13,13 +13,13 @@
 #define WXPHP_LOGGING_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_logging_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxLogWindow;
-extern zend_class_entry *php_wxLogWindow_entry;
+extern zend_class_entry* php_wxLogWindow_entry;
 void php_wxLogWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLogWindow_php: public wxLogWindow{
@@ -39,6 +39,19 @@ class wxLogWindow_php: public wxLogWindow{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLogWindow 
+{
+    zend_object zo;
+    wxLogWindow_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLogWindow_free(void *object TSRMLS_DC);
+zend_object_value php_wxLogWindow_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogWindow_functions[] = {
@@ -80,8 +93,7 @@ static zend_function_entry php_wxLogWindow_functions[] = {
 };
 #endif
 
-extern int le_wxLogChain;
-extern zend_class_entry *php_wxLogChain_entry;
+extern zend_class_entry* php_wxLogChain_entry;
 void php_wxLogChain_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLogChain_php: public wxLogChain{
@@ -98,6 +110,19 @@ class wxLogChain_php: public wxLogChain{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLogChain 
+{
+    zend_object zo;
+    wxLogChain_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLogChain_free(void *object TSRMLS_DC);
+zend_object_value php_wxLogChain_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogChain_functions[] = {
@@ -137,8 +162,7 @@ static zend_function_entry php_wxLogChain_functions[] = {
 };
 #endif
 
-extern int le_wxLogGui;
-extern zend_class_entry *php_wxLogGui_entry;
+extern zend_class_entry* php_wxLogGui_entry;
 void php_wxLogGui_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLogGui_php: public wxLogGui{
@@ -164,6 +188,19 @@ class wxLogGui_php: public wxLogGui{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLogGui 
+{
+    zend_object zo;
+    wxLogGui_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLogGui_free(void *object TSRMLS_DC);
+zend_object_value php_wxLogGui_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogGui_functions[] = {
@@ -199,8 +236,7 @@ static zend_function_entry php_wxLogGui_functions[] = {
 };
 #endif
 
-extern int le_wxLogBuffer;
-extern zend_class_entry *php_wxLogBuffer_entry;
+extern zend_class_entry* php_wxLogBuffer_entry;
 void php_wxLogBuffer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLogBuffer_php: public wxLogBuffer{
@@ -217,6 +253,19 @@ class wxLogBuffer_php: public wxLogBuffer{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLogBuffer 
+{
+    zend_object zo;
+    wxLogBuffer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLogBuffer_free(void *object TSRMLS_DC);
+zend_object_value php_wxLogBuffer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogBuffer_functions[] = {
@@ -252,8 +301,7 @@ static zend_function_entry php_wxLogBuffer_functions[] = {
 };
 #endif
 
-extern int le_wxLogInterposer;
-extern zend_class_entry *php_wxLogInterposer_entry;
+extern zend_class_entry* php_wxLogInterposer_entry;
 void php_wxLogInterposer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLogInterposer_php: public wxLogInterposer{
@@ -270,6 +318,19 @@ class wxLogInterposer_php: public wxLogInterposer{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLogInterposer 
+{
+    zend_object zo;
+    wxLogInterposer_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLogInterposer_free(void *object TSRMLS_DC);
+zend_object_value php_wxLogInterposer_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogInterposer_functions[] = {
@@ -309,8 +370,7 @@ static zend_function_entry php_wxLogInterposer_functions[] = {
 };
 #endif
 
-extern int le_wxLogTextCtrl;
-extern zend_class_entry *php_wxLogTextCtrl_entry;
+extern zend_class_entry* php_wxLogTextCtrl_entry;
 void php_wxLogTextCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLogTextCtrl_php: public wxLogTextCtrl{
@@ -327,6 +387,19 @@ class wxLogTextCtrl_php: public wxLogTextCtrl{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLogTextCtrl 
+{
+    zend_object zo;
+    wxLogTextCtrl_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLogTextCtrl_free(void *object TSRMLS_DC);
+zend_object_value php_wxLogTextCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogTextCtrl_functions[] = {
@@ -361,8 +434,7 @@ static zend_function_entry php_wxLogTextCtrl_functions[] = {
 };
 #endif
 
-extern int le_wxLog;
-extern zend_class_entry *php_wxLog_entry;
+extern zend_class_entry* php_wxLog_entry;
 void php_wxLog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxLog_php: public wxLog{
@@ -380,6 +452,19 @@ class wxLog_php: public wxLog{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxLog 
+{
+    zend_object zo;
+    wxLog_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxLog_free(void *object TSRMLS_DC);
+zend_object_value php_wxLog_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLog_functions[] = {

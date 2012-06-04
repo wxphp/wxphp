@@ -48,9 +48,9 @@ extern zend_module_entry wxWidgets_module_entry;
 /**
  * Custom function to register objects as constants
  */
-#define wxPHP_REGISTER_RESOURCE_CONSTANT(name, resource, class_entry, list_entry, flags)  wxphp_register_resource_constant((name), sizeof(name), (resource), (class_entry), (list_entry), (flags), module_number TSRMLS_CC)
+#define wxPHP_REGISTER_OBJECT_CONSTANT(name, object, flags)  wxphp_register_object_constant((name), sizeof(name), (object), (flags), module_number TSRMLS_CC)
 BEGIN_EXTERN_C()
-void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC);
+void wxphp_register_object_constant(const char *name, uint name_len, zval object, int flags, int module_number TSRMLS_DC);
 END_EXTERN_C()
 
 /**

@@ -13,13 +13,13 @@
 #define WXPHP_RTTI_H_GUARD
 
 #include "references.h"
+#include "object_types.h"
 
 ZEND_BEGIN_ARG_INFO_EX(wxphp_rtti_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
-extern int le_wxRefCounter;
-extern zend_class_entry *php_wxRefCounter_entry;
+extern zend_class_entry* php_wxRefCounter_entry;
 void php_wxRefCounter_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxRefCounter_php: public wxRefCounter{
@@ -37,6 +37,19 @@ class wxRefCounter_php: public wxRefCounter{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxRefCounter 
+{
+    zend_object zo;
+    wxRefCounter_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxRefCounter_free(void *object TSRMLS_DC);
+zend_object_value php_wxRefCounter_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRefCounter_functions[] = {
 	PHP_ME(php_wxRefCounter, DecRef, NULL, ZEND_ACC_PUBLIC)
@@ -47,8 +60,7 @@ static zend_function_entry php_wxRefCounter_functions[] = {
 };
 #endif
 
-extern int le_wxObject;
-extern zend_class_entry *php_wxObject_entry;
+extern zend_class_entry* php_wxObject_entry;
 void php_wxObject_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxObject_php: public wxObject{
@@ -71,6 +83,19 @@ class wxObject_php: public wxObject{
 	wxPHPObjectReferences references;
 };
 
+BEGIN_EXTERN_C()
+struct zo_wxObject 
+{
+    zend_object zo;
+    wxObject_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxObject_free(void *object TSRMLS_DC);
+zend_object_value php_wxObject_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxObject_functions[] = {
 	PHP_ME(php_wxObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -85,8 +110,7 @@ static zend_function_entry php_wxObject_functions[] = {
 };
 #endif
 
-extern int le_wxClassInfo;
-extern zend_class_entry *php_wxClassInfo_entry;
+extern zend_class_entry* php_wxClassInfo_entry;
 void php_wxClassInfo_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxClassInfo_php: public wxClassInfo{
@@ -102,6 +126,19 @@ class wxClassInfo_php: public wxClassInfo{
 	void** properties;
 	wxPHPObjectReferences references;
 };
+
+BEGIN_EXTERN_C()
+struct zo_wxClassInfo 
+{
+    zend_object zo;
+    wxClassInfo_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxClassInfo_free(void *object TSRMLS_DC);
+zend_object_value php_wxClassInfo_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClassInfo_functions[] = {

@@ -59,11 +59,23 @@ if(file_exists("../json/functions.json"))
 	$defFunctions = unserialize_json(file_get_contents("../json/functions.json"));
 	
 	//Manually defined as a template
-	$defFunctions["wxDynamicCast"] = array( array(
-			"brief_description"=>"Converts a given object from one type to another",
-			"return_type"=>"wxObject", 
+	$defFunctions["wxDynamicCast"] = array( 
+		array(
+			"return_type"=>"wxObject",
+			"brief_description"=>"Converts a given object from one type to another", 
 			"parameters_type"=>array("wxObject", "wxString"),
 			"parameters_name"=>array("object", "type")
+		)
+	);
+	
+	//Custom function to convert object constants to non constants
+	$defFunctions["wxC2D"] = array(
+		array(
+			"return_type"=>"void*",
+			"brief_description"=>"Converts a wxWidgets constant object to dynamic in order to be able to access its methods like wxC2D(wxNORMAL_FONT)->GetPointSize().",
+			"parameters_type"=>array("void*"),
+			"parameters_name"=>array("constantObject"),
+			"parameters_required"=>array(true)
 		)
 	);
 	
