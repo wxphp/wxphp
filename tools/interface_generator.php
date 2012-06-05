@@ -350,22 +350,28 @@ foreach($defIni as $class_name=>$class_methods)
 		{
 			$content .= generata_documentation($method_name, $method_definitions, 1)."\n";
 			
+			$content .= "\t";
+			
+			if($method_definitions[0]["static"])
+			{
+				$content .= " static ";
+			}
 			if($method_name == "Clone")
-				$content .= "\tfunction " . "CloneMethod(";
+				$content .= "function " . "CloneMethod(";
 			elseif($method_name == "Exit")
-				$content .= "\tfunction " . "ExitMethod(";
+				$content .= "function " . "ExitMethod(";
 			elseif($method_name == "Print")
-				$content .= "\tfunction " . "PrintMethod(";
+				$content .= "function " . "PrintMethod(";
 			elseif($method_name == "Break")
-				$content .= "\tfunction " . "BreakMethod(";
+				$content .= "function " . "BreakMethod(";
 			elseif($method_name == "New")
-				$content .= "\tfunction " . "NewMethod(";
+				$content .= "function " . "NewMethod(";
 			elseif($method_name == "Xor")
-				$content .= "\tfunction " . "XorMethod(";
+				$content .= "function " . "XorMethod(";
 			elseif($method_name == $class_name)
-				$content .= "\tfunction " . "__construct(";
+				$content .= "function " . "__construct(";
 			else
-				$content .= "\tfunction " . $method_name . "(";
+				$content .= "function " . $method_name . "(";
 	
 			$arguments = "";
 			foreach($method_definitions as $method_index=>$method_definition)
