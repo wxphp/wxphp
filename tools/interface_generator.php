@@ -185,7 +185,14 @@ $library,
  * and it should be automatically parsed by the IDE code completion
  * engine.
  *
- */\n\n"
+ */
+ 
+ 
+// To prevent this code from being executed since functionality
+// is already provided by the wxwidgets extension.
+if(defined(\"DUMMY_WXWIDGETS_LIBRARY\"))
+{\n\n
+ "
 );
 
 print "Adding constants...\n";
@@ -411,7 +418,7 @@ foreach($defIni as $class_name=>$class_methods)
 	$content .= "}\n\n";
 	fwrite($library, $content);
 }
-fwrite($library, "?>\n");
+fwrite($library, "}\n\n?>\n");
 
 fclose($library);
 
