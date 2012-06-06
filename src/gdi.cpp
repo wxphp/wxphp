@@ -14138,7 +14138,7 @@ PHP_METHOD(php_wxFont, MakeUnderlined)
 
 /* {{{ proto wxFont wxFont::New(int pointSize, wxFontFamily family, wxFontStyle style, wxFontWeight weight, bool underline, string faceName, wxFontEncoding encoding)
    This function takes the same parameters as the relative wxFont constructor and returns a new font object allocated on the heap. */
-PHP_METHOD(php_wxFont, NewObject)
+PHP_METHOD(php_wxFont, NewMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxFont::New\n");

@@ -6330,7 +6330,7 @@ END_EXTERN_C()
 
 /* {{{ proto wxGridCellAttr wxGridCellAttr::Clone()
    Creates a new copy of this object. */
-PHP_METHOD(php_wxGridCellAttr, Clone)
+PHP_METHOD(php_wxGridCellAttr, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxGridCellAttr::Clone\n");

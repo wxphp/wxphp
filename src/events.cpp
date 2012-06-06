@@ -38340,7 +38340,7 @@ END_EXTERN_C()
 
 /* {{{ proto wxEvent wxThreadEvent::Clone()
    Clones this event making sure that all internal members which use COW (only m_commandString for now; see Reference Counting) are unshared (see wxObject::UnShare). */
-PHP_METHOD(php_wxThreadEvent, Clone)
+PHP_METHOD(php_wxThreadEvent, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxThreadEvent::Clone\n");

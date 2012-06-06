@@ -3403,7 +3403,7 @@ END_EXTERN_C()
 
 /* {{{ proto wxEvent wxWindowModalDialogEvent::Clone()
    Returns a copy of the event. */
-PHP_METHOD(php_wxWindowModalDialogEvent, Clone)
+PHP_METHOD(php_wxWindowModalDialogEvent, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxWindowModalDialogEvent::Clone\n");

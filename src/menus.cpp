@@ -6124,7 +6124,7 @@ PHP_METHOD(php_wxMenu, Attach)
 
 /* {{{ proto  wxMenu::Break()
    Inserts a break in a menu, causing the next appended item to appear in a new column. */
-PHP_METHOD(php_wxMenu, Break)
+PHP_METHOD(php_wxMenu, BreakMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxMenu::Break\n");

@@ -86,7 +86,7 @@ static zend_function_entry php_wxGenericValidator_functions[] = {
 	PHP_ME(php_wxValidator, SetWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxValidator, GetWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxValidator, SuppressBellOnError, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericValidator, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericValidator, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGenericValidator, TransferFromWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGenericValidator, TransferToWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGenericValidator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -158,7 +158,7 @@ static zend_function_entry php_wxValidator_functions[] = {
 	PHP_ME(php_wxValidator, SetWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxValidator, GetWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxValidator, SuppressBellOnError, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxValidator, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxValidator, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif
@@ -224,7 +224,7 @@ static zend_function_entry php_wxTextValidator_functions[] = {
 	PHP_ME(php_wxValidator, SetWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxValidator, GetWindow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxValidator, SuppressBellOnError, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextValidator, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTextValidator, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextValidator, GetExcludes, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextValidator, GetIncludes, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextValidator, GetStyle, NULL, ZEND_ACC_PUBLIC)

@@ -88,7 +88,7 @@ static zend_function_entry php_wxAuiNotebookEvent_functions[] = {
 	PHP_ME(php_wxBookCtrlEvent, GetSelection, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxBookCtrlEvent, SetOldSelection, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxBookCtrlEvent, SetSelection, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxAuiNotebookEvent, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxAuiNotebookEvent, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiNotebookEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };

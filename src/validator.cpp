@@ -131,7 +131,7 @@ END_EXTERN_C()
 
 /* {{{ proto wxObject wxGenericValidator::Clone()
    Clones the generic validator using the copy constructor. */
-PHP_METHOD(php_wxGenericValidator, Clone)
+PHP_METHOD(php_wxGenericValidator, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxGenericValidator::Clone\n");
@@ -1686,7 +1686,7 @@ PHP_METHOD(php_wxValidator, SuppressBellOnError)
 
 /* {{{ proto wxObject wxValidator::Clone()
    All validator classes must implement the Clone() function, which returns an identical copy of itself. */
-PHP_METHOD(php_wxValidator, Clone)
+PHP_METHOD(php_wxValidator, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxValidator::Clone\n");
@@ -1892,7 +1892,7 @@ END_EXTERN_C()
 
 /* {{{ proto wxObject wxTextValidator::Clone()
    Clones the text validator using the copy constructor. */
-PHP_METHOD(php_wxTextValidator, Clone)
+PHP_METHOD(php_wxTextValidator, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxTextValidator::Clone\n");

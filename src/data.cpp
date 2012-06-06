@@ -28464,7 +28464,7 @@ END_EXTERN_C()
 
 /* {{{ proto wxVariantData wxVariantData::Clone()
    This function can be overridden to clone the data. */
-PHP_METHOD(php_wxVariantData, Clone)
+PHP_METHOD(php_wxVariantData, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxVariantData::Clone\n");

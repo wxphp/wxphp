@@ -130,7 +130,7 @@ zend_object_value php_wxAuiNotebookEvent_new(zend_class_entry *class_type TSRMLS
 END_EXTERN_C()
 
 /* {{{ proto wxEvent wxAuiNotebookEvent::Clone() */
-PHP_METHOD(php_wxAuiNotebookEvent, Clone)
+PHP_METHOD(php_wxAuiNotebookEvent, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxAuiNotebookEvent::Clone\n");
