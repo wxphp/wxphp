@@ -739,7 +739,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAttr_functions[] = {
-	PHP_ME(php_wxGridCellAttr, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellAttr, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellAttr, DecRef, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellAttr, GetAlignment, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellAttr, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)

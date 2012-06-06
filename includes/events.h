@@ -1915,7 +1915,7 @@ static zend_function_entry php_wxThreadEvent_functions[] = {
 	PHP_ME(php_wxEvent, ShouldPropagate, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEvent, Skip, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEvent, StopPropagation, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxThreadEvent, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxThreadEvent, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThreadEvent, GetExtraLong, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThreadEvent, GetEventCategory, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThreadEvent, GetInt, NULL, ZEND_ACC_PUBLIC)

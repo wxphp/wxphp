@@ -386,7 +386,7 @@ static zend_function_entry php_wxMenu_functions[] = {
 	PHP_ME(php_wxMenu, AppendSeparator, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMenu, AppendSubMenu, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMenu, Attach, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxMenu, Break, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxMenu, BreakMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMenu, Check, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMenu, Delete, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMenu, Destroy, NULL, ZEND_ACC_PUBLIC)

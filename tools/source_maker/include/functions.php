@@ -176,13 +176,12 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 		{
 			if(!$ctor)
 				continue;
-					
+				
 			$funcName2 = "__construct";
 		}
-		
-		//Cant use New as a Method name since it seems it is reserved by php even when used as a static method
-		if($funcName2 == "New")
-			$funcName2 = "NewObject";
+			
+		//Rename conflicting method names with PHP keywords
+		$funcName2 = php_method_name($funcName2);
 		
 		if(in_array($funcName2,$ar))
 			continue;
@@ -270,6 +269,33 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 	$output .= $class_methods;
 	
 	return $ar;
+}
+
+/**
+ * Renames a method name by Appending the word Method
+ * if the given method name conflicts with a PHP reserverd
+ * keyword.
+ * 
+ * @param string $method_name The original method name
+ * @return Renamed method name or original if no conflicts.
+ */
+function php_method_name($method_name)
+{
+	//Rename conflicting method names with PHP keywords
+	if($method_name == "Clone")
+		return "CloneMethod";
+	elseif($method_name == "Exit")
+		return "ExitMethod";
+	elseif($method_name == "Print")
+		return "PrintMethod";
+	elseif($method_name == "Break")
+		return "BreakMethod";
+	elseif($method_name == "New")
+		return "NewMethod";
+	elseif($fcName == "Xor")
+		return "XorMethod";
+	
+	return $method_name;
 }
 
 /**

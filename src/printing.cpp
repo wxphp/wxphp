@@ -2721,7 +2721,7 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 
 /* {{{ proto bool wxPrintPreview::Print(bool prompt)
    Invokes the print process using the second wxPrintout object supplied in the wxPrintPreview constructor. */
-PHP_METHOD(php_wxPrintPreview, Print)
+PHP_METHOD(php_wxPrintPreview, PrintMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxPrintPreview::Print\n");
@@ -4217,7 +4217,7 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 
 /* {{{ proto bool wxPrinter::Print(wxWindow &parent, wxPrintout &printout, bool prompt)
    Starts the printing process. */
-PHP_METHOD(php_wxPrinter, Print)
+PHP_METHOD(php_wxPrinter, PrintMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxPrinter::Print\n");

@@ -24674,7 +24674,7 @@ zend_object_value php_wxAuiDefaultToolBarArt_new(zend_class_entry *class_type TS
 END_EXTERN_C()
 
 /* {{{ proto wxAuiToolBarArt wxAuiDefaultToolBarArt::Clone() */
-PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
+PHP_METHOD(php_wxAuiDefaultToolBarArt, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxAuiDefaultToolBarArt::Clone\n");

@@ -858,7 +858,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiDefaultToolBarArt_functions[] = {
-	PHP_ME(php_wxAuiDefaultToolBarArt, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxAuiDefaultToolBarArt, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiDefaultToolBarArt, DrawBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiDefaultToolBarArt, DrawButton, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiDefaultToolBarArt, DrawControlLabel, NULL, ZEND_ACC_PUBLIC)

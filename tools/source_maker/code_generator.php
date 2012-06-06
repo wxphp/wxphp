@@ -732,10 +732,8 @@ foreach($defIni as $className => $classDef)
 				$output .= "PHP_METHOD(php_$className, __get);\n";
 			}
 		}
-
-		//Cant use New as a Method name since it seems it is reserved by php even when used as a static method
-		if($fcName == "New")
-			$fcName = "NewObject";
+			
+		$fcName = php_method_name($fcName);
 			
 		$output .= "PHP_METHOD(php_$className, $fcName);\n";
 	}

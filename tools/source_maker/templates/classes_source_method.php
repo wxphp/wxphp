@@ -1,5 +1,5 @@
 <?=proto_begin($method_name, $class_name)?>
-PHP_METHOD(php_<?=$class_name?>, <?=$method_name=="New"?"NewObject":$method_name?>)
+PHP_METHOD(php_<?=$class_name?>, <?=php_method_name($method_name)?>)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking <?=$class_name?>::<?=$method_name?>\n");

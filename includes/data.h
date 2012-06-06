@@ -985,7 +985,7 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxVariantData_functions[] = {
-	PHP_ME(php_wxVariantData, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxVariantData, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariantData, DecRef, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariantData, GetValueClassInfo, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariantData, IncRef, NULL, ZEND_ACC_PUBLIC)

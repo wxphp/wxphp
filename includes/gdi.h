@@ -600,7 +600,7 @@ static zend_function_entry php_wxFont_functions[] = {
 	PHP_ME(php_wxFont, MakeLarger, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFont, MakeSmaller, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFont, MakeUnderlined, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFont, NewObject, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxFont, NewMethod, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFont, Scale, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFont, Scaled, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFont, SetDefaultEncoding, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)

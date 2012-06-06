@@ -356,22 +356,8 @@ foreach($defIni as $class_name=>$class_methods)
 			{
 				$content .= " static ";
 			}
-			if($method_name == "Clone")
-				$content .= "function " . "CloneMethod(";
-			elseif($method_name == "Exit")
-				$content .= "function " . "ExitMethod(";
-			elseif($method_name == "Print")
-				$content .= "function " . "PrintMethod(";
-			elseif($method_name == "Break")
-				$content .= "function " . "BreakMethod(";
-			elseif($method_name == "New")
-				$content .= "function " . "NewMethod(";
-			elseif($method_name == "Xor")
-				$content .= "function " . "XorMethod(";
-			elseif($method_name == $class_name)
-				$content .= "function " . "__construct(";
-			else
-				$content .= "function " . $method_name . "(";
+			
+			$content .= "function " . php_method_name($method_name) . "(";
 	
 			$arguments = "";
 			foreach($method_definitions as $method_index=>$method_definition)

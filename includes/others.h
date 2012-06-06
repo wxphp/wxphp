@@ -1094,7 +1094,7 @@ static zend_function_entry php_wxWindowModalDialogEvent_functions[] = {
 	PHP_ME(php_wxCommandEvent, GetSelection, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxCommandEvent, GetInt, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxCommandEvent, GetExtraLong, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindowModalDialogEvent, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowModalDialogEvent, CloneMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindowModalDialogEvent, GetDialog, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindowModalDialogEvent, GetReturnCode, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindowModalDialogEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
