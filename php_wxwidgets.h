@@ -3497,7 +3497,7 @@ PHP_METHOD(php_wxRegion, IsEqual);
 PHP_METHOD(php_wxRegion, Offset);
 PHP_METHOD(php_wxRegion, Subtract);
 PHP_METHOD(php_wxRegion, Union);
-PHP_METHOD(php_wxRegion, Xor);
+PHP_METHOD(php_wxRegion, XorMethod);
 PHP_METHOD(php_wxRegion, __construct);
 PHP_METHOD(php_wxPoint2DDouble, __get);
 PHP_METHOD(php_wxPoint2DDouble, __construct);

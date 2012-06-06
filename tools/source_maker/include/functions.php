@@ -292,7 +292,7 @@ function php_method_name($method_name)
 		return "BreakMethod";
 	elseif($method_name == "New")
 		return "NewMethod";
-	elseif($fcName == "Xor")
+	elseif($method_name == "Xor")
 		return "XorMethod";
 	
 	return $method_name;

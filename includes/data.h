@@ -786,7 +786,7 @@ static zend_function_entry php_wxRegion_functions[] = {
 	PHP_ME(php_wxRegion, Offset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRegion, Subtract, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRegion, Union, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRegion, Xor, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxRegion, XorMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRegion, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
