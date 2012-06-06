@@ -23324,7 +23324,7 @@ PHP_METHOD(php_wxRegion, Union)
 
 /* {{{ proto bool wxRegion::Xor(int x, int y, int width, int height)
    Finds the Xor of this region and another, rectangular region, specified using position and size. */
-PHP_METHOD(php_wxRegion, Xor)
+PHP_METHOD(php_wxRegion, XorMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxRegion::Xor\n");
