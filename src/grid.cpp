@@ -2915,6 +2915,10 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -2974,6 +2978,10 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->Destroy();
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->Destroy();
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -3150,6 +3158,10 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -3232,6 +3244,10 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->HandleReturn(*(wxKeyEvent*) object_pointer0_0);
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->HandleReturn(*(wxKeyEvent*) object_pointer0_0);
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -3322,6 +3338,10 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -3381,6 +3401,10 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					ZVAL_BOOL(return_value, ((wxGridCellAutoWrapStringEditor_php*)native_object)->IsCreated());
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxGridCellFloatEditor_php*)native_object)->IsCreated());
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -3468,6 +3492,10 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 			}
 			if((current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
@@ -3572,6 +3600,10 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->PaintBackground(*(wxRect*) object_pointer0_0, (wxGridCellAttr*) object_pointer0_1);
 				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->PaintBackground(*(wxRect*) object_pointer0_0, (wxGridCellAttr*) object_pointer0_1);
+				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
 					((wxGridCellNumberEditor_php*)native_object)->PaintBackground(*(wxRect*) object_pointer0_0, (wxGridCellAttr*) object_pointer0_1);
@@ -3662,6 +3694,10 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -3744,6 +3780,10 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->SetSize(*(wxRect*) object_pointer0_0);
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->SetSize(*(wxRect*) object_pointer0_0);
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -3896,6 +3936,10 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -3980,6 +4024,10 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->Show(show0);
 				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->Show(show0);
+				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
 					((wxGridCellNumberEditor_php*)native_object)->Show(show0);
@@ -4018,6 +4066,10 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->Show(show0, (wxGridCellAttr*) object_pointer0_1);
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->Show(show0, (wxGridCellAttr*) object_pointer0_1);
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -4108,6 +4160,10 @@ PHP_METHOD(php_wxGridCellEditor, StartingClick)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -4167,6 +4223,10 @@ PHP_METHOD(php_wxGridCellEditor, StartingClick)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->StartingClick();
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->StartingClick();
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -4256,6 +4316,10 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellNumberEditor_php*)native_object)->references;
 				reference_type_found = true;
@@ -4338,6 +4402,10 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 				else if(current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE)
 				{
 					((wxGridCellAutoWrapStringEditor_php*)native_object)->StartingKey(*(wxKeyEvent*) object_pointer0_0);
+				}
+				else if(current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE)
+				{
+					((wxGridCellFloatEditor_php*)native_object)->StartingKey(*(wxKeyEvent*) object_pointer0_0);
 				}
 				else if(current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE)
 				{
@@ -5619,6 +5687,10 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 			}
 			if((current_object_type == PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE) && (!reference_type_found)){
 				references = &((wxGridCellAutoWrapStringEditor_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDCELLFLOATEDITOR_TYPE) && (!reference_type_found)){
+				references = &((wxGridCellFloatEditor_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXGRIDCELLNUMBEREDITOR_TYPE) && (!reference_type_found)){
@@ -8623,7 +8695,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 					wxphp_object_type argument_type = ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxGridCellEditor*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
@@ -28819,7 +28891,7 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 					wxphp_object_type argument_type = ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->native_object;
 					object_pointer0_2 = (wxGridCellEditor*) argument_native_object;
-					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
+					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
@@ -29851,7 +29923,7 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 					wxphp_object_type argument_type = ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->native_object;
 					object_pointer0_2 = (wxGridCellEditor*) argument_native_object;
-					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
+					if (!object_pointer0_2 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
@@ -32793,7 +32865,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 					wxphp_object_type argument_type = ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxGridCellEditor*) zend_object_store_get_object(editor0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxGridCellEditor*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXGRIDCELLBOOLEDITOR_TYPE && argument_type != PHP_WXGRIDCELLCHOICEEDITOR_TYPE && argument_type != PHP_WXGRIDCELLENUMEDITOR_TYPE && argument_type != PHP_WXGRIDCELLTEXTEDITOR_TYPE && argument_type != PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE && argument_type != PHP_WXGRIDCELLFLOATEDITOR_TYPE && argument_type != PHP_WXGRIDCELLNUMBEREDITOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'editor' could not be retreived correctly.");
 					}
