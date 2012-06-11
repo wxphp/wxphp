@@ -652,6 +652,14 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellFloatEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellEditor, StartingKey, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellFloatEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxGridCellFloatEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END

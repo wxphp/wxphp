@@ -144268,6 +144268,9 @@
 					null
 				]
 			}
+		],
+		"_implements":[
+			"wxGridCellTextEditor"
 		]
 	},
 	"wxGridCellFloatRenderer":{
