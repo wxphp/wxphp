@@ -40,3 +40,43 @@ Should be reported to wxWidgets as a bug.
 	wxRichToolTip::SetTitleFont(class wxFont const &)
 	wxPoint2DDouble::SetPolarCoordinates(double,double)
 	wxPoint2DInt::SetPolarCoordinates(int,int)
+
+	
+wx.rc Needed on php.exe
+=======================================
+
+It seems that some components rely on cursors and icons that need to be
+embedded on the application executable, like for example wxStyledTextCtrl.
+In this case the application executable is php.exe or php-win.exe
+
+Steps to include wx.rc on these executables:
+
+Modify: win32/build/template.rc and replace
+
+#ifdef WANT_LOGO
+0 ICON win32\build\php.ico
+#endif
+
+with
+
+#ifdef WANT_LOGO
+0 ICON win32\build\php.ico
+#include <wx/msw/wx.rc>
+#endif
+
+in order to only include the wx.rc file when the system is building
+the php.exe or php-win.exe.
+
+Modify: win32/build/confutils.js and replace
+
+$(RC)
+
+with
+
+$(RC) /I PATH_TO_WXWIDGETS\\include
+
+where PATH_TO_WXWIDGETS can be C:\\wxWidgets. This is to ensure that
+the resource compiler fines the file wx.rc.
+
+If this steps are omitted the php executable will crash each time a
+component that relies on some specific resources is loaded.
