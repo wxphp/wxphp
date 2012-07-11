@@ -39,6 +39,7 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("oleaut32.lib", "wxwidgets") &&
 		CHECK_LIB("uuid.lib", "wxwidgets") &&
 		CHECK_LIB("comctl32.lib", "wxwidgets") &&
+		CHECK_LIB("psapi.lib", "wxwidgets") &&
 		CHECK_LIB("wsock32.lib", "wxwidgets") &&
 		CHECK_LIB("odbc32.lib", "wxwidgets") &&
 		CHECK_LIB("msvcrt.lib", "wxwidgets") &&
@@ -68,6 +69,7 @@ if (PHP_WXWIDGETS != "no") {
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_CRT_NONSTDC_NO_DEPRECATE ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_CRT_SECURE_NO_WARNINGS ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_VC80_UPGRADE=0x0600 ");
+		ADD_FLAG("CFLAGS_WXWIDGETS", "/DISOLATION_AWARE_ENABLED ");
 		
 		//Enable messages to help debug the code
 		if (PHP_WXWIDGETS_DEBUG != "no") {
