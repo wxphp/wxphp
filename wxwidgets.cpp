@@ -16,6 +16,12 @@
 #include "app.h"
 #include "functions.h"
 
+#ifdef __WXMSW__
+#include <wx/msw/private.h>
+#include <wx/msw/winundef.h>
+#include <wx/msw/msvcrt.h>
+#endif
+
 /**
  * To enable inclusion of class methods tables entries code 
  * on the generated headers
@@ -663,6 +669,86 @@ int wxphp_call_method(zval **object_pp, zend_class_entry *obj_ce, zend_function 
 END_EXTERN_C()
 
 /**
+ * Code that enables correct functioning of comctl32.dll and 6.0 new 
+ * controls look. (Thanks to Robin Dunn from wxPython)
+ */
+#ifdef __WXMSW__
+//----------------------------------------------------------------------
+// Use an ActivationContext to ensure that the new (themed) version of
+// the comctl32 DLL is loaded.
+//----------------------------------------------------------------------
+
+// Note that the use of the ISOLATION_AWARE_ENABLED define replaces the
+// activation context APIs with wrappers that dynamically load the API
+// pointers from the kernel32 DLL so we don't have to do that ourselves.
+// Using ISOLATION_AWARE_ENABLED also causes the manifest resource to be put
+// in slot #2 as expected for DLLs. (See wx/msw/wx.rc)
+#ifdef ISOLATION_AWARE_ENABLED
+
+static ULONG_PTR wxPHPSetActivationContext()
+{
+
+    OSVERSIONINFO info;
+    wxZeroMemory(info);
+    info.dwOSVersionInfoSize = sizeof(OSVERSIONINFO); 
+    GetVersionEx(&info);
+    if (info.dwMajorVersion < 5)
+        return 0;
+    
+    ULONG_PTR cookie = 0;
+    HANDLE h;
+    ACTCTX actctx;
+    TCHAR modulename[MAX_PATH];
+
+    GetModuleFileName(wxGetInstance(), modulename, MAX_PATH);
+    wxZeroMemory(actctx);
+    actctx.cbSize = sizeof(actctx);
+    actctx.lpSource = modulename;
+    actctx.lpResourceName = MAKEINTRESOURCE(2);
+    actctx.hModule = wxGetInstance();
+    actctx.dwFlags = ACTCTX_FLAG_HMODULE_VALID | ACTCTX_FLAG_RESOURCE_NAME_VALID;
+    
+    h = CreateActCtx(&actctx);
+    if (h == INVALID_HANDLE_VALUE) {
+        wxLogLastError(wxT("CreateActCtx"));
+        return 0;
+    }
+
+    if (! ActivateActCtx(h, &cookie))
+        wxLogLastError(wxT("ActivateActCtx"));
+    
+    return cookie;
+}
+
+static void wxPHPClearActivationContext(ULONG_PTR cookie)
+{
+    if (! DeactivateActCtx(0, cookie))
+        wxLogLastError(wxT("DeactivateActCtx"));
+}
+
+#endif
+
+//----------------------------------------------------------------------
+// This gets run when the DLL is loaded.  We just need to save a handle.
+//----------------------------------------------------------------------
+
+extern "C"
+BOOL WINAPI DllMain(
+    HINSTANCE   hinstDLL,    // handle to DLL module
+    DWORD       fdwReason,   // reason for calling function
+    LPVOID      lpvReserved  // reserved
+   )
+{
+    // If wxPHP is embedded in another wxWidgets app then
+    // the instance has already been set.
+    if (! wxGetInstance())
+        wxSetInstance(hinstDLL);
+
+    return TRUE;
+}
+#endif
+
+/**
  * Global functions table entry used on the module initialization code
  */
 static zend_function_entry php_wxWidgets_functions[] = {
@@ -1170,6 +1256,10 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
 
 PHP_MINIT_FUNCTION(php_wxWidgets)
 {
+	#ifdef ISOLATION_AWARE_ENABLED
+    wxPHPSetActivationContext();
+	#endif
+
     zend_class_entry ce; /* Temporary variable used to initialize class entries */
 
 	/**
