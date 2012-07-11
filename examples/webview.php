@@ -26,7 +26,7 @@ class MyFrame1 extends wxFrame {
 		
 		$bSizer1 = new wxBoxSizer( wxVERTICAL );
 		
-		$this->m_webView = wxWebView::NewObject( $this, wxID_ANY, "http://wxphp.org/" );
+		$this->m_webView = wxWebView::NewMethod( $this, wxID_ANY, "http://wxphp.org/" );
 		
 		$bSizer1->Add( $this->m_webView, 1, wxALL|wxEXPAND, 5 );
 		
