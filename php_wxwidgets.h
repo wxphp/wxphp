@@ -22,8 +22,8 @@
  * Define Extension Properties 
  */
 #define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
-#define PHP_WXWIDGETS_EXTVER    "2.9.4.0"
-#define PHP_WXWIDGETS_VERSION	"2.9.4 SVN"
+#define PHP_WXWIDGETS_EXTVER    "2.9.4.1"
+#define PHP_WXWIDGETS_VERSION	"2.9.4 GIT"
 
 /**
  * Import configure options when building outside 
