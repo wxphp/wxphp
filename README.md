@@ -2,15 +2,15 @@ Site: [http://wxphp.org/](http://wxphp.org/)
 
 # Table of Contents
 
-* [Introduction](#introduction-)
-* [Building on Windows](#building-on-windows-)
-* [Building and Installing on Linux/Unix Environments](#building-and-installing-on-linuxunix-environments-)
-* [Creating a DEB Package](#creating-a-deb-package-)
-* [Building on MacOSX Lion](#building-on-macosx-lion-)
-* [Running the examples](#running-the-examples-)
-* [Third Party Tools](#third-party-tools-)
-* [Development](#development-)
-* [Support](#support-)
+* [Introduction](#introduction)
+* [Building on Windows](#building-on-windows)
+* [Building and Installing on Linux/Unix Environments](#building-and-installing-on-linuxunix-environments)
+* [Creating a DEB Package](#creating-a-deb-package)
+* [Building on MacOSX Lion](#building-on-macosx-lion)
+* [Running the examples](#running-the-examples)
+* [Third Party Tools](#third-party-tools)
+* [Development](#development)
+* [Support](#support)
 
 
 ## Introduction
