@@ -2,18 +2,18 @@ Site: [http://wxphp.org/](http://wxphp.org/)
 
 # Table of Contents
 
-* [Introduction](#introduction)
-* [Building on Windows](#build-windows)
-* [Building and Installing on Linux/Unix Environments](#build-unix)
-* [Creating a DEB Package](#create-deb)
-* [Building on MacOSX Lion](#build-mac)
-* [Running the examples](#running-examples)
-* [Third Party Tools](#third-party-tools)
-* [Development](#development)
-* [Support](#support)
+* [Introduction](#introduction-)
+* [Building on Windows](#building-on-windows-)
+* [Building and Installing on Linux/Unix Environments](#building-and-installing-on-linuxunix-environments-)
+* [Creating a DEB Package](#creating-a-deb-package-)
+* [Building on MacOSX Lion](#building-on-macosx-lion-)
+* [Running the examples](#running-the-examples-)
+* [Third Party Tools](#third-party-tools-)
+* [Development](#development-)
+* [Support](#support-)
 
 
-## Introduction <a id="introduction"></a>
+## Introduction
 
 wxPHP stands for "wxwidgets for PHP" and it is a binding for the great 
 cross-platform library [wxWidgets](http://wxwidgets.org/) used to 
@@ -26,7 +26,7 @@ easier for people already familiar with the library.
 
 
 
-## Building on Windows <a id="build-windows"></a>
+## Building on Windows
 
 ### Requirements
 	
@@ -144,7 +144,7 @@ add the following lines to the end of your php.ini:
 	
 	
 
-## Building and Installing on Linux/Unix Environments <a id="build-unix"></a>
+## Building and Installing on Linux/Unix Environments
 
 ### Install C/C++ compilers and autoconf tools
 	
@@ -217,7 +217,7 @@ modify enable_dl = off to enable_dl = on
 
 
 
-## Creating a DEB Package <a id="create-deb"></a>
+## Creating a DEB Package
 
 First ensure you are able to build with the linux building instructions.
 Then in order to create a debian package you would need to first
@@ -240,7 +240,7 @@ on ubuntu or debian repositories.
 
 
 
-## Building on MacOSX Lion <a id="build-mac"></a>
+## Building on MacOSX Lion
 
 The process of building on mac is the same as on linux the only
 differences are the way we configure wxWidgets build, as the applications
@@ -283,7 +283,7 @@ downloads php sources and dependency sources and compiles.
 
 
 
-## Running the examples <a id="running-examples"></a>
+## Running the examples
 
 In order to run the examples provided you need to install php cli version.
 On ubuntu this is done by running:
@@ -302,7 +302,7 @@ on windows you can also do
 
 
 
-## Third Party Tools <a id="third-party-tools"></a>
+## Third Party Tools
 
 ### wxFormBuilder - a RAD tool for wxWidgets GUI design.
 
@@ -322,7 +322,7 @@ of RedTide and the rest of wxFormBuilder team, Thanks a lot!
 	
 
 
-## Development <a id="development"></a>
+## Development
 
 For those interested on helping improve this extension this section 
 explains the basics of how it works. Almost every subdirectory
@@ -419,7 +419,7 @@ source_maker/class_selector directory.*
 
 
 
-## Support <a id="support"></a>
+## Support
 
 Any problems, please refer to the official website:
 	
