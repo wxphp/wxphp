@@ -41,13 +41,13 @@ easier for people already familiar with the library.
 
 1. Windows SDK 6.1 download links:
 
-	* [Web Setup](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11310)			
-	  or
-	* [DVD ISO](http://www.microsoft.com/downloads/details.aspx?FamilyId=F26B1AA4-741A-433A-9BE5-FA919850BDBF&displaylang=en)
+ * [Web Setup](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11310)			
+  or
+ * [DVD ISO](http://www.microsoft.com/downloads/details.aspx?FamilyId=F26B1AA4-741A-433A-9BE5-FA919850BDBF&displaylang=en)
 		
 2. Visual Studio download link:
 	
-	* [2008 Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express)
+ * [2008 Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express)
 	
 ### Download and install wxWidgets Latest SVN 
 
@@ -69,13 +69,13 @@ work with any 5.3.x - 5.4.x version of php*
 
 1. Download PHP 5:
 	
-	* To check available versions for download:
+ * To check available versions for download:
 		
-      [http://windows.php.net/download/](http://windows.php.net/download/)
+   [http://windows.php.net/download/](http://windows.php.net/download/)
 			
-	* Direct download link for 5.3.17:
+ * Direct download link for 5.3.17:
 		
-	  [http://windows.php.net/downloads/releases/php-5.3.17-src.zip](http://windows.php.net/downloads/releases/php-5.3.17-src.zip)
+   [http://windows.php.net/downloads/releases/php-5.3.17-src.zip](http://windows.php.net/downloads/releases/php-5.3.17-src.zip)
 			
 2. Create the directory:
 		
@@ -83,7 +83,7 @@ work with any 5.3.x - 5.4.x version of php*
 	
 3. Download PHP 5 binary tools:
 		
-	* [http://windows.php.net/downloads/php-sdk/](http://windows.php.net/downloads/php-sdk/)
+ * [http://windows.php.net/downloads/php-sdk/](http://windows.php.net/downloads/php-sdk/)
 	
 4. Extract the binary tools inside the directory c:\php-sdk leaving you with:
 	
