@@ -129,7 +129,7 @@ void php_<?=$class_name?>_free(void *object TSRMLS_DC)
 	}
 <?}?>
 <?}elseif(inherits_from_class("wxTopLevelWindow", $class_name)){?>
-	zend_error(E_WARNING, "Object of class <?=$class_name?> went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class <?=$class_name?> went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 <?}else{?>
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for <?=$class_name?> on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
