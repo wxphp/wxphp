@@ -163,6 +163,10 @@ distros this could be done with:
 
 Download wxWidgets tar file and uncompress it on your directory of 
 choice or svn checkout with:
+
+*NOTE: Remember to use tar.bz2 when downloading sources, using the zip 
+file results on compilation errors under linux, since file line endings 
+are formatted for windows.
 	
 	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
 
@@ -171,6 +175,8 @@ choice or svn checkout with:
 On the console change to the wxWidgets directory and:
 	
 	./configure --prefix=/opt/wxWidgets-svn
+	make
+	sudo make install
 	
 ### Install php5 development packages 
 
