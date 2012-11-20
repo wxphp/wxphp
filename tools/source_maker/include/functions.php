@@ -114,6 +114,47 @@ function is_global_enum($dataType)
 }
 
 /**
+ * Checks if a given value is an enumeration
+ * 
+ * @param string $value
+ * 
+ * @return bool
+ */
+function is_enum($value)
+{
+	global $defEnums;
+	
+	//First search on class enums
+	foreach($defEnums[0] as $class_name=>$enums_array)
+	{
+		foreach($enums_array as $enum_name=>$enum_values)
+		{
+			foreach($enum_values as $enum_value)
+			{
+				if($value == $enum_value)
+				{
+					return true;
+				}
+			}
+		}
+	}
+	
+	//Secondly search on global enums
+	foreach($defEnums[1] as $enumName=>$enumData)
+	{
+		foreach($enumData as $enumValue)
+		{
+			if($value == $enumValue)
+			{
+				return true;
+			}
+		}
+	}
+	
+	return false;
+}
+
+/**
  * Generates an array of all the classes the inherit from a given one.
  * 
  * @param string $class Name of the class to search for derivations.
