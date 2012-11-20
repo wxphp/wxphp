@@ -469,7 +469,7 @@ $classes .= "\n";
 foreach($defConsts as $constant_name => $constant_value)
 {
 	//Skip constants that dont include a numeric value or weren't defined manually
-	if(($constant_value{0} != "0" && $contant_value{1} != "x") && "".$constant_value."" != "1")
+	if(($constant_value{0} != "0" && $contant_value{1} != "x") && "".$constant_value."" != "1" && !is_enum($constant_value))
 		continue;
 	
 	//Use the name as constant value for manually defined constants
