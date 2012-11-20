@@ -39,13 +39,12 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("oleaut32.lib", "wxwidgets") &&
 		CHECK_LIB("uuid.lib", "wxwidgets") &&
 		CHECK_LIB("comctl32.lib", "wxwidgets") &&
-		CHECK_LIB("psapi.lib", "wxwidgets") &&
 		CHECK_LIB("wsock32.lib", "wxwidgets") &&
 		CHECK_LIB("odbc32.lib", "wxwidgets") &&
 		CHECK_LIB("msvcrt.lib", "wxwidgets") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\include") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\setup.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\lib\\vc_lib\\mswu") &&
-		CHECK_HEADER_ADD_INCLUDE("references.h", "CFLAGS_WXWIDGETS", configure_module_dirname + "\\includes") &&
+		CHECK_HEADER_ADD_INCLUDE("references.h", "CFLAGS_WXWIDGETS", configure_module_dirname + "\\includes")&&
 		CHECK_HEADER_ADD_INCLUDE("php_wxwidgets.h", "CFLAGS_WXWIDGETS", configure_module_dirname)) {
 		
 		//Compiler flags

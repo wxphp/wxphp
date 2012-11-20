@@ -2679,7 +2679,7 @@ void php_wxSingleChoiceDialog_free(void *object TSRMLS_DC)
     zo_wxSingleChoiceDialog* custom_object = (zo_wxSingleChoiceDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxSingleChoiceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxSingleChoiceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -6302,7 +6302,7 @@ void php_wxColourDialog_free(void *object TSRMLS_DC)
     zo_wxColourDialog* custom_object = (zo_wxColourDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxColourDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxColourDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -7885,7 +7885,7 @@ void php_wxDialog_free(void *object TSRMLS_DC)
     zo_wxDialog* custom_object = (zo_wxDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -13747,7 +13747,7 @@ void php_wxDirDialog_free(void *object TSRMLS_DC)
     zo_wxDirDialog* custom_object = (zo_wxDirDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxDirDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxDirDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -15316,7 +15316,7 @@ void php_wxFindReplaceDialog_free(void *object TSRMLS_DC)
     zo_wxFindReplaceDialog* custom_object = (zo_wxFindReplaceDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxFindReplaceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxFindReplaceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -15814,7 +15814,7 @@ void php_wxFileDialog_free(void *object TSRMLS_DC)
     zo_wxFileDialog* custom_object = (zo_wxFileDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxFileDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxFileDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -19367,7 +19367,7 @@ void php_wxFontDialog_free(void *object TSRMLS_DC)
     zo_wxFontDialog* custom_object = (zo_wxFontDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxFontDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxFontDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -20095,7 +20095,7 @@ void php_wxMessageDialog_free(void *object TSRMLS_DC)
     zo_wxMessageDialog* custom_object = (zo_wxMessageDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxMessageDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxMessageDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -22237,7 +22237,7 @@ void php_wxGenericProgressDialog_free(void *object TSRMLS_DC)
     zo_wxGenericProgressDialog* custom_object = (zo_wxGenericProgressDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxGenericProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxGenericProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -23832,7 +23832,7 @@ void php_wxSymbolPickerDialog_free(void *object TSRMLS_DC)
     zo_wxSymbolPickerDialog* custom_object = (zo_wxSymbolPickerDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxSymbolPickerDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxSymbolPickerDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -25578,7 +25578,7 @@ void php_wxPasswordEntryDialog_free(void *object TSRMLS_DC)
     zo_wxPasswordEntryDialog* custom_object = (zo_wxPasswordEntryDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxPasswordEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxPasswordEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -25804,7 +25804,7 @@ void php_wxTextEntryDialog_free(void *object TSRMLS_DC)
     zo_wxTextEntryDialog* custom_object = (zo_wxTextEntryDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxTextEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxTextEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -26345,7 +26345,7 @@ void php_wxWizard_free(void *object TSRMLS_DC)
     zo_wxWizard* custom_object = (zo_wxWizard*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxWizard went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxWizard went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);

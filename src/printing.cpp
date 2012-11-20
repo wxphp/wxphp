@@ -1188,7 +1188,7 @@ void php_wxPreviewFrame_free(void *object TSRMLS_DC)
     zo_wxPreviewFrame* custom_object = (zo_wxPreviewFrame*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxPreviewFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxPreviewFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -8203,7 +8203,7 @@ void php_wxPrintDialog_free(void *object TSRMLS_DC)
     zo_wxPrintDialog* custom_object = (zo_wxPrintDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxPrintDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxPrintDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -8720,7 +8720,7 @@ void php_wxPageSetupDialog_free(void *object TSRMLS_DC)
     zo_wxPageSetupDialog* custom_object = (zo_wxPageSetupDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxPageSetupDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxPageSetupDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
