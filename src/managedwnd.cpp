@@ -57,7 +57,7 @@ void php_wxFrame_free(void *object TSRMLS_DC)
     zo_wxFrame* custom_object = (zo_wxFrame*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -3779,7 +3779,7 @@ void php_wxMDIParentFrame_free(void *object TSRMLS_DC)
     zo_wxMDIParentFrame* custom_object = (zo_wxMDIParentFrame*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxMDIParentFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxMDIParentFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5327,7 +5327,7 @@ void php_wxMDIChildFrame_free(void *object TSRMLS_DC)
     zo_wxMDIChildFrame* custom_object = (zo_wxMDIChildFrame*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxMDIChildFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxMDIChildFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -6359,7 +6359,7 @@ void php_wxMiniFrame_free(void *object TSRMLS_DC)
     zo_wxMiniFrame* custom_object = (zo_wxMiniFrame*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxMiniFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxMiniFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -7899,7 +7899,7 @@ void php_wxPropertySheetDialog_free(void *object TSRMLS_DC)
     zo_wxPropertySheetDialog* custom_object = (zo_wxPropertySheetDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxPropertySheetDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxPropertySheetDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -9402,7 +9402,7 @@ void php_wxSplashScreen_free(void *object TSRMLS_DC)
     zo_wxSplashScreen* custom_object = (zo_wxSplashScreen*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxSplashScreen went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxSplashScreen went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);

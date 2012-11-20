@@ -2606,7 +2606,7 @@ void php_wxHtmlHelpDialog_free(void *object TSRMLS_DC)
     zo_wxHtmlHelpDialog* custom_object = (zo_wxHtmlHelpDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxHtmlHelpDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxHtmlHelpDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -3501,7 +3501,7 @@ void php_wxHtmlHelpFrame_free(void *object TSRMLS_DC)
     zo_wxHtmlHelpFrame* custom_object = (zo_wxHtmlHelpFrame*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxHtmlHelpFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxHtmlHelpFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);

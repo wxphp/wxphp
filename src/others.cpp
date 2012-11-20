@@ -7002,7 +7002,7 @@ void php_wxProgressDialog_free(void *object TSRMLS_DC)
     zo_wxProgressDialog* custom_object = (zo_wxProgressDialog*) object;
     //delete custom_object->native_object;
     
-	zend_error(E_WARNING, "Object of class wxProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
+	/*zend_error(E_WARNING, "Object of class wxProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
