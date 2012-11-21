@@ -118640,35 +118640,6 @@
 				]
 			}
 		],
-		"GetPixelSize":[
-			{
-				"return_type":"wxSize",
-				"brief_description":"",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"GetPointSize":[
 			{
 				"return_type":"int",
@@ -118948,35 +118919,6 @@
 				],
 				"parameters_name":[
 					"family"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
-		"SetPixelSize":[
-			{
-				"return_type":"void",
-				"brief_description":"",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxSize&"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"pixelSize"
 				],
 				"parameters_required":[
 					true
