@@ -3284,7 +3284,7 @@ PHP_METHOD(php_wxBitmapHandler, LoadFile)
 					wxphp_object_type argument_type = ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxBitmap*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXBITMAP_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'bitmap' could not be retreived correctly.");
 					}
@@ -3713,7 +3713,7 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxBitmap*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXBITMAP_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'bitmap' could not be retreived correctly.");
 					}
@@ -3730,7 +3730,7 @@ PHP_METHOD(php_wxBitmapHandler, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxPalette*) zend_object_store_get_object(palette0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxPalette*) zend_object_store_get_object(palette0 TSRMLS_CC))->native_object;
 					object_pointer0_3 = (wxPalette*) argument_native_object;
-					if (!object_pointer0_3 )
+					if (!object_pointer0_3 || (argument_type != PHP_WXPALETTE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'palette' could not be retreived correctly.");
 					}
@@ -3871,7 +3871,7 @@ PHP_METHOD(php_wxBitmapHandler, Create)
 					wxphp_object_type argument_type = ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxBitmap*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXBITMAP_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'bitmap' could not be retreived correctly.");
 					}
@@ -4083,7 +4083,7 @@ PHP_METHOD(php_wxBitmap, AddHandler)
 					wxphp_object_type argument_type = ((zo_wxBitmapHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxBitmapHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxBitmapHandler*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXBITMAPHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
@@ -5030,7 +5030,7 @@ PHP_METHOD(php_wxBitmap, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxPalette*) zend_object_store_get_object(palette0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxPalette*) zend_object_store_get_object(palette0 TSRMLS_CC))->native_object;
 					object_pointer0_2 = (wxPalette*) argument_native_object;
-					if (!object_pointer0_2 )
+					if (!object_pointer0_2 || (argument_type != PHP_WXPALETTE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'palette' could not be retreived correctly.");
 					}
@@ -6980,7 +6980,7 @@ PHP_METHOD(php_wxBitmap, InsertHandler)
 					wxphp_object_type argument_type = ((zo_wxBitmapHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxBitmapHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxBitmapHandler*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXBITMAPHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
@@ -7198,7 +7198,7 @@ PHP_METHOD(php_wxBitmap, SetMask)
 					wxphp_object_type argument_type = ((zo_wxMask*) zend_object_store_get_object(mask0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxMask*) zend_object_store_get_object(mask0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxMask*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXMASK_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'mask' could not be retreived correctly.");
 					}
@@ -24857,7 +24857,7 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 					wxphp_object_type argument_type = ((zo_wxImage*) zend_object_store_get_object(image0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxImage*) zend_object_store_get_object(image0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxImage*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXIMAGE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'image' could not be retreived correctly.");
 					}
@@ -25036,7 +25036,7 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxImage*) zend_object_store_get_object(image0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxImage*) zend_object_store_get_object(image0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxImage*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXIMAGE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'image' could not be retreived correctly.");
 					}
@@ -28454,7 +28454,7 @@ PHP_METHOD(php_wxImage, Rotate)
 					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(offsetAfterRotation0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(offsetAfterRotation0 TSRMLS_CC))->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
-					if (!object_pointer0_3 )
+					if (!object_pointer0_3 || (argument_type != PHP_WXPOINT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'offsetAfterRotation' could not be retreived correctly.");
 					}
@@ -30054,7 +30054,7 @@ PHP_METHOD(php_wxImage, InsertHandler)
 					wxphp_object_type argument_type = ((zo_wxImageHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxImageHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxImageHandler*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXIMAGEHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
@@ -35432,7 +35432,7 @@ PHP_METHOD(php_wxImage, AddHandler)
 					wxphp_object_type argument_type = ((zo_wxImageHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxImageHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxImageHandler*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXIMAGEHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
@@ -42279,7 +42279,7 @@ PHP_METHOD(php_wxRendererNative, Set)
 					wxphp_object_type argument_type = ((zo_wxRendererNative*) zend_object_store_get_object(renderer0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxRendererNative*) zend_object_store_get_object(renderer0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxRendererNative*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXRENDERERNATIVE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'renderer' could not be retreived correctly.");
 					}

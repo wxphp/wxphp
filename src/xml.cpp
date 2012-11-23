@@ -227,7 +227,7 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 					wxphp_object_type argument_type = ((zo_wxXmlAttribute*) zend_object_store_get_object(attr1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlAttribute*) zend_object_store_get_object(attr1 TSRMLS_CC))->native_object;
 					object_pointer1_0 = (wxXmlAttribute*) argument_native_object;
-					if (!object_pointer1_0 )
+					if (!object_pointer1_0 || (argument_type != PHP_WXXMLATTRIBUTE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
@@ -367,7 +367,7 @@ PHP_METHOD(php_wxXmlNode, AddChild)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'child' could not be retreived correctly.");
 					}
@@ -1116,7 +1116,7 @@ PHP_METHOD(php_wxXmlNode, GetDepth)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(grandparent0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(grandparent0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'grandparent' could not be retreived correctly.");
 					}
@@ -2091,7 +2091,7 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'child' could not be retreived correctly.");
 					}
@@ -2108,7 +2108,7 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(followingNode0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(followingNode0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'followingNode' could not be retreived correctly.");
 					}
@@ -2232,7 +2232,7 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'child' could not be retreived correctly.");
 					}
@@ -2249,7 +2249,7 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(precedingNode0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(precedingNode0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'precedingNode' could not be retreived correctly.");
 					}
@@ -2468,7 +2468,7 @@ PHP_METHOD(php_wxXmlNode, RemoveChild)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'child' could not be retreived correctly.");
 					}
@@ -2589,7 +2589,7 @@ PHP_METHOD(php_wxXmlNode, SetAttributes)
 					wxphp_object_type argument_type = ((zo_wxXmlAttribute*) zend_object_store_get_object(attr0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlAttribute*) zend_object_store_get_object(attr0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlAttribute*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLATTRIBUTE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
 					}
@@ -2710,7 +2710,7 @@ PHP_METHOD(php_wxXmlNode, SetChildren)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(child0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'child' could not be retreived correctly.");
 					}
@@ -3037,7 +3037,7 @@ PHP_METHOD(php_wxXmlNode, SetNext)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(next0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(next0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'next' could not be retreived correctly.");
 					}
@@ -3260,7 +3260,7 @@ PHP_METHOD(php_wxXmlNode, SetParent)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
@@ -3472,7 +3472,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						goto overload1;
 					}
@@ -3489,7 +3489,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 					wxphp_object_type argument_type = ((zo_wxXmlAttribute*) zend_object_store_get_object(attrs0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlAttribute*) zend_object_store_get_object(attrs0 TSRMLS_CC))->native_object;
 					object_pointer0_4 = (wxXmlAttribute*) argument_native_object;
-					if (!object_pointer0_4 )
+					if (!object_pointer0_4 || (argument_type != PHP_WXXMLATTRIBUTE_TYPE))
 					{
 						goto overload1;
 					}
@@ -3506,7 +3506,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(next0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(next0 TSRMLS_CC))->native_object;
 					object_pointer0_5 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_5 )
+					if (!object_pointer0_5 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						goto overload1;
 					}
@@ -4315,7 +4315,7 @@ PHP_METHOD(php_wxXmlAttribute, SetNext)
 					wxphp_object_type argument_type = ((zo_wxXmlAttribute*) zend_object_store_get_object(next0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlAttribute*) zend_object_store_get_object(next0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlAttribute*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLATTRIBUTE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'next' could not be retreived correctly.");
 					}
@@ -4525,7 +4525,7 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 					wxphp_object_type argument_type = ((zo_wxXmlAttribute*) zend_object_store_get_object(next1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlAttribute*) zend_object_store_get_object(next1 TSRMLS_CC))->native_object;
 					object_pointer1_2 = (wxXmlAttribute*) argument_native_object;
-					if (!object_pointer1_2 )
+					if (!object_pointer1_2 || (argument_type != PHP_WXXMLATTRIBUTE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'next' could not be retreived correctly.");
 					}
@@ -4771,7 +4771,7 @@ PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(node0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(node0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'node' could not be retreived correctly.");
 					}
@@ -6185,7 +6185,7 @@ PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(node0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(node0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'node' could not be retreived correctly.");
 					}
@@ -6409,7 +6409,7 @@ PHP_METHOD(php_wxXmlDocument, SetRoot)
 					wxphp_object_type argument_type = ((zo_wxXmlNode*) zend_object_store_get_object(node0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxXmlNode*) zend_object_store_get_object(node0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxXmlNode*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXXMLNODE_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'node' could not be retreived correctly.");
 					}
