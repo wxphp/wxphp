@@ -322,7 +322,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu1 TSRMLS_CC))->native_object;
 					object_pointer1_0 = (wxMenu*) argument_native_object;
-					if (!object_pointer1_0 )
+					if (!object_pointer1_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
@@ -1084,7 +1084,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
@@ -1428,7 +1428,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}

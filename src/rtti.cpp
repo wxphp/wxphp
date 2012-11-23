@@ -8529,7 +8529,7 @@ PHP_METHOD(php_wxObject, IsKindOf)
 					wxphp_object_type argument_type = ((zo_wxClassInfo*) zend_object_store_get_object(info0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxClassInfo*) zend_object_store_get_object(info0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxClassInfo*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXCLASSINFO_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'info' could not be retreived correctly.");
 					}
@@ -9174,7 +9174,7 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 					wxphp_object_type argument_type = ((zo_wxClassInfo*) zend_object_store_get_object(info0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxClassInfo*) zend_object_store_get_object(info0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxClassInfo*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXCLASSINFO_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'info' could not be retreived correctly.");
 					}

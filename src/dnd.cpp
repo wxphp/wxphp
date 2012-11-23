@@ -204,7 +204,7 @@ PHP_METHOD(php_wxClipboard, AddData)
 					wxphp_object_type argument_type = ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDataObject*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
@@ -1149,7 +1149,7 @@ PHP_METHOD(php_wxClipboard, SetData)
 					wxphp_object_type argument_type = ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDataObject*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
@@ -3836,7 +3836,7 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 					wxphp_object_type argument_type = ((zo_wxDataObjectSimple*) zend_object_store_get_object(dataObject0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDataObjectSimple*) zend_object_store_get_object(dataObject0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDataObjectSimple*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dataObject' could not be retreived correctly.");
 					}
@@ -7091,7 +7091,7 @@ PHP_METHOD(php_wxDropTarget, __construct)
 					wxphp_object_type argument_type = ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDataObject*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
@@ -7249,7 +7249,7 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 					wxphp_object_type argument_type = ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDataObject*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
+					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}

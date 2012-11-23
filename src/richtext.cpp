@@ -2166,7 +2166,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(compareWith0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(compareWith0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxTextAttr*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXTEXTATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'compareWith' could not be retreived correctly.");
 					}

@@ -1358,7 +1358,7 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 					wxphp_object_type argument_type = ((zo_wxFileSystemHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxFileSystemHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxFileSystemHandler*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXFILESYSTEMHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
