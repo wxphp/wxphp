@@ -597,6 +597,8 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						
 						$typeVerifier = derivationsOfClass($argument_plain_type);
 						
+						$typeVerifierStr[] = "argument_type != PHP_".strtoupper($argument_plain_type)."_TYPE";
+						
 						foreach($typeVerifier as $argument_parent_class => $v)
 						{
 							$typeVerifierStr[] = "argument_type != PHP_".strtoupper($argument_parent_class)."_TYPE";
