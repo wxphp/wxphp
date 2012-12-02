@@ -49,11 +49,11 @@ easier for people already familiar with the library.
 	
  * [2008 Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express)
 	
-### Download and install wxWidgets Latest SVN 
+### Download and install wxWidgets 2.9.4
 
 1. Checkout svn sources:
 	
-		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 	
 2. Open Windows SDK 6.1 CMD Shell:
 		
@@ -168,13 +168,13 @@ choice or svn checkout with:
 file results on compilation errors under linux, since file line endings 
 are formatted for windows.
 	
-	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 
 *NOTE: Currently we have tested with wxWidgets 2.9.4 version.*
 	
 On the console change to the wxWidgets directory and:
 	
-	./configure --prefix=/opt/wxWidgets-svn
+	./configure --prefix=/opt/wxWidgets
 	make
 	sudo make install
 	
@@ -188,7 +188,7 @@ Ubuntu and Debian based distros:
 	
 	cd wxphp
 	phpize
-	./configure --with-wxwidgets=/opt/wxWidgets-svn
+	./configure --with-wxwidgets=/opt/wxWidgets
 	make
 	
 ### Installing the extension
@@ -267,11 +267,11 @@ downloads php sources and dependency sources and compiles.
 
 ### Get wxWidgets sources and build
 
-	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 	cd wxWidgets
 	mkdir mybuild
 	cd mybuild
-	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets-svn CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
+	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
 
 *Note: if non 64 bit architecture just remove the x86_64 flags from the configure command*
 
@@ -282,7 +282,7 @@ downloads php sources and dependency sources and compiles.
 
 	cd wxphp
 	phpize
-	./configure --with-wxwidgets=/opt/wxWidgets-svn
+	./configure --with-wxwidgets=/opt/wxWidgets
 	make
 	sudo make install
 
