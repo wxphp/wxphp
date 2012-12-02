@@ -57,11 +57,11 @@ Building on Windows
 	
 		http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express
 	
-. Download and install wxWidgets Latest SVN 
+. Download and install wxWidgets 2.9.4
 
 	Checkout svn sources:
 	
-		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 	
 	Open Windows SDK 6.1 CMD Shell:
 		
@@ -164,7 +164,7 @@ Building and Installing on Linux/Unix Environments
 		sudo apt-get install build-essential
 
 . Compile wxWidgets library and development packages, currently we have
-  tested with latest 2.9.4 svn revisions.
+  tested with version 2.9.4
   
 	NOTE: wxWebView, a web browser like control, was enabled on the
 	wrapper, in order to compile wxWidgets with wxWebView support you
@@ -176,11 +176,11 @@ Building and Installing on Linux/Unix Environments
 	Download wxWidgets tar file and uncompress it on your
 	directory of choice or svn checkout with:
 	
-		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 	
 	On the console change to the wxWidgets directory and:
 	
-		./configure --prefix=/opt/wxWidgets-svn
+		./configure --prefix=/opt/wxWidgets
 	
 . Install php5 development packages 
 
@@ -192,7 +192,7 @@ Building and Installing on Linux/Unix Environments
 	
 	cd wxphp
 	phpize
-	./configure --with-wxwidgets=/opt/wxWidgets-svn
+	./configure --with-wxwidgets=/opt/wxWidgets
 	make
 	
 . Installing the extension
@@ -277,7 +277,7 @@ needed. We tested with the php version available on mac ports.
 
 . Get wxWidgets sources and build
 
-    svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+    svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 
     cd wxWidgets
 
@@ -285,7 +285,7 @@ needed. We tested with the php version available on mac ports.
 
     cd mybuild
 
-    ../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets-svn CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
+    ../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
 
         Note: if non 64 bit architecture just remove the x86_64 flags
 
@@ -299,7 +299,7 @@ needed. We tested with the php version available on mac ports.
 
     phpize
 
-    ./configure --with-wxwidgets=/opt/wxWidgets-svn
+    ./configure --with-wxwidgets=/opt/wxWidgets
 
     make
 
