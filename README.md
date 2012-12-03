@@ -6,6 +6,7 @@ Site: [http://wxphp.org/](http://wxphp.org/)
 * [Building on Windows](#building-on-windows)
 * [Building and Installing on Linux/Unix Environments](#building-and-installing-on-linuxunix-environments)
 * [Creating a DEB Package](#creating-a-deb-package)
+* [Linking statically to wxWidgets on Linux/Unix/MacOSX](#linking-statically-to-wxwidgets-on-linuxunixmacosx)
 * [Building on MacOSX Lion](#building-on-macosx-lion)
 * [Running the examples](#running-the-examples)
 * [Third Party Tools](#third-party-tools)
@@ -242,6 +243,38 @@ That should take care of building and creating a deb package. We aren't
 using upstream wxWidgets packages since they are sometimes compiled 
 with less features and there aren't 2.9.4 packages of wxWidgets available
 on ubuntu or debian repositories.
+
+
+
+
+## Linking statically to wxWidgets on Linux/Unix/MacOSX
+
+Statically linking is a good idea to package wxphp into rmp/deb files without
+dependencies on third party wxGTK packages that may be incompatible. On 
+64 bits static linking is impossible without the use of -fPIC or so that
+has been my experience, so here is the steps involved to achieve it.
+
+1. Compile wxWidgets with -fPIC
+
+	CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" \
+	../configure --prefix=/opt/wxWidgets-static --disable-shared --enable-monolithic
+	
+2. Run the generated wxphp configure script with custom ld flags
+	
+	LDFLAGS="-L/opt/wxWidgets-static/lib -pthread -lwx_gtk2u-2.9 -lwx_gtk2u_gl-2.9 -lwxregexu-2.9 -lwxscintilla-2.9 -lwxtiff-2.9" \
+	./configure --with-wxwidgets=/opt/wxWidgets-static --enable-wxwidgets-monolithic
+	
+3. Strip debugging symbols for smaller library size
+
+	strip modules/wxwidgets.so
+	
+If a smaller library size is wanted it could be achieved by playing with 
+the GCC optimization flags, when compiling the wxWidgets library on the 
+first step as on the second step. Some flags that could reduce the file 
+size (a little bit) of final libraries as increase performance could be 
+-Os and -s for example: 
+	
+	CFLAGS="-fPIC -Os -s" CXXFLAGS="-fPIC -Os -s"
 
 
 
