@@ -256,17 +256,17 @@ has been my experience, so here is the steps involved to achieve it.
 
 1. Compile wxWidgets with -fPIC
 
-	CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" \
-	../configure --prefix=/opt/wxWidgets-static --disable-shared --enable-monolithic
+		CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" \
+		../configure --prefix=/opt/wxWidgets-static --disable-shared --enable-monolithic
 	
 2. Run the generated wxphp configure script with custom ld flags
 	
-	LDFLAGS="-L/opt/wxWidgets-static/lib -pthread -lwx_gtk2u-2.9 -lwx_gtk2u_gl-2.9 -lwxregexu-2.9 -lwxscintilla-2.9 -lwxtiff-2.9" \
-	./configure --with-wxwidgets=/opt/wxWidgets-static --enable-wxwidgets-monolithic
+		LDFLAGS="-L/opt/wxWidgets-static/lib -pthread -lwx_gtk2u-2.9 -lwx_gtk2u_gl-2.9 -lwxregexu-2.9 -lwxscintilla-2.9 -lwxtiff-2.9" \
+		./configure --with-wxwidgets=/opt/wxWidgets-static --enable-wxwidgets-monolithic
 	
 3. Strip debugging symbols for smaller library size
 
-	strip modules/wxwidgets.so
+		strip modules/wxwidgets.so
 	
 If a smaller library size is wanted it could be achieved by playing with 
 the GCC optimization flags, when compiling the wxWidgets library on the 
