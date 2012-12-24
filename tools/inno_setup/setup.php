@@ -849,7 +849,7 @@ user_dir =
 ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
 ; disabled on them.
 ; http://php.net/enable-dl
-enable_dl = Off
+enable_dl = On
 
 ; cgi.force_redirect is necessary to provide security running PHP as a CGI under
 ; most web servers.  Left undefined, PHP turns this on by default.  You can
