@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "wxPHP"
-#define MyAppVersion "2.9.4.0-beta"
+#define MyAppVersion "2.9.4.1"
 #define MyAppPublisher "wxPHP"
 #define MyAppURL "http://www.wxphp.org/"
 
@@ -20,74 +20,74 @@ AppSupportURL=http://forums.wxphp.org/
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
-LicenseFile=wxphp\LICENSE
+LicenseFile=..\..\LICENSE
 OutputDir=.
 OutputBaseFilename=wxphp-{#MyAppVersion}
-SetupIconFile=wxphp\artwork\win-icon.ico
+SetupIconFile=..\..\artwork\win-icon.ico
 Compression=lzma2/Ultra64
 SolidCompression=true
 WizardImageFile=wizardimage.bmp
 WizardSmallImageFile=wizardsmallimage.bmp
 SourceDir=.
-MinVersion=,5.1.2600
+MinVersion=5.1.2600
 InternalCompressLevel=Ultra64
 ChangesAssociations=true
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
-Name: "basque"; MessagesFile: "compiler:Languages\Basque.isl"
-Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
-Name: "catalan"; MessagesFile: "compiler:Languages\Catalan.isl"
-Name: "czech"; MessagesFile: "compiler:Languages\Czech.isl"
-Name: "danish"; MessagesFile: "compiler:Languages\Danish.isl"
-Name: "dutch"; MessagesFile: "compiler:Languages\Dutch.isl"
-Name: "finnish"; MessagesFile: "compiler:Languages\Finnish.isl"
-Name: "french"; MessagesFile: "compiler:Languages\French.isl"
-Name: "german"; MessagesFile: "compiler:Languages\German.isl"
-Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"
-Name: "hungarian"; MessagesFile: "compiler:Languages\Hungarian.isl"
-Name: "italian"; MessagesFile: "compiler:Languages\Italian.isl"
-Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
-Name: "norwegian"; MessagesFile: "compiler:Languages\Norwegian.isl"
-Name: "polish"; MessagesFile: "compiler:Languages\Polish.isl"
-Name: "portuguese"; MessagesFile: "compiler:Languages\Portuguese.isl"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
-Name: "serbiancyrillic"; MessagesFile: "compiler:Languages\SerbianCyrillic.isl"
-Name: "serbianlatin"; MessagesFile: "compiler:Languages\SerbianLatin.isl"
-Name: "slovak"; MessagesFile: "compiler:Languages\Slovak.isl"
-Name: "slovenian"; MessagesFile: "compiler:Languages\Slovenian.isl"
-Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
-Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
+Name: english; MessagesFile: compiler:Default.isl
+; Name: basque; MessagesFile: compiler:Languages\Basque.isl
+Name: brazilianportuguese; MessagesFile: compiler:Languages\BrazilianPortuguese.isl
+Name: catalan; MessagesFile: compiler:Languages\Catalan.isl
+Name: czech; MessagesFile: compiler:Languages\Czech.isl
+Name: danish; MessagesFile: compiler:Languages\Danish.isl
+Name: dutch; MessagesFile: compiler:Languages\Dutch.isl
+Name: finnish; MessagesFile: compiler:Languages\Finnish.isl
+Name: french; MessagesFile: compiler:Languages\French.isl
+Name: german; MessagesFile: compiler:Languages\German.isl
+Name: hebrew; MessagesFile: compiler:Languages\Hebrew.isl
+Name: hungarian; MessagesFile: compiler:Languages\Hungarian.isl
+Name: italian; MessagesFile: compiler:Languages\Italian.isl
+Name: japanese; MessagesFile: compiler:Languages\Japanese.isl
+Name: norwegian; MessagesFile: compiler:Languages\Norwegian.isl
+Name: polish; MessagesFile: compiler:Languages\Polish.isl
+Name: portuguese; MessagesFile: compiler:Languages\Portuguese.isl
+Name: russian; MessagesFile: compiler:Languages\Russian.isl
+Name: serbiancyrillic; MessagesFile: compiler:Languages\SerbianCyrillic.isl
+Name: serbianlatin; MessagesFile: compiler:Languages\SerbianLatin.isl
+; Name: slovak; MessagesFile: compiler:Languages\Slovak.isl
+Name: slovenian; MessagesFile: compiler:Languages\Slovenian.isl
+Name: spanish; MessagesFile: compiler:Languages\Spanish.isl
+Name: ukrainian; MessagesFile: compiler:Languages\Ukrainian.isl
 
 [Files]
-Source: php\*; DestDir: {app}\php; Flags: ignoreversion recursesubdirs createallsubdirs; 
-Source: wxphp\doc\*; DestDir: {app}\doc; Flags: ignoreversion recursesubdirs createallsubdirs; 
-Source: wxphp\examples\*; DestDir: {app}\examples; Flags: ignoreversion recursesubdirs createallsubdirs; 
+Source: php\*; DestDir: {app}\php; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ..\..\doc\*; DestDir: {app}\doc; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ..\..\examples\*; DestDir: {app}\examples; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-Source: shell.bat; DestDir: {app}; 
-Source: setenv.bat; DestDir: {app}; 
-Source: setup.php; DestDir: {app}; Flags: deleteafterinstall; 
-Source: C:\Users\jgm\Projects\wxphp_installer\wxphp\artwork\win-icon.ico; DestDir: {app}; DestName: wxphp.ico; 
+Source: shell.bat; DestDir: {app}
+Source: setenv.bat; DestDir: {app}
+Source: setup.php; DestDir: {app}; Flags: deleteafterinstall
+Source: ..\..\artwork\win-icon.ico; DestDir: {app}; DestName: wxphp.ico
 
 [Icons]
-Name: "{group}\wxPHP Shell"; Filename: {app}\shell.bat; WorkingDir: {app}; IconFilename: {app}\wxphp.ico; 
-Name: {group}\Examples; Filename: {app}\examples; Flags: FolderShortcut; 
-Name: "{group}\wxPHP Documentation"; Filename: {app}\doc\index.html; WorkingDir: {app}\doc; 
-Name: "{group}\PHP Documentation"; Filename: {app}\php\php_manual_en.chm; 
-Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}" 
+Name: {group}\wxPHP Shell; Filename: {app}\shell.bat; WorkingDir: {app}; IconFilename: {app}\wxphp.ico
+Name: {group}\Examples; Filename: {app}\examples; Flags: FolderShortcut
+Name: {group}\wxPHP Documentation; Filename: {app}\doc\index.html; WorkingDir: {app}\doc
+Name: {group}\PHP Documentation; Filename: {app}\php\php_manual_en.chm
+Name: {group}\{cm:ProgramOnTheWeb,{#MyAppName}}; Filename: {#MyAppURL}
 
 [Tasks]
-Name: wxphp_association; Description: "Make .wxphp and .wxphpd executable script files"; GroupDescription: "File Associations";
+Name: wxphp_association; Description: Make .wxphp and .wxphpd executable script files; GroupDescription: File Associations
 
 [Run]
-Filename: {app}\php\wxphp; Parameters: setup.php; WorkingDir: {app}; StatusMsg: "Generating INI and Shell files"; Flags: RunHidden;
+Filename: {app}\php\wxphp; Parameters: setup.php; WorkingDir: {app}; StatusMsg: Generating INI and Shell files; Flags: RunHidden
 
 [Registry]
-Root: HKCR; SubKey: .wxphpd; ValueData: wxPHP; Flags: UninsDeleteValue; ValueType: string; Tasks: wxphp_association; 
-Root: HKCR; SubKey: wxPHP; ValueType: string; ValueData: "wxPHP Debug Script"; Flags: UninsDeleteKey; Tasks: wxphp_association; 
-Root: HKCR; SubKey: wxPHP\DefaultIcon; ValueType: string; ValueData: {app}\php\wxphp.exe,0; Tasks: wxphp_association; 
-Root: HKCR; SubKey: wxPHP\shell\open\command; ValueType: string; ValueData: """{app}\php\wxphp.exe"" ""%1"""; Tasks: wxphp_association;
-Root: HKCR; SubKey: .wxphp; ValueData: wxPHPWin; Flags: UninsDeleteValue; ValueType: string; Tasks: wxphp_association; 
-Root: HKCR; SubKey: wxPHPWin; ValueType: string; ValueData: "wxPHP Script"; Flags: UninsDeleteKey; Tasks: wxphp_association; 
-Root: HKCR; SubKey: wxPHPWin\DefaultIcon; ValueType: string; ValueData: {app}\php\wxphp-win.exe,0; Tasks: wxphp_association; 
-Root: HKCR; SubKey: wxPHPWin\shell\open\command; ValueType: string; ValueData: """{app}\php\wxphp-win.exe"" ""%1"""; Tasks: wxphp_association;
+Root: HKCR; SubKey: .wxphpd; ValueData: wxPHP; Flags: UninsDeleteValue; ValueType: string; Tasks: wxphp_association
+Root: HKCR; SubKey: wxPHP; ValueType: string; ValueData: wxPHP Debug Script; Flags: UninsDeleteKey; Tasks: wxphp_association
+Root: HKCR; SubKey: wxPHP\DefaultIcon; ValueType: string; ValueData: {app}\php\wxphp.exe,0; Tasks: wxphp_association
+Root: HKCR; SubKey: wxPHP\shell\open\command; ValueType: string; ValueData: """{app}\php\wxphp.exe"" ""%1"""; Tasks: wxphp_association
+Root: HKCR; SubKey: .wxphp; ValueData: wxPHPWin; Flags: UninsDeleteValue; ValueType: string; Tasks: wxphp_association
+Root: HKCR; SubKey: wxPHPWin; ValueType: string; ValueData: wxPHP Script; Flags: UninsDeleteKey; Tasks: wxphp_association
+Root: HKCR; SubKey: wxPHPWin\DefaultIcon; ValueType: string; ValueData: {app}\php\wxphp-win.exe,0; Tasks: wxphp_association
+Root: HKCR; SubKey: wxPHPWin\shell\open\command; ValueType: string; ValueData: """{app}\php\wxphp-win.exe"" ""%1"""; Tasks: wxphp_association
