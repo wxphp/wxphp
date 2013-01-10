@@ -313,6 +313,29 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 }
 
 /**
+ * Checks if a class has all pure virtual methods implemented by the
+ * wrapper so it can be initialized.
+ * 
+ * @param $class_name The class to check.
+ * @return True or false
+ */
+function has_all_pure_virtual_implemented($class_name)
+{
+    //TODO: Check by comparing modified classes.json with full_classes.json
+    
+	$implemented = array();
+    
+    // List of classes known to have all its pure virtual methods
+    // implemented on the wrapper
+    $implemented[] = "wxGridCellRenderer";
+    
+    if(in_array($class_name, $implemented))
+        return true;
+        
+    return false;
+}
+
+/**
  * Renames a method name by Appending the word Method
  * if the given method name conflicts with a PHP reserverd
  * keyword.
