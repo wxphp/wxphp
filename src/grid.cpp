@@ -119,6 +119,8 @@ zend_object_value php_wxGridCellRenderer_new(zend_class_entry *class_type TSRMLS
 #endif
 
     custom_object->native_object = NULL;
+    custom_object->native_object = new wxGridCellRenderer_php(); 
+    custom_object->native_object->phpObj = temp; 
     custom_object->object_type = PHP_WXGRIDCELLRENDERER_TYPE;
     custom_object->is_user_initialized = 0;
 

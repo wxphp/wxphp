@@ -164,6 +164,10 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
 #endif
 
     custom_object->native_object = NULL;
+<? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
+    custom_object->native_object = new <?=$class_name?>_php(); 
+    custom_object->native_object->phpObj = temp; 
+<? } ?>
     custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
     custom_object->is_user_initialized = 0;
 
