@@ -118,4 +118,15 @@ unset($defConsts['wxEVT_PAINT_ICON']);
 unset($defConsts['wxEVT_SETTING_CHANGED']);
 
 unset($defConsts['wxEVT_COMPARE_ITEM		']);
+
+unset($defConsts['wxBookCtrl']);
+unset($defConsts['wxInvalidDateTime']);
+unset($defConsts['wxNullProperty']);
+unset($defConsts['wxINT32_MIN']);
+unset($defConsts['wxINT32_MAX']);
+unset($defConsts['wxINT64_MIN']);
+unset($defConsts['wxINT64_MAX']);
+unset($defConsts['wxUINT32_MAX']);
+unset($defConsts['wxUINT64_MAX']);
+
 ?>
