@@ -14,6 +14,9 @@
  * 
 */
 
+if (!ini_get('short_open_tag'))
+	exit("Error: short_open_tag must be turned on in your php.ini\n");
+
 include("include/functions.php");
 include("include/function_generation.php");
 include("include/class_header_generation.php");
@@ -466,11 +469,27 @@ ksort($defConsts);
 
 $classes .= "\t//Variables found on consts.json\n";
 $classes .= "\n";
+
+file_put_contents("discarded.log", "Constants\n\n", FILE_APPEND);
+
 foreach($defConsts as $constant_name => $constant_value)
 {
-	//Skip constants that dont include a numeric value or weren't defined manually
-	if(($constant_value{0} != "0" && $contant_value{1} != "x") && "".$constant_value."" != "1" && !is_enum($constant_value))
+	// Check if string
+	
+	if (preg_match('/^(wxString\()?(?P<str>".*")\)?$/', $constant_value, $match))
+	{
+		$classes .= "\tchar _wxchar_{$constant_name}[] = {$match['str']};\n";
+		$classes .= "\tREGISTER_STRING_CONSTANT(\"$constant_name\", _wxchar_$constant_name, CONST_CS | CONST_PERSISTENT);\n";
 		continue;
+	}
+	
+	// Skip empty constants and function calls
+	
+	if (!strlen($constant_value) || preg_match('/[a-z]\(/i', $constant_value))
+	{
+		file_put_contents("discarded.log", "$constant_name = \"$constant_value\"\n", FILE_APPEND);
+		continue;
+	}
 	
 	//Use the name as constant value for manually defined constants
 	if($constant_value == 1)
