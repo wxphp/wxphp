@@ -30,7 +30,6 @@ unset($defFunctions['wxDDECleanUp']);
 unset($defFunctions['wxDDEInitialize']);
 unset($defFunctions['wxGetWorkingDirectory']);
 unset($defFunctions['wxMakeMetafilePlaceable']);
-unset($defFunctions['wxGetNumberFromUser']);
 unset($defFunctions['wxGetDisplayName']);
 unset($defFunctions['wxLoadUserResource']);
 unset($defFunctions['wxPostDelete']);
