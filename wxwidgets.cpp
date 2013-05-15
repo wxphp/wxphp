@@ -835,6 +835,7 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxIsSameDouble, php_wxIsSameDouble, NULL)
 	PHP_FALIAS(wxIsNullDouble, php_wxIsNullDouble, NULL)
 	PHP_FALIAS(wxMessageBox, php_wxMessageBox, NULL)
+	PHP_FALIAS(wxGetNumberFromUser, php_wxGetNumberFromUser, NULL)
 	PHP_FALIAS(wxCreateDynamicObject, php_wxCreateDynamicObject, NULL)
 	PHP_FALIAS(wxFindWindowAtPointer, php_wxFindWindowAtPointer, NULL)
 	PHP_FALIAS(wxGetActiveWindow, php_wxGetActiveWindow, NULL)

@@ -388,6 +388,7 @@
 #include <wx/zipstrm.h>
 #include <wx/zstream.h>
 #include <wx/debug.h>
+#include <wx/numdlg.h>
 // <--- entries
 
 
