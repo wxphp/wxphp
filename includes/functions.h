@@ -178,6 +178,8 @@ PHP_FUNCTION(php_wxIsNullDouble);
 
 PHP_FUNCTION(php_wxMessageBox);
 
+PHP_FUNCTION(php_wxGetNumberFromUser);
+
 PHP_FUNCTION(php_wxCreateDynamicObject);
 
 PHP_FUNCTION(php_wxFindWindowAtPointer);

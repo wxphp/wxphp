@@ -61,6 +61,9 @@ if(file_exists("./../../json/includes.json"))
 	//for wxAbort()
 	$defIncludes["wx/debug.h"] = 1;
 	
+	// for wxGetNumberFromUser
+	$defIncludes["wx/numdlg.h"] = 1;
+	
 	//blacklist include files
 	unset($defIncludes["wx/msw/ole/activex.h"]);
 	unset($defIncludes["wx/aui/toolbar.h"]);
