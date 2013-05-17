@@ -18,6 +18,43 @@
 <?php print $header_files ?>
 
 /**
+ * Forwards some or all of the function parameters to PHP's sprintf.
+ * Returns a formatted string or NULL.
+ */
+zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
+{
+	int		argc = ZEND_NUM_ARGS();
+	zval	***argv;
+	zval	funcName, *string, *retVal = NULL;
+	
+	if (argc < 1) {
+		WRONG_PARAM_COUNT_WITH_RETVAL(NULL);
+	}
+	
+	argv = (zval ***) safe_emalloc(argc, sizeof(zval **), 0);
+	
+	if (zend_get_parameters_array_ex(argc, argv) == FAILURE) {
+		efree(argv);
+		WRONG_PARAM_COUNT_WITH_RETVAL(NULL);
+	}
+		
+	ZVAL_STRINGL(&funcName, "sprintf", sizeof("sprintf") - 1, 0);
+
+	if (call_user_function_ex(EG(function_table), NULL, &funcName, &string,
+		argc - offset, argv + offset, 0, NULL TSRMLS_CC) == SUCCESS)
+	{
+		if (Z_TYPE_P(string) == IS_STRING)
+			retVal = string;
+		else
+			zval_ptr_dtor(&string);
+	}
+	
+	efree(argv);
+	
+	return retVal;
+}
+
+/**
  * Predefined handcoded set of functions
  */
  
@@ -71,6 +108,151 @@ PHP_FUNCTION(php_wxC2D)
 	}
 	
 	zend_error(E_ERROR, "Ivalid count or type of parameters for wxC2D(), you should pass a constant object to transform to dynamic\n");
+}
+/* }}} */
+
+/* {{{ proto void wxLogError(string formatString, ...)
+   The function to use for error messages, i.e. the messages that must be shown to the user. The default processing is to pop up a message box to inform the user about it. */
+PHP_FUNCTION(php_wxLogError)
+{
+	zval *message;
+	
+	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
+	{
+		wxLogError(Z_STRVAL_P(message));
+		zval_ptr_dtor(&message);
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogFatalError(string formatString, ...)
+   Like wxLogError(), but also terminates the program with the exit code 3. */
+PHP_FUNCTION(php_wxLogFatalError)
+{
+	zval *message;
+	
+	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
+	{
+		wxLogFatalError(Z_STRVAL_P(message));
+		zval_ptr_dtor(&message);
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogGeneric(int level, string formatString, ...)
+   Logs a message with the given wxLogLevel. */
+PHP_FUNCTION(php_wxLogGeneric)
+{
+	char	parse[] = "l";
+	long 	logLevel;
+	zval	*message;
+	
+	if (ZEND_NUM_ARGS() < 2) {
+		WRONG_PARAM_COUNT;
+	}
+	
+	if (zend_parse_parameters(1 TSRMLS_CC, parse, &logLevel) == SUCCESS)
+	{
+		if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1))
+		{
+			wxLogGeneric(logLevel, Z_STRVAL_P(message));
+			zval_ptr_dtor(&message);
+		}
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogMessage(string formatString, ...)
+   For all normal, informational messages. */
+PHP_FUNCTION(php_wxLogMessage)
+{
+	zval *message;
+	
+	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
+	{
+		wxLogMessage(Z_STRVAL_P(message));
+		zval_ptr_dtor(&message);
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogStatus([wxFrame frame,] string formatString, ...)
+   Messages logged by this function will appear in the statusbar of the frame or of the top level application window. */
+PHP_FUNCTION(php_wxLogStatus)
+{
+	char		parse[] = "O";
+	wxFrame 	*frame = NULL;
+	zval		*zFrame;
+	zval		*message;
+	
+	if (ZEND_NUM_ARGS() < 1) {
+		WRONG_PARAM_COUNT;
+	}
+	
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, 1 TSRMLS_CC,
+		parse, &zFrame, php_wxFrame_entry) == SUCCESS)
+	{
+		// Called with wxFrame as first parameter
+	
+		frame = (wxFrame*)
+			((zo_wxFrame*) zend_object_store_get_object(zFrame TSRMLS_CC))->native_object;
+
+		message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1);
+	}
+	else
+		message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU);
+
+	if (message)
+	{
+		if (frame)
+			wxLogStatus(frame, Z_STRVAL_P(message));
+		else
+			wxLogStatus(Z_STRVAL_P(message));
+	
+		zval_ptr_dtor(&message);
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogSysError(string formatString, ...)
+   Logs the specified message text as well as the last system error code (errno or GetLastError() depending on the platform) and the corresponding error message. */
+PHP_FUNCTION(php_wxLogSysError)
+{
+	zval *message;
+	
+	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
+	{
+		wxLogSysError(Z_STRVAL_P(message));
+		zval_ptr_dtor(&message);
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogVerbose(string formatString, ...)
+   For verbose output. Normally, it is suppressed, but might be activated if the user wishes to know more details about the program progress (another, but possibly confusing name for the same function could be wxLogInfo). */
+PHP_FUNCTION(php_wxLogVerbose)
+{
+	zval *message;
+	
+	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
+	{
+		wxLogVerbose(Z_STRVAL_P(message));
+		zval_ptr_dtor(&message);
+	}
+}
+/* }}} */
+
+/* {{{ proto void wxLogWarning(string formatString, ...)
+   For warnings - they are also normally shown to the user, but don't interrupt the program work. */
+PHP_FUNCTION(php_wxLogWarning)
+{
+	zval *message;
+	
+	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
+	{
+		wxLogWarning(Z_STRVAL_P(message));
+		zval_ptr_dtor(&message);
+	}
 }
 /* }}} */
 
