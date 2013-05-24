@@ -29,3 +29,4 @@ src/.libs
 src/*.lo
 wxwidgets.la
 wxwidgets.lo
+/tools/source_maker/nbproject/
