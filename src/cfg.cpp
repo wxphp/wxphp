@@ -13512,14 +13512,12 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 				php_printf("Executing wxSystemSettings::GetFont((wxSystemFont) index0) to return new object\n\n");
 				#endif
 
-				wxFont value_to_return1;
-				value_to_return1 = wxSystemSettings::GetFont((wxSystemFont) index0);
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFont));
+				wxFont_php *value_to_return1;
+				value_to_return1 = new wxFont_php(wxSystemSettings::GetFont((wxSystemFont) index0));
 				object_init_ex(return_value, php_wxFont_entry);
-				((zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFont_php*) ptr;
-				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
+				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = value_to_return1;
+				zo1->is_user_initialized = 1;
 
 
 				return;
