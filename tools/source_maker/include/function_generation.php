@@ -1685,6 +1685,26 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return new object\\n\\n\");\n";
 								$return_called_overload .= tabs(4) . "#endif\n\n";
 								
+								if (is_ref_counted_class($return_type))
+								{
+									$return_called_overload .= tabs(4) . $return_type . "_php *value_to_return{$required_parameters};\n";
+
+									if (!$class_name)
+										$call = "$method_name($parameters_string)";
+									else if (!$declaration["static"])
+										$call = "(({$class_name}_php *) native_object)->$method_name($parameters_string)";
+									else
+										$call = "$class_name::$method_name($parameters_string)";
+
+									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = new {$return_type}_php($call);\n";
+									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
+									$return_called_overload .= tabs(4) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+									$return_called_overload .= tabs(4) . "zo{$required_parameters}->native_object = value_to_return{$required_parameters};\n";
+									$return_called_overload .= tabs(4) . "zo{$required_parameters}->is_user_initialized = 1;\n";
+
+									break;
+								}
+
 								$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
