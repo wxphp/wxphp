@@ -155,6 +155,48 @@ function is_enum($value)
 }
 
 /**
+ * Checks if a given class uses reference counting.
+ * See: http://docs.wxwidgets.org/trunk/overview_refcount.html
+ * 
+ * @param string $class
+ * 
+ * @return bool
+ */
+function is_ref_counted_class($class)
+{
+	static $list;
+
+	if (!isset($list))
+	{
+		$list = array_flip(array(
+/*		'wxAcceleratorTable',
+			'wxAnimation',
+			'wxBitmap',
+			'wxBrush',
+			'wxCursor',*/
+			'wxFont',
+/*		'wxGraphicsBrush',
+			'wxGraphicsContext',
+			'wxGraphicsFont',
+			'wxGraphicsMatrix',
+			'wxGraphicsPath',
+			'wxGraphicsPen',
+			'wxIcon',
+			'wxImage',
+			'wxMetafile',
+			'wxPalette',
+			'wxPen',
+			'wxRegion',
+			'wxString',
+			'wxVariant',
+			'wxVariantData'*/
+			));
+	}
+
+	return isset($list[$class]);
+}
+
+/**
  * Generates an array of all the classes the inherit from a given one.
  * 
  * @param string $class Name of the class to search for derivations.

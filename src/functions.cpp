@@ -7110,12 +7110,12 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 				php_printf("Executing ::wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1) to return new object\n\n");
 				#endif
 
-				wxFont value_to_return2;
-				value_to_return2 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1);
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxFont));
+				wxFont_php *value_to_return2;
+				value_to_return2 = new wxFont_php(wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1));
 				object_init_ex(return_value, php_wxFont_entry);
-				((zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFont_php*) ptr;
+				zo_wxFont* zo2 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = value_to_return2;
+				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -7127,12 +7127,12 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 				php_printf("Executing ::wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8)) to return new object\n\n");
 				#endif
 
-				wxFont value_to_return3;
-				value_to_return3 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8));
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxFont));
+				wxFont_php *value_to_return3;
+				value_to_return3 = new wxFont_php(wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8)));
 				object_init_ex(return_value, php_wxFont_entry);
-				((zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFont_php*) ptr;
+				zo_wxFont* zo3 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = value_to_return3;
+				zo3->is_user_initialized = 1;
 
 
 				return;

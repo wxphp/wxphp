@@ -3222,12 +3222,12 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				php_printf("Executing wxTextAttr::GetFont() to return new object\n\n");
 				#endif
 
-				wxFont value_to_return0;
-				value_to_return0 = ((wxTextAttr_php*)native_object)->GetFont();
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				wxFont_php *value_to_return0;
+				value_to_return0 = new wxFont_php(((wxTextAttr_php *) native_object)->GetFont());
 				object_init_ex(return_value, php_wxFont_entry);
-				((zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFont_php*) ptr;
+				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
