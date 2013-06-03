@@ -186,12 +186,6 @@ if(file_exists("./../../json/typedef.json"))
 	$defTypedef = unserialize_json(file_get_contents("./../../json/typedef.json"));
 }
 
-//Store all classes that derive from wxEvtHandler
-$evnHandlers = derivationsOfClass('wxEvtHandler');
-
-//Store all classes that derive from wxObject
-$wxObject_derivations = derivationsOfClass('wxObject');
-
 //Prepair class groups to generate different source files correctly
 prepair_groups($defClassGroups, $defIni);
 
@@ -234,6 +228,12 @@ remove_methods_implementing_unhandled_arguments($defIni);
 
 //Remove obsolete .cpp and .h files
 remove_old_src_and_headers();
+
+//Store all classes that derive from wxEvtHandler
+$evnHandlers = derivationsOfClass('wxEvtHandler');
+
+//Store all classes that derive from wxObject
+$wxObject_derivations = derivationsOfClass('wxObject');
 
 print "\n";
 

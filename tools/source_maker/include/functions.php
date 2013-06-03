@@ -206,22 +206,42 @@ function is_ref_counted_class($class)
 function derivationsOfClass($class)
 {
 	global $defIni;
-	
-	$derivations = array();
-		
-	foreach($defIni as $className=>$classDefinitions)
+	static $cache;
+
+	if (!isset($cache))
 	{
-		if(isset($classDefinitions['_implements']))
+		// Build a tree of parent => children relationships
+		
+		$tree = array();
+
+		foreach ($defIni as $className => $def)
 		{
-			if(in_array($class, $classDefinitions['_implements']))
+			if (!isset($def['_implements']))
+				continue;
+
+			foreach ($def['_implements'] as $parent)
+				$tree[$parent][$className] = true;
+		}
+
+		// Build a cache of parent => children/grand children
+
+		$cache = array();
+
+		foreach ($tree as $parent => $children)
+		{
+			$children = array_keys($children);
+
+			while ($child = array_shift($children))
 			{
-				$derivations[$className]=1;
-				$derivations = array_merge($derivations, derivationsOfClass($className));
+				$cache[$parent][$child] = true;
+
+				if (isset($tree[$child]))
+					$children = array_merge(array_keys($tree[$child]), $children);
 			}
 		}
 	}
-	
-	return $derivations;
+
+	return isset($cache[$class]) ? $cache[$class] : array();
 }
 
 /**
@@ -236,7 +256,6 @@ function derivationsOfClass($class)
 function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 {
 	global $defIni;
-	global $evnHandlers;
 	$class_methods = "";
 	
 	if(!isset($defIni[$classN]))
@@ -1190,14 +1209,8 @@ function tabs($count=1)
 function inherits_from_class($parent_class, $child_class)
 {
 	$derivations = derivationsOfClass($parent_class);
-	
-	foreach($derivations as $derivation_name=>$derivation_value)
-	{
-		if($derivation_name == $child_class)
-			return true;
-	}
-	
-	return false;
+
+	return isset($derivations[$child_class]);
 }
 
 /**
