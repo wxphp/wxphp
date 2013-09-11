@@ -525,7 +525,7 @@ for ($i = 0; $i < $entries->length; $i++)
 						$functions[$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
 						"parameters_type"=>$parameters_type, "parameters_is_array"=>$parameters_is_array, 
 						"parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
-						"parameters_required"=>$parameters_required, "parameters_default_value"=>$parameters_values);
+						"parameters_required"=>$parameters_required, "parameters_default_value"=>$parameters_value);
 					}
 				}
 			}
