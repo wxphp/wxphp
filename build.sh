@@ -43,7 +43,6 @@ cp tools/source_maker/class_selector/classes.json json
 cd tools/source_maker/
 
 # Run the code generator
-cp class_selector/classes.json ./../../json/
 php code_generator.php
 
 # Copy non dynamic template files
