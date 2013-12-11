@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -332,6 +332,706 @@ zend_object_value php_wxRibbonToolBarToolBase_new(zend_class_entry *class_type T
     return retval;
 }
 END_EXTERN_C()
+
+BEGIN_EXTERN_C()
+void php_wxGridCellCoords_free(void *object TSRMLS_DC) 
+{
+    zo_wxGridCellCoords* custom_object = (zo_wxGridCellCoords*) object;
+    //delete custom_object->native_object;
+    
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxGridCellCoords_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	if(custom_object->native_object != NULL)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Pointer not null\n");
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+		#endif
+		
+		if(custom_object->is_user_initialized)
+		{
+			#ifdef USE_WXPHP_DEBUG
+			php_printf("Deleting pointer with delete\n");
+			#endif
+			
+			delete custom_object->native_object;
+			
+			custom_object->native_object = NULL;
+		}
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Deletion of wxGridCellCoords done\n");
+		php_printf("===========================================\n\n");
+		#endif
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Not user space initialized\n");
+		#endif
+	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
+}
+
+zend_object_value php_wxGridCellCoords_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxGridCellCoords_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxGridCellCoords* custom_object;
+    custom_object = (zo_wxGridCellCoords*) emalloc(sizeof(zo_wxGridCellCoords));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXGRIDCELLCOORDS_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellCoords_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
+
+/* {{{ proto  wxGridCellCoords::wxGridCellCoords()
+   Default constructor initializes the object to invalid state. */
+PHP_METHOD(php_wxGridCellCoords, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridCellCoords::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridCellCoords* current_object;
+	wxGridCellCoords_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+	//Parameters for overload 1
+	long row1;
+	long col1;
+	bool overload1_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&row1, &col1)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row1, &col1 ) == SUCCESS)
+		{
+			overload1_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct()\n");
+				#endif
+
+				native_object = new wxGridCellCoords_php();
+
+				native_object->references.Initialize();
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((int) row1, (int) col1)\n");
+				#endif
+
+				native_object = new wxGridCellCoords_php((int) row1, (int) col1);
+
+				native_object->references.Initialize();
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		native_object->phpObj = getThis();
+		
+		native_object->InitProperties();
+		
+		current_object = (zo_wxGridCellCoords*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
+		
+		#ifdef ZTS 
+		native_object->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxGridCellCoords::__construct\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
+
+/* {{{ proto int wxGridCellCoords::GetRow()
+   Return the row of the coordinate. */
+PHP_METHOD(php_wxGridCellCoords, GetRow)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridCellCoords::GetRow\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridCellCoords* current_object;
+	wxphp_object_type current_object_type;
+	wxGridCellCoords_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridCellCoords*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridCellCoords::GetRow call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDCELLCOORDS_TYPE){
+				references = &((wxGridCellCoords_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxGridCellCoords::GetRow())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxGridCellCoords_php*)native_object)->GetRow());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellCoords::GetRow\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxGridCellCoords::SetRow(int n)
+   Set the row of the coordinate. */
+PHP_METHOD(php_wxGridCellCoords, SetRow)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridCellCoords::SetRow\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridCellCoords* current_object;
+	wxphp_object_type current_object_type;
+	wxGridCellCoords_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridCellCoords*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridCellCoords::SetRow call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDCELLCOORDS_TYPE){
+				references = &((wxGridCellCoords_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long n0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&n0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxGridCellCoords::SetRow((int) n0)\n\n");
+				#endif
+
+				((wxGridCellCoords_php*)native_object)->SetRow((int) n0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellCoords::SetRow\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxGridCellCoords::GetCol()
+   Return the column of the coordinate. */
+PHP_METHOD(php_wxGridCellCoords, GetCol)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridCellCoords::GetCol\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridCellCoords* current_object;
+	wxphp_object_type current_object_type;
+	wxGridCellCoords_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridCellCoords*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridCellCoords::GetCol call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDCELLCOORDS_TYPE){
+				references = &((wxGridCellCoords_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxGridCellCoords::GetCol())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxGridCellCoords_php*)native_object)->GetCol());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellCoords::GetCol\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxGridCellCoords::SetCol(int n)
+   Set the column of the coordinate. */
+PHP_METHOD(php_wxGridCellCoords, SetCol)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridCellCoords::SetCol\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridCellCoords* current_object;
+	wxphp_object_type current_object_type;
+	wxGridCellCoords_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridCellCoords*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridCellCoords::SetCol call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDCELLCOORDS_TYPE){
+				references = &((wxGridCellCoords_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long n0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&n0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxGridCellCoords::SetCol((int) n0)\n\n");
+				#endif
+
+				((wxGridCellCoords_php*)native_object)->SetCol((int) n0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellCoords::SetCol\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxGridCellCoords::Set(int row, int col)
+   Set the row and column of the coordinate. */
+PHP_METHOD(php_wxGridCellCoords, Set)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridCellCoords::Set\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridCellCoords* current_object;
+	wxphp_object_type current_object_type;
+	wxGridCellCoords_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridCellCoords*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridCellCoords::Set call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDCELLCOORDS_TYPE){
+				references = &((wxGridCellCoords_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long row0;
+	long col0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxGridCellCoords::Set((int) row0, (int) col0)\n\n");
+				#endif
+
+				((wxGridCellCoords_php*)native_object)->Set((int) row0, (int) col0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellCoords::Set\n");
+	}
+}
+/* }}} */
 
 BEGIN_EXTERN_C()
 void php_wxNonOwnedWindow_free(void *object TSRMLS_DC) 
@@ -3402,7 +4102,7 @@ zend_object_value php_wxWindowModalDialogEvent_new(zend_class_entry *class_type 
 END_EXTERN_C()
 
 /* {{{ proto wxEvent wxWindowModalDialogEvent::Clone()
-   Returns a copy of the event. */
+   Clone the event. */
 PHP_METHOD(php_wxWindowModalDialogEvent, CloneMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3521,7 +4221,8 @@ PHP_METHOD(php_wxWindowModalDialogEvent, CloneMethod)
 }
 /* }}} */
 
-/* {{{ proto wxDialog wxWindowModalDialogEvent::GetDialog() */
+/* {{{ proto wxDialog wxWindowModalDialogEvent::GetDialog()
+   Return the corresponding dialog. */
 PHP_METHOD(php_wxWindowModalDialogEvent, GetDialog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3640,7 +4341,8 @@ PHP_METHOD(php_wxWindowModalDialogEvent, GetDialog)
 }
 /* }}} */
 
-/* {{{ proto int wxWindowModalDialogEvent::GetReturnCode() */
+/* {{{ proto int wxWindowModalDialogEvent::GetReturnCode()
+   Return the dialog's return code. */
 PHP_METHOD(php_wxWindowModalDialogEvent, GetReturnCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3736,7 +4438,8 @@ PHP_METHOD(php_wxWindowModalDialogEvent, GetReturnCode)
 }
 /* }}} */
 
-/* {{{ proto  wxWindowModalDialogEvent::wxWindowModalDialogEvent(int commandType, int id) */
+/* {{{ proto  wxWindowModalDialogEvent::wxWindowModalDialogEvent(int commandType, int id)
+   Constructor. */
 PHP_METHOD(php_wxWindowModalDialogEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG

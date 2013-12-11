@@ -371,10 +371,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -416,10 +416,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAutoWrapStringEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -463,10 +463,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellBoolEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -511,10 +511,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellChoiceEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -558,10 +558,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEnumEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -578,7 +578,7 @@ void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_
 class wxGridCellTextEditor_php: public wxGridCellTextEditor{
 	public:
 	
-	wxGridCellTextEditor_php():wxGridCellTextEditor(){}
+	wxGridCellTextEditor_php(size_t maxChars=0):wxGridCellTextEditor(maxChars){}
 		
 		
 	void InitProperties(){
@@ -605,10 +605,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellTextEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -652,10 +652,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellFloatEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -699,10 +699,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellNumberEditor_functions[] = {
+	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, IsCreated, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGridCellEditor, PaintBackground, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, SetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, StartingClick, NULL, ZEND_ACC_PUBLIC)
@@ -842,6 +842,7 @@ static zend_function_entry php_wxGridTableBase_functions[] = {
 	PHP_ME(php_wxGridTableBase, GetView, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridTableBase, InsertCols, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridTableBase, InsertRows, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridTableBase, IsEmpty, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridTableBase, IsEmptyCell, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridTableBase, SetAttr, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridTableBase, SetAttrProvider, NULL, ZEND_ACC_PUBLIC)
@@ -1180,6 +1181,7 @@ static zend_function_entry php_wxGrid_functions[] = {
 	PHP_ME(php_wxGrid, AutoSizeRowLabelSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, AutoSizeRows, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, BeginBatch, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGrid, BlockToDeviceRect, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, CanDragCell, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, CanDragColMove, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, CanDragColSize, NULL, ZEND_ACC_PUBLIC)
@@ -1239,6 +1241,7 @@ static zend_function_entry php_wxGrid_functions[] = {
 	PHP_ME(php_wxGrid, GetDefaultColLabelSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, GetDefaultColSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, GetDefaultEditor, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGrid, GetDefaultEditorForCell, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, GetDefaultEditorForType, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, GetDefaultGridLinePen, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, GetDefaultRenderer, NULL, ZEND_ACC_PUBLIC)
@@ -1373,6 +1376,7 @@ static zend_function_entry php_wxGrid_functions[] = {
 	PHP_ME(php_wxGrid, UseNativeColHeader, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, XToCol, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, XToEdgeOfCol, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGrid, XYToCell, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, YToEdgeOfRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, YToRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGrid, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)

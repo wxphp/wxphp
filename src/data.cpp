@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -2902,7 +2902,7 @@ PHP_METHOD(php_wxCalendarDateAttr, HasBorderColour)
 /* }}} */
 
 /* {{{ proto bool wxCalendarDateAttr::HasBorder()
-   Returns true if a non-default (i.e. */
+   Returns true if a non-default (i.e. any) border is set. */
 PHP_METHOD(php_wxCalendarDateAttr, HasBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15040,7 +15040,7 @@ PHP_METHOD(php_wxSize, SetHeight)
 /* }}} */
 
 /* {{{ proto  wxSize::SetDefaults(wxSize sizeDefault)
-   Combine this size object with another one replacing the default (i.e. */
+   Combine this size object with another one replacing the default (i.e. equal to -1) components of this object with those of the other. */
 PHP_METHOD(php_wxSize, SetDefaults)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22490,7 +22490,7 @@ PHP_METHOD(php_wxRegion, IsEmpty)
 /* }}} */
 
 /* {{{ proto bool wxRegion::IsEqual(wxRegion region)
-   Returns true if the region is equal to, i.e. */
+   Returns true if the region is equal to, i.e. covers the same area as, another one. */
 PHP_METHOD(php_wxRegion, IsEqual)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24154,6 +24154,116 @@ zend_object_value php_wxStatusBarPane_new(zend_class_entry *class_type TSRMLS_DC
 }
 END_EXTERN_C()
 
+/* {{{ proto  wxStatusBarPane::wxStatusBarPane(int style, int width)
+   Constructs the pane with the given style and width. */
+PHP_METHOD(php_wxStatusBarPane, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStatusBarPane::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStatusBarPane* current_object;
+	wxStatusBarPane_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
+	
+	//Parameters for overload 0
+	long style0;
+	long width0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|ll' (&style0, &width0)\n");
+		#endif
+
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &width0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct()\n");
+				#endif
+
+				native_object = new wxStatusBarPane_php();
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((int) style0)\n");
+				#endif
+
+				native_object = new wxStatusBarPane_php((int) style0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((int) style0, (int) width0)\n");
+				#endif
+
+				native_object = new wxStatusBarPane_php((int) style0, (int) width0);
+
+				native_object->references.Initialize();
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		native_object->phpObj = getThis();
+		
+		native_object->InitProperties();
+		
+		current_object = (zo_wxStatusBarPane*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
+		
+		#ifdef ZTS 
+		native_object->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStatusBarPane::__construct\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
+
 /* {{{ proto string wxStatusBarPane::GetText()
    Returns the text currently shown in this pane. */
 PHP_METHOD(php_wxStatusBarPane, GetText)
@@ -24448,116 +24558,6 @@ PHP_METHOD(php_wxStatusBarPane, GetWidth)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStatusBarPane::GetWidth\n");
 	}
-}
-/* }}} */
-
-/* {{{ proto  wxStatusBarPane::wxStatusBarPane(int style, int width)
-   Constructs the pane with the given style and width. */
-PHP_METHOD(php_wxStatusBarPane, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStatusBarPane::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStatusBarPane* current_object;
-	wxStatusBarPane_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	long style0;
-	long width0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|ll' (&style0, &width0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &width0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-
-				native_object = new wxStatusBarPane_php();
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) style0)\n");
-				#endif
-
-				native_object = new wxStatusBarPane_php((int) style0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) style0, (size_t) width0)\n");
-				#endif
-
-				native_object = new wxStatusBarPane_php((int) style0, (size_t) width0);
-
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
-		native_object->InitProperties();
-		
-		current_object = (zo_wxStatusBarPane*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxStatusBarPane::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
 }
 /* }}} */
 

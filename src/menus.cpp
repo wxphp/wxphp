@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -4617,7 +4617,7 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 /* }}} */
 
 /* {{{ proto wxMenuItem wxMenu::Prepend(int id, string item, string helpString, wxItemKind kind)
-   Inserts the given item at position 0, i.e. */
+   Inserts the given item at position 0, i.e. before all the other existing items. */
 PHP_METHOD(php_wxMenu, Prepend)
 {
 	#ifdef USE_WXPHP_DEBUG

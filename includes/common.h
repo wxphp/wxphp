@@ -56,6 +56,7 @@
  */
 // entries --->
 #include <wx/msgdlg.h>
+#include <wx/window.h>
 #include <wx/image.h>
 #include <wx/rawbmp.h>
 #include <wx/mimetype.h>
@@ -76,9 +77,10 @@
 #include <wx/dynarray.h>
 #include <wx/arrstr.h>
 #include <wx/artprov.h>
+#include <wx/aui/auibook.h>
+#include <wx/aui/auibar.h>
 #include <wx/aui/dockart.h>
 #include <wx/aui/framemanager.h>
-#include <wx/aui/auibook.h>
 #include <wx/dcbuffer.h>
 #include <wx/bannerwindow.h>
 #include <wx/bitmap.h>
@@ -133,6 +135,7 @@
 #include <wx/dateevt.h>
 #include <wx/datectrl.h>
 #include <wx/dc.h>
+#include <wx/overlay.h>
 #include <wx/memory.h>
 #include <wx/debugrpt.h>
 #include <wx/renderer.h>
@@ -180,6 +183,7 @@
 #include <wx/gbsizer.h>
 #include <wx/dcgraph.h>
 #include <wx/gdiobj.h>
+#include <wx/generic/aboutdlgg.h>
 #include <wx/progdlg.h>
 #include <wx/valgen.h>
 #include <wx/glcanvas.h>
@@ -192,12 +196,12 @@
 #include <wx/headerctrl.h>
 #include <wx/help.h>
 #include <wx/vscroll.h>
+#include <wx/html/helpdata.h>
 #include <wx/html/htmlcell.h>
 #include <wx/html/htmlwin.h>
 #include <wx/html/htmprint.h>
 #include <wx/html/htmlfilt.h>
 #include <wx/html/helpctrl.h>
-#include <wx/html/helpdata.h>
 #include <wx/html/helpdlg.h>
 #include <wx/html/helpfrm.h>
 #include <wx/html/helpwnd.h>
@@ -238,6 +242,7 @@
 #include <wx/metafile.h>
 #include <wx/minifram.h>
 #include <wx/dcmirror.h>
+#include <wx/modalhook.h>
 #include <wx/module.h>
 #include <wx/mousemanager.h>
 #include <wx/mousestate.h>
@@ -313,6 +318,7 @@
 #include <wx/scrolwin.h>
 #include <wx/srchctrl.h>
 #include <wx/sharedptr.h>
+#include <wx/simplebook.h>
 #include <wx/snglinst.h>
 #include <wx/xrc/xh_sizer.h>
 #include <wx/slider.h>
@@ -373,11 +379,12 @@
 #include <wx/vector.h>
 #include <wx/versioninfo.h>
 #include <wx/vidmode.h>
-#include <wx/window.h>
 #include <wx/vlbox.h>
 #include <wx/weakref.h>
 #include <wx/webview.h>
 #include <wx/webviewarchivehandler.h>
+#include <wx/webviewfshandler.h>
+#include <wx/windowptr.h>
 #include <wx/wupdlock.h>
 #include <wx/withimages.h>
 #include <wx/wizard.h>

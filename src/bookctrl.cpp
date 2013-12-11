@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -2711,7 +2711,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 /* }}} */
 
 /* {{{ proto int wxBookCtrlBase::SetSelection(int page)
-   Sets the selection for the given page, returning the previous selection. */
+   Sets the selection to the given page, returning the previous selection. */
 int wxBookCtrlBase_php::SetSelection(size_t page)
 {
 	static zend_function* cached_function = NULL;
@@ -3001,7 +3001,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 /* }}} */
 
 /* {{{ proto int wxBookCtrlBase::ChangeSelection(int page)
-   Changes the selection for the given page, returning the previous selection. */
+   Changes the selection to the given page, returning the previous selection. */
 int wxBookCtrlBase_php::ChangeSelection(size_t page)
 {
 	static zend_function* cached_function = NULL;
@@ -4559,7 +4559,7 @@ zend_object_value php_wxNotebook_new(zend_class_entry *class_type TSRMLS_DC)
 END_EXTERN_C()
 
 /* {{{ proto int wxNotebook::ChangeSelection(int page)
-   Changes the selection for the given page, returning the previous selection. */
+   Changes the selection to the given page, returning the previous selection. */
 PHP_METHOD(php_wxNotebook, ChangeSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5869,7 +5869,7 @@ PHP_METHOD(php_wxNotebook, SetPageText)
 /* }}} */
 
 /* {{{ proto int wxNotebook::SetSelection(int page)
-   Sets the selection for the given page, returning the previous selection. */
+   Sets the selection to the given page, returning the previous selection. */
 PHP_METHOD(php_wxNotebook, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG

@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -29767,7 +29767,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 /* }}} */
 
 /* {{{ proto bool wxImage::IsTransparent(int x, int y, int threshold)
-   Returns true if the given pixel is transparent, i.e. */
+   Returns true if the given pixel is transparent, i.e. either has the mask colour if this image has a mask or if this image has alpha channel and alpha value of this pixel is strictly less than threshold. */
 PHP_METHOD(php_wxImage, IsTransparent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41700,7 +41700,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 /* }}} */
 
 /* {{{ proto wxRendererNative wxRendererNative::GetDefault()
-   Return the default (native) implementation for this platform -- this is also the one used by default but this may be changed by calling Set() in which case the return value of this method may be different from the return value of Get(). */
+   Return the default (native) implementation for this platform  this is also the one used by default but this may be changed by calling Set() in which case the return value of this method may be different from the return value of Get(). */
 PHP_METHOD(php_wxRendererNative, GetDefault)
 {
 	#ifdef USE_WXPHP_DEBUG

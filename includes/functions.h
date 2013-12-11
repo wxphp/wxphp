@@ -83,6 +83,8 @@ PHP_FUNCTION(php_wxGetSingleChoice);
 
 PHP_FUNCTION(php_wxGetColourFromUser);
 
+PHP_FUNCTION(php_wxAutoBufferedPaintDCFactory);
+
 PHP_FUNCTION(php_wxAbort);
 
 PHP_FUNCTION(php_wxDisableAsserts);
@@ -198,6 +200,16 @@ PHP_FUNCTION(php_wxGetActiveWindow);
 PHP_FUNCTION(php_wxGetTopLevelParent);
 
 PHP_FUNCTION(php_wxRichTextHasStyle);
+
+PHP_FUNCTION(php_wxRichTextCombineBitlists);
+
+PHP_FUNCTION(php_wxRichTextBitlistsEqPartial);
+
+PHP_FUNCTION(php_wxRichTextDecimalToRoman);
+
+PHP_FUNCTION(php_wxTextAttrCollectCommonAttributes);
+
+PHP_FUNCTION(php_wxRichTextModuleInit);
 
 PHP_FUNCTION(php_wxGetStockLabel);
 

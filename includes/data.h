@@ -798,7 +798,7 @@ void php_wxStatusBarPane_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 class wxStatusBarPane_php: public wxStatusBarPane{
 	public:
 	
-	wxStatusBarPane_php(int style=wxSB_NORMAL, size_t width=0):wxStatusBarPane(style, width){}
+	wxStatusBarPane_php(int style=wxSB_NORMAL, int width=0):wxStatusBarPane(style, width){}
 		
 		
 	void InitProperties(){
@@ -825,10 +825,10 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStatusBarPane_functions[] = {
+	PHP_ME(php_wxStatusBarPane, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxStatusBarPane, GetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStatusBarPane, GetStyle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStatusBarPane, GetWidth, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxStatusBarPane, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
 #endif

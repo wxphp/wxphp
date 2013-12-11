@@ -672,6 +672,221 @@
 			}
 		]
 	},
+	"wxGridCellCoords":{
+		"wxGridCellCoords":[
+			{
+				"return_type":"",
+				"brief_description":"Default constructor initializes the object to invalid state.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			},
+			{
+				"return_type":"",
+				"brief_description":"Constructor taking a row and a column.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"row",
+					"col"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"GetRow":[
+			{
+				"return_type":"int",
+				"brief_description":"Return the row of the coordinate.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetRow":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the row of the coordinate.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"n"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetCol":[
+			{
+				"return_type":"int",
+				"brief_description":"Return the column of the coordinate.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetCol":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the column of the coordinate.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"n"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"Set":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the row and column of the coordinate.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"row",
+					"col"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		]
+	},
 	"wxFrame":{
 		"_implements":[
 			"wxTopLevelWindow"
@@ -1265,45 +1480,6 @@
 				]
 			}
 		],
-		"CreateToolBar":[
-			{
-				"return_type":"wxToolBar*",
-				"brief_description":"Creates a toolbar at the top or left of the frame.",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"long",
-					"wxWindowID",
-					"const wxString&"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"style",
-					"id",
-					"name"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxBORDER_NONE|wxTB_HORIZONTAL",
-					"wxID_ANY",
-					"wxToolBarNameStr"
-				]
-			}
-		],
 		"GetToolBar":[
 			{
 				"return_type":"wxToolBar*",
@@ -1444,6 +1620,45 @@
 					"wxSTB_DEFAULT_STYLE",
 					"0",
 					"wxStatusBarNameStr"
+				]
+			}
+		],
+		"CreateToolBar":[
+			{
+				"return_type":"wxToolBar*",
+				"brief_description":"Creates a toolbar at the top or left of the frame.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long",
+					"wxWindowID",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"style",
+					"id",
+					"name"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxTB_DEFAULT_STYLE",
+					"wxID_ANY",
+					"wxToolBarNameStr"
 				]
 			}
 		]
@@ -1748,10 +1963,10 @@
 				]
 			}
 		],
-		"CenterOnScreen":[
+		"CentreOnScreen":[
 			{
 				"return_type":"void",
-				"brief_description":"A synonym for CentreOnScreen().",
+				"brief_description":"Centres the window on screen.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -1770,17 +1985,17 @@
 					"direction"
 				],
 				"parameters_required":[
-					true
+					
 				],
 				"parameters_default_value":[
-					null
+					"wxBOTH"
 				]
 			}
 		],
-		"CentreOnScreen":[
+		"CenterOnScreen":[
 			{
 				"return_type":"void",
-				"brief_description":"Centres the window on screen.",
+				"brief_description":"A synonym for CentreOnScreen().",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -2044,7 +2259,7 @@
 		"IsActive":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if this window is currently active, i.e.",
+				"brief_description":"Returns true if this window is currently active, i.e. if the user is currently working with it.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -3472,7 +3687,7 @@
 		"SetSizeHints":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the cached best size value.",
+				"brief_description":"Prepare for changing positions of multiple child windows.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -3795,7 +4010,7 @@
 		"AcceptsFocus":[
 			{
 				"return_type":"bool",
-				"brief_description":"This method may be overridden in the derived classes to return false to indicate that this control doesn't accept input at all (i.e.",
+				"brief_description":"This method may be overridden in the derived classes to return false to indicate that this control doesn't accept input at all (i.e. behaves like e.g. wxStaticText) and so doesn't need focus.",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -5106,7 +5321,7 @@
 		"GetClientRect":[
 			{
 				"return_type":"wxRect",
-				"brief_description":"Get the client rectangle in window (i.e.",
+				"brief_description":"Get the client rectangle in window (i.e. client) coordinates.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -5576,7 +5791,7 @@
 		"GetMaxHeight":[
 			{
 				"return_type":"int",
-				"brief_description":"Sets the cached best size value.",
+				"brief_description":"Returns the vertical component of window maximal size.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -5634,7 +5849,7 @@
 		"GetMaxWidth":[
 			{
 				"return_type":"int",
-				"brief_description":"Sets the cached best size value.",
+				"brief_description":"Returns the horizontal component of window maximal size.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -5692,7 +5907,7 @@
 		"GetMinHeight":[
 			{
 				"return_type":"int",
-				"brief_description":"Sets the cached best size value.",
+				"brief_description":"Returns the vertical component of window minimal size.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -5750,7 +5965,7 @@
 		"GetMinWidth":[
 			{
 				"return_type":"int",
-				"brief_description":"Sets the cached best size value.",
+				"brief_description":"Returns the horizontal component of window minimal size.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -7086,7 +7301,7 @@
 		"IsDoubleBuffered":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the window contents is double-buffered by the system, i.e.",
+				"brief_description":"Returns true if the window contents is double-buffered by the system, i.e. if any drawing done on the window is really done on a temporary backing surface and transferred to the screen all at once later.",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -7115,7 +7330,7 @@
 		"IsEnabled":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the window is enabled, i.e.",
+				"brief_description":"Returns true if the window is enabled, i.e. if it accepts user input, false otherwise.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -7394,7 +7609,7 @@
 		"IsShownOnScreen":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the window is physically visible on the screen, i.e.",
+				"brief_description":"Returns true if the window is physically visible on the screen, i.e. it is shown and all its parents up to the toplevel window are shown as well.",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -7423,7 +7638,7 @@
 		"IsThisEnabled":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if this window is intrinsically enabled, false otherwise, i.e.",
+				"brief_description":"Returns true if this window is intrinsically enabled, false otherwise, i.e. if Enable() Enable(false) had been called.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -8361,7 +8576,7 @@
 		"Reparent":[
 			{
 				"return_type":"bool",
-				"brief_description":"Reparents the window, i.e.",
+				"brief_description":"Reparents the window, i.e. the window will be removed from its current parent window (e.g.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -9175,7 +9390,7 @@
 		"SetInitialBestSize":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the initial window size if none is given (i.e.",
+				"brief_description":"Sets the initial window size if none is given (i.e. at least one of the components of the size passed to ctor\/Create() is wxDefaultCoord).",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -9819,7 +10034,7 @@
 		"SetDefaults":[
 			{
 				"return_type":"void",
-				"brief_description":"Combine this size object with another one replacing the default (i.e.",
+				"brief_description":"Combine this size object with another one replacing the default (i.e. equal to -1) components of this object with those of the other.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -16302,7 +16517,7 @@
 		"IsTransparent":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the given pixel is transparent, i.e.",
+				"brief_description":"Returns true if the given pixel is transparent, i.e. either has the mask colour if this image has a mask or if this image has alpha channel and alpha value of this pixel is strictly less than threshold.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -20656,7 +20871,7 @@
 		"Layout":[
 			{
 				"return_type":"void",
-				"brief_description":"Call this to force layout of the children anew, e.g.",
+				"brief_description":"Call this to force layout of the children anew, e.g. after having added a child to or removed a child (window, other sizer or space) from the sizer while keeping the current dimension.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -26943,7 +27158,7 @@
 			},
 			{
 				"return_type":"wxTreeItemId",
-				"brief_description":"Inserts an item before one identified by its position (before).",
+				"brief_description":"Inserts an item before one identified by its position (pos).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -26975,7 +27190,7 @@
 				],
 				"parameters_name":[
 					"parent",
-					"before",
+					"pos",
 					"text",
 					"image",
 					"selImage",
@@ -27028,7 +27243,7 @@
 		"IsEmpty":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the control is empty (i.e.",
+				"brief_description":"Returns true if the control is empty (i.e. has no items, even no root one).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -29226,7 +29441,7 @@
 		"DrawArc":[
 			{
 				"return_type":"void",
-				"brief_description":"Draws an arc of a circle, centred on (xc, yc), with starting point (xStart, yStart) and ending at (xEnd, yEnd).",
+				"brief_description":"Draws an arc from the given start to the given end point.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -32198,7 +32413,7 @@
 		"SetAxisOrientation":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the x and y axis orientation (i.e., the direction from lowest to highest values on the axis).",
+				"brief_description":"Sets the x and y axis orientation (i.e. the direction from lowest to highest values on the axis).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -32456,7 +32671,7 @@
 		"SetDeviceOrigin":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the device origin (i.e., the origin in pixels after scaling has been applied).",
+				"brief_description":"Sets the device origin (i.e. the origin in pixels after scaling has been applied).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -35429,7 +35644,7 @@
 		"Create":[
 			{
 				"return_type":"bool",
-				"brief_description":"Creates the listbox for two-step construction.",
+				"brief_description":"",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -35473,7 +35688,7 @@
 					"id",
 					"pos",
 					"size",
-					"n",
+					"nStrings",
 					"choices",
 					"style",
 					"validator",
@@ -35497,7 +35712,7 @@
 			},
 			{
 				"return_type":"bool",
-				"brief_description":"Creates the listbox for two-step construction.",
+				"brief_description":"",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -35789,33 +36004,6 @@
 		"SetStringSelection":[
 			{
 				"return_type":"bool",
-				"brief_description":"Selects the item with the specified string in the control.",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxString&"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"string"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			},
-			{
-				"return_type":"bool",
 				"brief_description":"",
 				"constant":false,
 				"virtual":true,
@@ -35844,6 +36032,33 @@
 				],
 				"parameters_default_value":[
 					null,
+					null
+				]
+			},
+			{
+				"return_type":"bool",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"s"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
 					null
 				]
 			}
@@ -38714,7 +38929,7 @@
 		"Prepend":[
 			{
 				"return_type":"wxMenuItem*",
-				"brief_description":"Inserts the given item at position 0, i.e.",
+				"brief_description":"Inserts the given item at position 0, i.e. before all the other existing items.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -38756,7 +38971,7 @@
 			},
 			{
 				"return_type":"wxMenuItem*",
-				"brief_description":"Inserts the given item at position 0, i.e.",
+				"brief_description":"Inserts the given item at position 0, i.e. before all the other existing items.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -40028,7 +40243,7 @@
 		"GetEventType":[
 			{
 				"return_type":"wxEventType",
-				"brief_description":"Returns the identifier of the given event type, such as wxEVT_COMMAND_BUTTON_CLICKED.",
+				"brief_description":"Returns the identifier of the given event type, such as wxEVT_BUTTON.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -40318,7 +40533,7 @@
 		"ShouldPropagate":[
 			{
 				"return_type":"bool",
-				"brief_description":"Test if this event should be propagated or not, i.e.",
+				"brief_description":"Test if this event should be propagated or not, i.e. if the propagation level is currently greater than 0.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -40839,8 +41054,8 @@
 				"static":false,
 				"protected":false,
 				"parameters_type":[
-					"long*",
-					"long*"
+					"wxCoord*",
+					"wxCoord*"
 				],
 				"parameters_is_array":[
 					false,
@@ -41221,7 +41436,7 @@
 		"HasModifiers":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if any modifiers at all are pressed.",
+				"brief_description":"Returns true if Control or Alt are pressed.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -42135,6 +42350,50 @@
 		]
 	},
 	"wxActivateEvent":{
+		"wxActivateEvent":[
+			{
+				"return_type":"",
+				"brief_description":"Constructor.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxEventType",
+					"bool",
+					"int",
+					"Reason"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"eventType",
+					"active",
+					"id",
+					"ActivationReason"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxEVT_NULL",
+					"true",
+					"0",
+					"Reason_Unknown"
+				]
+			}
+		],
 		"GetActive":[
 			{
 				"return_type":"bool",
@@ -42161,45 +42420,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"wxActivateEvent":[
-			{
-				"return_type":"",
-				"brief_description":"Constructor.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxEventType",
-					"bool",
-					"int"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"eventType",
-					"active",
-					"id"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxEVT_NULL",
-					"true",
-					"0"
 				]
 			}
 		],
@@ -48780,7 +49000,7 @@
 		"SetSelection":[
 			{
 				"return_type":"int",
-				"brief_description":"Sets the selection for the given page, returning the previous selection.",
+				"brief_description":"Sets the selection to the given page, returning the previous selection.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":true,
@@ -48896,7 +49116,7 @@
 		"ChangeSelection":[
 			{
 				"return_type":"int",
-				"brief_description":"Changes the selection for the given page, returning the previous selection.",
+				"brief_description":"Changes the selection to the given page, returning the previous selection.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":true,
@@ -51029,6 +51249,221 @@
 				]
 			}
 		],
+		"AutoCompGetCurrent":[
+			{
+				"return_type":"int",
+				"brief_description":"Get currently selected item position in the auto-completion list.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"DoDragOver":[
+			{
+				"return_type":"wxDragResult",
+				"brief_description":"Allow for simulating a DnD DragOver.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxCoord",
+					"wxCoord",
+					"wxDragResult"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"x",
+					"y",
+					"defaultRes"
+				],
+				"parameters_required":[
+					true,
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					null
+				]
+			}
+		],
+		"GetCaretSticky":[
+			{
+				"return_type":"int",
+				"brief_description":"Can the caret preferred x position only be changed by explicit movement commands?",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetCharacterPointer":[
+			{
+				"return_type":"const char*",
+				"brief_description":"Compact the document buffer and return a read-only pointer to the characters in the document.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"LoadFile":[
+			{
+				"return_type":"bool",
+				"brief_description":"Load the contents of filename into the editor.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"filename"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SaveFile":[
+			{
+				"return_type":"bool",
+				"brief_description":"Write the contents of the editor to filename.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"filename"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetCaretSticky":[
+			{
+				"return_type":"void",
+				"brief_description":"Stop the caret preferred x position changing when the user types.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"useCaretStickyBehaviour"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
 		"ZoomOut":[
 			{
 				"return_type":"void",
@@ -51880,35 +52315,6 @@
 				]
 			}
 		],
-		"AutoCompGetCurrent":[
-			{
-				"return_type":"int",
-				"brief_description":"Get currently selected item position in the auto-completion list.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"AutoCompGetDropRestOfWord":[
 			{
 				"return_type":"bool",
@@ -52620,7 +53026,7 @@
 		"BraceMatch":[
 			{
 				"return_type":"int",
-				"brief_description":"Find the position of a matching brace or wxSTC_INVALID_POSITION if no match.",
+				"brief_description":"Find the position of a matching brace or INVALID_POSITION if no match.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -53782,7 +54188,7 @@
 		"Create":[
 			{
 				"return_type":"bool",
-				"brief_description":"",
+				"brief_description":"Create the UI elements for a STC that was created with the default ctor.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -54062,47 +54468,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"DoDragOver":[
-			{
-				"return_type":"wxDragResult",
-				"brief_description":"Allow for simulating a DnD DragOver.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxCoord",
-					"wxCoord",
-					"wxDragResult"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"x",
-					"y",
-					"def"
-				],
-				"parameters_required":[
-					true,
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null,
-					null
 				]
 			}
 		],
@@ -55018,35 +55383,6 @@
 				]
 			}
 		],
-		"GetCaretSticky":[
-			{
-				"return_type":"bool",
-				"brief_description":"Can the caret preferred x position only be changed by explicit movement commands?",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"GetCaretWidth":[
 			{
 				"return_type":"int",
@@ -55102,35 +55438,6 @@
 				],
 				"parameters_default_value":[
 					null
-				]
-			}
-		],
-		"GetCharacterPointer":[
-			{
-				"return_type":"const char*",
-				"brief_description":"Compact the document buffer and return a read-only pointer to the characters in the document.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
 				]
 			}
 		],
@@ -55224,7 +55531,7 @@
 		"GetCurrentLine":[
 			{
 				"return_type":"int",
-				"brief_description":"END of generated section Others...",
+				"brief_description":"Returns the line number of the line with the caret.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -55897,7 +56204,7 @@
 		"GetLibraryVersionInfo":[
 			{
 				"return_type":"wxVersionInfo",
-				"brief_description":"Get Scintilla library version information.",
+				"brief_description":"",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -56100,7 +56407,7 @@
 		"GetLineSelEndPosition":[
 			{
 				"return_type":"int",
-				"brief_description":"Retrieve the position of the end of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line).",
+				"brief_description":"Retrieve the position of the end of the selection at the given line (INVALID_POSITION if no selection on this line).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -56129,7 +56436,7 @@
 		"GetLineSelStartPosition":[
 			{
 				"return_type":"int",
-				"brief_description":"Retrieve the position of the start of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line).",
+				"brief_description":"Retrieve the position of the start of the selection at the given line (INVALID_POSITION if no selection on this line).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -57965,35 +58272,6 @@
 				]
 			}
 		],
-		"GetUseAntiAliasing":[
-			{
-				"return_type":"bool",
-				"brief_description":"Returns the current UseAntiAliasing setting.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"GetUseHorizontalScrollBar":[
 			{
 				"return_type":"bool",
@@ -58258,7 +58536,7 @@
 		"GetWrapStartIndent":[
 			{
 				"return_type":"int",
-				"brief_description":"Retrieve the start indent for wrapped lines.",
+				"brief_description":"Retrive the start indent for wrapped lines.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -58287,7 +58565,7 @@
 		"GetWrapVisualFlags":[
 			{
 				"return_type":"int",
-				"brief_description":"Retrieve the display mode of visual flags for wrapped lines.",
+				"brief_description":"Retrive the display mode of visual flags for wrapped lines.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -58316,7 +58594,7 @@
 		"GetWrapVisualFlagsLocation":[
 			{
 				"return_type":"int",
-				"brief_description":"Retrieve the location of visual flags for wrapped lines.",
+				"brief_description":"Retrive the location of visual flags for wrapped lines.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -59747,40 +60025,6 @@
 				]
 			}
 		],
-		"LoadFile":[
-			{
-				"return_type":"bool",
-				"brief_description":"Load the contents of filename into the editor.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxString&",
-					"int"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"file",
-					"fileType"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"wxTEXT_TYPE_ANY"
-				]
-			}
-		],
 		"LowerCase":[
 			{
 				"return_type":"void",
@@ -60393,7 +60637,7 @@
 		"MarkerNext":[
 			{
 				"return_type":"int",
-				"brief_description":"Find the next line after lineStart that includes a marker in mask.",
+				"brief_description":"Find the next line at or after lineStart that includes a marker in mask.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -61090,7 +61334,7 @@
 		"PositionFromPointClose":[
 			{
 				"return_type":"int",
-				"brief_description":"Find the position from a point within the window but return wxSTC_INVALID_POSITION if not close to text.",
+				"brief_description":"Find the position from a point within the window but return INVALID_POSITION if not close to text.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -61247,7 +61491,7 @@
 		"ReplaceTargetRE":[
 			{
 				"return_type":"int",
-				"brief_description":"Replace the target text with the argument text after d processing.",
+				"brief_description":"Replace the target text with the argument text after \\d processing.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -61299,40 +61543,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"SaveFile":[
-			{
-				"return_type":"bool",
-				"brief_description":"Write the contents of the editor to filename.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxString&",
-					"int"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"file",
-					"fileType"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxEmptyString",
-					"wxTEXT_TYPE_ANY"
 				]
 			}
 		],
@@ -62044,35 +62254,6 @@
 				]
 			}
 		],
-		"SetCaretSticky":[
-			{
-				"return_type":"void",
-				"brief_description":"Stop the caret preferred x position changing when the user types.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"bool"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"useCaretStickyBehaviour"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
 		"SetCaretWidth":[
 			{
 				"return_type":"void",
@@ -62163,7 +62344,7 @@
 		"SetControlCharSymbol":[
 			{
 				"return_type":"void",
-				"brief_description":"Change the way control characters are displayed: If symbol is 32, keep the drawn way, else, use the given character.",
+				"brief_description":"Change the way control characters are displayed: If symbol is < 32, keep the drawn way, else, use the given character.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -63819,7 +64000,7 @@
 		"SetRectangularSelectionModifier":[
 			{
 				"return_type":"void",
-				"brief_description":"Select the modifier key to use for mouse-based rectangular selection.",
+				"brief_description":"On GTK+, allow selecting the modifier key to use for mouse-based rectangular selection.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -64092,7 +64273,7 @@
 		"SetSelection":[
 			{
 				"return_type":"void",
-				"brief_description":"Select a range of text.",
+				"brief_description":"Selects the text starting at the first position up to (but not including) the character at the last position.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -64156,7 +64337,7 @@
 		"SetSelectionMode":[
 			{
 				"return_type":"void",
-				"brief_description":"Set the selection mode to stream (wxSTC_SEL_STREAM) or rectangular (wxSTC_SEL_RECTANGLE\/wxSTC_SEL_THIN) or by lines (wxSTC_SEL_LINES).",
+				"brief_description":"Set the selection mode to stream (SC_SEL_STREAM) or rectangular (SC_SEL_RECTANGLE\/SC_SEL_THIN) or by lines (SC_SEL_LINES).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -64746,35 +64927,6 @@
 				]
 			}
 		],
-		"SetUseAntiAliasing":[
-			{
-				"return_type":"void",
-				"brief_description":"Specify whether anti-aliased fonts should be used.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"bool"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"useAA"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
 		"SetUseHorizontalScrollBar":[
 			{
 				"return_type":"void",
@@ -65318,7 +65470,7 @@
 		"SetXCaretPolicy":[
 			{
 				"return_type":"void",
-				"brief_description":"Set the way the caret is kept visible when going sideway.",
+				"brief_description":"Set the way the caret is kept visible when going sideways.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -66267,7 +66419,7 @@
 		"StyleSetSpec":[
 			{
 				"return_type":"void",
-				"brief_description":"Extract style settings from a spec-string which is composed of one or more of the following comma separated elements: bold turns on bold italic turns on italics fore:[name or #RRGGBB] sets the foreground colour back:[name or #RRGGBB] sets the background colour face:[facename] sets the font face name to use size:[num] sets the font size in points eol turns on eol filling underline turns on underlining.",
+				"brief_description":"Extract style settings from a spec-string which is composed of one or more of the following comma separated elements:",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -67265,7 +67417,7 @@
 		"AddTextRaw":[
 			{
 				"return_type":"void",
-				"brief_description":"Add raw text to the document at current position.",
+				"brief_description":"Add text to the document at current position.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -67304,7 +67456,7 @@
 		"wxStyledTextEvent":[
 			{
 				"return_type":"",
-				"brief_description":"Ctors; used internally by wxWidgets.",
+				"brief_description":"",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -67336,7 +67488,7 @@
 			},
 			{
 				"return_type":"",
-				"brief_description":"Ctors; used internally by wxWidgets.",
+				"brief_description":"",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -67744,35 +67896,6 @@
 				"return_type":"bool",
 				"brief_description":"",
 				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
-		"GetDragAllowMove":[
-			{
-				"return_type":"bool",
-				"brief_description":"",
-				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
 				"static":false,
@@ -68345,35 +68468,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"SetDragAllowMove":[
-			{
-				"return_type":"void",
-				"brief_description":"",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"bool"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"val"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
 				]
 			}
 		],
@@ -69518,6 +69612,40 @@
 		]
 	},
 	"wxStatusBarPane":{
+		"wxStatusBarPane":[
+			{
+				"return_type":"",
+				"brief_description":"Constructs the pane with the given style and width.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"style",
+					"width"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxSB_NORMAL",
+					"0"
+				]
+			}
+		],
 		"GetText":[
 			{
 				"return_type":"wxString",
@@ -69602,40 +69730,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"wxStatusBarPane":[
-			{
-				"return_type":"",
-				"brief_description":"Constructs the pane with the given style and width.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"int",
-					"size_t"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"style",
-					"width"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxSB_NORMAL",
-					"0"
 				]
 			}
 		]
@@ -70431,7 +70525,7 @@
 		"wxAuiToolBarItem":[
 			{
 				"return_type":"",
-				"brief_description":"",
+				"brief_description":"Assigns the properties of the wxAuiToolBarItem \"c\" to this.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -70458,7 +70552,7 @@
 			},
 			{
 				"return_type":"",
-				"brief_description":"",
+				"brief_description":"Default Constructor.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -70487,7 +70581,7 @@
 		"SetWindow":[
 			{
 				"return_type":"void",
-				"brief_description":"",
+				"brief_description":"Assigns a window to the toolbar item.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -70806,7 +70900,7 @@
 		"SetKind":[
 			{
 				"return_type":"void",
-				"brief_description":"",
+				"brief_description":"Sets the wxAuiToolBarItem kind.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -70835,7 +70929,7 @@
 		"SetId":[
 			{
 				"return_type":"void",
-				"brief_description":"",
+				"brief_description":"Sets the toolbar item identifier.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -70893,7 +70987,7 @@
 		"SetHasDropDown":[
 			{
 				"return_type":"void",
-				"brief_description":"",
+				"brief_description":"Set whether this tool has a drop down button.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -71096,7 +71190,7 @@
 		"HasDropDown":[
 			{
 				"return_type":"bool",
-				"brief_description":"",
+				"brief_description":"Returns whether the toolbar item has an associated drop down button.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -71125,7 +71219,7 @@
 		"GetWindow":[
 			{
 				"return_type":"wxWindow*",
-				"brief_description":"",
+				"brief_description":"Returns the wxWindow* associated to the toolbar item.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -71415,7 +71509,7 @@
 		"GetKind":[
 			{
 				"return_type":"int",
-				"brief_description":"",
+				"brief_description":"Returns the toolbar item kind.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -71444,7 +71538,7 @@
 		"GetId":[
 			{
 				"return_type":"int",
-				"brief_description":"",
+				"brief_description":"Returns the toolbar item identifier.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -71589,7 +71683,7 @@
 		"Assign":[
 			{
 				"return_type":"void",
-				"brief_description":"",
+				"brief_description":"Assigns the properties of the wxAuiToolBarItem \"c\" to this.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -74178,35 +74272,6 @@
 				]
 			}
 		],
-		"Cut":[
-			{
-				"return_type":"void",
-				"brief_description":"Copies the selected text to the clipboard and removes the selection.",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"Create":[
 			{
 				"return_type":"bool",
@@ -74462,6 +74527,40 @@
 				],
 				"parameters_default_value":[
 					
+				]
+			}
+		],
+		"SetFont":[
+			{
+				"return_type":"void",
+				"brief_description":"Sets the attributes for the given font.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxFont&",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"font",
+					"flags"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"wxTEXT_ATTR_FONT &~wxTEXT_ATTR_FONT_PIXEL_SIZE"
 				]
 			}
 		],
@@ -76252,7 +76351,7 @@
 		"HasFontSize":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the attribute object specifies a font point size.",
+				"brief_description":"Returns true if the attribute object specifies a font point or pixel size.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -77120,40 +77219,6 @@
 				],
 				"parameters_default_value":[
 					null
-				]
-			}
-		],
-		"SetFont":[
-			{
-				"return_type":"void",
-				"brief_description":"Sets the attributes for the given font.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxFont&",
-					"int"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"font",
-					"flags"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"wxTEXT_ATTR_FONT"
 				]
 			}
 		],
@@ -79089,7 +79154,7 @@
 		"GetClickPoint":[
 			{
 				"return_type":"wxPoint",
-				"brief_description":"",
+				"brief_description":"Returns the point where the user clicked with the mouse.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -79118,7 +79183,7 @@
 		"GetItemRect":[
 			{
 				"return_type":"wxRect",
-				"brief_description":"",
+				"brief_description":"Returns the wxAuiToolBarItem rectangle bounding the mouse click point.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -79147,7 +79212,7 @@
 		"GetToolId":[
 			{
 				"return_type":"int",
-				"brief_description":"",
+				"brief_description":"Returns the wxAuiToolBarItem identifier.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -79176,7 +79241,7 @@
 		"IsDropDownClicked":[
 			{
 				"return_type":"bool",
-				"brief_description":"",
+				"brief_description":"Returns whether the drop down menu has been clicked.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -79204,6 +79269,82 @@
 		]
 	},
 	"wxAuiToolBar":{
+		"wxAuiToolBar":[
+			{
+				"return_type":"",
+				"brief_description":"Default constructor, use Create() later.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			},
+			{
+				"return_type":"",
+				"brief_description":"Constructor creating and initializing the object.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWindow*",
+					"wxWindowID",
+					"const wxPoint&",
+					"const wxSize&",
+					"long"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"parent",
+					"id",
+					"position",
+					"size",
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"wxID_ANY",
+					"wxDefaultPosition",
+					"wxDefaultSize",
+					"wxAUI_TB_DEFAULT_STYLE"
+				]
+			}
+		],
 		"AddControl":[
 			{
 				"return_type":"wxAuiToolBarItem*",
@@ -79512,55 +79653,6 @@
 				"parameters_default_value":[
 					null,
 					null
-				]
-			}
-		],
-		"wxAuiToolBar":[
-			{
-				"return_type":"",
-				"brief_description":"",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxWindow*",
-					"wxWindowID",
-					"const wxPoint&",
-					"const wxSize&",
-					"long"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"parent",
-					"id",
-					"position",
-					"size",
-					"style"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"-1",
-					"wxDefaultPosition",
-					"wxDefaultSize",
-					"wxAUI_TB_DEFAULT_STYLE"
 				]
 			}
 		],
@@ -79893,7 +79985,7 @@
 		"SetToolDropDown":[
 			{
 				"return_type":"void",
-				"brief_description":"",
+				"brief_description":"Set whether the specified toolbar item has a drop down button.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -80830,7 +80922,7 @@
 		"GetToolDropDown":[
 			{
 				"return_type":"bool",
-				"brief_description":"",
+				"brief_description":"Returns whether the specified toolbar item has an associated drop down button.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -82215,35 +82307,6 @@
 			{
 				"return_type":"int",
 				"brief_description":"The column position: it is only used with COL events.",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
-		"GetData":[
-			{
-				"return_type":"long",
-				"brief_description":"The data.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -86806,7 +86869,7 @@
 		"SetSelection":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the selection to the given item n or removes the selection entirely if n == wxNOT_FOUND.",
+				"brief_description":"Sets the selection to the given item.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -89630,7 +89693,7 @@
 		"SetSashPosition":[
 			{
 				"return_type":"void",
-				"brief_description":"In the case of wxEVT_COMMAND_SPLITTER_SASH_POS_CHANGED events, sets the new sash position.",
+				"brief_description":"In the case of wxEVT_SPLITTER_SASH_POS_CHANGED events, sets the new sash position.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -94022,7 +94085,7 @@
 		"GetLogicalPosition":[
 			{
 				"return_type":"wxPoint",
-				"brief_description":"Returns the logical mouse position in pixels (i.e.",
+				"brief_description":"Returns the logical mouse position in pixels (i.e. translated according to the translation set for the DC, which usually indicates that the window has been scrolled).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -96707,7 +96770,7 @@
 		"Toggle":[
 			{
 				"return_type":"void",
-				"brief_description":"Toggles the state of the specified item, i.e.",
+				"brief_description":"Toggles the state of the specified item, i.e. selects it if it was unselected and deselects it if it was selected.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -96949,7 +97012,7 @@
 		"Select":[
 			{
 				"return_type":"bool",
-				"brief_description":"Selects or deselects the specified item which must be valid (i.e.",
+				"brief_description":"Selects or deselects the specified item which must be valid (i.e. not equal to wxNOT_FOUND).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -97094,7 +97157,7 @@
 		"OnDrawBackground":[
 			{
 				"return_type":"void",
-				"brief_description":"This method is used to draw the items background and, maybe, a border around it.",
+				"brief_description":"This method is used to draw the item's background and, maybe, a border around it.",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -98999,7 +99062,7 @@
 		"IsOneShot":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the timer is one shot, i.e.",
+				"brief_description":"Returns true if the timer is one shot, i.e. if it will stop after firing the first notification automatically.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -99147,7 +99210,7 @@
 				],
 				"parameters_default_value":[
 					"-1",
-					"false"
+					"wxTIMER_CONTINUOUS"
 				]
 			}
 		],
@@ -99610,7 +99673,7 @@
 		"Create":[
 			{
 				"return_type":"bool",
-				"brief_description":"Creates the text control for two-step construction.",
+				"brief_description":"",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -101105,35 +101168,6 @@
 			{
 				"return_type":"const wxString&",
 				"brief_description":"Get the string to find.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
-		"GetFlags":[
-			{
-				"return_type":"int",
-				"brief_description":"Get the combination of wxFindReplaceFlags values.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -101163,7 +101197,36 @@
 			{
 				"return_type":"const wxString&",
 				"brief_description":"Get the replacement string.",
-				"constant":false,
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetFlags":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the combination of wxFindReplaceFlags values.",
+				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
 				"static":false,
@@ -101469,7 +101532,7 @@
 		"SetPath":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the absolute path of (the default converter uses current locale's charset)the currently selected directory.",
+				"brief_description":"Sets the absolute path of the currently selected directory (the default converter uses current locale's charset).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -103236,7 +103299,7 @@
 	"wxFileName":{
 		"AppendDir":[
 			{
-				"return_type":"void",
+				"return_type":"bool",
 				"brief_description":"Appends a directory component to the path.",
 				"constant":false,
 				"virtual":false,
@@ -103259,6 +103322,41 @@
 					true
 				],
 				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"InsertDir":[
+			{
+				"return_type":"bool",
+				"brief_description":"Inserts a directory component before the zero-based position in the directory list.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"size_t",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"before",
+					"dir"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
 					null
 				]
 			}
@@ -104812,7 +104910,7 @@
 			},
 			{
 				"return_type":"wxString",
-				"brief_description":"Returns a temporary file name starting with the given prefix.",
+				"brief_description":"This is the same as CreateTempFileName(const wxString &prefix, wxFile *fileTemp) but takes a wxFFile parameter instead of wxFile.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -105802,41 +105900,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"InsertDir":[
-			{
-				"return_type":"void",
-				"brief_description":"Inserts a directory component before the zero-based position in the directory list.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"size_t",
-					"const wxString&"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"before",
-					"dir"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null
 				]
 			}
 		],
@@ -107922,7 +107985,7 @@
 			},
 			{
 				"return_type":"wxSizerItem*",
-				"brief_description":"Adds the given item to the given position.",
+				"brief_description":"Adds a spacer to the given position.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -109345,7 +109408,7 @@
 		"ChangeSelection":[
 			{
 				"return_type":"int",
-				"brief_description":"Changes the selection for the given page, returning the previous selection.",
+				"brief_description":"Changes the selection to the given page, returning the previous selection.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -109753,7 +109816,7 @@
 		"SetSelection":[
 			{
 				"return_type":"int",
-				"brief_description":"Sets the selection for the given page, returning the previous selection.",
+				"brief_description":"Sets the selection to the given page, returning the previous selection.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -112470,7 +112533,7 @@
 		"Position":[
 			{
 				"return_type":"void",
-				"brief_description":"Move the popup window to the right position, i.e.",
+				"brief_description":"Move the popup window to the right position, i.e. such that it is entirely visible.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -113973,7 +114036,7 @@
 					"wxEmptyString",
 					"wxNullBitmap",
 					"wxDefaultPosition",
-					"536877056"
+					"wxDEFAULT_DIALOG_STYLE"
 				]
 			}
 		],
@@ -114471,7 +114534,7 @@
 			},
 			{
 				"return_type":"",
-				"brief_description":"Constructor which really creates the wizard -- if you use this constructor, you shouldn't call Create().",
+				"brief_description":"Constructor which really creates the wizard  if you use this constructor, you shouldn't call Create().",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -114934,7 +114997,7 @@
 		"Clone":[
 			{
 				"return_type":"wxEvent*",
-				"brief_description":"Returns a copy of the event.",
+				"brief_description":"Clone the event.",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -114963,7 +115026,7 @@
 		"GetDialog":[
 			{
 				"return_type":"wxDialog*",
-				"brief_description":"",
+				"brief_description":"Return the corresponding dialog.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -114992,7 +115055,7 @@
 		"GetReturnCode":[
 			{
 				"return_type":"int",
-				"brief_description":"",
+				"brief_description":"Return the dialog's return code.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -115021,7 +115084,7 @@
 		"wxWindowModalDialogEvent":[
 			{
 				"return_type":"",
-				"brief_description":"",
+				"brief_description":"Constructor.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -119763,7 +119826,7 @@
 		"HasBorder":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if a non-default (i.e.",
+				"brief_description":"Returns true if a non-default (i.e. any) border is set.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -122217,7 +122280,7 @@
 		"IsEqual":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the region is equal to, i.e.",
+				"brief_description":"Returns true if the region is equal to, i.e. covers the same area as, another one.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -124489,7 +124552,7 @@
 		],
 		"GetCount":[
 			{
-				"return_type":"unsigned",
+				"return_type":"size_t",
 				"brief_description":"Returns the number of stops.",
 				"constant":true,
 				"virtual":false,
@@ -124982,35 +125045,6 @@
 				]
 			}
 		],
-		"Exit":[
-			{
-				"return_type":"void",
-				"brief_description":"Exit from the loop with the given exit code.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":true,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"int"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"rc"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"0"
-				]
-			}
-		],
 		"GetActive":[
 			{
 				"return_type":"wxEventLoopBase*",
@@ -125298,6 +125332,35 @@
 				],
 				"parameters_default_value":[
 					
+				]
+			}
+		],
+		"Exit":[
+			{
+				"return_type":"void",
+				"brief_description":"Exit the currently running loop with the given exit code.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"rc"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"0"
 				]
 			}
 		],
@@ -125599,7 +125662,7 @@
 		"HasTextCtrl":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if this window has a valid text control (i.e.",
+				"brief_description":"Returns true if this window has a valid text control (i.e. if the wxPB_USE_TEXTCTRL style was given when creating this control).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -126724,7 +126787,7 @@
 		"GetOrigin":[
 			{
 				"return_type":"wxHelpEvent::Origin",
-				"brief_description":"Returns the origin of the help event which is one of the ::wxHelpEventOrigin values.",
+				"brief_description":"Returns the origin of the help event which is one of the wxHelpEvent::Origin values.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -127522,7 +127585,7 @@
 		"operator delete":[
 			{
 				"return_type":"void",
-				"brief_description":"The delete operator is defined for debugging versions of the library only, when the identifier __WXDEBUG__ is defined.",
+				"brief_description":"The delete operator is defined for debugging versions of the library only, when the identifier WXDEBUG is defined.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -127551,7 +127614,7 @@
 		"operator new":[
 			{
 				"return_type":"void*",
-				"brief_description":"The new operator is defined for debugging versions of the library only, when the identifier __WXDEBUG__ is defined.",
+				"brief_description":"The new operator is defined for debugging versions of the library only, when the identifier WXDEBUG is defined.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -128113,35 +128176,6 @@
 				]
 			}
 		],
-		"Detach":[
-			{
-				"return_type":"void",
-				"brief_description":"Get back a file pointer from wxFFile object -- the caller is responsible for closing the file if this descriptor is opened.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"Close":[
 			{
 				"return_type":"bool",
@@ -128202,6 +128236,35 @@
 				"parameters_default_value":[
 					null,
 					"wxEmptyString"
+				]
+			}
+		],
+		"Detach":[
+			{
+				"return_type":"FILE*",
+				"brief_description":"Get back a file pointer from wxFFile object  the caller is responsible for closing the file if this descriptor is opened.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
 				]
 			}
 		],
@@ -129286,7 +129349,7 @@
 		"SetPriority":[
 			{
 				"return_type":"void",
-				"brief_description":"Sets the priority of the thread, between 0 and 100.",
+				"brief_description":"Sets the priority of the thread, between 0 (lowest) and 100 (highest).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -129431,7 +129494,7 @@
 		"GetId":[
 			{
 				"return_type":"wxThreadIdType",
-				"brief_description":"Gets the thread identifier: this is a platform dependent number that uniquely identifies the thread throughout the system during its existence (i.e.",
+				"brief_description":"Gets the thread identifier: this is a platform dependent number that uniquely identifies the thread throughout the system during its existence (i.e. the thread identifiers may be reused).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -129518,7 +129581,7 @@
 		"GetPriority":[
 			{
 				"return_type":"unsigned int",
-				"brief_description":"Gets the priority of the thread, between zero and 100.",
+				"brief_description":"Gets the priority of the thread, between 0 (lowest) and 100 (highest).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -129547,7 +129610,7 @@
 		"IsAlive":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns true if the thread is alive (i.e.",
+				"brief_description":"Returns true if the thread is alive (i.e. started and not terminating).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -130022,64 +130085,6 @@
 				]
 			}
 		],
-		"SetValue":[
-			{
-				"return_type":"void",
-				"brief_description":"Changes the current value of the control.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":true,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxDateTime&"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"dt"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
-		"GetValue":[
-			{
-				"return_type":"wxDateTime",
-				"brief_description":"Returns the currently entered time.",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":true,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"Create":[
 			{
 				"return_type":"bool",
@@ -130142,6 +130147,64 @@
 					"wxDP_DEFAULT|wxDP_SHOWCENTURY",
 					"wxDefaultValidator",
 					"\"timectrl\""
+				]
+			}
+		],
+		"GetValue":[
+			{
+				"return_type":"wxDateTime",
+				"brief_description":"Returns the currently entered time.",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetValue":[
+			{
+				"return_type":"void",
+				"brief_description":"Changes the current value of the control.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxDateTime&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"dt"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
 				]
 			}
 		],
@@ -133297,7 +133360,7 @@
 		"AddControl":[
 			{
 				"return_type":"wxToolBarToolBase*",
-				"brief_description":"Adds any control to the toolbar, typically e.g.",
+				"brief_description":"Adds any control to the toolbar, typically e.g. a wxComboBox.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -141754,7 +141817,7 @@
 		"ShowRow":[
 			{
 				"return_type":"void",
-				"brief_description":"Shows the previously hidden row by resizing it to non-0 size.",
+				"brief_description":"Shows the previously hidden row.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -143567,6 +143630,47 @@
 		]
 	},
 	"wxGridCellEditor":{
+		"PaintBackground":[
+			{
+				"return_type":"void",
+				"brief_description":"Draws the part of the cell not occupied by the control: the base class version just fills it with background colour from the attribute.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxDC&",
+					"const wxRect&",
+					"wxGridCellAttr&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"dc",
+					"rectCell",
+					"attr"
+				],
+				"parameters_required":[
+					true,
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					null
+				]
+			}
+		],
 		"ApplyEdit":[
 			{
 				"return_type":"void",
@@ -143856,41 +143960,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"PaintBackground":[
-			{
-				"return_type":"void",
-				"brief_description":"Draws the part of the cell not occupied by the control: the base class version just fills it with background colour from the attribute.",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxRect&",
-					"wxGridCellAttr*"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"rectCell",
-					"attr"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null
 				]
 			}
 		],
@@ -144809,29 +144878,29 @@
 		"wxGridCellTextEditor":[
 			{
 				"return_type":"",
-				"brief_description":"Default constructor.",
+				"brief_description":"Text cell editor constructor.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
 				"static":false,
 				"protected":false,
 				"parameters_type":[
-					
+					"size_t"
 				],
 				"parameters_is_array":[
-					
+					false
 				],
 				"parameters_extra":[
-					
+					false
 				],
 				"parameters_name":[
-					
+					"maxChars"
 				],
 				"parameters_required":[
 					
 				],
 				"parameters_default_value":[
-					
+					"0"
 				]
 			}
 		],
@@ -153558,7 +153627,7 @@
 		"IsContainer":[
 			{
 				"return_type":"bool",
-				"brief_description":"Override this to indicate of item is a container, i.e.",
+				"brief_description":"Override this to indicate of item is a container, i.e. if it can have child items.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":true,
@@ -154454,6 +154523,114 @@
 		]
 	},
 	"wxDataViewListCtrl":{
+		"AppendItem":[
+			{
+				"return_type":"void",
+				"brief_description":"Appends an item (=row) to the control and store.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxVector< wxVariant >&",
+					"wxUIntPtr"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"values",
+					"data"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"NULL"
+				]
+			}
+		],
+		"PrependItem":[
+			{
+				"return_type":"void",
+				"brief_description":"Prepends an item (=row) to the control and store.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxVector< wxVariant >&",
+					"wxUIntPtr"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"values",
+					"data"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"NULL"
+				]
+			}
+		],
+		"InsertItem":[
+			{
+				"return_type":"void",
+				"brief_description":"Inserts an item (=row) to the control and store.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"unsigned int",
+					"const wxVector< wxVariant >&",
+					"wxUIntPtr"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"row",
+					"values",
+					"data"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					"NULL"
+				]
+			}
+		],
 		"AppendColumn":[
 			{
 				"return_type":"void",
@@ -154913,40 +155090,6 @@
 		"_implements":[
 			"wxDataViewCtrl"
 		],
-		"AppendItem":[
-			{
-				"return_type":"void",
-				"brief_description":"Appends an item (=row) to the control and store.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxVector< wxVariant >&",
-					"wxClientData*"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"values",
-					"data"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"NULL"
-				]
-			}
-		],
 		"GetTextValue":[
 			{
 				"return_type":"wxString",
@@ -155132,46 +155275,6 @@
 				]
 			}
 		],
-		"InsertItem":[
-			{
-				"return_type":"void",
-				"brief_description":"Inserts an item (=row) to the control and store.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"unsigned int",
-					"const wxVector< wxVariant >&",
-					"wxClientData*"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"row",
-					"values",
-					"data"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null,
-					"NULL"
-				]
-			}
-		],
 		"IsRowSelected":[
 			{
 				"return_type":"bool",
@@ -155289,40 +155392,6 @@
 				],
 				"parameters_default_value":[
 					null
-				]
-			}
-		],
-		"PrependItem":[
-			{
-				"return_type":"void",
-				"brief_description":"Prepends an item (=row) to the control and store.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxVector< wxVariant >&",
-					"wxClientData*"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"values",
-					"data"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"NULL"
 				]
 			}
 		],
@@ -155652,40 +155721,6 @@
 				]
 			}
 		],
-		"AppendItem":[
-			{
-				"return_type":"void",
-				"brief_description":"Appends an item (=row) and fills it with values.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxVector< wxVariant >&",
-					"wxClientData*"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"values",
-					"data"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"NULL"
-				]
-			}
-		],
 		"DeleteAllItems":[
 			{
 				"return_type":"void",
@@ -155712,6 +155747,114 @@
 				],
 				"parameters_default_value":[
 					
+				]
+			}
+		],
+		"AppendItem":[
+			{
+				"return_type":"void",
+				"brief_description":"Appends an item (=row) and fills it with values.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxVector< wxVariant >&",
+					"wxUIntPtr"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"values",
+					"data"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"NULL"
+				]
+			}
+		],
+		"PrependItem":[
+			{
+				"return_type":"void",
+				"brief_description":"Prepends an item (=row) and fills it with values.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxVector< wxVariant >&",
+					"wxUIntPtr"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"values",
+					"data"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"NULL"
+				]
+			}
+		],
+		"InsertItem":[
+			{
+				"return_type":"void",
+				"brief_description":"Inserts an item (=row) and fills it with values.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"unsigned int",
+					"const wxVector< wxVariant >&",
+					"wxUIntPtr"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"row",
+					"values",
+					"data"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					"NULL"
 				]
 			}
 		],
@@ -155878,46 +156021,6 @@
 				]
 			}
 		],
-		"InsertItem":[
-			{
-				"return_type":"void",
-				"brief_description":"Inserts an item (=row) and fills it with values.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"unsigned int",
-					"const wxVector< wxVariant >&",
-					"wxClientData*"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"row",
-					"values",
-					"data"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null,
-					"NULL"
-				]
-			}
-		],
 		"PrependColumn":[
 			{
 				"return_type":"void",
@@ -155944,40 +156047,6 @@
 				],
 				"parameters_default_value":[
 					null
-				]
-			}
-		],
-		"PrependItem":[
-			{
-				"return_type":"void",
-				"brief_description":"Prepends an item (=row) and fills it with values.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxVector< wxVariant >&",
-					"wxClientData*"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"values",
-					"data"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"NULL"
 				]
 			}
 		],
@@ -156097,64 +156166,6 @@
 				]
 			}
 		],
-		"GetCount":[
-			{
-				"return_type":"unsigned int",
-				"brief_description":"Returns the number of items (or rows) in the list.",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
-		"GetRow":[
-			{
-				"return_type":"unsigned int",
-				"brief_description":"Returns the position of given item.",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxDataViewItem&"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"item"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
 		"GetValueByRow":[
 			{
 				"return_type":"void",
@@ -156192,6 +156203,64 @@
 				"parameters_default_value":[
 					null,
 					null,
+					null
+				]
+			}
+		],
+		"GetCount":[
+			{
+				"return_type":"unsigned int",
+				"brief_description":"Returns the number of items (or rows) in the list.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetRow":[
+			{
+				"return_type":"unsigned int",
+				"brief_description":"Returns the position of given item.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxDataViewItem&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"item"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
 					null
 				]
 			}
@@ -156268,35 +156337,6 @@
 				"parameters_default_value":[
 					null,
 					null,
-					null
-				]
-			}
-		],
-		"RowsDeleted":[
-			{
-				"return_type":"void",
-				"brief_description":"Call this after rows have been deleted.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxArrayInt&"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"rows"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
 					null
 				]
 			}
@@ -156599,7 +156639,7 @@
 		"IsEditCancelled":[
 			{
 				"return_type":"bool",
-				"brief_description":"Can be used to determine whether the new value is going to be accepted in wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_DONE handler.",
+				"brief_description":"Can be used to determine whether the new value is going to be accepted in wxEVT_DATAVIEW_ITEM_EDITING_DONE handler.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -157133,7 +157173,7 @@
 		"ReadDouble":[
 			{
 				"return_type":"void",
-				"brief_description":"Reads double data (IEEE encoded) from the stream in a specified buffer.",
+				"brief_description":"Reads double data from the stream in a specified buffer.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -157166,7 +157206,7 @@
 			},
 			{
 				"return_type":"double",
-				"brief_description":"Reads a double (IEEE encoded) from the stream.",
+				"brief_description":"Reads a double from the stream.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -157475,7 +157515,7 @@
 		"GetDataHere":[
 			{
 				"return_type":"bool",
-				"brief_description":"The method will write the data of the format format in the buffer buf and return true on success, false on failure.",
+				"brief_description":"The method will write the data of the format format to the buffer buf.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":true,
@@ -157737,40 +157777,6 @@
 		"_implements":[
 			"wxDataObject"
 		],
-		"GetObject":[
-			{
-				"return_type":"wxDataObjectSimple*",
-				"brief_description":"Returns the pointer to the object which supports the passed format for the specified direction.",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxDataFormat&",
-					"wxDataObjectBase::Direction"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"format",
-					"dir"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"Get"
-				]
-			}
-		],
 		"GetReceivedFormat":[
 			{
 				"return_type":"wxDataFormat",
@@ -157826,6 +157832,40 @@
 				],
 				"parameters_default_value":[
 					
+				]
+			}
+		],
+		"GetObject":[
+			{
+				"return_type":"wxDataObjectSimple*",
+				"brief_description":"Returns the pointer to the object which supports the passed format for the specified direction.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxDataFormat&",
+					"wxDataObject::Direction"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"format",
+					"dir"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"wxDataObject::Get"
 				]
 			}
 		]
@@ -158292,7 +158332,7 @@
 		"WriteDouble":[
 			{
 				"return_type":"void",
-				"brief_description":"Writes the double f to the stream using the IEEE format.",
+				"brief_description":"Writes the double d to the stream.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -158308,7 +158348,7 @@
 					false
 				],
 				"parameters_name":[
-					"f"
+					"d"
 				],
 				"parameters_required":[
 					true
@@ -158781,59 +158821,6 @@
 				]
 			}
 		],
-		"LeftClick":[
-			{
-				"return_type":"bool",
-				"brief_description":"Override this to react to a left click.",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxPoint&",
-					"const wxRect&",
-					"wxDataViewModel*",
-					"const wxDataViewItem&",
-					"unsigned int"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"cursor",
-					"cell",
-					"model",
-					"item",
-					"col"
-				],
-				"parameters_required":[
-					true,
-					true,
-					true,
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null,
-					null,
-					null,
-					null
-				]
-			}
-		],
 		"Render":[
 			{
 				"return_type":"bool",
@@ -158911,6 +158898,59 @@
 					"cell",
 					"dc",
 					"state"
+				],
+				"parameters_required":[
+					true,
+					true,
+					true,
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			}
+		],
+		"LeftClick":[
+			{
+				"return_type":"bool",
+				"brief_description":"Override this to react to a left click.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxPoint",
+					"wxRect",
+					"wxDataViewModel*",
+					"const wxDataViewItem&",
+					"unsigned int"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"cursor",
+					"cell",
+					"model",
+					"item",
+					"col"
 				],
 				"parameters_required":[
 					true,
@@ -163684,7 +163724,7 @@
 		"ClearColumnImage":[
 			{
 				"return_type":"void",
-				"brief_description":"Resets the column image -- after calling this function, no image will be shown.",
+				"brief_description":"Resets the column image  after calling this function, no image will be shown.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -169893,7 +169933,7 @@
 		"GetDirectory":[
 			{
 				"return_type":"wxString",
-				"brief_description":"Returns the current directory of the file control (i.e.",
+				"brief_description":"Returns the current directory of the file control (i.e. the directory shown by it).",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -170023,7 +170063,7 @@
 		"Detach":[
 			{
 				"return_type":"void",
-				"brief_description":"Detaches this event handler from the parent specified in the constructor (see wxEvtHandler::Unlink() for a similar but not identic function).",
+				"brief_description":"Detaches this event handler from the parent specified in the constructor (see wxEvtHandler::Unlink() for a similar but not identical function).",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -171516,6 +171556,40 @@
 				]
 			}
 		],
+		"SetTimeout":[
+			{
+				"return_type":"void",
+				"brief_description":"Set timeout after which the tooltip should disappear and optionally set a delay before the tooltip is shown, in milliseconds.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"unsigned",
+					"unsigned"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"millisecondsTimeout",
+					"millisecondsDelay"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"0"
+				]
+			}
+		],
 		"SetIcon":[
 			{
 				"return_type":"void",
@@ -171572,35 +171646,6 @@
 				]
 			}
 		],
-		"SetTimeout":[
-			{
-				"return_type":"void",
-				"brief_description":"Set timeout after which the tooltip should disappear, in milliseconds.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"unsigned"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"milliseconds"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
 		"SetTipKind":[
 			{
 				"return_type":"void",
@@ -171633,29 +171678,34 @@
 		"ShowFor":[
 			{
 				"return_type":"void",
-				"brief_description":"Show the tooltip for the given window.",
+				"brief_description":"Show the tooltip for the given window and optionally specify where to show the tooltip.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
 				"static":false,
 				"protected":false,
 				"parameters_type":[
-					"wxWindow*"
+					"wxWindow*",
+					"const wxRect*"
 				],
 				"parameters_is_array":[
+					false,
 					false
 				],
 				"parameters_extra":[
+					false,
 					false
 				],
 				"parameters_name":[
-					"win"
+					"win",
+					"rect"
 				],
 				"parameters_required":[
 					true
 				],
 				"parameters_default_value":[
-					null
+					null,
+					"NULL"
 				]
 			}
 		],
@@ -172760,7 +172810,7 @@
 		"LoadFrame":[
 			{
 				"return_type":"bool",
-				"brief_description":"Loads a frame.",
+				"brief_description":"Loads the contents of a frame onto an existing wxFrame.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -174536,7 +174586,7 @@
 				"static":false,
 				"protected":false,
 				"parameters_type":[
-					"wxSashLayoutWindow*",
+					"wxWindow*",
 					"wxWindowID",
 					"const wxPoint&",
 					"const wxSize&",
@@ -180579,7 +180629,7 @@
 	"wxPrinter":{
 		"CreateAbortWindow":[
 			{
-				"return_type":"wxWindow*",
+				"return_type":"wxPrintAbortDialog*",
 				"brief_description":"Creates the default printing abort window, with a cancel button.",
 				"constant":false,
 				"virtual":true,
@@ -183975,7 +184025,7 @@
 				"protected":false,
 				"parameters_type":[
 					"wxWindow*",
-					"int",
+					"wxWindowID",
 					"const wxString&",
 					"int",
 					"wxHtmlHelpData*"
@@ -183996,7 +184046,7 @@
 				],
 				"parameters_name":[
 					"parent",
-					"wxWindowID",
+					"id",
 					"title",
 					"style",
 					"data"
@@ -184234,7 +184284,7 @@
 				"protected":false,
 				"parameters_type":[
 					"wxWindow*",
-					"int",
+					"wxWindowID",
 					"const wxString&",
 					"int",
 					"wxHtmlHelpData*",
@@ -184261,7 +184311,7 @@
 				],
 				"parameters_name":[
 					"parent",
-					"wxWindowID",
+					"id",
 					"title",
 					"style",
 					"data",
@@ -188531,7 +188581,7 @@
 		"GetDefault":[
 			{
 				"return_type":"wxRendererNative&",
-				"brief_description":"Return the default (native) implementation for this platform -- this is also the one used by default but this may be changed by calling Set() in which case the return value of this method may be different from the return value of Get().",
+				"brief_description":"Return the default (native) implementation for this platform  this is also the one used by default but this may be changed by calling Set() in which case the return value of this method may be different from the return value of Get().",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -190459,7 +190509,7 @@
 		],
 		"GetAnimation":[
 			{
-				"return_type":"wxAnimation",
+				"return_type":"wxAnimation*",
 				"brief_description":"Creates an animation (see wxAnimation) from the filename specified in param.",
 				"constant":false,
 				"virtual":false,
@@ -190721,7 +190771,7 @@
 				],
 				"parameters_name":[
 					"param",
-					"dir"
+					"dirDefault"
 				],
 				"parameters_required":[
 					true
@@ -190925,7 +190975,7 @@
 					
 				],
 				"parameters_default_value":[
-					"wxT(\"imagelist\")"
+					"\"imagelist\""
 				]
 			}
 		],
@@ -195289,35 +195339,6 @@
 				]
 			}
 		],
-		"Detach":[
-			{
-				"return_type":"void",
-				"brief_description":"Get back a file descriptor from wxFile object - the caller is responsible for closing the file if this descriptor is opened.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
-				]
-			}
-		],
 		"Create":[
 			{
 				"return_type":"bool",
@@ -195441,6 +195462,35 @@
 				],
 				"parameters_default_value":[
 					null
+				]
+			}
+		],
+		"Detach":[
+			{
+				"return_type":"int",
+				"brief_description":"Get back a file descriptor from wxFile object - the caller is responsible for closing the file if this descriptor is opened.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
 				]
 			}
 		],
@@ -197235,7 +197285,7 @@
 		"AddTree":[
 			{
 				"return_type":"bool",
-				"brief_description":"This is the same as Add(), but recursively adds every file\/directory in the tree rooted at path.",
+				"brief_description":"This is the same as Add(), but also recursively adds every file\/directory in the tree rooted at path.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -197361,7 +197411,7 @@
 		"RemoveTree":[
 			{
 				"return_type":"bool",
-				"brief_description":"Same as Remove(), but also removes every file\/directory belonging to the tree rooted at path.",
+				"brief_description":"This is the same as Remove(), but also removes every file\/directory belonging to the tree rooted at path.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -198615,7 +198665,7 @@
 		"GetDataDir":[
 			{
 				"return_type":"wxString",
-				"brief_description":"Return the location of the applications global, i.e.",
+				"brief_description":"Return the location of the applications global, i.e. not user-specific, data files.",
 				"constant":true,
 				"virtual":true,
 				"pure_virtual":false,
@@ -198702,7 +198752,7 @@
 		"GetInstallPrefix":[
 			{
 				"return_type":"wxString",
-				"brief_description":"Return the program installation prefix, e.g.",
+				"brief_description":"Return the program installation prefix, e.g. \/usr, \/opt or \/home\/zeitlin.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -199252,7 +199302,7 @@
 		"Flush":[
 			{
 				"return_type":"void",
-				"brief_description":"Some of wxLog implementations, most notably the standard wxLogGui class, buffer the messages (for example, to avoid showing the user a zillion of modal message boxes one after another -- which would be really annoying).",
+				"brief_description":"Some of wxLog implementations, most notably the standard wxLogGui class, buffer the messages (for example, to avoid showing the user a zillion of modal message boxes one after another  which would be really annoying).",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -200429,35 +200479,6 @@
 				]
 			}
 		],
-		"OnFrameCreate":[
-			{
-				"return_type":"void",
-				"brief_description":"Called immediately after the log frame creation allowing for any extra initializations.",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxFrame*"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"frame"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
 		"OnFrameDelete":[
 			{
 				"return_type":"void",
@@ -200597,40 +200618,6 @@
 		]
 	},
 	"wxTextDataObject":{
-		"GetAllFormats":[
-			{
-				"return_type":"void",
-				"brief_description":"Returns all the formats supported by wxTextDataObject.",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":true,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxDataFormat*",
-					"Direction"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"formats",
-					"dir"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null,
-					"Get"
-				]
-			}
-		],
 		"GetFormat":[
 			{
 				"return_type":"const wxDataFormat&",
@@ -200718,6 +200705,69 @@
 				]
 			}
 		],
+		"GetFormatCount":[
+			{
+				"return_type":"size_t",
+				"brief_description":"Returns 2 under wxMac and wxGTK, where text data coming from the clipboard may be provided as ANSI (wxDF_TEXT) or as Unicode text (wxDF_UNICODETEXT, but only when wxUSE_UNICODE==1).",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxDataObject::Direction"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"dir"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxDataObject::Get"
+				]
+			}
+		],
+		"GetAllFormats":[
+			{
+				"return_type":"void",
+				"brief_description":"Returns all the formats supported by wxTextDataObject.",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxDataFormat*",
+					"wxDataObject::Direction"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"formats",
+					"dir"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"wxDataObject::Get"
+				]
+			}
+		],
 		"SetText":[
 			{
 				"return_type":"void",
@@ -200778,35 +200828,6 @@
 		],
 		"_implements":[
 			"wxDataObjectSimple"
-		],
-		"GetFormatCount":[
-			{
-				"return_type":"size_t",
-				"brief_description":"Returns 2 under wxMac and wxGTK, where text data coming from the clipboard may be provided as ANSI (wxDF_TEXT) or as Unicode text (wxDF_UNICODETEXT, but only when wxUSE_UNICODE==1).",
-				"constant":true,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"Direction"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"dir"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"Get"
-				]
-			}
 		]
 	},
 	"wxFileDataObject":{
@@ -202645,7 +202666,7 @@
 		"GetWidth":[
 			{
 				"return_type":"int",
-				"brief_description":"Returns the screen width in pixels (e.g.",
+				"brief_description":"Returns the screen width in pixels (e.g. 640), 0 means unspecified.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -202674,7 +202695,7 @@
 		"GetHeight":[
 			{
 				"return_type":"int",
-				"brief_description":"Returns the screen height in pixels (e.g.",
+				"brief_description":"Returns the screen height in pixels (e.g. 480), 0 means unspecified.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -202703,7 +202724,7 @@
 		"GetDepth":[
 			{
 				"return_type":"int",
-				"brief_description":"Returns bits per pixel (e.g.",
+				"brief_description":"Returns bits per pixel (e.g. 32), 1 is monochrome and 0 means unspecified\/known.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -204206,11 +204227,9 @@
 					"const wxBitmap&",
 					"const wxBitmap&",
 					"wxRibbonButtonKind",
-					"const wxString&",
-					"wxObject*"
+					"const wxString&"
 				],
 				"parameters_is_array":[
-					false,
 					false,
 					false,
 					false,
@@ -204228,7 +204247,6 @@
 					false,
 					false,
 					false,
-					false,
 					false
 				],
 				"parameters_name":[
@@ -204239,8 +204257,7 @@
 					"bitmap_disabled",
 					"bitmap_small_disabled",
 					"kind",
-					"help_string",
-					"client_data"
+					"help_string"
 				],
 				"parameters_required":[
 					true,
@@ -204255,8 +204272,7 @@
 					"wxNullBitmap",
 					"wxNullBitmap",
 					"wxRIBBON_BUTTON_NORMAL",
-					"wxEmptyString",
-					"NULL"
+					"wxEmptyString"
 				]
 			}
 		]
@@ -204264,6 +204280,50 @@
 	"wxRibbonButtonBarEvent":{
 		"_implements":[
 			"wxCommandEvent"
+		],
+		"wxRibbonButtonBarEvent":[
+			{
+				"return_type":"",
+				"brief_description":"Constructor.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxEventType",
+					"int",
+					"wxRibbonButtonBar*",
+					"wxRibbonButtonBarButtonBase*"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"command_type",
+					"win_id",
+					"bar",
+					"button"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxEVT_NULL",
+					"0",
+					"NULL",
+					"NULL"
+				]
+			}
 		],
 		"GetBar":[
 			{
@@ -204349,45 +204409,6 @@
 				],
 				"parameters_default_value":[
 					null
-				]
-			}
-		],
-		"wxRibbonButtonBarEvent":[
-			{
-				"return_type":"",
-				"brief_description":"Constructor.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxEventType",
-					"int",
-					"wxRibbonButtonBar*"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"command_type",
-					"win_id",
-					"bar"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxEVT_NULL",
-					"0",
-					"NULL"
 				]
 			}
 		]
@@ -211211,6 +211232,98 @@
 		"_implements":[
 			"wxControl"
 		],
+		"New":[
+			{
+				"return_type":"wxWebView*",
+				"brief_description":"Factory function to create a new wxWebView with two-step creation, wxWebView::Create should be called on the returned object.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"backend"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxWebViewBackendDefault"
+				]
+			},
+			{
+				"return_type":"wxWebView*",
+				"brief_description":"Factory function to create a new wxWebView using a wxWebViewFactory.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxWindow*",
+					"wxWindowID",
+					"const wxString&",
+					"const wxPoint&",
+					"const wxSize&",
+					"const wxString&",
+					"long",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"parent",
+					"id",
+					"url",
+					"pos",
+					"size",
+					"backend",
+					"style",
+					"name"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					"wxWebViewDefaultURLStr",
+					"wxDefaultPosition",
+					"wxDefaultSize",
+					"wxWebViewBackendDefault",
+					"0",
+					"wxWebViewNameStr"
+				]
+			}
+		],
 		"CanCopy":[
 			{
 				"return_type":"bool",
@@ -211977,35 +212090,6 @@
 				]
 			}
 		],
-		"Reload":[
-			{
-				"return_type":"void",
-				"brief_description":"Reload the currently displayed URL.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":true,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxWebViewReloadFlags"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"flags"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxWEB_VIEW_RELOAD_DEFAULT"
-				]
-			}
-		],
 		"RegisterHandler":[
 			{
 				"return_type":"void",
@@ -212064,6 +212148,35 @@
 				]
 			}
 		],
+		"Reload":[
+			{
+				"return_type":"void",
+				"brief_description":"Reload the currently displayed URL.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWebViewReloadFlags"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"flags"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxWEBVIEW_RELOAD_DEFAULT"
+				]
+			}
+		],
 		"Print":[
 			{
 				"return_type":"void",
@@ -212119,98 +212232,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"New":[
-			{
-				"return_type":"wxWebView*",
-				"brief_description":"Factory function to create a new wxWebView.",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":true,
-				"protected":false,
-				"parameters_type":[
-					"wxWindow*",
-					"wxWindowID",
-					"const wxString&",
-					"const wxPoint&",
-					"const wxSize&",
-					"wxWebViewBackend",
-					"long",
-					"const wxString&"
-				],
-				"parameters_is_array":[
-					false,
-					false,
-					false,
-					false,
-					false,
-					false,
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false,
-					false,
-					false,
-					false,
-					false,
-					false,
-					false
-				],
-				"parameters_name":[
-					"parent",
-					"id",
-					"url",
-					"pos",
-					"size",
-					"backend",
-					"style",
-					"name"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null,
-					"wxWebViewDefaultURLStr",
-					"wxDefaultPosition",
-					"wxDefaultSize",
-					"wxWEB_VIEW_BACKEND_DEFAULT",
-					"0",
-					"wxWebViewNameStr"
-				]
-			},
-			{
-				"return_type":"wxWebView*",
-				"brief_description":"Factory function to create a new wxWebView for two-step creation (you need to call wxWebView::Create on the returned object)",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":true,
-				"protected":false,
-				"parameters_type":[
-					"wxWebViewBackend"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"backend"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"wxWEB_VIEW_BACKEND_DEFAULT"
 				]
 			}
 		],
@@ -212304,7 +212325,7 @@
 		"IsBusy":[
 			{
 				"return_type":"bool",
-				"brief_description":"Returns whether the web control is currently busy (e.g.",
+				"brief_description":"Returns whether the web control is currently busy (e.g. loading a page).",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":true,

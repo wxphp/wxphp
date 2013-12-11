@@ -1,4 +1,7 @@
 {
+	"group_class":[
+		
+	],
 	"group_class_appmanagement":[
 		"wxAppConsole",
 		"wxApp",
@@ -7,28 +10,11 @@
 		"wxDynamicLibrary",
 		"wxEventLoopBase",
 		"wxEventLoopActivator",
+		"wxGUIEventLoop",
 		"wxInitializer",
 		"wxModule",
 		"wxProcess",
 		"wxSingleInstanceChecker"
-	],
-	"group_class_cfg":[
-		"wxAppTraits",
-		"wxConfigBase",
-		"wxConfigPathChanger",
-		"wxDisplay",
-		"wxFileConfig",
-		"wxFontMapper",
-		"wxLocale",
-		"wxMimeTypesManager",
-		"wxRegConfig",
-		"wxRegKey",
-		"wxPlatformInfo",
-		"wxSystemSettings",
-		"wxSystemOptions",
-		"wxVideoMode",
-		"wxIdManager",
-		"wxXLocale"
 	],
 	"group_class_archive":[
 		"wxArchiveInputStream",
@@ -48,6 +34,23 @@
 		"wxZlibOutputStream",
 		"wxZlibInputStream"
 	],
+	"group_class_aui":[
+		"wxAuiDefaultTabArt",
+		"wxAuiToolBarEvent",
+		"wxAuiToolBarItem",
+		"wxAuiToolBarArt",
+		"wxAuiDefaultToolBarArt",
+		"wxAuiToolBar",
+		"wxAuiNotebook",
+		"wxAuiTabContainerButton",
+		"wxAuiTabContainer",
+		"wxAuiTabArt",
+		"wxAuiSimpleTabArt",
+		"wxAuiDockArt",
+		"wxAuiManager",
+		"wxAuiPaneInfo",
+		"wxAuiManagerEvent"
+	],
 	"group_class_bookctrl":[
 		"wxAuiNotebookEvent",
 		"wxBookCtrlBase",
@@ -55,25 +58,27 @@
 		"wxChoicebook",
 		"wxListbook",
 		"wxNotebook",
+		"wxSimplebook",
 		"wxToolbook",
 		"wxTreebook"
 	],
-	"group_class_dnd":[
-		"wxClipboard",
-		"wxDataFormat",
-		"wxDataObject",
-		"wxCustomDataObject",
-		"wxDataObjectComposite",
-		"wxDataObjectSimple",
-		"wxBitmapDataObject",
-		"wxURLDataObject",
-		"wxTextDataObject",
-		"wxFileDataObject",
-		"wxDropTarget",
-		"wxDropSource",
-		"wxTextDropTarget",
-		"wxFileDropTarget",
-		"wxDragImage"
+	"group_class_cfg":[
+		"wxAppTraits",
+		"wxConfigBase",
+		"wxConfigPathChanger",
+		"wxDisplay",
+		"wxFileConfig",
+		"wxFontMapper",
+		"wxLocale",
+		"wxMimeTypesManager",
+		"wxRegConfig",
+		"wxRegKey",
+		"wxPlatformInfo",
+		"wxSystemSettings",
+		"wxSystemOptions",
+		"wxVideoMode",
+		"wxIdManager",
+		"wxXLocale"
 	],
 	"group_class_cmndlg":[
 		"wxAboutDialogInfo",
@@ -90,6 +95,7 @@
 		"wxFileDialog",
 		"wxFontData",
 		"wxFontDialog",
+		"wxGenericAboutDialog",
 		"wxMessageDialog",
 		"wxGenericProgressDialog",
 		"wxRearrangeDialog",
@@ -114,10 +120,16 @@
 		"wxHashSet",
 		"wxTreeItemData"
 	],
+	"group_class_conv":[
+		"wxEncodingConverter",
+		"wxMBConv",
+		"wxMBConvUTF7",
+		"wxMBConvUTF8",
+		"wxMBConvUTF16",
+		"wxMBConvUTF32",
+		"wxCSConv"
+	],
 	"group_class_ctrl":[
-		"wxTreeListItem",
-		"wxTreeListItemComparator",
-		"wxTreeListCtrl",
 		"wxAnimationCtrl",
 		"wxBitmapButton",
 		"wxBitmapComboBox",
@@ -174,6 +186,9 @@
 		"wxToggleButton",
 		"wxBitmapToggleButton",
 		"wxTreeCtrl",
+		"wxTreeListItem",
+		"wxTreeListItemComparator",
+		"wxTreeListCtrl",
 		"wxVListBox",
 		"wxWebView"
 	],
@@ -211,6 +226,9 @@
 		"wxLongLong",
 		"wxULongLong",
 		"wxFileType",
+		"wxVariantDataCurrency",
+		"wxVariantDataErrorCode",
+		"wxVariantDataSafeArray",
 		"wxAutomationObject",
 		"wxPosition",
 		"wxRegEx",
@@ -227,16 +245,6 @@
 		"wxVariant",
 		"wxVariantData",
 		"wxVersionInfo"
-	],
-	"group_class_debugging":[
-		"wxDebugReportPreview",
-		"wxDebugReportCompress",
-		"wxDebugReport",
-		"wxDebugReportPreviewStd",
-		"wxDebugReportUpload",
-		"wxDebugContext",
-		"wxStackWalker",
-		"wxStackFrame"
 	],
 	"group_class_dc":[
 		"wxFontMetrics",
@@ -256,6 +264,34 @@
 		"wxGraphicsContext",
 		"wxMetafileDC"
 	],
+	"group_class_debugging":[
+		"wxDebugReportPreview",
+		"wxDebugReportCompress",
+		"wxDebugReport",
+		"wxDebugReportPreviewStd",
+		"wxDebugReportUpload",
+		"wxDebugContext",
+		"wxStackWalker",
+		"wxStackFrame"
+	],
+	"group_class_dnd":[
+		"wxClipboard",
+		"wxDataFormat",
+		"wxDataObject",
+		"wxCustomDataObject",
+		"wxDataObjectComposite",
+		"wxDataObjectSimple",
+		"wxBitmapDataObject",
+		"wxURLDataObject",
+		"wxTextDataObject",
+		"wxFileDataObject",
+		"wxHTMLDataObject",
+		"wxDropTarget",
+		"wxDropSource",
+		"wxTextDropTarget",
+		"wxFileDropTarget",
+		"wxDragImage"
+	],
 	"group_class_docview":[
 		"wxCommand",
 		"wxCommandProcessor",
@@ -268,6 +304,34 @@
 		"wxDocParentFrame",
 		"wxDocument",
 		"wxFileHistory"
+	],
+	"group_class_dvc":[
+		"wxDataViewChoiceRenderer",
+		"wxDataViewChoiceByIndexRenderer",
+		"wxDataViewModel",
+		"wxDataViewListModel",
+		"wxDataViewIndexListModel",
+		"wxDataViewVirtualListModel",
+		"wxDataViewItemAttr",
+		"wxDataViewItem",
+		"wxDataViewCtrl",
+		"wxDataViewModelNotifier",
+		"wxDataViewRenderer",
+		"wxDataViewTextRenderer",
+		"wxDataViewIconTextRenderer",
+		"wxDataViewProgressRenderer",
+		"wxDataViewSpinRenderer",
+		"wxDataViewToggleRenderer",
+		"wxDataViewDateRenderer",
+		"wxDataViewCustomRenderer",
+		"wxDataViewBitmapRenderer",
+		"wxDataViewColumn",
+		"wxDataViewListCtrl",
+		"wxDataViewTreeCtrl",
+		"wxDataViewListStore",
+		"wxDataViewTreeStore",
+		"wxDataViewIconText",
+		"wxDataViewEvent"
 	],
 	"group_class_events":[
 		"wxEventFilter",
@@ -288,6 +352,7 @@
 		"wxJoystickEvent",
 		"wxScrollWinEvent",
 		"wxSysColourChangedEvent",
+		"wxCommandEvent",
 		"wxWindowCreateEvent",
 		"wxPaintEvent",
 		"wxMaximizeEvent",
@@ -295,7 +360,6 @@
 		"wxClipboardTextEvent",
 		"wxMouseEvent",
 		"wxDropFilesEvent",
-		"wxCommandEvent",
 		"wxActivateEvent",
 		"wxContextMenuEvent",
 		"wxEraseEvent",
@@ -341,6 +405,7 @@
 		"wxRibbonBarEvent",
 		"wxRibbonButtonBarEvent",
 		"wxRibbonGalleryEvent",
+		"wxRibbonPanelEvent",
 		"wxRichTextEvent",
 		"wxSashEvent",
 		"wxSpinEvent",
@@ -365,9 +430,6 @@
 		"wxFileSystemWatcher",
 		"wxStandardPaths",
 		"wxTextFile"
-	],
-	"group_class":[
-		
 	],
 	"group_class_gdi":[
 		"wxFontMetrics",
@@ -421,6 +483,10 @@
 		"wxRendererVersion",
 		"wxTextWrapper"
 	],
+	"group_class_gl":[
+		"wxGLContext",
+		"wxGLCanvas"
+	],
 	"group_class_grid":[
 		"wxGridCellRenderer",
 		"wxGridCellAutoWrapStringRenderer",
@@ -440,6 +506,7 @@
 		"wxGridCellNumberEditor",
 		"wxGridCellAttr",
 		"wxGridTableBase",
+		"wxGridTableMessage",
 		"wxGridSizesInfo",
 		"wxGrid",
 		"wxGridUpdateLocker",
@@ -447,34 +514,6 @@
 		"wxGridSizeEvent",
 		"wxGridRangeSelectEvent",
 		"wxGridEditorCreatedEvent"
-	],
-	"group_class_html":[
-		"wxHtmlHelpController",
-		"wxHtmlModalHelp",
-		"wxHtmlHelpData",
-		"wxHtmlHelpDialog",
-		"wxHtmlHelpFrame",
-		"wxHtmlHelpWindow",
-		"wxHtmlRenderingStyle",
-		"wxHtmlRenderingInfo",
-		"wxHtmlCell",
-		"wxHtmlContainerCell",
-		"wxHtmlLinkInfo",
-		"wxHtmlColourCell",
-		"wxHtmlWidgetCell",
-		"wxHtmlFilter",
-		"wxHtmlTagHandler",
-		"wxHtmlParser",
-		"wxHtmlTag",
-		"wxHtmlWindow",
-		"wxHtmlLinkEvent",
-		"wxHtmlCellEvent",
-		"wxHtmlDCRenderer",
-		"wxHtmlEasyPrinting",
-		"wxHtmlPrintout",
-		"wxHtmlTagsModule",
-		"wxHtmlWinTagHandler",
-		"wxHtmlWinParser"
 	],
 	"group_class_help":[
 		"wxHelpProvider",
@@ -493,6 +532,38 @@
 		"wxHtmlHelpWindow",
 		"wxToolTip"
 	],
+	"group_class_html":[
+		"wxHtmlHelpController",
+		"wxHtmlModalHelp",
+		"wxHtmlHelpData",
+		"wxHtmlHelpDialog",
+		"wxHtmlHelpFrame",
+		"wxHtmlHelpWindow",
+		"wxHtmlRenderingStyle",
+		"wxHtmlRenderingState",
+		"wxHtmlRenderingInfo",
+		"wxHtmlCell",
+		"wxHtmlContainerCell",
+		"wxHtmlLinkInfo",
+		"wxHtmlColourCell",
+		"wxHtmlWidgetCell",
+		"wxHtmlWordCell",
+		"wxHtmlWordWithTabsCell",
+		"wxHtmlFontCell",
+		"wxHtmlFilter",
+		"wxHtmlTagHandler",
+		"wxHtmlParser",
+		"wxHtmlTag",
+		"wxHtmlWindow",
+		"wxHtmlLinkEvent",
+		"wxHtmlCellEvent",
+		"wxHtmlDCRenderer",
+		"wxHtmlEasyPrinting",
+		"wxHtmlPrintout",
+		"wxHtmlTagsModule",
+		"wxHtmlWinTagHandler",
+		"wxHtmlWinParser"
+	],
 	"group_class_ipc":[
 		"wxDDEConnection",
 		"wxDDEClient",
@@ -509,18 +580,18 @@
 		"wxMessageOutputBest",
 		"wxMessageOutputDebug",
 		"wxMessageOutputMessageBox",
-		"wxLogWindow",
-		"wxLogInterposerTemp",
+		"wxLogFormatter",
+		"wxLog",
 		"wxLogChain",
-		"wxLogGui",
+		"wxLogInterposer",
+		"wxLogInterposerTemp",
 		"wxLogStream",
 		"wxLogStderr",
 		"wxLogBuffer",
-		"wxLogInterposer",
-		"wxLogTextCtrl",
-		"wxLogFormatter",
-		"wxLog",
 		"wxLogNull",
+		"wxLogWindow",
+		"wxLogGui",
+		"wxLogTextCtrl",
 		"wxStreamToTextRedirector"
 	],
 	"group_class_managedwnd":[
@@ -535,6 +606,10 @@
 		"wxSplashScreen",
 		"wxTipWindow",
 		"wxTopLevelWindow"
+	],
+	"group_class_media":[
+		"wxMediaCtrl",
+		"wxSound"
 	],
 	"group_class_menus":[
 		"wxMenuBar",
@@ -586,10 +661,6 @@
 		"wxWizardPage",
 		"wxWizardPageSimple"
 	],
-	"group_class_media":[
-		"wxMediaCtrl",
-		"wxSound"
-	],
 	"group_class_net":[
 		"wxProtocolLog",
 		"wxDialUpManager",
@@ -611,10 +682,6 @@
 		"wxDatagramSocket",
 		"wxURI",
 		"wxURL"
-	],
-	"group_class_gl":[
-		"wxGLContext",
-		"wxGLCanvas"
 	],
 	"group_class_pickers":[
 		"wxColourPickerCtrl",
@@ -641,6 +708,19 @@
 		"wxPrintDialog",
 		"wxPageSetupDialog"
 	],
+	"group_class_propgrid":[
+		"wxPropertyGridIterator",
+		"wxPGEditor",
+		"wxPGMultiButton",
+		"wxPropertyGridPage",
+		"wxPropertyGridManager",
+		"wxPGProperty",
+		"wxPGCell",
+		"wxPGChoices",
+		"wxPropertyGrid",
+		"wxPropertyGridEvent",
+		"wxPropertyGridInterface"
+	],
 	"group_class_ribbon":[
 		"wxRibbonArtProvider",
 		"wxRibbonBarEvent",
@@ -651,6 +731,7 @@
 		"wxRibbonGallery",
 		"wxRibbonGalleryEvent",
 		"wxRibbonPage",
+		"wxRibbonPanelEvent",
 		"wxRibbonPanel",
 		"wxRibbonToolBar"
 	],
@@ -670,8 +751,11 @@
 		"wxRichTextDrawingContext",
 		"wxRichTextObject",
 		"wxRichTextCompositeObject",
-		"wxRichTextParagraphBox",
+		"wxRichTextParagraphLayoutBox",
 		"wxRichTextBox",
+		"wxRichTextField",
+		"wxRichTextFieldType",
+		"wxRichTextFieldTypeStandard",
 		"wxRichTextLine",
 		"wxRichTextParagraph",
 		"wxRichTextPlainText",
@@ -684,6 +768,7 @@
 		"wxRichTextFileHandler",
 		"wxRichTextPlainTextHandler",
 		"wxRichTextDrawingHandler",
+		"wxRichTextBufferDataObject",
 		"wxRichTextRenderer",
 		"wxRichTextStdRenderer",
 		"wxRichTextCtrl",
@@ -713,10 +798,6 @@
 		"wxObject",
 		"wxClassInfo"
 	],
-	"group_class_stc":[
-		"wxStyledTextEvent",
-		"wxStyledTextCtrl"
-	],
 	"group_class_smartpointers":[
 		"wxObjectDataPtr< T >",
 		"wxScopedArray",
@@ -724,9 +805,14 @@
 		"wxSharedPtr< T >",
 		"wxWeakRefDynamic< T >",
 		"wxWeakRef< T >",
+		"wxWindowPtr< T >",
 		"wxScopedPtr",
 		"wxScopedTiedPtr",
 		"wxTrackable"
+	],
+	"group_class_stc":[
+		"wxStyledTextCtrl",
+		"wxStyledTextEvent"
 	],
 	"group_class_streams":[
 		"wxFSInputStream",
@@ -780,15 +866,6 @@
 		"wxZlibOutputStream",
 		"wxZlibInputStream"
 	],
-	"group_class_conv":[
-		"wxEncodingConverter",
-		"wxMBConv",
-		"wxMBConvUTF7",
-		"wxMBConvUTF8",
-		"wxMBConvUTF16",
-		"wxMBConvUTF32",
-		"wxCSConv"
-	],
 	"group_class_threading":[
 		"wxMessageQueue< T >",
 		"wxThreadEvent",
@@ -817,23 +894,12 @@
 	],
 	"group_class_webview":[
 		"wxWebViewHistoryItem",
+		"wxWebViewFactory",
 		"wxWebViewHandler",
 		"wxWebView",
 		"wxWebViewEvent",
-		"wxWebViewArchiveHandler"
-	],
-	"group_class_aui":[
-		"wxAuiNotebook",
-		"wxAuiTabArt",
-		"wxAuiDockArt",
-		"wxAuiManager",
-		"wxAuiPaneInfo",
-		"wxAuiManagerEvent",
-		"wxAuiToolBarEvent",
-		"wxAuiToolBarItem",
-		"wxAuiToolBarArt",
-		"wxAuiDefaultToolBarArt",
-		"wxAuiToolBar"
+		"wxWebViewArchiveHandler",
+		"wxWebViewFSHandler"
 	],
 	"group_class_winlayout":[
 		"wxDialogLayoutAdapter",
@@ -860,46 +926,5 @@
 	"group_class_xrc":[
 		"wxXmlResourceHandler",
 		"wxXmlResource"
-	],
-	"group_class_dvc":[
-		"wxDataViewChoiceRenderer",
-		"wxDataViewChoiceByIndexRenderer",
-		"wxDataViewModel",
-		"wxDataViewListModel",
-		"wxDataViewIndexListModel",
-		"wxDataViewVirtualListModel",
-		"wxDataViewItemAttr",
-		"wxDataViewItem",
-		"wxDataViewCtrl",
-		"wxDataViewModelNotifier",
-		"wxDataViewRenderer",
-		"wxDataViewTextRenderer",
-		"wxDataViewIconTextRenderer",
-		"wxDataViewProgressRenderer",
-		"wxDataViewSpinRenderer",
-		"wxDataViewToggleRenderer",
-		"wxDataViewDateRenderer",
-		"wxDataViewCustomRenderer",
-		"wxDataViewBitmapRenderer",
-		"wxDataViewColumn",
-		"wxDataViewListCtrl",
-		"wxDataViewTreeCtrl",
-		"wxDataViewListStore",
-		"wxDataViewTreeStore",
-		"wxDataViewIconText",
-		"wxDataViewEvent"
-	],
-	"group_class_propgrid":[
-		"wxPropertyGridIterator",
-		"wxPGEditor",
-		"wxPGMultiButton",
-		"wxPropertyGridPage",
-		"wxPropertyGridManager",
-		"wxPGProperty",
-		"wxPGCell",
-		"wxPGChoices",
-		"wxPropertyGrid",
-		"wxPropertyGridEvent",
-		"wxPropertyGridInterface"
 	]
 }

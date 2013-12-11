@@ -66,7 +66,6 @@ static zend_function_entry php_wxFFile_functions[] = {
 	PHP_ME(php_wxFFile, Flush, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFFile, Error, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFFile, Eof, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFFile, Detach, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFFile, Close, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
@@ -121,11 +120,11 @@ static zend_function_entry php_wxFile_functions[] = {
 	PHP_ME(php_wxFile, Flush, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, Exists, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, Eof, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFile, Detach, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, Close, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, ClearLastError, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, Attach, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxFile, Detach, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, Access, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
@@ -214,6 +213,7 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileName_functions[] = {
 	PHP_ME(php_wxFileName, AppendDir, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxFileName, InsertDir, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, Assign, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxFileName, Touch, NULL, ZEND_ACC_PUBLIC)
@@ -270,7 +270,6 @@ static zend_function_entry php_wxFileName_functions[] = {
 	PHP_ME(php_wxFileName, HasExt, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, HasName, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, HasVolume, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxFileName, InsertDir, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, IsAbsolute, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, IsCaseSensitive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, IsDir, NULL, ZEND_ACC_PUBLIC)

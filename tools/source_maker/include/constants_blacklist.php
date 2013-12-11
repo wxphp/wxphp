@@ -129,4 +129,15 @@ unset($defConsts['wxINT64_MAX']);
 unset($defConsts['wxUINT32_MAX']);
 unset($defConsts['wxUINT64_MAX']);
 
+
+//Disabled on wxWidgets 3.0.0
+unset($defConsts['wxOleConvertVariant_Default']);
+unset($defConsts['wxOleConvertVariant_ReturnSafeArrays']);
+unset($defConsts['wxSTC_CP_DBCS']);
+unset($defConsts['wxSTC_FS_ASM']);
+unset($defConsts['wxSTC_FS_BINNUMBER']);
+unset($defConsts['wxSTC_FS_ERROR']);
+unset($defConsts['wxSTC_FS_HEXNUMBER']);
+unset($defConsts['wxSTC_FS_LABEL']);
+
 ?>

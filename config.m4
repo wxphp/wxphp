@@ -1,5 +1,5 @@
 PHP_ARG_WITH(wxwidgets,for wxWidgets support,
-[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 2.9.3).])
+[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.0.0).])
 
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
@@ -18,11 +18,11 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	WXCONFIG_PATH=wx-config
 	
 	dnl Check for the installation path of wx-config
-	AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 2.9.x])
+	AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
 	for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
 		if test -e "$directory/wx-config"; then
 			wxwidgets_version=`$directory/wx-config --version`
-			version_check=`echo $wxwidgets_version | grep "2.9" && echo $wxwidgets_version | grep "3.[0-9]"`
+			version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
 			if test -n "$version_check"; then
 				WXCONFIG_PATH="$directory/wx-config"
 				AC_MSG_RESULT([version $wxwidgets_version found])
@@ -79,5 +79,5 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_ADD_LIBRARY(stdc++, 1 , WXWIDGETS_SHARED_LIBADD)
 
 	dnl PHP_NEW_EXTENSION(extname, sources [, shared [, sapi_class [, extra-cflags [, cxx [, zend_ext]]]]])
-	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp src/appmanagement.cpp src/cfg.cpp src/bookctrl.cpp src/dnd.cpp src/cmndlg.cpp src/containers.cpp src/ctrl.cpp src/data.cpp src/dc.cpp src/docview.cpp src/events.cpp src/file.cpp src/gdi.cpp src/grid.cpp src/html.cpp src/help.cpp src/logging.cpp src/managedwnd.cpp src/menus.cpp src/misc.cpp src/miscwnd.cpp src/media.cpp src/pickers.cpp src/printing.cpp src/ribbon.cpp src/richtext.cpp src/rtti.cpp src/stc.cpp src/streams.cpp src/threading.cpp src/validator.cpp src/vfs.cpp src/webview.cpp src/aui.cpp src/winlayout.cpp src/xml.cpp src/xrc.cpp src/dvc.cpp src/others.cpp src/functions.cpp wxwidgets.cpp, $ext_shared,,,1)
+	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp src/appmanagement.cpp src/aui.cpp src/bookctrl.cpp src/cfg.cpp src/cmndlg.cpp src/containers.cpp src/ctrl.cpp src/data.cpp src/dc.cpp src/dnd.cpp src/docview.cpp src/dvc.cpp src/events.cpp src/file.cpp src/gdi.cpp src/grid.cpp src/help.cpp src/html.cpp src/logging.cpp src/managedwnd.cpp src/media.cpp src/menus.cpp src/misc.cpp src/miscwnd.cpp src/pickers.cpp src/printing.cpp src/ribbon.cpp src/richtext.cpp src/rtti.cpp src/stc.cpp src/streams.cpp src/threading.cpp src/validator.cpp src/vfs.cpp src/webview.cpp src/winlayout.cpp src/xml.cpp src/xrc.cpp src/others.cpp src/functions.cpp wxwidgets.cpp, $ext_shared,,,1)
 fi

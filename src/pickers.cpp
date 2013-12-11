@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -3643,7 +3643,7 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 /* }}} */
 
 /* {{{ proto  wxDirPickerCtrl::SetPath(string dirname)
-   Sets the absolute path of (the default converter uses current locale's charset)the currently selected directory. */
+   Sets the absolute path of the currently selected directory (the default converter uses current locale's charset). */
 PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5815,7 +5815,7 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 /* }}} */
 
 /* {{{ proto bool wxPickerBase::HasTextCtrl()
-   Returns true if this window has a valid text control (i.e. */
+   Returns true if this window has a valid text control (i.e. if the wxPB_USE_TEXTCTRL style was given when creating this control). */
 PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7256,144 +7256,6 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 }
 /* }}} */
 
-/* {{{ proto  wxTimePickerCtrl::SetValue(timestamp dt)
-   Changes the current value of the control. */
-void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
-{
-	static zend_function* cached_function = NULL;
-	static bool is_php_user_space_implemented = true;
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxTimePickerCtrl::SetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval** params[1];
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "SetValue", 0);
-	char* temp_string;
-	void* return_object;
-	int function_called;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], dt.GetTicks());
-		
-	for(int i=0; i<1; i++)
-	{
-		params[i] = &arguments[i];
-	}
-
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(is_php_user_space_implemented)
-	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "SetValue", 8, &return_value, 1, params TSRMLS_CC);
-	}
-	else
-	{
-		function_called = FAILURE;
-	}
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
-	{
-		is_php_user_space_implemented = false;
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxTimePickerCtrl::SetValue'!", "Error", wxOK|wxICON_ERROR);
-	}
-
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
-		
-	return;
-	
-}
-/* }}} */
-
-/* {{{ proto timestamp wxTimePickerCtrl::GetValue()
-   Returns the currently entered time. */
-wxDateTime wxTimePickerCtrl_php::GetValue()const
-{
-	static zend_function* cached_function = NULL;
-	static bool is_php_user_space_implemented = true;
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxTimePickerCtrl::GetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "GetValue", 0);
-	char* temp_string;
-	void* return_object;
-	int function_called;
-	
-	//Parameters for conversion
-		
-
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(is_php_user_space_implemented)
-	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "GetValue", 8, &return_value, 0, params TSRMLS_CC);
-	}
-	else
-	{
-		function_called = FAILURE;
-	}
-	
-	
-	if(function_called == FAILURE)
-	{
-		is_php_user_space_implemented = false;
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxTimePickerCtrl::GetValue'!", "Error", wxOK|wxICON_ERROR);
-	}
-
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
-		
-	return wxDateTime(Z_LVAL_P(return_value));
-	
-}
-/* }}} */
-
 /* {{{ proto bool wxTimePickerCtrl::Create(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
    Create the control window. */
 PHP_METHOD(php_wxTimePickerCtrl, Create)
@@ -7662,6 +7524,207 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::Create\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto timestamp wxTimePickerCtrl::GetValue()
+   Returns the currently entered time. */
+PHP_METHOD(php_wxTimePickerCtrl, GetValue)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxTimePickerCtrl::GetValue\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxTimePickerCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxTimePickerCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxTimePickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxTimePickerCtrl::GetValue call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
+				references = &((wxTimePickerCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxTimePickerCtrl::GetValue() to return timestamp\n\n");
+				#endif
+
+				long value_to_return0;
+				value_to_return0 = ((wxTimePickerCtrl_php*)native_object)->GetValue().GetTicks();
+				ZVAL_LONG(return_value, value_to_return0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::GetValue\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxTimePickerCtrl::SetValue(timestamp dt)
+   Changes the current value of the control. */
+PHP_METHOD(php_wxTimePickerCtrl, SetValue)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxTimePickerCtrl::SetValue\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxTimePickerCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxTimePickerCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxTimePickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxTimePickerCtrl::SetValue call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXTIMEPICKERCTRL_TYPE){
+				references = &((wxTimePickerCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long dt0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&dt0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dt0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxTimePickerCtrl::SetValue(wxDateTime(dt0))\n\n");
+				#endif
+
+				((wxTimePickerCtrl_php*)native_object)->SetValue(wxDateTime(dt0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::SetValue\n");
 	}
 }
 /* }}} */

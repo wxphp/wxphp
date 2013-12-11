@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -402,6 +402,141 @@ PHP_METHOD(php_wxTextAttr, __construct)
 	#ifdef USE_WXPHP_DEBUG
 		php_printf("===========================================\n\n");
 	#endif
+}
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFont(wxFont font, int flags)
+   Sets the attributes for the given font. */
+PHP_METHOD(php_wxTextAttr, SetFont)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxTextAttr::SetFont\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxTextAttr* current_object;
+	wxphp_object_type current_object_type;
+	wxTextAttr_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFont call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXTEXTATTR_TYPE){
+				references = &((wxTextAttr_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	zval* font0 = 0;
+	wxFont* object_pointer0_0 = 0;
+	long flags0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'O|l' (&font0, php_wxFont_entry, &flags0)\n");
+		#endif
+
+		char parse_parameters_string[] = "O|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
+		{
+			if(arguments_received >= 1){
+				if(Z_TYPE_P(font0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxFont*) argument_native_object;
+					if (!object_pointer0_0 )
+					{
+						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(font0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0)\n\n");
+				#endif
+
+				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
+
+				references->AddReference(font0, "wxTextAttr::SetFont at call with 1 argument(s)");
+
+				return;
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0, (int) flags0)\n\n");
+				#endif
+
+				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
+
+				references->AddReference(font0, "wxTextAttr::SetFont at call with 2 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFont\n");
+	}
 }
 /* }}} */
 
@@ -6631,7 +6766,7 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 /* }}} */
 
 /* {{{ proto bool wxTextAttr::HasFontSize()
-   Returns true if the attribute object specifies a font point size. */
+   Returns true if the attribute object specifies a font point or pixel size. */
 PHP_METHOD(php_wxTextAttr, HasFontSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9615,141 +9750,6 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFlags\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxTextAttr::SetFont(wxFont font, int flags)
-   Sets the attributes for the given font. */
-PHP_METHOD(php_wxTextAttr, SetFont)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTextAttr::SetFont\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxTextAttr* current_object;
-	wxphp_object_type current_object_type;
-	wxTextAttr_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxTextAttr::SetFont call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXTEXTATTR_TYPE){
-				references = &((wxTextAttr_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* font0 = 0;
-	wxFont* object_pointer0_0 = 0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|l' (&font0, php_wxFont_entry, &flags0)\n");
-		#endif
-
-		char parse_parameters_string[] = "O|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxFont*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
-
-				references->AddReference(font0, "wxTextAttr::SetFont at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxTextAttr::SetFont(*(wxFont*) object_pointer0_0, (int) flags0)\n\n");
-				#endif
-
-				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
-
-				references->AddReference(font0, "wxTextAttr::SetFont at call with 2 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFont\n");
 	}
 }
 /* }}} */

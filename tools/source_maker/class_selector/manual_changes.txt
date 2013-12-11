@@ -24,7 +24,7 @@ to virtual (seems to be fixed on latest wxWidgets svn)
 
 
 4. Fixed on wxHtmlHelpWindow constructor duplicated parameters names
-for wxPoint pos and wxSize pos
+for wxPoint pos and wxSize pos (seems to be fixed on latest wxWidgets svn)
 
 
 5. Changed parameters with non exsistant type 

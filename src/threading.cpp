@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -2321,7 +2321,7 @@ PHP_METHOD(php_wxThread, TestDestroy)
 /* }}} */
 
 /* {{{ proto  wxThread::SetPriority(int priority)
-   Sets the priority of the thread, between 0 and 100. */
+   Sets the priority of the thread, between 0 (lowest) and 100 (highest). */
 PHP_METHOD(php_wxThread, SetPriority)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2825,7 +2825,7 @@ PHP_METHOD(php_wxThread, GetCurrentId)
 /* }}} */
 
 /* {{{ proto int wxThread::GetId()
-   Gets the thread identifier: this is a platform dependent number that uniquely identifies the thread throughout the system during its existence (i.e. */
+   Gets the thread identifier: this is a platform dependent number that uniquely identifies the thread throughout the system during its existence (i.e. the thread identifiers may be reused). */
 PHP_METHOD(php_wxThread, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3117,7 +3117,7 @@ PHP_METHOD(php_wxThread, GetMainId)
 /* }}} */
 
 /* {{{ proto int wxThread::GetPriority()
-   Gets the priority of the thread, between zero and 100. */
+   Gets the priority of the thread, between 0 (lowest) and 100 (highest). */
 PHP_METHOD(php_wxThread, GetPriority)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3214,7 +3214,7 @@ PHP_METHOD(php_wxThread, GetPriority)
 /* }}} */
 
 /* {{{ proto bool wxThread::IsAlive()
-   Returns true if the thread is alive (i.e. */
+   Returns true if the thread is alive (i.e. started and not terminating). */
 PHP_METHOD(php_wxThread, IsAlive)
 {
 	#ifdef USE_WXPHP_DEBUG
