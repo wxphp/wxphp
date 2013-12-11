@@ -1758,8 +1758,6 @@ class wxTimePickerCtrl_php: public wxTimePickerCtrl{
 	
 	wxTimePickerCtrl_php(wxWindow* parent, wxWindowID id, const wxDateTime& dt=wxDefaultDateTime, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxTP_DEFAULT, const wxValidator& validator=wxDefaultValidator, const wxString& name="timectrl"):wxTimePickerCtrl(parent, id, dt, pos, size, style, validator, name){}
 		
-	void SetValue(const wxDateTime& dt);
-	wxDateTime GetValue() const;
 		
 	void InitProperties(){
 	}
@@ -2023,6 +2021,8 @@ static zend_function_entry php_wxTimePickerCtrl_functions[] = {
 	PHP_ME(php_wxControl, Command, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTimePickerCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxTimePickerCtrl, Create, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTimePickerCtrl, GetValue, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTimePickerCtrl, SetValue, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif

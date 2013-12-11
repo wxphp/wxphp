@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -263,82 +263,6 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 	#endif
 		
 	return (int) Z_LVAL_P(return_value);
-	
-}
-/* }}} */
-
-/* {{{ proto  wxEventLoopBase::Exit(int rc)
-   Exit from the loop with the given exit code. */
-void wxEventLoopBase_php::Exit(int rc)
-{
-	static zend_function* cached_function = NULL;
-	static bool is_php_user_space_implemented = true;
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxEventLoopBase::Exit\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval** params[1];
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Exit", 0);
-	char* temp_string;
-	void* return_object;
-	int function_called;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], rc);
-		
-	for(int i=0; i<1; i++)
-	{
-		params[i] = &arguments[i];
-	}
-
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(is_php_user_space_implemented)
-	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "Exit", 4, &return_value, 1, params TSRMLS_CC);
-	}
-	else
-	{
-		function_called = FAILURE;
-	}
-	
-	//Delete already used parameters from memory
-	for(int i=0; i<1; i++)
-	{
-		efree(arguments[i]);
-	}
-	
-	if(function_called == FAILURE)
-	{
-		is_php_user_space_implemented = false;
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxEventLoopBase::Exit'!", "Error", wxOK|wxICON_ERROR);
-	}
-
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Returning userspace value.\n");
-	#endif
-		
-	return;
 	
 }
 /* }}} */
@@ -1256,6 +1180,126 @@ int wxEventLoopBase_php::Run()
 		
 	return (int) Z_LVAL_P(return_value);
 	
+}
+/* }}} */
+
+/* {{{ proto  wxEventLoopBase::Exit(int rc)
+   Exit the currently running loop with the given exit code. */
+PHP_METHOD(php_wxEventLoopBase, ExitMethod)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxEventLoopBase::Exit\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxEventLoopBase* current_object;
+	wxphp_object_type current_object_type;
+	wxEventLoopBase_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxEventLoopBase*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxEventLoopBase::Exit call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE){
+				references = &((wxEventLoopBase_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long rc0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|l' (&rc0)\n");
+		#endif
+
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rc0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxEventLoopBase::Exit()\n\n");
+				#endif
+
+				if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
+				{
+					((wxEventLoopBase_php*)native_object)->Exit();
+				}
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxEventLoopBase::Exit((int) rc0)\n\n");
+				#endif
+
+				if(current_object_type == PHP_WXEVENTLOOPBASE_TYPE)
+				{
+					((wxEventLoopBase_php*)native_object)->Exit((int) rc0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::Exit\n");
+	}
 }
 /* }}} */
 
@@ -2411,7 +2455,7 @@ PHP_METHOD(php_wxProcess, CloseOutput)
 /* }}} */
 
 /* {{{ proto  wxProcess::Detach()
-   Detaches this event handler from the parent specified in the constructor (see wxEvtHandler::Unlink() for a similar but not identic function). */
+   Detaches this event handler from the parent specified in the constructor (see wxEvtHandler::Unlink() for a similar but not identical function). */
 PHP_METHOD(php_wxProcess, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG

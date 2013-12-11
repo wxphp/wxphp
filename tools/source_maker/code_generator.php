@@ -178,6 +178,10 @@ if(file_exists("./../../json/global_variables.json"))
 	//Temporary black list
 	unset($defGlobals['wxEVT_HOTKEY']);
 	unset($defGlobals['wxNullRegion']);
+	unset($defGlobals['wxEVT_POWER_SUSPENDING']);
+	unset($defGlobals['wxEVT_POWER_SUSPENDED']);
+	unset($defGlobals['wxEVT_POWER_SUSPEND_CANCEL']);
+	unset($defGlobals['wxEVT_POWER_RESUME']);
 }
 
 //Load typedef parsed by the xml_parser

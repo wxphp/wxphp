@@ -16,27 +16,29 @@
 #include "functions.h"
 
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -48,11 +50,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 /**
@@ -3873,6 +3873,110 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 }
 /* }}} */
 
+/* {{{ proto wxDC wxAutoBufferedPaintDCFactory(wxWindow &window)
+   Check if the window is natively double buffered and will return a wxPaintDC if it is, a wxBufferedPaintDC otherwise. */
+PHP_FUNCTION(php_wxAutoBufferedPaintDCFactory)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking function wxAutoBufferedPaintDCFactory\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	void* argument_native_object = NULL;
+	
+	//Variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	zval* dummy;
+	bool already_called = false;
+	bool return_is_user_initialized = false;
+	
+	//Parameters for overload 0
+	zval* window0 = 0;
+	wxWindow* object_pointer0_0 = 0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'z' (&window0)\n");
+		#endif
+
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
+		{
+			if(arguments_received >= 1){
+				if(Z_TYPE_P(window0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(window0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(window0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxWindow*) argument_native_object;
+					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
+					{
+						zend_error(E_ERROR, "Parameter 'window' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(window0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'window' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing ::wxAutoBufferedPaintDCFactory((wxWindow*) object_pointer0_0) to return object pointer\n\n");
+				#endif
+
+				wxDC_php* value_to_return1;
+				value_to_return1 = (wxDC_php*) wxAutoBufferedPaintDCFactory((wxWindow*) object_pointer0_0);
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(value_to_return1->phpObj != NULL){
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
+						return_is_user_initialized = true;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value, php_wxDC_entry);
+					((zo_wxDC*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDC_php*) value_to_return1;
+				}
+
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxAutoBufferedPaintDCFactory()\n");
+	}
+}
+/* }}} */
+
 /* {{{ proto  wxAbort()
    Exits the program immediately. */
 PHP_FUNCTION(php_wxAbort)
@@ -6289,7 +6393,7 @@ PHP_FUNCTION(php_wxIsWild)
 /* }}} */
 
 /* {{{ proto bool wxIsAbsolutePath(string filename)
-   Returns true if the argument is an absolute filename, i.e. */
+   Returns true if the argument is an absolute filename, i.e. with a slash or drive name at the beginning. */
 PHP_FUNCTION(php_wxIsAbsolutePath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7460,7 +7564,8 @@ PHP_FUNCTION(php_wxClientDisplayRect)
 }
 /* }}} */
 
-/* {{{ proto wxRect wxGetClientDisplayRect() */
+/* {{{ proto wxRect wxGetClientDisplayRect()
+   Returns the dimensions of the work area on the display. */
 PHP_FUNCTION(php_wxGetClientDisplayRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7678,7 +7783,8 @@ PHP_FUNCTION(php_wxDisplaySize)
 }
 /* }}} */
 
-/* {{{ proto wxSize wxGetDisplaySize() */
+/* {{{ proto wxSize wxGetDisplaySize()
+   Returns the display size in pixels. */
 PHP_FUNCTION(php_wxGetDisplaySize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7829,7 +7935,8 @@ PHP_FUNCTION(php_wxDisplaySizeMM)
 }
 /* }}} */
 
-/* {{{ proto wxSize wxGetDisplaySizeMM() */
+/* {{{ proto wxSize wxGetDisplaySizeMM()
+   Returns the display size in millimeters. */
 PHP_FUNCTION(php_wxGetDisplaySizeMM)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9054,6 +9161,427 @@ PHP_FUNCTION(php_wxRichTextHasStyle)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxRichTextHasStyle()\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxRichTextCombineBitlists(int &valueA, int valueB, int &flagsA, int flagsB)
+   Combine two bitlists. */
+PHP_FUNCTION(php_wxRichTextCombineBitlists)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking function wxRichTextCombineBitlists\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	void* argument_native_object = NULL;
+	
+	//Variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	zval* dummy;
+	bool already_called = false;
+	bool return_is_user_initialized = false;
+	
+	//Parameters for overload 0
+	long valueA0;
+	zval* valueA0_ref;
+	long valueB0;
+	long flagsA0;
+	zval* flagsA0_ref;
+	long flagsB0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 4)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'llll' (&valueA0, &valueB0, &flagsA0, &flagsB0)\n");
+		#endif
+
+		char parse_parameters_string[] = "llll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valueA0, &valueB0, &flagsA0, &flagsB0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+
+			char parse_references_string[] = "zzzz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &valueA0_ref, &dummy, &flagsA0_ref, &dummy );
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(::wxRichTextCombineBitlists((int&) valueA0, (int) valueB0, (int&) flagsA0, (int) flagsB0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, wxRichTextCombineBitlists((int&) valueA0, (int) valueB0, (int&) flagsA0, (int) flagsB0));
+
+				ZVAL_LONG(valueA0_ref, valueA0);
+				ZVAL_LONG(flagsA0_ref, flagsA0);
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxRichTextCombineBitlists()\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxRichTextBitlistsEqPartial(int valueA, int valueB, int flags)
+   Compare two bitlists. */
+PHP_FUNCTION(php_wxRichTextBitlistsEqPartial)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking function wxRichTextBitlistsEqPartial\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	void* argument_native_object = NULL;
+	
+	//Variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	zval* dummy;
+	bool already_called = false;
+	bool return_is_user_initialized = false;
+	
+	//Parameters for overload 0
+	long valueA0;
+	long valueB0;
+	long flags0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 3)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'lll' (&valueA0, &valueB0, &flags0)\n");
+		#endif
+
+		char parse_parameters_string[] = "lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valueA0, &valueB0, &flags0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(::wxRichTextBitlistsEqPartial((int) valueA0, (int) valueB0, (int) flags0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, wxRichTextBitlistsEqPartial((int) valueA0, (int) valueB0, (int) flags0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxRichTextBitlistsEqPartial()\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxRichTextDecimalToRoman(int n)
+   Convert a decimal to Roman numerals. */
+PHP_FUNCTION(php_wxRichTextDecimalToRoman)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking function wxRichTextDecimalToRoman\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	void* argument_native_object = NULL;
+	
+	//Variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	zval* dummy;
+	bool already_called = false;
+	bool return_is_user_initialized = false;
+	
+	//Parameters for overload 0
+	long n0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&n0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(::wxRichTextDecimalToRoman((long) n0).fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return1;
+				value_to_return1 = wxRichTextDecimalToRoman((long) n0);
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxRichTextDecimalToRoman()\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxTextAttrCollectCommonAttributes(wxTextAttr &currentStyle, wxTextAttr attr, wxTextAttr &clashingAttr, wxTextAttr &absentAttr) */
+PHP_FUNCTION(php_wxTextAttrCollectCommonAttributes)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking function wxTextAttrCollectCommonAttributes\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	void* argument_native_object = NULL;
+	
+	//Variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	zval* dummy;
+	bool already_called = false;
+	bool return_is_user_initialized = false;
+	
+	//Parameters for overload 0
+	zval* currentStyle0 = 0;
+	wxTextAttr* object_pointer0_0 = 0;
+	zval* attr0 = 0;
+	wxTextAttr* object_pointer0_1 = 0;
+	zval* clashingAttr0 = 0;
+	wxTextAttr* object_pointer0_2 = 0;
+	zval* absentAttr0 = 0;
+	wxTextAttr* object_pointer0_3 = 0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 4)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'OOOO' (&currentStyle0, php_wxTextAttr_entry, &attr0, php_wxTextAttr_entry, &clashingAttr0, php_wxTextAttr_entry, &absentAttr0, php_wxTextAttr_entry)\n");
+		#endif
+
+		char parse_parameters_string[] = "OOOO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &currentStyle0, php_wxTextAttr_entry, &attr0, php_wxTextAttr_entry, &clashingAttr0, php_wxTextAttr_entry, &absentAttr0, php_wxTextAttr_entry ) == SUCCESS)
+		{
+			if(arguments_received >= 1){
+				if(Z_TYPE_P(currentStyle0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(currentStyle0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(currentStyle0 TSRMLS_CC))->native_object;
+					object_pointer0_0 = (wxTextAttr*) argument_native_object;
+					if (!object_pointer0_0 )
+					{
+						zend_error(E_ERROR, "Parameter 'currentStyle' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(currentStyle0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'currentStyle' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 2){
+				if(Z_TYPE_P(attr0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(attr0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(attr0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxTextAttr*) argument_native_object;
+					if (!object_pointer0_1 )
+					{
+						zend_error(E_ERROR, "Parameter 'attr' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(attr0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'attr' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 3){
+				if(Z_TYPE_P(clashingAttr0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(clashingAttr0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(clashingAttr0 TSRMLS_CC))->native_object;
+					object_pointer0_2 = (wxTextAttr*) argument_native_object;
+					if (!object_pointer0_2 )
+					{
+						zend_error(E_ERROR, "Parameter 'clashingAttr' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(clashingAttr0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'clashingAttr' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 4){
+				if(Z_TYPE_P(absentAttr0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(absentAttr0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(absentAttr0 TSRMLS_CC))->native_object;
+					object_pointer0_3 = (wxTextAttr*) argument_native_object;
+					if (!object_pointer0_3 )
+					{
+						zend_error(E_ERROR, "Parameter 'absentAttr' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(absentAttr0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'absentAttr' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing ::wxTextAttrCollectCommonAttributes(*(wxTextAttr*) object_pointer0_0, *(wxTextAttr*) object_pointer0_1, *(wxTextAttr*) object_pointer0_2, *(wxTextAttr*) object_pointer0_3)\n\n");
+				#endif
+
+				wxTextAttrCollectCommonAttributes(*(wxTextAttr*) object_pointer0_0, *(wxTextAttr*) object_pointer0_1, *(wxTextAttr*) object_pointer0_2, *(wxTextAttr*) object_pointer0_3);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxTextAttrCollectCommonAttributes()\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxRichTextModuleInit() */
+PHP_FUNCTION(php_wxRichTextModuleInit)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking function wxRichTextModuleInit\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	void* argument_native_object = NULL;
+	
+	//Variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	zval* dummy;
+	bool already_called = false;
+	bool return_is_user_initialized = false;
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing ::wxRichTextModuleInit()\n\n");
+				#endif
+
+				wxRichTextModuleInit();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to wxRichTextModuleInit()\n");
 	}
 }
 /* }}} */
@@ -11700,10 +12228,10 @@ PHP_FUNCTION(php_wxRegisterId)
 			case 1:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxRegisterId((long) id0)\n\n");
+				php_printf("Executing ::wxRegisterId((int) id0)\n\n");
 				#endif
 
-				wxRegisterId((long) id0);
+				wxRegisterId((int) id0);
 
 
 				return;

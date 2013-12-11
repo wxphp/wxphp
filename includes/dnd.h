@@ -249,6 +249,7 @@ static zend_function_entry php_wxDataObjectComposite_functions[] = {
 	PHP_ME(php_wxDataObjectComposite, Add, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectComposite, GetReceivedFormat, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectComposite, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxDataObjectComposite, GetObject, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif
@@ -384,8 +385,9 @@ static zend_function_entry php_wxURLDataObject_functions[] = {
 	PHP_ME(php_wxTextDataObject, GetFormat, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, GetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, GetTextLength, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextDataObject, SetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, GetFormatCount, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTextDataObject, GetAllFormats, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTextDataObject, SetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxURLDataObject, GetURL, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxURLDataObject, SetURL, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxURLDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -401,7 +403,6 @@ class wxTextDataObject_php: public wxTextDataObject{
 	
 	wxTextDataObject_php(const wxString& text=wxEmptyString):wxTextDataObject(text){}
 		
-	void GetAllFormats(wxDataFormat* formats, Direction dir=Get) const;
 		
 	void InitProperties(){
 	}
@@ -435,9 +436,10 @@ static zend_function_entry php_wxTextDataObject_functions[] = {
 	PHP_ME(php_wxTextDataObject, GetFormat, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, GetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, GetTextLength, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTextDataObject, GetFormatCount, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTextDataObject, GetAllFormats, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, SetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxTextDataObject, GetFormatCount, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif

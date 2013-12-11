@@ -55,6 +55,7 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextAttr_functions[] = {
 	PHP_ME(php_wxTextAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxTextAttr, SetFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetURL, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetTextEffects, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetTextEffectFlags, NULL, ZEND_ACC_PUBLIC)
@@ -145,7 +146,6 @@ static zend_function_entry php_wxTextAttr_functions[] = {
 	PHP_ME(php_wxTextAttr, SetBulletText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetCharacterStyleName, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetFlags, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTextAttr, SetFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetFontEncoding, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetFontFaceName, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextAttr, SetFontFamily, NULL, ZEND_ACC_PUBLIC)

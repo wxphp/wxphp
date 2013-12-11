@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -14704,103 +14704,6 @@ PHP_METHOD(php_wxFindReplaceData, GetFindString)
 }
 /* }}} */
 
-/* {{{ proto int wxFindReplaceData::GetFlags()
-   Get the combination of wxFindReplaceFlags values. */
-PHP_METHOD(php_wxFindReplaceData, GetFlags)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxFindReplaceData::GetFlags\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxFindReplaceData* current_object;
-	wxphp_object_type current_object_type;
-	wxFindReplaceData_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxFindReplaceData*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxFindReplaceData::GetFlags call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXFINDREPLACEDATA_TYPE){
-				references = &((wxFindReplaceData_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxFindReplaceData::GetFlags())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxFindReplaceData_php*)native_object)->GetFlags());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::GetFlags\n");
-	}
-}
-/* }}} */
-
 /* {{{ proto string wxFindReplaceData::GetReplaceString()
    Get the replacement string. */
 PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
@@ -14900,6 +14803,103 @@ PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::GetReplaceString\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxFindReplaceData::GetFlags()
+   Get the combination of wxFindReplaceFlags values. */
+PHP_METHOD(php_wxFindReplaceData, GetFlags)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxFindReplaceData::GetFlags\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxFindReplaceData* current_object;
+	wxphp_object_type current_object_type;
+	wxFindReplaceData_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxFindReplaceData*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxFindReplaceData::GetFlags call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXFINDREPLACEDATA_TYPE){
+				references = &((wxFindReplaceData_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxFindReplaceData::GetFlags())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxFindReplaceData_php*)native_object)->GetFlags());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::GetFlags\n");
 	}
 }
 /* }}} */

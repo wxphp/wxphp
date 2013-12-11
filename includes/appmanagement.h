@@ -28,7 +28,6 @@ class wxEventLoopBase_php: public wxEventLoopBase{
 		
 	bool Dispatch();
 	int DispatchTimeout(unsigned long timeout);
-	void Exit(int rc=0);
 	void OnExit();
 	bool Pending() const;
 	int Run();
@@ -65,6 +64,7 @@ static zend_function_entry php_wxEventLoopBase_functions[] = {
 	PHP_ME(php_wxEventLoopBase, IsRunning, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, IsYielding, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, ProcessIdle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEventLoopBase, ExitMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, SetActive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, WakeUpIdle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, Yield, NULL, ZEND_ACC_PUBLIC)

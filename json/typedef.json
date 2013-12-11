@@ -1,5 +1,8 @@
 {
 	"wxThreadIdType":"unsigned long",
+	"wxDocVector":"wxVector< wxDocument * >",
+	"wxViewVector":"wxVector< wxView * >",
+	"wxDocTemplateVector":"wxVector< wxDocTemplate * >",
 	"wxLogLevel":"unsigned long",
 	"wxPGVFBFlags":"wxByte",
 	"wxPGSortCallback":"int(*",
@@ -44,6 +47,7 @@
 	"wxTextAttrDimensionFlags":"unsigned short",
 	"wxScrolledWindow":"wxScrolled< wxPanel >",
 	"wxScrolledCanvas":"wxScrolled< wxWindow >",
+	"wxSOCKET_T":"int",
 	"wxTextCoord":"long",
 	"wxTextPos":"long",
 	"wxTreeListItems":"wxVector< wxTreeListItem >",

@@ -143,6 +143,8 @@ class wxDataViewListModel_php: public wxDataViewListModel{
 	
 		
 	void GetValueByRow(wxVariant& variant, unsigned int row, unsigned int col) const;
+	unsigned int GetCount() const;
+	unsigned int GetRow(const wxDataViewItem& item) const;
 	bool SetValueByRow(const wxVariant& variant, unsigned int row, unsigned int col);
 		
 	void InitProperties(){
@@ -188,8 +190,6 @@ static zend_function_entry php_wxDataViewListModel_functions[] = {
 	PHP_ME(php_wxDataViewModel, Resort, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewModel, ValueChanged, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, GetAttrByRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, IsEnabledByRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
@@ -246,8 +246,6 @@ static zend_function_entry php_wxDataViewIndexListModel_functions[] = {
 	PHP_ME(php_wxDataViewModel, Resort, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewModel, ValueChanged, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, GetAttrByRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, IsEnabledByRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
@@ -304,8 +302,6 @@ static zend_function_entry php_wxDataViewVirtualListModel_functions[] = {
 	PHP_ME(php_wxDataViewModel, Resort, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewModel, ValueChanged, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, GetAttrByRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, IsEnabledByRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
@@ -710,8 +706,8 @@ static zend_function_entry php_wxDataViewSpinRenderer_functions[] = {
 	PHP_ME(php_wxDataViewCustomRenderer, GetAttr, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, HasEditorCtrl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewCustomRenderer, LeftClick, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, RenderText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewCustomRenderer, LeftClick, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, StartDrag, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewSpinRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
@@ -881,8 +877,8 @@ static zend_function_entry php_wxDataViewCustomRenderer_functions[] = {
 	PHP_ME(php_wxDataViewCustomRenderer, GetAttr, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, HasEditorCtrl, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewCustomRenderer, LeftClick, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, RenderText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewCustomRenderer, LeftClick, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, StartDrag, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
@@ -1052,8 +1048,6 @@ static zend_function_entry php_wxDataViewListStore_functions[] = {
 	PHP_ME(php_wxDataViewModel, Resort, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewModel, ValueChanged, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, GetAttrByRow, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetCount, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewListModel, GetRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListModel, IsEnabledByRow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListStore, AppendColumn, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewListStore, DeleteAllItems, NULL, ZEND_ACC_PUBLIC)
@@ -1188,6 +1182,93 @@ static zend_function_entry php_wxDataViewIconText_functions[] = {
 	PHP_ME(php_wxDataViewIconText, SetIcon, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewIconText, SetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewIconText, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_FE_END
+};
+#endif
+
+extern zend_class_entry* php_wxDataViewEvent_entry;
+void php_wxDataViewEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+class wxDataViewEvent_php: public wxDataViewEvent{
+	public:
+	
+	wxDataViewEvent_php(wxEventType commandType=wxEVT_NULL, int winid=0):wxDataViewEvent(commandType, winid){}
+		
+		
+	void InitProperties(){
+	}
+	
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+BEGIN_EXTERN_C()
+struct zo_wxDataViewEvent 
+{
+    zend_object zo;
+    wxDataViewEvent_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxDataViewEvent_free(void *object TSRMLS_DC);
+zend_object_value php_wxDataViewEvent_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
+static zend_function_entry php_wxDataViewEvent_functions[] = {
+	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetEventCategory, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetEventObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetEventType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetId, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetSkipped, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetTimestamp, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, IsCommandEvent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, ResumePropagation, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetEventObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetEventType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetId, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetTimestamp, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, ShouldPropagate, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, Skip, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, StopPropagation, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, SetString, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, SetInt, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, SetExtraLong, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, IsSelection, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, IsChecked, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, GetString, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, GetSelection, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, GetInt, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxCommandEvent, GetExtraLong, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxNotifyEvent, Allow, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxNotifyEvent, IsAllowed, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxNotifyEvent, Veto, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetCacheFrom, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetCacheTo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetColumn, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetDataBuffer, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetDataFormat, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetDataSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetDataViewColumn, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetModel, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetPosition, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetValue, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, IsEditCancelled, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, SetColumn, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, SetDataObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, SetDataViewColumn, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, SetModel, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, SetValue, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
 #endif

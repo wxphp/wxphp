@@ -70,6 +70,12 @@ global_variables.json (Fixed on wxWidgets SVN)
 3. EDIT: "wxITALIC_FONT":"wxFont", > "wxITALIC_FONT":"wxFont*"
 4. EDIT: "wxSWISS_FONT":"wxFont", > "wxSWISS_FONT":"wxFont*"
 
+
 consts.json (Fixed on wxWidgets SVN)
 ======================
 1. Added: "wxTP_DEFAULT":"0"
+
+
+includes.json
+======================
+1. Remove: wx/preferences.h

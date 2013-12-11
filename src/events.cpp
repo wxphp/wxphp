@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -803,7 +803,7 @@ PHP_METHOD(php_wxKeyboardState, GetModifiers)
 /* }}} */
 
 /* {{{ proto bool wxKeyboardState::HasModifiers()
-   Returns true if any modifiers at all are pressed. */
+   Returns true if Control or Alt are pressed. */
 PHP_METHOD(php_wxKeyboardState, HasModifiers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1938,1507 +1938,6 @@ PHP_METHOD(php_wxKeyboardState, __construct)
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxAuiManagerEvent_free(void *object TSRMLS_DC) 
-{
-    zo_wxAuiManagerEvent* custom_object = (zo_wxAuiManagerEvent*) object;
-    //delete custom_object->native_object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxAuiManagerEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxAuiManagerEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
-    efree(custom_object);
-}
-
-zend_object_value php_wxAuiManagerEvent_new(zend_class_entry *class_type TSRMLS_DC)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxAuiManagerEvent_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxAuiManagerEvent* custom_object;
-    custom_object = (zo_wxAuiManagerEvent*) emalloc(sizeof(zo_wxAuiManagerEvent));
-
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
-
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXAUIMANAGEREVENT_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiManagerEvent_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-	
-    return retval;
-}
-END_EXTERN_C()
-
-/* {{{ proto  wxAuiManagerEvent::wxAuiManagerEvent(int type)
-   Constructor. */
-PHP_METHOD(php_wxAuiManagerEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	long type0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&type0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-
-				native_object = new wxAuiManagerEvent_php();
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) type0)\n");
-				#endif
-
-				native_object = new wxAuiManagerEvent_php((wxEventType) type0);
-
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
-		native_object->InitProperties();
-		
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxAuiManagerEvent::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
-/* }}} */
-
-/* {{{ proto  wxAuiManagerEvent::Veto(bool veto)
-   Cancels the action indicated by this event if CanVeto() is true. */
-PHP_METHOD(php_wxAuiManagerEvent, Veto)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::Veto\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::Veto call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool veto0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|b' (&veto0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &veto0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::Veto()\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->Veto();
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::Veto(veto0)\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->Veto(veto0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::Veto\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxAuiManagerEvent::SetPane(wxAuiPaneInfo &pane)
-   Sets the pane this event is associated with. */
-PHP_METHOD(php_wxAuiManagerEvent, SetPane)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::SetPane\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::SetPane call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* pane0 = 0;
-	wxAuiPaneInfo* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&pane0)\n");
-		#endif
-
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pane0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(pane0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxAuiPaneInfo*) zend_object_store_get_object(pane0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxAuiPaneInfo*) zend_object_store_get_object(pane0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxAuiPaneInfo*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXAUIPANEINFO_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'pane' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pane0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pane' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::SetPane((wxAuiPaneInfo*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->SetPane((wxAuiPaneInfo*) object_pointer0_0);
-
-				references->AddReference(pane0, "wxAuiManagerEvent::SetPane at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetPane\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxAuiManagerEvent::SetManager(wxAuiManager &manager)
-   Sets the wxAuiManager this event is associated with. */
-PHP_METHOD(php_wxAuiManagerEvent, SetManager)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::SetManager\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::SetManager call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* manager0 = 0;
-	wxAuiManager* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&manager0)\n");
-		#endif
-
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &manager0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(manager0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxAuiManager*) zend_object_store_get_object(manager0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxAuiManager*) zend_object_store_get_object(manager0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxAuiManager*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXAUIMANAGER_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'manager' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(manager0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'manager' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::SetManager((wxAuiManager*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->SetManager((wxAuiManager*) object_pointer0_0);
-
-				references->AddReference(manager0, "wxAuiManagerEvent::SetManager at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetManager\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxAuiManagerEvent::SetDC(wxDC &pdc) */
-PHP_METHOD(php_wxAuiManagerEvent, SetDC)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::SetDC\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::SetDC call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* pdc0 = 0;
-	wxDC* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&pdc0)\n");
-		#endif
-
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pdc0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(pdc0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(pdc0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(pdc0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'pdc' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pdc0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'pdc' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::SetDC((wxDC*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->SetDC((wxDC*) object_pointer0_0);
-
-				references->AddReference(pdc0, "wxAuiManagerEvent::SetDC at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetDC\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxAuiManagerEvent::SetCanVeto(bool can_veto)
-   Sets whether or not this event can be vetoed. */
-PHP_METHOD(php_wxAuiManagerEvent, SetCanVeto)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::SetCanVeto\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::SetCanVeto call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool can_veto0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'b' (&can_veto0)\n");
-		#endif
-
-		char parse_parameters_string[] = "b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &can_veto0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::SetCanVeto(can_veto0)\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->SetCanVeto(can_veto0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetCanVeto\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxAuiManagerEvent::SetButton(int button)
-   Sets the ID of the button clicked that triggered this event. */
-PHP_METHOD(php_wxAuiManagerEvent, SetButton)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::SetButton\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::SetButton call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long button0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&button0)\n");
-		#endif
-
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::SetButton((int) button0)\n\n");
-				#endif
-
-				((wxAuiManagerEvent_php*)native_object)->SetButton((int) button0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetButton\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto bool wxAuiManagerEvent::GetVeto() */
-PHP_METHOD(php_wxAuiManagerEvent, GetVeto)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::GetVeto\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::GetVeto call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxAuiManagerEvent::GetVeto())\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, ((wxAuiManagerEvent_php*)native_object)->GetVeto());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetVeto\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxAuiPaneInfo wxAuiManagerEvent::GetPane() */
-PHP_METHOD(php_wxAuiManagerEvent, GetPane)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::GetPane\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::GetPane call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::GetPane() to return object pointer\n\n");
-				#endif
-
-				wxAuiPaneInfo_php* value_to_return0;
-				value_to_return0 = (wxAuiPaneInfo_php*) ((wxAuiManagerEvent_php*)native_object)->GetPane();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxAuiPaneInfo_entry);
-					((zo_wxAuiPaneInfo*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxAuiPaneInfo_php*) value_to_return0;
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxAuiManagerEvent::GetPane at call with 0 argument(s)");
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetPane\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxAuiManager wxAuiManagerEvent::GetManager() */
-PHP_METHOD(php_wxAuiManagerEvent, GetManager)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::GetManager\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::GetManager call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::GetManager() to return object pointer\n\n");
-				#endif
-
-				wxAuiManager_php* value_to_return0;
-				value_to_return0 = (wxAuiManager_php*) ((wxAuiManagerEvent_php*)native_object)->GetManager();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxAuiManager_entry);
-					((zo_wxAuiManager*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxAuiManager_php*) value_to_return0;
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxAuiManagerEvent::GetManager at call with 0 argument(s)");
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetManager\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxDC wxAuiManagerEvent::GetDC() */
-PHP_METHOD(php_wxAuiManagerEvent, GetDC)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::GetDC\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::GetDC call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxAuiManagerEvent::GetDC() to return object pointer\n\n");
-				#endif
-
-				wxDC_php* value_to_return0;
-				value_to_return0 = (wxDC_php*) ((wxAuiManagerEvent_php*)native_object)->GetDC();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxDC_entry);
-					((zo_wxDC*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDC_php*) value_to_return0;
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxAuiManagerEvent::GetDC at call with 0 argument(s)");
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetDC\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxAuiManagerEvent::GetButton() */
-PHP_METHOD(php_wxAuiManagerEvent, GetButton)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::GetButton\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::GetButton call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxAuiManagerEvent::GetButton())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxAuiManagerEvent_php*)native_object)->GetButton());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetButton\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto bool wxAuiManagerEvent::CanVeto() */
-PHP_METHOD(php_wxAuiManagerEvent, CanVeto)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxAuiManagerEvent::CanVeto\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxAuiManagerEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxAuiManagerEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxAuiManagerEvent::CanVeto call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXAUIMANAGEREVENT_TYPE){
-				references = &((wxAuiManagerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxAuiManagerEvent::CanVeto())\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, ((wxAuiManagerEvent_php*)native_object)->CanVeto());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::CanVeto\n");
-	}
-}
-/* }}} */
-
-BEGIN_EXTERN_C()
 void php_wxCalendarEvent_free(void *object TSRMLS_DC) 
 {
     zo_wxCalendarEvent* custom_object = (zo_wxCalendarEvent*) object;
@@ -4526,1923 +3025,6 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 	else
 	{
 		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxCollapsiblePaneEvent::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
-/* }}} */
-
-BEGIN_EXTERN_C()
-void php_wxDataViewEvent_free(void *object TSRMLS_DC) 
-{
-    zo_wxDataViewEvent* custom_object = (zo_wxDataViewEvent*) object;
-    //delete custom_object->native_object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataViewEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataViewEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
-    efree(custom_object);
-}
-
-zend_object_value php_wxDataViewEvent_new(zend_class_entry *class_type TSRMLS_DC)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataViewEvent_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxDataViewEvent* custom_object;
-    custom_object = (zo_wxDataViewEvent*) emalloc(sizeof(zo_wxDataViewEvent));
-
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
-
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXDATAVIEWEVENT_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewEvent_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-	
-    return retval;
-}
-END_EXTERN_C()
-
-/* {{{ proto int wxDataViewEvent::GetCacheFrom()
-   Return the first row that will be displayed. */
-PHP_METHOD(php_wxDataViewEvent, GetCacheFrom)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetCacheFrom\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetCacheFrom call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataViewEvent::GetCacheFrom())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxDataViewEvent_php*)native_object)->GetCacheFrom());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetCacheFrom\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxDataViewEvent::GetCacheTo()
-   Return the last row that will be displayed. */
-PHP_METHOD(php_wxDataViewEvent, GetCacheTo)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetCacheTo\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetCacheTo call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataViewEvent::GetCacheTo())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxDataViewEvent_php*)native_object)->GetCacheTo());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetCacheTo\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxDataViewEvent::GetColumn()
-   Returns the position of the column in the control or -1 if no column field was set by the event emitter. */
-PHP_METHOD(php_wxDataViewEvent, GetColumn)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetColumn\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetColumn call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataViewEvent::GetColumn())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxDataViewEvent_php*)native_object)->GetColumn());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetColumn\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto void wxDataViewEvent::GetDataBuffer()
-   Gets the data buffer for a drop data transfer. */
-PHP_METHOD(php_wxDataViewEvent, GetDataBuffer)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetDataBuffer\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetDataBuffer call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetDataBuffer()\n\n");
-				#endif
-
-				ZVAL_STRING(return_value, (char*) ((wxDataViewEvent_php*)native_object)->GetDataBuffer(), 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataBuffer\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxDataFormat wxDataViewEvent::GetDataFormat()
-   Gets the wxDataFormat during a drop operation. */
-PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetDataFormat\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetDataFormat call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetDataFormat() to return new object\n\n");
-				#endif
-
-				wxDataFormat value_to_return0;
-				value_to_return0 = ((wxDataViewEvent_php*)native_object)->GetDataFormat();
-				void* ptr = safe_emalloc(1, sizeof(wxDataFormat_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
-				object_init_ex(return_value, php_wxDataFormat_entry);
-				((zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataFormat_php*) ptr;
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataFormat\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxDataViewEvent::GetDataSize()
-   Gets the data size for a drop data transfer. */
-PHP_METHOD(php_wxDataViewEvent, GetDataSize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetDataSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetDataSize call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDataViewEvent::GetDataSize())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxDataViewEvent_php*)native_object)->GetDataSize());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataSize\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxDataViewColumn wxDataViewEvent::GetDataViewColumn()
-   Returns a pointer to the wxDataViewColumn from which the event was emitted or NULL. */
-PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetDataViewColumn\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetDataViewColumn call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetDataViewColumn() to return object pointer\n\n");
-				#endif
-
-				wxDataViewColumn_php* value_to_return0;
-				value_to_return0 = (wxDataViewColumn_php*) ((wxDataViewEvent_php*)native_object)->GetDataViewColumn();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxDataViewColumn_entry);
-					((zo_wxDataViewColumn*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewColumn_php*) value_to_return0;
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxDataViewEvent::GetDataViewColumn at call with 0 argument(s)");
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataViewColumn\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxDataViewModel wxDataViewEvent::GetModel()
-   Returns the wxDataViewModel associated with the event. */
-PHP_METHOD(php_wxDataViewEvent, GetModel)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetModel\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetModel call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetModel() to return object pointer\n\n");
-				#endif
-
-				wxDataViewModel_php* value_to_return0;
-				value_to_return0 = (wxDataViewModel_php*) ((wxDataViewEvent_php*)native_object)->GetModel();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value, php_wxDataViewModel_entry);
-					((zo_wxDataViewModel*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewModel_php*) value_to_return0;
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxDataViewEvent::GetModel at call with 0 argument(s)");
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetModel\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxPoint wxDataViewEvent::GetPosition()
-   Returns the position of a context menu event in screen coordinates. */
-PHP_METHOD(php_wxDataViewEvent, GetPosition)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetPosition\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetPosition call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetPosition() to return new object\n\n");
-				#endif
-
-				wxPoint value_to_return0;
-				value_to_return0 = ((wxDataViewEvent_php*)native_object)->GetPosition();
-				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
-				object_init_ex(return_value, php_wxPoint_entry);
-				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetPosition\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto wxVariant wxDataViewEvent::GetValue()
-   Returns a reference to a value. */
-PHP_METHOD(php_wxDataViewEvent, GetValue)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::GetValue call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetValue() to return object reference\n\n");
-				#endif
-
-				wxVariant_php* value_to_return0;
-				value_to_return0 = (wxVariant_php*) &((wxDataViewEvent_php*)native_object)->GetValue();
-
-				if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxVariant_entry);
-					((zo_wxVariant*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxVariant_php*) value_to_return0;
-				}
-
-				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxDataViewEvent::GetValue at call with 0 argument(s)");
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetValue\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto bool wxDataViewEvent::IsEditCancelled()
-   Can be used to determine whether the new value is going to be accepted in wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_DONE handler. */
-PHP_METHOD(php_wxDataViewEvent, IsEditCancelled)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::IsEditCancelled\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::IsEditCancelled call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDataViewEvent::IsEditCancelled())\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, ((wxDataViewEvent_php*)native_object)->IsEditCancelled());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::IsEditCancelled\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxDataViewEvent::SetColumn(int col)
-   Sets the column index associated with this event. */
-PHP_METHOD(php_wxDataViewEvent, SetColumn)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetColumn\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::SetColumn call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long col0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&col0)\n");
-		#endif
-
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetColumn((int) col0)\n\n");
-				#endif
-
-				((wxDataViewEvent_php*)native_object)->SetColumn((int) col0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetColumn\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxDataViewEvent::SetDataObject(wxDataObject &obj)
-   Set wxDataObject for data transfer within a drag operation. */
-PHP_METHOD(php_wxDataViewEvent, SetDataObject)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetDataObject\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::SetDataObject call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* obj0 = 0;
-	wxDataObject* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&obj0)\n");
-		#endif
-
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &obj0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(obj0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxDataObject*) zend_object_store_get_object(obj0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxDataObject*) zend_object_store_get_object(obj0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxDataObject*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'obj' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(obj0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'obj' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetDataObject((wxDataObject*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxDataViewEvent_php*)native_object)->SetDataObject((wxDataObject*) object_pointer0_0);
-
-				references->AddReference(obj0, "wxDataViewEvent::SetDataObject at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataObject\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxDataViewEvent::SetDataViewColumn(wxDataViewColumn &col)
-   For wxEVT_DATAVIEW_COLUMN_HEADER_CLICK only. */
-PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetDataViewColumn\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::SetDataViewColumn call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* col0 = 0;
-	wxDataViewColumn* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&col0)\n");
-		#endif
-
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(col0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxDataViewColumn*) zend_object_store_get_object(col0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxDataViewColumn*) zend_object_store_get_object(col0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxDataViewColumn*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWCOLUMN_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'col' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(col0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'col' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetDataViewColumn((wxDataViewColumn*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxDataViewEvent_php*)native_object)->SetDataViewColumn((wxDataViewColumn*) object_pointer0_0);
-
-				references->AddReference(col0, "wxDataViewEvent::SetDataViewColumn at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataViewColumn\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxDataViewEvent::SetModel(wxDataViewModel &model)
-   Sets the dataview model associated with this event. */
-PHP_METHOD(php_wxDataViewEvent, SetModel)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetModel\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::SetModel call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* model0 = 0;
-	wxDataViewModel* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&model0)\n");
-		#endif
-
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &model0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(model0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxDataViewModel*) zend_object_store_get_object(model0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxDataViewModel*) zend_object_store_get_object(model0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxDataViewModel*) argument_native_object;
-					if (!object_pointer0_0 || (argument_type != PHP_WXDATAVIEWMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWINDEXLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWLISTSTORE_TYPE && argument_type != PHP_WXDATAVIEWVIRTUALLISTMODEL_TYPE && argument_type != PHP_WXDATAVIEWTREESTORE_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'model' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(model0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'model' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetModel((wxDataViewModel*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxDataViewEvent_php*)native_object)->SetModel((wxDataViewModel*) object_pointer0_0);
-
-				references->AddReference(model0, "wxDataViewEvent::SetModel at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetModel\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxDataViewEvent::SetValue(wxVariant value)
-   Sets the value associated with this event. */
-PHP_METHOD(php_wxDataViewEvent, SetValue)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetValue\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxDataViewEvent::SetValue call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXDATAVIEWEVENT_TYPE){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* value0 = 0;
-	wxVariant* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&value0, php_wxVariant_entry)\n");
-		#endif
-
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(value0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxVariant*) zend_object_store_get_object(value0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxVariant*) zend_object_store_get_object(value0 TSRMLS_CC))->native_object;
-					object_pointer0_0 = (wxVariant*) argument_native_object;
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter 'value' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(value0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'value' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetValue(*(wxVariant*) object_pointer0_0)\n\n");
-				#endif
-
-				((wxDataViewEvent_php*)native_object)->SetValue(*(wxVariant*) object_pointer0_0);
-
-				references->AddReference(value0, "wxDataViewEvent::SetValue at call with 1 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetValue\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxDataViewEvent::wxDataViewEvent(int commandType, int winid)
-   Constructor. */
-PHP_METHOD(php_wxDataViewEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxDataViewEvent* current_object;
-	wxDataViewEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	long commandType0;
-	long winid0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|ll' (&commandType0, &winid0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &winid0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-
-				native_object = new wxDataViewEvent_php();
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) commandType0)\n");
-				#endif
-
-				native_object = new wxDataViewEvent_php((wxEventType) commandType0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) commandType0, (int) winid0)\n");
-				#endif
-
-				native_object = new wxDataViewEvent_php((wxEventType) commandType0, (int) winid0);
-
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
-		native_object->InitProperties();
-		
-		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDataViewEvent::__construct\n");
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -7600,7 +4182,7 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 /* }}} */
 
 /* {{{ proto int wxEvent::GetEventType()
-   Returns the identifier of the given event type, such as wxEVT_COMMAND_BUTTON_CLICKED. */
+   Returns the identifier of the given event type, such as wxEVT_BUTTON. */
 PHP_METHOD(php_wxEvent, GetEventType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11386,7 +7968,7 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 /* }}} */
 
 /* {{{ proto bool wxEvent::ShouldPropagate()
-   Test if this event should be propagated or not, i.e. */
+   Test if this event should be propagated or not, i.e. if the propagation level is currently greater than 0. */
 PHP_METHOD(php_wxEvent, ShouldPropagate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25356,10 +21938,8 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	long* x1;
-	zval* x1_ref;
-	long* y1;
-	zval* y1_ref;
+	long x1;
+	long y1;
 	bool overload1_called = false;
 		
 	//Overload 0
@@ -25381,17 +21961,14 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (x1, y1)\n");
+		php_printf("Parsing parameters with 'll' (&x1, &y1)\n");
 		#endif
 
 		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x1, y1 ) == SUCCESS)
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x1, &y1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &x1_ref, &y1_ref );
 		}
 	}
 
@@ -25427,23 +22004,11 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 			case 2:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxKeyEvent::GetPosition((long*) x1, (long*) y1)\n\n");
+				php_printf("Executing wxKeyEvent::GetPosition((wxCoord*) x1, (wxCoord*) y1)\n\n");
 				#endif
 
-				((wxKeyEvent_php*)native_object)->GetPosition((long*) x1, (long*) y1);
+				((wxKeyEvent_php*)native_object)->GetPosition((wxCoord*) x1, (wxCoord*) y1);
 
-				size_t elements_returned1_0 = sizeof(x1)/sizeof(*x1);
-				array_init(x1_ref);
-				for(size_t i=0; i<elements_returned1_0; i++)
-				{
-					add_next_index_long(x1_ref, x1[i]);
-				}
-				size_t elements_returned1_1 = sizeof(y1)/sizeof(*y1);
-				array_init(y1_ref);
-				for(size_t i=0; i<elements_returned1_1; i++)
-				{
-					add_next_index_long(y1_ref, y1[i]);
-				}
 
 				return;
 				break;
@@ -26898,6 +23463,2565 @@ PHP_METHOD(php_wxSysColourChangedEvent, __construct)
 	#ifdef USE_WXPHP_DEBUG
 		php_printf("===========================================\n\n");
 	#endif
+}
+/* }}} */
+
+BEGIN_EXTERN_C()
+void php_wxCommandEvent_free(void *object TSRMLS_DC) 
+{
+    zo_wxCommandEvent* custom_object = (zo_wxCommandEvent*) object;
+    //delete custom_object->native_object;
+    
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxCommandEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	if(custom_object->native_object != NULL)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Pointer not null\n");
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
+		#endif
+		
+		if(custom_object->is_user_initialized)
+		{
+			#ifdef USE_WXPHP_DEBUG
+			php_printf("Deleting pointer with delete\n");
+			#endif
+			
+			delete custom_object->native_object;
+			
+			custom_object->native_object = NULL;
+		}
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Deletion of wxCommandEvent done\n");
+		php_printf("===========================================\n\n");
+		#endif
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Not user space initialized\n");
+		#endif
+	}
+
+	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
+    efree(custom_object);
+}
+
+zend_object_value php_wxCommandEvent_new(zend_class_entry *class_type TSRMLS_DC)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxCommandEvent_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *temp;
+    zend_object_value retval;
+    zo_wxCommandEvent* custom_object;
+    custom_object = (zo_wxCommandEvent*) emalloc(sizeof(zo_wxCommandEvent));
+
+    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+
+#if PHP_VERSION_ID < 50399
+	ALLOC_HASHTABLE(custom_object->zo.properties);
+    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
+    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
+#else
+	object_properties_init(&custom_object->zo, class_type);
+#endif
+
+    custom_object->native_object = NULL;
+    custom_object->object_type = PHP_WXCOMMANDEVENT_TYPE;
+    custom_object->is_user_initialized = 0;
+
+    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCommandEvent_free, NULL TSRMLS_CC);
+	retval.handlers = zend_get_std_object_handlers();
+	
+    return retval;
+}
+END_EXTERN_C()
+
+/* {{{ proto  wxCommandEvent::wxCommandEvent(int commandEventType, int id)
+   Constructor. */
+PHP_METHOD(php_wxCommandEvent, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
+	
+	//Parameters for overload 0
+	long commandEventType0;
+	long id0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|ll' (&commandEventType0, &id0)\n");
+		#endif
+
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandEventType0, &id0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct()\n");
+				#endif
+
+				native_object = new wxCommandEvent_php();
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) commandEventType0)\n");
+				#endif
+
+				native_object = new wxCommandEvent_php((wxEventType) commandEventType0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) commandEventType0, (int) id0)\n");
+				#endif
+
+				native_object = new wxCommandEvent_php((wxEventType) commandEventType0, (int) id0);
+
+				native_object->references.Initialize();
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		native_object->phpObj = getThis();
+		
+		native_object->InitProperties();
+		
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
+		
+		#ifdef ZTS 
+		native_object->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxCommandEvent::__construct\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
+
+/* {{{ proto  wxCommandEvent::SetString(string string)
+   Sets the m_commandString member. */
+PHP_METHOD(php_wxCommandEvent, SetString)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::SetString\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::SetString call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	char* string0;
+	long string_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's' (&string0, &string_len0)\n");
+		#endif
+
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxCommandEvent::SetString(wxString(string0, wxConvUTF8))\n\n");
+				#endif
+
+				((wxCommandEvent_php*)native_object)->SetString(wxString(string0, wxConvUTF8));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetString\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxCommandEvent::SetInt(int intCommand)
+   Sets the m_commandInt member. */
+PHP_METHOD(php_wxCommandEvent, SetInt)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::SetInt\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::SetInt call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long intCommand0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&intCommand0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &intCommand0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxCommandEvent::SetInt((int) intCommand0)\n\n");
+				#endif
+
+				((wxCommandEvent_php*)native_object)->SetInt((int) intCommand0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetInt\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxCommandEvent::SetExtraLong(int extraLong)
+   Sets the m_extraLong member. */
+PHP_METHOD(php_wxCommandEvent, SetExtraLong)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::SetExtraLong\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::SetExtraLong call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long extraLong0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&extraLong0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraLong0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxCommandEvent::SetExtraLong((long) extraLong0)\n\n");
+				#endif
+
+				((wxCommandEvent_php*)native_object)->SetExtraLong((long) extraLong0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetExtraLong\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxCommandEvent::IsSelection()
+   For a listbox or similar event, returns true if it is a selection, false if it is a deselection. */
+PHP_METHOD(php_wxCommandEvent, IsSelection)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::IsSelection\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::IsSelection call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxCommandEvent::IsSelection())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxCommandEvent_php*)native_object)->IsSelection());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::IsSelection\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxCommandEvent::IsChecked()
+   This method can be used with checkbox and menu events: for the checkboxes, the method returns true for a selection event and false for a deselection one. */
+PHP_METHOD(php_wxCommandEvent, IsChecked)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::IsChecked\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::IsChecked call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxCommandEvent::IsChecked())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxCommandEvent_php*)native_object)->IsChecked());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::IsChecked\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxCommandEvent::GetString()
+   Returns item string for a listbox or choice selection event. */
+PHP_METHOD(php_wxCommandEvent, GetString)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::GetString\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetString call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxCommandEvent::GetString().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxCommandEvent_php*)native_object)->GetString();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetString\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxCommandEvent::GetSelection()
+   Returns item index for a listbox or choice selection event (not valid for a deselection). */
+PHP_METHOD(php_wxCommandEvent, GetSelection)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::GetSelection\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetSelection call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxCommandEvent::GetSelection())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetSelection());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetSelection\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxCommandEvent::GetInt()
+   Returns the integer identifier corresponding to a listbox, choice or radiobox selection (only if the event was a selection, not a deselection), or a boolean value representing the value of a checkbox. */
+PHP_METHOD(php_wxCommandEvent, GetInt)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::GetInt\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetInt call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxCommandEvent::GetInt())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetInt());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetInt\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxCommandEvent::GetExtraLong()
+   Returns extra information dependent on the event objects type. */
+PHP_METHOD(php_wxCommandEvent, GetExtraLong)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxCommandEvent::GetExtraLong\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxCommandEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxCommandEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetExtraLong call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
+				references = &((wxCommandEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxNotifyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxTreeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxBookCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiNotebookEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxAuiToolBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxListEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSplitterEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSpinDoubleEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridSizeEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWizardEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDataViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxStyledTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxChildFocusEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlCellEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHtmlLinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHyperlinkEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxColourPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFontPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxScrollEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxDateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCalendarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowCreateEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxWindowDestroyEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxUpdateUIEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxHelpEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxClipboardTextEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileCtrlEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxSashEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxFileDirPickerEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxContextMenuEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxCommandEvent::GetExtraLong())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetExtraLong());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetExtraLong\n");
+	}
 }
 /* }}} */
 
@@ -31334,7 +30458,7 @@ PHP_METHOD(php_wxMouseEvent, GetLinesPerAction)
 /* }}} */
 
 /* {{{ proto wxPoint wxMouseEvent::GetLogicalPosition(wxDC dc)
-   Returns the logical mouse position in pixels (i.e. */
+   Returns the logical mouse position in pixels (i.e. translated according to the translation set for the DC, which usually indicates that the window has been scrolled). */
 PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33207,2565 +32331,6 @@ PHP_METHOD(php_wxMouseEvent, GetWheelAxis)
 /* }}} */
 
 BEGIN_EXTERN_C()
-void php_wxCommandEvent_free(void *object TSRMLS_DC) 
-{
-    zo_wxCommandEvent* custom_object = (zo_wxCommandEvent*) object;
-    //delete custom_object->native_object;
-    
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxCommandEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxCommandEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-
-	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
-    efree(custom_object);
-}
-
-zend_object_value php_wxCommandEvent_new(zend_class_entry *class_type TSRMLS_DC)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxCommandEvent_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxCommandEvent* custom_object;
-    custom_object = (zo_wxCommandEvent*) emalloc(sizeof(zo_wxCommandEvent));
-
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
-
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
-
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXCOMMANDEVENT_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCommandEvent_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-	
-    return retval;
-}
-END_EXTERN_C()
-
-/* {{{ proto  wxCommandEvent::wxCommandEvent(int commandEventType, int id)
-   Constructor. */
-PHP_METHOD(php_wxCommandEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	long commandEventType0;
-	long id0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|ll' (&commandEventType0, &id0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandEventType0, &id0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-
-				native_object = new wxCommandEvent_php();
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) commandEventType0)\n");
-				#endif
-
-				native_object = new wxCommandEvent_php((wxEventType) commandEventType0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) commandEventType0, (int) id0)\n");
-				#endif
-
-				native_object = new wxCommandEvent_php((wxEventType) commandEventType0, (int) id0);
-
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
-		native_object->InitProperties();
-		
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxCommandEvent::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
-/* }}} */
-
-/* {{{ proto  wxCommandEvent::SetString(string string)
-   Sets the m_commandString member. */
-PHP_METHOD(php_wxCommandEvent, SetString)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::SetString\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::SetString call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* string0;
-	long string_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&string0, &string_len0)\n");
-		#endif
-
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxCommandEvent::SetString(wxString(string0, wxConvUTF8))\n\n");
-				#endif
-
-				((wxCommandEvent_php*)native_object)->SetString(wxString(string0, wxConvUTF8));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetString\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxCommandEvent::SetInt(int intCommand)
-   Sets the m_commandInt member. */
-PHP_METHOD(php_wxCommandEvent, SetInt)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::SetInt\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::SetInt call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long intCommand0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&intCommand0)\n");
-		#endif
-
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &intCommand0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxCommandEvent::SetInt((int) intCommand0)\n\n");
-				#endif
-
-				((wxCommandEvent_php*)native_object)->SetInt((int) intCommand0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetInt\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxCommandEvent::SetExtraLong(int extraLong)
-   Sets the m_extraLong member. */
-PHP_METHOD(php_wxCommandEvent, SetExtraLong)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::SetExtraLong\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::SetExtraLong call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long extraLong0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&extraLong0)\n");
-		#endif
-
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraLong0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxCommandEvent::SetExtraLong((long) extraLong0)\n\n");
-				#endif
-
-				((wxCommandEvent_php*)native_object)->SetExtraLong((long) extraLong0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetExtraLong\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto bool wxCommandEvent::IsSelection()
-   For a listbox or similar event, returns true if it is a selection, false if it is a deselection. */
-PHP_METHOD(php_wxCommandEvent, IsSelection)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::IsSelection\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::IsSelection call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxCommandEvent::IsSelection())\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, ((wxCommandEvent_php*)native_object)->IsSelection());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::IsSelection\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto bool wxCommandEvent::IsChecked()
-   This method can be used with checkbox and menu events: for the checkboxes, the method returns true for a selection event and false for a deselection one. */
-PHP_METHOD(php_wxCommandEvent, IsChecked)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::IsChecked\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::IsChecked call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxCommandEvent::IsChecked())\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, ((wxCommandEvent_php*)native_object)->IsChecked());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::IsChecked\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto string wxCommandEvent::GetString()
-   Returns item string for a listbox or choice selection event. */
-PHP_METHOD(php_wxCommandEvent, GetString)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::GetString\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetString call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxCommandEvent::GetString().fn_str(), 1)\n\n");
-				#endif
-
-				wxString value_to_return0;
-				value_to_return0 = ((wxCommandEvent_php*)native_object)->GetString();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetString\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxCommandEvent::GetSelection()
-   Returns item index for a listbox or choice selection event (not valid for a deselection). */
-PHP_METHOD(php_wxCommandEvent, GetSelection)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::GetSelection\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetSelection call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxCommandEvent::GetSelection())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetSelection());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetSelection\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxCommandEvent::GetInt()
-   Returns the integer identifier corresponding to a listbox, choice or radiobox selection (only if the event was a selection, not a deselection), or a boolean value representing the value of a checkbox. */
-PHP_METHOD(php_wxCommandEvent, GetInt)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::GetInt\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetInt call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxCommandEvent::GetInt())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetInt());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetInt\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxCommandEvent::GetExtraLong()
-   Returns extra information dependent on the event objects type. */
-PHP_METHOD(php_wxCommandEvent, GetExtraLong)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxCommandEvent::GetExtraLong\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxCommandEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxCommandEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxCommandEvent::GetExtraLong call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXCOMMANDEVENT_TYPE){
-				references = &((wxCommandEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXNOTIFYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxNotifyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXTREEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxTreeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXBOOKCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxBookCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUINOTEBOOKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiNotebookEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXAUITOOLBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxAuiToolBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXLISTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPLITTEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSplitterEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSPINDOUBLEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSpinDoubleEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDSIZEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridSizeEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWIZARDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWizardEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATAVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDataViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHEADERCTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHeaderCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWebViewEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCHILDFOCUSEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxChildFocusEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLCELLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlCellEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHTMLLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHtmlLinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHYPERLINKEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHyperlinkEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLOURPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxColourPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFONTPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFontPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSCROLLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxScrollEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWMODALDIALOGEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowModalDialogEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXDATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxDateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCALENDAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCalendarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWCREATEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowCreateEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXWINDOWDESTROYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxWindowDestroyEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXUPDATEUIEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxUpdateUIEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXHELPEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxHelpEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXGRIDEDITORCREATEDEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxGridEditorCreatedEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCOLLAPSIBLEPANEEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxCollapsiblePaneEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCLIPBOARDTEXTEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxClipboardTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILECTRLEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileCtrlEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXSASHEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxSashEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXFILEDIRPICKEREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxFileDirPickerEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXCONTEXTMENUEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxContextMenuEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONBUTTONBAREVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonButtonBarEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-			if((current_object_type == PHP_WXRIBBONGALLERYEVENT_TYPE) && (!reference_type_found)){
-				references = &((wxRibbonGalleryEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxCommandEvent::GetExtraLong())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxCommandEvent_php*)native_object)->GetExtraLong());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetExtraLong\n");
-	}
-}
-/* }}} */
-
-BEGIN_EXTERN_C()
 void php_wxActivateEvent_free(void *object TSRMLS_DC) 
 {
     zo_wxActivateEvent* custom_object = (zo_wxActivateEvent*) object;
@@ -35842,6 +32407,140 @@ zend_object_value php_wxActivateEvent_new(zend_class_entry *class_type TSRMLS_DC
     return retval;
 }
 END_EXTERN_C()
+
+/* {{{ proto  wxActivateEvent::wxActivateEvent(int eventType, bool active, int id, Reason ActivationReason)
+   Constructor. */
+PHP_METHOD(php_wxActivateEvent, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxActivateEvent::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxActivateEvent* current_object;
+	wxActivateEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
+	
+	//Parameters for overload 0
+	long eventType0;
+	bool active0;
+	long id0;
+	long ActivationReason0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 4)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|lbll' (&eventType0, &active0, &id0, &ActivationReason0)\n");
+		#endif
+
+		char parse_parameters_string[] = "|lbll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &active0, &id0, &ActivationReason0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct()\n");
+				#endif
+
+				native_object = new wxActivateEvent_php();
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) eventType0)\n");
+				#endif
+
+				native_object = new wxActivateEvent_php((wxEventType) eventType0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) eventType0, active0)\n");
+				#endif
+
+				native_object = new wxActivateEvent_php((wxEventType) eventType0, active0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) eventType0, active0, (int) id0)\n");
+				#endif
+
+				native_object = new wxActivateEvent_php((wxEventType) eventType0, active0, (int) id0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) eventType0, active0, (int) id0, (wxActivateEvent::Reason) ActivationReason0)\n");
+				#endif
+
+				native_object = new wxActivateEvent_php((wxEventType) eventType0, active0, (int) id0, (wxActivateEvent::Reason) ActivationReason0);
+
+				native_object->references.Initialize();
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		native_object->phpObj = getThis();
+		
+		native_object->InitProperties();
+		
+		current_object = (zo_wxActivateEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
+		
+		#ifdef ZTS 
+		native_object->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxActivateEvent::__construct\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
 
 /* {{{ proto bool wxActivateEvent::GetActive()
    Returns true if the application or window is being activated, false otherwise. */
@@ -35937,128 +32636,6 @@ PHP_METHOD(php_wxActivateEvent, GetActive)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxActivateEvent::GetActive\n");
 	}
-}
-/* }}} */
-
-/* {{{ proto  wxActivateEvent::wxActivateEvent(int eventType, bool active, int id)
-   Constructor. */
-PHP_METHOD(php_wxActivateEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxActivateEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxActivateEvent* current_object;
-	wxActivateEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	long eventType0;
-	bool active0;
-	long id0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|lbl' (&eventType0, &active0, &id0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|lbl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &active0, &id0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-
-				native_object = new wxActivateEvent_php();
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) eventType0)\n");
-				#endif
-
-				native_object = new wxActivateEvent_php((wxEventType) eventType0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) eventType0, active0)\n");
-				#endif
-
-				native_object = new wxActivateEvent_php((wxEventType) eventType0, active0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) eventType0, active0, (int) id0)\n");
-				#endif
-
-				native_object = new wxActivateEvent_php((wxEventType) eventType0, active0, (int) id0);
-
-				native_object->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
-		native_object->InitProperties();
-		
-		current_object = (zo_wxActivateEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxActivateEvent::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
 }
 /* }}} */
 
@@ -39348,7 +35925,7 @@ zend_object_value php_wxHelpEvent_new(zend_class_entry *class_type TSRMLS_DC)
 END_EXTERN_C()
 
 /* {{{ proto wxHelpEvent::Origin wxHelpEvent::GetOrigin()
-   Returns the origin of the help event which is one of the ::wxHelpEventOrigin values. */
+   Returns the origin of the help event which is one of the wxHelpEvent::Origin values. */
 PHP_METHOD(php_wxHelpEvent, GetOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50655,6 +47232,108 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ControlDown)
 }
 /* }}} */
 
+/* {{{ proto wxGridCellCoords wxGridRangeSelectEvent::GetBottomRightCoords()
+   Top left corner of the rectangular area that was (de)selected. */
+PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRightCoords)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridRangeSelectEvent::GetBottomRightCoords\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridRangeSelectEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxGridRangeSelectEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridRangeSelectEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridRangeSelectEvent::GetBottomRightCoords call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxGridRangeSelectEvent::GetBottomRightCoords() to return new object\n\n");
+				#endif
+
+				wxGridCellCoords value_to_return0;
+				value_to_return0 = ((wxGridRangeSelectEvent_php*)native_object)->GetBottomRightCoords();
+				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
+				object_init_ex(return_value, php_wxGridCellCoords_entry);
+				((zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGridCellCoords_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetBottomRightCoords\n");
+	}
+}
+/* }}} */
+
 /* {{{ proto int wxGridRangeSelectEvent::GetBottomRow()
    Bottom row of the rectangular area that was (de)selected. */
 PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRow)
@@ -50942,6 +47621,108 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetRightCol)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetRightCol\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxGridCellCoords wxGridRangeSelectEvent::GetTopLeftCoords()
+   Top left corner of the rectangular area that was (de)selected. */
+PHP_METHOD(php_wxGridRangeSelectEvent, GetTopLeftCoords)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxGridRangeSelectEvent::GetTopLeftCoords\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxGridRangeSelectEvent* current_object;
+	wxphp_object_type current_object_type;
+	wxGridRangeSelectEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxGridRangeSelectEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxGridRangeSelectEvent::GetTopLeftCoords call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXGRIDRANGESELECTEVENT_TYPE){
+				references = &((wxGridRangeSelectEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxGridRangeSelectEvent::GetTopLeftCoords() to return new object\n\n");
+				#endif
+
+				wxGridCellCoords value_to_return0;
+				value_to_return0 = ((wxGridRangeSelectEvent_php*)native_object)->GetTopLeftCoords();
+				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
+				object_init_ex(return_value, php_wxGridCellCoords_entry);
+				((zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGridCellCoords_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetTopLeftCoords\n");
 	}
 }
 /* }}} */
@@ -51355,6 +48136,19 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
+	//Parameters for overload 1
+	long id1;
+	long type1;
+	zval* obj1 = 0;
+	wxObject* object_pointer1_2 = 0;
+	zval* topLeft1 = 0;
+	wxGridCellCoords* object_pointer1_3 = 0;
+	zval* bottomRight1 = 0;
+	wxGridCellCoords* object_pointer1_4 = 0;
+	bool sel1;
+	zval* kbd1 = 0;
+	wxKeyboardState* object_pointer1_6 = 0;
+	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -51367,6 +48161,91 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 
 		overload0_called = true;
 		already_called = true;
+	}
+
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received >= 5  && arguments_received <= 7)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'llzOO|bO' (&id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1, php_wxKeyboardState_entry)\n");
+		#endif
+
+		char parse_parameters_string[] = "llzOO|bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
+		{
+			if(arguments_received >= 3){
+				if(Z_TYPE_P(obj1) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxObject*) zend_object_store_get_object(obj1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxObject*) zend_object_store_get_object(obj1 TSRMLS_CC))->native_object;
+					object_pointer1_2 = (wxObject*) argument_native_object;
+					if (!object_pointer1_2 || (argument_type != PHP_WXOBJECT_TYPE && argument_type != PHP_WXEVTHANDLER_TYPE && argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXPAGESETUPDIALOG_TYPE && argument_type != PHP_WXPRINTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE && argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE && argument_type != PHP_WXMENU_TYPE && argument_type != PHP_WXAUIMANAGER_TYPE && argument_type != PHP_WXMOUSEEVENTSMANAGER_TYPE && argument_type != PHP_WXTIMER_TYPE && argument_type != PHP_WXEVENTBLOCKER_TYPE && argument_type != PHP_WXPROCESS_TYPE && argument_type != PHP_WXFILESYSTEMWATCHER_TYPE && argument_type != PHP_WXTASKBARICON_TYPE && argument_type != PHP_WXNOTIFICATIONMESSAGE_TYPE && argument_type != PHP_WXBITMAPHANDLER_TYPE && argument_type != PHP_WXIMAGE_TYPE && argument_type != PHP_WXSIZER_TYPE && argument_type != PHP_WXBOXSIZER_TYPE && argument_type != PHP_WXSTATICBOXSIZER_TYPE && argument_type != PHP_WXWRAPSIZER_TYPE && argument_type != PHP_WXSTDDIALOGBUTTONSIZER_TYPE && argument_type != PHP_WXGRIDSIZER_TYPE && argument_type != PHP_WXFLEXGRIDSIZER_TYPE && argument_type != PHP_WXGRIDBAGSIZER_TYPE && argument_type != PHP_WXSIZERITEM_TYPE && argument_type != PHP_WXGBSIZERITEM_TYPE && argument_type != PHP_WXIMAGELIST_TYPE && argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE && argument_type != PHP_WXCOLOUR_TYPE && argument_type != PHP_WXMENUITEM_TYPE && argument_type != PHP_WXEVENT_TYPE && argument_type != PHP_WXMENUEVENT_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXCOMMANDEVENT_TYPE && argument_type != PHP_WXNOTIFYEVENT_TYPE && argument_type != PHP_WXTREEEVENT_TYPE && argument_type != PHP_WXBOOKCTRLEVENT_TYPE && argument_type != PHP_WXAUINOTEBOOKEVENT_TYPE && argument_type != PHP_WXAUITOOLBAREVENT_TYPE && argument_type != PHP_WXLISTEVENT_TYPE && argument_type != PHP_WXSPINEVENT_TYPE && argument_type != PHP_WXSPLITTEREVENT_TYPE && argument_type != PHP_WXSPINDOUBLEEVENT_TYPE && argument_type != PHP_WXGRIDSIZEEVENT_TYPE && argument_type != PHP_WXWIZARDEVENT_TYPE && argument_type != PHP_WXGRIDEVENT_TYPE && argument_type != PHP_WXGRIDRANGESELECTEVENT_TYPE && argument_type != PHP_WXDATAVIEWEVENT_TYPE && argument_type != PHP_WXHEADERCTRLEVENT_TYPE && argument_type != PHP_WXRIBBONBAREVENT_TYPE && argument_type != PHP_WXWEBVIEWEVENT_TYPE && argument_type != PHP_WXSTYLEDTEXTEVENT_TYPE && argument_type != PHP_WXCHILDFOCUSEVENT_TYPE && argument_type != PHP_WXHTMLCELLEVENT_TYPE && argument_type != PHP_WXHTMLLINKEVENT_TYPE && argument_type != PHP_WXHYPERLINKEVENT_TYPE && argument_type != PHP_WXCOLOURPICKEREVENT_TYPE && argument_type != PHP_WXFONTPICKEREVENT_TYPE && argument_type != PHP_WXSCROLLEVENT_TYPE && argument_type != PHP_WXWINDOWMODALDIALOGEVENT_TYPE && argument_type != PHP_WXDATEEVENT_TYPE && argument_type != PHP_WXCALENDAREVENT_TYPE && argument_type != PHP_WXWINDOWCREATEEVENT_TYPE && argument_type != PHP_WXWINDOWDESTROYEVENT_TYPE && argument_type != PHP_WXUPDATEUIEVENT_TYPE && argument_type != PHP_WXHELPEVENT_TYPE && argument_type != PHP_WXGRIDEDITORCREATEDEVENT_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANEEVENT_TYPE && argument_type != PHP_WXCLIPBOARDTEXTEVENT_TYPE && argument_type != PHP_WXFILECTRLEVENT_TYPE && argument_type != PHP_WXSASHEVENT_TYPE && argument_type != PHP_WXFILEDIRPICKEREVENT_TYPE && argument_type != PHP_WXCONTEXTMENUEVENT_TYPE && argument_type != PHP_WXRIBBONBUTTONBAREVENT_TYPE && argument_type != PHP_WXRIBBONGALLERYEVENT_TYPE && argument_type != PHP_WXCLOSEEVENT_TYPE && argument_type != PHP_WXACTIVATEEVENT_TYPE && argument_type != PHP_WXAUIMANAGEREVENT_TYPE && argument_type != PHP_WXSIZEEVENT_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE && argument_type != PHP_WXMOVEEVENT_TYPE && argument_type != PHP_WXTIMEREVENT_TYPE && argument_type != PHP_WXTHREADEVENT_TYPE && argument_type != PHP_WXSCROLLWINEVENT_TYPE && argument_type != PHP_WXSYSCOLOURCHANGEDEVENT_TYPE && argument_type != PHP_WXPROCESSEVENT_TYPE && argument_type != PHP_WXERASEEVENT_TYPE && argument_type != PHP_WXSETCURSOREVENT_TYPE && argument_type != PHP_WXIDLEEVENT_TYPE && argument_type != PHP_WXPAINTEVENT_TYPE && argument_type != PHP_WXPALETTECHANGEDEVENT_TYPE && argument_type != PHP_WXINITDIALOGEVENT_TYPE && argument_type != PHP_WXMAXIMIZEEVENT_TYPE && argument_type != PHP_WXNAVIGATIONKEYEVENT_TYPE && argument_type != PHP_WXFOCUSEVENT_TYPE && argument_type != PHP_WXFILESYSTEMWATCHEREVENT_TYPE && argument_type != PHP_WXDISPLAYCHANGEDEVENT_TYPE && argument_type != PHP_WXCALCULATELAYOUTEVENT_TYPE && argument_type != PHP_WXQUERYLAYOUTINFOEVENT_TYPE && argument_type != PHP_WXTASKBARICONEVENT_TYPE && argument_type != PHP_WXACCELERATORTABLE_TYPE && argument_type != PHP_WXGDIOBJECT_TYPE && argument_type != PHP_WXBITMAP_TYPE && argument_type != PHP_WXPALETTE_TYPE && argument_type != PHP_WXICON_TYPE && argument_type != PHP_WXFONT_TYPE && argument_type != PHP_WXANIMATION_TYPE && argument_type != PHP_WXICONBUNDLE_TYPE && argument_type != PHP_WXCURSOR_TYPE && argument_type != PHP_WXREGION_TYPE && argument_type != PHP_WXPEN_TYPE && argument_type != PHP_WXBRUSH_TYPE && argument_type != PHP_WXARTPROVIDER_TYPE && argument_type != PHP_WXHTMLCELL_TYPE && argument_type != PHP_WXHTMLCONTAINERCELL_TYPE && argument_type != PHP_WXHTMLCOLOURCELL_TYPE && argument_type != PHP_WXHTMLWIDGETCELL_TYPE && argument_type != PHP_WXHTMLEASYPRINTING_TYPE && argument_type != PHP_WXHTMLLINKINFO_TYPE && argument_type != PHP_WXFINDREPLACEDATA_TYPE && argument_type != PHP_WXSOUND_TYPE && argument_type != PHP_WXFILESYSTEM_TYPE && argument_type != PHP_WXFILESYSTEMHANDLER_TYPE && argument_type != PHP_WXMASK_TYPE && argument_type != PHP_WXTOOLTIP_TYPE && argument_type != PHP_WXGRAPHICSRENDERER_TYPE && argument_type != PHP_WXLAYOUTCONSTRAINTS_TYPE && argument_type != PHP_WXFSFILE_TYPE && argument_type != PHP_WXCOLOURDATA_TYPE && argument_type != PHP_WXFONTDATA_TYPE && argument_type != PHP_WXGRIDTABLEBASE_TYPE && argument_type != PHP_WXDATAVIEWRENDERER_TYPE && argument_type != PHP_WXDATAVIEWBITMAPRENDERER_TYPE && argument_type != PHP_WXDATAVIEWCHOICERENDERER_TYPE && argument_type != PHP_WXDATAVIEWCUSTOMRENDERER_TYPE && argument_type != PHP_WXDATAVIEWSPINRENDERER_TYPE && argument_type != PHP_WXDATAVIEWDATERENDERER_TYPE && argument_type != PHP_WXDATAVIEWICONTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWPROGRESSRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTEXTRENDERER_TYPE && argument_type != PHP_WXDATAVIEWTOGGLERENDERER_TYPE && argument_type != PHP_WXDATAVIEWICONTEXT_TYPE && argument_type != PHP_WXVARIANT_TYPE && argument_type != PHP_WXCLIPBOARD_TYPE && argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE && argument_type != PHP_WXXMLRESOURCE_TYPE && argument_type != PHP_WXPAGESETUPDIALOGDATA_TYPE && argument_type != PHP_WXPRINTDIALOGDATA_TYPE && argument_type != PHP_WXPRINTDATA_TYPE && argument_type != PHP_WXPRINTPREVIEW_TYPE && argument_type != PHP_WXPRINTER_TYPE && argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE && argument_type != PHP_WXHTMLDCRENDERER_TYPE && argument_type != PHP_WXHTMLFILTER_TYPE && argument_type != PHP_WXHTMLHELPDATA_TYPE && argument_type != PHP_WXHTMLTAGHANDLER_TYPE && argument_type != PHP_WXHTMLWINTAGHANDLER_TYPE && argument_type != PHP_WXMODULE_TYPE && argument_type != PHP_WXHTMLTAGSMODULE_TYPE && argument_type != PHP_WXIMAGEHANDLER_TYPE && argument_type != PHP_WXXMLRESOURCEHANDLER_TYPE && argument_type != PHP_WXXMLDOCUMENT_TYPE && argument_type != PHP_WXLAYOUTALGORITHM_TYPE && argument_type != PHP_WXFILEHISTORY_TYPE && argument_type != PHP_WXTOOLBARTOOLBASE_TYPE))
+					{
+						zend_error(E_ERROR, "Parameter 'obj' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(obj1) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'obj' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 4){
+				if(Z_TYPE_P(topLeft1) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxGridCellCoords*) zend_object_store_get_object(topLeft1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxGridCellCoords*) zend_object_store_get_object(topLeft1 TSRMLS_CC))->native_object;
+					object_pointer1_3 = (wxGridCellCoords*) argument_native_object;
+					if (!object_pointer1_3 )
+					{
+						zend_error(E_ERROR, "Parameter 'topLeft' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(topLeft1) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'topLeft' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 5){
+				if(Z_TYPE_P(bottomRight1) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxGridCellCoords*) zend_object_store_get_object(bottomRight1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxGridCellCoords*) zend_object_store_get_object(bottomRight1 TSRMLS_CC))->native_object;
+					object_pointer1_4 = (wxGridCellCoords*) argument_native_object;
+					if (!object_pointer1_4 )
+					{
+						zend_error(E_ERROR, "Parameter 'bottomRight' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(bottomRight1) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'bottomRight' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 7){
+				if(Z_TYPE_P(kbd1) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->native_object;
+					object_pointer1_6 = (wxKeyboardState*) argument_native_object;
+					if (!object_pointer1_6 )
+					{
+						zend_error(E_ERROR, "Parameter 'kbd' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(kbd1) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'kbd' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload1_called = true;
+			already_called = true;
+		}
 	}
 
 		
@@ -51383,6 +48262,56 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 				native_object = new wxGridRangeSelectEvent_php();
 
 				native_object->references.Initialize();
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 5:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4)\n");
+				#endif
+
+				native_object = new wxGridRangeSelectEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4);
+
+				native_object->references.Initialize();
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(obj1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 5 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(topLeft1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 5 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(bottomRight1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 5 argument(s)");
+				break;
+			}
+			case 6:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1)\n");
+				#endif
+
+				native_object = new wxGridRangeSelectEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1);
+
+				native_object->references.Initialize();
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(obj1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 6 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(topLeft1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 6 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(bottomRight1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 6 argument(s)");
+				break;
+			}
+			case 7:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1, *(wxKeyboardState*) object_pointer1_6)\n");
+				#endif
+
+				native_object = new wxGridRangeSelectEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1, *(wxKeyboardState*) object_pointer1_6);
+
+				native_object->references.Initialize();
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(obj1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 7 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(topLeft1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 7 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(bottomRight1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 7 argument(s)");
+				((wxGridRangeSelectEvent_php*) native_object)->references.AddReference(kbd1, "wxGridRangeSelectEvent::wxGridRangeSelectEvent at call with 7 argument(s)");
 				break;
 			}
 		}
@@ -55225,103 +52154,6 @@ PHP_METHOD(php_wxListEvent, GetColumn)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetColumn\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto int wxListEvent::GetData()
-   The data. */
-PHP_METHOD(php_wxListEvent, GetData)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxListEvent::GetData\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxListEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxListEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxListEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxListEvent::GetData call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXLISTEVENT_TYPE){
-				references = &((wxListEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxListEvent::GetData())\n\n");
-				#endif
-
-				ZVAL_LONG(return_value, ((wxListEvent_php*)native_object)->GetData());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetData\n");
 	}
 }
 /* }}} */
@@ -60202,6 +57034,179 @@ zend_object_value php_wxRibbonButtonBarEvent_new(zend_class_entry *class_type TS
 }
 END_EXTERN_C()
 
+/* {{{ proto  wxRibbonButtonBarEvent::wxRibbonButtonBarEvent(int command_type, int win_id, wxRibbonButtonBar &bar, wxRibbonButtonBarButtonBase &button)
+   Constructor. */
+PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxRibbonButtonBarEvent::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxRibbonButtonBarEvent* current_object;
+	wxRibbonButtonBarEvent_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	int arguments_received = ZEND_NUM_ARGS();
+	
+	
+	//Parameters for overload 0
+	long command_type0;
+	long win_id0;
+	zval* bar0 = 0;
+	wxRibbonButtonBar* object_pointer0_2 = 0;
+	zval* button0 = 0;
+	wxRibbonButtonBarButtonBase* object_pointer0_3 = 0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 4)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|llzz' (&command_type0, &win_id0, &bar0, &button0)\n");
+		#endif
+
+		char parse_parameters_string[] = "|llzz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command_type0, &win_id0, &bar0, &button0 ) == SUCCESS)
+		{
+			if(arguments_received >= 3){
+				if(Z_TYPE_P(bar0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxRibbonButtonBar*) zend_object_store_get_object(bar0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxRibbonButtonBar*) zend_object_store_get_object(bar0 TSRMLS_CC))->native_object;
+					object_pointer0_2 = (wxRibbonButtonBar*) argument_native_object;
+					if (!object_pointer0_2 || (argument_type != PHP_WXRIBBONBUTTONBAR_TYPE))
+					{
+						zend_error(E_ERROR, "Parameter 'bar' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(bar0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'bar' not null, could not be retreived correctly.");
+				}
+			}
+
+			if(arguments_received >= 4){
+				if(Z_TYPE_P(button0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxRibbonButtonBarButtonBase*) zend_object_store_get_object(button0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxRibbonButtonBarButtonBase*) zend_object_store_get_object(button0 TSRMLS_CC))->native_object;
+					object_pointer0_3 = (wxRibbonButtonBarButtonBase*) argument_native_object;
+					if (!object_pointer0_3 || (argument_type != PHP_WXRIBBONBUTTONBARBUTTONBASE_TYPE))
+					{
+						zend_error(E_ERROR, "Parameter 'button' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(button0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'button' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct()\n");
+				#endif
+
+				native_object = new wxRibbonButtonBarEvent_php();
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) command_type0)\n");
+				#endif
+
+				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) command_type0, (int) win_id0)\n");
+				#endif
+
+				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0, (int) win_id0);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2)\n");
+				#endif
+
+				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2);
+
+				native_object->references.Initialize();
+				((wxRibbonButtonBarEvent_php*) native_object)->references.AddReference(bar0, "wxRibbonButtonBarEvent::wxRibbonButtonBarEvent at call with 3 argument(s)");
+				break;
+			}
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2, (wxRibbonButtonBarButtonBase*) object_pointer0_3)\n");
+				#endif
+
+				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2, (wxRibbonButtonBarButtonBase*) object_pointer0_3);
+
+				native_object->references.Initialize();
+				((wxRibbonButtonBarEvent_php*) native_object)->references.AddReference(bar0, "wxRibbonButtonBarEvent::wxRibbonButtonBarEvent at call with 4 argument(s)");
+				((wxRibbonButtonBarEvent_php*) native_object)->references.AddReference(button0, "wxRibbonButtonBarEvent::wxRibbonButtonBarEvent at call with 4 argument(s)");
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		native_object->phpObj = getThis();
+		
+		native_object->InitProperties();
+		
+		current_object = (zo_wxRibbonButtonBarEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		current_object->native_object = native_object;
+		
+		current_object->is_user_initialized = 1;
+		
+		#ifdef ZTS 
+		native_object->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonButtonBarEvent::__construct\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
+
 /* {{{ proto wxRibbonButtonBar wxRibbonButtonBarEvent::GetBar()
    Returns the bar which contains the button which the event relates to. */
 PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
@@ -60561,147 +57566,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBarEvent::SetBar\n");
 	}
-}
-/* }}} */
-
-/* {{{ proto  wxRibbonButtonBarEvent::wxRibbonButtonBarEvent(int command_type, int win_id, wxRibbonButtonBar &bar)
-   Constructor. */
-PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxRibbonButtonBarEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxRibbonButtonBarEvent* current_object;
-	wxRibbonButtonBarEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	int arguments_received = ZEND_NUM_ARGS();
-	
-	
-	//Parameters for overload 0
-	long command_type0;
-	long win_id0;
-	zval* bar0 = 0;
-	wxRibbonButtonBar* object_pointer0_2 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|llz' (&command_type0, &win_id0, &bar0)\n");
-		#endif
-
-		char parse_parameters_string[] = "|llz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command_type0, &win_id0, &bar0 ) == SUCCESS)
-		{
-			if(arguments_received >= 3){
-				if(Z_TYPE_P(bar0) == IS_OBJECT)
-				{
-					wxphp_object_type argument_type = ((zo_wxRibbonButtonBar*) zend_object_store_get_object(bar0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxRibbonButtonBar*) zend_object_store_get_object(bar0 TSRMLS_CC))->native_object;
-					object_pointer0_2 = (wxRibbonButtonBar*) argument_native_object;
-					if (!object_pointer0_2 || (argument_type != PHP_WXRIBBONBUTTONBAR_TYPE))
-					{
-						zend_error(E_ERROR, "Parameter 'bar' could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(bar0) != IS_NULL)
-				{
-					zend_error(E_ERROR, "Parameter 'bar' not null, could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-
-				native_object = new wxRibbonButtonBarEvent_php();
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) command_type0)\n");
-				#endif
-
-				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) command_type0, (int) win_id0)\n");
-				#endif
-
-				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0, (int) win_id0);
-
-				native_object->references.Initialize();
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2)\n");
-				#endif
-
-				native_object = new wxRibbonButtonBarEvent_php((wxEventType) command_type0, (int) win_id0, (wxRibbonButtonBar*) object_pointer0_2);
-
-				native_object->references.Initialize();
-				((wxRibbonButtonBarEvent_php*) native_object)->references.AddReference(bar0, "wxRibbonButtonBarEvent::wxRibbonButtonBarEvent at call with 3 argument(s)");
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		native_object->phpObj = getThis();
-		
-		native_object->InitProperties();
-		
-		current_object = (zo_wxRibbonButtonBarEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		current_object->native_object = native_object;
-		
-		current_object->is_user_initialized = 1;
-		
-		#ifdef ZTS 
-		native_object->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxRibbonButtonBarEvent::__construct\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
 }
 /* }}} */
 
@@ -63255,7 +60119,7 @@ PHP_METHOD(php_wxSplitterEvent, GetY)
 /* }}} */
 
 /* {{{ proto  wxSplitterEvent::SetSashPosition(int pos)
-   In the case of wxEVT_COMMAND_SPLITTER_SASH_POS_CHANGED events, sets the new sash position. */
+   In the case of wxEVT_SPLITTER_SASH_POS_CHANGED events, sets the new sash position. */
 PHP_METHOD(php_wxSplitterEvent, SetSashPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63563,8 +60427,7 @@ zend_object_value php_wxStyledTextEvent_new(zend_class_entry *class_type TSRMLS_
 }
 END_EXTERN_C()
 
-/* {{{ proto  wxStyledTextEvent::wxStyledTextEvent(int commandType, int id)
-   Ctors; used internally by wxWidgets. */
+/* {{{ proto  wxStyledTextEvent::wxStyledTextEvent(int commandType, int id) */
 PHP_METHOD(php_wxStyledTextEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65131,102 +61994,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetControl)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetControl\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto bool wxStyledTextEvent::GetDragAllowMove() */
-PHP_METHOD(php_wxStyledTextEvent, GetDragAllowMove)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStyledTextEvent::GetDragAllowMove\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStyledTextEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxStyledTextEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxStyledTextEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextEvent::GetDragAllowMove call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxStyledTextEvent::GetDragAllowMove())\n\n");
-				#endif
-
-				ZVAL_BOOL(return_value, ((wxStyledTextEvent_php*)native_object)->GetDragAllowMove());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetDragAllowMove\n");
 	}
 }
 /* }}} */
@@ -67063,107 +63830,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetY)
 	if(!already_called)
 	{
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetY\n");
-	}
-}
-/* }}} */
-
-/* {{{ proto  wxStyledTextEvent::SetDragAllowMove(bool val) */
-PHP_METHOD(php_wxStyledTextEvent, SetDragAllowMove)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStyledTextEvent::SetDragAllowMove\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zo_wxStyledTextEvent* current_object;
-	wxphp_object_type current_object_type;
-	wxStyledTextEvent_php* native_object;
-	void* argument_native_object = NULL;
-	
-	//Other variables used thru the code
-	zval* dummy = NULL;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	int arguments_received = ZEND_NUM_ARGS();
-	bool return_is_user_initialized = false;
-	
-	//Get native object of the php object that called the method
-	if(getThis() != NULL) 
-	{
-		current_object = (zo_wxStyledTextEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
-		
-		if(current_object->native_object == NULL)
-		{
-			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextEvent::SetDragAllowMove call\n");
-			
-			return;
-		}
-		else
-		{
-			native_object = current_object->native_object;
-			current_object_type = current_object->object_type;
-			
-			bool reference_type_found = false;
-
-			if(current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE){
-				references = &((wxStyledTextEvent_php*)native_object)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool val0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'b' (&val0)\n");
-		#endif
-
-		char parse_parameters_string[] = "b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxStyledTextEvent::SetDragAllowMove(val0)\n\n");
-				#endif
-
-				((wxStyledTextEvent_php*)native_object)->SetDragAllowMove(val0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetDragAllowMove\n");
 	}
 }
 /* }}} */

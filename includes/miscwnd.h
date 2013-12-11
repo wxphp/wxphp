@@ -612,8 +612,8 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRichToolTip_functions[] = {
 	PHP_ME(php_wxRichToolTip, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRichToolTip, SetIcon, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, SetTimeout, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxRichToolTip, SetIcon, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, SetTipKind, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, ShowFor, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -628,7 +628,7 @@ class wxSashLayoutWindow_php: public wxSashLayoutWindow{
 	public:
 	
 	wxSashLayoutWindow_php():wxSashLayoutWindow(){}
-	wxSashLayoutWindow_php(wxSashLayoutWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCLIP_CHILDREN|wxSW_3D, const wxString& name="layoutWindow"):wxSashLayoutWindow(parent, id, pos, size, style, name){}
+	wxSashLayoutWindow_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCLIP_CHILDREN|wxSW_3D, const wxString& name="layoutWindow"):wxSashLayoutWindow(parent, id, pos, size, style, name){}
 		
 		
 	void InitProperties(){

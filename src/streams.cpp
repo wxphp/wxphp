@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -678,8 +678,8 @@ PHP_METHOD(php_wxDataOutputStream, Write8)
 }
 /* }}} */
 
-/* {{{ proto  wxDataOutputStream::WriteDouble(float f)
-   Writes the double f to the stream using the IEEE format. */
+/* {{{ proto  wxDataOutputStream::WriteDouble(float d)
+   Writes the double d to the stream. */
 PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -731,7 +731,7 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 	#endif
 	
 	//Parameters for overload 0
-	double f0;
+	double d0;
 	bool overload0_called = false;
 	//Parameters for overload 1
 	zval* buffer1;
@@ -744,11 +744,11 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&f0)\n");
+		php_printf("Parsing parameters with 'd' (&d0)\n");
 		#endif
 
 		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &f0 ) == SUCCESS)
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &d0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -780,12 +780,12 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 			case 1:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataOutputStream::WriteDouble(f0)\n\n");
+				php_printf("Executing wxDataOutputStream::WriteDouble(d0)\n\n");
 				#endif
 
 				if(current_object_type == PHP_WXDATAOUTPUTSTREAM_TYPE)
 				{
-					((wxDataOutputStream_php*)native_object)->WriteDouble(f0);
+					((wxDataOutputStream_php*)native_object)->WriteDouble(d0);
 				}
 
 
@@ -1143,7 +1143,7 @@ PHP_METHOD(php_wxDataInputStream, ReadString)
 /* }}} */
 
 /* {{{ proto  wxDataInputStream::ReadDouble(float &buffer, int size)
-   Reads double data (IEEE encoded) from the stream in a specified buffer. */
+   Reads double data from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, ReadDouble)
 {
 	#ifdef USE_WXPHP_DEBUG

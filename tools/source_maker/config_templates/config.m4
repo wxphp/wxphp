@@ -1,5 +1,5 @@
 PHP_ARG_WITH(wxwidgets,for wxWidgets support,
-[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 2.9.3).])
+[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.0.0).])
 
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
@@ -18,11 +18,11 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	WXCONFIG_PATH=wx-config
 	
 	dnl Check for the installation path of wx-config
-	AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 2.9.x])
+	AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
 	for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
 		if test -e "$directory/wx-config"; then
 			wxwidgets_version=`$directory/wx-config --version`
-			version_check=`echo $wxwidgets_version | grep "2.9" && echo $wxwidgets_version | grep "3.[0-9]"`
+			version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
 			if test -n "$version_check"; then
 				WXCONFIG_PATH="$directory/wx-config"
 				AC_MSG_RESULT([version $wxwidgets_version found])

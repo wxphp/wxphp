@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -15019,7 +15019,7 @@ PHP_METHOD(php_wxVideoMode, IsOk)
 /* }}} */
 
 /* {{{ proto int wxVideoMode::GetWidth()
-   Returns the screen width in pixels (e.g. */
+   Returns the screen width in pixels (e.g. 640), 0 means unspecified. */
 PHP_METHOD(php_wxVideoMode, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15116,7 +15116,7 @@ PHP_METHOD(php_wxVideoMode, GetWidth)
 /* }}} */
 
 /* {{{ proto int wxVideoMode::GetHeight()
-   Returns the screen height in pixels (e.g. */
+   Returns the screen height in pixels (e.g. 480), 0 means unspecified. */
 PHP_METHOD(php_wxVideoMode, GetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15213,7 +15213,7 @@ PHP_METHOD(php_wxVideoMode, GetHeight)
 /* }}} */
 
 /* {{{ proto int wxVideoMode::GetDepth()
-   Returns bits per pixel (e.g. */
+   Returns bits per pixel (e.g. 32), 1 is monochrome and 0 means unspecified/known. */
 PHP_METHOD(php_wxVideoMode, GetDepth)
 {
 	#ifdef USE_WXPHP_DEBUG

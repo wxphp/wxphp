@@ -1,5 +1,11 @@
 [
 	{
+		"wxActivateEvent":{
+			"Reason":[
+				"Reason_Mouse",
+				"Reason_Unknown"
+			]
+		},
 		"wxConfigBase":{
 			"EntryType":[
 				"Type_Unknown",
@@ -77,72 +83,6 @@
 			"Calendar":[
 				"Gregorian",
 				"Julian"
-			],
-			"GregorianAdoption":[
-				"Gr_Unknown",
-				"Gr_Standard",
-				"Gr_Alaska",
-				"Gr_Albania",
-				"Gr_Austria",
-				"Gr_Austria_Brixen",
-				"Gr_Austria_Salzburg",
-				"Gr_Austria_Tyrol",
-				"Gr_Austria_Carinthia",
-				"Gr_Austria_Styria",
-				"Gr_Belgium",
-				"Gr_Bulgaria",
-				"Gr_Bulgaria_1",
-				"Gr_Bulgaria_2",
-				"Gr_Bulgaria_3",
-				"Gr_Canada",
-				"Gr_China",
-				"Gr_China_1",
-				"Gr_China_2",
-				"Gr_Czechoslovakia",
-				"Gr_Denmark",
-				"Gr_Egypt",
-				"Gr_Estonia",
-				"Gr_Finland",
-				"Gr_France",
-				"Gr_France_Alsace",
-				"Gr_France_Lorraine",
-				"Gr_France_Strasbourg",
-				"Gr_Germany",
-				"Gr_Germany_Catholic",
-				"Gr_Germany_Prussia",
-				"Gr_Germany_Protestant",
-				"Gr_GreatBritain",
-				"Gr_Greece",
-				"Gr_Hungary",
-				"Gr_Ireland",
-				"Gr_Italy",
-				"Gr_Japan",
-				"Gr_Japan_1",
-				"Gr_Japan_2",
-				"Gr_Japan_3",
-				"Gr_Latvia",
-				"Gr_Lithuania",
-				"Gr_Luxemburg",
-				"Gr_Netherlands",
-				"Gr_Netherlands_Groningen",
-				"Gr_Netherlands_Gelderland",
-				"Gr_Netherlands_Utrecht",
-				"Gr_Netherlands_Friesland",
-				"Gr_Norway",
-				"Gr_Poland",
-				"Gr_Portugal",
-				"Gr_Romania",
-				"Gr_Russia",
-				"Gr_Scotland",
-				"Gr_Spain",
-				"Gr_Sweden",
-				"Gr_Switzerland",
-				"Gr_Switzerland_Catholic",
-				"Gr_Switzerland_Protestant",
-				"Gr_Turkey",
-				"Gr_USA",
-				"Gr_Wales",
-				"Gr_Yugoslavia"
 			],
 			"Country":[
 				"Country_Unknown",
@@ -227,6 +167,11 @@
 				"CellSpan_Inside",
 				"CellSpan_None",
 				"CellSpan_Main"
+			],
+			"TabBehaviour":[
+				"Tab_Stop",
+				"Tab_Wrap",
+				"Tab_Leave"
 			]
 		},
 		"wxGridCellAttr":{
@@ -242,6 +187,13 @@
 				"Origin_Unknown",
 				"Origin_Keyboard",
 				"Origin_HelpButton"
+			]
+		},
+		"wxHtmlWindowInterface":{
+			"HTMLCursor":[
+				"HTMLCursor_Default",
+				"HTMLCursor_Link",
+				"HTMLCursor_Text"
 			]
 		},
 		"wxNavigationKeyEvent":{
@@ -305,10 +257,25 @@
 				"WOW64ViewMode_64"
 			]
 		},
+		"wxRichTextStyleListBox":{
+			"wxRichTextStyleType":[
+				"wxRICHTEXT_STYLE_ALL",
+				"wxRICHTEXT_STYLE_PARAGRAPH",
+				"wxRICHTEXT_STYLE_CHARACTER",
+				"wxRICHTEXT_STYLE_LIST",
+				"wxRICHTEXT_STYLE_BOX"
+			]
+		},
 		"wxStandardPaths":{
 			"ResourceCat":[
 				"ResourceCat_None",
 				"ResourceCat_Messages"
+			]
+		},
+		"wxStockPreferencesPage":{
+			"Kind":[
+				"Kind_General",
+				"Kind_Advanced"
 			]
 		},
 		"wxStreamBuffer":{
@@ -447,6 +414,8 @@
 			"wxFONTENCODING_CP1255",
 			"wxFONTENCODING_CP1256",
 			"wxFONTENCODING_CP1257",
+			"wxFONTENCODING_CP1258",
+			"wxFONTENCODING_CP1361",
 			"wxFONTENCODING_CP12_MAX",
 			"wxFONTENCODING_UTF7",
 			"wxFONTENCODING_UTF8",
@@ -505,7 +474,9 @@
 			"wxFONTENCODING_GB2312",
 			"wxFONTENCODING_BIG5",
 			"wxFONTENCODING_SHIFT_JIS",
-			"wxFONTENCODING_EUC_KR"
+			"wxFONTENCODING_EUC_KR",
+			"wxFONTENCODING_JOHAB",
+			"wxFONTENCODING_VIETNAMESE"
 		],
 		"wxGridCellFloatFormat":[
 			"wxGRID_FLOAT_FORMAT_FIXED",
@@ -513,6 +484,24 @@
 			"wxGRID_FLOAT_FORMAT_COMPACT",
 			"wxGRID_FLOAT_FORMAT_UPPER",
 			"wxGRID_FLOAT_FORMAT_DEFAULT"
+		],
+		"wxGridTableRequest":[
+			"wxGRIDTABLE_REQUEST_VIEW_GET_VALUES",
+			"wxGRIDTABLE_REQUEST_VIEW_SEND_VALUES",
+			"wxGRIDTABLE_NOTIFY_ROWS_INSERTED",
+			"wxGRIDTABLE_NOTIFY_ROWS_APPENDED",
+			"wxGRIDTABLE_NOTIFY_ROWS_DELETED",
+			"wxGRIDTABLE_NOTIFY_COLS_INSERTED",
+			"wxGRIDTABLE_NOTIFY_COLS_APPENDED",
+			"wxGRIDTABLE_NOTIFY_COLS_DELETED"
+		],
+		"wxGridRenderStyle":[
+			"wxGRID_DRAW_ROWS_HEADER",
+			"wxGRID_DRAW_COLS_HEADER",
+			"wxGRID_DRAW_CELL_LINES",
+			"wxGRID_DRAW_BOX_RECT",
+			"wxGRID_DRAW_SELECTION",
+			"wxGRID_DRAW_DEFAULT"
 		],
 		"wxListColumnFormat":[
 			"wxLIST_FORMAT_LEFT",
@@ -651,30 +640,6 @@
 			"wxMUTEX_TIMEOUT",
 			"wxMUTEX_MISC_ERROR"
 		],
-		"wxAuiToolBarStyle":[
-			"wxAUI_TB_TEXT",
-			"wxAUI_TB_NO_TOOLTIPS",
-			"wxAUI_TB_NO_AUTORESIZE",
-			"wxAUI_TB_GRIPPER",
-			"wxAUI_TB_OVERFLOW",
-			"wxAUI_TB_VERTICAL",
-			"wxAUI_TB_HORZ_LAYOUT",
-			"wxAUI_TB_HORIZONTAL",
-			"wxAUI_TB_HORZ_TEXT",
-			"wxAUI_ORIENTATION_MASK",
-			"wxAUI_TB_DEFAULT_STYLE"
-		],
-		"wxAuiToolBarArtSetting":[
-			"wxAUI_TBART_SEPARATOR_SIZE",
-			"wxAUI_TBART_GRIPPER_SIZE",
-			"wxAUI_TBART_OVERFLOW_SIZE"
-		],
-		"wxAuiToolBarToolTextOrientation":[
-			"wxAUI_TBTOOL_TEXT_LEFT",
-			"wxAUI_TBTOOL_TEXT_RIGHT",
-			"wxAUI_TBTOOL_TEXT_TOP",
-			"wxAUI_TBTOOL_TEXT_BOTTOM"
-		],
 		"wxToolBarToolStyle":[
 			"wxTOOL_STYLE_BUTTON",
 			"wxTOOL_STYLE_SEPARATOR",
@@ -789,6 +754,31 @@
 			"wxANIMATION_TYPE_ANI",
 			"wxANIMATION_TYPE_ANY"
 		],
+		"wxAuiToolBarStyle":[
+			"wxAUI_TB_TEXT",
+			"wxAUI_TB_NO_TOOLTIPS",
+			"wxAUI_TB_NO_AUTORESIZE",
+			"wxAUI_TB_GRIPPER",
+			"wxAUI_TB_OVERFLOW",
+			"wxAUI_TB_VERTICAL",
+			"wxAUI_TB_HORZ_LAYOUT",
+			"wxAUI_TB_HORIZONTAL",
+			"wxAUI_TB_PLAIN_BACKGROUND",
+			"wxAUI_TB_HORZ_TEXT",
+			"wxAUI_ORIENTATION_MASK",
+			"wxAUI_TB_DEFAULT_STYLE"
+		],
+		"wxAuiToolBarArtSetting":[
+			"wxAUI_TBART_SEPARATOR_SIZE",
+			"wxAUI_TBART_GRIPPER_SIZE",
+			"wxAUI_TBART_OVERFLOW_SIZE"
+		],
+		"wxAuiToolBarToolTextOrientation":[
+			"wxAUI_TBTOOL_TEXT_LEFT",
+			"wxAUI_TBTOOL_TEXT_RIGHT",
+			"wxAUI_TBTOOL_TEXT_TOP",
+			"wxAUI_TBTOOL_TEXT_BOTTOM"
+		],
 		"wxAuiPaneDockArtSetting":[
 			"wxAUI_DOCKART_SASH_SIZE",
 			"wxAUI_DOCKART_CAPTION_SIZE",
@@ -816,7 +806,10 @@
 		"wxAuiPaneButtonState":[
 			"wxAUI_BUTTON_STATE_NORMAL",
 			"wxAUI_BUTTON_STATE_HOVER",
-			"wxAUI_BUTTON_STATE_PRESSED"
+			"wxAUI_BUTTON_STATE_PRESSED",
+			"wxAUI_BUTTON_STATE_DISABLED",
+			"wxAUI_BUTTON_STATE_HIDDEN",
+			"wxAUI_BUTTON_STATE_CHECKED"
 		],
 		"wxAuiButtonId":[
 			"wxAUI_BUTTON_CLOSE",
@@ -1238,6 +1231,32 @@
 		],
 		"wxKeyCode":[
 			"WXK_NONE",
+			"WXK_CONTROL_A",
+			"WXK_CONTROL_B",
+			"WXK_CONTROL_C",
+			"WXK_CONTROL_D",
+			"WXK_CONTROL_E",
+			"WXK_CONTROL_F",
+			"WXK_CONTROL_G",
+			"WXK_CONTROL_H",
+			"WXK_CONTROL_I",
+			"WXK_CONTROL_J",
+			"WXK_CONTROL_K",
+			"WXK_CONTROL_L",
+			"WXK_CONTROL_M",
+			"WXK_CONTROL_N",
+			"WXK_CONTROL_O",
+			"WXK_CONTROL_P",
+			"WXK_CONTROL_Q",
+			"WXK_CONTROL_R",
+			"WXK_CONTROL_S",
+			"WXK_CONTROL_T",
+			"WXK_CONTROL_U",
+			"WXK_CONTROL_V",
+			"WXK_CONTROL_W",
+			"WXK_CONTROL_X",
+			"WXK_CONTROL_Y",
+			"WXK_CONTROL_Z",
 			"WXK_BACK",
 			"WXK_TAB",
 			"WXK_RETURN",
@@ -1376,123 +1395,123 @@
 			"wxMOD_ALL"
 		],
 		"wxPaperSize":[
-			"wxPAPER_NONE",
-			"wxPAPER_LETTER",
-			"wxPAPER_LEGAL",
-			"wxPAPER_A4",
-			"wxPAPER_CSHEET",
-			"wxPAPER_DSHEET",
-			"wxPAPER_ESHEET",
-			"wxPAPER_LETTERSMALL",
-			"wxPAPER_TABLOID",
-			"wxPAPER_LEDGER",
-			"wxPAPER_STATEMENT",
-			"wxPAPER_EXECUTIVE",
-			"wxPAPER_A3",
-			"wxPAPER_A4SMALL",
-			"wxPAPER_A5",
-			"wxPAPER_B4",
-			"wxPAPER_B5",
-			"wxPAPER_FOLIO",
-			"wxPAPER_QUARTO",
+			"wxPAPER_10X11",
 			"wxPAPER_10X14",
 			"wxPAPER_11X17",
-			"wxPAPER_NOTE",
-			"wxPAPER_ENV_9",
+			"wxPAPER_12X11",
+			"wxPAPER_15X11",
+			"wxPAPER_9X11",
+			"wxPAPER_A2",
+			"wxPAPER_A3",
+			"wxPAPER_A3_EXTRA",
+			"wxPAPER_A3_EXTRA_TRANSVERSE",
+			"wxPAPER_A3_ROTATED",
+			"wxPAPER_A3_TRANSVERSE",
+			"wxPAPER_A4",
+			"wxPAPER_A4SMALL",
+			"wxPAPER_A4_EXTRA",
+			"wxPAPER_A4_PLUS",
+			"wxPAPER_A4_ROTATED",
+			"wxPAPER_A4_TRANSVERSE",
+			"wxPAPER_A5",
+			"wxPAPER_A5_EXTRA",
+			"wxPAPER_A5_ROTATED",
+			"wxPAPER_A5_TRANSVERSE",
+			"wxPAPER_A6",
+			"wxPAPER_A6_ROTATED",
+			"wxPAPER_A_PLUS",
+			"wxPAPER_B4",
+			"wxPAPER_B4_JIS_ROTATED",
+			"wxPAPER_B5",
+			"wxPAPER_B5_EXTRA",
+			"wxPAPER_B5_JIS_ROTATED",
+			"wxPAPER_B5_TRANSVERSE",
+			"wxPAPER_B6_JIS",
+			"wxPAPER_B6_JIS_ROTATED",
+			"wxPAPER_B_PLUS",
+			"wxPAPER_CSHEET",
+			"wxPAPER_DBL_JAPANESE_POSTCARD",
+			"wxPAPER_DBL_JAPANESE_POSTCARD_ROTATED",
+			"wxPAPER_DSHEET",
 			"wxPAPER_ENV_10",
 			"wxPAPER_ENV_11",
 			"wxPAPER_ENV_12",
 			"wxPAPER_ENV_14",
-			"wxPAPER_ENV_DL",
-			"wxPAPER_ENV_C5",
-			"wxPAPER_ENV_C3",
-			"wxPAPER_ENV_C4",
-			"wxPAPER_ENV_C6",
-			"wxPAPER_ENV_C65",
+			"wxPAPER_ENV_9",
 			"wxPAPER_ENV_B4",
 			"wxPAPER_ENV_B5",
 			"wxPAPER_ENV_B6",
+			"wxPAPER_ENV_C3",
+			"wxPAPER_ENV_C4",
+			"wxPAPER_ENV_C5",
+			"wxPAPER_ENV_C6",
+			"wxPAPER_ENV_C65",
+			"wxPAPER_ENV_DL",
+			"wxPAPER_ENV_INVITE",
 			"wxPAPER_ENV_ITALY",
 			"wxPAPER_ENV_MONARCH",
 			"wxPAPER_ENV_PERSONAL",
-			"wxPAPER_FANFOLD_US",
-			"wxPAPER_FANFOLD_STD_GERMAN",
+			"wxPAPER_ESHEET",
+			"wxPAPER_EXECUTIVE",
 			"wxPAPER_FANFOLD_LGL_GERMAN",
+			"wxPAPER_FANFOLD_STD_GERMAN",
+			"wxPAPER_FANFOLD_US",
+			"wxPAPER_FOLIO",
 			"wxPAPER_ISO_B4",
 			"wxPAPER_JAPANESE_POSTCARD",
-			"wxPAPER_9X11",
-			"wxPAPER_10X11",
-			"wxPAPER_15X11",
-			"wxPAPER_ENV_INVITE",
-			"wxPAPER_LETTER_EXTRA",
-			"wxPAPER_LEGAL_EXTRA",
-			"wxPAPER_TABLOID_EXTRA",
-			"wxPAPER_A4_EXTRA",
-			"wxPAPER_LETTER_TRANSVERSE",
-			"wxPAPER_A4_TRANSVERSE",
-			"wxPAPER_LETTER_EXTRA_TRANSVERSE",
-			"wxPAPER_A_PLUS",
-			"wxPAPER_B_PLUS",
-			"wxPAPER_LETTER_PLUS",
-			"wxPAPER_A4_PLUS",
-			"wxPAPER_A5_TRANSVERSE",
-			"wxPAPER_B5_TRANSVERSE",
-			"wxPAPER_A3_EXTRA",
-			"wxPAPER_A5_EXTRA",
-			"wxPAPER_B5_EXTRA",
-			"wxPAPER_A2",
-			"wxPAPER_A3_TRANSVERSE",
-			"wxPAPER_A3_EXTRA_TRANSVERSE",
-			"wxPAPER_DBL_JAPANESE_POSTCARD",
-			"wxPAPER_A6",
-			"wxPAPER_JENV_KAKU2",
-			"wxPAPER_JENV_KAKU3",
-			"wxPAPER_JENV_CHOU3",
-			"wxPAPER_JENV_CHOU4",
-			"wxPAPER_LETTER_ROTATED",
-			"wxPAPER_A3_ROTATED",
-			"wxPAPER_A4_ROTATED",
-			"wxPAPER_A5_ROTATED",
-			"wxPAPER_B4_JIS_ROTATED",
-			"wxPAPER_B5_JIS_ROTATED",
 			"wxPAPER_JAPANESE_POSTCARD_ROTATED",
-			"wxPAPER_DBL_JAPANESE_POSTCARD_ROTATED",
-			"wxPAPER_A6_ROTATED",
-			"wxPAPER_JENV_KAKU2_ROTATED",
-			"wxPAPER_JENV_KAKU3_ROTATED",
+			"wxPAPER_JENV_CHOU3",
 			"wxPAPER_JENV_CHOU3_ROTATED",
+			"wxPAPER_JENV_CHOU4",
 			"wxPAPER_JENV_CHOU4_ROTATED",
-			"wxPAPER_B6_JIS",
-			"wxPAPER_B6_JIS_ROTATED",
-			"wxPAPER_12X11",
+			"wxPAPER_JENV_KAKU2",
+			"wxPAPER_JENV_KAKU2_ROTATED",
+			"wxPAPER_JENV_KAKU3",
+			"wxPAPER_JENV_KAKU3_ROTATED",
 			"wxPAPER_JENV_YOU4",
 			"wxPAPER_JENV_YOU4_ROTATED",
+			"wxPAPER_LEDGER",
+			"wxPAPER_LEGAL",
+			"wxPAPER_LEGAL_EXTRA",
+			"wxPAPER_LETTER",
+			"wxPAPER_LETTERSMALL",
+			"wxPAPER_LETTER_EXTRA",
+			"wxPAPER_LETTER_EXTRA_TRANSVERSE",
+			"wxPAPER_LETTER_PLUS",
+			"wxPAPER_LETTER_ROTATED",
+			"wxPAPER_LETTER_TRANSVERSE",
+			"wxPAPER_NONE",
+			"wxPAPER_NOTE",
 			"wxPAPER_P16K",
+			"wxPAPER_P16K_ROTATED",
 			"wxPAPER_P32K",
 			"wxPAPER_P32KBIG",
-			"wxPAPER_PENV_1",
-			"wxPAPER_PENV_2",
-			"wxPAPER_PENV_3",
-			"wxPAPER_PENV_4",
-			"wxPAPER_PENV_5",
-			"wxPAPER_PENV_6",
-			"wxPAPER_PENV_7",
-			"wxPAPER_PENV_8",
-			"wxPAPER_PENV_9",
-			"wxPAPER_PENV_10",
-			"wxPAPER_P16K_ROTATED",
-			"wxPAPER_P32K_ROTATED",
 			"wxPAPER_P32KBIG_ROTATED",
+			"wxPAPER_P32K_ROTATED",
+			"wxPAPER_PENV_1",
+			"wxPAPER_PENV_10",
+			"wxPAPER_PENV_10_ROTATED",
 			"wxPAPER_PENV_1_ROTATED",
+			"wxPAPER_PENV_2",
 			"wxPAPER_PENV_2_ROTATED",
+			"wxPAPER_PENV_3",
 			"wxPAPER_PENV_3_ROTATED",
+			"wxPAPER_PENV_4",
 			"wxPAPER_PENV_4_ROTATED",
+			"wxPAPER_PENV_5",
 			"wxPAPER_PENV_5_ROTATED",
+			"wxPAPER_PENV_6",
 			"wxPAPER_PENV_6_ROTATED",
+			"wxPAPER_PENV_7",
 			"wxPAPER_PENV_7_ROTATED",
+			"wxPAPER_PENV_8",
 			"wxPAPER_PENV_8_ROTATED",
+			"wxPAPER_PENV_9",
 			"wxPAPER_PENV_9_ROTATED",
-			"wxPAPER_PENV_10_ROTATED"
+			"wxPAPER_QUARTO",
+			"wxPAPER_STATEMENT",
+			"wxPAPER_TABLOID",
+			"wxPAPER_TABLOID_EXTRA"
 		],
 		"wxPrintOrientation":[
 			"wxPORTRAIT",
@@ -1525,6 +1544,7 @@
 			"wxDIR_DIRS",
 			"wxDIR_HIDDEN",
 			"wxDIR_DOTDOT",
+			"wxDIR_NO_FOLLOW",
 			"wxDIR_DEFAULT"
 		],
 		"wxDynamicLibraryCategory":[
@@ -1647,9 +1667,16 @@
 			"wxFSW_EVENT_RENAME",
 			"wxFSW_EVENT_MODIFY",
 			"wxFSW_EVENT_ACCESS",
+			"wxFSW_EVENT_ATTRIB",
+			"wxFSW_EVENT_UNMOUNT",
 			"wxFSW_EVENT_WARNING",
 			"wxFSW_EVENT_ERROR",
 			"wxFSW_EVENT_ALL"
+		],
+		"wxFSWWarningType":[
+			"wxFSW_WARNING_NONE",
+			"wxFSW_WARNING_GENERAL",
+			"wxFSW_WARNING_OVERFLOW"
 		],
 		"wxBitmapType":[
 			"wxBITMAP_TYPE_INVALID",
@@ -1767,6 +1794,26 @@
 		"wxHelpSearchMode":[
 			"wxHELP_SEARCH_INDEX",
 			"wxHELP_SEARCH_ALL"
+		],
+		"wxHtmlSelectionState":[
+			"wxHTML_SEL_OUT",
+			"wxHTML_SEL_IN",
+			"wxHTML_SEL_CHANGING"
+		],
+		"wxHtmlScriptMode":[
+			"wxHTML_SCRIPT_NORMAL",
+			"wxHTML_SCRIPT_SUB",
+			"wxHTML_SCRIPT_SUP"
+		],
+		"wxHtmlURLType":[
+			"wxHTML_URL_PAGE",
+			"wxHTML_URL_IMAGE",
+			"wxHTML_URL_OTHER"
+		],
+		"wxHtmlOpeningStatus":[
+			"wxHTML_OPEN",
+			"wxHTML_BLOCK",
+			"wxHTML_REDIRECT"
 		],
 		"wxImageResolution":[
 			"wxIMAGE_RESOLUTION_NONE",
@@ -2151,6 +2198,10 @@
 			"wxAutomationInstance_CreateIfNeeded",
 			"wxAutomationInstance_SilentIfNone"
 		],
+		"wxOleConvertVariantFlags":[
+			"wxOleConvertVariant_Default",
+			"wxOleConvertVariant_ReturnSafeArrays"
+		],
 		"wxOwnerDrawnComboBoxPaintingFlags":[
 			"wxODCB_PAINTING_CONTROL",
 			"wxODCB_PAINTING_SELECTED"
@@ -2199,7 +2250,8 @@
 			"wxSHOW_EFFECT_SLIDE_TO_TOP",
 			"wxSHOW_EFFECT_SLIDE_TO_BOTTOM",
 			"wxSHOW_EFFECT_BLEND",
-			"wxSHOW_EFFECT_EXPAND"
+			"wxSHOW_EFFECT_EXPAND",
+			"wxSHOW_EFFECT_MAX"
 		],
 		"wxWindowVariant":[
 			"wxWINDOW_VARIANT_NORMAL",
@@ -2370,6 +2422,7 @@
 			"wxRIBBON_ART_BUTTON_BAR_LABEL_FONT",
 			"wxRIBBON_ART_TAB_LABEL_FONT",
 			"wxRIBBON_ART_BUTTON_BAR_LABEL_COLOUR",
+			"wxRIBBON_ART_BUTTON_BAR_LABEL_DISABLED_COLOUR",
 			"wxRIBBON_ART_BUTTON_BAR_HOVER_BORDER_COLOUR",
 			"wxRIBBON_ART_BUTTON_BAR_HOVER_BACKGROUND_TOP_COLOUR",
 			"wxRIBBON_ART_BUTTON_BAR_HOVER_BACKGROUND_TOP_GRADIENT_COLOUR",
@@ -2509,7 +2562,8 @@
 			"wxRICHTEXT_HITTEST_ON",
 			"wxRICHTEXT_HITTEST_OUTSIDE",
 			"wxRICHTEXT_HITTEST_NO_NESTED_OBJECTS",
-			"wxRICHTEXT_HITTEST_NO_FLOATING_OBJECTS"
+			"wxRICHTEXT_HITTEST_NO_FLOATING_OBJECTS",
+			"wxRICHTEXT_HITTEST_HONOUR_ATOMIC"
 		],
 		"wxTextBoxAttrFlags":[
 			"wxTEXT_BOX_ATTR_FLOAT",
@@ -2526,12 +2580,14 @@
 			"wxTEXT_ATTR_UNITS_PIXELS",
 			"wxTEXT_ATTR_UNITS_PERCENTAGE",
 			"wxTEXT_ATTR_UNITS_POINTS",
+			"wxTEXT_ATTR_UNITS_HUNDREDTHS_POINT",
 			"wxTEXT_ATTR_UNITS_MASK"
 		],
 		"wxTextBoxAttrPosition":[
 			"wxTEXT_BOX_ATTR_POSITION_STATIC",
 			"wxTEXT_BOX_ATTR_POSITION_RELATIVE",
 			"wxTEXT_BOX_ATTR_POSITION_ABSOLUTE",
+			"wxTEXT_BOX_ATTR_POSITION_FIXED",
 			"wxTEXT_BOX_ATTR_POSITION_MASK"
 		],
 		"wxTextAttrBorderStyle":[
@@ -2780,12 +2836,15 @@
 			"wxTEXT_ATTR_TEXT_COLOUR",
 			"wxTEXT_ATTR_BACKGROUND_COLOUR",
 			"wxTEXT_ATTR_FONT_FACE",
-			"wxTEXT_ATTR_FONT_SIZE",
+			"wxTEXT_ATTR_FONT_POINT_SIZE",
+			"wxTEXT_ATTR_FONT_PIXEL_SIZE",
 			"wxTEXT_ATTR_FONT_WEIGHT",
 			"wxTEXT_ATTR_FONT_ITALIC",
 			"wxTEXT_ATTR_FONT_UNDERLINE",
+			"wxTEXT_ATTR_FONT_STRIKETHROUGH",
 			"wxTEXT_ATTR_FONT_ENCODING",
 			"wxTEXT_ATTR_FONT_FAMILY",
+			"wxTEXT_ATTR_FONT_SIZE",
 			"wxTEXT_ATTR_FONT",
 			"wxTEXT_ATTR_ALIGNMENT",
 			"wxTEXT_ATTR_LEFT_INDENT",
@@ -2826,7 +2885,8 @@
 			"wxTEXT_ATTR_BULLET_STYLE_OUTLINE",
 			"wxTEXT_ATTR_BULLET_STYLE_ALIGN_LEFT",
 			"wxTEXT_ATTR_BULLET_STYLE_ALIGN_RIGHT",
-			"wxTEXT_ATTR_BULLET_STYLE_ALIGN_CENTRE"
+			"wxTEXT_ATTR_BULLET_STYLE_ALIGN_CENTRE",
+			"wxTEXT_ATTR_BULLET_STYLE_CONTINUATION"
 		],
 		"wxTextAttrEffects":[
 			"wxTEXT_ATTR_EFFECT_NONE",
@@ -2973,34 +3033,37 @@
 			"wxFS_VOL_ICO_MAX"
 		],
 		"wxWebViewZoom":[
-			"wxWEB_VIEW_ZOOM_TINY",
-			"wxWEB_VIEW_ZOOM_SMALL",
-			"wxWEB_VIEW_ZOOM_MEDIUM",
-			"wxWEB_VIEW_ZOOM_LARGE",
-			"wxWEB_VIEW_ZOOM_LARGEST"
+			"wxWEBVIEW_ZOOM_TINY",
+			"wxWEBVIEW_ZOOM_SMALL",
+			"wxWEBVIEW_ZOOM_MEDIUM",
+			"wxWEBVIEW_ZOOM_LARGE",
+			"wxWEBVIEW_ZOOM_LARGEST"
 		],
 		"wxWebViewZoomType":[
-			"wxWEB_VIEW_ZOOM_TYPE_LAYOUT",
-			"wxWEB_VIEW_ZOOM_TYPE_TEXT"
+			"wxWEBVIEW_ZOOM_TYPE_LAYOUT",
+			"wxWEBVIEW_ZOOM_TYPE_TEXT"
 		],
 		"wxWebViewNavigationError":[
-			"wxWEB_NAV_ERR_CONNECTION",
-			"wxWEB_NAV_ERR_CERTIFICATE",
-			"wxWEB_NAV_ERR_AUTH",
-			"wxWEB_NAV_ERR_SECURITY",
-			"wxWEB_NAV_ERR_NOT_FOUND",
-			"wxWEB_NAV_ERR_REQUEST",
-			"wxWEB_NAV_ERR_USER_CANCELLED",
-			"wxWEB_NAV_ERR_OTHER"
+			"wxWEBVIEW_NAV_ERR_CONNECTION",
+			"wxWEBVIEW_NAV_ERR_CERTIFICATE",
+			"wxWEBVIEW_NAV_ERR_AUTH",
+			"wxWEBVIEW_NAV_ERR_SECURITY",
+			"wxWEBVIEW_NAV_ERR_NOT_FOUND",
+			"wxWEBVIEW_NAV_ERR_REQUEST",
+			"wxWEBVIEW_NAV_ERR_USER_CANCELLED",
+			"wxWEBVIEW_NAV_ERR_OTHER"
 		],
 		"wxWebViewReloadFlags":[
-			"wxWEB_VIEW_RELOAD_DEFAULT",
-			"wxWEB_VIEW_RELOAD_NO_CACHE"
+			"wxWEBVIEW_RELOAD_DEFAULT",
+			"wxWEBVIEW_RELOAD_NO_CACHE"
 		],
-		"wxWebViewBackend":[
-			"wxWEB_VIEW_BACKEND_DEFAULT",
-			"wxWEB_VIEW_BACKEND_WEBKIT",
-			"wxWEB_VIEW_BACKEND_IE"
+		"wxWebViewFindFlags":[
+			"wxWEBVIEW_FIND_WRAP",
+			"wxWEBVIEW_FIND_ENTIRE_WORD",
+			"wxWEBVIEW_FIND_MATCH_CASE",
+			"wxWEBVIEW_FIND_HIGHLIGHT_RESULT",
+			"wxWEBVIEW_FIND_BACKWARDS",
+			"wxWEBVIEW_FIND_DEFAULT"
 		],
 		"wxXmlNodeType":[
 			"wxXML_ELEMENT_NODE",
@@ -3016,6 +3079,10 @@
 			"wxXML_DOCUMENT_FRAG_NODE",
 			"wxXML_NOTATION_NODE",
 			"wxXML_HTML_DOCUMENT_NODE"
+		],
+		"wxXmlDocumentLoadFlag":[
+			"wxXMLDOC_NONE",
+			"wxXMLDOC_KEEP_WHITESPACE_NODES"
 		],
 		"wxXmlResourceFlags":[
 			"wxXRC_USE_LOCALE",

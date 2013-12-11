@@ -11,27 +11,29 @@
 
 #include "php_wxwidgets.h"
 #include "appmanagement.h"
-#include "cfg.h"
+#include "aui.h"
 #include "bookctrl.h"
-#include "dnd.h"
+#include "cfg.h"
 #include "cmndlg.h"
 #include "containers.h"
 #include "ctrl.h"
 #include "data.h"
 #include "dc.h"
+#include "dnd.h"
 #include "docview.h"
+#include "dvc.h"
 #include "events.h"
 #include "file.h"
 #include "gdi.h"
 #include "grid.h"
-#include "html.h"
 #include "help.h"
+#include "html.h"
 #include "logging.h"
 #include "managedwnd.h"
+#include "media.h"
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
-#include "media.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -43,11 +45,9 @@
 #include "validator.h"
 #include "vfs.h"
 #include "webview.h"
-#include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
 #include "xrc.h"
-#include "dvc.h"
 #include "others.h"
 
 
@@ -3171,7 +3171,7 @@ PHP_METHOD(php_wxDC, DeviceToLogicalYRel)
 /* }}} */
 
 /* {{{ proto  wxDC::DrawArc(int xStart, int yStart, int xEnd, int yEnd, int xc, int yc)
-   Draws an arc of a circle, centred on (xc, yc), with starting point (xStart, yStart) and ending at (xEnd, yEnd). */
+   Draws an arc from the given start to the given end point. */
 PHP_METHOD(php_wxDC, DrawArc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18183,7 +18183,7 @@ PHP_METHOD(php_wxDC, ResetTransformMatrix)
 /* }}} */
 
 /* {{{ proto  wxDC::SetAxisOrientation(bool xLeftRight, bool yBottomUp)
-   Sets the x and y axis orientation (i.e., the direction from lowest to highest values on the axis). */
+   Sets the x and y axis orientation (i.e. the direction from lowest to highest values on the axis). */
 PHP_METHOD(php_wxDC, SetAxisOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19632,7 +19632,7 @@ PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 /* }}} */
 
 /* {{{ proto  wxDC::SetDeviceOrigin(int x, int y)
-   Sets the device origin (i.e., the origin in pixels after scaling has been applied). */
+   Sets the device origin (i.e. the origin in pixels after scaling has been applied). */
 PHP_METHOD(php_wxDC, SetDeviceOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG

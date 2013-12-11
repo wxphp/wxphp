@@ -395,6 +395,50 @@ static zend_function_entry php_wxRibbonToolBarToolBase_functions[] = {
 };
 #endif
 
+extern zend_class_entry* php_wxGridCellCoords_entry;
+void php_wxGridCellCoords_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+class wxGridCellCoords_php: public wxGridCellCoords{
+	public:
+	
+	wxGridCellCoords_php():wxGridCellCoords(){}
+	wxGridCellCoords_php(int row, int col):wxGridCellCoords(row, col){}
+		
+		
+	void InitProperties(){
+	}
+	
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+BEGIN_EXTERN_C()
+struct zo_wxGridCellCoords 
+{
+    zend_object zo;
+    wxGridCellCoords_php* native_object;
+    wxphp_object_type object_type;
+    int is_user_initialized;
+};
+
+void php_wxGridCellCoords_free(void *object TSRMLS_DC);
+zend_object_value php_wxGridCellCoords_new(zend_class_entry *class_type TSRMLS_DC);
+END_EXTERN_C()
+
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
+static zend_function_entry php_wxGridCellCoords_functions[] = {
+	PHP_ME(php_wxGridCellCoords, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxGridCellCoords, GetRow, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellCoords, SetRow, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellCoords, GetCol, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellCoords, SetCol, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGridCellCoords, Set, NULL, ZEND_ACC_PUBLIC)
+	PHP_FE_END
+};
+#endif
+
 extern zend_class_entry* php_wxNonOwnedWindow_entry;
 void php_wxNonOwnedWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
@@ -1480,8 +1524,8 @@ static zend_function_entry php_wxProgressDialog_functions[] = {
 	PHP_ME(php_wxTopLevelWindow, ShowFullScreen, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, IsFullScreen, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, CanSetTransparent, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTopLevelWindow, CenterOnScreen, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, CentreOnScreen, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTopLevelWindow, CenterOnScreen, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, GetDefaultItem, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, GetDefaultSize, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, GetIcon, NULL, ZEND_ACC_PUBLIC)
