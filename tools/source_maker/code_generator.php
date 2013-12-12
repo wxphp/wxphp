@@ -129,6 +129,9 @@ if(file_exists("./../../json/class_groups.json"))
 if(file_exists("./../../json/enums.json"))
 {
 	$defEnums = unserialize_json(file_get_contents("./../../json/enums.json"));
+	
+	//Blacklist enumerations
+	unset($defEnums[1]["wxFSWFlags"][array_search("wxFSW_EVENT_UNMOUNT", $defEnums[1]["wxFSWFlags"])]);
 }
 
 //Import all constants defined by hand
