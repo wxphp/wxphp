@@ -1252,6 +1252,8 @@ static zend_function_entry php_wxDataViewEvent_functions[] = {
 	PHP_ME(php_wxNotifyEvent, Allow, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxNotifyEvent, IsAllowed, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxNotifyEvent, Veto, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, GetItem, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewEvent, SetItem, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewEvent, GetCacheFrom, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewEvent, GetCacheTo, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewEvent, GetColumn, NULL, ZEND_ACC_PUBLIC)

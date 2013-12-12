@@ -156346,6 +156346,64 @@
 		"_implements":[
 			"wxNotifyEvent"
 		],
+		"GetItem":[
+			{
+				"return_type":"wxDataViewItem",
+				"brief_description":"",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetItem":[
+			{
+				"return_type":"void",
+				"brief_description":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxDataViewItem&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"item"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
 		"GetCacheFrom":[
 			{
 				"return_type":"int",

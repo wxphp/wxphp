@@ -4436,6 +4436,8 @@ PHP_METHOD(php_wxDataViewListModel, GetCount);
 PHP_METHOD(php_wxDataViewListModel, GetRow);
 PHP_METHOD(php_wxDataViewListModel, IsEnabledByRow);
 PHP_METHOD(php_wxDataViewListModel, SetValueByRow);
+PHP_METHOD(php_wxDataViewEvent, GetItem);
+PHP_METHOD(php_wxDataViewEvent, SetItem);
 PHP_METHOD(php_wxDataViewEvent, GetCacheFrom);
 PHP_METHOD(php_wxDataViewEvent, GetCacheTo);
 PHP_METHOD(php_wxDataViewEvent, GetColumn);
