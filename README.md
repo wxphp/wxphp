@@ -164,7 +164,7 @@ choice or svn checkout with:
 
 *NOTE: Remember to use tar.bz2 when downloading sources, using the zip 
 file results on compilation errors under linux, since file line endings 
-are formatted for windows.
+are formatted for windows.*
 	
 	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
 
