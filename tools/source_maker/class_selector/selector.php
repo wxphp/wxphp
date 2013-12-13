@@ -246,7 +246,7 @@ class myFrame extends wxFrame
 		
 		//Clear inheritance list
 		$implements_array = array();
-		$this->lstImplements->Set($implements_array, null);
+		$this->lstImplements->Set($implements_array);
 		
 		if(isset($cls[$selected_class]))
 		{
@@ -277,7 +277,7 @@ class myFrame extends wxFrame
 					}
 					
 					//Add inheritance list
-					$this->lstImplements->Set($implements_array, null);
+					$this->lstImplements->Set($implements_array);
 					
 					//Check bases classes that were checked or stored on classes.out
 					foreach($saved_selections as $selection_index)
@@ -340,7 +340,7 @@ class myFrame extends wxFrame
 			}
 		}
 
-		$this->lstMethods->Set($arr, null);
+		$this->lstMethods->Set($arr);
 		
 		foreach($optIndexArr as $optIndex)
 			$this->lstMethods->Check($optIndex,true);

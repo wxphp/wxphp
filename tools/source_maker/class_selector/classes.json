@@ -78420,27 +78420,21 @@
 				"static":false,
 				"protected":false,
 				"parameters_type":[
-					"const wxArrayString&",
-					"void**"
+					"const wxArrayString&"
 				],
 				"parameters_is_array":[
-					false,
 					false
 				],
 				"parameters_extra":[
-					false,
 					false
 				],
 				"parameters_name":[
-					"items",
-					"clientData"
+					"items"
 				],
 				"parameters_required":[
-					true,
 					true
 				],
 				"parameters_default_value":[
-					null,
 					null
 				]
 			}
