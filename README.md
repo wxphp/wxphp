@@ -82,7 +82,7 @@ work with any 5.3.x - 5.4.x version of php*
 	
 3. Download PHP 5 binary tools:
 		
- * [http://windows.php.net/downloads/php-sdk/](http://windows.php.net/downloads/php-sdk/)
+  [http://windows.php.net/downloads/php-sdk/](http://windows.php.net/downloads/php-sdk/)
 	
 4. Extract the binary tools inside the directory c:\php-sdk leaving you with:
 	
