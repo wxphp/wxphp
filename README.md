@@ -158,6 +158,11 @@ libwebkitgtk development files and library. On ubuntu and debian based
 distros this could be done with:
 	
 	sudo apt-get install libwebkitgtk-dev
+	
+Also wxMediaCtrl is binded so you need to install gconf and gstreamer
+development files on linux platforms:
+
+	sudo apt-get install libgconf2-dev libgstreamer0.10-dev
 
 Download wxWidgets tar file and uncompress it on your directory of 
 choice or svn checkout with:

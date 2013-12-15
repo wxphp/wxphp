@@ -18,6 +18,13 @@
 #include <ApplicationServices/ApplicationServices.h>
 #endif
 
+/**
+ * Initialize the wxWidgets library.
+ */
+wxIMPLEMENT_WX_THEME_SUPPORT
+IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
+wxDISABLE_DEBUG_SUPPORT();
+
 BEGIN_EXTERN_C()
 void php_wxApp_free(void *object TSRMLS_DC) 
 {
@@ -95,10 +102,6 @@ bool wxAppWrapper::OnInit()
 
 	return true;
 }
-
-
-IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
-
 
 /* {{{ proto wxApp wxApp::__construct() 
    Constructor. */
