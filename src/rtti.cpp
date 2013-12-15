@@ -34,6 +34,7 @@
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
+#include "net.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"
@@ -1265,6 +1266,10 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxWebView_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXMEDIACTRL_TYPE) && (!reference_type_found)){
+				references = &((wxMediaCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXSPLITTERWINDOW_TYPE) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)native_object)->references;
 				reference_type_found = true;
@@ -1575,6 +1580,10 @@ PHP_METHOD(php_wxObject, UnShare)
 			}
 			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
 				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXMEDIAEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxMediaEvent_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
@@ -2542,6 +2551,10 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxWebView_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXMEDIACTRL_TYPE) && (!reference_type_found)){
+				references = &((wxMediaCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXSPLITTERWINDOW_TYPE) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)native_object)->references;
 				reference_type_found = true;
@@ -2852,6 +2865,10 @@ PHP_METHOD(php_wxObject, UnRef)
 			}
 			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
 				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXMEDIAEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxMediaEvent_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
@@ -3819,6 +3836,10 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxWebView_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXMEDIACTRL_TYPE) && (!reference_type_found)){
+				references = &((wxMediaCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXSPLITTERWINDOW_TYPE) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)native_object)->references;
 				reference_type_found = true;
@@ -4129,6 +4150,10 @@ PHP_METHOD(php_wxObject, IsSameAs)
 			}
 			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
 				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXMEDIAEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxMediaEvent_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
@@ -5120,6 +5145,10 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxWebView_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXMEDIACTRL_TYPE) && (!reference_type_found)){
+				references = &((wxMediaCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXSPLITTERWINDOW_TYPE) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)native_object)->references;
 				reference_type_found = true;
@@ -5430,6 +5459,10 @@ PHP_METHOD(php_wxObject, Ref)
 			}
 			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
 				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXMEDIAEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxMediaEvent_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
@@ -6421,6 +6454,10 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxWebView_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXMEDIACTRL_TYPE) && (!reference_type_found)){
+				references = &((wxMediaCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXSPLITTERWINDOW_TYPE) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)native_object)->references;
 				reference_type_found = true;
@@ -6731,6 +6768,10 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 			}
 			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
 				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXMEDIAEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxMediaEvent_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){
@@ -7721,6 +7762,10 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxWebView_php*)native_object)->references;
 				reference_type_found = true;
 			}
+			if((current_object_type == PHP_WXMEDIACTRL_TYPE) && (!reference_type_found)){
+				references = &((wxMediaCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
 			if((current_object_type == PHP_WXSPLITTERWINDOW_TYPE) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)native_object)->references;
 				reference_type_found = true;
@@ -8031,6 +8076,10 @@ PHP_METHOD(php_wxObject, IsKindOf)
 			}
 			if((current_object_type == PHP_WXWEBVIEWEVENT_TYPE) && (!reference_type_found)){
 				references = &((wxWebViewEvent_php*)native_object)->references;
+				reference_type_found = true;
+			}
+			if((current_object_type == PHP_WXMEDIAEVENT_TYPE) && (!reference_type_found)){
+				references = &((wxMediaEvent_php*)native_object)->references;
 				reference_type_found = true;
 			}
 			if((current_object_type == PHP_WXSTYLEDTEXTEVENT_TYPE) && (!reference_type_found)){

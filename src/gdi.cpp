@@ -34,6 +34,7 @@
 #include "menus.h"
 #include "misc.h"
 #include "miscwnd.h"
+#include "net.h"
 #include "pickers.h"
 #include "printing.h"
 #include "ribbon.h"

@@ -151,14 +151,11 @@ if(file_exists("./../../json/consts.json"))
 		{	
 			//Temporary measure to skip some constants (we need to 
 			//compile wxWidgets with other features)
-			if("".stripos($enumValue, "ASCII")."" != "" ||
-				"".stripos($enumValue, "BINARY")."" != "" ||
-				"".stripos($enumValue, "NONE")."" != "" ||
+			if( 
 				"".stripos($enumValue, "wxACC_")."" != "" || 
 				"".stripos($enumValue, "wxAutomationInstance_")."" != "" ||
 				"".stripos($enumValue, "wxCURSOR_")."" != "" ||
 				"".stripos($enumValue, "wxFS_VOL_")."" != "" ||
-				"".stripos($enumValue, "wxMEDIACTRLPLAYER")."" != "" ||
 				"".stripos($enumValue, "wxNAVDIR_")."" != "" ||
 				"".stripos($enumValue, "wxOBJID_")."" != "" ||
 				"".stripos($enumValue, "wxROLE_")."" != ""

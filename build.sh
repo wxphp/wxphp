@@ -46,15 +46,15 @@ cd tools/source_maker/
 php code_generator.php
 
 # Copy non dynamic template files
-if [ ! -e "./../../src/app.cpp" ]; then
-	cp source_templates/app.h ./../../includes/
-	cp source_templates/app.cpp ./../../src/
-fi
+rm ./../../includes/app.h
+rm ./../../src/app.cpp
+cp source_templates/app.h ./../../includes/
+cp source_templates/app.cpp ./../../src/
 
-if [ ! -e "./../../src/references.cpp" ]; then
-	cp source_templates/references.h ./../../includes/
-	cp source_templates/references.cpp ./../../src/
-fi
+rm ./../../includes/references.h
+rm ./../../src/references.cpp
+cp source_templates/references.h ./../../includes/
+cp source_templates/references.cpp ./../../src/
 
 # Return to main source directory
 cd ../../

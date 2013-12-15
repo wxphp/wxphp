@@ -85,7 +85,7 @@ if (PHP_WXWIDGETS != "no") {
 		EXTENSION("wxwidgets", "wxwidgets.cpp", true, null, null);
 		
 		//Add extra sources
-		ADD_SOURCES(configure_module_dirname + "\\src", "app.cpp references.cpp appmanagement.cpp aui.cpp bookctrl.cpp cfg.cpp cmndlg.cpp containers.cpp ctrl.cpp data.cpp dc.cpp dnd.cpp docview.cpp dvc.cpp events.cpp file.cpp gdi.cpp grid.cpp help.cpp html.cpp logging.cpp managedwnd.cpp media.cpp menus.cpp misc.cpp miscwnd.cpp pickers.cpp printing.cpp ribbon.cpp richtext.cpp rtti.cpp stc.cpp streams.cpp threading.cpp validator.cpp vfs.cpp webview.cpp winlayout.cpp xml.cpp xrc.cpp others.cpp functions.cpp", "wxwidgets");
+		ADD_SOURCES(configure_module_dirname + "\\src", "app.cpp references.cpp appmanagement.cpp aui.cpp bookctrl.cpp cfg.cpp cmndlg.cpp containers.cpp ctrl.cpp data.cpp dc.cpp dnd.cpp docview.cpp dvc.cpp events.cpp file.cpp gdi.cpp grid.cpp help.cpp html.cpp logging.cpp managedwnd.cpp media.cpp menus.cpp misc.cpp miscwnd.cpp net.cpp pickers.cpp printing.cpp ribbon.cpp richtext.cpp rtti.cpp stc.cpp streams.cpp threading.cpp validator.cpp vfs.cpp webview.cpp winlayout.cpp xml.cpp xrc.cpp others.cpp functions.cpp", "wxwidgets");
 	}
 	else {
 		WARNING("wxWidgets not enabled; libraries and headers not found");

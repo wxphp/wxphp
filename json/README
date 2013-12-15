@@ -79,3 +79,12 @@ consts.json (Fixed on wxWidgets SVN)
 includes.json
 ======================
 1. Remove: wx/preferences.h
+
+
+enums.json
+======================
+1. Added: "wxMediaState":[
+			"wxMEDIASTATE_STOPPED",
+			"wxMEDIASTATE_PAUSED",
+			"wxMEDIASTATE_PLAYING"
+		],

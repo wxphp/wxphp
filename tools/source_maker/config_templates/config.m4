@@ -60,7 +60,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
 		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
 	else
-		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs all`
+		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs xrc,webview,stc,richtext,ribbon,propgrid,aui,html,qa,adv,core,xml,net,media,base`
 	fi
 	
 	dnl Append wxWidgets flags to the compiler flags and suppress warning flags

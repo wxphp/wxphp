@@ -60,7 +60,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
 		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
 	else
-		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs all`
+		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs xrc,webview,stc,richtext,ribbon,propgrid,aui,html,qa,adv,core,xml,net,media,base`
 	fi
 	
 	dnl Append wxWidgets flags to the compiler flags and suppress warning flags
@@ -79,5 +79,5 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_ADD_LIBRARY(stdc++, 1 , WXWIDGETS_SHARED_LIBADD)
 
 	dnl PHP_NEW_EXTENSION(extname, sources [, shared [, sapi_class [, extra-cflags [, cxx [, zend_ext]]]]])
-	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp src/appmanagement.cpp src/aui.cpp src/bookctrl.cpp src/cfg.cpp src/cmndlg.cpp src/containers.cpp src/ctrl.cpp src/data.cpp src/dc.cpp src/dnd.cpp src/docview.cpp src/dvc.cpp src/events.cpp src/file.cpp src/gdi.cpp src/grid.cpp src/help.cpp src/html.cpp src/logging.cpp src/managedwnd.cpp src/media.cpp src/menus.cpp src/misc.cpp src/miscwnd.cpp src/pickers.cpp src/printing.cpp src/ribbon.cpp src/richtext.cpp src/rtti.cpp src/stc.cpp src/streams.cpp src/threading.cpp src/validator.cpp src/vfs.cpp src/webview.cpp src/winlayout.cpp src/xml.cpp src/xrc.cpp src/others.cpp src/functions.cpp wxwidgets.cpp, $ext_shared,,,1)
+	PHP_NEW_EXTENSION(wxwidgets, src/app.cpp src/references.cpp src/appmanagement.cpp src/aui.cpp src/bookctrl.cpp src/cfg.cpp src/cmndlg.cpp src/containers.cpp src/ctrl.cpp src/data.cpp src/dc.cpp src/dnd.cpp src/docview.cpp src/dvc.cpp src/events.cpp src/file.cpp src/gdi.cpp src/grid.cpp src/help.cpp src/html.cpp src/logging.cpp src/managedwnd.cpp src/media.cpp src/menus.cpp src/misc.cpp src/miscwnd.cpp src/net.cpp src/pickers.cpp src/printing.cpp src/ribbon.cpp src/richtext.cpp src/rtti.cpp src/stc.cpp src/streams.cpp src/threading.cpp src/validator.cpp src/vfs.cpp src/webview.cpp src/winlayout.cpp src/xml.cpp src/xrc.cpp src/others.cpp src/functions.cpp wxwidgets.cpp, $ext_shared,,,1)
 fi
