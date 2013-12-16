@@ -24,6 +24,7 @@ ltmain.sh
 missing
 mkinstalldirs
 modules/
+wxWidgets.git/
 run-tests.php
 src/.libs
 src/*.lo
