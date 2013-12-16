@@ -714,6 +714,8 @@ PHP_METHOD(php_wxMediaCtrl, GetBestSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;

@@ -7546,6 +7546,8 @@ PHP_METHOD(php_wxColourData, GetCustomColour)
 				memcpy(ptr, &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -27372,6 +27374,8 @@ PHP_METHOD(php_wxWizard, GetPageSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;

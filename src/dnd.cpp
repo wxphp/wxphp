@@ -3981,6 +3981,8 @@ PHP_METHOD(php_wxDataObjectComposite, GetReceivedFormat)
 				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
 				object_init_ex(return_value, php_wxDataFormat_entry);
 				((zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataFormat_php*) ptr;
+				((wxDataFormat_php*)ptr)->phpObj = return_value;
+				((wxDataFormat_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5266,6 +5268,8 @@ PHP_METHOD(php_wxBitmapDataObject, GetBitmap)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;

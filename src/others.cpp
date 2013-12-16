@@ -1344,6 +1344,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmap)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -1462,6 +1464,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmapCurrent)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -1580,6 +1584,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmapDisabled)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -1698,6 +1704,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmapFocus)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -1816,6 +1824,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmapLabel)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -1934,6 +1944,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmapMargins)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;
@@ -2052,6 +2064,8 @@ PHP_METHOD(php_wxAnyButton, GetBitmapPressed)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;

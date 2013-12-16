@@ -15621,6 +15621,8 @@ PHP_METHOD(php_wxGrid, BlockToDeviceRect)
 				memcpy(ptr, &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(topLeft0, "wxGrid::BlockToDeviceRect at call with 2 argument(s)");
 				references->AddReference(bottomRight0, "wxGrid::BlockToDeviceRect at call with 2 argument(s)");
@@ -16361,6 +16363,8 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				memcpy(ptr, &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -16385,6 +16389,8 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(coords1, "wxGrid::CellToRect at call with 1 argument(s)");
 
@@ -19609,6 +19615,8 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 				memcpy(ptr, &value_to_return2, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -20153,6 +20161,8 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 				references->AddReference(coords1, "wxGrid::GetCellSize at call with 1 argument(s)");
 
@@ -20262,6 +20272,8 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 				memcpy(ptr, &value_to_return2, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -20644,6 +20656,8 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 				memcpy(ptr, &value_to_return1, sizeof(wxPen));
 				object_init_ex(return_value, php_wxPen_entry);
 				((zo_wxPen*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPen_php*) ptr;
+				((wxPen_php*)ptr)->phpObj = return_value;
+				((wxPen_php*)ptr)->InitProperties();
 
 
 				return;
@@ -21469,6 +21483,8 @@ PHP_METHOD(php_wxGrid, GetColSizes)
 				memcpy(ptr, &value_to_return0, sizeof(wxGridSizesInfo));
 				object_init_ex(return_value, php_wxGridSizesInfo_entry);
 				((zo_wxGridSizesInfo*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGridSizesInfo_php*) ptr;
+				((wxGridSizesInfo_php*)ptr)->phpObj = return_value;
+				((wxGridSizesInfo_php*)ptr)->InitProperties();
 
 
 				return;
@@ -21691,6 +21707,8 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -21895,6 +21913,8 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -22581,6 +22601,8 @@ PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 				memcpy(ptr, &value_to_return0, sizeof(wxPen));
 				object_init_ex(return_value, php_wxPen_entry);
 				((zo_wxPen*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPen_php*) ptr;
+				((wxPen_php*)ptr)->phpObj = return_value;
+				((wxPen_php*)ptr)->InitProperties();
 
 
 				return;
@@ -23803,6 +23825,8 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -24145,6 +24169,8 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -24349,6 +24375,8 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -24776,6 +24804,8 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 				memcpy(ptr, &value_to_return1, sizeof(wxPen));
 				object_init_ex(return_value, php_wxPen_entry);
 				((zo_wxPen*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPen_php*) ptr;
+				((wxPen_php*)ptr)->phpObj = return_value;
+				((wxPen_php*)ptr)->InitProperties();
 
 
 				return;
@@ -25402,6 +25432,8 @@ PHP_METHOD(php_wxGrid, GetRowSizes)
 				memcpy(ptr, &value_to_return0, sizeof(wxGridSizesInfo));
 				object_init_ex(return_value, php_wxGridSizesInfo_entry);
 				((zo_wxGridSizesInfo*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGridSizesInfo_php*) ptr;
+				((wxGridSizesInfo_php*)ptr)->phpObj = return_value;
+				((wxGridSizesInfo_php*)ptr)->InitProperties();
 
 
 				return;
@@ -25698,6 +25730,8 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -25800,6 +25834,8 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -37694,6 +37730,8 @@ PHP_METHOD(php_wxGrid, XYToCell)
 				memcpy(ptr, &value_to_return2, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGridCellCoords_php*) ptr;
+				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
+				((wxGridCellCoords_php*)ptr)->InitProperties();
 
 
 				return;
@@ -37718,6 +37756,8 @@ PHP_METHOD(php_wxGrid, XYToCell)
 				memcpy(ptr, &value_to_return1, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGridCellCoords_php*) ptr;
+				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
+				((wxGridCellCoords_php*)ptr)->InitProperties();
 
 				references->AddReference(pos1, "wxGrid::XYToCell at call with 1 argument(s)");
 

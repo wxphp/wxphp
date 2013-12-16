@@ -215,6 +215,8 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5442,6 +5444,8 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(pageSetupData0, "wxPrintout::GetLogicalPageMarginsRect at call with 1 argument(s)");
 
@@ -5549,6 +5553,8 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5655,6 +5661,8 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -6397,6 +6405,8 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;

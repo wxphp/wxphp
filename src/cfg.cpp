@@ -4435,6 +4435,8 @@ PHP_METHOD(php_wxDisplay, GetClientArea)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -4635,6 +4637,8 @@ PHP_METHOD(php_wxDisplay, GetCurrentMode)
 				memcpy(ptr, &value_to_return0, sizeof(wxVideoMode));
 				object_init_ex(return_value, php_wxVideoMode_entry);
 				((zo_wxVideoMode*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxVideoMode_php*) ptr;
+				((wxVideoMode_php*)ptr)->phpObj = return_value;
+				((wxVideoMode_php*)ptr)->InitProperties();
 
 
 				return;
@@ -4979,6 +4983,8 @@ PHP_METHOD(php_wxDisplay, GetGeometry)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;

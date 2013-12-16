@@ -4610,6 +4610,8 @@ PHP_METHOD(php_wxHtmlContainerCell, GetBackgroundColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -12322,6 +12324,8 @@ PHP_METHOD(php_wxHtmlCellEvent, GetPoint)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;

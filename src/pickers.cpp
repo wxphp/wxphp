@@ -481,6 +481,8 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -2964,6 +2966,8 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 				memcpy(ptr, &value_to_return0, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
+				((wxFileName_php*)ptr)->phpObj = return_value;
+				((wxFileName_php*)ptr)->InitProperties();
 
 
 				return;
@@ -3402,6 +3406,8 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 				memcpy(ptr, &value_to_return0, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
+				((wxFileName_php*)ptr)->phpObj = return_value;
+				((wxFileName_php*)ptr)->InitProperties();
 
 
 				return;

@@ -2477,6 +2477,8 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -3075,6 +3077,8 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxIcon_php*) ptr;
+				((wxIcon_php*)ptr)->phpObj = return_value;
+				((wxIcon_php*)ptr)->InitProperties();
 
 
 				return;

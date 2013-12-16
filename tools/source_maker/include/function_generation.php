@@ -2222,6 +2222,8 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 						$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 						$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 						$call_code .= tabs($t) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
+                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
+                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
 						break;
 				}
 				break;
