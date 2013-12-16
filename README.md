@@ -228,22 +228,22 @@ modify enable_dl = off to enable_dl = on
 
 ## Creating a DEB Package
 
-First ensure you are able to build with the linux building instructions.
-Then in order to create a debian package you would need to first
-compile wxWidgets with configure as:
-	
-	./configure --prefix=/opt/wxwidgets-php --enable-monolithic
-	make 
-	make install
+Before creating a deb package you need the following dependencies to
+be satisfied:
+
+  * php5-dev
+  * git
+  * libwebkitgtk-dev
+  * libgconf2-dev
+  * libgstreamer0.10-dev
 		
-After that, copy /opt/wxwidgets-php into the debian directory on the 
-wxphp source tree, and at the wxphp source tree root execute:
+On the root wxphp source tree execute:
 
 	dpkg-buildpackage
 		
 That should take care of building and creating a deb package. We aren't
 using upstream wxWidgets packages since they are sometimes compiled 
-with less features and there aren't 2.9.4 packages of wxWidgets available
+with less features and there aren't 3.0.0 packages of wxWidgets available
 on ubuntu or debian repositories.
 
 
