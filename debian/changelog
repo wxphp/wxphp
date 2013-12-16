@@ -1,3 +1,57 @@
+php5-wxwidgets (3.0.0.0) precise; urgency=low
+
+  * Updated debianization scripts.
+  * Fix for issue #25, returned object properties are now initialized.
+  * Added netbeans project in tools directory.
+  * Enabled wxMediaCtrl, wxMediaEvent and wxURI.
+  * Fixes to readme.md
+  * Bumped wxPHP version to 3.0
+  * Fixes to make the GUI binding utility work again.
+  * Updated some parts on the development and support section
+  * Added SetItem/GetItem to wxDataViewEvent which xixes issue #8
+  * Blacklisted wxFSW_EVENT_UNMOUNT from the wxFSWFlags.
+  * Changes to get wxPHP compiling against new wxWidgets 3.0
+  * Removed duplicated classes.json copy to json dir.
+  * Fixed bug (typo) in xml_parser.php which caused functions to have no
+    default arg values.
+  * Speed optimizations in derivationsOfClass and inherits_from_class.
+  * Ported wxStatusBar sample from C++
+  * Merge pull request #18 from tsahlin/master
+  * Added a fix for functions returning wxFont objects
+  * Minor addition to .gitignore.
+  * Merge pull request #16 from tsahlin/master
+  * Added wxLog* functions
+  * Merge pull request #15 from tsahlin/master
+  * Enabled function wxGetNumberFromUser
+  * Merge pull request #14 from tsahlin/master
+  * Modified code_generator to include more constants
+  * Added initialization of a class without constructor on the zend 
+    object creation function.
+
+ -- Jefferson González <jgmdev@gmail.com>  Mod, 24 Dec 2012 01:22:09 +0400
+ 
+php5-wxwidgets (2.9.4.1) precise; urgency=low
+
+  * Initial debianization
+  * Added template.rc that includes wxWidgets resources for windows build.
+  * Fixed inno setup script.
+  * Updated readme.md and readme
+  * Regenerated source code to apply the fix for arguments type checking.
+  * Fixed function/methods generation code to also check if the argument 
+    type is the same as original and not only a class that inherits from 
+    the original type.
+  * Disabled wxNativeFontInfo methods: GetPixelSize and SetPixelSize, 
+    since they are undefined symbols when compiling the extension. 
+  * Re-generated the code with warning message disabled for top level 
+    windows and more constants available like wxRAISED_BORDER.
+  * Added gitignore file.
+  * Now the code generator does not skip #defines that mirror an enum, 
+    like wxRAISED_BORDER mirrors wxBORDER_RAISED.
+  * Commented out 'Remember to always call Destroy()' warning message.
+  * Updated version information on template file.
+
+ -- Jefferson González <jgmdev@gmail.com>  Mod, 24 Dec 2012 01:22:09 +0400
+ 
 php5-wxwidgets (2.9.4.0) precise; urgency=low
 
   * Initial debianization

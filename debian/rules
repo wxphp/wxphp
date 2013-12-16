@@ -24,17 +24,11 @@ build-stamp:
 	touch $@
 
 override_dh_auto_configure:
-	php tools/reference_generator.php
-	phpize5 --clean
-	phpize5
-	dh_auto_configure -- \
-		--with-php-config=/usr/bin/php-config5 \
-		--with-wxwidgets=/opt/wxwidgets-php \
-		--enable-wxwidgets-monolithic
+	./debian/build-script.sh
 	
 override_dh_auto_clean:
 	dh_auto_clean
-	phpize5 --clean
+	./debian/build-clean.sh
 
 clean:
 	dh clean
