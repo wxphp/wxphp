@@ -28,7 +28,7 @@ php5-wxwidgets (3.0.0.0) unstable; urgency=low
   * Added initialization of a class without constructor on the zend 
     object creation function.
 
- -- Jefferson González <jgmdev@gmail.com>  Mod, 24 Dec 2012 01:22:09 +0400
+ -- Jefferson González <jgmdev@gmail.com>  Mon, 16 Dec 2013 01:22:09 +0400
  
 php5-wxwidgets (2.9.4.1) unstable; urgency=low
 
@@ -50,7 +50,7 @@ php5-wxwidgets (2.9.4.1) unstable; urgency=low
   * Commented out 'Remember to always call Destroy()' warning message.
   * Updated version information on template file.
 
- -- Jefferson González <jgmdev@gmail.com>  Mod, 24 Dec 2012 01:22:09 +0400
+ -- Jefferson González <jgmdev@gmail.com>  Mon, 24 Dec 2012 01:22:09 +0400
  
 php5-wxwidgets (2.9.4.0) unstable; urgency=low
 
