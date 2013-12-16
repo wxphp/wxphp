@@ -32,4 +32,4 @@ wxwidgets.lo
 xml/*.xml
 xml/*.xsd
 xml/*.xslt
-/tools/source_maker/nbproject/
+/tools/nbproject/private/
