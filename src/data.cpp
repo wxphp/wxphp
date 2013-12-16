@@ -5248,6 +5248,8 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginBottomRight)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5350,6 +5352,8 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginTopLeft)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5452,6 +5456,8 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginBottomRight)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5554,6 +5560,8 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginTopLeft)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -5753,6 +5761,8 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPaperSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;
@@ -11658,6 +11668,8 @@ PHP_METHOD(php_wxRect, Intersect)
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(rect0, "wxRect::Intersect at call with 1 argument(s)");
 
@@ -11886,6 +11898,8 @@ PHP_METHOD(php_wxRect, Inflate)
 				memcpy(ptr, &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -12397,6 +12411,8 @@ PHP_METHOD(php_wxRect, GetTopRight)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -12499,6 +12515,8 @@ PHP_METHOD(php_wxRect, GetTopLeft)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -12698,6 +12716,8 @@ PHP_METHOD(php_wxRect, GetSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;
@@ -12897,6 +12917,8 @@ PHP_METHOD(php_wxRect, GetPosition)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -13023,6 +13045,8 @@ PHP_METHOD(php_wxRect, CenterIn)
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(r0, "wxRect::CenterIn at call with 1 argument(s)");
 
@@ -13041,6 +13065,8 @@ PHP_METHOD(php_wxRect, CenterIn)
 				memcpy(ptr, &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(r0, "wxRect::CenterIn at call with 2 argument(s)");
 
@@ -13168,6 +13194,8 @@ PHP_METHOD(php_wxRect, CentreIn)
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(r0, "wxRect::CentreIn at call with 1 argument(s)");
 
@@ -13186,6 +13214,8 @@ PHP_METHOD(php_wxRect, CentreIn)
 				memcpy(ptr, &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 				references->AddReference(r0, "wxRect::CentreIn at call with 2 argument(s)");
 
@@ -13711,6 +13741,8 @@ PHP_METHOD(php_wxRect, Deflate)
 				memcpy(ptr, &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -13910,6 +13942,8 @@ PHP_METHOD(php_wxRect, GetBottomLeft)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -14012,6 +14046,8 @@ PHP_METHOD(php_wxRect, GetBottomRight)
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 
 
 				return;
@@ -19005,6 +19041,8 @@ PHP_METHOD(php_wxListItem, GetTextColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -19695,6 +19733,8 @@ PHP_METHOD(php_wxListItem, GetBackgroundColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
 
 
 				return;
@@ -22011,6 +22051,8 @@ PHP_METHOD(php_wxRegion, ConvertToBitmap)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -22155,6 +22197,8 @@ PHP_METHOD(php_wxRegion, GetBox)
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;

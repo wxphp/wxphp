@@ -217,6 +217,8 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 					memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 					object_init_ex(return_value, php_wxPoint_entry);
 					((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
+					((wxPoint_php*)ptr)->phpObj = return_value;
+					((wxPoint_php*)ptr)->InitProperties();
 				}
 
 
@@ -322,6 +324,8 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetItemRect)
 					memcpy(ptr, &value_to_return0, sizeof(wxRect));
 					object_init_ex(return_value, php_wxRect_entry);
 					((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+					((wxRect_php*)ptr)->phpObj = return_value;
+					((wxRect_php*)ptr)->InitProperties();
 				}
 
 
@@ -8439,6 +8443,8 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 				memcpy(ptr, &value_to_return3, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
 				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
@@ -8700,6 +8706,8 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 				memcpy(ptr, &value_to_return3, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
 				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
@@ -14387,6 +14395,8 @@ PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;
@@ -14685,6 +14695,8 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
@@ -14786,6 +14798,8 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
+				((wxSize_php*)ptr)->phpObj = return_value;
+				((wxSize_php*)ptr)->InitProperties();
 
 
 				return;
@@ -16102,6 +16116,8 @@ PHP_METHOD(php_wxAuiToolBar, GetToolRect)
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
+				((wxRect_php*)ptr)->phpObj = return_value;
+				((wxRect_php*)ptr)->InitProperties();
 
 
 				return;
@@ -19095,6 +19111,8 @@ PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
+				((wxBitmap_php*)ptr)->phpObj = return_value;
+				((wxBitmap_php*)ptr)->InitProperties();
 
 
 				return;
