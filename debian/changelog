@@ -1,4 +1,4 @@
-php5-wxwidgets (3.0.0.0) precise; urgency=low
+php5-wxwidgets (3.0.0.0) unstable; urgency=low
 
   * Updated debianization scripts.
   * Fix for issue #25, returned object properties are now initialized.
@@ -30,7 +30,7 @@ php5-wxwidgets (3.0.0.0) precise; urgency=low
 
  -- Jefferson González <jgmdev@gmail.com>  Mod, 24 Dec 2012 01:22:09 +0400
  
-php5-wxwidgets (2.9.4.1) precise; urgency=low
+php5-wxwidgets (2.9.4.1) unstable; urgency=low
 
   * Initial debianization
   * Added template.rc that includes wxWidgets resources for windows build.
@@ -52,7 +52,7 @@ php5-wxwidgets (2.9.4.1) precise; urgency=low
 
  -- Jefferson González <jgmdev@gmail.com>  Mod, 24 Dec 2012 01:22:09 +0400
  
-php5-wxwidgets (2.9.4.0) precise; urgency=low
+php5-wxwidgets (2.9.4.0) unstable; urgency=low
 
   * Initial debianization
 
