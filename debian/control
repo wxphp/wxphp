@@ -8,7 +8,7 @@ Homepage: http://wxphp.org/
 
 Package: php5-wxwidgets
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${php:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${php:Depends}, php5-cli
 Description: PHP bindings for the GUI Cross-platform framework wxWidgets
  wxPHP is a binding for the great cross-platform library wxWidgets used 
  to develop GUI applications. Combining the power and flexibility that 
