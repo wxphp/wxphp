@@ -1,4 +1,5 @@
 Site: [http://wxphp.org/](http://wxphp.org/)
+Documentation: [http://github.com/wxphp/wxphp/wiki](http://github.com/wxphp/wxphp/wiki)
 
 # Table of Contents
 
@@ -33,7 +34,7 @@ easier for people already familiar with the library.
 	
 * Windows SDK 6.1
 * Visual C++ 2010 Express Edition
-* wxWidgets 2.9.4
+* wxWidgets 3.0.0
 * PHP5 Sources
 * wxPHP source code
 * Read the README_MSW
@@ -48,11 +49,12 @@ easier for people already familiar with the library.
 	
   [2008 Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express)
 	
-### Download and install wxWidgets 2.9.4
+### Download and install wxWidgets 3.0.0
 
-1. Checkout svn sources:
+1. Clone git sources:
 	
-		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
+		git clone https://github.com/wxWidgets/wxWidgets.git wxWidgets.git
+		git checkout tags/WX_3_0_0
 	
 2. Open Windows SDK 6.1 CMD Shell:
 		
@@ -64,7 +66,8 @@ easier for people already familiar with the library.
 ### Download and Install PHP sources
 
 *NOTE: Compilation has been tested against PHP 5.3 and 5.4 it should 
-work with any 5.3.x - 5.4.x version of php*
+work with any 5.3.x - 5.4.x version of php it also works with 5.5 but
+there may be some issues that need to be fixed*
 
 1. Download PHP 5:
 	
@@ -72,9 +75,9 @@ work with any 5.3.x - 5.4.x version of php*
 		
    [http://windows.php.net/download/](http://windows.php.net/download/)
 			
-  Direct download link for 5.3.17:
+  Direct download link for 5.5.7:
 		
-   [http://windows.php.net/downloads/releases/php-5.3.17-src.zip](http://windows.php.net/downloads/releases/php-5.3.17-src.zip)
+   [http://windows.php.net/downloads/releases/php-5.5.7-src.zip](http://windows.php.net/downloads/releases/php-5.5.7-src.zip)
 			
 2. Create the directory:
 		
@@ -98,11 +101,11 @@ work with any 5.3.x - 5.4.x version of php*
 		
 6. Extract the php source files and place them on:
 	
-		c:\php-sdk\php53dev\vc9\x86\php5.3.x
+		c:\php-sdk\php55dev\vc9\x86\php5.5.x
 		
 7. Then compile the sources to see if everything is working:
 	
-		cd c:\php-sdk\php53dev\vc9\x86\php5.3.x
+		cd c:\php-sdk\php53dev\vc9\x86\php5.5.x
 		buildconf
 		configure --disable-all --disable-zts --enable-cli
 		nmake
@@ -117,14 +120,14 @@ work with any 5.3.x - 5.4.x version of php*
 	
 2. Put the source code in the ext folder of your php build folder:
 	
-		c:\php-sdk\php53dev\vc9\x86\php5.3.x\ext\wxphp
+		c:\php-sdk\php53dev\vc9\x86\php5.5.x\ext\wxphp
 		
 3. Open the Windows SDK 6.1 CMD Shell and do the following:
 	
 		setenv /release /x86 /xp
 		cd c:\php-sdk\
 		bin\phpsdk_setvars.bat
-		cd c:\php-sdk\php53dev\vc9\x86\php5.3.x
+		cd c:\php-sdk\php53dev\vc9\x86\php5.5.x
 		buildconf
 		configure --disable-all --disable-zts --enable-cli --with-wxwidgets=C:\wxWidgets_installation_path
 		nmake
@@ -162,18 +165,19 @@ distros this could be done with:
 Also wxMediaCtrl is binded so you need to install gconf and gstreamer
 development files on linux platforms:
 
-	sudo apt-get install libgconf2-dev libgstreamer0.10-dev
+	sudo apt-get install libgconf2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 
 Download wxWidgets tar file and uncompress it on your directory of 
-choice or svn checkout with:
+choice or git clone with:
 
 *NOTE: Remember to use tar.bz2 when downloading sources, using the zip 
 file results on compilation errors under linux, since file line endings 
 are formatted for windows.*
 	
-	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
+	git clone https://github.com/wxWidgets/wxWidgets.git wxWidgets.git
+	git checkout tags/WX_3_0_0
 
-*NOTE: Currently we have tested with wxWidgets 2.9.4 version.*
+*NOTE: Currently we have tested with wxWidgets 3.0.0 version.*
 	
 On the console change to the wxWidgets directory and:
 	
@@ -205,7 +209,7 @@ by using the strip utility:
 Then you can copy the resulting wxwidgets.so file on the modules 
 directory to the php extensions directory. PHP extensions directory 
 is usually found on /usr/lib/php5/ On Ubuntu 10.04 - 12.04 this 
-directory is /usr/lib/php5/20090626/
+directory is /usr/lib/php5/<year month day of api>/
 
 To automate the installation process just use:
 
@@ -236,6 +240,7 @@ be satisfied:
   * libwebkitgtk-dev
   * libgconf2-dev
   * libgstreamer0.10-dev
+  * libgstreamer-plugins-base0.10-dev
 		
 On the root wxphp source tree execute:
 
@@ -263,7 +268,7 @@ has been my experience, so here is the steps involved to achieve it.
 	
 2. Run the generated wxphp configure script with custom ld flags
 	
-		LDFLAGS="-L/opt/wxWidgets-static/lib -pthread -lwx_gtk2u-2.9 -lwx_gtk2u_gl-2.9 -lwxregexu-2.9 -lwxscintilla-2.9 -lwxtiff-2.9" \
+		LDFLAGS="-L/opt/wxWidgets-static/lib -pthread -lwx_gtk2u-3.0 -lwx_gtk2u_gl-3.0 -lwxregexu-3.0 -lwxscintilla-3.0 \
 		./configure --with-wxwidgets=/opt/wxWidgets-static --enable-wxwidgets-monolithic
 	
 3. Strip debugging symbols for smaller library size
@@ -302,8 +307,9 @@ downloads php sources and dependency sources and compiles.
 
 ### Get wxWidgets sources and build
 
-	svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/tags/WX_2_9_4 wxWidgets
-	cd wxWidgets
+	git clone https://github.com/wxWidgets/wxWidgets.git wxWidgets.git
+	git checkout tags/WX_3_0_0
+	cd wxWidgets.git
 	mkdir mybuild
 	cd mybuild
 	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
@@ -461,13 +467,11 @@ source_maker/class_selector directory.*
 
 ## Support
 
-Any problems, please refer to the official website:
+Any problems, please file an issue or visit the forums:
 	
-* [http://wxphp.org/](http://wxphp.org/)
-* [http://wxphp.org/docs](http://wxphp.org/docs)
+* [http://github.com/wxphp/wxphp/issues](http://github.com/wxphp/wxphp/issues)
 * [http://forums.wxphp.org/](http://forums.wxphp.org/)
 	
-or visit the github.com project page at:
+don't forget to also visit the github.com project page at:
 	
 * [https://github.com/wxphp/wxphp](https://github.com/wxphp/wxphp)
-* [https://github.com/wxphp/wxphp/issues](https://github.com/wxphp/wxphp/issues)
