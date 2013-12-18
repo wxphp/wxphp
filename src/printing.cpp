@@ -117,14 +117,20 @@ zend_object_value php_wxPrinterDC_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPRINTERDC_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrinterDC_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPRINTERDC_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -375,14 +381,20 @@ zend_object_value php_wxPreviewControlBar_new(zend_class_entry *class_type TSRML
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPREVIEWCONTROLBAR_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewControlBar_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPREVIEWCONTROLBAR_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -946,14 +958,20 @@ zend_object_value php_wxPreviewCanvas_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPREVIEWCANVAS_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewCanvas_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPREVIEWCANVAS_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -1217,14 +1235,20 @@ zend_object_value php_wxPreviewFrame_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPREVIEWFRAME_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewFrame_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPREVIEWFRAME_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -1700,14 +1724,20 @@ zend_object_value php_wxPrintPreview_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPRINTPREVIEW_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintPreview_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPRINTPREVIEW_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -3729,14 +3759,20 @@ zend_object_value php_wxPrinter_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPRINTER_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrinter_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPRINTER_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -4800,14 +4836,20 @@ zend_object_value php_wxPrintout_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPRINTOUT_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintout_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPRINTOUT_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -8076,14 +8118,20 @@ zend_object_value php_wxPrintDialog_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPRINTDIALOG_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintDialog_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPRINTDIALOG_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -8593,14 +8641,20 @@ zend_object_value php_wxPageSetupDialog_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXPAGESETUPDIALOG_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPageSetupDialog_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXPAGESETUPDIALOG_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }

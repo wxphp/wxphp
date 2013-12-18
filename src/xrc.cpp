@@ -117,14 +117,20 @@ zend_object_value php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXXMLRESOURCEHANDLER_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlResourceHandler_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXXMLRESOURCEHANDLER_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -731,14 +737,20 @@ zend_object_value php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-    custom_object->object_type = PHP_WXXMLRESOURCE_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlResource_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+	custom_object->object_type = PHP_WXXMLRESOURCE_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
