@@ -128,9 +128,13 @@ zend_object_value php_wxArtProvider_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXARTPROVIDER_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -1732,9 +1736,13 @@ zend_object_value php_wxCaret_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCARET_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -3327,9 +3335,13 @@ zend_object_value php_wxNotificationMessage_new(zend_class_entry *class_type TSR
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXNOTIFICATIONMESSAGE_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -4229,9 +4241,13 @@ zend_object_value php_wxStopWatch_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTOPWATCH_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -4800,9 +4816,13 @@ zend_object_value php_wxTaskBarIcon_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTASKBARICON_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -5805,9 +5825,13 @@ zend_object_value php_wxTimer_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTIMER_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -7005,9 +7029,13 @@ zend_object_value php_wxWindowDisabler_new(zend_class_entry *class_type TSRMLS_D
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWINDOWDISABLER_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -7244,9 +7272,13 @@ zend_object_value php_wxBusyCursor_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBUSYCURSOR_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }

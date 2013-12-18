@@ -128,9 +128,13 @@ zend_object_value php_wxEventLoopBase_new(zend_class_entry *class_type TSRMLS_DC
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXEVENTLOOPBASE_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -1894,9 +1898,13 @@ zend_object_value php_wxEventLoopActivator_new(zend_class_entry *class_type TSRM
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXEVENTLOOPACTIVATOR_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -2084,9 +2092,13 @@ zend_object_value php_wxModule_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMODULE_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -2374,9 +2386,13 @@ zend_object_value php_wxProcess_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPROCESS_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
@@ -4140,9 +4156,13 @@ zend_object_value php_wxSingleInstanceChecker_new(zend_class_entry *class_type T
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-     custom_object->native_object = NULL;
+    custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSINGLEINSTANCECHECKER_TYPE;
 	custom_object->is_user_initialized = 0;
+	
+#ifdef ZTS 
+	custom_object->native_object->TSRMLS_C = TSRMLS_C;
+#endif
 	
     return retval;
 }
