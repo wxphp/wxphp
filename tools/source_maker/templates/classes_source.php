@@ -89,7 +89,7 @@ void php_<?=$class_name?>_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-<?if($class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData"){?>
+<?if($class_name != "wxGridCellRenderer" && $class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData"){?>
 	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
@@ -161,18 +161,24 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
+	MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-    custom_object->native_object = NULL;
-<? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
-    custom_object->native_object = new <?=$class_name?>_php(); 
-    custom_object->native_object->phpObj = temp; 
-<? } ?>
-    custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
-    custom_object->is_user_initialized = 0;
-
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_<?=$class_name?>_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
+
+#if PHP_VERSION_ID > 50399
+	Z_OBJVAL_P(temp) = retval;
+#endif
+
+     custom_object->native_object = NULL;
+<? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
+	custom_object->native_object = new <?=$class_name?>_php();
+	custom_object->native_object->phpObj = temp;
+<? } ?>
+	custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
