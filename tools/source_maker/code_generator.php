@@ -627,7 +627,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 				case "const_reference":
 				case "none":
 				case "const_none":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", reinterpret_cast<long int>($variable_name), CONST_CS | CONST_PERSISTENT);\n";
+					$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", (char*) $variable_name, CONST_CS | CONST_PERSISTENT);\n";
 					break;
 			}
 			break;
