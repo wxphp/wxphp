@@ -19780,14 +19780,12 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 				php_printf("Executing wxGrid::GetCellBackgroundColour((int) row0, (int) col0) to return new object\n\n");
 				#endif
 
-				wxColour value_to_return2;
-				value_to_return2 = ((wxGrid_php*)native_object)->GetCellBackgroundColour((int) row0, (int) col0);
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxColour));
+				wxColour_php *value_to_return2;
+				value_to_return2 = new wxColour_php(((wxGrid_php *) native_object)->GetCellBackgroundColour((int) row0, (int) col0));
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo2 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = value_to_return2;
+				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -20437,14 +20435,12 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 				php_printf("Executing wxGrid::GetCellTextColour((int) row0, (int) col0) to return new object\n\n");
 				#endif
 
-				wxColour value_to_return2;
-				value_to_return2 = ((wxGrid_php*)native_object)->GetCellTextColour((int) row0, (int) col0);
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxColour));
+				wxColour_php *value_to_return2;
+				value_to_return2 = new wxColour_php(((wxGrid_php *) native_object)->GetCellTextColour((int) row0, (int) col0));
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo2 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = value_to_return2;
+				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -21872,14 +21868,12 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 				php_printf("Executing wxGrid::GetDefaultCellBackgroundColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetDefaultCellBackgroundColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetDefaultCellBackgroundColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -22078,14 +22072,12 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 				php_printf("Executing wxGrid::GetDefaultCellTextColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetDefaultCellTextColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetDefaultCellTextColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -23990,14 +23982,12 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 				php_printf("Executing wxGrid::GetGridLineColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetGridLineColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetGridLineColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -24334,14 +24324,12 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 				php_printf("Executing wxGrid::GetLabelBackgroundColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetLabelBackgroundColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetLabelBackgroundColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -24540,14 +24528,12 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 				php_printf("Executing wxGrid::GetLabelTextColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetLabelTextColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetLabelTextColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -25895,14 +25881,12 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 				php_printf("Executing wxGrid::GetSelectionBackground() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetSelectionBackground();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetSelectionBackground());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -25999,14 +25983,12 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 				php_printf("Executing wxGrid::GetSelectionForeground() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGrid_php*)native_object)->GetSelectionForeground();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGrid_php *) native_object)->GetSelectionForeground());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;

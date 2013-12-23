@@ -12869,14 +12869,12 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 				php_printf("Executing wxStyledTextCtrl::GetAdditionalCaretForeground() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetAdditionalCaretForeground();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxStyledTextCtrl_php *) native_object)->GetAdditionalCaretForeground());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13652,14 +13650,12 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 				php_printf("Executing wxStyledTextCtrl::GetCaretForeground() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCaretForeground();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxStyledTextCtrl_php *) native_object)->GetCaretForeground());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13853,14 +13849,12 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 				php_printf("Executing wxStyledTextCtrl::GetCaretLineBackground() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCaretLineBackground();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxStyledTextCtrl_php *) native_object)->GetCaretLineBackground());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -14937,14 +14931,12 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 				php_printf("Executing wxStyledTextCtrl::GetEdgeColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetEdgeColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxStyledTextCtrl_php *) native_object)->GetEdgeColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -26113,14 +26105,12 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 				php_printf("Executing wxStyledTextCtrl::IndicatorGetForeground((int) indic0) to return new object\n\n");
 				#endif
 
-				wxColour value_to_return1;
-				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->IndicatorGetForeground((int) indic0);
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				wxColour_php *value_to_return1;
+				value_to_return1 = new wxColour_php(((wxStyledTextCtrl_php *) native_object)->IndicatorGetForeground((int) indic0));
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = value_to_return1;
+				zo1->is_user_initialized = 1;
 
 
 				return;

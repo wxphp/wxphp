@@ -174,6 +174,7 @@ function is_ref_counted_class($class)
 			'wxBitmap',
 			'wxBrush',
 			'wxCursor',*/
+			'wxColour',
 			'wxFont',
 /*		'wxGraphicsBrush',
 			'wxGraphicsContext',

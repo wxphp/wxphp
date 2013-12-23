@@ -2418,14 +2418,12 @@ PHP_METHOD(php_wxColourPickerEvent, GetColour)
 				php_printf("Executing wxColourPickerEvent::GetColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxColourPickerEvent_php*)native_object)->GetColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxColourPickerEvent_php *) native_object)->GetColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
