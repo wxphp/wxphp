@@ -4644,11 +4644,14 @@ PHP_METHOD(php_wxHtmlContainerCell, GetBackgroundColour)
 				php_printf("Executing wxHtmlContainerCell::GetBackgroundColour() to return new object\n\n");
 				#endif
 
-				wxColour_php *value_to_return0;
-				value_to_return0 = new wxColour_php(((wxHtmlContainerCell_php *) native_object)->GetBackgroundColour());
+				wxColour value_to_return0;
+				value_to_return0 = ((wxHtmlContainerCell_php*)native_object)->GetBackgroundColour();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxColour_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 
@@ -12451,9 +12454,9 @@ PHP_METHOD(php_wxHtmlCellEvent, GetPoint)
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
-				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-				((wxPoint_php*)ptr)->phpObj = return_value;
-				((wxPoint_php*)ptr)->InitProperties();
+				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxPoint_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;

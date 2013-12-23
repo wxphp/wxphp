@@ -485,11 +485,14 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 				php_printf("Executing wxColourPickerCtrl::GetColour() to return new object\n\n");
 				#endif
 
-				wxColour_php *value_to_return0;
-				value_to_return0 = new wxColour_php(((wxColourPickerCtrl_php *) native_object)->GetColour());
+				wxColour value_to_return0;
+				value_to_return0 = ((wxColourPickerCtrl_php*)native_object)->GetColour();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxColour_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 
@@ -2993,9 +2996,9 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
-				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
+				zo_wxFileName* zo0 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxFileName_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -3443,9 +3446,9 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
-				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
+				zo_wxFileName* zo0 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxFileName_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -4586,11 +4589,14 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 				php_printf("Executing wxFontPickerCtrl::GetSelectedFont() to return new object\n\n");
 				#endif
 
-				wxFont_php *value_to_return0;
-				value_to_return0 = new wxFont_php(((wxFontPickerCtrl_php *) native_object)->GetSelectedFont());
+				wxFont value_to_return0;
+				value_to_return0 = ((wxFontPickerCtrl_php*)native_object)->GetSelectedFont();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxFont_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 

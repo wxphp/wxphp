@@ -1944,9 +1944,9 @@ PHP_METHOD(php_wxFrame, GetClientAreaOrigin)
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
-				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-				((wxPoint_php*)ptr)->phpObj = return_value;
-				((wxPoint_php*)ptr)->InitProperties();
+				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxPoint_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -12875,9 +12875,11 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
 				((wxSize_php*)ptr)->phpObj = return_value;
 				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13076,12 +13078,13 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 
 				wxIcon value_to_return0;
 				value_to_return0 = ((wxTopLevelWindow_php*)native_object)->GetIcon();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
-				((zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxIcon_php*) ptr;
-				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
+				zo_wxIcon* zo0 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxIcon_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;

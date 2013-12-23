@@ -5396,9 +5396,11 @@ PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxVersionInfo));
 				object_init_ex(return_value, php_wxVersionInfo_entry);
-				((zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxVersionInfo_php*) ptr;
 				((wxVersionInfo_php*)ptr)->phpObj = return_value;
 				((wxVersionInfo_php*)ptr)->InitProperties();
+				zo_wxVersionInfo* zo0 = (zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxVersionInfo_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
