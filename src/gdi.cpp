@@ -1148,14 +1148,12 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetEndColour)
 				php_printf("Executing wxGraphicsGradientStops::GetEndColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGraphicsGradientStops_php*)native_object)->GetEndColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGraphicsGradientStops_php *) native_object)->GetEndColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -1252,14 +1250,12 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetStartColour)
 				php_printf("Executing wxGraphicsGradientStops::GetStartColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxGraphicsGradientStops_php*)native_object)->GetStartColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxGraphicsGradientStops_php *) native_object)->GetStartColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -8223,14 +8219,12 @@ PHP_METHOD(php_wxBrush, GetColour)
 				php_printf("Executing wxBrush::GetColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxBrush_php*)native_object)->GetColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxBrush_php *) native_object)->GetColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -21032,14 +21026,12 @@ PHP_METHOD(php_wxColourDatabase, Find)
 				php_printf("Executing wxColourDatabase::Find(wxString(colourName0, wxConvUTF8)) to return new object\n\n");
 				#endif
 
-				wxColour value_to_return1;
-				value_to_return1 = ((wxColourDatabase_php*)native_object)->Find(wxString(colourName0, wxConvUTF8));
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				wxColour_php *value_to_return1;
+				value_to_return1 = new wxColour_php(((wxColourDatabase_php *) native_object)->Find(wxString(colourName0, wxConvUTF8)));
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = value_to_return1;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -39508,14 +39500,12 @@ PHP_METHOD(php_wxPen, GetColour)
 				php_printf("Executing wxPen::GetColour() to return new object\n\n");
 				#endif
 
-				wxColour value_to_return0;
-				value_to_return0 = ((wxPen_php*)native_object)->GetColour();
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				wxColour_php *value_to_return0;
+				value_to_return0 = new wxColour_php(((wxPen_php *) native_object)->GetColour());
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = value_to_return0;
+				zo0->is_user_initialized = 1;
 
 
 				return;

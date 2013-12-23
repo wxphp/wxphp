@@ -7600,14 +7600,12 @@ PHP_METHOD(php_wxColourData, GetCustomColour)
 				php_printf("Executing wxColourData::GetCustomColour((int) i0) to return new object\n\n");
 				#endif
 
-				wxColour value_to_return1;
-				value_to_return1 = ((wxColourData_php*)native_object)->GetCustomColour((int) i0);
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				wxColour_php *value_to_return1;
+				value_to_return1 = new wxColour_php(((wxColourData_php *) native_object)->GetCustomColour((int) i0));
 				object_init_ex(return_value, php_wxColour_entry);
-				((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) ptr;
-				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = value_to_return1;
+				zo1->is_user_initialized = 1;
 
 
 				return;
