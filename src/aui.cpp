@@ -226,9 +226,9 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 					void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 					memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 					object_init_ex(return_value, php_wxPoint_entry);
-					((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-					((wxPoint_php*)ptr)->phpObj = return_value;
-					((wxPoint_php*)ptr)->InitProperties();
+					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+					zo0->native_object = (wxPoint_php*) ptr;
+					zo0->is_user_initialized = 1;
 				}
 
 
@@ -333,9 +333,9 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetItemRect)
 					void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
 					memcpy(ptr, &value_to_return0, sizeof(wxRect));
 					object_init_ex(return_value, php_wxRect_entry);
-					((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
-					((wxRect_php*)ptr)->phpObj = return_value;
-					((wxRect_php*)ptr)->InitProperties();
+					zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+					zo0->native_object = (wxRect_php*) ptr;
+					zo0->is_user_initialized = 1;
 				}
 
 
@@ -8315,11 +8315,14 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFont)
 				php_printf("Executing wxAuiDefaultToolBarArt::GetFont() to return new object\n\n");
 				#endif
 
-				wxFont_php *value_to_return0;
-				value_to_return0 = new wxFont_php(((wxAuiDefaultToolBarArt_php *) native_object)->GetFont());
+				wxFont value_to_return0;
+				value_to_return0 = ((wxAuiDefaultToolBarArt_php*)native_object)->GetFont();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxFont_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 
@@ -8482,9 +8485,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo3 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxSize_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
 				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::GetLabelSize at call with 3 argument(s)");
@@ -8745,9 +8748,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo3 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxSize_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(dc0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
 				references->AddReference(wnd0, "wxAuiDefaultToolBarArt::GetToolSize at call with 3 argument(s)");
@@ -14444,9 +14447,9 @@ PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxSize_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -14741,12 +14744,13 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 
 				wxBitmap value_to_return1;
 				value_to_return1 = ((wxAuiToolBar_php*)native_object)->GetToolBitmap((int) tool_id0);
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxBitmap_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -14847,9 +14851,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -16165,9 +16169,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolRect)
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
-				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
-				((wxRect_php*)ptr)->phpObj = return_value;
-				((wxRect_php*)ptr)->InitProperties();
+				zo_wxRect* zo1 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxRect_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -19167,12 +19171,13 @@ PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 
 				wxBitmap value_to_return1;
 				value_to_return1 = ((wxAuiNotebook_php*)native_object)->GetPageBitmap((size_t) page0);
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxBitmap_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;

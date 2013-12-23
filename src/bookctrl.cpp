@@ -5426,11 +5426,14 @@ PHP_METHOD(php_wxNotebook, GetThemeBackgroundColour)
 				php_printf("Executing wxNotebook::GetThemeBackgroundColour() to return new object\n\n");
 				#endif
 
-				wxColour_php *value_to_return0;
-				value_to_return0 = new wxColour_php(((wxNotebook_php *) native_object)->GetThemeBackgroundColour());
+				wxColour value_to_return0;
+				value_to_return0 = ((wxNotebook_php*)native_object)->GetThemeBackgroundColour();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxColour_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 

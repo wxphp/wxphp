@@ -1410,12 +1410,13 @@ PHP_METHOD(php_wxAnyButton, GetBitmap)
 
 				wxBitmap value_to_return0;
 				value_to_return0 = ((wxAnyButton_php*)native_object)->GetBitmap();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxBitmap_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -1530,12 +1531,13 @@ PHP_METHOD(php_wxAnyButton, GetBitmapCurrent)
 
 				wxBitmap value_to_return0;
 				value_to_return0 = ((wxAnyButton_php*)native_object)->GetBitmapCurrent();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxBitmap_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -1650,12 +1652,13 @@ PHP_METHOD(php_wxAnyButton, GetBitmapDisabled)
 
 				wxBitmap value_to_return0;
 				value_to_return0 = ((wxAnyButton_php*)native_object)->GetBitmapDisabled();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxBitmap_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -1770,12 +1773,13 @@ PHP_METHOD(php_wxAnyButton, GetBitmapFocus)
 
 				wxBitmap value_to_return0;
 				value_to_return0 = ((wxAnyButton_php*)native_object)->GetBitmapFocus();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxBitmap_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -1890,12 +1894,13 @@ PHP_METHOD(php_wxAnyButton, GetBitmapLabel)
 
 				wxBitmap value_to_return0;
 				value_to_return0 = ((wxAnyButton_php*)native_object)->GetBitmapLabel();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxBitmap_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -2013,9 +2018,9 @@ PHP_METHOD(php_wxAnyButton, GetBitmapMargins)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -2130,12 +2135,13 @@ PHP_METHOD(php_wxAnyButton, GetBitmapPressed)
 
 				wxBitmap value_to_return0;
 				value_to_return0 = ((wxAnyButton_php*)native_object)->GetBitmapPressed();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxBitmap_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;

@@ -1805,9 +1805,9 @@ PHP_METHOD(php_wxGridBagSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -2838,9 +2838,9 @@ PHP_METHOD(php_wxGridBagSizer, GetCellSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxSize_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -2942,9 +2942,9 @@ PHP_METHOD(php_wxGridBagSizer, GetEmptyCellSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -3127,9 +3127,9 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxGBPosition));
 				object_init_ex(return_value, php_wxGBPosition_entry);
-				((zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBPosition_php*) ptr;
-				((wxGBPosition_php*)ptr)->phpObj = return_value;
-				((wxGBPosition_php*)ptr)->InitProperties();
+				zo_wxGBPosition* zo1 = (zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxGBPosition_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(window0, "wxGridBagSizer::GetItemPosition at call with 1 argument(s)");
 
@@ -3154,9 +3154,9 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxGBPosition));
 				object_init_ex(return_value, php_wxGBPosition_entry);
-				((zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBPosition_php*) ptr;
-				((wxGBPosition_php*)ptr)->phpObj = return_value;
-				((wxGBPosition_php*)ptr)->InitProperties();
+				zo_wxGBPosition* zo1 = (zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxGBPosition_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(sizer1, "wxGridBagSizer::GetItemPosition at call with 1 argument(s)");
 
@@ -3181,9 +3181,9 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxGBPosition));
 				object_init_ex(return_value, php_wxGBPosition_entry);
-				((zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBPosition_php*) ptr;
-				((wxGBPosition_php*)ptr)->phpObj = return_value;
-				((wxGBPosition_php*)ptr)->InitProperties();
+				zo_wxGBPosition* zo1 = (zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxGBPosition_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -3366,9 +3366,9 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxGBSpan));
 				object_init_ex(return_value, php_wxGBSpan_entry);
-				((zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBSpan_php*) ptr;
-				((wxGBSpan_php*)ptr)->phpObj = return_value;
-				((wxGBSpan_php*)ptr)->InitProperties();
+				zo_wxGBSpan* zo1 = (zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxGBSpan_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(window0, "wxGridBagSizer::GetItemSpan at call with 1 argument(s)");
 
@@ -3393,9 +3393,9 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxGBSpan));
 				object_init_ex(return_value, php_wxGBSpan_entry);
-				((zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBSpan_php*) ptr;
-				((wxGBSpan_php*)ptr)->phpObj = return_value;
-				((wxGBSpan_php*)ptr)->InitProperties();
+				zo_wxGBSpan* zo1 = (zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxGBSpan_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(sizer1, "wxGridBagSizer::GetItemSpan at call with 1 argument(s)");
 
@@ -3420,9 +3420,9 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxGBSpan));
 				object_init_ex(return_value, php_wxGBSpan_entry);
-				((zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBSpan_php*) ptr;
-				((wxGBSpan_php*)ptr)->phpObj = return_value;
-				((wxGBSpan_php*)ptr)->InitProperties();
+				zo_wxGBSpan* zo1 = (zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxGBSpan_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -5653,9 +5653,9 @@ PHP_METHOD(php_wxGBSizerItem, GetSpan)
 				void* ptr = safe_emalloc(1, sizeof(wxGBSpan_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxGBSpan));
 				object_init_ex(return_value, php_wxGBSpan_entry);
-				((zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBSpan_php*) ptr;
-				((wxGBSpan_php*)ptr)->phpObj = return_value;
-				((wxGBSpan_php*)ptr)->InitProperties();
+				zo_wxGBSpan* zo0 = (zo_wxGBSpan*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxGBSpan_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5804,9 +5804,9 @@ PHP_METHOD(php_wxGBSizerItem, GetPos)
 				void* ptr = safe_emalloc(1, sizeof(wxGBPosition_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxGBPosition));
 				object_init_ex(return_value, php_wxGBPosition_entry);
-				((zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxGBPosition_php*) ptr;
-				((wxGBPosition_php*)ptr)->phpObj = return_value;
-				((wxGBPosition_php*)ptr)->InitProperties();
+				zo_wxGBPosition* zo0 = (zo_wxGBPosition*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxGBPosition_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13423,9 +13423,9 @@ PHP_METHOD(php_wxSizer, GetSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13555,9 +13555,9 @@ PHP_METHOD(php_wxSizer, GetPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
-				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-				((wxPoint_php*)ptr)->phpObj = return_value;
-				((wxPoint_php*)ptr)->InitProperties();
+				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxPoint_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13687,9 +13687,9 @@ PHP_METHOD(php_wxSizer, GetMinSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -14116,9 +14116,9 @@ PHP_METHOD(php_wxSizer, Fit)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxSize_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(window0, "wxSizer::Fit at call with 1 argument(s)");
 
@@ -14518,9 +14518,9 @@ PHP_METHOD(php_wxSizer, ComputeFittingWindowSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxSize_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(window0, "wxSizer::ComputeFittingWindowSize at call with 1 argument(s)");
 
@@ -14674,9 +14674,9 @@ PHP_METHOD(php_wxSizer, ComputeFittingClientSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxSize_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 				references->AddReference(window0, "wxSizer::ComputeFittingClientSize at call with 1 argument(s)");
 
@@ -17335,9 +17335,9 @@ PHP_METHOD(php_wxStdDialogButtonSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -21202,9 +21202,9 @@ PHP_METHOD(php_wxSizerItem, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -21815,9 +21815,9 @@ PHP_METHOD(php_wxSizerItem, GetMinSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -21923,9 +21923,9 @@ PHP_METHOD(php_wxSizerItem, GetPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
-				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-				((wxPoint_php*)ptr)->phpObj = return_value;
-				((wxPoint_php*)ptr)->InitProperties();
+				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxPoint_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -22233,9 +22233,9 @@ PHP_METHOD(php_wxSizerItem, GetRect)
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
-				((zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxRect_php*) ptr;
-				((wxRect_php*)ptr)->phpObj = return_value;
-				((wxRect_php*)ptr)->InitProperties();
+				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxRect_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -22341,9 +22341,9 @@ PHP_METHOD(php_wxSizerItem, GetSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -22573,9 +22573,9 @@ PHP_METHOD(php_wxSizerItem, GetSpacer)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -25562,9 +25562,9 @@ PHP_METHOD(php_wxFlexGridSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -26929,9 +26929,9 @@ PHP_METHOD(php_wxGridSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -28524,9 +28524,9 @@ PHP_METHOD(php_wxStaticBoxSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -29399,9 +29399,9 @@ PHP_METHOD(php_wxBoxSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -30094,9 +30094,9 @@ PHP_METHOD(php_wxWrapSizer, CalcMin)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;

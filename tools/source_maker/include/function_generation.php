@@ -1685,26 +1685,6 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return new object\\n\\n\");\n";
 								$return_called_overload .= tabs(4) . "#endif\n\n";
 								
-								if (is_ref_counted_class($return_type))
-								{
-									$return_called_overload .= tabs(4) . $return_type . "_php *value_to_return{$required_parameters};\n";
-
-									if (!$class_name)
-										$call = "$method_name($parameters_string)";
-									else if (!$declaration["static"])
-										$call = "(({$class_name}_php *) native_object)->$method_name($parameters_string)";
-									else
-										$call = "$class_name::$method_name($parameters_string)";
-
-									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = new {$return_type}_php($call);\n";
-									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-									$return_called_overload .= tabs(4) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
-									$return_called_overload .= tabs(4) . "zo{$required_parameters}->native_object = value_to_return{$required_parameters};\n";
-									$return_called_overload .= tabs(4) . "zo{$required_parameters}->is_user_initialized = 1;\n";
-
-									break;
-								}
-
 								$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
@@ -1718,13 +1698,18 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								else
 								{
 									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
+                                    
+                                    if(inherits_from_class("wxObject", $return_type))
+                                        $return_called_overload .= tabs(4) . "((wxRefCounter *) value_to_return{$required_parameters}.GetRefData())->IncRef();\n";
 									
 									$return_called_overload .= tabs(4) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 									$return_called_overload .= tabs(4) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-									$return_called_overload .= tabs(4) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+									$return_called_overload .= tabs(4) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+									$return_called_overload .= tabs(4) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
+									$return_called_overload .= tabs(4) . "zo{$required_parameters}->is_user_initialized = 1;\n";
 								}
 								break;
 						}
@@ -1946,7 +1931,9 @@ function function_return_call($method_name, $parameters_string, $required_parame
 					$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 					$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 					$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-					$call_code .= tabs($t) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
+					$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+					$call_code .= tabs($t) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
+					$call_code .= tabs($t) . "zo{$required_parameters}->is_user_initialized = 1;\n";
 					break;
 			}
 			break;
@@ -2217,13 +2204,16 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 						$return_type = str_replace(array("const", " "), "", $method_return_type);
 						
 						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string);\n";
+                        
+                        if(inherits_from_class("wxObject", $return_type))
+                            $call_code .= tabs($t) . "((wxRefCounter *) value_to_return{$required_parameters}.GetRefData())->IncRef();\n";
 
 						$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 						$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 						$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-						$call_code .= tabs($t) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) ptr;\n";
-                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
-                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+						$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+						$call_code .= tabs($t) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
+						$call_code .= tabs($t) . "zo{$required_parameters}->is_user_initialized = 1;\n";
 						break;
 				}
 				break;

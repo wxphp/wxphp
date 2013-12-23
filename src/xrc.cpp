@@ -2493,12 +2493,13 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 
 				wxBitmap value_to_return1;
 				value_to_return1 = ((wxXmlResource_php*)native_object)->LoadBitmap(wxString(name0, wxConvUTF8));
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
-				((zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBitmap_php*) ptr;
-				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
+				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxBitmap_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -3093,12 +3094,13 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 
 				wxIcon value_to_return1;
 				value_to_return1 = ((wxXmlResource_php*)native_object)->LoadIcon(wxString(name0, wxConvUTF8));
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
-				((zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxIcon_php*) ptr;
-				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
+				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxIcon_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;

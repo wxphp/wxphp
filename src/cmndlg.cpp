@@ -7600,11 +7600,14 @@ PHP_METHOD(php_wxColourData, GetCustomColour)
 				php_printf("Executing wxColourData::GetCustomColour((int) i0) to return new object\n\n");
 				#endif
 
-				wxColour_php *value_to_return1;
-				value_to_return1 = new wxColour_php(((wxColourData_php *) native_object)->GetCustomColour((int) i0));
+				wxColour value_to_return1;
+				value_to_return1 = ((wxColourData_php*)native_object)->GetCustomColour((int) i0);
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo1->native_object = value_to_return1;
+				zo1->native_object = (wxColour_php*) ptr;
 				zo1->is_user_initialized = 1;
 
 
@@ -18944,11 +18947,14 @@ PHP_METHOD(php_wxFontData, GetInitialFont)
 				php_printf("Executing wxFontData::GetInitialFont() to return new object\n\n");
 				#endif
 
-				wxFont_php *value_to_return0;
-				value_to_return0 = new wxFont_php(((wxFontData_php *) native_object)->GetInitialFont());
+				wxFont value_to_return0;
+				value_to_return0 = ((wxFontData_php*)native_object)->GetInitialFont();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxFont_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 
@@ -19260,11 +19266,14 @@ PHP_METHOD(php_wxFontData, GetChosenFont)
 				php_printf("Executing wxFontData::GetChosenFont() to return new object\n\n");
 				#endif
 
-				wxFont_php *value_to_return0;
-				value_to_return0 = new wxFont_php(((wxFontData_php *) native_object)->GetChosenFont());
+				wxFont value_to_return0;
+				value_to_return0 = ((wxFontData_php*)native_object)->GetChosenFont();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = value_to_return0;
+				zo0->native_object = (wxFont_php*) ptr;
 				zo0->is_user_initialized = 1;
 
 
@@ -27571,9 +27580,9 @@ PHP_METHOD(php_wxWizard, GetPageSize)
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
-				((zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSize_php*) ptr;
-				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
+				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxSize_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;

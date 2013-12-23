@@ -13399,9 +13399,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxDataViewItem_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 2 argument(s)");
 
@@ -13419,9 +13419,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxDataViewItem_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 3 argument(s)");
@@ -13440,9 +13440,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo4->native_object = (wxDataViewItem_php*) ptr;
+				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
@@ -13462,9 +13462,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo5->native_object = (wxDataViewItem_php*) ptr;
+				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
@@ -13633,9 +13633,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxDataViewItem_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 2 argument(s)");
 
@@ -13653,9 +13653,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxDataViewItem_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call with 3 argument(s)");
@@ -13674,9 +13674,9 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo4->native_object = (wxDataViewItem_php*) ptr;
+				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
@@ -14818,9 +14818,9 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxDataViewItem_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::GetNthChild at call with 2 argument(s)");
 
@@ -15024,9 +15024,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxDataViewItem_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 3 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 3 argument(s)");
@@ -15045,9 +15045,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo4->native_object = (wxDataViewItem_php*) ptr;
+				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
@@ -15067,9 +15067,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo5->native_object = (wxDataViewItem_php*) ptr;
+				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
@@ -15090,9 +15090,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return6, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo6 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo6->native_object = (wxDataViewItem_php*) ptr;
+				zo6->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
@@ -15281,9 +15281,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxDataViewItem_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 3 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 3 argument(s)");
@@ -15302,9 +15302,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo4->native_object = (wxDataViewItem_php*) ptr;
+				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
@@ -15324,9 +15324,9 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo5->native_object = (wxDataViewItem_php*) ptr;
+				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
@@ -15514,9 +15514,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxDataViewItem_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 2 argument(s)");
 
@@ -15534,9 +15534,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxDataViewItem_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 3 argument(s)");
@@ -15555,9 +15555,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo4->native_object = (wxDataViewItem_php*) ptr;
+				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
@@ -15577,9 +15577,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo5->native_object = (wxDataViewItem_php*) ptr;
+				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
@@ -15748,9 +15748,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxDataViewItem_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 2 argument(s)");
 
@@ -15768,9 +15768,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo3->native_object = (wxDataViewItem_php*) ptr;
+				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call with 3 argument(s)");
@@ -15789,9 +15789,9 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo4->native_object = (wxDataViewItem_php*) ptr;
+				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
@@ -17207,9 +17207,9 @@ PHP_METHOD(php_wxDataViewEvent, GetItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
-				((zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataViewItem_php*) ptr;
-				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
+				zo_wxDataViewItem* zo0 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxDataViewItem_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -17819,9 +17819,9 @@ PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 				void* ptr = safe_emalloc(1, sizeof(wxDataFormat_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
 				object_init_ex(return_value, php_wxDataFormat_entry);
-				((zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDataFormat_php*) ptr;
-				((wxDataFormat_php*)ptr)->phpObj = return_value;
-				((wxDataFormat_php*)ptr)->InitProperties();
+				zo_wxDataFormat* zo0 = (zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxDataFormat_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -18260,9 +18260,9 @@ PHP_METHOD(php_wxDataViewEvent, GetPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
-				((zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPoint_php*) ptr;
-				((wxPoint_php*)ptr)->phpObj = return_value;
-				((wxPoint_php*)ptr)->InitProperties();
+				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxPoint_php*) ptr;
+				zo0->is_user_initialized = 1;
 
 
 				return;

@@ -9505,9 +9505,11 @@ PHP_METHOD(php_wxFileName, DirName)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
+				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxFileName_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -9525,9 +9527,11 @@ PHP_METHOD(php_wxFileName, DirName)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
+				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxFileName_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -9775,9 +9779,11 @@ PHP_METHOD(php_wxFileName, FileName)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
+				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxFileName_php*) ptr;
+				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -9795,9 +9801,11 @@ PHP_METHOD(php_wxFileName, FileName)
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
-				((zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFileName_php*) ptr;
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				((wxFileName_php*)ptr)->InitProperties();
+				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo2->native_object = (wxFileName_php*) ptr;
+				zo2->is_user_initialized = 1;
 
 
 				return;
