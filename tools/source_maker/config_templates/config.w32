@@ -3,22 +3,22 @@ ARG_ENABLE("wxwidgets-debug", "enable wxPHP debugging messages", "no");
 
 if (PHP_WXWIDGETS != "no") {
 	if (
-		CHECK_LIB("wxmsw29u_richtext.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_xrc.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_aui.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_media.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxbase29u_net.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_gl.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_qa.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxbase29u_xml.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_adv.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_html.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_propgrid.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_ribbon.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_stc.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_webview.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxmsw29u_core.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
-		CHECK_LIB("wxbase29u.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_richtext.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_xrc.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_aui.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_media.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxbase30u_net.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_gl.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_qa.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxbase30u_xml.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_adv.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_html.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_propgrid.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_ribbon.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_stc.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_webview.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxmsw30u_core.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
+		CHECK_LIB("wxbase30u.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
 		CHECK_LIB("wxpng.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
 		CHECK_LIB("wxjpeg.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
 		CHECK_LIB("wxtiff.lib", "wxwidgets", PHP_WXWIDGETS + "\\lib\\vc_lib") &&
@@ -81,11 +81,11 @@ if (PHP_WXWIDGETS != "no") {
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/INCREMENTAL:NO");
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/SUBSYSTEM:WINDOWS");
 		
-		//Declare extension
-		EXTENSION("wxwidgets", "wxwidgets.cpp", true, null, null);
-		
 		//Add extra sources
 		ADD_SOURCES(configure_module_dirname + "\\src", "app.cpp references.cpp <?=str_replace("src/", "", $source_files)?> functions.cpp", "wxwidgets");
+		
+		//Declare extension
+		EXTENSION("wxwidgets", "wxwidgets.cpp", true, null, null);
 	}
 	else {
 		WARNING("wxWidgets not enabled; libraries and headers not found");
