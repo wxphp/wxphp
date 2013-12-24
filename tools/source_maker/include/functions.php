@@ -420,6 +420,8 @@ function php_method_name($method_name)
 		return "NewMethod";
 	elseif($method_name == "Xor")
 		return "XorMethod";
+	elseif($method_name == "Yield")
+		return "YieldMethod";
 	
 	return $method_name;
 }
