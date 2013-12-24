@@ -4,6 +4,6 @@
 phpize5 --clean
 rm -rf doc
 rm -rf wxWidgets-build
-rm -rf wxWidgets.git/mybuild
+rm -rf wxWidgets-*/mybuild
 rm tools/discarded.log
 dh_clean
