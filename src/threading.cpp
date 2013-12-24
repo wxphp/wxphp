@@ -2061,7 +2061,7 @@ PHP_METHOD(php_wxThread, __construct)
 
 /* {{{ proto  wxThread::Yield()
    Give the rest of the thread's time-slice to the system allowing the other threads to run. */
-PHP_METHOD(php_wxThread, Yield)
+PHP_METHOD(php_wxThread, YieldMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxThread::Yield\n");

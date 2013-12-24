@@ -1599,7 +1599,7 @@ PHP_METHOD(php_wxEventLoopBase, WakeUpIdle)
 
 /* {{{ proto bool wxEventLoopBase::Yield(bool onlyIfNeeded)
    Yields control to pending messages in the windowing system. */
-PHP_METHOD(php_wxEventLoopBase, Yield)
+PHP_METHOD(php_wxEventLoopBase, YieldMethod)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxEventLoopBase::Yield\n");
