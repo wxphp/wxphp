@@ -215,7 +215,7 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxThread_functions[] = {
 	PHP_ME(php_wxThread, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxThread, Yield, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxThread, YieldMethod, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThread, This, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThread, TestDestroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThread, SetPriority, NULL, ZEND_ACC_PUBLIC)

@@ -67,7 +67,7 @@ static zend_function_entry php_wxEventLoopBase_functions[] = {
 	PHP_ME(php_wxEventLoopBase, ExitMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, SetActive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, WakeUpIdle, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxEventLoopBase, Yield, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEventLoopBase, YieldMethod, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, YieldFor, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
