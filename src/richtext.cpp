@@ -121,7 +121,7 @@ zend_object_value php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextAttr_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -3376,7 +3376,6 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -8811,7 +8810,6 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				((wxTextAttr_php*)ptr)->InitProperties();
 				zo_wxTextAttr* zo2 = (zo_wxTextAttr*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxTextAttr_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;

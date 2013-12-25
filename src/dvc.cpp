@@ -121,7 +121,7 @@ zend_object_value php_wxDataViewChoiceRenderer_new(zend_class_entry *class_type 
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewChoiceRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -554,7 +554,7 @@ zend_object_value php_wxDataViewModel_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -3599,7 +3599,7 @@ zend_object_value php_wxDataViewListModel_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewListModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4264,7 +4264,7 @@ zend_object_value php_wxDataViewIndexListModel_new(zend_class_entry *class_type 
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewIndexListModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4352,7 +4352,7 @@ zend_object_value php_wxDataViewVirtualListModel_new(zend_class_entry *class_typ
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewVirtualListModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4440,7 +4440,7 @@ zend_object_value php_wxDataViewItemAttr_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewItemAttr_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4935,7 +4935,7 @@ zend_object_value php_wxDataViewItem_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewItem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -5399,7 +5399,7 @@ zend_object_value php_wxDataViewModelNotifier_new(zend_class_entry *class_type T
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewModelNotifier_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -6247,7 +6247,7 @@ zend_object_value php_wxDataViewRenderer_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -8356,7 +8356,7 @@ zend_object_value php_wxDataViewTextRenderer_new(zend_class_entry *class_type TS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewTextRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -8567,7 +8567,7 @@ zend_object_value php_wxDataViewIconTextRenderer_new(zend_class_entry *class_typ
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewIconTextRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -8778,7 +8778,7 @@ zend_object_value php_wxDataViewProgressRenderer_new(zend_class_entry *class_typ
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewProgressRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9002,7 +9002,7 @@ zend_object_value php_wxDataViewSpinRenderer_new(zend_class_entry *class_type TS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewSpinRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9202,7 +9202,7 @@ zend_object_value php_wxDataViewToggleRenderer_new(zend_class_entry *class_type 
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewToggleRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9413,7 +9413,7 @@ zend_object_value php_wxDataViewDateRenderer_new(zend_class_entry *class_type TS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewDateRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9624,7 +9624,7 @@ zend_object_value php_wxDataViewCustomRenderer_new(zend_class_entry *class_type 
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewCustomRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -11180,7 +11180,7 @@ zend_object_value php_wxDataViewBitmapRenderer_new(zend_class_entry *class_type 
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewBitmapRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -11391,7 +11391,7 @@ zend_object_value php_wxDataViewColumn_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewColumn_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -12084,7 +12084,7 @@ zend_object_value php_wxDataViewListStore_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewListStore_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -13214,7 +13214,7 @@ zend_object_value php_wxDataViewTreeStore_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewTreeStore_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -13401,7 +13401,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 2 argument(s)");
 
@@ -13421,7 +13420,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 3 argument(s)");
@@ -13442,7 +13440,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 4 argument(s)");
@@ -13464,7 +13461,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
-				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendContainer at call with 5 argument(s)");
@@ -13635,7 +13631,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 2 argument(s)");
 
@@ -13655,7 +13650,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call with 3 argument(s)");
@@ -13676,7 +13670,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::AppendItem at call with 4 argument(s)");
@@ -14820,7 +14813,6 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::GetNthChild at call with 2 argument(s)");
 
@@ -15026,7 +15018,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 3 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 3 argument(s)");
@@ -15047,7 +15038,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 4 argument(s)");
@@ -15069,7 +15059,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
-				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 5 argument(s)");
@@ -15092,7 +15081,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo6 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo6->native_object = (wxDataViewItem_php*) ptr;
-				zo6->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertContainer at call with 6 argument(s)");
@@ -15283,7 +15271,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 3 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 3 argument(s)");
@@ -15304,7 +15291,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 4 argument(s)");
@@ -15326,7 +15312,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
-				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
 				references->AddReference(previous0, "wxDataViewTreeStore::InsertItem at call with 5 argument(s)");
@@ -15516,7 +15501,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 2 argument(s)");
 
@@ -15536,7 +15520,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 3 argument(s)");
@@ -15557,7 +15540,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 4 argument(s)");
@@ -15579,7 +15561,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
-				zo5->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependContainer at call with 5 argument(s)");
@@ -15750,7 +15731,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 2 argument(s)");
 
@@ -15770,7 +15750,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 3 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call with 3 argument(s)");
@@ -15791,7 +15770,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 				references->AddReference(parent0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
 				references->AddReference(icon0, "wxDataViewTreeStore::PrependItem at call with 4 argument(s)");
@@ -16386,7 +16364,7 @@ zend_object_value php_wxDataViewIconText_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewIconText_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -17105,7 +17083,7 @@ zend_object_value php_wxDataViewEvent_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -17209,7 +17187,6 @@ PHP_METHOD(php_wxDataViewEvent, GetItem)
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				zo_wxDataViewItem* zo0 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataViewItem_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -17821,7 +17798,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 				object_init_ex(return_value, php_wxDataFormat_entry);
 				zo_wxDataFormat* zo0 = (zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataFormat_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -18262,7 +18238,6 @@ PHP_METHOD(php_wxDataViewEvent, GetPosition)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;

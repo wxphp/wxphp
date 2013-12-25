@@ -121,7 +121,7 @@ zend_object_value php_wxRibbonArtProvider_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonArtProvider_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1376,7 +1376,6 @@ PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 					object_init_ex(return_value, php_wxColour_entry);
 					zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxColour_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 
 
@@ -3194,7 +3193,7 @@ zend_object_value php_wxRibbonBar_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4810,7 +4809,7 @@ zend_object_value php_wxRibbonButtonBar_new(zend_class_entry *class_type TSRMLS_
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonButtonBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -6909,7 +6908,7 @@ zend_object_value php_wxRibbonControl_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonControl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -7418,7 +7417,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxSize_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -7444,7 +7442,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxSize_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -7616,7 +7613,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxSize_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -7642,7 +7638,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxSize_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -8477,7 +8472,7 @@ zend_object_value php_wxRibbonGallery_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonGallery_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -11465,7 +11460,7 @@ zend_object_value php_wxRibbonPage_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonPage_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -12892,7 +12887,7 @@ zend_object_value php_wxRibbonPanel_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonPanel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -14671,7 +14666,7 @@ zend_object_value php_wxRibbonToolBar_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonToolBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

@@ -121,7 +121,7 @@ zend_object_value php_wxAcceleratorEntry_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAcceleratorEntry_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1269,7 +1269,7 @@ zend_object_value php_wxAcceleratorTable_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAcceleratorTable_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1536,7 +1536,7 @@ zend_object_value php_wxCalendarDateAttr_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCalendarDateAttr_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -3995,7 +3995,7 @@ zend_object_value php_wxPageSetupDialogData_new(zend_class_entry *class_type TSR
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPageSetupDialogData_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -5289,7 +5289,6 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginBottomRight)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5393,7 +5392,6 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginTopLeft)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5497,7 +5495,6 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginBottomRight)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5601,7 +5598,6 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginTopLeft)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5802,7 +5798,6 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPaperSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -7328,7 +7323,7 @@ zend_object_value php_wxPrintData_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintData_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9794,7 +9789,7 @@ zend_object_value php_wxRealPoint_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRealPoint_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -10121,7 +10116,7 @@ zend_object_value php_wxRect_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRect_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -11739,7 +11734,6 @@ PHP_METHOD(php_wxRect, Intersect)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo1 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 				references->AddReference(rect0, "wxRect::Intersect at call with 1 argument(s)");
 
@@ -11969,7 +11963,6 @@ PHP_METHOD(php_wxRect, Inflate)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo2 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -12482,7 +12475,6 @@ PHP_METHOD(php_wxRect, GetTopRight)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -12586,7 +12578,6 @@ PHP_METHOD(php_wxRect, GetTopLeft)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -12787,7 +12778,6 @@ PHP_METHOD(php_wxRect, GetSize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -12988,7 +12978,6 @@ PHP_METHOD(php_wxRect, GetPosition)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13116,7 +13105,6 @@ PHP_METHOD(php_wxRect, CenterIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo1 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 				references->AddReference(r0, "wxRect::CenterIn at call with 1 argument(s)");
 
@@ -13136,7 +13124,6 @@ PHP_METHOD(php_wxRect, CenterIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo2 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(r0, "wxRect::CenterIn at call with 2 argument(s)");
 
@@ -13265,7 +13252,6 @@ PHP_METHOD(php_wxRect, CentreIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo1 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 				references->AddReference(r0, "wxRect::CentreIn at call with 1 argument(s)");
 
@@ -13285,7 +13271,6 @@ PHP_METHOD(php_wxRect, CentreIn)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo2 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 				references->AddReference(r0, "wxRect::CentreIn at call with 2 argument(s)");
 
@@ -13812,7 +13797,6 @@ PHP_METHOD(php_wxRect, Deflate)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo2 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxRect_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -14013,7 +13997,6 @@ PHP_METHOD(php_wxRect, GetBottomLeft)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -14117,7 +14100,6 @@ PHP_METHOD(php_wxRect, GetBottomRight)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -14398,7 +14380,7 @@ zend_object_value php_wxPoint_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPoint_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -14822,7 +14804,7 @@ zend_object_value php_wxSize_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSize_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -16115,7 +16097,7 @@ zend_object_value php_wxListItemAttr_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxListItemAttr_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -17387,7 +17369,7 @@ zend_object_value php_wxListItem_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxListItem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -19153,7 +19135,6 @@ PHP_METHOD(php_wxListItem, GetTextColour)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -19846,7 +19827,6 @@ PHP_METHOD(php_wxListItem, GetBackgroundColour)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -20048,7 +20028,6 @@ PHP_METHOD(php_wxListItem, GetFont)
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -20135,7 +20114,7 @@ zend_object_value php_wxFileType_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileType_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -20928,7 +20907,7 @@ zend_object_value php_wxPosition_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPosition_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -21734,7 +21713,7 @@ zend_object_value php_wxRegion_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRegion_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -22198,7 +22177,6 @@ PHP_METHOD(php_wxRegion, ConvertToBitmap)
 				object_init_ex(return_value, php_wxBitmap_entry);
 				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxBitmap_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -22344,7 +22322,6 @@ PHP_METHOD(php_wxRegion, GetBox)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -24336,7 +24313,7 @@ zend_object_value php_wxStatusBarPane_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxStatusBarPane_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -24831,7 +24808,7 @@ zend_object_value php_wxTreeItemId_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTreeItemId_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -25098,7 +25075,7 @@ zend_object_value php_wxVariant_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxVariant_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -28674,7 +28651,7 @@ zend_object_value php_wxVariantData_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxVariantData_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -29645,7 +29622,7 @@ zend_object_value php_wxVersionInfo_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxVersionInfo_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

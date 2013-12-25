@@ -121,7 +121,7 @@ zend_object_value php_wxConfigBase_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxConfigBase_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4218,7 +4218,7 @@ zend_object_value php_wxDisplay_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDisplay_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4456,7 +4456,6 @@ PHP_METHOD(php_wxDisplay, GetClientArea)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -4658,7 +4657,6 @@ PHP_METHOD(php_wxDisplay, GetCurrentMode)
 				object_init_ex(return_value, php_wxVideoMode_entry);
 				zo_wxVideoMode* zo0 = (zo_wxVideoMode*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxVideoMode_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5004,7 +5002,6 @@ PHP_METHOD(php_wxDisplay, GetGeometry)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5389,7 +5386,7 @@ zend_object_value php_wxFileConfig_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileConfig_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -6191,7 +6188,6 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -6414,7 +6410,6 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -6436,7 +6431,6 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxFileName_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -7875,7 +7869,7 @@ zend_object_value php_wxFontMapper_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontMapper_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9536,7 +9530,7 @@ zend_object_value php_wxPlatformInfo_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPlatformInfo_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -13371,7 +13365,7 @@ zend_object_value php_wxSystemSettings_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSystemSettings_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -13485,7 +13479,6 @@ PHP_METHOD(php_wxSystemSettings, GetColour)
 				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxColour_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -13598,7 +13591,6 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFont_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -14021,7 +14013,7 @@ zend_object_value php_wxSystemOptions_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSystemOptions_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -14679,7 +14671,7 @@ zend_object_value php_wxVideoMode_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxVideoMode_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

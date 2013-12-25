@@ -91,7 +91,7 @@ zend_object_value php_wxStyledTextCtrl_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxStyledTextCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -12877,7 +12877,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13661,7 +13660,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -13863,7 +13861,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -14948,7 +14945,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -16918,7 +16914,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 				((wxVersionInfo_php*)ptr)->InitProperties();
 				zo_wxVersionInfo* zo0 = (zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxVersionInfo_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -26127,7 +26122,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxColour_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -33255,7 +33249,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo1 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxPoint_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
