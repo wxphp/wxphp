@@ -121,7 +121,7 @@ zend_object_value php_wxDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -10983,7 +10983,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -10993,7 +10992,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -11003,7 +11001,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -11013,7 +11010,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -11023,7 +11019,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -11033,7 +11028,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -11043,7 +11037,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -11053,7 +11046,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -11063,7 +11055,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -11073,7 +11064,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -11083,7 +11073,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -11093,7 +11082,6 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 
 
@@ -11925,7 +11913,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -11935,7 +11922,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -11945,7 +11931,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -11955,7 +11940,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -11965,7 +11949,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -11975,7 +11958,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -11985,7 +11967,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -11995,7 +11976,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -12005,7 +11985,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -12015,7 +11994,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -12025,7 +12003,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -12035,7 +12012,6 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 					object_init_ex(return_value, php_wxPoint_entry);
 					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxPoint_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 
 
@@ -12818,7 +12794,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -12828,7 +12803,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -12838,7 +12812,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -12848,7 +12821,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -12858,7 +12830,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -12868,7 +12839,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -12878,7 +12848,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -12888,7 +12857,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -12898,7 +12866,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -12908,7 +12875,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -12918,7 +12884,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -12928,7 +12893,6 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 
 
@@ -13079,7 +13043,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -13089,7 +13052,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -13099,7 +13061,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -13109,7 +13070,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -13119,7 +13079,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -13129,7 +13088,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -13139,7 +13097,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -13149,7 +13106,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -13159,7 +13115,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -13169,7 +13124,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -13179,7 +13133,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -13189,7 +13142,6 @@ PHP_METHOD(php_wxDC, GetPPI)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 
 
@@ -13860,7 +13812,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -13870,7 +13821,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -13880,7 +13830,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -13890,7 +13839,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -13900,7 +13848,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -13910,7 +13857,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -13920,7 +13866,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -13930,7 +13875,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -13940,7 +13884,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -13950,7 +13893,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -13960,7 +13902,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -13970,7 +13911,6 @@ PHP_METHOD(php_wxDC, GetSize)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 
 
@@ -14208,7 +14148,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -14218,7 +14157,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -14228,7 +14166,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -14238,7 +14175,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -14248,7 +14184,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -14258,7 +14193,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -14268,7 +14202,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -14278,7 +14211,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -14288,7 +14220,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -14298,7 +14229,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -14308,7 +14238,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -14318,7 +14247,6 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo0->native_object = (wxSize_php*) ptr;
-					zo0->is_user_initialized = 1;
 				}
 
 
@@ -14982,7 +14910,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXCLIENTDC_TYPE)
 				{
@@ -14992,7 +14919,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPAINTDC_TYPE)
 				{
@@ -15002,7 +14928,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXSCREENDC_TYPE)
 				{
@@ -15012,7 +14937,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPOSTSCRIPTDC_TYPE)
 				{
@@ -15022,7 +14946,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXPRINTERDC_TYPE)
 				{
@@ -15032,7 +14955,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMEMORYDC_TYPE)
 				{
@@ -15042,7 +14964,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDDC_TYPE)
 				{
@@ -15052,7 +14973,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXBUFFEREDPAINTDC_TYPE)
 				{
@@ -15062,7 +14982,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXAUTOBUFFEREDPAINTDC_TYPE)
 				{
@@ -15072,7 +14991,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXMIRRORDC_TYPE)
 				{
@@ -15082,7 +15000,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 				else if(current_object_type == PHP_WXDC_TYPE)
 				{
@@ -15092,7 +15009,6 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 					object_init_ex(return_value, php_wxSize_entry);
 					zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxSize_php*) ptr;
-					zo1->is_user_initialized = 1;
 				}
 
 
@@ -22600,7 +22516,7 @@ zend_object_value php_wxBufferedDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBufferedDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -23234,7 +23150,7 @@ zend_object_value php_wxAutoBufferedPaintDC_new(zend_class_entry *class_type TSR
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAutoBufferedPaintDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -23428,7 +23344,7 @@ zend_object_value php_wxBufferedPaintDC_new(zend_class_entry *class_type TSRMLS_
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBufferedPaintDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -23726,7 +23642,7 @@ zend_object_value php_wxPaintDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPaintDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -23920,7 +23836,7 @@ zend_object_value php_wxClientDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxClientDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -24114,7 +24030,7 @@ zend_object_value php_wxWindowDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWindowDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -24308,7 +24224,7 @@ zend_object_value php_wxMemoryDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMemoryDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -24858,7 +24774,7 @@ zend_object_value php_wxMirrorDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMirrorDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -25053,7 +24969,7 @@ zend_object_value php_wxPostScriptDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPostScriptDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -25279,7 +25195,7 @@ zend_object_value php_wxScreenDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxScreenDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

@@ -3819,12 +3819,12 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 
 				wxColour value_to_return2;
 				value_to_return2 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1);
+				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo2 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxColour_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -3838,12 +3838,12 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 
 				wxColour value_to_return3;
 				value_to_return3 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8));
+				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo3 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxColour_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 
 				return;
@@ -3857,12 +3857,12 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 
 				wxColour value_to_return4;
 				value_to_return4 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8), (wxColourData*) object_pointer0_3);
+				((wxRefCounter *) value_to_return4.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo4 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxColour_php*) ptr;
-				zo4->is_user_initialized = 1;
 
 
 				return;
@@ -7223,12 +7223,12 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 
 				wxFont value_to_return2;
 				value_to_return2 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1);
+				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo2 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxFont_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -7242,12 +7242,12 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 
 				wxFont value_to_return3;
 				value_to_return3 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8));
+				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo3 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxFont_php*) ptr;
-				zo3->is_user_initialized = 1;
 
 
 				return;
@@ -7626,7 +7626,6 @@ PHP_FUNCTION(php_wxGetClientDisplayRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -7695,7 +7694,6 @@ PHP_FUNCTION(php_wxGetDisplayPPI)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -7849,7 +7847,6 @@ PHP_FUNCTION(php_wxGetDisplaySize)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -8003,7 +8000,6 @@ PHP_FUNCTION(php_wxGetDisplaySizeMM)
 				object_init_ex(return_value, php_wxSize_entry);
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -11006,7 +11002,6 @@ PHP_FUNCTION(php_wxGetLibraryVersionInfo)
 				object_init_ex(return_value, php_wxVersionInfo_entry);
 				zo_wxVersionInfo* zo0 = (zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxVersionInfo_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -11515,7 +11510,6 @@ PHP_FUNCTION(php_wxGetMousePosition)
 				object_init_ex(return_value, php_wxPoint_entry);
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -11584,7 +11578,6 @@ PHP_FUNCTION(php_wxGetMouseState)
 				object_init_ex(return_value, php_wxMouseState_entry);
 				zo_wxMouseState* zo0 = (zo_wxMouseState*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxMouseState_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;

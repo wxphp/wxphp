@@ -121,7 +121,7 @@ zend_object_value php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRM
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlResourceHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -745,7 +745,7 @@ zend_object_value php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlResource_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -2499,7 +2499,6 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 				object_init_ex(return_value, php_wxBitmap_entry);
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxBitmap_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -3100,7 +3099,6 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 				object_init_ex(return_value, php_wxIcon_entry);
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxIcon_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;

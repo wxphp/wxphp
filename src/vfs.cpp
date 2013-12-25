@@ -121,7 +121,7 @@ zend_object_value php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -317,7 +317,6 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -1486,7 +1485,7 @@ zend_object_value php_wxFileSystemHandler_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

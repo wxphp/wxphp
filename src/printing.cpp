@@ -121,7 +121,7 @@ zend_object_value php_wxPrinterDC_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrinterDC_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -226,7 +226,6 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -389,7 +388,7 @@ zend_object_value php_wxPreviewControlBar_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewControlBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -970,7 +969,7 @@ zend_object_value php_wxPreviewCanvas_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewCanvas_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1251,7 +1250,7 @@ zend_object_value php_wxPreviewFrame_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewFrame_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1744,7 +1743,7 @@ zend_object_value php_wxPrintPreview_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintPreview_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -3783,7 +3782,7 @@ zend_object_value php_wxPrinter_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrinter_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4864,7 +4863,7 @@ zend_object_value php_wxPrintout_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintout_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -5515,7 +5514,6 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo1 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 				references->AddReference(pageSetupData0, "wxPrintout::GetLogicalPageMarginsRect at call with 1 argument(s)");
 
@@ -5624,7 +5622,6 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5732,7 +5729,6 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -6476,7 +6472,6 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 				object_init_ex(return_value, php_wxRect_entry);
 				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -8150,7 +8145,7 @@ zend_object_value php_wxPrintDialog_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintDialog_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -8677,7 +8672,7 @@ zend_object_value php_wxPageSetupDialog_new(zend_class_entry *class_type TSRMLS_
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPageSetupDialog_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

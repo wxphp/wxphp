@@ -121,7 +121,7 @@ zend_object_value php_wxFFile_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFFile_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1678,7 +1678,7 @@ zend_object_value php_wxFile_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFile_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -3906,7 +3906,7 @@ zend_object_value php_wxPathList_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPathList_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4716,7 +4716,7 @@ zend_object_value php_wxFileName_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileName_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -9509,7 +9509,6 @@ PHP_METHOD(php_wxFileName, DirName)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -9531,7 +9530,6 @@ PHP_METHOD(php_wxFileName, DirName)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxFileName_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -9783,7 +9781,6 @@ PHP_METHOD(php_wxFileName, FileName)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
-				zo1->is_user_initialized = 1;
 
 
 				return;
@@ -9805,7 +9802,6 @@ PHP_METHOD(php_wxFileName, FileName)
 				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxFileName_php*) ptr;
-				zo2->is_user_initialized = 1;
 
 
 				return;
@@ -14570,7 +14566,7 @@ zend_object_value php_wxFSFile_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFSFile_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -15419,7 +15415,7 @@ zend_object_value php_wxFileSystemWatcher_new(zend_class_entry *class_type TSRML
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemWatcher_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -16431,7 +16427,7 @@ zend_object_value php_wxStandardPaths_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxStandardPaths_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399

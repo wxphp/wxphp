@@ -91,7 +91,7 @@ zend_object_value php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColourPickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -493,7 +493,6 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 				object_init_ex(return_value, php_wxColour_entry);
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -986,7 +985,7 @@ zend_object_value php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDatePickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -1983,7 +1982,7 @@ zend_object_value php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFilePickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -2998,7 +2997,6 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 				object_init_ex(return_value, php_wxFileName_entry);
 				zo_wxFileName* zo0 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFileName_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -3055,7 +3053,7 @@ zend_object_value php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDirPickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -3448,7 +3446,6 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 				object_init_ex(return_value, php_wxFileName_entry);
 				zo_wxFileName* zo0 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFileName_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -4098,7 +4095,7 @@ zend_object_value php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontPickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -4597,7 +4594,6 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 				object_init_ex(return_value, php_wxFont_entry);
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
-				zo0->is_user_initialized = 1;
 
 
 				return;
@@ -5152,7 +5148,7 @@ zend_object_value php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC)
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPickerBase_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
@@ -7067,7 +7063,7 @@ zend_object_value php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridCellRenderer_free, NULL TSRMLS_CC);
+	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTimePickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
 #if PHP_VERSION_ID > 50399
