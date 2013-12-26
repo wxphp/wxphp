@@ -13299,6 +13299,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13318,6 +13320,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13338,6 +13342,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13359,6 +13365,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13529,6 +13537,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13548,6 +13558,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13568,6 +13580,8 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14711,6 +14725,8 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14916,6 +14932,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14936,6 +14954,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14957,6 +14977,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14979,6 +15001,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return6, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo6 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo6->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15169,6 +15193,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15189,6 +15215,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15210,6 +15238,8 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15399,6 +15429,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15418,6 +15450,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15438,6 +15472,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15459,6 +15495,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15629,6 +15667,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15648,6 +15688,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15668,6 +15710,8 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -17075,6 +17119,8 @@ PHP_METHOD(php_wxDataViewEvent, GetItem)
 				void* ptr = safe_emalloc(1, sizeof(wxDataViewItem_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
+				((wxDataViewItem_php*)ptr)->phpObj = return_value;
+				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo0 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataViewItem_php*) ptr;
 
@@ -17686,6 +17732,8 @@ PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 				void* ptr = safe_emalloc(1, sizeof(wxDataFormat_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
 				object_init_ex(return_value, php_wxDataFormat_entry);
+				((wxDataFormat_php*)ptr)->phpObj = return_value;
+				((wxDataFormat_php*)ptr)->InitProperties();
 				zo_wxDataFormat* zo0 = (zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataFormat_php*) ptr;
 
@@ -18126,6 +18174,8 @@ PHP_METHOD(php_wxDataViewEvent, GetPosition)
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
+				((wxPoint_php*)ptr)->phpObj = return_value;
+				((wxPoint_php*)ptr)->InitProperties();
 				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
 
