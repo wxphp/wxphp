@@ -81,7 +81,6 @@ BEGIN_EXTERN_C()
 void php_<?=$class_name?>_free(void *object TSRMLS_DC) 
 {
     zo_<?=$class_name?>* custom_object = (zo_<?=$class_name?>*) object;
-    //delete custom_object->native_object;
     
 <?if(!inherits_from_class("wxSizer", $class_name) && !inherits_from_class("wxTopLevelWindow", $class_name) && !inherits_from_class("wxPanel", $class_name) && !inherits_from_class("wxControl", $class_name) && $class_name != "wxMenu" && $class_name != "wxMenuItem" && $class_name != "wxMenuBar" && $class_name != "wxPanel" && $class_name != "wxSplitterWindow" && $class_name != "wxScrolledWindow" && $class_name != "wxScrolledWindow" && $class_name != "wxAuiManager"){?>
 	#ifdef USE_WXPHP_DEBUG
@@ -89,7 +88,7 @@ void php_<?=$class_name?>_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-<?if($class_name != "wxGridCellRenderer" && $class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData"){?>
+<?if($class_name != "wxGridCellRenderer" && $class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData" && $class_name != "wxTreeItemData" && !inherits_from_class("wxGridCellEditor", $class_name)){?>
 	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
@@ -175,14 +174,13 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 <? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
 	custom_object->native_object = new <?=$class_name?>_php();
-	custom_object->native_object->phpObj = temp;
-<? } ?>
-	custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+	custom_object->native_object->phpObj = temp;	
 #ifdef ZTS 
 	custom_object->native_object->TSRMLS_C = TSRMLS_C;
 #endif
+<? } ?>
+	custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
