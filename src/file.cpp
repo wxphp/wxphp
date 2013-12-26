@@ -6704,7 +6704,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
 					if(zend_hash_index_find(HASH_OF(dtAccess0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
 					{
 						convert_to_long_ex(temp_array_value0_0);
-						dates_array0_0[array_index0_0] = wxDateTime(Z_LVAL_PP(temp_array_value0_0));
+						dates_array0_0[array_index0_0] = wxDateTime((time_t) Z_LVAL_PP(temp_array_value0_0));
 						array_index0_0++;
 					}
 					else
@@ -6719,7 +6719,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
 					if(zend_hash_index_find(HASH_OF(dtMod0), array_index0_1, (void**)&temp_array_value0_1) == SUCCESS)
 					{
 						convert_to_long_ex(temp_array_value0_1);
-						dates_array0_1[array_index0_1] = wxDateTime(Z_LVAL_PP(temp_array_value0_1));
+						dates_array0_1[array_index0_1] = wxDateTime((time_t) Z_LVAL_PP(temp_array_value0_1));
 						array_index0_1++;
 					}
 					else
@@ -6734,7 +6734,7 @@ PHP_METHOD(php_wxFileName, SetTimes)
 					if(zend_hash_index_find(HASH_OF(dtCreate0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
 					{
 						convert_to_long_ex(temp_array_value0_2);
-						dates_array0_2[array_index0_2] = wxDateTime(Z_LVAL_PP(temp_array_value0_2));
+						dates_array0_2[array_index0_2] = wxDateTime((time_t) Z_LVAL_PP(temp_array_value0_2));
 						array_index0_2++;
 					}
 					else
@@ -11262,7 +11262,7 @@ PHP_METHOD(php_wxFileName, GetModificationTime)
 				php_printf("Executing wxFileName::GetModificationTime() to return timestamp\n\n");
 				#endif
 
-				long value_to_return0;
+				time_t value_to_return0;
 				value_to_return0 = ((wxFileName_php*)native_object)->GetModificationTime().GetTicks();
 				ZVAL_LONG(return_value, value_to_return0);
 
@@ -14588,7 +14588,7 @@ PHP_METHOD(php_wxFSFile, __construct)
 	long mimetype_len0;
 	char* anchor0;
 	long anchor_len0;
-	long modif0;
+	time_t modif0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -14872,7 +14872,7 @@ PHP_METHOD(php_wxFSFile, GetModificationTime)
 				php_printf("Executing wxFSFile::GetModificationTime() to return timestamp\n\n");
 				#endif
 
-				long value_to_return0;
+				time_t value_to_return0;
 				value_to_return0 = ((wxFSFile_php*)native_object)->GetModificationTime().GetTicks();
 				ZVAL_LONG(return_value, value_to_return0);
 

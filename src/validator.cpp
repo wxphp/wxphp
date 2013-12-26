@@ -482,7 +482,7 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 	zval* valPtr2_ref;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	long valPtr3;
+	time_t valPtr3;
 	zval* valPtr3_ref;
 	bool overload3_called = false;
 	//Parameters for overload 4
