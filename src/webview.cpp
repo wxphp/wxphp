@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxWebViewHistoryItem_free(void *object TSRMLS_DC) 
 {
     zo_wxWebViewHistoryItem* custom_object = (zo_wxWebViewHistoryItem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxWebViewHistoryItem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxWebViewHistoryItem_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWHISTORYITEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -438,7 +433,6 @@ BEGIN_EXTERN_C()
 void php_wxWebViewHandler_free(void *object TSRMLS_DC) 
 {
     zo_wxWebViewHandler* custom_object = (zo_wxWebViewHandler*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxWebViewHandler_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -513,10 +507,6 @@ zend_object_value php_wxWebViewHandler_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWHANDLER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -808,7 +798,6 @@ BEGIN_EXTERN_C()
 void php_wxWebViewArchiveHandler_free(void *object TSRMLS_DC) 
 {
     zo_wxWebViewArchiveHandler* custom_object = (zo_wxWebViewArchiveHandler*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxWebViewArchiveHandler_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -883,10 +872,6 @@ zend_object_value php_wxWebViewArchiveHandler_new(zend_class_entry *class_type T
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWARCHIVEHANDLER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

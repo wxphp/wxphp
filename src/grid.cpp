@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellRenderer* custom_object = (zo_wxGridCellRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -101,13 +100,12 @@ zend_object_value php_wxGridCellRenderer_new(zend_class_entry *class_type TSRMLS
 
     custom_object->native_object = NULL;
 	custom_object->native_object = new wxGridCellRenderer_php();
-	custom_object->native_object->phpObj = temp;
-	custom_object->object_type = PHP_WXGRIDCELLRENDERER_TYPE;
-	custom_object->is_user_initialized = 0;
-	
+	custom_object->native_object->phpObj = temp;	
 #ifdef ZTS 
 	custom_object->native_object->TSRMLS_C = TSRMLS_C;
 #endif
+	custom_object->object_type = PHP_WXGRIDCELLRENDERER_TYPE;
+	custom_object->is_user_initialized = 0;
 	
     return retval;
 }
@@ -368,7 +366,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellAutoWrapStringRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellAutoWrapStringRenderer* custom_object = (zo_wxGridCellAutoWrapStringRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellAutoWrapStringRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -443,10 +440,6 @@ zend_object_value php_wxGridCellAutoWrapStringRenderer_new(zend_class_entry *cla
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLAUTOWRAPSTRINGRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -538,7 +531,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellBoolRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellBoolRenderer* custom_object = (zo_wxGridCellBoolRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellBoolRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -613,10 +605,6 @@ zend_object_value php_wxGridCellBoolRenderer_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLBOOLRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -708,7 +696,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellDateTimeRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellDateTimeRenderer* custom_object = (zo_wxGridCellDateTimeRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellDateTimeRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -783,10 +770,6 @@ zend_object_value php_wxGridCellDateTimeRenderer_new(zend_class_entry *class_typ
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLDATETIMERENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1011,7 +994,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellEnumRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellEnumRenderer* custom_object = (zo_wxGridCellEnumRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellEnumRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1086,10 +1068,6 @@ zend_object_value php_wxGridCellEnumRenderer_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLENUMRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1301,7 +1279,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellFloatRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellFloatRenderer* custom_object = (zo_wxGridCellFloatRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellFloatRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1376,10 +1353,6 @@ zend_object_value php_wxGridCellFloatRenderer_new(zend_class_entry *class_type T
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLFLOATRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2211,7 +2184,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellNumberRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellNumberRenderer* custom_object = (zo_wxGridCellNumberRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellNumberRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -2286,10 +2258,6 @@ zend_object_value php_wxGridCellNumberRenderer_new(zend_class_entry *class_type 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLNUMBERRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2381,7 +2349,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellStringRenderer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellStringRenderer* custom_object = (zo_wxGridCellStringRenderer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellStringRenderer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -2456,10 +2423,6 @@ zend_object_value php_wxGridCellStringRenderer_new(zend_class_entry *class_type 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLSTRINGRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2551,7 +2514,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellEditor* custom_object = (zo_wxGridCellEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -2597,10 +2559,6 @@ zend_object_value php_wxGridCellEditor_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4521,42 +4479,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellAutoWrapStringEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellAutoWrapStringEditor* custom_object = (zo_wxGridCellAutoWrapStringEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellAutoWrapStringEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellAutoWrapStringEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -4596,10 +4524,6 @@ zend_object_value php_wxGridCellAutoWrapStringEditor_new(zend_class_entry *class
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLAUTOWRAPSTRINGEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4690,42 +4614,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellBoolEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellBoolEditor* custom_object = (zo_wxGridCellBoolEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellBoolEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellBoolEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -4765,10 +4659,6 @@ zend_object_value php_wxGridCellBoolEditor_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLBOOLEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5096,42 +4986,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellChoiceEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellChoiceEditor* custom_object = (zo_wxGridCellChoiceEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellChoiceEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellChoiceEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5171,10 +5031,6 @@ zend_object_value php_wxGridCellChoiceEditor_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLCHOICEEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5423,42 +5279,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellEnumEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellEnumEditor* custom_object = (zo_wxGridCellEnumEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellEnumEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellEnumEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5498,10 +5324,6 @@ zend_object_value php_wxGridCellEnumEditor_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLENUMEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5610,42 +5432,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellTextEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellTextEditor* custom_object = (zo_wxGridCellTextEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellTextEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellTextEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5685,10 +5477,6 @@ zend_object_value php_wxGridCellTextEditor_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLTEXTEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5911,42 +5699,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellFloatEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellFloatEditor* custom_object = (zo_wxGridCellFloatEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellFloatEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellFloatEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5986,10 +5744,6 @@ zend_object_value php_wxGridCellFloatEditor_new(zend_class_entry *class_type TSR
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLFLOATEDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6224,42 +5978,12 @@ BEGIN_EXTERN_C()
 void php_wxGridCellNumberEditor_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellNumberEditor* custom_object = (zo_wxGridCellNumberEditor*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellNumberEditor_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxGridCellNumberEditor done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -6299,10 +6023,6 @@ zend_object_value php_wxGridCellNumberEditor_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLNUMBEREDITOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6525,7 +6245,6 @@ BEGIN_EXTERN_C()
 void php_wxGridCellAttr_free(void *object TSRMLS_DC) 
 {
     zo_wxGridCellAttr* custom_object = (zo_wxGridCellAttr*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridCellAttr_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6571,10 +6290,6 @@ zend_object_value php_wxGridCellAttr_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDCELLATTR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -9618,7 +9333,6 @@ BEGIN_EXTERN_C()
 void php_wxGridTableBase_free(void *object TSRMLS_DC) 
 {
     zo_wxGridTableBase* custom_object = (zo_wxGridTableBase*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridTableBase_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -9693,10 +9407,6 @@ zend_object_value php_wxGridTableBase_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDTABLEBASE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -13975,7 +13685,6 @@ BEGIN_EXTERN_C()
 void php_wxGridSizesInfo_free(void *object TSRMLS_DC) 
 {
     zo_wxGridSizesInfo* custom_object = (zo_wxGridSizesInfo*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridSizesInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -14050,10 +13759,6 @@ zend_object_value php_wxGridSizesInfo_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDSIZESINFO_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -14307,7 +14012,6 @@ BEGIN_EXTERN_C()
 void php_wxGrid_free(void *object TSRMLS_DC) 
 {
     zo_wxGrid* custom_object = (zo_wxGrid*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxGrid on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -14352,10 +14056,6 @@ zend_object_value php_wxGrid_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRID_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -38402,7 +38102,6 @@ BEGIN_EXTERN_C()
 void php_wxGridUpdateLocker_free(void *object TSRMLS_DC) 
 {
     zo_wxGridUpdateLocker* custom_object = (zo_wxGridUpdateLocker*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGridUpdateLocker_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -38477,10 +38176,6 @@ zend_object_value php_wxGridUpdateLocker_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDUPDATELOCKER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

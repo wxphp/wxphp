@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxCondition_free(void *object TSRMLS_DC) 
 {
     zo_wxCondition* custom_object = (zo_wxCondition*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxCondition_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxCondition_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCONDITION_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -740,7 +735,6 @@ BEGIN_EXTERN_C()
 void php_wxCriticalSectionLocker_free(void *object TSRMLS_DC) 
 {
     zo_wxCriticalSectionLocker* custom_object = (zo_wxCriticalSectionLocker*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxCriticalSectionLocker_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -815,10 +809,6 @@ zend_object_value php_wxCriticalSectionLocker_new(zend_class_entry *class_type T
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCRITICALSECTIONLOCKER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -934,7 +924,6 @@ BEGIN_EXTERN_C()
 void php_wxThreadHelper_free(void *object TSRMLS_DC) 
 {
     zo_wxThreadHelper* custom_object = (zo_wxThreadHelper*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxThreadHelper_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1009,10 +998,6 @@ zend_object_value php_wxThreadHelper_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTHREADHELPER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1400,7 +1385,6 @@ BEGIN_EXTERN_C()
 void php_wxCriticalSection_free(void *object TSRMLS_DC) 
 {
     zo_wxCriticalSection* custom_object = (zo_wxCriticalSection*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxCriticalSection_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1475,10 +1459,6 @@ zend_object_value php_wxCriticalSection_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCRITICALSECTION_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1877,7 +1857,6 @@ BEGIN_EXTERN_C()
 void php_wxThread_free(void *object TSRMLS_DC) 
 {
     zo_wxThread* custom_object = (zo_wxThread*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxThread_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1952,10 +1931,6 @@ zend_object_value php_wxThread_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTHREAD_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4564,7 +4539,6 @@ BEGIN_EXTERN_C()
 void php_wxSemaphore_free(void *object TSRMLS_DC) 
 {
     zo_wxSemaphore* custom_object = (zo_wxSemaphore*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSemaphore_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4639,10 +4613,6 @@ zend_object_value php_wxSemaphore_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSEMAPHORE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5155,7 +5125,6 @@ BEGIN_EXTERN_C()
 void php_wxMutexLocker_free(void *object TSRMLS_DC) 
 {
     zo_wxMutexLocker* custom_object = (zo_wxMutexLocker*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMutexLocker_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -5230,10 +5199,6 @@ zend_object_value php_wxMutexLocker_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMUTEXLOCKER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5446,7 +5411,6 @@ BEGIN_EXTERN_C()
 void php_wxMutex_free(void *object TSRMLS_DC) 
 {
     zo_wxMutex* custom_object = (zo_wxMutex*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMutex_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -5521,10 +5485,6 @@ zend_object_value php_wxMutex_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMUTEX_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

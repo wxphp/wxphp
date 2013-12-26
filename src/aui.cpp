@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiToolBarEvent_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiToolBarEvent* custom_object = (zo_wxAuiToolBarEvent*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiToolBarEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxAuiToolBarEvent_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBAREVENT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -556,7 +551,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiToolBarItem_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiToolBarItem* custom_object = (zo_wxAuiToolBarItem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiToolBarItem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -631,10 +625,6 @@ zend_object_value php_wxAuiToolBarItem_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBARITEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4916,7 +4906,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiToolBarArt_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiToolBarArt* custom_object = (zo_wxAuiToolBarArt*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiToolBarArt_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4991,10 +4980,6 @@ zend_object_value php_wxAuiToolBarArt_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBARART_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6474,7 +6459,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiDefaultToolBarArt_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiDefaultToolBarArt* custom_object = (zo_wxAuiDefaultToolBarArt*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiDefaultToolBarArt_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6549,10 +6533,6 @@ zend_object_value php_wxAuiDefaultToolBarArt_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIDEFAULTTOOLBARART_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -9275,7 +9255,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiToolBar_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiToolBar* custom_object = (zo_wxAuiToolBar*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxAuiToolBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -9320,10 +9299,6 @@ zend_object_value php_wxAuiToolBar_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBAR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -16811,7 +16786,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiNotebook_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiNotebook* custom_object = (zo_wxAuiNotebook*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxAuiNotebook on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -16856,10 +16830,6 @@ zend_object_value php_wxAuiNotebook_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUINOTEBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -20561,7 +20531,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiTabArt_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiTabArt* custom_object = (zo_wxAuiTabArt*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiTabArt_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -20636,10 +20605,6 @@ zend_object_value php_wxAuiTabArt_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITABART_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -21587,7 +21552,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiDockArt_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiDockArt* custom_object = (zo_wxAuiDockArt*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiDockArt_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -21662,10 +21626,6 @@ zend_object_value php_wxAuiDockArt_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIDOCKART_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -22740,7 +22700,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiManager_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiManager* custom_object = (zo_wxAuiManager*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxAuiManager on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -22785,10 +22744,6 @@ zend_object_value php_wxAuiManager_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIMANAGER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -25744,7 +25699,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiPaneInfo_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiPaneInfo* custom_object = (zo_wxAuiPaneInfo*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiPaneInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -25819,10 +25773,6 @@ zend_object_value php_wxAuiPaneInfo_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIPANEINFO_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -35035,7 +34985,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiManagerEvent_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiManagerEvent* custom_object = (zo_wxAuiManagerEvent*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiManagerEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -35110,10 +35059,6 @@ zend_object_value php_wxAuiManagerEvent_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIMANAGEREVENT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

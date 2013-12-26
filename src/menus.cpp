@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxMenuBar_free(void *object TSRMLS_DC) 
 {
     zo_wxMenuBar* custom_object = (zo_wxMenuBar*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxMenuBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -101,10 +100,6 @@ zend_object_value php_wxMenuBar_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMENUBAR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3207,7 +3202,6 @@ BEGIN_EXTERN_C()
 void php_wxMenu_free(void *object TSRMLS_DC) 
 {
     zo_wxMenu* custom_object = (zo_wxMenu*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxMenu on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3252,10 +3246,6 @@ zend_object_value php_wxMenu_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMENU_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -9315,7 +9305,6 @@ BEGIN_EXTERN_C()
 void php_wxMenuItem_free(void *object TSRMLS_DC) 
 {
     zo_wxMenuItem* custom_object = (zo_wxMenuItem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxMenuItem on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -9360,10 +9349,6 @@ zend_object_value php_wxMenuItem_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMENUITEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

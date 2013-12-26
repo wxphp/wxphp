@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxFileSystem_free(void *object TSRMLS_DC) 
 {
     zo_wxFileSystem* custom_object = (zo_wxFileSystem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFileSystem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1420,7 +1415,6 @@ BEGIN_EXTERN_C()
 void php_wxFileSystemHandler_free(void *object TSRMLS_DC) 
 {
     zo_wxFileSystemHandler* custom_object = (zo_wxFileSystemHandler*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFileSystemHandler_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1495,10 +1489,6 @@ zend_object_value php_wxFileSystemHandler_new(zend_class_entry *class_type TSRML
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEMHANDLER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
