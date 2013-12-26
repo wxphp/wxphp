@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxFrame_free(void *object TSRMLS_DC) 
 {
     zo_wxFrame* custom_object = (zo_wxFrame*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -98,10 +97,6 @@ zend_object_value php_wxFrame_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3492,7 +3487,6 @@ BEGIN_EXTERN_C()
 void php_wxMDIClientWindow_free(void *object TSRMLS_DC) 
 {
     zo_wxMDIClientWindow* custom_object = (zo_wxMDIClientWindow*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMDIClientWindow_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3569,10 +3563,6 @@ zend_object_value php_wxMDIClientWindow_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDICLIENTWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3799,7 +3789,6 @@ BEGIN_EXTERN_C()
 void php_wxMDIParentFrame_free(void *object TSRMLS_DC) 
 {
     zo_wxMDIParentFrame* custom_object = (zo_wxMDIParentFrame*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxMDIParentFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -3841,10 +3830,6 @@ zend_object_value php_wxMDIParentFrame_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDIPARENTFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5357,7 +5342,6 @@ BEGIN_EXTERN_C()
 void php_wxMDIChildFrame_free(void *object TSRMLS_DC) 
 {
     zo_wxMDIChildFrame* custom_object = (zo_wxMDIChildFrame*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxMDIChildFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -5399,10 +5383,6 @@ zend_object_value php_wxMDIChildFrame_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDICHILDFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6399,7 +6379,6 @@ BEGIN_EXTERN_C()
 void php_wxMiniFrame_free(void *object TSRMLS_DC) 
 {
     zo_wxMiniFrame* custom_object = (zo_wxMiniFrame*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxMiniFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -6441,10 +6420,6 @@ zend_object_value php_wxMiniFrame_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMINIFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6916,7 +6891,6 @@ BEGIN_EXTERN_C()
 void php_wxPopupWindow_free(void *object TSRMLS_DC) 
 {
     zo_wxPopupWindow* custom_object = (zo_wxPopupWindow*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPopupWindow_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6993,10 +6967,6 @@ zend_object_value php_wxPopupWindow_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOPUPWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -7409,7 +7379,6 @@ BEGIN_EXTERN_C()
 void php_wxPopupTransientWindow_free(void *object TSRMLS_DC) 
 {
     zo_wxPopupTransientWindow* custom_object = (zo_wxPopupTransientWindow*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPopupTransientWindow_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -7486,10 +7455,6 @@ zend_object_value php_wxPopupTransientWindow_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOPUPTRANSIENTWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -7969,7 +7934,6 @@ BEGIN_EXTERN_C()
 void php_wxPropertySheetDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxPropertySheetDialog* custom_object = (zo_wxPropertySheetDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxPropertySheetDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -8011,10 +7975,6 @@ zend_object_value php_wxPropertySheetDialog_new(zend_class_entry *class_type TSR
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPROPERTYSHEETDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -9482,7 +9442,6 @@ BEGIN_EXTERN_C()
 void php_wxSplashScreen_free(void *object TSRMLS_DC) 
 {
     zo_wxSplashScreen* custom_object = (zo_wxSplashScreen*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxSplashScreen went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -9524,10 +9483,6 @@ zend_object_value php_wxSplashScreen_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSPLASHSCREEN_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -9943,7 +9898,6 @@ BEGIN_EXTERN_C()
 void php_wxTopLevelWindow_free(void *object TSRMLS_DC) 
 {
     zo_wxTopLevelWindow* custom_object = (zo_wxTopLevelWindow*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxTopLevelWindow_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -10020,10 +9974,6 @@ zend_object_value php_wxTopLevelWindow_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTOPLEVELWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

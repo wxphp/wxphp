@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxXmlNode_free(void *object TSRMLS_DC) 
 {
     zo_wxXmlNode* custom_object = (zo_wxXmlNode*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxXmlNode_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxXmlNode_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLNODE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3748,7 +3743,6 @@ BEGIN_EXTERN_C()
 void php_wxXmlAttribute_free(void *object TSRMLS_DC) 
 {
     zo_wxXmlAttribute* custom_object = (zo_wxXmlAttribute*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxXmlAttribute_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3823,10 +3817,6 @@ zend_object_value php_wxXmlAttribute_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLATTRIBUTE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4643,7 +4633,6 @@ BEGIN_EXTERN_C()
 void php_wxXmlDocument_free(void *object TSRMLS_DC) 
 {
     zo_wxXmlDocument* custom_object = (zo_wxXmlDocument*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxXmlDocument_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4718,10 +4707,6 @@ zend_object_value php_wxXmlDocument_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLDOCUMENT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

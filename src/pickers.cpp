@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxColourPickerCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxColourPickerCtrl* custom_object = (zo_wxColourPickerCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxColourPickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -101,10 +100,6 @@ zend_object_value php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOURPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -950,7 +945,6 @@ BEGIN_EXTERN_C()
 void php_wxDatePickerCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxDatePickerCtrl* custom_object = (zo_wxDatePickerCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxDatePickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -995,10 +989,6 @@ zend_object_value php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATEPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1947,7 +1937,6 @@ BEGIN_EXTERN_C()
 void php_wxFilePickerCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxFilePickerCtrl* custom_object = (zo_wxFilePickerCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxFilePickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1992,10 +1981,6 @@ zend_object_value php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3018,7 +3003,6 @@ BEGIN_EXTERN_C()
 void php_wxDirPickerCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxDirPickerCtrl* custom_object = (zo_wxDirPickerCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxDirPickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3063,10 +3047,6 @@ zend_object_value php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDIRPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4060,7 +4040,6 @@ BEGIN_EXTERN_C()
 void php_wxFontPickerCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxFontPickerCtrl* custom_object = (zo_wxFontPickerCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxFontPickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4105,10 +4084,6 @@ zend_object_value php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -5113,7 +5088,6 @@ BEGIN_EXTERN_C()
 void php_wxPickerBase_free(void *object TSRMLS_DC) 
 {
     zo_wxPickerBase* custom_object = (zo_wxPickerBase*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxPickerBase on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -5158,10 +5132,6 @@ zend_object_value php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPICKERBASE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -7028,7 +6998,6 @@ BEGIN_EXTERN_C()
 void php_wxTimePickerCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxTimePickerCtrl* custom_object = (zo_wxTimePickerCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxTimePickerCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -7073,10 +7042,6 @@ zend_object_value php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTIMEPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

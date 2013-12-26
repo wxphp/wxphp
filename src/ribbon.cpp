@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonArtProvider_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonArtProvider* custom_object = (zo_wxRibbonArtProvider*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxRibbonArtProvider_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxRibbonArtProvider_new(zend_class_entry *class_type TSRML
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONARTPROVIDER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3158,7 +3153,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonBar_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonBar* custom_object = (zo_wxRibbonBar*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3203,10 +3197,6 @@ zend_object_value php_wxRibbonBar_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONBAR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4774,7 +4764,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonButtonBar_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonButtonBar* custom_object = (zo_wxRibbonButtonBar*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonButtonBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4819,10 +4808,6 @@ zend_object_value php_wxRibbonButtonBar_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONBUTTONBAR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6873,7 +6858,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonControl_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonControl* custom_object = (zo_wxRibbonControl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonControl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6918,10 +6902,6 @@ zend_object_value php_wxRibbonControl_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONCONTROL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -8437,7 +8417,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonGallery_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonGallery* custom_object = (zo_wxRibbonGallery*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonGallery on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -8482,10 +8461,6 @@ zend_object_value php_wxRibbonGallery_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONGALLERY_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -11425,7 +11400,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonPage_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonPage* custom_object = (zo_wxRibbonPage*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonPage on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -11470,10 +11444,6 @@ zend_object_value php_wxRibbonPage_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONPAGE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -12852,7 +12822,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonPanel_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonPanel* custom_object = (zo_wxRibbonPanel*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonPanel on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -12897,10 +12866,6 @@ zend_object_value php_wxRibbonPanel_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONPANEL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -14631,7 +14596,6 @@ BEGIN_EXTERN_C()
 void php_wxRibbonToolBar_free(void *object TSRMLS_DC) 
 {
     zo_wxRibbonToolBar* custom_object = (zo_wxRibbonToolBar*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxRibbonToolBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -14676,10 +14640,6 @@ zend_object_value php_wxRibbonToolBar_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONTOOLBAR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxAboutDialogInfo_free(void *object TSRMLS_DC) 
 {
     zo_wxAboutDialogInfo* custom_object = (zo_wxAboutDialogInfo*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAboutDialogInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxAboutDialogInfo_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXABOUTDIALOGINFO_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2491,7 +2486,6 @@ BEGIN_EXTERN_C()
 void php_wxBusyInfo_free(void *object TSRMLS_DC) 
 {
     zo_wxBusyInfo* custom_object = (zo_wxBusyInfo*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxBusyInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -2566,10 +2560,6 @@ zend_object_value php_wxBusyInfo_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBUSYINFO_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2698,7 +2688,6 @@ BEGIN_EXTERN_C()
 void php_wxSingleChoiceDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxSingleChoiceDialog* custom_object = (zo_wxSingleChoiceDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxSingleChoiceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -2740,10 +2729,6 @@ zend_object_value php_wxSingleChoiceDialog_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSINGLECHOICEDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3682,7 +3667,6 @@ BEGIN_EXTERN_C()
 void php_wxPrintDialogData_free(void *object TSRMLS_DC) 
 {
     zo_wxPrintDialogData* custom_object = (zo_wxPrintDialogData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintDialogData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3757,10 +3741,6 @@ zend_object_value php_wxPrintDialogData_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTDIALOGDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6341,7 +6321,6 @@ BEGIN_EXTERN_C()
 void php_wxColourDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxColourDialog* custom_object = (zo_wxColourDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxColourDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -6383,10 +6362,6 @@ zend_object_value php_wxColourDialog_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOURDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6902,7 +6877,6 @@ BEGIN_EXTERN_C()
 void php_wxColourData_free(void *object TSRMLS_DC) 
 {
     zo_wxColourData* custom_object = (zo_wxColourData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxColourData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6977,10 +6951,6 @@ zend_object_value php_wxColourData_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOURDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -7946,7 +7916,6 @@ BEGIN_EXTERN_C()
 void php_wxDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxDialog* custom_object = (zo_wxDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -7988,10 +7957,6 @@ zend_object_value php_wxDialog_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -13818,7 +13783,6 @@ BEGIN_EXTERN_C()
 void php_wxDirDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxDirDialog* custom_object = (zo_wxDirDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxDirDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -13860,10 +13824,6 @@ zend_object_value php_wxDirDialog_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDIRDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -14610,7 +14570,6 @@ BEGIN_EXTERN_C()
 void php_wxFindReplaceData_free(void *object TSRMLS_DC) 
 {
     zo_wxFindReplaceData* custom_object = (zo_wxFindReplaceData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFindReplaceData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -14685,10 +14644,6 @@ zend_object_value php_wxFindReplaceData_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFINDREPLACEDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -15407,7 +15362,6 @@ BEGIN_EXTERN_C()
 void php_wxFindReplaceDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxFindReplaceDialog* custom_object = (zo_wxFindReplaceDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxFindReplaceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -15449,10 +15403,6 @@ zend_object_value php_wxFindReplaceDialog_new(zend_class_entry *class_type TSRML
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFINDREPLACEDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -15915,7 +15865,6 @@ BEGIN_EXTERN_C()
 void php_wxFileDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxFileDialog* custom_object = (zo_wxFileDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxFileDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -15957,10 +15906,6 @@ zend_object_value php_wxFileDialog_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -17934,7 +17879,6 @@ BEGIN_EXTERN_C()
 void php_wxFontData_free(void *object TSRMLS_DC) 
 {
     zo_wxFontData* custom_object = (zo_wxFontData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFontData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -18009,10 +17953,6 @@ zend_object_value php_wxFontData_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -19492,7 +19432,6 @@ BEGIN_EXTERN_C()
 void php_wxFontDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxFontDialog* custom_object = (zo_wxFontDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxFontDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -19534,10 +19473,6 @@ zend_object_value php_wxFontDialog_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -20230,7 +20165,6 @@ BEGIN_EXTERN_C()
 void php_wxMessageDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxMessageDialog* custom_object = (zo_wxMessageDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxMessageDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -20272,10 +20206,6 @@ zend_object_value php_wxMessageDialog_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMESSAGEDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -22382,7 +22312,6 @@ BEGIN_EXTERN_C()
 void php_wxGenericProgressDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxGenericProgressDialog* custom_object = (zo_wxGenericProgressDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxGenericProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -22424,10 +22353,6 @@ zend_object_value php_wxGenericProgressDialog_new(zend_class_entry *class_type T
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGENERICPROGRESSDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -23586,7 +23511,6 @@ BEGIN_EXTERN_C()
 void php_wxRearrangeDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxRearrangeDialog* custom_object = (zo_wxRearrangeDialog*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxRearrangeDialog_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -23661,10 +23585,6 @@ zend_object_value php_wxRearrangeDialog_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXREARRANGEDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -23997,7 +23917,6 @@ BEGIN_EXTERN_C()
 void php_wxSymbolPickerDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxSymbolPickerDialog* custom_object = (zo_wxSymbolPickerDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxSymbolPickerDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -24039,10 +23958,6 @@ zend_object_value php_wxSymbolPickerDialog_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSYMBOLPICKERDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -25753,7 +25668,6 @@ BEGIN_EXTERN_C()
 void php_wxPasswordEntryDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxPasswordEntryDialog* custom_object = (zo_wxPasswordEntryDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxPasswordEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -25795,10 +25709,6 @@ zend_object_value php_wxPasswordEntryDialog_new(zend_class_entry *class_type TSR
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPASSWORDENTRYDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -25989,7 +25899,6 @@ BEGIN_EXTERN_C()
 void php_wxTextEntryDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxTextEntryDialog* custom_object = (zo_wxTextEntryDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxTextEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -26031,10 +25940,6 @@ zend_object_value php_wxTextEntryDialog_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTEXTENTRYDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -26540,7 +26445,6 @@ BEGIN_EXTERN_C()
 void php_wxWizard_free(void *object TSRMLS_DC) 
 {
     zo_wxWizard* custom_object = (zo_wxWizard*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxWizard went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -26582,10 +26486,6 @@ zend_object_value php_wxWizard_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWIZARD_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

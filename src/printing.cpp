@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxPrinterDC_free(void *object TSRMLS_DC) 
 {
     zo_wxPrinterDC* custom_object = (zo_wxPrinterDC*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrinterDC_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxPrinterDC_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTERDC_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -353,7 +348,6 @@ BEGIN_EXTERN_C()
 void php_wxPreviewControlBar_free(void *object TSRMLS_DC) 
 {
     zo_wxPreviewControlBar* custom_object = (zo_wxPreviewControlBar*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxPreviewControlBar on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -398,10 +392,6 @@ zend_object_value php_wxPreviewControlBar_new(zend_class_entry *class_type TSRML
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPREVIEWCONTROLBAR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -934,7 +924,6 @@ BEGIN_EXTERN_C()
 void php_wxPreviewCanvas_free(void *object TSRMLS_DC) 
 {
     zo_wxPreviewCanvas* custom_object = (zo_wxPreviewCanvas*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxPreviewCanvas on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -979,10 +968,6 @@ zend_object_value php_wxPreviewCanvas_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPREVIEWCANVAS_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1218,7 +1203,6 @@ BEGIN_EXTERN_C()
 void php_wxPreviewFrame_free(void *object TSRMLS_DC) 
 {
     zo_wxPreviewFrame* custom_object = (zo_wxPreviewFrame*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxPreviewFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -1260,10 +1244,6 @@ zend_object_value php_wxPreviewFrame_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPREVIEWFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1678,7 +1658,6 @@ BEGIN_EXTERN_C()
 void php_wxPrintPreview_free(void *object TSRMLS_DC) 
 {
     zo_wxPrintPreview* custom_object = (zo_wxPrintPreview*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintPreview_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1753,10 +1732,6 @@ zend_object_value php_wxPrintPreview_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTPREVIEW_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3717,7 +3692,6 @@ BEGIN_EXTERN_C()
 void php_wxPrinter_free(void *object TSRMLS_DC) 
 {
     zo_wxPrinter* custom_object = (zo_wxPrinter*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrinter_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3792,10 +3766,6 @@ zend_object_value php_wxPrinter_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4798,7 +4768,6 @@ BEGIN_EXTERN_C()
 void php_wxPrintout_free(void *object TSRMLS_DC) 
 {
     zo_wxPrintout* custom_object = (zo_wxPrintout*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintout_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4873,10 +4842,6 @@ zend_object_value php_wxPrintout_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTOUT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -8113,7 +8078,6 @@ BEGIN_EXTERN_C()
 void php_wxPrintDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxPrintDialog* custom_object = (zo_wxPrintDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxPrintDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -8155,10 +8119,6 @@ zend_object_value php_wxPrintDialog_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -8640,7 +8600,6 @@ BEGIN_EXTERN_C()
 void php_wxPageSetupDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxPageSetupDialog* custom_object = (zo_wxPageSetupDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxPageSetupDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -8682,10 +8641,6 @@ zend_object_value php_wxPageSetupDialog_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPAGESETUPDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

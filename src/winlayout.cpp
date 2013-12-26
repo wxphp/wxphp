@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxGBPosition_free(void *object TSRMLS_DC) 
 {
     zo_wxGBPosition* custom_object = (zo_wxGBPosition*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGBPosition_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxGBPosition_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGBPOSITION_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -663,7 +658,6 @@ BEGIN_EXTERN_C()
 void php_wxGridBagSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridBagSizer* custom_object = (zo_wxGridBagSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxGridBagSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -708,10 +702,6 @@ zend_object_value php_wxGridBagSizer_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDBAGSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4319,7 +4309,6 @@ BEGIN_EXTERN_C()
 void php_wxGBSizerItem_free(void *object TSRMLS_DC) 
 {
     zo_wxGBSizerItem* custom_object = (zo_wxGBSizerItem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGBSizerItem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4394,10 +4383,6 @@ zend_object_value php_wxGBSizerItem_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGBSIZERITEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6046,7 +6031,6 @@ BEGIN_EXTERN_C()
 void php_wxGBSpan_free(void *object TSRMLS_DC) 
 {
     zo_wxGBSpan* custom_object = (zo_wxGBSpan*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGBSpan_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6121,10 +6105,6 @@ zend_object_value php_wxGBSpan_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGBSPAN_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6653,7 +6633,6 @@ BEGIN_EXTERN_C()
 void php_wxLayoutAlgorithm_free(void *object TSRMLS_DC) 
 {
     zo_wxLayoutAlgorithm* custom_object = (zo_wxLayoutAlgorithm*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxLayoutAlgorithm_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6728,10 +6707,6 @@ zend_object_value php_wxLayoutAlgorithm_new(zend_class_entry *class_type TSRMLS_
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXLAYOUTALGORITHM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -7285,7 +7260,6 @@ BEGIN_EXTERN_C()
 void php_wxSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxSizer* custom_object = (zo_wxSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSizer_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -7360,10 +7334,6 @@ zend_object_value php_wxSizer_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -17059,7 +17029,6 @@ BEGIN_EXTERN_C()
 void php_wxStdDialogButtonSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxStdDialogButtonSizer* custom_object = (zo_wxStdDialogButtonSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxStdDialogButtonSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -17104,10 +17073,6 @@ zend_object_value php_wxStdDialogButtonSizer_new(zend_class_entry *class_type TS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTDDIALOGBUTTONSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -17980,7 +17945,6 @@ BEGIN_EXTERN_C()
 void php_wxSizerItem_free(void *object TSRMLS_DC) 
 {
     zo_wxSizerItem* custom_object = (zo_wxSizerItem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSizerItem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -18055,10 +18019,6 @@ zend_object_value php_wxSizerItem_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSIZERITEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -22821,7 +22781,6 @@ BEGIN_EXTERN_C()
 void php_wxSizerFlags_free(void *object TSRMLS_DC) 
 {
     zo_wxSizerFlags* custom_object = (zo_wxSizerFlags*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSizerFlags_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -22896,10 +22855,6 @@ zend_object_value php_wxSizerFlags_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSIZERFLAGS_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -25158,7 +25113,6 @@ BEGIN_EXTERN_C()
 void php_wxFlexGridSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxFlexGridSizer* custom_object = (zo_wxFlexGridSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxFlexGridSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -25203,10 +25157,6 @@ zend_object_value php_wxFlexGridSizer_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFLEXGRIDSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -26758,7 +26708,6 @@ BEGIN_EXTERN_C()
 void php_wxGridSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxGridSizer* custom_object = (zo_wxGridSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxGridSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -26803,10 +26752,6 @@ zend_object_value php_wxGridSizer_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -28360,7 +28305,6 @@ BEGIN_EXTERN_C()
 void php_wxStaticBoxSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxStaticBoxSizer* custom_object = (zo_wxStaticBoxSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxStaticBoxSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -28405,10 +28349,6 @@ zend_object_value php_wxStaticBoxSizer_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTATICBOXSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -28917,7 +28857,6 @@ BEGIN_EXTERN_C()
 void php_wxBoxSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxBoxSizer* custom_object = (zo_wxBoxSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxBoxSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -28962,10 +28901,6 @@ zend_object_value php_wxBoxSizer_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBOXSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -29532,7 +29467,6 @@ BEGIN_EXTERN_C()
 void php_wxWrapSizer_free(void *object TSRMLS_DC) 
 {
     zo_wxWrapSizer* custom_object = (zo_wxWrapSizer*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxWrapSizer on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -29577,10 +29511,6 @@ zend_object_value php_wxWrapSizer_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWRAPSIZER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

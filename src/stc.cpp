@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxStyledTextCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxStyledTextCtrl* custom_object = (zo_wxStyledTextCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxStyledTextCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -101,10 +100,6 @@ zend_object_value php_wxStyledTextCtrl_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTYLEDTEXTCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

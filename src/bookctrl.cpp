@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxAuiNotebookEvent_free(void *object TSRMLS_DC) 
 {
     zo_wxAuiNotebookEvent* custom_object = (zo_wxAuiNotebookEvent*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAuiNotebookEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxAuiNotebookEvent_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUINOTEBOOKEVENT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -373,7 +368,6 @@ BEGIN_EXTERN_C()
 void php_wxBookCtrlBase_free(void *object TSRMLS_DC) 
 {
     zo_wxBookCtrlBase* custom_object = (zo_wxBookCtrlBase*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxBookCtrlBase on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -418,10 +412,6 @@ zend_object_value php_wxBookCtrlBase_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBOOKCTRLBASE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3101,7 +3091,6 @@ BEGIN_EXTERN_C()
 void php_wxBookCtrlEvent_free(void *object TSRMLS_DC) 
 {
     zo_wxBookCtrlEvent* custom_object = (zo_wxBookCtrlEvent*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxBookCtrlEvent_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3176,10 +3165,6 @@ zend_object_value php_wxBookCtrlEvent_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBOOKCTRLEVENT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3737,7 +3722,6 @@ BEGIN_EXTERN_C()
 void php_wxChoicebook_free(void *object TSRMLS_DC) 
 {
     zo_wxChoicebook* custom_object = (zo_wxChoicebook*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxChoicebook on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -3782,10 +3766,6 @@ zend_object_value php_wxChoicebook_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCHOICEBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4151,7 +4131,6 @@ BEGIN_EXTERN_C()
 void php_wxListbook_free(void *object TSRMLS_DC) 
 {
     zo_wxListbook* custom_object = (zo_wxListbook*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxListbook on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4196,10 +4175,6 @@ zend_object_value php_wxListbook_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXLISTBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4565,7 +4540,6 @@ BEGIN_EXTERN_C()
 void php_wxNotebook_free(void *object TSRMLS_DC) 
 {
     zo_wxNotebook* custom_object = (zo_wxNotebook*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxNotebook on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4610,10 +4584,6 @@ zend_object_value php_wxNotebook_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXNOTEBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6273,7 +6243,6 @@ BEGIN_EXTERN_C()
 void php_wxToolbook_free(void *object TSRMLS_DC) 
 {
     zo_wxToolbook* custom_object = (zo_wxToolbook*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxToolbook on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6318,10 +6287,6 @@ zend_object_value php_wxToolbook_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTOOLBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6687,7 +6652,6 @@ BEGIN_EXTERN_C()
 void php_wxTreebook_free(void *object TSRMLS_DC) 
 {
     zo_wxTreebook* custom_object = (zo_wxTreebook*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxTreebook on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6732,10 +6696,6 @@ zend_object_value php_wxTreebook_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTREEBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxHtmlHelpController_free(void *object TSRMLS_DC) 
 {
     zo_wxHtmlHelpController* custom_object = (zo_wxHtmlHelpController*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxHtmlHelpController_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxHtmlHelpController_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPCONTROLLER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1819,7 +1814,6 @@ BEGIN_EXTERN_C()
 void php_wxHtmlModalHelp_free(void *object TSRMLS_DC) 
 {
     zo_wxHtmlModalHelp* custom_object = (zo_wxHtmlModalHelp*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxHtmlModalHelp_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1894,10 +1888,6 @@ zend_object_value php_wxHtmlModalHelp_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLMODALHELP_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2042,7 +2032,6 @@ BEGIN_EXTERN_C()
 void php_wxHtmlHelpData_free(void *object TSRMLS_DC) 
 {
     zo_wxHtmlHelpData* custom_object = (zo_wxHtmlHelpData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxHtmlHelpData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -2117,10 +2106,6 @@ zend_object_value php_wxHtmlHelpData_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2635,7 +2620,6 @@ BEGIN_EXTERN_C()
 void php_wxHtmlHelpDialog_free(void *object TSRMLS_DC) 
 {
     zo_wxHtmlHelpDialog* custom_object = (zo_wxHtmlHelpDialog*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxHtmlHelpDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -2677,10 +2661,6 @@ zend_object_value php_wxHtmlHelpDialog_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3540,7 +3520,6 @@ BEGIN_EXTERN_C()
 void php_wxHtmlHelpFrame_free(void *object TSRMLS_DC) 
 {
     zo_wxHtmlHelpFrame* custom_object = (zo_wxHtmlHelpFrame*) object;
-    //delete custom_object->native_object;
     
 	/*zend_error(E_WARNING, "Object of class wxHtmlHelpFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");*/
 
@@ -3582,10 +3561,6 @@ zend_object_value php_wxHtmlHelpFrame_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -4543,7 +4518,6 @@ BEGIN_EXTERN_C()
 void php_wxHtmlHelpWindow_free(void *object TSRMLS_DC) 
 {
     zo_wxHtmlHelpWindow* custom_object = (zo_wxHtmlHelpWindow*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxHtmlHelpWindow_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4620,10 +4594,6 @@ zend_object_value php_wxHtmlHelpWindow_new(zend_class_entry *class_type TSRMLS_D
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -6320,7 +6290,6 @@ BEGIN_EXTERN_C()
 void php_wxToolTip_free(void *object TSRMLS_DC) 
 {
     zo_wxToolTip* custom_object = (zo_wxToolTip*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxToolTip_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -6395,10 +6364,6 @@ zend_object_value php_wxToolTip_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTOOLTIP_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

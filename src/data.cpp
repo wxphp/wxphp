@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxAcceleratorEntry_free(void *object TSRMLS_DC) 
 {
     zo_wxAcceleratorEntry* custom_object = (zo_wxAcceleratorEntry*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAcceleratorEntry_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxAcceleratorEntry_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXACCELERATORENTRY_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1204,7 +1199,6 @@ BEGIN_EXTERN_C()
 void php_wxAcceleratorTable_free(void *object TSRMLS_DC) 
 {
     zo_wxAcceleratorTable* custom_object = (zo_wxAcceleratorTable*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxAcceleratorTable_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1279,10 +1273,6 @@ zend_object_value php_wxAcceleratorTable_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXACCELERATORTABLE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1471,7 +1461,6 @@ BEGIN_EXTERN_C()
 void php_wxCalendarDateAttr_free(void *object TSRMLS_DC) 
 {
     zo_wxCalendarDateAttr* custom_object = (zo_wxCalendarDateAttr*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxCalendarDateAttr_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1546,10 +1535,6 @@ zend_object_value php_wxCalendarDateAttr_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCALENDARDATEATTR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -3930,7 +3915,6 @@ BEGIN_EXTERN_C()
 void php_wxPageSetupDialogData_free(void *object TSRMLS_DC) 
 {
     zo_wxPageSetupDialogData* custom_object = (zo_wxPageSetupDialogData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPageSetupDialogData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -4005,10 +3989,6 @@ zend_object_value php_wxPageSetupDialogData_new(zend_class_entry *class_type TSR
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPAGESETUPDIALOGDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -7258,7 +7238,6 @@ BEGIN_EXTERN_C()
 void php_wxPrintData_free(void *object TSRMLS_DC) 
 {
     zo_wxPrintData* custom_object = (zo_wxPrintData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -7333,10 +7312,6 @@ zend_object_value php_wxPrintData_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -9724,7 +9699,6 @@ BEGIN_EXTERN_C()
 void php_wxRealPoint_free(void *object TSRMLS_DC) 
 {
     zo_wxRealPoint* custom_object = (zo_wxRealPoint*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxRealPoint_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -9799,10 +9773,6 @@ zend_object_value php_wxRealPoint_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXREALPOINT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -10051,7 +10021,6 @@ BEGIN_EXTERN_C()
 void php_wxRect_free(void *object TSRMLS_DC) 
 {
     zo_wxRect* custom_object = (zo_wxRect*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxRect_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -10126,10 +10095,6 @@ zend_object_value php_wxRect_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRECT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -14315,7 +14280,6 @@ BEGIN_EXTERN_C()
 void php_wxPoint_free(void *object TSRMLS_DC) 
 {
     zo_wxPoint* custom_object = (zo_wxPoint*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPoint_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -14390,10 +14354,6 @@ zend_object_value php_wxPoint_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOINT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -14739,7 +14699,6 @@ BEGIN_EXTERN_C()
 void php_wxSize_free(void *object TSRMLS_DC) 
 {
     zo_wxSize* custom_object = (zo_wxSize*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSize_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -14814,10 +14773,6 @@ zend_object_value php_wxSize_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSIZE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -16032,7 +15987,6 @@ BEGIN_EXTERN_C()
 void php_wxListItemAttr_free(void *object TSRMLS_DC) 
 {
     zo_wxListItemAttr* custom_object = (zo_wxListItemAttr*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxListItemAttr_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -16107,10 +16061,6 @@ zend_object_value php_wxListItemAttr_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXLISTITEMATTR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -17304,7 +17254,6 @@ BEGIN_EXTERN_C()
 void php_wxListItem_free(void *object TSRMLS_DC) 
 {
     zo_wxListItem* custom_object = (zo_wxListItem*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxListItem_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -17379,10 +17328,6 @@ zend_object_value php_wxListItem_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXLISTITEM_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -20049,7 +19994,6 @@ BEGIN_EXTERN_C()
 void php_wxFileType_free(void *object TSRMLS_DC) 
 {
     zo_wxFileType* custom_object = (zo_wxFileType*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFileType_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -20124,10 +20068,6 @@ zend_object_value php_wxFileType_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILETYPE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -20842,7 +20782,6 @@ BEGIN_EXTERN_C()
 void php_wxPosition_free(void *object TSRMLS_DC) 
 {
     zo_wxPosition* custom_object = (zo_wxPosition*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPosition_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -20917,10 +20856,6 @@ zend_object_value php_wxPosition_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOSITION_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -21648,7 +21583,6 @@ BEGIN_EXTERN_C()
 void php_wxRegion_free(void *object TSRMLS_DC) 
 {
     zo_wxRegion* custom_object = (zo_wxRegion*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxRegion_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -21723,10 +21657,6 @@ zend_object_value php_wxRegion_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXREGION_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -24248,7 +24178,6 @@ BEGIN_EXTERN_C()
 void php_wxStatusBarPane_free(void *object TSRMLS_DC) 
 {
     zo_wxStatusBarPane* custom_object = (zo_wxStatusBarPane*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxStatusBarPane_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -24323,10 +24252,6 @@ zend_object_value php_wxStatusBarPane_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTATUSBARPANE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -24743,7 +24668,6 @@ BEGIN_EXTERN_C()
 void php_wxTreeItemId_free(void *object TSRMLS_DC) 
 {
     zo_wxTreeItemId* custom_object = (zo_wxTreeItemId*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxTreeItemId_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -24818,10 +24742,6 @@ zend_object_value php_wxTreeItemId_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTREEITEMID_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -25010,7 +24930,6 @@ BEGIN_EXTERN_C()
 void php_wxVariant_free(void *object TSRMLS_DC) 
 {
     zo_wxVariant* custom_object = (zo_wxVariant*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxVariant_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -25085,10 +25004,6 @@ zend_object_value php_wxVariant_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXVARIANT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -28615,7 +28530,6 @@ BEGIN_EXTERN_C()
 void php_wxVariantData_free(void *object TSRMLS_DC) 
 {
     zo_wxVariantData* custom_object = (zo_wxVariantData*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxVariantData_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -28661,10 +28575,6 @@ zend_object_value php_wxVariantData_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXVARIANTDATA_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -29557,7 +29467,6 @@ BEGIN_EXTERN_C()
 void php_wxVersionInfo_free(void *object TSRMLS_DC) 
 {
     zo_wxVersionInfo* custom_object = (zo_wxVersionInfo*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxVersionInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -29632,10 +29541,6 @@ zend_object_value php_wxVersionInfo_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXVERSIONINFO_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

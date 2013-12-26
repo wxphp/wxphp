@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxGenericValidator_free(void *object TSRMLS_DC) 
 {
     zo_wxGenericValidator* custom_object = (zo_wxGenericValidator*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxGenericValidator_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxGenericValidator_new(zend_class_entry *class_type TSRMLS
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGENERICVALIDATOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -819,7 +814,6 @@ BEGIN_EXTERN_C()
 void php_wxValidator_free(void *object TSRMLS_DC) 
 {
     zo_wxValidator* custom_object = (zo_wxValidator*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxValidator_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -894,10 +888,6 @@ zend_object_value php_wxValidator_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXVALIDATOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -1837,7 +1827,6 @@ BEGIN_EXTERN_C()
 void php_wxTextValidator_free(void *object TSRMLS_DC) 
 {
     zo_wxTextValidator* custom_object = (zo_wxTextValidator*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxTextValidator_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -1912,10 +1901,6 @@ zend_object_value php_wxTextValidator_new(zend_class_entry *class_type TSRMLS_DC
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTEXTVALIDATOR_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

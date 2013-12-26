@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxMediaCtrl_free(void *object TSRMLS_DC) 
 {
     zo_wxMediaCtrl* custom_object = (zo_wxMediaCtrl*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Obviate delete call for wxMediaCtrl on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -101,10 +100,6 @@ zend_object_value php_wxMediaCtrl_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMEDIACTRL_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -2464,7 +2459,6 @@ BEGIN_EXTERN_C()
 void php_wxSound_free(void *object TSRMLS_DC) 
 {
     zo_wxSound* custom_object = (zo_wxSound*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSound_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -2539,10 +2533,6 @@ zend_object_value php_wxSound_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSOUND_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

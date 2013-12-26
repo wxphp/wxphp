@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxXmlResourceHandler_free(void *object TSRMLS_DC) 
 {
     zo_wxXmlResourceHandler* custom_object = (zo_wxXmlResourceHandler*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxXmlResourceHandler_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -131,10 +130,6 @@ zend_object_value php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRM
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLRESOURCEHANDLER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -680,7 +675,6 @@ BEGIN_EXTERN_C()
 void php_wxXmlResource_free(void *object TSRMLS_DC) 
 {
     zo_wxXmlResource* custom_object = (zo_wxXmlResource*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxXmlResource_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -755,10 +749,6 @@ zend_object_value php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLRESOURCE_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }

@@ -56,7 +56,6 @@ BEGIN_EXTERN_C()
 void php_wxRefCounter_free(void *object TSRMLS_DC) 
 {
     zo_wxRefCounter* custom_object = (zo_wxRefCounter*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxRefCounter_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -102,10 +101,6 @@ zend_object_value php_wxRefCounter_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXREFCOUNTER_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -560,7 +555,6 @@ BEGIN_EXTERN_C()
 void php_wxObject_free(void *object TSRMLS_DC) 
 {
     zo_wxObject* custom_object = (zo_wxObject*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxObject_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -635,10 +629,6 @@ zend_object_value php_wxObject_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXOBJECT_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
@@ -8648,7 +8638,6 @@ BEGIN_EXTERN_C()
 void php_wxClassInfo_free(void *object TSRMLS_DC) 
 {
     zo_wxClassInfo* custom_object = (zo_wxClassInfo*) object;
-    //delete custom_object->native_object;
     
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxClassInfo_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -8723,10 +8712,6 @@ zend_object_value php_wxClassInfo_new(zend_class_entry *class_type TSRMLS_DC)
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCLASSINFO_TYPE;
 	custom_object->is_user_initialized = 0;
-	
-#ifdef ZTS 
-	custom_object->native_object->TSRMLS_C = TSRMLS_C;
-#endif
 	
     return retval;
 }
