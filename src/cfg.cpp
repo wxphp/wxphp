@@ -13441,7 +13441,9 @@ PHP_METHOD(php_wxSystemSettings, GetColour)
 
 				wxColour value_to_return1;
 				value_to_return1 = wxSystemSettings::GetColour((wxSystemColour) index0);
+				#ifndef __WXMSW__
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
+				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
@@ -13553,7 +13555,9 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 
 				wxFont value_to_return1;
 				value_to_return1 = wxSystemSettings::GetFont((wxSystemFont) index0);
+				#ifndef __WXMSW__
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
+				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return1, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);

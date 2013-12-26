@@ -175,7 +175,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 					switch($declaration_modifier)
 					{
 						case "pointer": //long*
-							$parameters .= "long " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "time_t " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 							
@@ -184,14 +184,14 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 							break;
 							
 						case "reference": //long&
-							$parameters .= "long " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "time_t " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 						
 						case "const_reference": //const long&
 						case "none": //long
 						case "const_none": //const long
-							$parameters .= "long " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "time_t " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 					}
 					break;
@@ -1128,7 +1128,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
 								$return_called_overload .= tabs(5) . "{\n";
 								$return_called_overload .= tabs(6) . "convert_to_long_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "dates_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = wxDateTime(Z_LVAL_PP(temp_array_value{$declaration_index}_{$parameter_index}));\n";
+								$return_called_overload .= tabs(6) . "dates_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = wxDateTime((time_t) Z_LVAL_PP(temp_array_value{$declaration_index}_{$parameter_index}));\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";
@@ -1484,7 +1484,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						$return_called_overload .= tabs(4) . "php_printf(\"Executing $class_name::$method_name($parameters_string) to return timestamp\\n\\n\");\n";
 						$return_called_overload .= tabs(4) . "#endif\n\n";
 						
-						$return_type = "long";
+						$return_type = "time_t";
 						
 						$return_called_overload .= tabs(4) . $return_type . " value_to_return{$required_parameters};\n";
 						
@@ -1700,7 +1700,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
                                     
                                     if(inherits_from_class("wxObject", $return_type))
+									{
+										$return_called_overload .= tabs(4) . "#ifndef __WXMSW__\n";
                                         $return_called_overload .= tabs(4) . "((wxRefCounter *) value_to_return{$required_parameters}.GetRefData())->IncRef();\n";
+										$return_called_overload .= tabs(4) . "#endif\n";
+									}
 									
 									$return_called_overload .= tabs(4) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 									$return_called_overload .= tabs(4) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";

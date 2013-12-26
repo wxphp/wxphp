@@ -40,7 +40,6 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("uuid.lib", "wxwidgets") &&
 		CHECK_LIB("comctl32.lib", "wxwidgets") &&
 		CHECK_LIB("wsock32.lib", "wxwidgets") &&
-		CHECK_LIB("odbc32.lib", "wxwidgets") &&
 		CHECK_LIB("msvcrt.lib", "wxwidgets") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\include") &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\setup.h", "CFLAGS_WXWIDGETS", PHP_WXWIDGETS + "\\lib\\vc_lib\\mswu") &&
@@ -48,15 +47,11 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_HEADER_ADD_INCLUDE("php_wxwidgets.h", "CFLAGS_WXWIDGETS", configure_module_dirname)) {
 		
 		//Compiler flags
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/Ox ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/DNDEBUG ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/MD ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/O2 ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/EHs ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/EHc ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/W3 ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/Zc:wchar_t ");
 		
 		//Macro definitions
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/DWIN32 ");
@@ -64,10 +59,6 @@ if (PHP_WXWIDGETS != "no") {
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/D__WXMSW__ ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/DwxUSE_UNICODE ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_WINDOWS ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_CRT_SECURE_DEPRECATE ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_CRT_NONSTDC_NO_DEPRECATE ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_CRT_SECURE_NO_WARNINGS ");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/D_VC80_UPGRADE=0x0600 ");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/DISOLATION_AWARE_ENABLED ");
 		
 		//Enable messages to help debug the code
@@ -78,8 +69,6 @@ if (PHP_WXWIDGETS != "no") {
 		
 		//Linker flags
 		ADD_FLAG("LDFLAGS_WXWIDGETS", "/NODEFAULTLIB:libcmt.lib");
-		ADD_FLAG("LDFLAGS_WXWIDGETS", "/INCREMENTAL:NO");
-		ADD_FLAG("LDFLAGS_WXWIDGETS", "/SUBSYSTEM:WINDOWS");
 		
 		//Add extra sources
 		ADD_SOURCES(configure_module_dirname + "\\src", "app.cpp references.cpp <?=str_replace("src/", "", $source_files)?> functions.cpp", "wxwidgets");

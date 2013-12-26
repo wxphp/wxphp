@@ -3227,7 +3227,7 @@ PHP_METHOD(php_wxDateEvent, GetDate)
 				php_printf("Executing wxDateEvent::GetDate() to return timestamp\n\n");
 				#endif
 
-				long value_to_return0;
+				time_t value_to_return0;
 				if(current_object_type == PHP_WXCALENDAREVENT_TYPE)
 				{
 					value_to_return0 = ((wxCalendarEvent_php*)native_object)->GetDate().GetTicks();
@@ -3311,7 +3311,7 @@ PHP_METHOD(php_wxDateEvent, SetDate)
 	#endif
 	
 	//Parameters for overload 0
-	long date0;
+	time_t date0;
 	bool overload0_called = false;
 		
 	//Overload 0

@@ -25389,7 +25389,7 @@ PHP_METHOD(php_wxVariant, Convert)
 	zval* value2_ref;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	long value3;
+	time_t value3;
 	zval* value3_ref;
 	bool overload3_called = false;
 	//Parameters for overload 4
@@ -26135,7 +26135,7 @@ PHP_METHOD(php_wxVariant, GetDateTime)
 				php_printf("Executing wxVariant::GetDateTime() to return timestamp\n\n");
 				#endif
 
-				long value_to_return0;
+				time_t value_to_return0;
 				value_to_return0 = ((wxVariant_php*)native_object)->GetDateTime().GetTicks();
 				ZVAL_LONG(return_value, value_to_return0);
 
@@ -28007,7 +28007,7 @@ PHP_METHOD(php_wxVariant, __construct)
 	long name_len5;
 	bool overload5_called = false;
 	//Parameters for overload 6
-	long val6;
+	time_t val6;
 	char* name6;
 	long name_len6;
 	bool overload6_called = false;

@@ -1017,7 +1017,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 	zval* parent0 = 0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	long dt0;
+	time_t dt0;
 	zval* pos0 = 0;
 	wxPoint* object_pointer0_3 = 0;
 	zval* size0 = 0;
@@ -1301,7 +1301,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 	zval* parent0 = 0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	long dt0;
+	time_t dt0;
 	zval* pos0 = 0;
 	wxPoint* object_pointer0_3 = 0;
 	zval* size0 = 0;
@@ -1570,7 +1570,7 @@ PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 	#endif
 	
 	//Parameters for overload 0
-	long dt0;
+	time_t dt0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -1672,8 +1672,8 @@ PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 	#endif
 	
 	//Parameters for overload 0
-	long dt10;
-	long dt20;
+	time_t dt10;
+	time_t dt20;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -1801,7 +1801,7 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 				php_printf("Executing wxDatePickerCtrl::GetValue() to return timestamp\n\n");
 				#endif
 
-				long value_to_return0;
+				time_t value_to_return0;
 				value_to_return0 = ((wxDatePickerCtrl_php*)native_object)->GetValue().GetTicks();
 				ZVAL_LONG(return_value, value_to_return0);
 
@@ -1874,9 +1874,9 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 	#endif
 	
 	//Parameters for overload 0
-	long dt10;
+	time_t dt10;
 	zval* dt10_ref;
-	long dt20;
+	time_t dt20;
 	zval* dt20_ref;
 	bool overload0_called = false;
 		
@@ -7070,7 +7070,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 	zval* parent0 = 0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	long dt0;
+	time_t dt0;
 	zval* pos0 = 0;
 	wxPoint* object_pointer0_3 = 0;
 	zval* size0 = 0;
@@ -7354,7 +7354,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 	zval* parent0 = 0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
-	long dt0;
+	time_t dt0;
 	zval* pos0 = 0;
 	wxPoint* object_pointer0_3 = 0;
 	zval* size0 = 0;
@@ -7649,7 +7649,7 @@ PHP_METHOD(php_wxTimePickerCtrl, GetValue)
 				php_printf("Executing wxTimePickerCtrl::GetValue() to return timestamp\n\n");
 				#endif
 
-				long value_to_return0;
+				time_t value_to_return0;
 				value_to_return0 = ((wxTimePickerCtrl_php*)native_object)->GetValue().GetTicks();
 				ZVAL_LONG(return_value, value_to_return0);
 
@@ -7722,7 +7722,7 @@ PHP_METHOD(php_wxTimePickerCtrl, SetValue)
 	#endif
 	
 	//Parameters for overload 0
-	long dt0;
+	time_t dt0;
 	bool overload0_called = false;
 		
 	//Overload 0
