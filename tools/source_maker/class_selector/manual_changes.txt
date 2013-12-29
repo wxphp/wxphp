@@ -39,7 +39,65 @@ wxEmptyStr typo (seems to be fixed on latest trunk) on constructor default param
 
 	"wxScrolledWindow":{
 		"_implements":[
-			"wxPanel"
+			"wxPanel",
+			"wxScrolled"
+		],
+		"wxScrolledWindow":[
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+				
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			},
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWindow*",
+					"wxWindowID",
+					"const wxPoint&",
+					"const wxSize&",
+					"long",
+					"const wxString&"
+				],
+				"parameters_name":[
+					"parent",
+					"winid",
+					"pos",
+					"size",
+					"style",
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"wxID_ANY",
+					"wxDefaultPosition",
+					"wxDefaultSize",
+					"wxScrolledWindowStyle",
+					"wxPanelNameStr"
+				]
+			}
 		]
 	},
 	

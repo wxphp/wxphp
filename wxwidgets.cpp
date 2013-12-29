@@ -545,6 +545,7 @@ zend_class_entry* php_wxTextCompleterSimple_entry;
 zend_class_entry* php_wxMediaCtrl_entry;
 zend_class_entry* php_wxURI_entry;
 zend_class_entry* php_wxMediaEvent_entry;
+zend_class_entry* php_wxScrolled_entry;
 
 
 /**
@@ -3671,6 +3672,11 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	INIT_CLASS_ENTRY(ce, PHP_wxMediaEvent_name, php_wxMediaEvent_functions);
 	ce.create_object = php_wxMediaEvent_new;
 	php_wxMediaEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
+
+	char PHP_wxScrolled_name[] = "wxScrolled";
+	INIT_CLASS_ENTRY(ce, PHP_wxScrolled_name, php_wxScrolled_functions);
+	ce.create_object = php_wxScrolled_new;
+	php_wxScrolled_entry = zend_register_internal_class(&ce TSRMLS_CC);
 
 
 	//Variables found on consts.json
