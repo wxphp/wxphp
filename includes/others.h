@@ -25,6 +25,8 @@ void php_wxScrolledWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 class wxScrolledWindow_php: public wxScrolledWindow{
 	public:
 	
+	wxScrolledWindow_php():wxScrolledWindow(){}
+	wxScrolledWindow_php(wxWindow* parent, wxWindowID winid=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxScrolledWindowStyle, const wxString& name=wxPanelNameStr):wxScrolledWindow(parent, winid, pos, size, style, name){}
 		
 		
 	void InitProperties(){
@@ -283,6 +285,33 @@ static zend_function_entry php_wxScrolledWindow_functions[] = {
 	PHP_ME(php_wxPanel, Layout, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPanel, SetFocus, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPanel, SetFocusIgnoringChildren, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SetScrollRate, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SetScrollbars, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SetTargetRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SetTargetWindow, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, ShowScrollbars, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, StopAutoScrolling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SetScrollPageSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SetScale, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, Scroll, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, SendAutoScrollEvents, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, PrepareDC, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, IsAutoScrolling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetViewStart, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetTargetWindow, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetTargetRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetScrollPixelsPerUnit, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetScrollPageSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetScrollLines, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetScaleY, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, GetScaleX, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, EnableScrolling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, DoPrepareDC, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, DisableKeyboardScrolling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, CalcUnscrolledPosition, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, CalcScrolledPosition, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolled, AdjustScrollbars, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxScrolledWindow, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
 #endif
