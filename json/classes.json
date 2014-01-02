@@ -163786,6 +163786,35 @@
 					
 				]
 			}
+		],
+		"Get":[
+			{
+				"return_type":"wxClipboard*",
+				"brief_description":"Returns the global instance (wxTheClipboard) of the clipboard object.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
 		]
 	},
 	"wxClipboardTextEvent":{

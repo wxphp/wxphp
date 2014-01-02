@@ -4622,6 +4622,7 @@ PHP_METHOD(php_wxClipboard, Open);
 PHP_METHOD(php_wxClipboard, SetData);
 PHP_METHOD(php_wxClipboard, UsePrimarySelection);
 PHP_METHOD(php_wxClipboard, __construct);
+PHP_METHOD(php_wxClipboard, Get);
 PHP_METHOD(php_wxClipboardTextEvent, __construct);
 PHP_METHOD(php_wxListView, ClearColumnImage);
 PHP_METHOD(php_wxListView, Focus);
