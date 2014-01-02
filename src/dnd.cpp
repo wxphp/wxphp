@@ -1397,6 +1397,123 @@ PHP_METHOD(php_wxClipboard, __construct)
 }
 /* }}} */
 
+/* {{{ proto wxClipboard wxClipboard::Get()
+   Returns the global instance (wxTheClipboard) of the clipboard object. */
+PHP_METHOD(php_wxClipboard, Get)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxClipboard::Get\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxClipboard* current_object;
+	wxphp_object_type current_object_type;
+	wxClipboard_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxClipboard*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxClipboard::Get call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXCLIPBOARD_TYPE){
+				references = &((wxClipboard_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Static ");
+				php_printf("Executing wxClipboard::Get() to return object pointer\n\n");
+				#endif
+
+				wxClipboard_php* value_to_return0;
+				value_to_return0 = (wxClipboard_php*) wxClipboard::Get();
+				if(value_to_return0 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return0->references.IsUserInitialized()){
+					if(value_to_return0->phpObj != NULL){
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
+						return_is_user_initialized = true;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value, php_wxClipboard_entry);
+					((zo_wxClipboard*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxClipboard_php*) value_to_return0;
+				}
+
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::Get\n");
+	}
+}
+/* }}} */
+
 BEGIN_EXTERN_C()
 void php_wxDataFormat_free(void *object TSRMLS_DC) 
 {
@@ -2032,35 +2149,6 @@ void php_wxDataObject_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataObject done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -2907,35 +2995,6 @@ void php_wxCustomDataObject_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxCustomDataObject done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -3713,35 +3772,6 @@ void php_wxDataObjectComposite_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataObjectComposite done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -4299,35 +4329,6 @@ void php_wxDataObjectSimple_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataObjectSimple done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5146,35 +5147,6 @@ void php_wxBitmapDataObject_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxBitmapDataObject done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5573,35 +5545,6 @@ void php_wxURLDataObject_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxURLDataObject done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -5961,35 +5904,6 @@ void php_wxTextDataObject_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxTextDataObject done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);
@@ -6836,35 +6750,6 @@ void php_wxFileDataObject_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	if(custom_object->native_object != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)custom_object->native_object);
-		#endif
-		
-		if(custom_object->is_user_initialized)
-		{
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete custom_object->native_object;
-			
-			custom_object->native_object = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxFileDataObject done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 
 	zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
     efree(custom_object);

@@ -70,6 +70,7 @@ static zend_function_entry php_wxClipboard_functions[] = {
 	PHP_ME(php_wxClipboard, SetData, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxClipboard, UsePrimarySelection, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxClipboard, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxClipboard, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif
