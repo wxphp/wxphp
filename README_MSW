@@ -17,6 +17,12 @@ I. wxWidgets Source Changes
 		
 		wxUSE_POSTSCRIPT 1
 		
+	Crashes where occurring on Windows XP and the culprit was 
+	the "COMPILER_TLS" feature. So to fix the crashes on windows xp
+	is needed to disable wxUSE_COMPILER_TLS by setting it to 0:
+	
+		wxUSE_COMPILER_TLS 0
+		
 	I'm not really sure but I noticed that changing include\wx\msw\setup.h 
 	didn't had any effect on the final setup.h generated for the compiled
 	libraries so just in case I also recommend to modify include\wx\setup_inc.h
