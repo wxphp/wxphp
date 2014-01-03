@@ -855,11 +855,11 @@ PHP_METHOD(php_wxFileHistory, Load)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&config0, php_wxConfigBase_entry)\n");
+		php_printf("Parsing parameters with 'o' (&config0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(config0) == IS_OBJECT)
@@ -867,7 +867,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxConfigBase*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
@@ -1199,11 +1199,11 @@ PHP_METHOD(php_wxFileHistory, Save)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&config0, php_wxConfigBase_entry)\n");
+		php_printf("Parsing parameters with 'o' (&config0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(config0) == IS_OBJECT)
@@ -1211,7 +1211,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxConfigBase*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}

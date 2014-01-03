@@ -2699,11 +2699,11 @@ PHP_METHOD(php_wxAnimation, Load)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|l' (&stream0, php_wxInputStream_entry, &type0)\n");
+		php_printf("Parsing parameters with 'o|l' (&stream0, &type0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxInputStream_entry, &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "o|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, &type0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -2711,7 +2711,7 @@ PHP_METHOD(php_wxAnimation, Load)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -11343,11 +11343,11 @@ PHP_METHOD(php_wxDCClipper, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OO' (&dc0, php_wxDC_entry, &region0, php_wxRegion_entry)\n");
+		php_printf("Parsing parameters with 'oO' (&dc0, &region0, php_wxRegion_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &region0, php_wxRegion_entry ) == SUCCESS)
+		char parse_parameters_string[] = "oO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &region0, php_wxRegion_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -11355,7 +11355,7 @@ PHP_METHOD(php_wxDCClipper, __construct)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						goto overload1;
 					}
@@ -11394,11 +11394,11 @@ PHP_METHOD(php_wxDCClipper, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OO' (&dc1, php_wxDC_entry, &rect1, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'oO' (&dc1, &rect1, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc1, php_wxDC_entry, &rect1, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "oO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc1, &rect1, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc1) == IS_OBJECT)
@@ -11406,7 +11406,7 @@ PHP_METHOD(php_wxDCClipper, __construct)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc1 TSRMLS_CC))->native_object;
 					object_pointer1_0 = (wxDC*) argument_native_object;
-					if (!object_pointer1_0 )
+					if (!object_pointer1_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						goto overload2;
 					}
@@ -11445,11 +11445,11 @@ PHP_METHOD(php_wxDCClipper, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Ollll' (&dc2, php_wxDC_entry, &x2, &y2, &w2, &h2)\n");
+		php_printf("Parsing parameters with 'ollll' (&dc2, &x2, &y2, &w2, &h2)\n");
 		#endif
 
-		char parse_parameters_string[] = "Ollll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc2, php_wxDC_entry, &x2, &y2, &w2, &h2 ) == SUCCESS)
+		char parse_parameters_string[] = "ollll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc2, &x2, &y2, &w2, &h2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc2) == IS_OBJECT)
@@ -11457,7 +11457,7 @@ PHP_METHOD(php_wxDCClipper, __construct)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc2 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc2 TSRMLS_CC))->native_object;
 					object_pointer2_0 = (wxDC*) argument_native_object;
-					if (!object_pointer2_0 )
+					if (!object_pointer2_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -22984,11 +22984,11 @@ PHP_METHOD(php_wxIconBundle, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|l' (&stream4, php_wxInputStream_entry, &type4)\n");
+		php_printf("Parsing parameters with 'o|l' (&stream4, &type4)\n");
 		#endif
 
-		char parse_parameters_string[] = "O|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream4, php_wxInputStream_entry, &type4 ) == SUCCESS)
+		char parse_parameters_string[] = "o|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream4, &type4 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream4) == IS_OBJECT)
@@ -22996,7 +22996,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream4 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream4 TSRMLS_CC))->native_object;
 					object_pointer4_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer4_0 )
+					if (!object_pointer4_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -23716,11 +23716,11 @@ PHP_METHOD(php_wxIconBundle, AddIcon)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|l' (&stream2, php_wxInputStream_entry, &type2)\n");
+		php_printf("Parsing parameters with 'o|l' (&stream2, &type2)\n");
 		#endif
 
-		char parse_parameters_string[] = "O|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream2, php_wxInputStream_entry, &type2 ) == SUCCESS)
+		char parse_parameters_string[] = "o|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream2, &type2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream2) == IS_OBJECT)
@@ -23728,7 +23728,7 @@ PHP_METHOD(php_wxIconBundle, AddIcon)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream2 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream2 TSRMLS_CC))->native_object;
 					object_pointer2_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer2_0 )
+					if (!object_pointer2_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -24232,11 +24232,11 @@ PHP_METHOD(php_wxImageHandler, CanRead)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&stream0, php_wxInputStream_entry)\n");
+		php_printf("Parsing parameters with 'o' (&stream0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxInputStream_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -24244,7 +24244,7 @@ PHP_METHOD(php_wxImageHandler, CanRead)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
@@ -24611,11 +24611,11 @@ PHP_METHOD(php_wxImageHandler, GetImageCount)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&stream0, php_wxInputStream_entry)\n");
+		php_printf("Parsing parameters with 'o' (&stream0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxInputStream_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -24623,7 +24623,7 @@ PHP_METHOD(php_wxImageHandler, GetImageCount)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -25051,11 +25051,11 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zO|bl' (&image0, &stream0, php_wxInputStream_entry, &verbose0, &index0)\n");
+		php_printf("Parsing parameters with 'zo|bl' (&image0, &stream0, &verbose0, &index0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zO|bl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &image0, &stream0, php_wxInputStream_entry, &verbose0, &index0 ) == SUCCESS)
+		char parse_parameters_string[] = "zo|bl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &image0, &stream0, &verbose0, &index0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(image0) == IS_OBJECT)
@@ -25080,7 +25080,7 @@ PHP_METHOD(php_wxImageHandler, LoadFile)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -25230,11 +25230,11 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zO|b' (&image0, &stream0, php_wxOutputStream_entry, &verbose0)\n");
+		php_printf("Parsing parameters with 'zo|b' (&image0, &stream0, &verbose0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zO|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &image0, &stream0, php_wxOutputStream_entry, &verbose0 ) == SUCCESS)
+		char parse_parameters_string[] = "zo|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &image0, &stream0, &verbose0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(image0) == IS_OBJECT)
@@ -25259,7 +25259,7 @@ PHP_METHOD(php_wxImageHandler, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxOutputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxOutputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxOutputStream*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -26044,11 +26044,11 @@ PHP_METHOD(php_wxImage, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|ll' (&stream5, php_wxInputStream_entry, &type5, &index5)\n");
+		php_printf("Parsing parameters with 'o|ll' (&stream5, &type5, &index5)\n");
 		#endif
 
-		char parse_parameters_string[] = "O|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream5, php_wxInputStream_entry, &type5, &index5 ) == SUCCESS)
+		char parse_parameters_string[] = "o|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream5, &type5, &index5 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream5) == IS_OBJECT)
@@ -26056,7 +26056,7 @@ PHP_METHOD(php_wxImage, __construct)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream5 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream5 TSRMLS_CC))->native_object;
 					object_pointer5_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer5_0 )
+					if (!object_pointer5_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload6;
 					}
@@ -26078,11 +26078,11 @@ PHP_METHOD(php_wxImage, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Os|l' (&stream6, php_wxInputStream_entry, &mimetype6, &mimetype_len6, &index6)\n");
+		php_printf("Parsing parameters with 'os|l' (&stream6, &mimetype6, &mimetype_len6, &index6)\n");
 		#endif
 
-		char parse_parameters_string[] = "Os|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream6, php_wxInputStream_entry, &mimetype6, &mimetype_len6, &index6 ) == SUCCESS)
+		char parse_parameters_string[] = "os|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream6, &mimetype6, &mimetype_len6, &index6 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream6) == IS_OBJECT)
@@ -26090,7 +26090,7 @@ PHP_METHOD(php_wxImage, __construct)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream6 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream6 TSRMLS_CC))->native_object;
 					object_pointer6_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer6_0 )
+					if (!object_pointer6_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload7;
 					}
@@ -28029,11 +28029,11 @@ PHP_METHOD(php_wxImage, SaveFile)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Ol' (&stream0, php_wxOutputStream_entry, &type0)\n");
+		php_printf("Parsing parameters with 'ol' (&stream0, &type0)\n");
 		#endif
 
-		char parse_parameters_string[] = "Ol";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxOutputStream_entry, &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "ol";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, &type0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -28041,7 +28041,7 @@ PHP_METHOD(php_wxImage, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxOutputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxOutputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxOutputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
@@ -28097,11 +28097,11 @@ PHP_METHOD(php_wxImage, SaveFile)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Os' (&stream3, php_wxOutputStream_entry, &mimetype3, &mimetype_len3)\n");
+		php_printf("Parsing parameters with 'os' (&stream3, &mimetype3, &mimetype_len3)\n");
 		#endif
 
-		char parse_parameters_string[] = "Os";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream3, php_wxOutputStream_entry, &mimetype3, &mimetype_len3 ) == SUCCESS)
+		char parse_parameters_string[] = "os";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream3, &mimetype3, &mimetype_len3 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream3) == IS_OBJECT)
@@ -28109,7 +28109,7 @@ PHP_METHOD(php_wxImage, SaveFile)
 					wxphp_object_type argument_type = ((zo_wxOutputStream*) zend_object_store_get_object(stream3 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxOutputStream*) zend_object_store_get_object(stream3 TSRMLS_CC))->native_object;
 					object_pointer3_0 = (wxOutputStream*) argument_native_object;
-					if (!object_pointer3_0 )
+					if (!object_pointer3_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload4;
 					}
@@ -29758,11 +29758,11 @@ PHP_METHOD(php_wxImage, LoadFile)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Os|l' (&stream0, php_wxInputStream_entry, &mimetype0, &mimetype_len0, &index0)\n");
+		php_printf("Parsing parameters with 'os|l' (&stream0, &mimetype0, &mimetype_len0, &index0)\n");
 		#endif
 
-		char parse_parameters_string[] = "Os|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxInputStream_entry, &mimetype0, &mimetype_len0, &index0 ) == SUCCESS)
+		char parse_parameters_string[] = "os|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, &mimetype0, &mimetype_len0, &index0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -29770,7 +29770,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
@@ -29826,11 +29826,11 @@ PHP_METHOD(php_wxImage, LoadFile)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|ll' (&stream3, php_wxInputStream_entry, &type3, &index3)\n");
+		php_printf("Parsing parameters with 'o|ll' (&stream3, &type3, &index3)\n");
 		#endif
 
-		char parse_parameters_string[] = "O|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream3, php_wxInputStream_entry, &type3, &index3 ) == SUCCESS)
+		char parse_parameters_string[] = "o|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream3, &type3, &index3 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream3) == IS_OBJECT)
@@ -29838,7 +29838,7 @@ PHP_METHOD(php_wxImage, LoadFile)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream3 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream3 TSRMLS_CC))->native_object;
 					object_pointer3_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer3_0 )
+					if (!object_pointer3_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream' could not be retreived correctly.");
 					}
@@ -32296,11 +32296,11 @@ PHP_METHOD(php_wxImage, GetImageCount)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|l' (&stream0, php_wxInputStream_entry, &type0)\n");
+		php_printf("Parsing parameters with 'o|l' (&stream0, &type0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxInputStream_entry, &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "o|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, &type0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -32308,7 +32308,7 @@ PHP_METHOD(php_wxImage, GetImageCount)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
@@ -35223,11 +35223,11 @@ PHP_METHOD(php_wxImage, CanRead)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&stream0, php_wxInputStream_entry)\n");
+		php_printf("Parsing parameters with 'o' (&stream0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0, php_wxInputStream_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream0) == IS_OBJECT)
@@ -35235,7 +35235,7 @@ PHP_METHOD(php_wxImage, CanRead)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						goto overload1;
 					}
@@ -37435,11 +37435,11 @@ PHP_METHOD(php_wxImageList, Draw)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'lOll|lb' (&index0, &dc0, php_wxDC_entry, &x0, &y0, &flags0, &solidBackground0)\n");
+		php_printf("Parsing parameters with 'loll|lb' (&index0, &dc0, &x0, &y0, &flags0, &solidBackground0)\n");
 		#endif
 
-		char parse_parameters_string[] = "lOll|lb";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &dc0, php_wxDC_entry, &x0, &y0, &flags0, &solidBackground0 ) == SUCCESS)
+		char parse_parameters_string[] = "loll|lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0, &dc0, &x0, &y0, &flags0, &solidBackground0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -37447,7 +37447,7 @@ PHP_METHOD(php_wxImageList, Draw)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}

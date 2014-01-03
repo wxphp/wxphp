@@ -9950,11 +9950,11 @@ PHP_METHOD(php_wxGridColumnHeaderRendererDefault, DrawBorder)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OOO' (&grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'OoO' (&grid0, php_wxGrid_entry, &dc0, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "OoO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT)
@@ -9979,7 +9979,7 @@ PHP_METHOD(php_wxGridColumnHeaderRendererDefault, DrawBorder)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -10361,11 +10361,11 @@ PHP_METHOD(php_wxGridCornerHeaderRendererDefault, DrawBorder)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OOO' (&grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'OoO' (&grid0, php_wxGrid_entry, &dc0, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "OoO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT)
@@ -10390,7 +10390,7 @@ PHP_METHOD(php_wxGridCornerHeaderRendererDefault, DrawBorder)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -10629,11 +10629,11 @@ PHP_METHOD(php_wxGridHeaderLabelsRenderer, DrawLabel)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OOsOlll' (&grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &value0, &value_len0, &rect0, php_wxRect_entry, &horizAlign0, &vertAlign0, &textOrientation0)\n");
+		php_printf("Parsing parameters with 'OosOlll' (&grid0, php_wxGrid_entry, &dc0, &value0, &value_len0, &rect0, php_wxRect_entry, &horizAlign0, &vertAlign0, &textOrientation0)\n");
 		#endif
 
-		char parse_parameters_string[] = "OOsOlll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &value0, &value_len0, &rect0, php_wxRect_entry, &horizAlign0, &vertAlign0, &textOrientation0 ) == SUCCESS)
+		char parse_parameters_string[] = "OosOlll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, &value0, &value_len0, &rect0, php_wxRect_entry, &horizAlign0, &vertAlign0, &textOrientation0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT)
@@ -10658,7 +10658,7 @@ PHP_METHOD(php_wxGridHeaderLabelsRenderer, DrawLabel)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -10975,11 +10975,11 @@ PHP_METHOD(php_wxGridRowHeaderRendererDefault, DrawBorder)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OOO' (&grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'OoO' (&grid0, php_wxGrid_entry, &dc0, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, php_wxDC_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "OoO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, php_wxGrid_entry, &dc0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT)
@@ -11004,7 +11004,7 @@ PHP_METHOD(php_wxGridRowHeaderRendererDefault, DrawBorder)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}

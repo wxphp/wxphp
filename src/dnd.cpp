@@ -610,11 +610,11 @@ PHP_METHOD(php_wxClipboard, GetData)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&data0, php_wxDataObject_entry)\n");
+		php_printf("Parsing parameters with 'o' (&data0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0, php_wxDataObject_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(data0) == IS_OBJECT)
@@ -622,7 +622,7 @@ PHP_METHOD(php_wxClipboard, GetData)
 					wxphp_object_type argument_type = ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDataObject*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDataObject*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDATAOBJECT_TYPE && argument_type != PHP_WXDATAOBJECTCOMPOSITE_TYPE && argument_type != PHP_WXDATAOBJECTSIMPLE_TYPE && argument_type != PHP_WXTEXTDATAOBJECT_TYPE && argument_type != PHP_WXURLDATAOBJECT_TYPE && argument_type != PHP_WXFILEDATAOBJECT_TYPE && argument_type != PHP_WXBITMAPDATAOBJECT_TYPE && argument_type != PHP_WXCUSTOMDATAOBJECT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}

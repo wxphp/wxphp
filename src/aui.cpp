@@ -6727,11 +6727,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozO' (&dc0, &wnd0, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -6739,7 +6739,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -6889,11 +6889,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozOO' (&dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozOO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -6901,7 +6901,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -7069,11 +7069,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozOO' (&dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozOO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -7081,7 +7081,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -7249,11 +7249,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozOO' (&dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozOO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -7261,7 +7261,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -7427,11 +7427,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozO' (&dc0, &wnd0, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -7439,7 +7439,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -7589,11 +7589,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzOO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozOO' (&dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzOO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozOO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -7601,7 +7601,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -7768,11 +7768,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzOl' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry, &state0)\n");
+		php_printf("Parsing parameters with 'ozOl' (&dc0, &wnd0, &rect0, php_wxRect_entry, &state0)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzOl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry, &state0 ) == SUCCESS)
+		char parse_parameters_string[] = "ozOl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &rect0, php_wxRect_entry, &state0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -7780,7 +7780,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -7928,11 +7928,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry)\n");
+		php_printf("Parsing parameters with 'ozO' (&dc0, &wnd0, &rect0, php_wxRect_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -7940,7 +7940,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -8390,11 +8390,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry)\n");
+		php_printf("Parsing parameters with 'ozO' (&dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -8402,7 +8402,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -8654,11 +8654,11 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OzO' (&dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry)\n");
+		php_printf("Parsing parameters with 'ozO' (&dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry)\n");
 		#endif
 
-		char parse_parameters_string[] = "OzO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &wnd0, &item0, php_wxAuiToolBarItem_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ozO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &wnd0, &item0, php_wxAuiToolBarItem_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -8666,7 +8666,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
