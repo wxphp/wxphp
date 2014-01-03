@@ -421,11 +421,11 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sOOlsOs' (&parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|sOOlsos' (&parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|sOOlsOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|sOOlsos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &fileName0, &fileName_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &szBackend0, &szBackend_len0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -484,7 +484,7 @@ PHP_METHOD(php_wxMediaCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_7 )
+					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -2021,11 +2021,11 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sOOlsOs' (&parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, php_wxValidator_entry, &name1, &name_len1)\n");
+		php_printf("Parsing parameters with 'zl|sOOlsos' (&parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|sOOlsOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, php_wxValidator_entry, &name1, &name_len1 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|sOOlsos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &fileName1, &fileName_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &szBackend1, &szBackend_len1, &validator1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent1) == IS_OBJECT)
@@ -2084,7 +2084,7 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator1 TSRMLS_CC))->native_object;
 					object_pointer1_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer1_7 )
+					if (!object_pointer1_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}

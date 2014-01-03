@@ -1812,11 +1812,11 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&dc0, php_wxDC_entry)\n");
+		php_printf("Parsing parameters with 'o' (&dc0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -1824,7 +1824,7 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -24947,11 +24947,11 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Ob' (&dc0, php_wxDC_entry, &mirror0)\n");
+		php_printf("Parsing parameters with 'ob' (&dc0, &mirror0)\n");
 		#endif
 
-		char parse_parameters_string[] = "Ob";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry, &mirror0 ) == SUCCESS)
+		char parse_parameters_string[] = "ob";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, &mirror0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -24959,7 +24959,7 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}

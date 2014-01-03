@@ -12037,11 +12037,11 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
+		php_printf("Parsing parameters with 'o' (&event0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT)
@@ -12049,7 +12049,7 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 					wxphp_object_type argument_type = ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxEvent*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXEVENT_TYPE && argument_type != PHP_WXMENUEVENT_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXCOMMANDEVENT_TYPE && argument_type != PHP_WXNOTIFYEVENT_TYPE && argument_type != PHP_WXTREEEVENT_TYPE && argument_type != PHP_WXBOOKCTRLEVENT_TYPE && argument_type != PHP_WXAUINOTEBOOKEVENT_TYPE && argument_type != PHP_WXAUITOOLBAREVENT_TYPE && argument_type != PHP_WXLISTEVENT_TYPE && argument_type != PHP_WXSPINEVENT_TYPE && argument_type != PHP_WXSPLITTEREVENT_TYPE && argument_type != PHP_WXSPINDOUBLEEVENT_TYPE && argument_type != PHP_WXGRIDSIZEEVENT_TYPE && argument_type != PHP_WXWIZARDEVENT_TYPE && argument_type != PHP_WXGRIDEVENT_TYPE && argument_type != PHP_WXGRIDRANGESELECTEVENT_TYPE && argument_type != PHP_WXDATAVIEWEVENT_TYPE && argument_type != PHP_WXHEADERCTRLEVENT_TYPE && argument_type != PHP_WXRIBBONBAREVENT_TYPE && argument_type != PHP_WXWEBVIEWEVENT_TYPE && argument_type != PHP_WXMEDIAEVENT_TYPE && argument_type != PHP_WXSTYLEDTEXTEVENT_TYPE && argument_type != PHP_WXCHILDFOCUSEVENT_TYPE && argument_type != PHP_WXHTMLCELLEVENT_TYPE && argument_type != PHP_WXHTMLLINKEVENT_TYPE && argument_type != PHP_WXHYPERLINKEVENT_TYPE && argument_type != PHP_WXCOLOURPICKEREVENT_TYPE && argument_type != PHP_WXFONTPICKEREVENT_TYPE && argument_type != PHP_WXSCROLLEVENT_TYPE && argument_type != PHP_WXWINDOWMODALDIALOGEVENT_TYPE && argument_type != PHP_WXDATEEVENT_TYPE && argument_type != PHP_WXCALENDAREVENT_TYPE && argument_type != PHP_WXWINDOWCREATEEVENT_TYPE && argument_type != PHP_WXWINDOWDESTROYEVENT_TYPE && argument_type != PHP_WXUPDATEUIEVENT_TYPE && argument_type != PHP_WXHELPEVENT_TYPE && argument_type != PHP_WXGRIDEDITORCREATEDEVENT_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANEEVENT_TYPE && argument_type != PHP_WXCLIPBOARDTEXTEVENT_TYPE && argument_type != PHP_WXFILECTRLEVENT_TYPE && argument_type != PHP_WXSASHEVENT_TYPE && argument_type != PHP_WXFILEDIRPICKEREVENT_TYPE && argument_type != PHP_WXCONTEXTMENUEVENT_TYPE && argument_type != PHP_WXRIBBONBUTTONBAREVENT_TYPE && argument_type != PHP_WXRIBBONGALLERYEVENT_TYPE && argument_type != PHP_WXCLOSEEVENT_TYPE && argument_type != PHP_WXACTIVATEEVENT_TYPE && argument_type != PHP_WXAUIMANAGEREVENT_TYPE && argument_type != PHP_WXSIZEEVENT_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE && argument_type != PHP_WXMOVEEVENT_TYPE && argument_type != PHP_WXTIMEREVENT_TYPE && argument_type != PHP_WXTHREADEVENT_TYPE && argument_type != PHP_WXSCROLLWINEVENT_TYPE && argument_type != PHP_WXSYSCOLOURCHANGEDEVENT_TYPE && argument_type != PHP_WXPROCESSEVENT_TYPE && argument_type != PHP_WXERASEEVENT_TYPE && argument_type != PHP_WXSETCURSOREVENT_TYPE && argument_type != PHP_WXIDLEEVENT_TYPE && argument_type != PHP_WXPAINTEVENT_TYPE && argument_type != PHP_WXPALETTECHANGEDEVENT_TYPE && argument_type != PHP_WXINITDIALOGEVENT_TYPE && argument_type != PHP_WXMAXIMIZEEVENT_TYPE && argument_type != PHP_WXNAVIGATIONKEYEVENT_TYPE && argument_type != PHP_WXFOCUSEVENT_TYPE && argument_type != PHP_WXFILESYSTEMWATCHEREVENT_TYPE && argument_type != PHP_WXDISPLAYCHANGEDEVENT_TYPE && argument_type != PHP_WXCALCULATELAYOUTEVENT_TYPE && argument_type != PHP_WXQUERYLAYOUTINFOEVENT_TYPE && argument_type != PHP_WXTASKBARICONEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
@@ -15833,11 +15833,11 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
+		php_printf("Parsing parameters with 'o' (&event0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT)
@@ -15845,7 +15845,7 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 					wxphp_object_type argument_type = ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxEvent*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXEVENT_TYPE && argument_type != PHP_WXMENUEVENT_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXCOMMANDEVENT_TYPE && argument_type != PHP_WXNOTIFYEVENT_TYPE && argument_type != PHP_WXTREEEVENT_TYPE && argument_type != PHP_WXBOOKCTRLEVENT_TYPE && argument_type != PHP_WXAUINOTEBOOKEVENT_TYPE && argument_type != PHP_WXAUITOOLBAREVENT_TYPE && argument_type != PHP_WXLISTEVENT_TYPE && argument_type != PHP_WXSPINEVENT_TYPE && argument_type != PHP_WXSPLITTEREVENT_TYPE && argument_type != PHP_WXSPINDOUBLEEVENT_TYPE && argument_type != PHP_WXGRIDSIZEEVENT_TYPE && argument_type != PHP_WXWIZARDEVENT_TYPE && argument_type != PHP_WXGRIDEVENT_TYPE && argument_type != PHP_WXGRIDRANGESELECTEVENT_TYPE && argument_type != PHP_WXDATAVIEWEVENT_TYPE && argument_type != PHP_WXHEADERCTRLEVENT_TYPE && argument_type != PHP_WXRIBBONBAREVENT_TYPE && argument_type != PHP_WXWEBVIEWEVENT_TYPE && argument_type != PHP_WXMEDIAEVENT_TYPE && argument_type != PHP_WXSTYLEDTEXTEVENT_TYPE && argument_type != PHP_WXCHILDFOCUSEVENT_TYPE && argument_type != PHP_WXHTMLCELLEVENT_TYPE && argument_type != PHP_WXHTMLLINKEVENT_TYPE && argument_type != PHP_WXHYPERLINKEVENT_TYPE && argument_type != PHP_WXCOLOURPICKEREVENT_TYPE && argument_type != PHP_WXFONTPICKEREVENT_TYPE && argument_type != PHP_WXSCROLLEVENT_TYPE && argument_type != PHP_WXWINDOWMODALDIALOGEVENT_TYPE && argument_type != PHP_WXDATEEVENT_TYPE && argument_type != PHP_WXCALENDAREVENT_TYPE && argument_type != PHP_WXWINDOWCREATEEVENT_TYPE && argument_type != PHP_WXWINDOWDESTROYEVENT_TYPE && argument_type != PHP_WXUPDATEUIEVENT_TYPE && argument_type != PHP_WXHELPEVENT_TYPE && argument_type != PHP_WXGRIDEDITORCREATEDEVENT_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANEEVENT_TYPE && argument_type != PHP_WXCLIPBOARDTEXTEVENT_TYPE && argument_type != PHP_WXFILECTRLEVENT_TYPE && argument_type != PHP_WXSASHEVENT_TYPE && argument_type != PHP_WXFILEDIRPICKEREVENT_TYPE && argument_type != PHP_WXCONTEXTMENUEVENT_TYPE && argument_type != PHP_WXRIBBONBUTTONBAREVENT_TYPE && argument_type != PHP_WXRIBBONGALLERYEVENT_TYPE && argument_type != PHP_WXCLOSEEVENT_TYPE && argument_type != PHP_WXACTIVATEEVENT_TYPE && argument_type != PHP_WXAUIMANAGEREVENT_TYPE && argument_type != PHP_WXSIZEEVENT_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE && argument_type != PHP_WXMOVEEVENT_TYPE && argument_type != PHP_WXTIMEREVENT_TYPE && argument_type != PHP_WXTHREADEVENT_TYPE && argument_type != PHP_WXSCROLLWINEVENT_TYPE && argument_type != PHP_WXSYSCOLOURCHANGEDEVENT_TYPE && argument_type != PHP_WXPROCESSEVENT_TYPE && argument_type != PHP_WXERASEEVENT_TYPE && argument_type != PHP_WXSETCURSOREVENT_TYPE && argument_type != PHP_WXIDLEEVENT_TYPE && argument_type != PHP_WXPAINTEVENT_TYPE && argument_type != PHP_WXPALETTECHANGEDEVENT_TYPE && argument_type != PHP_WXINITDIALOGEVENT_TYPE && argument_type != PHP_WXMAXIMIZEEVENT_TYPE && argument_type != PHP_WXNAVIGATIONKEYEVENT_TYPE && argument_type != PHP_WXFOCUSEVENT_TYPE && argument_type != PHP_WXFILESYSTEMWATCHEREVENT_TYPE && argument_type != PHP_WXDISPLAYCHANGEDEVENT_TYPE && argument_type != PHP_WXCALCULATELAYOUTEVENT_TYPE && argument_type != PHP_WXQUERYLAYOUTINFOEVENT_TYPE && argument_type != PHP_WXTASKBARICONEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
@@ -16478,11 +16478,11 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
+		php_printf("Parsing parameters with 'o' (&event0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT)
@@ -16490,7 +16490,7 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 					wxphp_object_type argument_type = ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxEvent*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXEVENT_TYPE && argument_type != PHP_WXMENUEVENT_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXCOMMANDEVENT_TYPE && argument_type != PHP_WXNOTIFYEVENT_TYPE && argument_type != PHP_WXTREEEVENT_TYPE && argument_type != PHP_WXBOOKCTRLEVENT_TYPE && argument_type != PHP_WXAUINOTEBOOKEVENT_TYPE && argument_type != PHP_WXAUITOOLBAREVENT_TYPE && argument_type != PHP_WXLISTEVENT_TYPE && argument_type != PHP_WXSPINEVENT_TYPE && argument_type != PHP_WXSPLITTEREVENT_TYPE && argument_type != PHP_WXSPINDOUBLEEVENT_TYPE && argument_type != PHP_WXGRIDSIZEEVENT_TYPE && argument_type != PHP_WXWIZARDEVENT_TYPE && argument_type != PHP_WXGRIDEVENT_TYPE && argument_type != PHP_WXGRIDRANGESELECTEVENT_TYPE && argument_type != PHP_WXDATAVIEWEVENT_TYPE && argument_type != PHP_WXHEADERCTRLEVENT_TYPE && argument_type != PHP_WXRIBBONBAREVENT_TYPE && argument_type != PHP_WXWEBVIEWEVENT_TYPE && argument_type != PHP_WXMEDIAEVENT_TYPE && argument_type != PHP_WXSTYLEDTEXTEVENT_TYPE && argument_type != PHP_WXCHILDFOCUSEVENT_TYPE && argument_type != PHP_WXHTMLCELLEVENT_TYPE && argument_type != PHP_WXHTMLLINKEVENT_TYPE && argument_type != PHP_WXHYPERLINKEVENT_TYPE && argument_type != PHP_WXCOLOURPICKEREVENT_TYPE && argument_type != PHP_WXFONTPICKEREVENT_TYPE && argument_type != PHP_WXSCROLLEVENT_TYPE && argument_type != PHP_WXWINDOWMODALDIALOGEVENT_TYPE && argument_type != PHP_WXDATEEVENT_TYPE && argument_type != PHP_WXCALENDAREVENT_TYPE && argument_type != PHP_WXWINDOWCREATEEVENT_TYPE && argument_type != PHP_WXWINDOWDESTROYEVENT_TYPE && argument_type != PHP_WXUPDATEUIEVENT_TYPE && argument_type != PHP_WXHELPEVENT_TYPE && argument_type != PHP_WXGRIDEDITORCREATEDEVENT_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANEEVENT_TYPE && argument_type != PHP_WXCLIPBOARDTEXTEVENT_TYPE && argument_type != PHP_WXFILECTRLEVENT_TYPE && argument_type != PHP_WXSASHEVENT_TYPE && argument_type != PHP_WXFILEDIRPICKEREVENT_TYPE && argument_type != PHP_WXCONTEXTMENUEVENT_TYPE && argument_type != PHP_WXRIBBONBUTTONBAREVENT_TYPE && argument_type != PHP_WXRIBBONGALLERYEVENT_TYPE && argument_type != PHP_WXCLOSEEVENT_TYPE && argument_type != PHP_WXACTIVATEEVENT_TYPE && argument_type != PHP_WXAUIMANAGEREVENT_TYPE && argument_type != PHP_WXSIZEEVENT_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE && argument_type != PHP_WXMOVEEVENT_TYPE && argument_type != PHP_WXTIMEREVENT_TYPE && argument_type != PHP_WXTHREADEVENT_TYPE && argument_type != PHP_WXSCROLLWINEVENT_TYPE && argument_type != PHP_WXSYSCOLOURCHANGEDEVENT_TYPE && argument_type != PHP_WXPROCESSEVENT_TYPE && argument_type != PHP_WXERASEEVENT_TYPE && argument_type != PHP_WXSETCURSOREVENT_TYPE && argument_type != PHP_WXIDLEEVENT_TYPE && argument_type != PHP_WXPAINTEVENT_TYPE && argument_type != PHP_WXPALETTECHANGEDEVENT_TYPE && argument_type != PHP_WXINITDIALOGEVENT_TYPE && argument_type != PHP_WXMAXIMIZEEVENT_TYPE && argument_type != PHP_WXNAVIGATIONKEYEVENT_TYPE && argument_type != PHP_WXFOCUSEVENT_TYPE && argument_type != PHP_WXFILESYSTEMWATCHEREVENT_TYPE && argument_type != PHP_WXDISPLAYCHANGEDEVENT_TYPE && argument_type != PHP_WXCALCULATELAYOUTEVENT_TYPE && argument_type != PHP_WXQUERYLAYOUTINFOEVENT_TYPE && argument_type != PHP_WXTASKBARICONEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
@@ -19034,11 +19034,11 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
+		php_printf("Parsing parameters with 'o' (&event0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT)
@@ -19046,7 +19046,7 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 					wxphp_object_type argument_type = ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxEvent*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXEVENT_TYPE && argument_type != PHP_WXMENUEVENT_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXCOMMANDEVENT_TYPE && argument_type != PHP_WXNOTIFYEVENT_TYPE && argument_type != PHP_WXTREEEVENT_TYPE && argument_type != PHP_WXBOOKCTRLEVENT_TYPE && argument_type != PHP_WXAUINOTEBOOKEVENT_TYPE && argument_type != PHP_WXAUITOOLBAREVENT_TYPE && argument_type != PHP_WXLISTEVENT_TYPE && argument_type != PHP_WXSPINEVENT_TYPE && argument_type != PHP_WXSPLITTEREVENT_TYPE && argument_type != PHP_WXSPINDOUBLEEVENT_TYPE && argument_type != PHP_WXGRIDSIZEEVENT_TYPE && argument_type != PHP_WXWIZARDEVENT_TYPE && argument_type != PHP_WXGRIDEVENT_TYPE && argument_type != PHP_WXGRIDRANGESELECTEVENT_TYPE && argument_type != PHP_WXDATAVIEWEVENT_TYPE && argument_type != PHP_WXHEADERCTRLEVENT_TYPE && argument_type != PHP_WXRIBBONBAREVENT_TYPE && argument_type != PHP_WXWEBVIEWEVENT_TYPE && argument_type != PHP_WXMEDIAEVENT_TYPE && argument_type != PHP_WXSTYLEDTEXTEVENT_TYPE && argument_type != PHP_WXCHILDFOCUSEVENT_TYPE && argument_type != PHP_WXHTMLCELLEVENT_TYPE && argument_type != PHP_WXHTMLLINKEVENT_TYPE && argument_type != PHP_WXHYPERLINKEVENT_TYPE && argument_type != PHP_WXCOLOURPICKEREVENT_TYPE && argument_type != PHP_WXFONTPICKEREVENT_TYPE && argument_type != PHP_WXSCROLLEVENT_TYPE && argument_type != PHP_WXWINDOWMODALDIALOGEVENT_TYPE && argument_type != PHP_WXDATEEVENT_TYPE && argument_type != PHP_WXCALENDAREVENT_TYPE && argument_type != PHP_WXWINDOWCREATEEVENT_TYPE && argument_type != PHP_WXWINDOWDESTROYEVENT_TYPE && argument_type != PHP_WXUPDATEUIEVENT_TYPE && argument_type != PHP_WXHELPEVENT_TYPE && argument_type != PHP_WXGRIDEDITORCREATEDEVENT_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANEEVENT_TYPE && argument_type != PHP_WXCLIPBOARDTEXTEVENT_TYPE && argument_type != PHP_WXFILECTRLEVENT_TYPE && argument_type != PHP_WXSASHEVENT_TYPE && argument_type != PHP_WXFILEDIRPICKEREVENT_TYPE && argument_type != PHP_WXCONTEXTMENUEVENT_TYPE && argument_type != PHP_WXRIBBONBUTTONBAREVENT_TYPE && argument_type != PHP_WXRIBBONGALLERYEVENT_TYPE && argument_type != PHP_WXCLOSEEVENT_TYPE && argument_type != PHP_WXACTIVATEEVENT_TYPE && argument_type != PHP_WXAUIMANAGEREVENT_TYPE && argument_type != PHP_WXSIZEEVENT_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE && argument_type != PHP_WXMOVEEVENT_TYPE && argument_type != PHP_WXTIMEREVENT_TYPE && argument_type != PHP_WXTHREADEVENT_TYPE && argument_type != PHP_WXSCROLLWINEVENT_TYPE && argument_type != PHP_WXSYSCOLOURCHANGEDEVENT_TYPE && argument_type != PHP_WXPROCESSEVENT_TYPE && argument_type != PHP_WXERASEEVENT_TYPE && argument_type != PHP_WXSETCURSOREVENT_TYPE && argument_type != PHP_WXIDLEEVENT_TYPE && argument_type != PHP_WXPAINTEVENT_TYPE && argument_type != PHP_WXPALETTECHANGEDEVENT_TYPE && argument_type != PHP_WXINITDIALOGEVENT_TYPE && argument_type != PHP_WXMAXIMIZEEVENT_TYPE && argument_type != PHP_WXNAVIGATIONKEYEVENT_TYPE && argument_type != PHP_WXFOCUSEVENT_TYPE && argument_type != PHP_WXFILESYSTEMWATCHEREVENT_TYPE && argument_type != PHP_WXDISPLAYCHANGEDEVENT_TYPE && argument_type != PHP_WXCALCULATELAYOUTEVENT_TYPE && argument_type != PHP_WXQUERYLAYOUTINFOEVENT_TYPE && argument_type != PHP_WXTASKBARICONEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
@@ -30797,11 +30797,11 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&dc0, php_wxDC_entry)\n");
+		php_printf("Parsing parameters with 'o' (&dc0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT)
@@ -30809,7 +30809,7 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxDC*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
@@ -46325,11 +46325,11 @@ PHP_METHOD(php_wxGridEvent, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'llz|llllbO' (&id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1, php_wxKeyboardState_entry)\n");
+		php_printf("Parsing parameters with 'llz|llllbo' (&id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1)\n");
 		#endif
 
-		char parse_parameters_string[] = "llz|llllbO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llz|llllbo";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(obj1) == IS_OBJECT)
@@ -46354,7 +46354,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 					wxphp_object_type argument_type = ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->native_object;
 					object_pointer1_8 = (wxKeyboardState*) argument_native_object;
-					if (!object_pointer1_8 )
+					if (!object_pointer1_8 || (argument_type != PHP_WXKEYBOARDSTATE_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXMOUSESTATE_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'kbd' could not be retreived correctly.");
 					}
@@ -47234,11 +47234,11 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'llz|lllO' (&id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1, php_wxKeyboardState_entry)\n");
+		php_printf("Parsing parameters with 'llz|lllo' (&id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1)\n");
 		#endif
 
-		char parse_parameters_string[] = "llz|lllO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llz|lllo";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(obj1) == IS_OBJECT)
@@ -47263,7 +47263,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 					wxphp_object_type argument_type = ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->native_object;
 					object_pointer1_6 = (wxKeyboardState*) argument_native_object;
-					if (!object_pointer1_6 )
+					if (!object_pointer1_6 || (argument_type != PHP_WXKEYBOARDSTATE_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXMOUSESTATE_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'kbd' could not be retreived correctly.");
 					}
@@ -48614,11 +48614,11 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'llzOO|bO' (&id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1, php_wxKeyboardState_entry)\n");
+		php_printf("Parsing parameters with 'llzOO|bo' (&id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1)\n");
 		#endif
 
-		char parse_parameters_string[] = "llzOO|bO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llzOO|bo";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(obj1) == IS_OBJECT)
@@ -48677,7 +48677,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 					wxphp_object_type argument_type = ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxKeyboardState*) zend_object_store_get_object(kbd1 TSRMLS_CC))->native_object;
 					object_pointer1_6 = (wxKeyboardState*) argument_native_object;
-					if (!object_pointer1_6 )
+					if (!object_pointer1_6 || (argument_type != PHP_WXKEYBOARDSTATE_TYPE && argument_type != PHP_WXKEYEVENT_TYPE && argument_type != PHP_WXMOUSESTATE_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'kbd' could not be retreived correctly.");
 					}
@@ -56442,11 +56442,11 @@ PHP_METHOD(php_wxMouseState, SetState)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&state0, php_wxMouseState_entry)\n");
+		php_printf("Parsing parameters with 'o' (&state0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &state0, php_wxMouseState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &state0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(state0) == IS_OBJECT)
@@ -56454,7 +56454,7 @@ PHP_METHOD(php_wxMouseState, SetState)
 					wxphp_object_type argument_type = ((zo_wxMouseState*) zend_object_store_get_object(state0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxMouseState*) zend_object_store_get_object(state0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxMouseState*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXMOUSESTATE_TYPE && argument_type != PHP_WXMOUSEEVENT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'state' could not be retreived correctly.");
 					}

@@ -608,8 +608,26 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					}
 					else
 					{
-						$zend_parse_parameters_string .= "O";
-						$zend_parse_parameters .= "php_{$argument_plain_type}_entry" . ", ";
+                        $typeVerifier = derivationsOfClass($argument_plain_type);
+                        
+                        if(count($typeVerifier) <= 0)
+                        {
+                            $zend_parse_parameters_string .= "O";
+                            $zend_parse_parameters .= "php_{$argument_plain_type}_entry" . ", ";
+                        }
+                        else
+                        {
+                            $zend_parse_parameters_string .= "o";
+                            
+                            $typeVerifierStr[] = "argument_type != PHP_".strtoupper($argument_plain_type)."_TYPE";
+                            
+                            foreach($typeVerifier as $argument_parent_class => $v)
+                            {
+                                $typeVerifierStr[] = "argument_type != PHP_".strtoupper($argument_parent_class)."_TYPE";
+                            }
+
+                            $typeVerifierStr = trim(join(" && ", $typeVerifierStr));
+                        }
 					}
 			
 					$object_retrieve_code .= "\t\t\tif(arguments_received >= ".($parameter_index+1)."){\n";

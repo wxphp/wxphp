@@ -3195,11 +3195,11 @@ PHP_METHOD(php_wxOutputStream, Write)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&stream_in0, php_wxInputStream_entry)\n");
+		php_printf("Parsing parameters with 'o' (&stream_in0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_in0, php_wxInputStream_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_in0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream_in0) == IS_OBJECT)
@@ -3207,7 +3207,7 @@ PHP_METHOD(php_wxOutputStream, Write)
 					wxphp_object_type argument_type = ((zo_wxInputStream*) zend_object_store_get_object(stream_in0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxInputStream*) zend_object_store_get_object(stream_in0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream_in' could not be retreived correctly.");
 					}
@@ -4508,11 +4508,11 @@ PHP_METHOD(php_wxInputStream, Read)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&stream_out0, php_wxOutputStream_entry)\n");
+		php_printf("Parsing parameters with 'o' (&stream_out0)\n");
 		#endif
 
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_out0, php_wxOutputStream_entry ) == SUCCESS)
+		char parse_parameters_string[] = "o";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream_out0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream_out0) == IS_OBJECT)
@@ -4520,7 +4520,7 @@ PHP_METHOD(php_wxInputStream, Read)
 					wxphp_object_type argument_type = ((zo_wxOutputStream*) zend_object_store_get_object(stream_out0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxOutputStream*) zend_object_store_get_object(stream_out0 TSRMLS_CC))->native_object;
 					object_pointer0_0 = (wxOutputStream*) argument_native_object;
-					if (!object_pointer0_0 )
+					if (!object_pointer0_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'stream_out' could not be retreived correctly.");
 					}

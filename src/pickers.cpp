@@ -180,11 +180,11 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|OOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|OOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -260,7 +260,7 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -710,11 +710,11 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|OOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|OOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &colour0, php_wxColour_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -790,7 +790,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -1037,11 +1037,11 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|lOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|lOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -1100,7 +1100,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -1321,11 +1321,11 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|lOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|lOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -1384,7 +1384,7 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -2067,11 +2067,11 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|sssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|sssOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|sssOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -2130,7 +2130,7 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_8 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_8 )
+					if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -2664,11 +2664,11 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|sssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|sssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|sssOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|sssOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &wildcard0, &wildcard_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -2727,7 +2727,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_8 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_8 )
+					if (!object_pointer0_8 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -3133,11 +3133,11 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|ssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|ssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|ssOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|ssOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -3196,7 +3196,7 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_7 )
+					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -3820,11 +3820,11 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|ssOOlOs' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|ssOOlos' (&parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|ssOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|ssOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &path0, &path_len0, &message0, &message_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -3883,7 +3883,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_7 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_7 )
+					if (!object_pointer0_7 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -4170,11 +4170,11 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|OOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|OOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -4250,7 +4250,7 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -4859,11 +4859,11 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|OOOlOs' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|OOOlos' (&parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|OOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|OOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &font0, php_wxFont_entry, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -4939,7 +4939,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -7096,11 +7096,11 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|lOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|lOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -7159,7 +7159,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}
@@ -7380,11 +7380,11 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zl|lOOlOs' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0)\n");
+		php_printf("Parsing parameters with 'zl|lOOlos' (&parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zl|lOOlOs";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, php_wxValidator_entry, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|lOOlos";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &dt0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &validator0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT)
@@ -7443,7 +7443,7 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 					wxphp_object_type argument_type = ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxValidator*) zend_object_store_get_object(validator0 TSRMLS_CC))->native_object;
 					object_pointer0_6 = (wxValidator*) argument_native_object;
-					if (!object_pointer0_6 )
+					if (!object_pointer0_6 || (argument_type != PHP_WXVALIDATOR_TYPE && argument_type != PHP_WXTEXTVALIDATOR_TYPE && argument_type != PHP_WXGENERICVALIDATOR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'validator' could not be retreived correctly.");
 					}

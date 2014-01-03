@@ -2672,11 +2672,11 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zO' (&canvas0, &dc0, php_wxDC_entry)\n");
+		php_printf("Parsing parameters with 'zo' (&canvas0, &dc0)\n");
 		#endif
 
-		char parse_parameters_string[] = "zO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &canvas0, &dc0, php_wxDC_entry ) == SUCCESS)
+		char parse_parameters_string[] = "zo";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &canvas0, &dc0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(canvas0) == IS_OBJECT)
@@ -2701,7 +2701,7 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
 					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
-					if (!object_pointer0_1 )
+					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
