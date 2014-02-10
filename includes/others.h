@@ -731,6 +731,7 @@ static zend_function_entry php_wxNonOwnedWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetWindowVariant, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxNonOwnedWindow, SetShape, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif
@@ -1547,6 +1548,7 @@ static zend_function_entry php_wxProgressDialog_functions[] = {
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetWindowVariant, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxNonOwnedWindow, SetShape, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, SetTitle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, Maximize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTopLevelWindow, GetTitle, NULL, ZEND_ACC_PUBLIC)
