@@ -2787,6 +2787,35 @@
 	"wxNonOwnedWindow":{
 		"_implements":[
 			"wxWindow"
+		],
+		"SetShape":[
+			{
+				"return_type":"bool",
+				"brief_description":"If the platform supports it, sets the shape of the window to that depicted by region.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxRegion&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"region"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
 		]
 	},
 	"wxWindow":{
@@ -177525,7 +177554,6 @@
 	},
 	"wxPageSetupDialog":{
 		"_implements":[
-			"wxDialog",
 			"wxObject"
 		],
 		"GetPageSetupData":[
@@ -178670,10 +178698,72 @@
 					null,
 					"NULL"
 				]
+			},
+			{
+				"return_type":"",
+				"brief_description":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWindow*",
+					"wxPrintData*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"parent",
+					"data"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"GetPrintData":[
+			{
+				"return_type":"wxPrintData&",
+				"brief_description":"Returns the print data associated with the print dialog.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
 			}
 		],
 		"_implements":[
-			"wxDialog"
+			"wxObject"
 		]
 	},
 	"wxPrintDialogData":{
