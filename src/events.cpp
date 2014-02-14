@@ -54859,7 +54859,14 @@ PHP_METHOD(php_wxMouseState, Aux1IsDown)
 				php_printf("Executing RETURN_BOOL(wxMouseState::Aux1IsDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->Aux1IsDown());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux1IsDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->Aux1IsDown());
+				}
 
 
 				return;
@@ -54960,7 +54967,14 @@ PHP_METHOD(php_wxMouseState, Aux2IsDown)
 				php_printf("Executing RETURN_BOOL(wxMouseState::Aux2IsDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->Aux2IsDown());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->Aux2IsDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->Aux2IsDown());
+				}
 
 
 				return;
@@ -55062,14 +55076,28 @@ PHP_METHOD(php_wxMouseState, GetPosition)
 				#endif
 
 				wxPoint value_to_return0;
-				value_to_return0 = ((wxMouseState_php*)native_object)->GetPosition();
-				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
-				object_init_ex(return_value, php_wxPoint_entry);
-				((wxPoint_php*)ptr)->phpObj = return_value;
-				((wxPoint_php*)ptr)->InitProperties();
-				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
-				zo0->native_object = (wxPoint_php*) ptr;
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					value_to_return0 = ((wxMouseEvent_php*)native_object)->GetPosition();
+					void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
+					memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+					object_init_ex(return_value, php_wxPoint_entry);
+					((wxPoint_php*)ptr)->phpObj = return_value;
+					((wxPoint_php*)ptr)->InitProperties();
+					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+					zo0->native_object = (wxPoint_php*) ptr;
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					value_to_return0 = ((wxMouseState_php*)native_object)->GetPosition();
+					void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
+					memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+					object_init_ex(return_value, php_wxPoint_entry);
+					((wxPoint_php*)ptr)->phpObj = return_value;
+					((wxPoint_php*)ptr)->InitProperties();
+					zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+					zo0->native_object = (wxPoint_php*) ptr;
+				}
 
 
 				return;
@@ -55170,7 +55198,14 @@ PHP_METHOD(php_wxMouseState, GetX)
 				php_printf("Executing RETURN_LONG(wxMouseState::GetX())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetX());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetX());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetX());
+				}
 
 
 				return;
@@ -55271,7 +55306,14 @@ PHP_METHOD(php_wxMouseState, GetY)
 				php_printf("Executing RETURN_LONG(wxMouseState::GetY())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetY());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetY());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetY());
+				}
 
 
 				return;
@@ -55372,7 +55414,14 @@ PHP_METHOD(php_wxMouseState, LeftIsDown)
 				php_printf("Executing RETURN_BOOL(wxMouseState::LeftIsDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->LeftIsDown());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->LeftIsDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->LeftIsDown());
+				}
 
 
 				return;
@@ -55473,7 +55522,14 @@ PHP_METHOD(php_wxMouseState, MiddleIsDown)
 				php_printf("Executing RETURN_BOOL(wxMouseState::MiddleIsDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->MiddleIsDown());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->MiddleIsDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->MiddleIsDown());
+				}
 
 
 				return;
@@ -55574,7 +55630,14 @@ PHP_METHOD(php_wxMouseState, RightIsDown)
 				php_printf("Executing RETURN_BOOL(wxMouseState::RightIsDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->RightIsDown());
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RightIsDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->RightIsDown());
+				}
 
 
 				return;
@@ -55679,7 +55742,14 @@ PHP_METHOD(php_wxMouseState, SetAux1Down)
 				php_printf("Executing wxMouseState::SetAux1Down(down0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetAux1Down(down0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetAux1Down(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetAux1Down(down0);
+				}
 
 
 				return;
@@ -55784,7 +55854,14 @@ PHP_METHOD(php_wxMouseState, SetAux2Down)
 				php_printf("Executing wxMouseState::SetAux2Down(down0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetAux2Down(down0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetAux2Down(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetAux2Down(down0);
+				}
 
 
 				return;
@@ -55889,7 +55966,14 @@ PHP_METHOD(php_wxMouseState, SetLeftDown)
 				php_printf("Executing wxMouseState::SetLeftDown(down0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetLeftDown(down0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetLeftDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetLeftDown(down0);
+				}
 
 
 				return;
@@ -55994,7 +56078,14 @@ PHP_METHOD(php_wxMouseState, SetMiddleDown)
 				php_printf("Executing wxMouseState::SetMiddleDown(down0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetMiddleDown(down0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetMiddleDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetMiddleDown(down0);
+				}
 
 
 				return;
@@ -56117,7 +56208,14 @@ PHP_METHOD(php_wxMouseState, SetPosition)
 				php_printf("Executing wxMouseState::SetPosition(*(wxPoint*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetPosition(*(wxPoint*) object_pointer0_0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetPosition(*(wxPoint*) object_pointer0_0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetPosition(*(wxPoint*) object_pointer0_0);
+				}
 
 
 				return;
@@ -56222,7 +56320,14 @@ PHP_METHOD(php_wxMouseState, SetRightDown)
 				php_printf("Executing wxMouseState::SetRightDown(down0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetRightDown(down0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetRightDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetRightDown(down0);
+				}
 
 
 				return;
@@ -56345,7 +56450,14 @@ PHP_METHOD(php_wxMouseState, SetState)
 				php_printf("Executing wxMouseState::SetState(*(wxMouseState*) object_pointer0_0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetState(*(wxMouseState*) object_pointer0_0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetState(*(wxMouseState*) object_pointer0_0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetState(*(wxMouseState*) object_pointer0_0);
+				}
 
 				references->AddReference(state0, "wxMouseState::SetState at call with 1 argument(s)");
 
@@ -56451,7 +56563,14 @@ PHP_METHOD(php_wxMouseState, SetX)
 				php_printf("Executing wxMouseState::SetX((wxCoord) x0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetX((wxCoord) x0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetX((wxCoord) x0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetX((wxCoord) x0);
+				}
 
 
 				return;
@@ -56556,7 +56675,14 @@ PHP_METHOD(php_wxMouseState, SetY)
 				php_printf("Executing wxMouseState::SetY((wxCoord) y0)\n\n");
 				#endif
 
-				((wxMouseState_php*)native_object)->SetY((wxCoord) y0);
+				if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetY((wxCoord) y0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetY((wxCoord) y0);
+				}
 
 
 				return;

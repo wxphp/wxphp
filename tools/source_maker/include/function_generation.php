@@ -1988,7 +1988,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 	$t = 4;
 	
 	//Skip derivations type checking if this class implements a constructor
-	if(!isset($defIni[$class_name][$class_name]))
+	if(!isset($defIni[$class_name][$class_name]) || methods_compatible($class_name))
 	{	
 		$derivations = derivationsOfClass($class_name);
 		
@@ -2017,7 +2017,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 		}
 		
 		//Skip derivations type checking code if this class implements a constructor
-		if(!isset($defIni[$class_name][$class_name]))
+		if(!isset($defIni[$class_name][$class_name]) || methods_compatible($class_name))
 		{
 			if($first_call)
 			{
@@ -2249,14 +2249,14 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 		}
 		
 		//Skip derivations type checking code if this class implements a constructor
-		if(!isset($defIni[$class_name][$class_name]))
+		if(!isset($defIni[$class_name][$class_name]) || methods_compatible($class_name))
 		{
 			$call_code .= tabs(4) . "}\n";
 		}
 	}
 	
 	//Skip derivations type checking code if this class implements a constructor
-	if(!isset($defIni[$class_name][$class_name]))
+	if(!isset($defIni[$class_name][$class_name]) || methods_compatible($class_name))
 	{
 		$return_called_overload .= tabs(5) . "else{zend_error(E_ERROR, \"The object type that called the method '$method_name' couldn't be determined.\");}\n";
 	}
@@ -2290,5 +2290,26 @@ function references_cast_code($class_name)
 	}
 	
 	return $code;
+}
+
+/**
+ * Checks if a class that has derivations has all method signatures 
+ * compatible with derived classes. This is needed because wxWidgets
+ * documentation is missing methods of derived classes which signature
+ * differs from parent class.
+ */
+function methods_compatible($class_name)
+{
+	static $classes = null;
+	
+	if($classes == null)
+	{
+		$classes = array("wxMouseState");
+	}
+	
+	if(in_array($class_name, $classes))
+		return true;
+		
+	return false;
 }
 ?>
