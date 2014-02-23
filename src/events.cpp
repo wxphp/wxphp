@@ -468,7 +468,22 @@ PHP_METHOD(php_wxKeyboardState, AltDown)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::AltDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->AltDown());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->AltDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->AltDown());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->AltDown());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->AltDown());
+				}
 
 
 				return;
@@ -577,7 +592,22 @@ PHP_METHOD(php_wxKeyboardState, CmdDown)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::CmdDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->CmdDown());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->CmdDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->CmdDown());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->CmdDown());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->CmdDown());
+				}
 
 
 				return;
@@ -686,7 +716,22 @@ PHP_METHOD(php_wxKeyboardState, ControlDown)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::ControlDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->ControlDown());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->ControlDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->ControlDown());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ControlDown());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->ControlDown());
+				}
 
 
 				return;
@@ -795,7 +840,22 @@ PHP_METHOD(php_wxKeyboardState, GetModifiers)
 				php_printf("Executing RETURN_LONG(wxKeyboardState::GetModifiers())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, ((wxKeyboardState_php*)native_object)->GetModifiers());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxKeyEvent_php*)native_object)->GetModifiers());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxMouseState_php*)native_object)->GetModifiers());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxMouseEvent_php*)native_object)->GetModifiers());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_LONG(return_value, ((wxKeyboardState_php*)native_object)->GetModifiers());
+				}
 
 
 				return;
@@ -904,7 +964,22 @@ PHP_METHOD(php_wxKeyboardState, HasModifiers)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::HasModifiers())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->HasModifiers());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->HasModifiers());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->HasModifiers());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->HasModifiers());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->HasModifiers());
+				}
 
 
 				return;
@@ -1013,7 +1088,18 @@ PHP_METHOD(php_wxKeyboardState, MetaDown)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::MetaDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->MetaDown());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->MetaDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->MetaDown());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->MetaDown());
+				}
 
 
 				return;
@@ -1122,7 +1208,22 @@ PHP_METHOD(php_wxKeyboardState, RawControlDown)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::RawControlDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->RawControlDown());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->RawControlDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->RawControlDown());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->RawControlDown());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->RawControlDown());
+				}
 
 
 				return;
@@ -1235,7 +1336,22 @@ PHP_METHOD(php_wxKeyboardState, SetAltDown)
 				php_printf("Executing wxKeyboardState::SetAltDown(down0)\n\n");
 				#endif
 
-				((wxKeyboardState_php*)native_object)->SetAltDown(down0);
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					((wxKeyEvent_php*)native_object)->SetAltDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetAltDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetAltDown(down0);
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					((wxKeyboardState_php*)native_object)->SetAltDown(down0);
+				}
 
 
 				return;
@@ -1348,7 +1464,22 @@ PHP_METHOD(php_wxKeyboardState, SetControlDown)
 				php_printf("Executing wxKeyboardState::SetControlDown(down0)\n\n");
 				#endif
 
-				((wxKeyboardState_php*)native_object)->SetControlDown(down0);
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					((wxKeyEvent_php*)native_object)->SetControlDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetControlDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetControlDown(down0);
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					((wxKeyboardState_php*)native_object)->SetControlDown(down0);
+				}
 
 
 				return;
@@ -1461,7 +1592,22 @@ PHP_METHOD(php_wxKeyboardState, SetMetaDown)
 				php_printf("Executing wxKeyboardState::SetMetaDown(down0)\n\n");
 				#endif
 
-				((wxKeyboardState_php*)native_object)->SetMetaDown(down0);
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					((wxKeyEvent_php*)native_object)->SetMetaDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetMetaDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetMetaDown(down0);
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					((wxKeyboardState_php*)native_object)->SetMetaDown(down0);
+				}
 
 
 				return;
@@ -1574,7 +1720,22 @@ PHP_METHOD(php_wxKeyboardState, SetRawControlDown)
 				php_printf("Executing wxKeyboardState::SetRawControlDown(down0)\n\n");
 				#endif
 
-				((wxKeyboardState_php*)native_object)->SetRawControlDown(down0);
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					((wxKeyEvent_php*)native_object)->SetRawControlDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetRawControlDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetRawControlDown(down0);
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					((wxKeyboardState_php*)native_object)->SetRawControlDown(down0);
+				}
 
 
 				return;
@@ -1687,7 +1848,22 @@ PHP_METHOD(php_wxKeyboardState, SetShiftDown)
 				php_printf("Executing wxKeyboardState::SetShiftDown(down0)\n\n");
 				#endif
 
-				((wxKeyboardState_php*)native_object)->SetShiftDown(down0);
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					((wxKeyEvent_php*)native_object)->SetShiftDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					((wxMouseState_php*)native_object)->SetShiftDown(down0);
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					((wxMouseEvent_php*)native_object)->SetShiftDown(down0);
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					((wxKeyboardState_php*)native_object)->SetShiftDown(down0);
+				}
 
 
 				return;
@@ -1796,7 +1972,22 @@ PHP_METHOD(php_wxKeyboardState, ShiftDown)
 				php_printf("Executing RETURN_BOOL(wxKeyboardState::ShiftDown())\n\n");
 				#endif
 
-				ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->ShiftDown());
+				if(current_object_type == PHP_WXKEYEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyEvent_php*)native_object)->ShiftDown());
+				}
+				else if(current_object_type == PHP_WXMOUSESTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseState_php*)native_object)->ShiftDown());
+				}
+				else if(current_object_type == PHP_WXMOUSEEVENT_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxMouseEvent_php*)native_object)->ShiftDown());
+				}
+				else if(current_object_type == PHP_WXKEYBOARDSTATE_TYPE)
+				{
+					ZVAL_BOOL(return_value, ((wxKeyboardState_php*)native_object)->ShiftDown());
+				}
 
 
 				return;
