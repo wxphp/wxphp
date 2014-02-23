@@ -2304,7 +2304,10 @@ function methods_compatible($class_name)
 	
 	if($classes == null)
 	{
-		$classes = array("wxMouseState");
+		$classes = array(
+			"wxMouseState",
+			"wxKeyboardState"
+		);
 	}
 	
 	if(in_array($class_name, $classes))
