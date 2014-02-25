@@ -51610,7 +51610,8 @@
 			}
 		],
 		"_implements":[
-			"wxControl"
+			"wxControl",
+			"wxTextEntry"
 		],
 		"AddText":[
 			{
@@ -70404,6 +70405,511 @@
 					null
 				]
 			}
+		],
+		"SetMarginCursor":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the cursor shown when the mouse is inside a margin.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"margin",
+					"cursor"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"SetMarginOptions":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the margin options.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"marginOptions"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetIdentifier":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the identifier reported as idFrom in notification messages.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"identifier"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetIndicatorCurrent":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the indicator used for IndicatorFillRange and IndicatorClearRange.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"indicator"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetIndicatorValue":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the value used for IndicatorFillRange.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"value"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetInsertionPoint":[
+			{
+				"return_type":"void",
+				"brief_description":"Sets the insertion point at the given position.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"pos"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetEmptySelection":[
+			{
+				"return_type":"void",
+				"brief_description":"Set caret to a position, while removing any existing selection.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"pos"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetEditable":[
+			{
+				"return_type":"void",
+				"brief_description":"Makes the text item editable or read-only, overriding the wxTE_READONLY flag.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"editable"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetDefaultStyle":[
+			{
+				"return_type":"bool",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxTextAttr&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetStyle":[
+			{
+				"return_type":"bool",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long",
+					"wxTextAttr&"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"position",
+					"style"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"GetLastPosition":[
+			{
+				"return_type":"long",
+				"brief_description":"Returns the zero based index of the last position in the text control, which is equal to the number of characters in the control.",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetMultiPaste":[
+			{
+				"return_type":"void",
+				"brief_description":"Change the effect of pasting when there are multiple selections.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"multiPaste"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetPositionCacheSize":[
+			{
+				"return_type":"void",
+				"brief_description":"Set number of entries in position cache.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"size"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetPunctuationChars":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the set of characters making up punctuation characters Should be called after SetWordChars.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"characters"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetScrollWidthTracking":[
+			{
+				"return_type":"void",
+				"brief_description":"Sets whether the maximum width line displayed is used to set scroll width.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"tracking"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetSelEOLFilled":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the selection to have its end of line filled or not.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"filled"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetTechnology":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the technology used.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"technology"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
 		]
 	},
 	"wxStyledTextEvent":{
@@ -76502,6 +77008,64 @@
 				],
 				"parameters_default_value":[
 					null
+				]
+			}
+		],
+		"Cut":[
+			{
+				"return_type":"void",
+				"brief_description":"Copies the selected text to the clipboard and removes it from the control.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SelectNone":[
+			{
+				"return_type":"void",
+				"brief_description":"Deselects selected text in the control.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
 				]
 			}
 		]
