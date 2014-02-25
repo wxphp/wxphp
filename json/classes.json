@@ -67534,6 +67534,2876 @@
 					"-1"
 				]
 			}
+		],
+		"ScrollToEnd":[
+			{
+				"return_type":"void",
+				"brief_description":"Scroll to end of document.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"ScrollToStart":[
+			{
+				"return_type":"void",
+				"brief_description":"Scroll to start of document.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"MarkerEnableHighlight":[
+			{
+				"return_type":"void",
+				"brief_description":"Enable\/disable highlight for current folding bloc (smallest one that contains the caret)",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"enabled"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"MarkerDefineRGBAImage":[
+			{
+				"return_type":"void",
+				"brief_description":"Define a marker from RGBA data.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"const unsigned char*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"markerNumber",
+					"pixels"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"AnnotationClearLine":[
+			{
+				"return_type":"void",
+				"brief_description":"Clear annotations from the given line.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"line"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"AutoCompGetCaseInsensitiveBehaviour":[
+			{
+				"return_type":"int",
+				"brief_description":"Get auto-completion case insensitive behaviour.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"AutoCompSetCaseInsensitiveBehaviour":[
+			{
+				"return_type":"void",
+				"brief_description":"Set auto-completion case insensitive behaviour to either prefer case-sensitive matches or have no preference.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"behaviour"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"BraceBadLightIndicator":[
+			{
+				"return_type":"void",
+				"brief_description":"Use specified indicator to highlight non matching brace instead of changing its style.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"useBraceBadLightIndicator",
+					"indicator"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"BraceHighlightIndicator":[
+			{
+				"return_type":"void",
+				"brief_description":"Use specified indicator to highlight matching braces instead of changing their style.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"useBraceHighlightIndicator",
+					"indicator"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"CallTipSetPosition":[
+			{
+				"return_type":"void",
+				"brief_description":"Set position of calltip, above or below text.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"above"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"ChangeLexerState":[
+			{
+				"return_type":"int",
+				"brief_description":"Indicate that the internal state of a lexer has changed over a range and therefore there may be a need to redraw.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"start",
+					"end"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"ContractedFoldNext":[
+			{
+				"return_type":"int",
+				"brief_description":"Find the next line at or after lineStart that is a contracted fold header line.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"lineStart"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"CountCharacters":[
+			{
+				"return_type":"int",
+				"brief_description":"Count characters between two positions.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"startPos",
+					"endPos"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"DelWordRightEnd":[
+			{
+				"return_type":"void",
+				"brief_description":"Delete the word to the right of the caret, but not the trailing non-word characters.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"DeleteRange":[
+			{
+				"return_type":"void",
+				"brief_description":"Delete a range of text in the document.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"pos",
+					"deleteLength"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"DescribeKeyWordSets":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Retrieve a '\n' separated list of descriptions of the keyword sets understood by the current lexer.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"DescribeProperty":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Describe a property.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"DiscardEdits":[
+			{
+				"return_type":"void",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetAllLinesVisible":[
+			{
+				"return_type":"bool",
+				"brief_description":"Are all lines visible?",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetCaretStyle":[
+			{
+				"return_type":"int",
+				"brief_description":"Returns the current style of the caret.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetCurLine":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Retrieve the text of the line containing the caret.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int*"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"linePos"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"NULL"
+				]
+			}
+		],
+		"GetCurLineRaw":[
+			{
+				"return_type":"wxCharBuffer",
+				"brief_description":"Retrieve the text of the line containing the caret.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int*"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"linePos"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"NULL"
+				]
+			}
+		],
+		"GetGapPosition":[
+			{
+				"return_type":"int",
+				"brief_description":"Return a position which, to avoid performance costs, should not be within the range of a call to GetRangePointer.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetHotspotActiveBackground":[
+			{
+				"return_type":"wxColour",
+				"brief_description":"Get the back colour for active hotspots.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetHotspotActiveForeground":[
+			{
+				"return_type":"wxColour",
+				"brief_description":"Get the fore colour for active hotspots.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetHotspotActiveUnderline":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get whether underlining for active hotspots.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetHotspotSingleLine":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get the HotspotSingleLine property.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetIdentifier":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the identifier.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetIndicatorCurrent":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the current indicator.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetIndicatorValue":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the current indicator value.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetInsertionPoint":[
+			{
+				"return_type":"long",
+				"brief_description":"Returns the insertion point, or cursor, position.",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetLineLength":[
+			{
+				"return_type":"int",
+				"brief_description":"",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"n"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetLineText":[
+			{
+				"return_type":"wxString",
+				"brief_description":"",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"n"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetMarginCursor":[
+			{
+				"return_type":"int",
+				"brief_description":"Retrieve the cursor shown in a margin.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"margin"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetMarginOptions":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the margin options.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetMultiPaste":[
+			{
+				"return_type":"int",
+				"brief_description":"Retrieve the effect of pasting when there are multiple selections.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetNumberOfLines":[
+			{
+				"return_type":"int",
+				"brief_description":"",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetPositionCacheSize":[
+			{
+				"return_type":"int",
+				"brief_description":"How many entries are allocated to the position cache?",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetPunctuationChars":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Get the set of characters making up punctuation characters.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetScrollWidthTracking":[
+			{
+				"return_type":"bool",
+				"brief_description":"Retrieve whether the scroll width tracks wide lines.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetSelEOLFilled":[
+			{
+				"return_type":"bool",
+				"brief_description":"Is the selection end of line filled?",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetSelection":[
+			{
+				"return_type":"void",
+				"brief_description":"Gets the current selection span.",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long*",
+					"long*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"from",
+					"to"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"GetTag":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Retrieve the value of a tag from a regular expression search.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"tagNumber"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetTechnology":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the tech.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetWhitespaceChars":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Get the set of characters making up whitespace for when moving or selecting by word.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetWordChars":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Get the set of characters making up words for when moving or selecting by word.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IndicatorAllOnFor":[
+			{
+				"return_type":"int",
+				"brief_description":"Are any indicators present at position?",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"position"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"IndicatorClearRange":[
+			{
+				"return_type":"void",
+				"brief_description":"Turn a indicator off over a range.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"position",
+					"clearLength"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IndicatorEnd":[
+			{
+				"return_type":"int",
+				"brief_description":"Where does a particular indicator end?",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"indicator",
+					"position"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IndicatorFillRange":[
+			{
+				"return_type":"void",
+				"brief_description":"Turn a indicator on over a range.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"position",
+					"fillLength"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IndicatorGetOutlineAlpha":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the alpha outline colour of the given indicator.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"indicator"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"IndicatorGetUnder":[
+			{
+				"return_type":"bool",
+				"brief_description":"Retrieve whether indicator drawn under or over text.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"indic"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"IndicatorSetOutlineAlpha":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the alpha outline colour of the given indicator.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"indicator",
+					"alpha"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IndicatorSetUnder":[
+			{
+				"return_type":"void",
+				"brief_description":"Set an indicator to draw under text or over(default).",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"bool"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"indic",
+					"under"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IndicatorStart":[
+			{
+				"return_type":"int",
+				"brief_description":"Where does a particular indicator start?",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"indicator",
+					"position"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IndicatorValueAt":[
+			{
+				"return_type":"int",
+				"brief_description":"What value does a particular indicator have at at a position?",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"indicator",
+					"position"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"IsEditable":[
+			{
+				"return_type":"bool",
+				"brief_description":"Returns true if the controls contents may be edited by user (note that it always can be changed by the program).",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsModified":[
+			{
+				"return_type":"bool",
+				"brief_description":"",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"MarkDirty":[
+			{
+				"return_type":"void",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"MarkerSetBackgroundSelected":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the background colour used for a particular marker number when its folding block is selected.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"const wxColour&"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"markerNumber",
+					"back"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"MoveSelectedLinesDown":[
+			{
+				"return_type":"void",
+				"brief_description":"Move the selected lines down one line, shifting the line below before the selection.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"MoveSelectedLinesUp":[
+			{
+				"return_type":"void",
+				"brief_description":"Move the selected lines up one line, shifting the line above after the selection.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"PropertyNames":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Retrieve a '\n' separated list of properties understood by the current lexer.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"PropertyType":[
+			{
+				"return_type":"int",
+				"brief_description":"Retrieve the type of a property.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"RGBAImageSetHeight":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the height for future RGBA image data.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"height"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"RGBAImageSetWidth":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the width for future RGBA image data.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"width"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"RegisterRGBAImage":[
+			{
+				"return_type":"void",
+				"brief_description":"Register an RGBA image for use in autocompletion lists.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"const unsigned char*"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"type",
+					"pixels"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"Remove":[
+			{
+				"return_type":"void",
+				"brief_description":"Removes the text starting at the first given position up to (but not including) the character at the last position.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long",
+					"long"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"from",
+					"to"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"Replace":[
+			{
+				"return_type":"void",
+				"brief_description":"Replaces the text starting at the first position up to (but not including) the character at the last position with the given text.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long",
+					"long",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"from",
+					"to",
+					"value"
+				],
+				"parameters_required":[
+					true,
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					null
+				]
+			}
+		],
+		"SelectNone":[
+			{
+				"return_type":"void",
+				"brief_description":"Deselects selected text in the control.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetCaretStyle":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the style of the caret to be drawn.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"caretStyle"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"WriteText":[
+			{
+				"return_type":"void",
+				"brief_description":"Writes the text into the text control at the current insertion position.",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"text"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"XYToPosition":[
+			{
+				"return_type":"long",
+				"brief_description":"",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long",
+					"long"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"x",
+					"y"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"VerticalCentreCaret":[
+			{
+				"return_type":"void",
+				"brief_description":"Centre current line in window.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"StyleSetWeight":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the weight of characters of a style.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"style",
+					"weight"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"StyleSetSizeFractional":[
+			{
+				"return_type":"void",
+				"brief_description":"Set the size of characters of a style.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"style",
+					"caseForce"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"StyleGetBackground":[
+			{
+				"return_type":"wxColour",
+				"brief_description":"Get the background colour of a style.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetBold":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style bold or not.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetCase":[
+			{
+				"return_type":"int",
+				"brief_description":"Get is a style mixed case, or to force upper or lower case.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetChangeable":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style changeable or not (read only).",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetCharacterSet":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the character set of the font in a style.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetEOLFilled":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style to have its end of line filled or not.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetFaceName":[
+			{
+				"return_type":"wxString",
+				"brief_description":"Get the font facename of a style.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetFont":[
+			{
+				"return_type":"wxFont",
+				"brief_description":"Get the font of a style.",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetForeground":[
+			{
+				"return_type":"wxColour",
+				"brief_description":"Get the foreground colour of a style.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetHotSpot":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style a hotspot or not.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetItalic":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style italic or not.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetSize":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the size of characters of a style.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetSizeFractional":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the size of characters of a style in points multiplied by 100.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetUnderline":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style underlined or not.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetVisible":[
+			{
+				"return_type":"bool",
+				"brief_description":"Get is a style visible or not.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"StyleGetWeight":[
+			{
+				"return_type":"int",
+				"brief_description":"Get the weight of characters of a style.",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"style"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"ShowPosition":[
+			{
+				"return_type":"void",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"pos"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetStyle":[
+			{
+				"return_type":"bool",
+				"brief_description":"",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"long",
+					"long",
+					"const wxTextAttr&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"start",
+					"end",
+					"style"
+				],
+				"parameters_required":[
+					true,
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					null
+				]
+			}
 		]
 	},
 	"wxStyledTextEvent":{
