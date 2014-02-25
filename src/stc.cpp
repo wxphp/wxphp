@@ -54192,3 +54192,9575 @@ PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 }
 /* }}} */
 
+/* {{{ proto  wxStyledTextCtrl::ScrollToEnd()
+   Scroll to end of document. */
+PHP_METHOD(php_wxStyledTextCtrl, ScrollToEnd)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::ScrollToEnd\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::ScrollToEnd call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::ScrollToEnd()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->ScrollToEnd();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ScrollToEnd\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ScrollToStart()
+   Scroll to start of document. */
+PHP_METHOD(php_wxStyledTextCtrl, ScrollToStart)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::ScrollToStart\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::ScrollToStart call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::ScrollToStart()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->ScrollToStart();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ScrollToStart\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerEnableHighlight(bool enabled)
+   Enable/disable highlight for current folding bloc (smallest one that contains the caret) */
+PHP_METHOD(php_wxStyledTextCtrl, MarkerEnableHighlight)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::MarkerEnableHighlight\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::MarkerEnableHighlight call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool enabled0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'b' (&enabled0)\n");
+		#endif
+
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enabled0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::MarkerEnableHighlight(enabled0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->MarkerEnableHighlight(enabled0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerEnableHighlight\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerDefineRGBAImage(int markerNumber, array pixels)
+   Define a marker from RGBA data. */
+PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineRGBAImage)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::MarkerDefineRGBAImage\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::MarkerDefineRGBAImage call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long markerNumber0;
+	zval* pixels0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'la' (&markerNumber0, &pixels0)\n");
+		#endif
+
+		char parse_parameters_string[] = "la";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &pixels0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		int array_count0_1 = 1;
+		HashTable* arr_hash0_1;
+		if(arguments_received > 1)
+		{
+			arr_hash0_1 = Z_ARRVAL_P(pixels0);
+			array_count0_1 = zend_hash_num_elements(arr_hash0_1);
+		}
+		unsigned char* integers_array0_1 = new unsigned char[array_count0_1];
+		bool integers_continue0_1 = true;
+
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				int array_index0_1 = 0;
+				zval** temp_array_value0_1 = 0;
+				while(integers_continue0_1)
+				{
+					if(zend_hash_index_find(HASH_OF(pixels0), array_index0_1, (void**)&temp_array_value0_1) == SUCCESS)
+					{
+						convert_to_long_ex(temp_array_value0_1);
+						integers_array0_1[array_index0_1] = (unsigned char) Z_LVAL_PP(temp_array_value0_1);
+						array_index0_1++;
+					}
+					else
+					{
+						integers_continue0_1 = false;
+					}
+				}
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::MarkerDefineRGBAImage((int) markerNumber0, (const unsigned char*) integers_array0_1)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->MarkerDefineRGBAImage((int) markerNumber0, (const unsigned char*) integers_array0_1);
+
+				delete[] integers_array0_1;
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerDefineRGBAImage\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationClearLine(int line)
+   Clear annotations from the given line. */
+PHP_METHOD(php_wxStyledTextCtrl, AnnotationClearLine)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::AnnotationClearLine\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::AnnotationClearLine call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long line0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&line0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::AnnotationClearLine((int) line0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->AnnotationClearLine((int) line0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationClearLine\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompGetCaseInsensitiveBehaviour()
+   Get auto-completion case insensitive behaviour. */
+PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCaseInsensitiveBehaviour)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::AutoCompGetCaseInsensitiveBehaviour\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::AutoCompGetCaseInsensitiveBehaviour call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::AutoCompGetCaseInsensitiveBehaviour())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->AutoCompGetCaseInsensitiveBehaviour());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetCaseInsensitiveBehaviour\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetCaseInsensitiveBehaviour(int behaviour)
+   Set auto-completion case insensitive behaviour to either prefer case-sensitive matches or have no preference. */
+PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCaseInsensitiveBehaviour)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::AutoCompSetCaseInsensitiveBehaviour\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::AutoCompSetCaseInsensitiveBehaviour call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long behaviour0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&behaviour0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &behaviour0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::AutoCompSetCaseInsensitiveBehaviour((int) behaviour0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->AutoCompSetCaseInsensitiveBehaviour((int) behaviour0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetCaseInsensitiveBehaviour\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::BraceBadLightIndicator(bool useBraceBadLightIndicator, int indicator)
+   Use specified indicator to highlight non matching brace instead of changing its style. */
+PHP_METHOD(php_wxStyledTextCtrl, BraceBadLightIndicator)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::BraceBadLightIndicator\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::BraceBadLightIndicator call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool useBraceBadLightIndicator0;
+	long indicator0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'bl' (&useBraceBadLightIndicator0, &indicator0)\n");
+		#endif
+
+		char parse_parameters_string[] = "bl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useBraceBadLightIndicator0, &indicator0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::BraceBadLightIndicator(useBraceBadLightIndicator0, (int) indicator0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->BraceBadLightIndicator(useBraceBadLightIndicator0, (int) indicator0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BraceBadLightIndicator\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::BraceHighlightIndicator(bool useBraceHighlightIndicator, int indicator)
+   Use specified indicator to highlight matching braces instead of changing their style. */
+PHP_METHOD(php_wxStyledTextCtrl, BraceHighlightIndicator)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::BraceHighlightIndicator\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::BraceHighlightIndicator call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool useBraceHighlightIndicator0;
+	long indicator0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'bl' (&useBraceHighlightIndicator0, &indicator0)\n");
+		#endif
+
+		char parse_parameters_string[] = "bl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useBraceHighlightIndicator0, &indicator0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::BraceHighlightIndicator(useBraceHighlightIndicator0, (int) indicator0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->BraceHighlightIndicator(useBraceHighlightIndicator0, (int) indicator0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BraceHighlightIndicator\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipSetPosition(bool above)
+   Set position of calltip, above or below text. */
+PHP_METHOD(php_wxStyledTextCtrl, CallTipSetPosition)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::CallTipSetPosition\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::CallTipSetPosition call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool above0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'b' (&above0)\n");
+		#endif
+
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &above0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::CallTipSetPosition(above0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->CallTipSetPosition(above0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipSetPosition\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::ChangeLexerState(int start, int end)
+   Indicate that the internal state of a lexer has changed over a range and therefore there may be a need to redraw. */
+PHP_METHOD(php_wxStyledTextCtrl, ChangeLexerState)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::ChangeLexerState\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::ChangeLexerState call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long start0;
+	long end0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ChangeLexerState((int) start0, (int) end0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->ChangeLexerState((int) start0, (int) end0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ChangeLexerState\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::ContractedFoldNext(int lineStart)
+   Find the next line at or after lineStart that is a contracted fold header line. */
+PHP_METHOD(php_wxStyledTextCtrl, ContractedFoldNext)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::ContractedFoldNext\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::ContractedFoldNext call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long lineStart0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&lineStart0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::ContractedFoldNext((int) lineStart0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->ContractedFoldNext((int) lineStart0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ContractedFoldNext\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::CountCharacters(int startPos, int endPos)
+   Count characters between two positions. */
+PHP_METHOD(php_wxStyledTextCtrl, CountCharacters)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::CountCharacters\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::CountCharacters call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long startPos0;
+	long endPos0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&startPos0, &endPos0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &startPos0, &endPos0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::CountCharacters((int) startPos0, (int) endPos0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->CountCharacters((int) startPos0, (int) endPos0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CountCharacters\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DelWordRightEnd()
+   Delete the word to the right of the caret, but not the trailing non-word characters. */
+PHP_METHOD(php_wxStyledTextCtrl, DelWordRightEnd)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::DelWordRightEnd\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::DelWordRightEnd call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::DelWordRightEnd()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->DelWordRightEnd();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DelWordRightEnd\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DeleteRange(int pos, int deleteLength)
+   Delete a range of text in the document. */
+PHP_METHOD(php_wxStyledTextCtrl, DeleteRange)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::DeleteRange\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::DeleteRange call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long pos0;
+	long deleteLength0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&pos0, &deleteLength0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &deleteLength0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::DeleteRange((int) pos0, (int) deleteLength0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->DeleteRange((int) pos0, (int) deleteLength0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DeleteRange\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::DescribeKeyWordSets()
+   Retrieve a '
+' separated list of descriptions of the keyword sets understood by the current lexer. */
+PHP_METHOD(php_wxStyledTextCtrl, DescribeKeyWordSets)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::DescribeKeyWordSets\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::DescribeKeyWordSets call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::DescribeKeyWordSets().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->DescribeKeyWordSets();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DescribeKeyWordSets\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::DescribeProperty(string name)
+   Describe a property. */
+PHP_METHOD(php_wxStyledTextCtrl, DescribeProperty)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::DescribeProperty\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::DescribeProperty call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	char* name0;
+	long name_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
+		#endif
+
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::DescribeProperty(wxString(name0, wxConvUTF8)).fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->DescribeProperty(wxString(name0, wxConvUTF8));
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DescribeProperty\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DiscardEdits() */
+PHP_METHOD(php_wxStyledTextCtrl, DiscardEdits)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::DiscardEdits\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::DiscardEdits call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::DiscardEdits()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->DiscardEdits();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DiscardEdits\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetAllLinesVisible()
+   Are all lines visible? */
+PHP_METHOD(php_wxStyledTextCtrl, GetAllLinesVisible)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetAllLinesVisible\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetAllLinesVisible call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetAllLinesVisible())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetAllLinesVisible());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAllLinesVisible\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCaretStyle()
+   Returns the current style of the caret. */
+PHP_METHOD(php_wxStyledTextCtrl, GetCaretStyle)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetCaretStyle\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetCaretStyle call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetCaretStyle())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetCaretStyle());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretStyle\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetCurLine(int &linePos)
+   Retrieve the text of the line containing the caret. */
+PHP_METHOD(php_wxStyledTextCtrl, GetCurLine)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetCurLine\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetCurLine call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long* linePos0;
+	zval* linePos0_ref;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|l' (linePos0)\n");
+		#endif
+
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, linePos0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+
+			char parse_references_string[] = "|z";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &linePos0_ref );
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetCurLine().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCurLine();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetCurLine((int*) linePos0).fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetCurLine((int*) linePos0);
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+				size_t elements_returned0_0 = sizeof(linePos0)/sizeof(*linePos0);
+				array_init(linePos0_ref);
+				for(size_t i=0; i<elements_returned0_0; i++)
+				{
+					add_next_index_long(linePos0_ref, linePos0[i]);
+				}
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCurLine\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetGapPosition()
+   Return a position which, to avoid performance costs, should not be within the range of a call to GetRangePointer. */
+PHP_METHOD(php_wxStyledTextCtrl, GetGapPosition)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetGapPosition\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetGapPosition call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetGapPosition())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetGapPosition());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetGapPosition\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::GetHotspotActiveBackground()
+   Get the back colour for active hotspots. */
+PHP_METHOD(php_wxStyledTextCtrl, GetHotspotActiveBackground)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetHotspotActiveBackground\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetHotspotActiveBackground call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::GetHotspotActiveBackground() to return new object\n\n");
+				#endif
+
+				wxColour value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveBackground();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				object_init_ex(return_value, php_wxColour_entry);
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxColour_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetHotspotActiveBackground\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::GetHotspotActiveForeground()
+   Get the fore colour for active hotspots. */
+PHP_METHOD(php_wxStyledTextCtrl, GetHotspotActiveForeground)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetHotspotActiveForeground\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetHotspotActiveForeground call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::GetHotspotActiveForeground() to return new object\n\n");
+				#endif
+
+				wxColour value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveForeground();
+				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				object_init_ex(return_value, php_wxColour_entry);
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo0->native_object = (wxColour_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetHotspotActiveForeground\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetHotspotActiveUnderline()
+   Get whether underlining for active hotspots. */
+PHP_METHOD(php_wxStyledTextCtrl, GetHotspotActiveUnderline)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetHotspotActiveUnderline\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetHotspotActiveUnderline call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetHotspotActiveUnderline())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveUnderline());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetHotspotActiveUnderline\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetHotspotSingleLine()
+   Get the HotspotSingleLine property. */
+PHP_METHOD(php_wxStyledTextCtrl, GetHotspotSingleLine)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetHotspotSingleLine\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetHotspotSingleLine call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetHotspotSingleLine())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetHotspotSingleLine());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetHotspotSingleLine\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetIdentifier()
+   Get the identifier. */
+PHP_METHOD(php_wxStyledTextCtrl, GetIdentifier)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetIdentifier\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetIdentifier call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIdentifier())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIdentifier());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetIdentifier\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetIndicatorCurrent()
+   Get the current indicator. */
+PHP_METHOD(php_wxStyledTextCtrl, GetIndicatorCurrent)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetIndicatorCurrent\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetIndicatorCurrent call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndicatorCurrent())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIndicatorCurrent());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetIndicatorCurrent\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetIndicatorValue()
+   Get the current indicator value. */
+PHP_METHOD(php_wxStyledTextCtrl, GetIndicatorValue)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetIndicatorValue\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetIndicatorValue call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetIndicatorValue())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetIndicatorValue());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetIndicatorValue\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetInsertionPoint()
+   Returns the insertion point, or cursor, position. */
+PHP_METHOD(php_wxStyledTextCtrl, GetInsertionPoint)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetInsertionPoint\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetInsertionPoint call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetInsertionPoint())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetInsertionPoint());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetInsertionPoint\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineLength(int n) */
+PHP_METHOD(php_wxStyledTextCtrl, GetLineLength)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetLineLength\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetLineLength call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long n0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&n0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetLineLength((long) n0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetLineLength((long) n0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineLength\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetLineText(int n) */
+PHP_METHOD(php_wxStyledTextCtrl, GetLineText)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetLineText\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetLineText call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long n0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&n0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetLineText((long) n0).fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetLineText((long) n0);
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineText\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginCursor(int margin)
+   Retrieve the cursor shown in a margin. */
+PHP_METHOD(php_wxStyledTextCtrl, GetMarginCursor)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetMarginCursor\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetMarginCursor call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long margin0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&margin0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginCursor((int) margin0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginCursor((int) margin0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginCursor\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginOptions()
+   Get the margin options. */
+PHP_METHOD(php_wxStyledTextCtrl, GetMarginOptions)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetMarginOptions\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetMarginOptions call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMarginOptions())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMarginOptions());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginOptions\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMultiPaste()
+   Retrieve the effect of pasting when there are multiple selections. */
+PHP_METHOD(php_wxStyledTextCtrl, GetMultiPaste)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetMultiPaste\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetMultiPaste call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetMultiPaste())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetMultiPaste());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMultiPaste\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetNumberOfLines() */
+PHP_METHOD(php_wxStyledTextCtrl, GetNumberOfLines)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetNumberOfLines\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetNumberOfLines call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetNumberOfLines())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetNumberOfLines());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetNumberOfLines\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetPositionCacheSize()
+   How many entries are allocated to the position cache? */
+PHP_METHOD(php_wxStyledTextCtrl, GetPositionCacheSize)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetPositionCacheSize\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetPositionCacheSize call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetPositionCacheSize())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetPositionCacheSize());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPositionCacheSize\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetPunctuationChars()
+   Get the set of characters making up punctuation characters. */
+PHP_METHOD(php_wxStyledTextCtrl, GetPunctuationChars)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetPunctuationChars\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetPunctuationChars call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetPunctuationChars().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetPunctuationChars();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPunctuationChars\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetScrollWidthTracking()
+   Retrieve whether the scroll width tracks wide lines. */
+PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidthTracking)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetScrollWidthTracking\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetScrollWidthTracking call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetScrollWidthTracking())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetScrollWidthTracking());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetScrollWidthTracking\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetSelEOLFilled()
+   Is the selection end of line filled? */
+PHP_METHOD(php_wxStyledTextCtrl, GetSelEOLFilled)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetSelEOLFilled\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetSelEOLFilled call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::GetSelEOLFilled())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->GetSelEOLFilled());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelEOLFilled\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::GetSelection(int &from, int &to)
+   Gets the current selection span. */
+PHP_METHOD(php_wxStyledTextCtrl, GetSelection)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetSelection\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetSelection call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long* from0;
+	zval* from0_ref;
+	long* to0;
+	zval* to0_ref;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (from0, to0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, from0, to0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &from0_ref, &to0_ref );
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::GetSelection((long*) from0, (long*) to0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->GetSelection((long*) from0, (long*) to0);
+
+				size_t elements_returned0_0 = sizeof(from0)/sizeof(*from0);
+				array_init(from0_ref);
+				for(size_t i=0; i<elements_returned0_0; i++)
+				{
+					add_next_index_long(from0_ref, from0[i]);
+				}
+				size_t elements_returned0_1 = sizeof(to0)/sizeof(*to0);
+				array_init(to0_ref);
+				for(size_t i=0; i<elements_returned0_1; i++)
+				{
+					add_next_index_long(to0_ref, to0[i]);
+				}
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelection\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetTag(int tagNumber)
+   Retrieve the value of a tag from a regular expression search. */
+PHP_METHOD(php_wxStyledTextCtrl, GetTag)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetTag\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetTag call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long tagNumber0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&tagNumber0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tagNumber0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetTag((int) tagNumber0).fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->GetTag((int) tagNumber0);
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTag\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetTechnology()
+   Get the tech. */
+PHP_METHOD(php_wxStyledTextCtrl, GetTechnology)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetTechnology\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetTechnology call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::GetTechnology())\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->GetTechnology());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTechnology\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetWhitespaceChars()
+   Get the set of characters making up whitespace for when moving or selecting by word. */
+PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceChars)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetWhitespaceChars\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetWhitespaceChars call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetWhitespaceChars().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetWhitespaceChars();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWhitespaceChars\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetWordChars()
+   Get the set of characters making up words for when moving or selecting by word. */
+PHP_METHOD(php_wxStyledTextCtrl, GetWordChars)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::GetWordChars\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::GetWordChars call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetWordChars().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetWordChars();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWordChars\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorAllOnFor(int position)
+   Are any indicators present at position? */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorAllOnFor)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorAllOnFor\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorAllOnFor call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long position0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&position0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &position0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorAllOnFor((int) position0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorAllOnFor((int) position0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorAllOnFor\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorClearRange(int position, int clearLength)
+   Turn a indicator off over a range. */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorClearRange)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorClearRange\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorClearRange call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long position0;
+	long clearLength0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&position0, &clearLength0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &position0, &clearLength0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::IndicatorClearRange((int) position0, (int) clearLength0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->IndicatorClearRange((int) position0, (int) clearLength0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorClearRange\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorEnd(int indicator, int position)
+   Where does a particular indicator end? */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorEnd)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorEnd\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorEnd call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indicator0;
+	long position0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&indicator0, &position0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0, &position0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorEnd((int) indicator0, (int) position0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorEnd((int) indicator0, (int) position0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorEnd\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorFillRange(int position, int fillLength)
+   Turn a indicator on over a range. */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorFillRange)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorFillRange\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorFillRange call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long position0;
+	long fillLength0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&position0, &fillLength0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &position0, &fillLength0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::IndicatorFillRange((int) position0, (int) fillLength0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->IndicatorFillRange((int) position0, (int) fillLength0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorFillRange\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorGetOutlineAlpha(int indicator)
+   Get the alpha outline colour of the given indicator. */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetOutlineAlpha)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorGetOutlineAlpha\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorGetOutlineAlpha call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indicator0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&indicator0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorGetOutlineAlpha((int) indicator0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorGetOutlineAlpha((int) indicator0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorGetOutlineAlpha\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::IndicatorGetUnder(int indic)
+   Retrieve whether indicator drawn under or over text. */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetUnder)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorGetUnder\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorGetUnder call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indic0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&indic0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::IndicatorGetUnder((int) indic0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorGetUnder((int) indic0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorGetUnder\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorSetOutlineAlpha(int indicator, int alpha)
+   Set the alpha outline colour of the given indicator. */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetOutlineAlpha)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorSetOutlineAlpha\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorSetOutlineAlpha call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indicator0;
+	long alpha0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&indicator0, &alpha0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0, &alpha0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::IndicatorSetOutlineAlpha((int) indicator0, (int) alpha0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->IndicatorSetOutlineAlpha((int) indicator0, (int) alpha0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorSetOutlineAlpha\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorSetUnder(int indic, bool under)
+   Set an indicator to draw under text or over(default). */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetUnder)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorSetUnder\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorSetUnder call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indic0;
+	bool under0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'lb' (&indic0, &under0)\n");
+		#endif
+
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0, &under0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::IndicatorSetUnder((int) indic0, under0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->IndicatorSetUnder((int) indic0, under0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorSetUnder\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorStart(int indicator, int position)
+   Where does a particular indicator start? */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorStart)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorStart\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorStart call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indicator0;
+	long position0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&indicator0, &position0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0, &position0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorStart((int) indicator0, (int) position0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorStart((int) indicator0, (int) position0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorStart\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorValueAt(int indicator, int position)
+   What value does a particular indicator have at at a position? */
+PHP_METHOD(php_wxStyledTextCtrl, IndicatorValueAt)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IndicatorValueAt\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IndicatorValueAt call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long indicator0;
+	long position0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&indicator0, &position0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0, &position0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::IndicatorValueAt((int) indicator0, (int) position0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->IndicatorValueAt((int) indicator0, (int) position0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorValueAt\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::IsEditable()
+   Returns true if the controls contents may be edited by user (note that it always can be changed by the program). */
+PHP_METHOD(php_wxStyledTextCtrl, IsEditable)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IsEditable\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IsEditable call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::IsEditable())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->IsEditable());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IsEditable\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::IsModified() */
+PHP_METHOD(php_wxStyledTextCtrl, IsModified)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::IsModified\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::IsModified call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::IsModified())\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->IsModified());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IsModified\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkDirty() */
+PHP_METHOD(php_wxStyledTextCtrl, MarkDirty)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::MarkDirty\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::MarkDirty call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::MarkDirty()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->MarkDirty();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkDirty\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerSetBackgroundSelected(int markerNumber, wxColour back)
+   Set the background colour used for a particular marker number when its folding block is selected. */
+PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackgroundSelected)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::MarkerSetBackgroundSelected\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::MarkerSetBackgroundSelected call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long markerNumber0;
+	zval* back0 = 0;
+	wxColour* object_pointer0_1 = 0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'lO' (&markerNumber0, &back0, php_wxColour_entry)\n");
+		#endif
+
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &back0, php_wxColour_entry ) == SUCCESS)
+		{
+			if(arguments_received >= 2){
+				if(Z_TYPE_P(back0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(back0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(back0 TSRMLS_CC))->native_object;
+					object_pointer0_1 = (wxColour*) argument_native_object;
+					if (!object_pointer0_1 )
+					{
+						zend_error(E_ERROR, "Parameter 'back' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(back0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'back' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::MarkerSetBackgroundSelected((int) markerNumber0, *(wxColour*) object_pointer0_1)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->MarkerSetBackgroundSelected((int) markerNumber0, *(wxColour*) object_pointer0_1);
+
+				references->AddReference(back0, "wxStyledTextCtrl::MarkerSetBackgroundSelected at call with 2 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerSetBackgroundSelected\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MoveSelectedLinesDown()
+   Move the selected lines down one line, shifting the line below before the selection. */
+PHP_METHOD(php_wxStyledTextCtrl, MoveSelectedLinesDown)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::MoveSelectedLinesDown\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::MoveSelectedLinesDown call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::MoveSelectedLinesDown()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->MoveSelectedLinesDown();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MoveSelectedLinesDown\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MoveSelectedLinesUp()
+   Move the selected lines up one line, shifting the line above after the selection. */
+PHP_METHOD(php_wxStyledTextCtrl, MoveSelectedLinesUp)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::MoveSelectedLinesUp\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::MoveSelectedLinesUp call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::MoveSelectedLinesUp()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->MoveSelectedLinesUp();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MoveSelectedLinesUp\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::PropertyNames()
+   Retrieve a '
+' separated list of properties understood by the current lexer. */
+PHP_METHOD(php_wxStyledTextCtrl, PropertyNames)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::PropertyNames\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::PropertyNames call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::PropertyNames().fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return0;
+				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->PropertyNames();
+				char* temp_string0;
+				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
+				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
+				ZVAL_STRING(return_value, temp_string0, 1);
+				free(temp_string0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PropertyNames\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::PropertyType(string name)
+   Retrieve the type of a property. */
+PHP_METHOD(php_wxStyledTextCtrl, PropertyType)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::PropertyType\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::PropertyType call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	char* name0;
+	long name_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
+		#endif
+
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::PropertyType(wxString(name0, wxConvUTF8)))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->PropertyType(wxString(name0, wxConvUTF8)));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PropertyType\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::RGBAImageSetHeight(int height)
+   Set the height for future RGBA image data. */
+PHP_METHOD(php_wxStyledTextCtrl, RGBAImageSetHeight)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::RGBAImageSetHeight\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::RGBAImageSetHeight call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long height0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&height0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::RGBAImageSetHeight((int) height0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->RGBAImageSetHeight((int) height0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::RGBAImageSetHeight\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::RGBAImageSetWidth(int width)
+   Set the width for future RGBA image data. */
+PHP_METHOD(php_wxStyledTextCtrl, RGBAImageSetWidth)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::RGBAImageSetWidth\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::RGBAImageSetWidth call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long width0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&width0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::RGBAImageSetWidth((int) width0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->RGBAImageSetWidth((int) width0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::RGBAImageSetWidth\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::RegisterRGBAImage(int type, array pixels)
+   Register an RGBA image for use in autocompletion lists. */
+PHP_METHOD(php_wxStyledTextCtrl, RegisterRGBAImage)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::RegisterRGBAImage\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::RegisterRGBAImage call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long type0;
+	zval* pixels0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'la' (&type0, &pixels0)\n");
+		#endif
+
+		char parse_parameters_string[] = "la";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &pixels0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		int array_count0_1 = 1;
+		HashTable* arr_hash0_1;
+		if(arguments_received > 1)
+		{
+			arr_hash0_1 = Z_ARRVAL_P(pixels0);
+			array_count0_1 = zend_hash_num_elements(arr_hash0_1);
+		}
+		unsigned char* integers_array0_1 = new unsigned char[array_count0_1];
+		bool integers_continue0_1 = true;
+
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				int array_index0_1 = 0;
+				zval** temp_array_value0_1 = 0;
+				while(integers_continue0_1)
+				{
+					if(zend_hash_index_find(HASH_OF(pixels0), array_index0_1, (void**)&temp_array_value0_1) == SUCCESS)
+					{
+						convert_to_long_ex(temp_array_value0_1);
+						integers_array0_1[array_index0_1] = (unsigned char) Z_LVAL_PP(temp_array_value0_1);
+						array_index0_1++;
+					}
+					else
+					{
+						integers_continue0_1 = false;
+					}
+				}
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::RegisterRGBAImage((int) type0, (const unsigned char*) integers_array0_1)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->RegisterRGBAImage((int) type0, (const unsigned char*) integers_array0_1);
+
+				delete[] integers_array0_1;
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::RegisterRGBAImage\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Remove(int from, int to)
+   Removes the text starting at the first given position up to (but not including) the character at the last position. */
+PHP_METHOD(php_wxStyledTextCtrl, Remove)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::Remove\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::Remove call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long from0;
+	long to0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&from0, &to0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &from0, &to0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::Remove((long) from0, (long) to0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->Remove((long) from0, (long) to0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Remove\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Replace(int from, int to, string value)
+   Replaces the text starting at the first position up to (but not including) the character at the last position with the given text. */
+PHP_METHOD(php_wxStyledTextCtrl, Replace)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::Replace\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::Replace call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long from0;
+	long to0;
+	char* value0;
+	long value_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 3)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'lls' (&from0, &to0, &value0, &value_len0)\n");
+		#endif
+
+		char parse_parameters_string[] = "lls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &from0, &to0, &value0, &value_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::Replace((long) from0, (long) to0, wxString(value0, wxConvUTF8))\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->Replace((long) from0, (long) to0, wxString(value0, wxConvUTF8));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Replace\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SelectNone()
+   Deselects selected text in the control. */
+PHP_METHOD(php_wxStyledTextCtrl, SelectNone)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::SelectNone\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::SelectNone call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::SelectNone()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->SelectNone();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SelectNone\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretStyle(int caretStyle)
+   Set the style of the caret to be drawn. */
+PHP_METHOD(php_wxStyledTextCtrl, SetCaretStyle)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::SetCaretStyle\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::SetCaretStyle call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long caretStyle0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&caretStyle0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caretStyle0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::SetCaretStyle((int) caretStyle0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->SetCaretStyle((int) caretStyle0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretStyle\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WriteText(string text)
+   Writes the text into the text control at the current insertion position. */
+PHP_METHOD(php_wxStyledTextCtrl, WriteText)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::WriteText\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::WriteText call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	char* text0;
+	long text_len0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
+		#endif
+
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::WriteText(wxString(text0, wxConvUTF8))\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->WriteText(wxString(text0, wxConvUTF8));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WriteText\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::XYToPosition(int x, int y) */
+PHP_METHOD(php_wxStyledTextCtrl, XYToPosition)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::XYToPosition\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::XYToPosition call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long x0;
+	long y0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::XYToPosition((long) x0, (long) y0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->XYToPosition((long) x0, (long) y0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::XYToPosition\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::VerticalCentreCaret()
+   Centre current line in window. */
+PHP_METHOD(php_wxStyledTextCtrl, VerticalCentreCaret)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::VerticalCentreCaret\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::VerticalCentreCaret call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::VerticalCentreCaret()\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->VerticalCentreCaret();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VerticalCentreCaret\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetWeight(int style, int weight)
+   Set the weight of characters of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleSetWeight)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleSetWeight\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleSetWeight call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	long weight0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&style0, &weight0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &weight0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::StyleSetWeight((int) style0, (int) weight0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->StyleSetWeight((int) style0, (int) weight0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetWeight\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetSizeFractional(int style, int caseForce)
+   Set the size of characters of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleSetSizeFractional)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleSetSizeFractional\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleSetSizeFractional call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	long caseForce0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'll' (&style0, &caseForce0)\n");
+		#endif
+
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &caseForce0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::StyleSetSizeFractional((int) style0, (int) caseForce0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->StyleSetSizeFractional((int) style0, (int) caseForce0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetSizeFractional\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::StyleGetBackground(int style)
+   Get the background colour of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetBackground)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetBackground\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetBackground call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::StyleGetBackground((int) style0) to return new object\n\n");
+				#endif
+
+				wxColour value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetBackground((int) style0);
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				object_init_ex(return_value, php_wxColour_entry);
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxColour_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetBackground\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetBold(int style)
+   Get is a style bold or not. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetBold)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetBold\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetBold call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetBold((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetBold((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetBold\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::StyleGetCase(int style)
+   Get is a style mixed case, or to force upper or lower case. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetCase)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetCase\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetCase call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetCase((int) style0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetCase((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetCase\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetChangeable(int style)
+   Get is a style changeable or not (read only). */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetChangeable)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetChangeable\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetChangeable call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetChangeable((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetChangeable((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetChangeable\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::StyleGetCharacterSet(int style)
+   Get the character set of the font in a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetCharacterSet)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetCharacterSet\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetCharacterSet call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetCharacterSet((int) style0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetCharacterSet((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetCharacterSet\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetEOLFilled(int style)
+   Get is a style to have its end of line filled or not. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetEOLFilled)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetEOLFilled\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetEOLFilled call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetEOLFilled((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetEOLFilled((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetEOLFilled\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::StyleGetFaceName(int style)
+   Get the font facename of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetFaceName)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetFaceName\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetFaceName call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::StyleGetFaceName((int) style0).fn_str(), 1)\n\n");
+				#endif
+
+				wxString value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetFaceName((int) style0);
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetFaceName\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxFont wxStyledTextCtrl::StyleGetFont(int style)
+   Get the font of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetFont)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetFont\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetFont call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::StyleGetFont((int) style0) to return new object\n\n");
+				#endif
+
+				wxFont value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetFont((int) style0);
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
+				memcpy(ptr, &value_to_return1, sizeof(wxFont));
+				object_init_ex(return_value, php_wxFont_entry);
+				((wxFont_php*)ptr)->phpObj = return_value;
+				((wxFont_php*)ptr)->InitProperties();
+				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxFont_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetFont\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::StyleGetForeground(int style)
+   Get the foreground colour of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetForeground)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetForeground\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetForeground call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::StyleGetForeground((int) style0) to return new object\n\n");
+				#endif
+
+				wxColour value_to_return1;
+				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetForeground((int) style0);
+				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
+				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				object_init_ex(return_value, php_wxColour_entry);
+				((wxColour_php*)ptr)->phpObj = return_value;
+				((wxColour_php*)ptr)->InitProperties();
+				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo1->native_object = (wxColour_php*) ptr;
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetForeground\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetHotSpot(int style)
+   Get is a style a hotspot or not. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetHotSpot)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetHotSpot\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetHotSpot call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetHotSpot((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetHotSpot((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetHotSpot\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetItalic(int style)
+   Get is a style italic or not. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetItalic)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetItalic\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetItalic call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetItalic((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetItalic((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetItalic\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::StyleGetSize(int style)
+   Get the size of characters of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetSize)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetSize\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetSize call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetSize((int) style0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetSize((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetSize\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::StyleGetSizeFractional(int style)
+   Get the size of characters of a style in points multiplied by 100. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetSizeFractional)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetSizeFractional\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetSizeFractional call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetSizeFractional((int) style0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetSizeFractional((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetSizeFractional\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetUnderline(int style)
+   Get is a style underlined or not. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetUnderline)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetUnderline\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetUnderline call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetUnderline((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetUnderline((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetUnderline\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::StyleGetVisible(int style)
+   Get is a style visible or not. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetVisible)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetVisible\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetVisible call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::StyleGetVisible((int) style0))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetVisible((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetVisible\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::StyleGetWeight(int style)
+   Get the weight of characters of a style. */
+PHP_METHOD(php_wxStyledTextCtrl, StyleGetWeight)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::StyleGetWeight\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::StyleGetWeight call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long style0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&style0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxStyledTextCtrl::StyleGetWeight((int) style0))\n\n");
+				#endif
+
+				ZVAL_LONG(return_value, ((wxStyledTextCtrl_php*)native_object)->StyleGetWeight((int) style0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleGetWeight\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ShowPosition(int pos) */
+PHP_METHOD(php_wxStyledTextCtrl, ShowPosition)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::ShowPosition\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::ShowPosition call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long pos0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&pos0)\n");
+		#endif
+
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::ShowPosition((long) pos0)\n\n");
+				#endif
+
+				((wxStyledTextCtrl_php*)native_object)->ShowPosition((long) pos0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ShowPosition\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::SetStyle(int start, int end, wxTextAttr style) */
+PHP_METHOD(php_wxStyledTextCtrl, SetStyle)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::SetStyle\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zo_wxStyledTextCtrl* current_object;
+	wxphp_object_type current_object_type;
+	wxStyledTextCtrl_php* native_object;
+	void* argument_native_object = NULL;
+	
+	//Other variables used thru the code
+	zval* dummy = NULL;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	int arguments_received = ZEND_NUM_ARGS();
+	bool return_is_user_initialized = false;
+	
+	//Get native object of the php object that called the method
+	if(getThis() != NULL) 
+	{
+		current_object = (zo_wxStyledTextCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxStyledTextCtrl::SetStyle call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+			current_object_type = current_object->object_type;
+			
+			bool reference_type_found = false;
+
+			if(current_object_type == PHP_WXSTYLEDTEXTCTRL_TYPE){
+				references = &((wxStyledTextCtrl_php*)native_object)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long start0;
+	long end0;
+	zval* style0 = 0;
+	wxTextAttr* object_pointer0_2 = 0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 3)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'llO' (&start0, &end0, &style0, php_wxTextAttr_entry)\n");
+		#endif
+
+		char parse_parameters_string[] = "llO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0, &style0, php_wxTextAttr_entry ) == SUCCESS)
+		{
+			if(arguments_received >= 3){
+				if(Z_TYPE_P(style0) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(style0 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(style0 TSRMLS_CC))->native_object;
+					object_pointer0_2 = (wxTextAttr*) argument_native_object;
+					if (!object_pointer0_2 )
+					{
+						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(style0) != IS_NULL)
+				{
+					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::SetStyle((long) start0, (long) end0, *(wxTextAttr*) object_pointer0_2))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)native_object)->SetStyle((long) start0, (long) end0, *(wxTextAttr*) object_pointer0_2));
+
+				references->AddReference(style0, "wxStyledTextCtrl::SetStyle at call with 3 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetStyle\n");
+	}
+}
+/* }}} */
+
