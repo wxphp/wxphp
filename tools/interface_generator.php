@@ -218,18 +218,14 @@ foreach($defEnums[1] as $enumName=>$enumList)
 	{	
 		//Temporary measure to skip some constants (we need to 
 		//compile wxWidgets with wxWebView suuport)
-		if("".stripos($enumValue, "ASCII")."" != "" ||
-			"".stripos($enumValue, "BINARY")."" != "" ||
-			"".stripos($enumValue, "NONE")."" != "" ||
-			"".stripos($enumValue, "wxACC_")."" != "" || 
-			"".stripos($enumValue, "wxAutomationInstance_")."" != "" ||
-			"".stripos($enumValue, "wxCURSOR_")."" != "" ||
-			"".stripos($enumValue, "wxFS_VOL_")."" != "" ||
-			"".stripos($enumValue, "wxMEDIACTRLPLAYER")."" != "" ||
-			"".stripos($enumValue, "wxNAVDIR_")."" != "" ||
-			"".stripos($enumValue, "wxOBJID_")."" != "" ||
-			"".stripos($enumValue, "wxROLE_")."" != "" ||
-			"".stripos($enumValue, "wxWEB_")."" != ""
+		if(
+            "".stripos($enumValue, "wxACC_")."" != "" || 
+            "".stripos($enumValue, "wxAutomationInstance_")."" != "" ||
+            "".stripos($enumValue, "wxCURSOR_")."" != "" ||
+            "".stripos($enumValue, "wxFS_VOL_")."" != "" ||
+            "".stripos($enumValue, "wxNAVDIR_")."" != "" ||
+            "".stripos($enumValue, "wxOBJID_")."" != "" ||
+            "".stripos($enumValue, "wxROLE_")."" != ""
 		)
 			continue;
 			

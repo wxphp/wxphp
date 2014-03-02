@@ -21,14 +21,7 @@ if(!extension_loaded('wxwidgets'))
 }
 
 //Change to correct working directory to be able to execute the script from everywhere
-if($argv[0] == $_SERVER["SCRIPT_NAME"])
-{
-	chdir(str_replace("selector.php" , "", $argv[0]));
-}
-else
-{
-	chdir(getcwd() . "/" . str_replace($_SERVER["SCRIPT_NAME"] , "", $_SERVER["PHP_SELF"]));
-}
+chdir(__DIR__);
 
 //Json serializing functions
 include("../include/functions.php");
