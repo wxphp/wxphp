@@ -21,14 +21,7 @@
 error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 
 //Change to correct working directory to be able to execute the script from everywhere
-if($argv[0] == $_SERVER["SCRIPT_NAME"])
-{
-	chdir(str_replace("merge.php" , "", $argv[0]));
-}
-else
-{
-	chdir(getcwd() . "/" . str_replace($_SERVER["SCRIPT_NAME"] , "", $_SERVER["PHP_SELF"]));
-}
+chdir(__DIR__);
 
 include("source_maker/include/functions.php");
 

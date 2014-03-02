@@ -20,14 +20,7 @@
 error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 
 //Change to correct working directory to be able to execute the script from everywhere
-if($argv[0] == $_SERVER["SCRIPT_NAME"])
-{
-	chdir(str_replace("reference_generator.php" , "", $argv[0]));
-}
-else
-{
-	chdir(getcwd() . "/" . str_replace($_SERVER["SCRIPT_NAME"] , "", $_SERVER["PHP_SELF"]));
-}
+chdir(__DIR__);
 
 include("source_maker/include/functions.php");
 include("source_maker/include/function_generation.php");
@@ -239,18 +232,14 @@ foreach($defEnums[1] as $enumName=>$enumList)
 	{	
 		//Temporary measure to skip some constants (we need to 
 		//compile wxWidgets with wxWebView suuport)
-		if("".stripos($enumValue, "ASCII")."" != "" ||
-			"".stripos($enumValue, "BINARY")."" != "" ||
-			"".stripos($enumValue, "NONE")."" != "" ||
-			"".stripos($enumValue, "wxACC_")."" != "" || 
-			"".stripos($enumValue, "wxAutomationInstance_")."" != "" ||
-			"".stripos($enumValue, "wxCURSOR_")."" != "" ||
-			"".stripos($enumValue, "wxFS_VOL_")."" != "" ||
-			"".stripos($enumValue, "wxMEDIACTRLPLAYER")."" != "" ||
-			"".stripos($enumValue, "wxNAVDIR_")."" != "" ||
-			"".stripos($enumValue, "wxOBJID_")."" != "" ||
-			"".stripos($enumValue, "wxROLE_")."" != "" ||
-			"".stripos($enumValue, "wxWEB_")."" != ""
+		if(
+            "".stripos($enumValue, "wxACC_")."" != "" || 
+            "".stripos($enumValue, "wxAutomationInstance_")."" != "" ||
+            "".stripos($enumValue, "wxCURSOR_")."" != "" ||
+            "".stripos($enumValue, "wxFS_VOL_")."" != "" ||
+            "".stripos($enumValue, "wxNAVDIR_")."" != "" ||
+            "".stripos($enumValue, "wxOBJID_")."" != "" ||
+            "".stripos($enumValue, "wxROLE_")."" != ""
 		)
 			continue;
 			
