@@ -1509,7 +1509,8 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -2733,7 +2734,8 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -4827,7 +4829,8 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{

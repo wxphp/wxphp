@@ -559,7 +559,8 @@ void wxLog_php::DoLogText(const wxString& msg)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -647,7 +648,8 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -5265,7 +5267,8 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -5350,7 +5353,8 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

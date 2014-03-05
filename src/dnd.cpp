@@ -2244,7 +2244,8 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -2321,6 +2322,11 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	else
 	{
 		function_called = FAILURE;
+	}
+    
+    if(function_called != FAILURE)
+	{
+		memcpy ((void*) buf, (void*) Z_STRVAL_P(arguments[1]), Z_STRLEN_P(arguments[1]));
 	}
 	
 	//Delete already used parameters from memory
@@ -2399,7 +2405,8 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -2475,7 +2482,8 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -2551,7 +2559,8 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -7209,7 +7218,8 @@ void wxDropTarget_php::OnLeave()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -7536,7 +7546,8 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -7622,7 +7633,8 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -7813,7 +7825,8 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -7890,7 +7903,8 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -8144,7 +8158,8 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -8221,7 +8236,8 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -8479,7 +8495,8 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -8556,7 +8573,8 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{

@@ -185,7 +185,8 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -9601,7 +9602,8 @@ wxEvent* wxEvent_php::Clone()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -21121,7 +21123,8 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -21206,7 +21209,8 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -54163,7 +54167,8 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -54247,7 +54252,8 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -54331,7 +54337,8 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -54409,7 +54416,8 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -54485,7 +54493,8 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -54563,7 +54572,8 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -54641,7 +54651,8 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -54718,7 +54729,8 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

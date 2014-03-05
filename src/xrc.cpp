@@ -185,7 +185,8 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -436,7 +437,8 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1291,7 +1293,8 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{

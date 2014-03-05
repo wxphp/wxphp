@@ -5028,7 +5028,8 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -5113,7 +5114,8 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -5195,7 +5197,8 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -5277,7 +5280,8 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -5359,7 +5363,8 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -5439,7 +5444,8 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -5521,7 +5527,8 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -5602,7 +5609,8 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -5682,7 +5690,8 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -5757,7 +5766,8 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -5823,7 +5833,8 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -5884,7 +5895,8 @@ wxFont wxAuiToolBarArt_php::GetFont()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -5969,7 +5981,8 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -6045,7 +6058,8 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -6120,7 +6134,8 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -6206,7 +6221,8 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -6281,7 +6297,8 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -6357,7 +6374,8 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -6432,7 +6450,8 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -20681,7 +20700,8 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -20758,7 +20778,8 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -20835,7 +20856,8 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -20912,7 +20934,8 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -20988,7 +21011,8 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -21065,7 +21089,8 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -21142,7 +21167,8 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -21230,7 +21256,8 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
@@ -21307,7 +21334,8 @@ int wxAuiTabArt_php::GetIndentSize()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -21388,7 +21416,8 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
@@ -21469,7 +21498,8 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -21536,7 +21566,8 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -21783,7 +21814,8 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -21861,7 +21893,8 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -21937,7 +21970,8 @@ int wxAuiDockArt_php::GetMetric(int id)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -22015,7 +22049,8 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -22091,7 +22126,8 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -22177,7 +22213,8 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -22269,7 +22306,8 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -22354,7 +22392,8 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
 	{
@@ -22437,7 +22476,8 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -22524,7 +22564,8 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
 	{
@@ -22607,7 +22648,8 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -22689,7 +22731,8 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -23943,7 +23986,8 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{

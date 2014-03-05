@@ -54,6 +54,8 @@
 	{
 		function_called = FAILURE;
 	}
+    
+    <?=class_virtual_method_parameters_set_references($method_definition, $method_name, $class_name)?>
 	
 <? if(count($method_definition["parameters_type"])>0){ ?>
 	//Delete already used parameters from memory

@@ -175,7 +175,8 @@ bool wxEventLoopBase_php::Dispatch()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -246,7 +247,8 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -935,7 +937,8 @@ void wxEventLoopBase_php::OnExit()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1005,7 +1008,8 @@ bool wxEventLoopBase_php::Pending()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1167,7 +1171,8 @@ int wxEventLoopBase_php::Run()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1470,7 +1475,8 @@ void wxEventLoopBase_php::WakeUp()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -2129,7 +2135,8 @@ void wxModule_php::OnExit()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -2191,7 +2198,8 @@ bool wxModule_php::OnInit()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -3604,7 +3612,8 @@ void wxProcess_php::OnTerminate(int pid, int status)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{

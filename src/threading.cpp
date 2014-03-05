@@ -4399,7 +4399,8 @@ void* wxThread_php::Entry()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{

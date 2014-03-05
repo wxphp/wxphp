@@ -15,7 +15,7 @@
  * Generates the code for conversion from normal parameter types to
  * zvals
  * 
- * @param array $method_definitions Data for the method.
+ * @param array $method_definition Data for the method.
  * @param string $method_name Name of the function.
  * @param string $class_name Name of the parent class.
  * 
@@ -188,6 +188,128 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 		
 		$output .= "\t";
 	}
+	
+	return $output;
+}
+
+/**
+ * Generates the code that sets the virtual method reference parameters to
+ * the values returned on the parameters of the php method counterpart
+ * 
+ * @param array $method_definition Data for the method.
+ * @param string $method_name Name of the function.
+ * @param string $class_name Name of the parent class.
+ * 
+ * @return string Generated code ready to insert after the php method is
+ * called on the virtual mehtod body.
+ */
+function class_virtual_method_parameters_set_references($method_definition, $method_name, $class_name)
+{
+	//Positions on the array of function_data where parameters data is stored
+	$parameter_types = "parameters_type";
+	$parameter_names = "parameters_name";
+	$parameter_values = "parameters_default_value";
+	
+	$output = "";
+    
+    $reference_code = "";
+	
+	foreach($method_definition[$parameter_types] as $parameter_index=>$parameter_type)
+	{
+		$parameter_is_array = $method_definition["parameters_is_array"][$parameter_index];
+		
+		$argument_type_modifier = "";
+		$standard_parameter_type = parameter_type($parameter_type, $parameter_is_array, $method_name, $class_name, $argument_type_modifier);
+		$argument_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
+        $parameter_name =  $method_definition[$parameter_names][$parameter_index];
+		
+		switch($standard_parameter_type)
+		{
+			case	"bool":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+                        
+				}
+				break;
+			}	
+			case	"integer":
+			case	"class_enum":
+			case	"global_enum":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+                        
+				}
+				break;
+			}	
+			case	"float":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+					
+				}
+				break;
+			}	
+			case	"characters":
+			case	"void":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+                        $reference_code .= tabs(2) . "memcpy ((void*) $parameter_name, (void*) Z_STRVAL_P(arguments[$parameter_index]), Z_STRLEN_P(arguments[$parameter_index]));\n";
+				}
+				break;
+			}	
+			case	"date":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+					
+				}
+				break;
+			}
+			case	"string":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+					
+				}
+				break;
+			}	
+			case	"strings_array":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+					
+				}
+				break;
+			}	
+			case "object":
+			{
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+					
+				}
+				break;
+			}
+		}
+	}
+    
+    if($reference_code)
+    {
+        $output .= "if(function_called != FAILURE)\n";
+        $output .= tabs(1) . "{\n";
+        $output .= $reference_code;
+        $output .= tabs(1) . "}\n";
+    }
 	
 	return $output;
 }
