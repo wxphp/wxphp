@@ -296,7 +296,8 @@ bool wxConfigBase_php::DeleteAll()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -371,7 +372,8 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -450,7 +452,8 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -741,7 +744,8 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1207,7 +1211,8 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -1287,7 +1292,8 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -1367,7 +1373,8 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -1447,7 +1454,8 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -1523,7 +1531,8 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1599,7 +1608,8 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1666,7 +1676,8 @@ const wxString& wxConfigBase_php::GetPath()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1853,7 +1864,8 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1931,7 +1943,8 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -3287,7 +3300,8 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -3370,7 +3384,8 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -3725,7 +3740,8 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

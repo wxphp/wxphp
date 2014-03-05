@@ -167,7 +167,8 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
 	{
@@ -263,7 +264,8 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
@@ -330,7 +332,8 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -2836,7 +2839,8 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -2915,7 +2919,8 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -2982,7 +2987,8 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -3067,7 +3073,8 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -3310,7 +3317,8 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
 	{
@@ -3893,7 +3901,8 @@ void wxGridCellEditor_php::Reset()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -10790,7 +10799,8 @@ int wxGridTableBase_php::GetNumberCols()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -10852,7 +10862,8 @@ int wxGridTableBase_php::GetNumberRows()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -11238,7 +11249,8 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -13027,7 +13039,8 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{

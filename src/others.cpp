@@ -4574,7 +4574,8 @@ wxString wxTextCompleter_php::GetNext()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -4648,7 +4649,8 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -10516,7 +10518,8 @@ void wxGridCornerHeaderRenderer_php::DrawBorder(const wxGrid& grid, wxDC& dc, wx
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -16744,7 +16747,8 @@ void wxTextCompleterSimple_php::GetCompletions(const wxString& prefix, wxArraySt
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{

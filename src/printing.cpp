@@ -7487,7 +7487,8 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -7562,7 +7563,8 @@ void wxPrintout_php::OnBeginPrinting()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -7632,7 +7634,8 @@ void wxPrintout_php::OnEndDocument()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -7702,7 +7705,8 @@ void wxPrintout_php::OnEndPrinting()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -7772,7 +7776,8 @@ void wxPrintout_php::OnPreparePrinting()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -7851,7 +7856,8 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

@@ -9487,7 +9487,8 @@ void wxSizer_php::RecalcSizes()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -16159,7 +16160,8 @@ wxSize wxSizer_php::CalcMin()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -29829,7 +29831,8 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

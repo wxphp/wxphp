@@ -2846,7 +2846,8 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -2921,7 +2922,8 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -4751,6 +4753,11 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	else
 	{
 		function_called = FAILURE;
+	}
+    
+    if(function_called != FAILURE)
+	{
+		memcpy ((void*) buffer, (void*) Z_STRVAL_P(arguments[0]), Z_STRLEN_P(arguments[0]));
 	}
 	
 	//Delete already used parameters from memory

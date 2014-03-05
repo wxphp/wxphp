@@ -4880,7 +4880,8 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{

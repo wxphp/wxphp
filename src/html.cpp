@@ -185,7 +185,8 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -272,7 +273,8 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -6045,7 +6047,8 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -6122,7 +6125,8 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -6354,7 +6358,8 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -6426,7 +6431,8 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -9355,7 +9361,8 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -9442,7 +9449,8 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -9527,7 +9535,8 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -9614,7 +9623,8 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -9706,7 +9716,8 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{

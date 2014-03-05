@@ -175,7 +175,8 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -261,7 +262,8 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -342,7 +344,8 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -425,7 +428,8 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -508,7 +512,8 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -589,7 +594,8 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -670,7 +676,8 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -752,7 +759,8 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -833,7 +841,8 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -915,7 +924,8 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -1000,7 +1010,8 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
 	{
@@ -1081,7 +1092,8 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -1162,7 +1174,8 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -1251,7 +1264,8 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<8; i++)
 	{
@@ -1440,7 +1454,8 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1531,7 +1546,8 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -1598,7 +1614,8 @@ long wxRibbonArtProvider_php::GetFlags()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1669,7 +1686,8 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1768,7 +1786,8 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
@@ -1859,7 +1878,8 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -1945,7 +1965,8 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -2027,7 +2048,8 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -2120,7 +2142,8 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -2213,7 +2236,8 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -2306,7 +2330,8 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -2396,7 +2421,8 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -2492,7 +2518,8 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
@@ -2707,7 +2734,8 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -2783,7 +2811,8 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -2861,7 +2890,8 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -2938,7 +2968,8 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -3029,7 +3060,8 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<8; i++)
 	{
@@ -3124,7 +3156,8 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<10; i++)
 	{
@@ -6960,7 +6993,8 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -7056,7 +7090,8 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{

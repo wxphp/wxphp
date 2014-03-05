@@ -373,7 +373,8 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -468,7 +469,8 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -4650,7 +4652,8 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{

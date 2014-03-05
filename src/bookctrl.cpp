@@ -2216,7 +2216,8 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
 	{
@@ -2442,7 +2443,8 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -2694,7 +2696,8 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -2770,7 +2773,8 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -2837,7 +2841,8 @@ int wxBookCtrlBase_php::GetSelection()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -2908,7 +2913,8 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -2984,7 +2990,8 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -3060,7 +3067,8 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

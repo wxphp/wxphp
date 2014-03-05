@@ -17642,7 +17642,8 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -17729,7 +17730,8 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -40832,7 +40834,8 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -40914,7 +40917,8 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -40996,7 +41000,8 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41078,7 +41083,8 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41160,7 +41166,8 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41242,7 +41249,8 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41324,7 +41332,8 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41406,7 +41415,8 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41488,7 +41498,8 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41570,7 +41581,8 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41654,7 +41666,8 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
 	{
@@ -41736,7 +41749,8 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -41818,7 +41832,8 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
@@ -42009,7 +42024,8 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -42324,7 +42340,8 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -42401,7 +42418,8 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{

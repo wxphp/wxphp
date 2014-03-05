@@ -817,15 +817,19 @@ function get_method_type_link($type, $type_name, $function_name, $class_name=nul
 			switch($declaration_modifier)
 			{
 				case "const_pointer_pointer": //const void**
+                    $method_type = "string $type_name";
+                    break;
+                
 				case "pointer_pointer":
+                    $method_type = "string[] &$type_name";
+                    break;
+                
 				case "const_pointer": //const void*
+                    $method_type = "string $type_name";
+                    break;
+                
 				case "pointer": //void*
-					$parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-					$parameters .= "\tlong " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
-					
-					if($declaration_modifier == "pointer" || $declaration_modifier == "pointer_pointer")
-						$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
-						
+					$method_type = "string &$type_name";
 					break;
 			}
 			break;

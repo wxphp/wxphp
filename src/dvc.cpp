@@ -1463,7 +1463,8 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -1534,7 +1535,8 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1611,7 +1613,8 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -1701,7 +1704,8 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -2247,7 +2251,8 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -3328,7 +3333,8 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -3805,7 +3811,8 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -3872,7 +3879,8 @@ unsigned int wxDataViewListModel_php::GetCount()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -3944,7 +3952,8 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -4153,7 +4162,8 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
@@ -5418,7 +5428,8 @@ bool wxDataViewModelNotifier_php::Cleared()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -5612,7 +5623,8 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -5689,7 +5701,8 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -5768,7 +5781,8 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -5835,7 +5849,8 @@ void wxDataViewModelNotifier_php::Resort()
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -6029,7 +6044,8 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
@@ -7391,7 +7407,8 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -8019,7 +8036,8 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
@@ -10120,7 +10138,8 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	
 	if(function_called == FAILURE)
 	{
@@ -10465,7 +10484,8 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{

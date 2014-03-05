@@ -757,7 +757,8 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 	{
 		function_called = FAILURE;
 	}
-	
+    
+    	
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
