@@ -69,7 +69,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		wxMessageBox(errorMessage, "Error", wxOK|wxICON_ERROR);
 	}
 	
-	efree(arg[0]);
+	zval_ptr_dtor(&arg[0]);
 	efree(wxname);
 	zval_ptr_dtor(&fc_name);
 }
