@@ -116,8 +116,6 @@ zend_object_value php_wxEventFilter_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEventFilter_free, NULL TSRMLS_CC);
@@ -359,8 +357,6 @@ zend_object_value php_wxKeyboardState_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxKeyboardState_free, NULL TSRMLS_CC);
@@ -2204,8 +2200,6 @@ zend_object_value php_wxCalendarEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCalendarEvent_free, NULL TSRMLS_CC);
@@ -2492,8 +2486,6 @@ zend_object_value php_wxColourPickerEvent_new(zend_class_entry *class_type TSRML
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColourPickerEvent_free, NULL TSRMLS_CC);
@@ -2929,8 +2921,6 @@ zend_object_value php_wxCollapsiblePaneEvent_new(zend_class_entry *class_type TS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCollapsiblePaneEvent_free, NULL TSRMLS_CC);
@@ -3319,8 +3309,6 @@ zend_object_value php_wxDateEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDateEvent_free, NULL TSRMLS_CC);
@@ -3625,8 +3613,6 @@ zend_object_value php_wxEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEvent_free, NULL TSRMLS_CC);
@@ -9699,8 +9685,6 @@ zend_object_value php_wxEventBlocker_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEventBlocker_free, NULL TSRMLS_CC);
@@ -10003,8 +9987,6 @@ zend_object_value php_wxEvtHandler_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEvtHandler_free, NULL TSRMLS_CC);
@@ -10865,7 +10847,7 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 		wxMessageBox(errorMessage, "Error", wxOK|wxICON_ERROR);
 	}
 	
-	efree(arg[0]);
+	zval_ptr_dtor(&arg[0]);
 	efree(wxname);
 	zval_ptr_dtor(&fc_name);
 }
@@ -21922,8 +21904,6 @@ zend_object_value php_wxKeyEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxKeyEvent_free, NULL TSRMLS_CC);
@@ -23029,8 +23009,6 @@ zend_object_value php_wxScrollWinEvent_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxScrollWinEvent_free, NULL TSRMLS_CC);
@@ -23630,8 +23608,6 @@ zend_object_value php_wxSysColourChangedEvent_new(zend_class_entry *class_type T
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSysColourChangedEvent_free, NULL TSRMLS_CC);
@@ -23795,8 +23771,6 @@ zend_object_value php_wxCommandEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCommandEvent_free, NULL TSRMLS_CC);
@@ -26395,8 +26369,6 @@ zend_object_value php_wxWindowCreateEvent_new(zend_class_entry *class_type TSRML
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWindowCreateEvent_free, NULL TSRMLS_CC);
@@ -26715,8 +26687,6 @@ zend_object_value php_wxPaintEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPaintEvent_free, NULL TSRMLS_CC);
@@ -26896,8 +26866,6 @@ zend_object_value php_wxMaximizeEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMaximizeEvent_free, NULL TSRMLS_CC);
@@ -27077,8 +27045,6 @@ zend_object_value php_wxUpdateUIEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxUpdateUIEvent_free, NULL TSRMLS_CC);
@@ -29070,8 +29036,6 @@ zend_object_value php_wxClipboardTextEvent_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxClipboardTextEvent_free, NULL TSRMLS_CC);
@@ -29263,8 +29227,6 @@ zend_object_value php_wxMouseEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMouseEvent_free, NULL TSRMLS_CC);
@@ -32733,8 +32695,6 @@ zend_object_value php_wxActivateEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxActivateEvent_free, NULL TSRMLS_CC);
@@ -33047,8 +33007,6 @@ zend_object_value php_wxContextMenuEvent_new(zend_class_entry *class_type TSRMLS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxContextMenuEvent_free, NULL TSRMLS_CC);
@@ -33509,8 +33467,6 @@ zend_object_value php_wxEraseEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEraseEvent_free, NULL TSRMLS_CC);
@@ -33841,8 +33797,6 @@ zend_object_value php_wxFocusEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFocusEvent_free, NULL TSRMLS_CC);
@@ -34274,8 +34228,6 @@ zend_object_value php_wxChildFocusEvent_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxChildFocusEvent_free, NULL TSRMLS_CC);
@@ -34594,8 +34546,6 @@ zend_object_value php_wxNotifyEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxNotifyEvent_free, NULL TSRMLS_CC);
@@ -35282,8 +35232,6 @@ zend_object_value php_wxThreadEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxThreadEvent_free, NULL TSRMLS_CC);
@@ -36296,8 +36244,6 @@ zend_object_value php_wxHelpEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHelpEvent_free, NULL TSRMLS_CC);
@@ -36970,8 +36916,6 @@ zend_object_value php_wxScrollEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxScrollEvent_free, NULL TSRMLS_CC);
@@ -37583,8 +37527,6 @@ zend_object_value php_wxIdleEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxIdleEvent_free, NULL TSRMLS_CC);
@@ -38160,8 +38102,6 @@ zend_object_value php_wxInitDialogEvent_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxInitDialogEvent_free, NULL TSRMLS_CC);
@@ -38341,8 +38281,6 @@ zend_object_value php_wxWindowDestroyEvent_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWindowDestroyEvent_free, NULL TSRMLS_CC);
@@ -38661,8 +38599,6 @@ zend_object_value php_wxNavigationKeyEvent_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxNavigationKeyEvent_free, NULL TSRMLS_CC);
@@ -39765,8 +39701,6 @@ zend_object_value php_wxCloseEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCloseEvent_free, NULL TSRMLS_CC);
@@ -40470,8 +40404,6 @@ zend_object_value php_wxMenuEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMenuEvent_free, NULL TSRMLS_CC);
@@ -41008,8 +40940,6 @@ zend_object_value php_wxMoveEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMoveEvent_free, NULL TSRMLS_CC);
@@ -41659,8 +41589,6 @@ zend_object_value php_wxSizeEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSizeEvent_free, NULL TSRMLS_CC);
@@ -42308,8 +42236,6 @@ zend_object_value php_wxSetCursorEvent_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSetCursorEvent_free, NULL TSRMLS_CC);
@@ -43030,8 +42956,6 @@ zend_object_value php_wxFileCtrlEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileCtrlEvent_free, NULL TSRMLS_CC);
@@ -43956,8 +43880,6 @@ zend_object_value php_wxFileDirPickerEvent_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileDirPickerEvent_free, NULL TSRMLS_CC);
@@ -44355,8 +44277,6 @@ zend_object_value php_wxFontPickerEvent_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontPickerEvent_free, NULL TSRMLS_CC);
@@ -44792,8 +44712,6 @@ zend_object_value php_wxFileSystemWatcherEvent_new(zend_class_entry *class_type 
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemWatcherEvent_free, NULL TSRMLS_CC);
@@ -45527,8 +45445,6 @@ zend_object_value php_wxGridEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridEvent_free, NULL TSRMLS_CC);
@@ -46632,8 +46548,6 @@ zend_object_value php_wxGridSizeEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridSizeEvent_free, NULL TSRMLS_CC);
@@ -47517,8 +47431,6 @@ zend_object_value php_wxGridRangeSelectEvent_new(zend_class_entry *class_type TS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridRangeSelectEvent_free, NULL TSRMLS_CC);
@@ -48913,8 +48825,6 @@ zend_object_value php_wxGridEditorCreatedEvent_new(zend_class_entry *class_type 
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridEditorCreatedEvent_free, NULL TSRMLS_CC);
@@ -49798,8 +49708,6 @@ zend_object_value php_wxHeaderCtrlEvent_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHeaderCtrlEvent_free, NULL TSRMLS_CC);
@@ -50181,8 +50089,6 @@ zend_object_value php_wxHyperlinkEvent_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHyperlinkEvent_free, NULL TSRMLS_CC);
@@ -50579,8 +50485,6 @@ zend_object_value php_wxQueryLayoutInfoEvent_new(zend_class_entry *class_type TS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxQueryLayoutInfoEvent_free, NULL TSRMLS_CC);
@@ -51782,8 +51686,6 @@ zend_object_value php_wxCalculateLayoutEvent_new(zend_class_entry *class_type TS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCalculateLayoutEvent_free, NULL TSRMLS_CC);
@@ -52388,8 +52290,6 @@ zend_object_value php_wxListEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxListEvent_free, NULL TSRMLS_CC);
@@ -53785,8 +53685,6 @@ zend_object_value php_wxMediaEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMediaEvent_free, NULL TSRMLS_CC);
@@ -53978,8 +53876,6 @@ zend_object_value php_wxMouseEventsManager_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMouseEventsManager_free, NULL TSRMLS_CC);
@@ -54960,8 +54856,6 @@ zend_object_value php_wxMouseState_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMouseState_free, NULL TSRMLS_CC);
@@ -57049,8 +56943,6 @@ zend_object_value php_wxProcessEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxProcessEvent_free, NULL TSRMLS_CC);
@@ -57448,8 +57340,6 @@ zend_object_value php_wxRibbonBarEvent_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonBarEvent_free, NULL TSRMLS_CC);
@@ -57913,8 +57803,6 @@ zend_object_value php_wxRibbonButtonBarEvent_new(zend_class_entry *class_type TS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonButtonBarEvent_free, NULL TSRMLS_CC);
@@ -58531,8 +58419,6 @@ zend_object_value php_wxRibbonGalleryEvent_new(zend_class_entry *class_type TSRM
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonGalleryEvent_free, NULL TSRMLS_CC);
@@ -59269,8 +59155,6 @@ zend_object_value php_wxSashEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSashEvent_free, NULL TSRMLS_CC);
@@ -59761,8 +59645,6 @@ zend_object_value php_wxSpinEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSpinEvent_free, NULL TSRMLS_CC);
@@ -60153,8 +60035,6 @@ zend_object_value php_wxSpinDoubleEvent_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSpinDoubleEvent_free, NULL TSRMLS_CC);
@@ -60614,8 +60494,6 @@ zend_object_value php_wxSplitterEvent_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSplitterEvent_free, NULL TSRMLS_CC);
@@ -61339,8 +61217,6 @@ zend_object_value php_wxStyledTextEvent_new(zend_class_entry *class_type TSRMLS_
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxStyledTextEvent_free, NULL TSRMLS_CC);
@@ -65633,8 +65509,6 @@ zend_object_value php_wxTaskBarIconEvent_new(zend_class_entry *class_type TSRMLS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTaskBarIconEvent_free, NULL TSRMLS_CC);
@@ -65823,8 +65697,6 @@ zend_object_value php_wxTimerEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTimerEvent_free, NULL TSRMLS_CC);
@@ -66141,8 +66013,6 @@ zend_object_value php_wxTreeEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTreeEvent_free, NULL TSRMLS_CC);
@@ -67195,8 +67065,6 @@ zend_object_value php_wxWebViewEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewEvent_free, NULL TSRMLS_CC);
@@ -67608,8 +67476,6 @@ zend_object_value php_wxWizardEvent_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWizardEvent_free, NULL TSRMLS_CC);

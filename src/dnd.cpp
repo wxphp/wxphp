@@ -116,8 +116,6 @@ zend_object_value php_wxClipboard_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxClipboard_free, NULL TSRMLS_CC);
@@ -1578,8 +1576,6 @@ zend_object_value php_wxDataFormat_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataFormat_free, NULL TSRMLS_CC);
@@ -2174,8 +2170,6 @@ zend_object_value php_wxDataObject_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataObject_free, NULL TSRMLS_CC);
@@ -3029,8 +3023,6 @@ zend_object_value php_wxCustomDataObject_new(zend_class_entry *class_type TSRMLS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCustomDataObject_free, NULL TSRMLS_CC);
@@ -3806,8 +3798,6 @@ zend_object_value php_wxDataObjectComposite_new(zend_class_entry *class_type TSR
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataObjectComposite_free, NULL TSRMLS_CC);
@@ -4363,8 +4353,6 @@ zend_object_value php_wxDataObjectSimple_new(zend_class_entry *class_type TSRMLS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataObjectSimple_free, NULL TSRMLS_CC);
@@ -5181,8 +5169,6 @@ zend_object_value php_wxBitmapDataObject_new(zend_class_entry *class_type TSRMLS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBitmapDataObject_free, NULL TSRMLS_CC);
@@ -5579,8 +5565,6 @@ zend_object_value php_wxURLDataObject_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxURLDataObject_free, NULL TSRMLS_CC);
@@ -5938,8 +5922,6 @@ zend_object_value php_wxTextDataObject_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextDataObject_free, NULL TSRMLS_CC);
@@ -6784,8 +6766,6 @@ zend_object_value php_wxFileDataObject_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileDataObject_free, NULL TSRMLS_CC);
@@ -7159,8 +7139,6 @@ zend_object_value php_wxDropTarget_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDropTarget_free, NULL TSRMLS_CC);
@@ -8003,8 +7981,6 @@ zend_object_value php_wxTextDropTarget_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextDropTarget_free, NULL TSRMLS_CC);
@@ -8336,8 +8312,6 @@ zend_object_value php_wxFileDropTarget_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileDropTarget_free, NULL TSRMLS_CC);

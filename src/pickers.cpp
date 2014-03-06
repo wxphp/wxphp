@@ -86,8 +86,6 @@ zend_object_value php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColourPickerCtrl_free, NULL TSRMLS_CC);
@@ -977,8 +975,6 @@ zend_object_value php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDatePickerCtrl_free, NULL TSRMLS_CC);
@@ -1969,8 +1965,6 @@ zend_object_value php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFilePickerCtrl_free, NULL TSRMLS_CC);
@@ -3037,8 +3031,6 @@ zend_object_value php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDirPickerCtrl_free, NULL TSRMLS_CC);
@@ -4076,8 +4068,6 @@ zend_object_value php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontPickerCtrl_free, NULL TSRMLS_CC);
@@ -5126,8 +5116,6 @@ zend_object_value php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPickerBase_free, NULL TSRMLS_CC);
@@ -7036,8 +7024,6 @@ zend_object_value php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
 	object_properties_init(&custom_object->zo, class_type);
-	MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 #endif
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTimePickerCtrl_free, NULL TSRMLS_CC);
