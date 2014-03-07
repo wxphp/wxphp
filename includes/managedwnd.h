@@ -30,13 +30,10 @@ class wxFrame_php: public wxFrame{
 		
 	wxStatusBar* OnCreateStatusBar(int number, long style, wxWindowID id, const wxString& name);
 	wxToolBar* OnCreateToolBar(long style, wxWindowID id, const wxString& name);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -338,13 +335,10 @@ class wxMDIClientWindow_php: public wxMDIClientWindow{
 	
 	wxMDIClientWindow_php():wxMDIClientWindow(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -610,13 +604,10 @@ class wxMDIParentFrame_php: public wxMDIParentFrame{
 	wxMDIParentFrame_php(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDEFAULT_FRAME_STYLE|wxVSCROLL|wxHSCROLL, const wxString& name=wxFrameNameStr):wxMDIParentFrame(parent, id, title, pos, size, style, name){}
 		
 	wxMDIClientWindow* OnCreateClient();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -928,13 +919,10 @@ class wxMDIChildFrame_php: public wxMDIChildFrame{
 	wxMDIChildFrame_php(wxMDIParentFrame* parent, wxWindowID id, const wxString& title, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDEFAULT_FRAME_STYLE, const wxString& name=wxFrameNameStr):wxMDIChildFrame(parent, id, title, pos, size, style, name){}
 	wxMDIChildFrame_php():wxMDIChildFrame(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1240,13 +1228,10 @@ class wxMiniFrame_php: public wxMiniFrame{
 	wxMiniFrame_php():wxMiniFrame(){}
 	wxMiniFrame_php(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCAPTION|wxRESIZE_BORDER, const wxString& name=wxFrameNameStr):wxMiniFrame(parent, id, title, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1548,13 +1533,10 @@ class wxPopupWindow_php: public wxPopupWindow{
 	
 	wxPopupWindow_php(wxWindow* parent, int flags=wxBORDER_NONE):wxPopupWindow(parent, flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1819,13 +1801,10 @@ class wxPopupTransientWindow_php: public wxPopupTransientWindow{
 	
 	wxPopupTransientWindow_php(wxWindow* parent, int flags=wxBORDER_NONE):wxPopupTransientWindow(parent, flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2093,13 +2072,10 @@ class wxPropertySheetDialog_php: public wxPropertySheetDialog{
 	
 	wxPropertySheetDialog_php(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDEFAULT_DIALOG_STYLE, const wxString& name=wxDialogNameStr):wxPropertySheetDialog(parent, id, title, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2420,13 +2396,10 @@ class wxSplashScreen_php: public wxSplashScreen{
 	
 	wxSplashScreen_php(const wxBitmap& bitmap, long splashStyle, int milliseconds, wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxBORDER_SIMPLE|wxFRAME_NO_TASKBAR|wxSTAY_ON_TOP):wxSplashScreen(bitmap, splashStyle, milliseconds, parent, id, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2731,13 +2704,10 @@ class wxTopLevelWindow_php: public wxTopLevelWindow{
 	wxTopLevelWindow_php():wxTopLevelWindow(){}
 	wxTopLevelWindow_php(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDEFAULT_FRAME_STYLE, const wxString& name=wxFrameNameStr):wxTopLevelWindow(parent, id, title, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -27,13 +27,10 @@ class wxClientData_php: public wxClientData{
 	
 	wxClientData_php():wxClientData(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -65,13 +62,10 @@ class wxTreeItemData_php: public wxTreeItemData{
 	
 	wxTreeItemData_php():wxTreeItemData(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -110,7 +110,10 @@ void php_<?=$class_name?>_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+<?if(class_has_properties($class_name)){?>
+			custom_object->native_object->UninitProperties();
+<?}?>       
+            delete custom_object->native_object;
 <?}?>			
 			custom_object->native_object = NULL;
 		}
@@ -165,14 +168,14 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_<?=$class_name?>_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
+    custom_object->native_object = NULL;
+<? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
 #if PHP_VERSION_ID > 50399
+    MAKE_STD_ZVAL(temp);
+	Z_TYPE_P(temp) = IS_OBJECT;
 	Z_OBJVAL_P(temp) = retval;
 #endif
 
-    custom_object->native_object = NULL;
-<? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
-    MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
 	custom_object->native_object = new <?=$class_name?>_php();
 	custom_object->native_object->phpObj = temp;	
 #ifdef ZTS 

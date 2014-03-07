@@ -75,7 +75,8 @@ void php_wxAuiToolBarEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxAuiToolBarEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiToolBarEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBAREVENT_TYPE;
@@ -572,7 +569,8 @@ void php_wxAuiToolBarItem_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -617,10 +615,6 @@ zend_object_value php_wxAuiToolBarItem_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiToolBarItem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBARITEM_TYPE;
@@ -746,8 +740,7 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiToolBarItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4925,7 +4918,8 @@ void php_wxAuiToolBarArt_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4970,10 +4964,6 @@ zend_object_value php_wxAuiToolBarArt_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiToolBarArt_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBARART_TYPE;
@@ -5113,7 +5103,7 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5196,7 +5186,7 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5279,7 +5269,7 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5362,7 +5352,7 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5443,7 +5433,7 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5526,7 +5516,7 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5608,7 +5598,7 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5689,7 +5679,7 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5765,7 +5755,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5980,7 +5970,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6133,7 +6123,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6220,7 +6210,7 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6296,7 +6286,7 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6373,7 +6363,7 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6449,7 +6439,7 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6495,7 +6485,8 @@ void php_wxAuiDefaultToolBarArt_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -6540,10 +6531,6 @@ zend_object_value php_wxAuiDefaultToolBarArt_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiDefaultToolBarArt_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIDEFAULTTOOLBARART_TYPE;
@@ -8315,7 +8302,6 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFont)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -8480,7 +8466,6 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 				memcpy(ptr, &value_to_return3, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo3 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxSize_php*) ptr;
 
@@ -8744,7 +8729,6 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 				memcpy(ptr, &value_to_return3, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo3 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxSize_php*) ptr;
 
@@ -9249,8 +9233,7 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiDefaultToolBarArt*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9310,10 +9293,6 @@ zend_object_value php_wxAuiToolBar_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiToolBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITOOLBAR_TYPE;
@@ -9532,8 +9511,7 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiToolBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -14437,7 +14415,6 @@ PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxSize_php*) ptr;
 
@@ -14739,7 +14716,6 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxBitmap_php*) ptr;
 
@@ -14843,7 +14819,6 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -16848,10 +16823,6 @@ zend_object_value php_wxAuiNotebook_new(zend_class_entry *class_type TSRMLS_DC)
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiNotebook_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUINOTEBOOK_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -17069,8 +17040,7 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiNotebook*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -19162,7 +19132,6 @@ PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxBitmap_php*) ptr;
 
@@ -20577,7 +20546,8 @@ void php_wxAuiTabArt_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -20622,10 +20592,6 @@ zend_object_value php_wxAuiTabArt_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiTabArt_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUITABART_TYPE;
@@ -20691,7 +20657,7 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -20769,7 +20735,7 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -20847,7 +20813,7 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -20925,7 +20891,7 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21002,7 +20968,7 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21080,7 +21046,7 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21158,7 +21124,7 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21247,7 +21213,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21407,7 +21373,7 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21489,7 +21455,7 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21608,7 +21574,8 @@ void php_wxAuiDockArt_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -21653,10 +21620,6 @@ zend_object_value php_wxAuiDockArt_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiDockArt_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIDOCKART_TYPE;
@@ -21725,8 +21688,7 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiDockArt*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -21803,7 +21765,7 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21882,7 +21844,7 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21959,7 +21921,7 @@ int wxAuiDockArt_php::GetMetric(int id)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22038,7 +22000,7 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22115,7 +22077,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22202,7 +22164,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22295,7 +22257,7 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22381,7 +22343,7 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22465,7 +22427,7 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22553,7 +22515,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	//Delete already used parameters from memory
 	for(int i=0; i<5; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22637,7 +22599,7 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22720,7 +22682,7 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -22781,10 +22743,6 @@ zend_object_value php_wxAuiManager_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiManager_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIMANAGER_TYPE;
@@ -22901,8 +22859,7 @@ PHP_METHOD(php_wxAuiManager, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiManager*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -23973,7 +23930,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -25764,7 +25721,8 @@ void php_wxAuiPaneInfo_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -25809,10 +25767,6 @@ zend_object_value php_wxAuiPaneInfo_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiPaneInfo_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIPANEINFO_TYPE;
@@ -25938,8 +25892,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiPaneInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -35048,7 +35001,8 @@ void php_wxAuiManagerEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -35093,10 +35047,6 @@ zend_object_value php_wxAuiManagerEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAuiManagerEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXAUIMANAGEREVENT_TYPE;
@@ -35181,8 +35131,7 @@ PHP_METHOD(php_wxAuiManagerEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAuiManagerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

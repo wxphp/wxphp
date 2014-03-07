@@ -32,13 +32,10 @@ class wxEventLoopBase_php: public wxEventLoopBase{
 	bool Pending() const;
 	int Run();
 	void WakeUp();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -81,13 +78,10 @@ class wxEventLoopActivator_php: public wxEventLoopActivator{
 	
 	wxEventLoopActivator_php(wxEventLoopBase* loop):wxEventLoopActivator(loop){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -121,13 +115,10 @@ class wxModule_php: public wxModule{
 		
 	void OnExit();
 	bool OnInit();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -167,13 +158,10 @@ class wxProcess_php: public wxProcess{
 	wxProcess_php(int flags):wxProcess(flags){}
 		
 	void OnTerminate(int pid, int status);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -243,13 +231,10 @@ class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{
 	wxSingleInstanceChecker_php():wxSingleInstanceChecker(){}
 	wxSingleInstanceChecker_php(const wxString& name, const wxString& path=wxEmptyString):wxSingleInstanceChecker(name, path){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

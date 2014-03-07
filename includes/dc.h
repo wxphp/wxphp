@@ -26,13 +26,10 @@ class wxDC_php: public wxDC{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -158,13 +155,10 @@ class wxBufferedDC_php: public wxBufferedDC{
 	wxBufferedDC_php(wxDC* dc, const wxSize& area, int style=wxBUFFER_CLIENT_AREA):wxBufferedDC(dc, area, style){}
 	wxBufferedDC_php(wxDC* dc, wxBitmap& buffer=wxNullBitmap, int style=wxBUFFER_CLIENT_AREA):wxBufferedDC(dc, buffer, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -292,13 +286,10 @@ class wxAutoBufferedPaintDC_php: public wxAutoBufferedPaintDC{
 	
 	wxAutoBufferedPaintDC_php(wxWindow* window):wxAutoBufferedPaintDC(window){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -427,13 +418,10 @@ class wxBufferedPaintDC_php: public wxBufferedPaintDC{
 	wxBufferedPaintDC_php(wxWindow* window, wxBitmap& buffer, int style=wxBUFFER_CLIENT_AREA):wxBufferedPaintDC(window, buffer, style){}
 	wxBufferedPaintDC_php(wxWindow* window, int style=wxBUFFER_CLIENT_AREA):wxBufferedPaintDC(window, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -561,13 +549,10 @@ class wxPaintDC_php: public wxPaintDC{
 	
 	wxPaintDC_php(wxWindow* window):wxPaintDC(window){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -692,13 +677,10 @@ class wxClientDC_php: public wxClientDC{
 	
 	wxClientDC_php(wxWindow* window):wxClientDC(window){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -823,13 +805,10 @@ class wxWindowDC_php: public wxWindowDC{
 	
 	wxWindowDC_php(wxWindow* window):wxWindowDC(window){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -956,13 +935,10 @@ class wxMemoryDC_php: public wxMemoryDC{
 	wxMemoryDC_php(wxDC* dc):wxMemoryDC(dc){}
 	wxMemoryDC_php(wxBitmap& bitmap):wxMemoryDC(bitmap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1089,13 +1065,10 @@ class wxMirrorDC_php: public wxMirrorDC{
 	
 	wxMirrorDC_php(wxDC& dc, bool mirror):wxMirrorDC(dc, mirror){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1221,13 +1194,10 @@ class wxPostScriptDC_php: public wxPostScriptDC{
 	wxPostScriptDC_php():wxPostScriptDC(){}
 	wxPostScriptDC_php(const wxPrintData& printData):wxPostScriptDC(printData){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1352,13 +1322,10 @@ class wxScreenDC_php: public wxScreenDC{
 	
 	wxScreenDC_php():wxScreenDC(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

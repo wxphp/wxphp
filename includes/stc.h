@@ -27,13 +27,10 @@ class wxStyledTextCtrl_php: public wxStyledTextCtrl{
 	
 	wxStyledTextCtrl_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxSTCNameStr):wxStyledTextCtrl(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

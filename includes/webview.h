@@ -27,13 +27,10 @@ class wxWebViewHistoryItem_php: public wxWebViewHistoryItem{
 	
 	wxWebViewHistoryItem_php(const wxString& url, const wxString& title):wxWebViewHistoryItem(url, title){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -68,13 +65,10 @@ class wxWebViewHandler_php: public wxWebViewHandler{
 	wxWebViewHandler_php(const wxString& scheme):wxWebViewHandler(scheme){}
 		
 	wxFSFile* GetFile(const wxString& uri);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -107,13 +101,10 @@ class wxWebViewArchiveHandler_php: public wxWebViewArchiveHandler{
 	
 	wxWebViewArchiveHandler_php(const wxString& scheme):wxWebViewArchiveHandler(scheme){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

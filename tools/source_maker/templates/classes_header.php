@@ -8,19 +8,20 @@ class <?=$class_name?>_php<?if($class_name == "wxScrolled"){?>: public <?=$class
 	<?=class_constructors_declaration($class_name, $class_methods)?>
 	
 	<?=class_virtual_declarations($class_name, $class_methods)?>
-	
-	void InitProperties(){
-<?if(isset($defClassProperties[$class_name])){?>
-<?=class_init_properties_code($class_name)?>
+
+<?if(class_has_properties($class_name)){?>
+    <?=class_init_properties_code($class_name)?>
+
+    <?=class_uninit_properties_code($class_name)?>
+
+    void** properties;
 <?}?>
-	}
 	
 <?if($class_name == "wxEvtHandler"){?>
 	void onEvent(wxEvent& evnt);
 <? } ?>
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

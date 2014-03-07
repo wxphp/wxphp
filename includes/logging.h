@@ -28,13 +28,10 @@ class wxLog_php: public wxLog{
 		
 	void DoLogText(const wxString& msg);
 	void DoLogTextAtLevel(wxLogLevel level, const wxString& msg);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -91,13 +88,10 @@ class wxLogChain_php: public wxLogChain{
 	
 	wxLogChain_php(wxLog* logger):wxLogChain(logger){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -160,13 +154,10 @@ class wxLogInterposer_php: public wxLogInterposer{
 	
 	wxLogInterposer_php():wxLogInterposer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -229,13 +220,10 @@ class wxLogBuffer_php: public wxLogBuffer{
 	
 	wxLogBuffer_php():wxLogBuffer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -296,13 +284,10 @@ class wxLogWindow_php: public wxLogWindow{
 		
 	bool OnFrameClose(wxFrame* frame);
 	void OnFrameDelete(wxFrame* frame);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -367,8 +352,8 @@ class wxLogGui_php: public wxLogGui{
 	
 	wxLogGui_php():wxLogGui(){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[6];
 
 		properties[0] = &m_aMessages;
@@ -379,10 +364,15 @@ class wxLogGui_php: public wxLogGui{
 		properties[5] = &m_bHasMessages;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -441,13 +431,10 @@ class wxLogTextCtrl_php: public wxLogTextCtrl{
 	
 	wxLogTextCtrl_php(wxTextCtrl* pTextCtrl):wxLogTextCtrl(pTextCtrl){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -29,13 +29,10 @@ class wxURI_php: public wxURI{
 	wxURI_php(const wxString& uri):wxURI(uri){}
 	wxURI_php(const wxURI& uri):wxURI(uri){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

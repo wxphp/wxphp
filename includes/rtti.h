@@ -27,13 +27,10 @@ class wxRefCounter_php: public wxRefCounter{
 	
 	wxRefCounter_php():wxRefCounter(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -69,17 +66,22 @@ class wxObject_php: public wxObject{
 	wxObject_php(const wxObject& other):wxObject(other){}
 	wxObject_php():wxObject(){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[1];
 
 		properties[0] = &m_refData;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -117,13 +119,10 @@ class wxClassInfo_php: public wxClassInfo{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

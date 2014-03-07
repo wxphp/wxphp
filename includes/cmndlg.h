@@ -27,13 +27,10 @@ class wxAboutDialogInfo_php: public wxAboutDialogInfo{
 	
 	wxAboutDialogInfo_php():wxAboutDialogInfo(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -86,13 +83,10 @@ class wxBusyInfo_php: public wxBusyInfo{
 	
 	wxBusyInfo_php(const wxString& msg, wxWindow* parent=NULL):wxBusyInfo(msg, parent){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -125,13 +119,10 @@ class wxSingleChoiceDialog_php: public wxSingleChoiceDialog{
 	wxSingleChoiceDialog_php(wxWindow* parent, const wxString& message, const wxString& caption, int n, const wxString* choices, void** clientData=NULL, long style=wxCHOICEDLG_STYLE, const wxPoint& pos=wxDefaultPosition):wxSingleChoiceDialog(parent, message, caption, n, choices, clientData, style, pos){}
 	wxSingleChoiceDialog_php(wxWindow* parent, const wxString& message, const wxString& caption, const wxArrayString& choices, void** clientData=NULL, long style=wxCHOICEDLG_STYLE, const wxPoint& pos=wxDefaultPosition):wxSingleChoiceDialog(parent, message, caption, choices, clientData, style, pos){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -448,13 +439,10 @@ class wxPrintDialogData_php: public wxPrintDialogData{
 	wxPrintDialogData_php():wxPrintDialogData(){}
 	wxPrintDialogData_php(const wxPrintData& printData):wxPrintDialogData(printData){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -516,13 +504,10 @@ class wxColourDialog_php: public wxColourDialog{
 	
 	wxColourDialog_php(wxWindow* parent, wxColourData* data=NULL):wxColourDialog(parent, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -835,13 +820,10 @@ class wxColourData_php: public wxColourData{
 	
 	wxColourData_php():wxColourData(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -888,13 +870,10 @@ class wxDialog_php: public wxDialog{
 	wxDialog_php(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDEFAULT_DIALOG_STYLE, const wxString& name=wxDialogNameStr):wxDialog(parent, id, title, pos, size, style, name){}
 	wxDialog_php():wxDialog(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1206,13 +1185,10 @@ class wxDirDialog_php: public wxDirDialog{
 	
 	wxDirDialog_php(wxWindow* parent, const wxString& message=wxDirSelectorPromptStr, const wxString& defaultPath=wxEmptyString, long style=wxDD_DEFAULT_STYLE, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, const wxString& name=wxDirDialogNameStr):wxDirDialog(parent, message, defaultPath, style, pos, size, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1528,13 +1504,10 @@ class wxFindReplaceData_php: public wxFindReplaceData{
 	
 	wxFindReplaceData_php(wxUint32 flags=0):wxFindReplaceData(flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1579,13 +1552,10 @@ class wxFindReplaceDialog_php: public wxFindReplaceDialog{
 	wxFindReplaceDialog_php(wxWindow* parent, wxFindReplaceData* data, const wxString& title, int style=0):wxFindReplaceDialog(parent, data, title, style){}
 	wxFindReplaceDialog_php():wxFindReplaceDialog(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1898,13 +1868,10 @@ class wxFileDialog_php: public wxFileDialog{
 	
 	wxFileDialog_php(wxWindow* parent, const wxString& message=wxFileSelectorPromptStr, const wxString& defaultDir=wxEmptyString, const wxString& defaultFile=wxEmptyString, const wxString& wildcard=wxFileSelectorDefaultWildcardStr, long style=wxFD_DEFAULT_STYLE, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, const wxString& name=wxFileDialogNameStr):wxFileDialog(parent, message, defaultDir, defaultFile, wildcard, style, pos, size, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2231,13 +2198,10 @@ class wxFontData_php: public wxFontData{
 	
 	wxFontData_php():wxFontData(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2290,13 +2254,10 @@ class wxFontDialog_php: public wxFontDialog{
 	wxFontDialog_php(wxWindow* parent):wxFontDialog(parent){}
 	wxFontDialog_php(wxWindow* parent, const wxFontData& data):wxFontDialog(parent, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2609,13 +2570,10 @@ class wxMessageDialog_php: public wxMessageDialog{
 	
 	wxMessageDialog_php(wxWindow* parent, const wxString& message, const wxString& caption=wxMessageBoxCaptionStr, long style=wxOK|wxCENTRE, const wxPoint& pos=wxDefaultPosition):wxMessageDialog(parent, message, caption, style, pos){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2945,13 +2903,10 @@ class wxGenericProgressDialog_php: public wxGenericProgressDialog{
 	
 	wxGenericProgressDialog_php(const wxString& title, const wxString& message, int maximum=100, wxWindow* parent=NULL, int style=wxPD_AUTO_HIDE|wxPD_APP_MODAL):wxGenericProgressDialog(title, message, maximum, parent, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3271,13 +3226,10 @@ class wxRearrangeDialog_php: public wxRearrangeDialog{
 	
 	wxRearrangeDialog_php():wxRearrangeDialog(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3312,13 +3264,10 @@ class wxSymbolPickerDialog_php: public wxSymbolPickerDialog{
 	wxSymbolPickerDialog_php():wxSymbolPickerDialog(){}
 	wxSymbolPickerDialog_php(const wxString& symbol, const wxString& initialFont, const wxString& normalTextFont, wxWindow* parent, wxWindowID id=wxID_ANY, const wxString& title=_("Symbols"), const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxCLOSE_BOX):wxSymbolPickerDialog(symbol, initialFont, normalTextFont, parent, id, title, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3642,13 +3591,10 @@ class wxPasswordEntryDialog_php: public wxPasswordEntryDialog{
 	
 	wxPasswordEntryDialog_php(wxWindow* parent, const wxString& message, const wxString& caption=wxGetPasswordFromUserPromptStr, const wxString& defaultValue=wxEmptyString, long style=wxTextEntryDialogStyle, const wxPoint& pos=wxDefaultPosition):wxPasswordEntryDialog(parent, message, caption, defaultValue, style, pos){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3962,13 +3908,10 @@ class wxTextEntryDialog_php: public wxTextEntryDialog{
 	
 	wxTextEntryDialog_php(wxWindow* parent, const wxString& message, const wxString& caption=wxGetTextFromUserPromptStr, const wxString& value=wxEmptyString, long style=wxTextEntryDialogStyle, const wxPoint& pos=wxDefaultPosition):wxTextEntryDialog(parent, message, caption, value, style, pos){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4283,13 +4226,10 @@ class wxWizard_php: public wxWizard{
 	wxWizard_php():wxWizard(){}
 	wxWizard_php(wxWindow* parent, int id=wxID_ANY, const wxString& title=wxEmptyString, const wxBitmap& bitmap=wxNullBitmap, const wxPoint& pos=wxDefaultPosition, long style=wxDEFAULT_DIALOG_STYLE):wxWizard(parent, id, title, bitmap, pos, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -75,7 +75,8 @@ void php_wxClipboard_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxClipboard_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxClipboard_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCLIPBOARD_TYPE;
@@ -1372,8 +1369,7 @@ PHP_METHOD(php_wxClipboard, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxClipboard*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -1535,7 +1531,8 @@ void php_wxDataFormat_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -1580,10 +1577,6 @@ zend_object_value php_wxDataFormat_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataFormat_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAFORMAT_TYPE;
@@ -2112,8 +2105,7 @@ PHP_METHOD(php_wxDataFormat, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataFormat*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2174,10 +2166,6 @@ zend_object_value php_wxDataObject_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAOBJECT_TYPE;
@@ -2243,7 +2231,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2326,7 +2314,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2404,7 +2392,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2481,7 +2469,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2558,7 +2546,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2965,8 +2953,7 @@ PHP_METHOD(php_wxDataObject, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3027,10 +3014,6 @@ zend_object_value php_wxCustomDataObject_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCustomDataObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCUSTOMDATAOBJECT_TYPE;
@@ -3740,8 +3723,7 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxCustomDataObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3802,10 +3784,6 @@ zend_object_value php_wxDataObjectComposite_new(zend_class_entry *class_type TSR
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataObjectComposite_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAOBJECTCOMPOSITE_TYPE;
@@ -4035,7 +4013,6 @@ PHP_METHOD(php_wxDataObjectComposite, GetReceivedFormat)
 				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
 				object_init_ex(return_value, php_wxDataFormat_entry);
 				((wxDataFormat_php*)ptr)->phpObj = return_value;
-				((wxDataFormat_php*)ptr)->InitProperties();
 				zo_wxDataFormat* zo0 = (zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataFormat_php*) ptr;
 
@@ -4114,8 +4091,7 @@ PHP_METHOD(php_wxDataObjectComposite, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataObjectComposite*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4357,10 +4333,6 @@ zend_object_value php_wxDataObjectSimple_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataObjectSimple_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAOBJECTSIMPLE_TYPE;
@@ -5111,8 +5083,7 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataObjectSimple*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5173,10 +5144,6 @@ zend_object_value php_wxBitmapDataObject_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBitmapDataObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBITMAPDATAOBJECT_TYPE;
@@ -5272,7 +5239,6 @@ PHP_METHOD(php_wxBitmapDataObject, GetBitmap)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxBitmap_php*) ptr;
 
@@ -5507,8 +5473,7 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxBitmapDataObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5569,10 +5534,6 @@ zend_object_value php_wxURLDataObject_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxURLDataObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXURLDATAOBJECT_TYPE;
@@ -5864,8 +5825,7 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxURLDataObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5926,10 +5886,6 @@ zend_object_value php_wxTextDataObject_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextDataObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTEXTDATAOBJECT_TYPE;
@@ -6708,8 +6664,7 @@ PHP_METHOD(php_wxTextDataObject, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTextDataObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -6770,10 +6725,6 @@ zend_object_value php_wxFileDataObject_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileDataObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEDATAOBJECT_TYPE;
@@ -7052,8 +7003,7 @@ PHP_METHOD(php_wxFileDataObject, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileDataObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -7098,7 +7048,8 @@ void php_wxDropTarget_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -7143,10 +7094,6 @@ zend_object_value php_wxDropTarget_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDropTarget_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDROPTARGET_TYPE;
@@ -7321,8 +7268,7 @@ PHP_METHOD(php_wxDropTarget, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDropTarget*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -7529,7 +7475,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -7616,7 +7562,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -7808,7 +7754,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -7886,7 +7832,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -7940,7 +7886,8 @@ void php_wxTextDropTarget_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -7985,10 +7932,6 @@ zend_object_value php_wxTextDropTarget_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextDropTarget_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTEXTDROPTARGET_TYPE;
@@ -8057,8 +8000,7 @@ PHP_METHOD(php_wxTextDropTarget, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTextDropTarget*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8139,7 +8081,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -8217,7 +8159,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -8271,7 +8213,8 @@ void php_wxFileDropTarget_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8316,10 +8259,6 @@ zend_object_value php_wxFileDropTarget_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileDropTarget_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEDROPTARGET_TYPE;
@@ -8388,8 +8327,7 @@ PHP_METHOD(php_wxFileDropTarget, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileDropTarget*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8474,7 +8412,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -8552,7 +8490,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)

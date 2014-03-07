@@ -29,13 +29,10 @@ class wxXmlNode_php: public wxXmlNode{
 	wxXmlNode_php(wxXmlNodeType type, const wxString& name, const wxString& content=wxEmptyString, int lineNo=-1):wxXmlNode(type, name, content, lineNo){}
 	wxXmlNode_php(const wxXmlNode& node):wxXmlNode(node){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -96,13 +93,10 @@ class wxXmlAttribute_php: public wxXmlAttribute{
 	wxXmlAttribute_php():wxXmlAttribute(){}
 	wxXmlAttribute_php(const wxString& name, const wxString& value, wxXmlAttribute* next=NULL):wxXmlAttribute(name, value, next){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -143,13 +137,10 @@ class wxXmlDocument_php: public wxXmlDocument{
 	wxXmlDocument_php(const wxString& filename, const wxString& encoding="UTF-8"):wxXmlDocument(filename, encoding){}
 	wxXmlDocument_php(wxInputStream& stream, const wxString& encoding="UTF-8"):wxXmlDocument(stream, encoding){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

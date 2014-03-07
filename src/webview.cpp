@@ -75,7 +75,8 @@ void php_wxWebViewHistoryItem_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxWebViewHistoryItem_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewHistoryItem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWHISTORYITEM_TYPE;
@@ -200,8 +197,7 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWebViewHistoryItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -450,7 +446,8 @@ void php_wxWebViewHandler_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -495,10 +492,6 @@ zend_object_value php_wxWebViewHandler_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWHANDLER_TYPE;
@@ -573,8 +566,7 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWebViewHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -758,7 +750,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -814,7 +806,8 @@ void php_wxWebViewArchiveHandler_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -859,10 +852,6 @@ zend_object_value php_wxWebViewArchiveHandler_new(zend_class_entry *class_type T
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewArchiveHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWARCHIVEHANDLER_TYPE;
@@ -937,8 +926,7 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWebViewArchiveHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

@@ -26,13 +26,10 @@ class wxDataOutputStream_php: public wxDataOutputStream{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -68,13 +65,10 @@ class wxDataInputStream_php: public wxDataInputStream{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -113,13 +107,10 @@ class wxStreamBase_php: public wxStreamBase{
 		
 	wxFileOffset OnSysSeek(wxFileOffset pos, wxSeekMode mode);
 	wxFileOffset OnSysTell() const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -157,13 +148,10 @@ class wxOutputStream_php: public wxOutputStream{
 	
 	wxOutputStream_php():wxOutputStream(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -208,13 +196,10 @@ class wxInputStream_php: public wxInputStream{
 	wxInputStream_php():wxInputStream(){}
 		
 	size_t OnSysRead(void* buffer, size_t bufsize);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -262,13 +247,10 @@ class wxFFileOutputStream_php: public wxFFileOutputStream{
 	wxFFileOutputStream_php(const wxString& filename, const wxString& mode="wb"):wxFFileOutputStream(filename, mode){}
 	wxFFileOutputStream_php(wxFFile& file):wxFFileOutputStream(file){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -314,13 +296,10 @@ class wxFileOutputStream_php: public wxFileOutputStream{
 	wxFileOutputStream_php(wxFile& file):wxFileOutputStream(file){}
 	wxFileOutputStream_php(int fd):wxFileOutputStream(fd){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -366,13 +345,10 @@ class wxFileInputStream_php: public wxFileInputStream{
 	wxFileInputStream_php(wxFile& file):wxFileInputStream(file){}
 	wxFileInputStream_php(int fd):wxFileInputStream(fd){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -420,13 +396,10 @@ class wxFFileInputStream_php: public wxFFileInputStream{
 	wxFFileInputStream_php(wxFFile& file):wxFFileInputStream(file){}
 	wxFFileInputStream_php(const wxString& filename, const wxString& mode="rb"):wxFFileInputStream(filename, mode){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -473,13 +446,10 @@ class wxFFileStream_php: public wxFFileStream{
 	
 	wxFFileStream_php(const wxString& iofileName, const wxString& mode="w+b"):wxFFileStream(iofileName, mode){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -532,13 +502,10 @@ class wxFileStream_php: public wxFileStream{
 	
 	wxFileStream_php(const wxString& iofileName):wxFileStream(iofileName){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

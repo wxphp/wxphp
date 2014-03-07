@@ -29,13 +29,10 @@ class wxBannerWindow_php: public wxBannerWindow{
 	wxBannerWindow_php(wxWindow* parent, wxDirection dir=wxLEFT):wxBannerWindow(parent, dir){}
 	wxBannerWindow_php(wxWindow* parent, wxWindowID winid, wxDirection dir=wxLEFT, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxBannerWindowNameStr):wxBannerWindow(parent, winid, dir, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -302,13 +299,10 @@ class wxInfoBar_php: public wxInfoBar{
 	wxInfoBar_php():wxInfoBar(){}
 	wxInfoBar_php(wxWindow* parent, wxWindowID winid=wxID_ANY):wxInfoBar(parent, winid){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -586,13 +580,10 @@ class wxRichToolTip_php: public wxRichToolTip{
 	
 	wxRichToolTip_php(const wxString& title, const wxString& message):wxRichToolTip(title, message){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -632,13 +623,10 @@ class wxScrolled_php: public wxScrolled<wxPanel>{
 		
 	void OnDraw(wxDC& dc);
 	wxSize GetSizeAvailableForScrollTarget(const wxSize& size);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -699,13 +687,10 @@ class wxSashLayoutWindow_php: public wxSashLayoutWindow{
 	wxSashLayoutWindow_php():wxSashLayoutWindow(){}
 	wxSashLayoutWindow_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCLIP_CHILDREN|wxSW_3D, const wxString& name="layoutWindow"):wxSashLayoutWindow(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -984,13 +969,10 @@ class wxPanel_php: public wxPanel{
 	wxPanel_php():wxPanel(){}
 	wxPanel_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxTAB_TRAVERSAL, const wxString& name=wxPanelNameStr):wxPanel(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1255,13 +1237,10 @@ class wxSashWindow_php: public wxSashWindow{
 	wxSashWindow_php():wxSashWindow(){}
 	wxSashWindow_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCLIP_CHILDREN|wxSW_3D, const wxString& name="sashWindow"):wxSashWindow(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1538,13 +1517,10 @@ class wxSplitterWindow_php: public wxSplitterWindow{
 	void OnDoubleClickSash(int x, int y);
 	bool OnSashPositionChange(int newSashPosition);
 	void OnUnsplit(wxWindow* removed);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1826,13 +1802,10 @@ class wxStatusBar_php: public wxStatusBar{
 	wxStatusBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, long style=wxSTB_DEFAULT_STYLE, const wxString& name=wxStatusBarNameStr):wxStatusBar(parent, id, style, name){}
 	wxStatusBar_php():wxStatusBar(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2119,13 +2092,10 @@ class wxToolBar_php: public wxToolBar{
 	void OnRightClick(int toolId, long x, long y);
 	void OnMouseEnter(int toolId);
 	bool OnLeftClick(int toolId, bool toggleDown);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2436,13 +2406,10 @@ class wxHScrolledWindow_php: public wxHScrolledWindow{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2711,13 +2678,10 @@ class wxWindow_php: public wxWindow{
 	bool ProcessEvent(wxEvent& event);
 	void QueueEvent(wxEvent* event);
 	void SetInitialBestSize(const wxSize& size);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2982,13 +2946,10 @@ class wxWizardPage_php: public wxWizardPage{
 		
 	wxWizardPage* GetPrev() const;
 	wxWizardPage* GetNext() const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3253,13 +3214,10 @@ class wxWizardPageSimple_php: public wxWizardPageSimple{
 	
 	wxWizardPageSimple_php(wxWizard* parent, wxWizardPage* prev=NULL, wxWizardPage* next=NULL, const wxBitmap& bitmap=wxNullBitmap):wxWizardPageSimple(parent, prev, next, bitmap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

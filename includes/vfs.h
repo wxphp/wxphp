@@ -27,13 +27,10 @@ class wxFileSystem_php: public wxFileSystem{
 	
 	wxFileSystem_php():wxFileSystem(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -83,13 +80,10 @@ class wxFileSystemHandler_php: public wxFileSystemHandler{
 		
 	bool CanOpen(const wxString& location);
 	wxFSFile* OpenFile(wxFileSystem& fs, const wxString& location);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

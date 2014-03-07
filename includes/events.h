@@ -28,13 +28,10 @@ class wxEventFilter_php: public wxEventFilter{
 	wxEventFilter_php():wxEventFilter(){}
 		
 	int FilterEvent(wxEvent& event);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -66,13 +63,10 @@ class wxKeyboardState_php: public wxKeyboardState{
 	
 	wxKeyboardState_php(bool controlDown=false, bool shiftDown=false, bool altDown=false, bool metaDown=false):wxKeyboardState(controlDown, shiftDown, altDown, metaDown){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -116,13 +110,10 @@ class wxCalendarEvent_php: public wxCalendarEvent{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -187,13 +178,10 @@ class wxColourPickerEvent_php: public wxColourPickerEvent{
 	
 	wxColourPickerEvent_php(wxObject* generator, int id, const wxColour& colour):wxColourPickerEvent(generator, id, colour){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -257,13 +245,10 @@ class wxCollapsiblePaneEvent_php: public wxCollapsiblePaneEvent{
 	
 	wxCollapsiblePaneEvent_php(wxObject* generator, int id, bool collapsed):wxCollapsiblePaneEvent(generator, id, collapsed){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -326,13 +311,10 @@ class wxDateEvent_php: public wxDateEvent{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -396,17 +378,22 @@ class wxEvent_php: public wxEvent{
 	wxEvent_php(int id=0, wxEventType eventType=wxEVT_NULL):wxEvent(id, eventType){}
 		
 	wxEvent* Clone() const;
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[1];
 
 		properties[0] = &m_propagationLevel;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -460,13 +447,10 @@ class wxEventBlocker_php: public wxEventBlocker{
 	
 	wxEventBlocker_php(wxWindow* win, wxEventType type=-1):wxEventBlocker(win, type){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -525,14 +509,11 @@ class wxEvtHandler_php: public wxEvtHandler{
 		
 	bool TryAfter(wxEvent& event);
 	bool TryBefore(wxEvent& event);
-		
-	void InitProperties(){
-	}
+	
 	
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -588,13 +569,10 @@ class wxKeyEvent_php: public wxKeyEvent{
 	
 	wxKeyEvent_php(wxEventType keyEventType=wxEVT_NULL):wxKeyEvent(keyEventType){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -669,13 +647,10 @@ class wxScrollWinEvent_php: public wxScrollWinEvent{
 	
 	wxScrollWinEvent_php(wxEventType commandType=wxEVT_NULL, int pos=0, int orientation=0):wxScrollWinEvent(commandType, pos, orientation){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -732,13 +707,10 @@ class wxSysColourChangedEvent_php: public wxSysColourChangedEvent{
 	
 	wxSysColourChangedEvent_php():wxSysColourChangedEvent(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -791,13 +763,10 @@ class wxCommandEvent_php: public wxCommandEvent{
 	
 	wxCommandEvent_php(wxEventType commandEventType=wxEVT_NULL, int id=0):wxCommandEvent(commandEventType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -859,13 +828,10 @@ class wxWindowCreateEvent_php: public wxWindowCreateEvent{
 	
 	wxWindowCreateEvent_php(wxWindow* win=NULL):wxWindowCreateEvent(win){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -928,13 +894,10 @@ class wxPaintEvent_php: public wxPaintEvent{
 	
 	wxPaintEvent_php(int id=0):wxPaintEvent(id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -987,13 +950,10 @@ class wxMaximizeEvent_php: public wxMaximizeEvent{
 	
 	wxMaximizeEvent_php(int id=0):wxMaximizeEvent(id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1046,13 +1006,10 @@ class wxUpdateUIEvent_php: public wxUpdateUIEvent{
 	
 	wxUpdateUIEvent_php(wxWindowID commandId=0):wxUpdateUIEvent(commandId){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1132,13 +1089,10 @@ class wxClipboardTextEvent_php: public wxClipboardTextEvent{
 	
 	wxClipboardTextEvent_php(wxEventType commandType=wxEVT_NULL, int id=0):wxClipboardTextEvent(commandType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1200,13 +1154,10 @@ class wxMouseEvent_php: public wxMouseEvent{
 	
 	wxMouseEvent_php(wxEventType mouseEventType=wxEVT_NULL):wxMouseEvent(mouseEventType){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1321,13 +1272,10 @@ class wxActivateEvent_php: public wxActivateEvent{
 	
 	wxActivateEvent_php(wxEventType eventType=wxEVT_NULL, bool active=true, int id=0, Reason ActivationReason=Reason_Unknown):wxActivateEvent(eventType, active, id, ActivationReason){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1381,13 +1329,10 @@ class wxContextMenuEvent_php: public wxContextMenuEvent{
 	
 	wxContextMenuEvent_php(wxEventType type=wxEVT_NULL, int id=0, const wxPoint& pos=wxDefaultPosition):wxContextMenuEvent(type, id, pos){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1451,13 +1396,10 @@ class wxEraseEvent_php: public wxEraseEvent{
 	
 	wxEraseEvent_php(int id=0, wxDC* dc=NULL):wxEraseEvent(id, dc){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1511,13 +1453,10 @@ class wxFocusEvent_php: public wxFocusEvent{
 	
 	wxFocusEvent_php(wxEventType eventType=wxEVT_NULL, int id=0):wxFocusEvent(eventType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1572,13 +1511,10 @@ class wxChildFocusEvent_php: public wxChildFocusEvent{
 	
 	wxChildFocusEvent_php(wxWindow* win=NULL):wxChildFocusEvent(win){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1641,13 +1577,10 @@ class wxNotifyEvent_php: public wxNotifyEvent{
 	
 	wxNotifyEvent_php(wxEventType eventType=wxEVT_NULL, int id=0):wxNotifyEvent(eventType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1712,13 +1645,10 @@ class wxThreadEvent_php: public wxThreadEvent{
 	
 	wxThreadEvent_php(wxEventType eventType=wxEVT_THREAD, int id=wxID_ANY):wxThreadEvent(eventType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1778,13 +1708,10 @@ class wxHelpEvent_php: public wxHelpEvent{
 	
 	wxHelpEvent_php(wxEventType type=wxEVT_NULL, wxWindowID winid=0, const wxPoint& pt=wxDefaultPosition, wxHelpEvent::Origin origin=Origin_Unknown):wxHelpEvent(type, winid, pt, origin){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1850,13 +1777,10 @@ class wxScrollEvent_php: public wxScrollEvent{
 	
 	wxScrollEvent_php(wxEventType commandType=wxEVT_NULL, int id=0, int pos=0, int orientation=0):wxScrollEvent(commandType, id, pos, orientation){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1922,13 +1846,10 @@ class wxIdleEvent_php: public wxIdleEvent{
 	
 	wxIdleEvent_php():wxIdleEvent(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1985,13 +1906,10 @@ class wxInitDialogEvent_php: public wxInitDialogEvent{
 	
 	wxInitDialogEvent_php(int id=0):wxInitDialogEvent(id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2044,13 +1962,10 @@ class wxWindowDestroyEvent_php: public wxWindowDestroyEvent{
 	
 	wxWindowDestroyEvent_php(wxWindow* win=NULL):wxWindowDestroyEvent(win){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2113,13 +2028,10 @@ class wxNavigationKeyEvent_php: public wxNavigationKeyEvent{
 	
 	wxNavigationKeyEvent_php():wxNavigationKeyEvent(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2181,13 +2093,10 @@ class wxCloseEvent_php: public wxCloseEvent{
 	
 	wxCloseEvent_php(wxEventType commandEventType=wxEVT_NULL, int id=0):wxCloseEvent(commandEventType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2245,13 +2154,10 @@ class wxMenuEvent_php: public wxMenuEvent{
 	
 	wxMenuEvent_php(wxEventType type=wxEVT_NULL, int id=0, wxMenu* menu=NULL):wxMenuEvent(type, id, menu){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2307,13 +2213,10 @@ class wxMoveEvent_php: public wxMoveEvent{
 	
 	wxMoveEvent_php(const wxPoint& pt, int id=0):wxMoveEvent(pt, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2370,13 +2273,10 @@ class wxSizeEvent_php: public wxSizeEvent{
 	
 	wxSizeEvent_php(const wxSize& sz, int id=0):wxSizeEvent(sz, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2433,13 +2333,10 @@ class wxSetCursorEvent_php: public wxSetCursorEvent{
 	
 	wxSetCursorEvent_php(wxCoord x=0, wxCoord y=0):wxSetCursorEvent(x, y){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2497,13 +2394,10 @@ class wxFileCtrlEvent_php: public wxFileCtrlEvent{
 	
 	wxFileCtrlEvent_php(wxEventType type, wxObject* evtObject, int id):wxFileCtrlEvent(type, evtObject, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2572,13 +2466,10 @@ class wxFileDirPickerEvent_php: public wxFileDirPickerEvent{
 	
 	wxFileDirPickerEvent_php(wxEventType type, wxObject* generator, int id, const wxString& path):wxFileDirPickerEvent(type, generator, id, path){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2642,13 +2533,10 @@ class wxFontPickerEvent_php: public wxFontPickerEvent{
 	
 	wxFontPickerEvent_php(wxObject* generator, int id, const wxFont& font):wxFontPickerEvent(generator, id, font){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2711,13 +2599,10 @@ class wxFileSystemWatcherEvent_php: public wxFileSystemWatcherEvent{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2776,13 +2661,10 @@ class wxGridEvent_php: public wxGridEvent{
 	wxGridEvent_php():wxGridEvent(){}
 	wxGridEvent_php(int id, wxEventType type, wxObject* obj, int row=-1, int col=-1, int x=-1, int y=-1, bool sel=true, const wxKeyboardState& kbd=wxKeyboardState()):wxGridEvent(id, type, obj, row, col, x, y, sel, kbd){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2856,13 +2738,10 @@ class wxGridSizeEvent_php: public wxGridSizeEvent{
 	wxGridSizeEvent_php():wxGridSizeEvent(){}
 	wxGridSizeEvent_php(int id, wxEventType type, wxObject* obj, int rowOrCol=-1, int x=-1, int y=-1, const wxKeyboardState& kbd=wxKeyboardState()):wxGridSizeEvent(id, type, obj, rowOrCol, x, y, kbd){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2934,13 +2813,10 @@ class wxGridRangeSelectEvent_php: public wxGridRangeSelectEvent{
 	wxGridRangeSelectEvent_php():wxGridRangeSelectEvent(){}
 	wxGridRangeSelectEvent_php(int id, wxEventType type, wxObject* obj, const wxGridCellCoords& topLeft, const wxGridCellCoords& bottomRight, bool sel=true, const wxKeyboardState& kbd=wxKeyboardState()):wxGridRangeSelectEvent(id, type, obj, topLeft, bottomRight, sel, kbd){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3017,13 +2893,10 @@ class wxGridEditorCreatedEvent_php: public wxGridEditorCreatedEvent{
 	wxGridEditorCreatedEvent_php():wxGridEditorCreatedEvent(){}
 	wxGridEditorCreatedEvent_php(int id, wxEventType type, wxObject* obj, int row, int col, wxControl* ctrl):wxGridEditorCreatedEvent(id, type, obj, row, col, ctrl){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3090,13 +2963,10 @@ class wxHeaderCtrlEvent_php: public wxHeaderCtrlEvent{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3163,13 +3033,10 @@ class wxHyperlinkEvent_php: public wxHyperlinkEvent{
 	
 	wxHyperlinkEvent_php(wxObject* generator, int id, const wxString& url):wxHyperlinkEvent(generator, id, url){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3233,13 +3100,10 @@ class wxQueryLayoutInfoEvent_php: public wxQueryLayoutInfoEvent{
 	
 	wxQueryLayoutInfoEvent_php(wxWindowID id=0):wxQueryLayoutInfoEvent(id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3302,13 +3166,10 @@ class wxCalculateLayoutEvent_php: public wxCalculateLayoutEvent{
 	
 	wxCalculateLayoutEvent_php(wxWindowID id=0):wxCalculateLayoutEvent(id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3365,13 +3226,10 @@ class wxListEvent_php: public wxListEvent{
 	
 	wxListEvent_php(wxEventType commandType=wxEVT_NULL, int id=0):wxListEvent(commandType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3448,13 +3306,10 @@ class wxMediaEvent_php: public wxMediaEvent{
 	
 	wxMediaEvent_php(wxEventType commandType=wxEVT_NULL, int winid=0):wxMediaEvent(commandType, winid){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3528,13 +3383,10 @@ class wxMouseEventsManager_php: public wxMouseEventsManager{
 	void MouseDragEnd(int item, const wxPoint& pos);
 	void MouseDragging(int item, const wxPoint& pos);
 	int MouseHitTest(const wxPoint& pos);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3591,13 +3443,10 @@ class wxMouseState_php: public wxMouseState{
 	
 	wxMouseState_php():wxMouseState(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3659,13 +3508,10 @@ class wxProcessEvent_php: public wxProcessEvent{
 	
 	wxProcessEvent_php(int id=0, int pid=0, int exitcode=0):wxProcessEvent(id, pid, exitcode){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3720,13 +3566,10 @@ class wxRibbonBarEvent_php: public wxRibbonBarEvent{
 	
 	wxRibbonBarEvent_php(wxEventType command_type=wxEVT_NULL, int win_id=0, wxRibbonPage* page=NULL):wxRibbonBarEvent(command_type, win_id, page){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3793,13 +3636,10 @@ class wxRibbonButtonBarEvent_php: public wxRibbonButtonBarEvent{
 	
 	wxRibbonButtonBarEvent_php(wxEventType command_type=wxEVT_NULL, int win_id=0, wxRibbonButtonBar* bar=NULL, wxRibbonButtonBarButtonBase* button=NULL):wxRibbonButtonBarEvent(command_type, win_id, bar, button){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3864,13 +3704,10 @@ class wxRibbonGalleryEvent_php: public wxRibbonGalleryEvent{
 	
 	wxRibbonGalleryEvent_php(wxEventType command_type=wxEVT_NULL, int win_id=0, wxRibbonGallery* gallery=NULL, wxRibbonGalleryItem* item=NULL):wxRibbonGalleryEvent(command_type, win_id, gallery, item){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3936,13 +3773,10 @@ class wxSashEvent_php: public wxSashEvent{
 	
 	wxSashEvent_php(int id=0, wxSashEdgePosition edge=wxSASH_NONE):wxSashEvent(id, edge){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4007,13 +3841,10 @@ class wxSpinEvent_php: public wxSpinEvent{
 	
 	wxSpinEvent_php(wxEventType commandType=wxEVT_NULL, int id=0):wxSpinEvent(commandType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4081,13 +3912,10 @@ class wxSpinDoubleEvent_php: public wxSpinDoubleEvent{
 	wxSpinDoubleEvent_php(const wxSpinDoubleEvent& event):wxSpinDoubleEvent(event){}
 	wxSpinDoubleEvent_php(wxEventType commandType=wxEVT_NULL, int winid=0, double value=0):wxSpinDoubleEvent(commandType, winid, value){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4154,13 +3982,10 @@ class wxSplitterEvent_php: public wxSplitterEvent{
 	
 	wxSplitterEvent_php(wxEventType eventType=wxEVT_NULL, wxSplitterWindow* splitter=NULL):wxSplitterEvent(eventType, splitter){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4231,13 +4056,10 @@ class wxStyledTextEvent_php: public wxStyledTextEvent{
 	wxStyledTextEvent_php(wxEventType commandType=0, int id=0):wxStyledTextEvent(commandType, id){}
 	wxStyledTextEvent_php(const wxStyledTextEvent& event):wxStyledTextEvent(event){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4340,13 +4162,10 @@ class wxTaskBarIconEvent_php: public wxTaskBarIconEvent{
 	
 	wxTaskBarIconEvent_php(wxEventType evtType, wxTaskBarIcon* tbIcon):wxTaskBarIconEvent(evtType, tbIcon){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4400,13 +4219,10 @@ class wxTimerEvent_php: public wxTimerEvent{
 	wxTimerEvent_php():wxTimerEvent(){}
 	wxTimerEvent_php(wxTimer& timer):wxTimerEvent(timer){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4460,13 +4276,10 @@ class wxTreeEvent_php: public wxTreeEvent{
 	
 	wxTreeEvent_php(wxEventType commandType, wxTreeCtrl* tree, const wxTreeItemId& item=wxTreeItemId()):wxTreeEvent(commandType, tree, item){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4540,13 +4353,10 @@ class wxWebViewEvent_php: public wxWebViewEvent{
 	wxWebViewEvent_php():wxWebViewEvent(){}
 	wxWebViewEvent_php(wxEventType type, int id, const wxString href, const wxString target):wxWebViewEvent(type, id, href, target){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4613,13 +4423,10 @@ class wxWizardEvent_php: public wxWizardEvent{
 	
 	wxWizardEvent_php(wxEventType type=wxEVT_NULL, int id=wxID_ANY, bool direction=true, wxWizardPage* page=0):wxWizardEvent(type, id, direction, page){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

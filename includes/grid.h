@@ -29,13 +29,10 @@ class wxGridCellRenderer_php: public wxGridCellRenderer{
 	wxSize GetBestSize(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, int row, int col);
 	void Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, const wxRect& rect, int row, int col, bool isSelected);
 	wxGridCellRenderer* Clone() const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -66,13 +63,10 @@ class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRende
 	
 	wxGridCellAutoWrapStringRenderer_php():wxGridCellAutoWrapStringRenderer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -104,13 +98,10 @@ class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
 	
 	wxGridCellBoolRenderer_php():wxGridCellBoolRenderer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -142,13 +133,10 @@ class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
 	
 	wxGridCellDateTimeRenderer_php(const wxString& outformat=wxDefaultDateTimeFormat, const wxString& informat=wxDefaultDateTimeFormat):wxGridCellDateTimeRenderer(outformat, informat){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -181,13 +169,10 @@ class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
 	
 	wxGridCellEnumRenderer_php(const wxString& choices=wxEmptyString):wxGridCellEnumRenderer(choices){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -220,13 +205,10 @@ class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
 	
 	wxGridCellFloatRenderer_php(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT):wxGridCellFloatRenderer(width, precision, format){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -265,13 +247,10 @@ class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
 	
 	wxGridCellNumberRenderer_php():wxGridCellNumberRenderer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -303,13 +282,10 @@ class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
 	
 	wxGridCellStringRenderer_php():wxGridCellStringRenderer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -346,13 +322,10 @@ class wxGridCellEditor_php: public wxGridCellEditor{
 	void Create(wxWindow* parent, wxWindowID id, wxEvtHandler* evtHandler);
 	bool EndEdit(int row, int col, const wxGrid* grid, const wxString& oldval, wxString* newval);
 	void Reset();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -391,13 +364,10 @@ class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
 	
 	wxGridCellAutoWrapStringEditor_php():wxGridCellAutoWrapStringEditor(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -438,13 +408,10 @@ class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
 	
 	wxGridCellBoolEditor_php():wxGridCellBoolEditor(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -486,13 +453,10 @@ class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
 	
 	wxGridCellChoiceEditor_php(const wxArrayString& choices, bool allowOthers=false):wxGridCellChoiceEditor(choices, allowOthers){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -533,13 +497,10 @@ class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
 	
 	wxGridCellEnumEditor_php(const wxString& choices=wxEmptyString):wxGridCellEnumEditor(choices){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -580,13 +541,10 @@ class wxGridCellTextEditor_php: public wxGridCellTextEditor{
 	
 	wxGridCellTextEditor_php(size_t maxChars=0):wxGridCellTextEditor(maxChars){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -627,13 +585,10 @@ class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
 	
 	wxGridCellFloatEditor_php(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT):wxGridCellFloatEditor(width, precision, format){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -674,13 +629,10 @@ class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
 	
 	wxGridCellNumberEditor_php(int min=-1, int max=-1):wxGridCellNumberEditor(min, max){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -722,13 +674,10 @@ class wxGridCellAttr_php: public wxGridCellAttr{
 	wxGridCellAttr_php(wxGridCellAttr* attrDefault=NULL):wxGridCellAttr(attrDefault){}
 	wxGridCellAttr_php(const wxColour& colText, const wxColour& colBack, const wxFont& font, int hAlign, int vAlign):wxGridCellAttr(colText, colBack, font, hAlign, vAlign){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -789,13 +738,10 @@ class wxGridTableBase_php: public wxGridTableBase{
 	int GetNumberRows();
 	wxString GetValue(int row, int col);
 	void SetValue(int row, int col, const wxString& value);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -868,18 +814,23 @@ class wxGridSizesInfo_php: public wxGridSizesInfo{
 	
 	wxGridSizesInfo_php():wxGridSizesInfo(){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[2];
 
 		properties[0] = &m_sizeDefault;
 		properties[1] = &m_customSizes;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -914,13 +865,10 @@ class wxGrid_php: public wxGrid{
 	wxGrid_php():wxGrid(){}
 	wxGrid_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxWANTS_CHARS, const wxString& name=wxGridNameStr):wxGrid(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1418,13 +1366,10 @@ class wxGridUpdateLocker_php: public wxGridUpdateLocker{
 	
 	wxGridUpdateLocker_php(wxGrid* grid=NULL):wxGridUpdateLocker(grid){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

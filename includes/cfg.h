@@ -42,13 +42,10 @@ class wxConfigBase_php: public wxConfigBase{
 	bool RenameEntry(const wxString& oldName, const wxString& newName);
 	bool RenameGroup(const wxString& oldName, const wxString& newName);
 	void SetPath(const wxString& strPath);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -102,13 +99,10 @@ class wxDisplay_php: public wxDisplay{
 	
 	wxDisplay_php(unsigned int index=0):wxDisplay(index){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -148,13 +142,10 @@ class wxFileConfig_php: public wxFileConfig{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -229,13 +220,10 @@ class wxFontMapper_php: public wxFontMapper{
 	
 	wxFontMapper_php():wxFontMapper(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -281,13 +269,10 @@ class wxPlatformInfo_php: public wxPlatformInfo{
 	wxPlatformInfo_php():wxPlatformInfo(){}
 	wxPlatformInfo_php(wxPortId pid, int tkMajor=-1, int tkMinor=-1, wxOperatingSystemId id=wxOS_UNKNOWN, int osMajor=-1, int osMinor=-1, wxArchitecture arch=wxARCH_INVALID, wxEndianness endian=wxENDIAN_INVALID):wxPlatformInfo(pid, tkMajor, tkMinor, id, osMajor, osMinor, arch, endian){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -349,13 +334,10 @@ class wxSystemSettings_php: public wxSystemSettings{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -390,13 +372,10 @@ class wxSystemOptions_php: public wxSystemOptions{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -432,8 +411,8 @@ class wxVideoMode_php: public wxVideoMode{
 	
 	wxVideoMode_php(int width=0, int height=0, int depth=0, int freq=0):wxVideoMode(width, height, depth, freq){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[4];
 
 		properties[0] = &w;
@@ -442,10 +421,15 @@ class wxVideoMode_php: public wxVideoMode{
 		properties[3] = &refresh;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

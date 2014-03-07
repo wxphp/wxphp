@@ -91,10 +91,6 @@ zend_object_value php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColourPickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOURPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -485,7 +481,6 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
 
@@ -918,8 +913,7 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxColourPickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -979,10 +973,6 @@ zend_object_value php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDatePickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATEPICKERCTRL_TYPE;
@@ -1220,8 +1210,7 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDatePickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -1969,10 +1958,6 @@ zend_object_value php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFilePickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEPICKERCTRL_TYPE;
@@ -2869,8 +2854,7 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFilePickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2977,7 +2961,6 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 				memcpy(ptr, &value_to_return0, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo0 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFileName_php*) ptr;
 
@@ -3035,10 +3018,6 @@ zend_object_value php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDirPickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDIRPICKERCTRL_TYPE;
@@ -3421,7 +3400,6 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 				memcpy(ptr, &value_to_return0, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo0 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFileName_php*) ptr;
 
@@ -4011,8 +3989,7 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDirPickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4072,10 +4049,6 @@ zend_object_value php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontPickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTPICKERCTRL_TYPE;
@@ -4564,7 +4537,6 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -5059,8 +5031,7 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFontPickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5120,10 +5091,6 @@ zend_object_value php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPickerBase_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPICKERBASE_TYPE;
@@ -7029,10 +6996,6 @@ zend_object_value php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_D
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTimePickerCtrl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTIMEPICKERCTRL_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -7269,8 +7232,7 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTimePickerCtrl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

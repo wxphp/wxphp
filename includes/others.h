@@ -28,13 +28,10 @@ class wxScrolledWindow_php: public wxScrolledWindow{
 	wxScrolledWindow_php():wxScrolledWindow(){}
 	wxScrolledWindow_php(wxWindow* parent, wxWindowID winid=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxScrolledWindowStyle, const wxString& name=wxPanelNameStr):wxScrolledWindow(parent, winid, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -323,13 +320,10 @@ class wxRibbonButtonBarButtonBase_php{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -359,13 +353,10 @@ class wxRibbonGalleryItem_php{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -395,13 +386,10 @@ class wxRibbonToolBarToolBase_php{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -433,13 +421,10 @@ class wxGridCellCoords_php: public wxGridCellCoords{
 	wxGridCellCoords_php():wxGridCellCoords(){}
 	wxGridCellCoords_php(int row, int col):wxGridCellCoords(row, col){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -475,13 +460,10 @@ class wxNonOwnedWindow_php: public wxNonOwnedWindow{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -744,13 +726,10 @@ class wxAnyButton_php: public wxAnyButton{
 	
 	wxAnyButton_php():wxAnyButton(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1034,13 +1013,10 @@ class wxWithImages_php: public wxWithImages{
 	
 	wxWithImages_php():wxWithImages(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1076,13 +1052,10 @@ class wxTextCompleter_php: public wxTextCompleter{
 		
 	wxString GetNext();
 	bool Start(const wxString& prefix);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1113,13 +1086,10 @@ class wxWindowModalDialogEvent_php: public wxWindowModalDialogEvent{
 	
 	wxWindowModalDialogEvent_php(wxEventType commandType=wxEVT_NULL, int id=0):wxWindowModalDialogEvent(commandType, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1188,18 +1158,23 @@ class wxPoint2DDouble_php: public wxPoint2DDouble{
 	wxPoint2DDouble_php(const wxPoint2DInt& pt):wxPoint2DDouble(pt){}
 	wxPoint2DDouble_php(const wxPoint& pt):wxPoint2DDouble(pt){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[2];
 
 		properties[0] = &m_x;
 		properties[1] = &m_y;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1246,18 +1221,23 @@ class wxPoint2DInt_php: public wxPoint2DInt{
 	wxPoint2DInt_php(const wxPoint2DInt& pt):wxPoint2DInt(pt){}
 	wxPoint2DInt_php(const wxPoint& pt):wxPoint2DInt(pt){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[2];
 
 		properties[0] = &m_x;
 		properties[1] = &m_y;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1301,13 +1281,10 @@ class wxProgressDialog_php: public wxProgressDialog{
 	
 	wxProgressDialog_php(const wxString& title, const wxString& message, int maximum=100, wxWindow* parent=NULL, int style=wxPD_APP_MODAL|wxPD_AUTO_HIDE):wxProgressDialog(title, message, maximum, parent, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1627,8 +1604,8 @@ class wxLayoutConstraints_php: public wxLayoutConstraints{
 	
 	wxLayoutConstraints_php():wxLayoutConstraints(){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[8];
 
 		properties[0] = &left;
@@ -1641,10 +1618,15 @@ class wxLayoutConstraints_php: public wxLayoutConstraints{
 		properties[7] = &centreY;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1685,13 +1667,10 @@ class wxGridCellAttrProvider_php: public wxGridCellAttrProvider{
 	
 	wxGridCellAttrProvider_php():wxGridCellAttrProvider(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1729,13 +1708,10 @@ class wxGridColumnHeaderRenderer_php: public wxGridColumnHeaderRenderer{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1766,13 +1742,10 @@ class wxGridColumnHeaderRendererDefault_php: public wxGridColumnHeaderRendererDe
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1805,13 +1778,10 @@ class wxGridCornerHeaderRenderer_php: public wxGridCornerHeaderRenderer{
 	
 		
 	void DrawBorder(const wxGrid& grid, wxDC& dc, wxRect& rect) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1841,13 +1811,10 @@ class wxGridCornerHeaderRendererDefault_php: public wxGridCornerHeaderRendererDe
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1878,13 +1845,10 @@ class wxGridHeaderLabelsRenderer_php: public wxGridHeaderLabelsRenderer{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1915,13 +1879,10 @@ class wxGridRowHeaderRenderer_php: public wxGridRowHeaderRenderer{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1952,13 +1913,10 @@ class wxGridRowHeaderRendererDefault_php: public wxGridRowHeaderRendererDefault{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1991,13 +1949,10 @@ class wxPaletteChangedEvent_php: public wxPaletteChangedEvent{
 	
 	wxPaletteChangedEvent_php(wxWindowID winid=0):wxPaletteChangedEvent(winid){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2053,13 +2008,10 @@ class wxFileTypeInfo_php: public wxFileTypeInfo{
 	wxFileTypeInfo_php():wxFileTypeInfo(){}
 	wxFileTypeInfo_php(const wxString& mimeType):wxFileTypeInfo(mimeType){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2096,13 +2048,10 @@ class wxDisplayChangedEvent_php: public wxDisplayChangedEvent{
 	
 	wxDisplayChangedEvent_php():wxDisplayChangedEvent(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2156,13 +2105,10 @@ class wxTimerRunner_php: public wxTimerRunner{
 	wxTimerRunner_php(wxTimer& timer):wxTimerRunner(timer){}
 	wxTimerRunner_php(wxTimer& timer, int milli, bool oneShot=false):wxTimerRunner(timer, milli, oneShot){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2194,13 +2140,10 @@ class wxToolBarToolBase_php: public wxToolBarToolBase{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2269,13 +2212,10 @@ class wxTextCompleterSimple_php: public wxTextCompleterSimple{
 	
 		
 	void GetCompletions(const wxString& prefix, wxArrayString& res);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

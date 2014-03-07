@@ -28,13 +28,10 @@ class wxHtmlRenderingStyle_php: public wxHtmlRenderingStyle{
 		
 	wxColour GetSelectedTextBgColour(const wxColour& clr);
 	wxColour GetSelectedTextColour(const wxColour& clr);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -65,13 +62,10 @@ class wxHtmlRenderingInfo_php: public wxHtmlRenderingInfo{
 	
 	wxHtmlRenderingInfo_php():wxHtmlRenderingInfo(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -105,13 +99,10 @@ class wxHtmlCell_php: public wxHtmlCell{
 	
 	wxHtmlCell_php():wxHtmlCell(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -166,13 +157,10 @@ class wxHtmlContainerCell_php: public wxHtmlContainerCell{
 	
 	wxHtmlContainerCell_php(wxHtmlContainerCell* parent):wxHtmlContainerCell(parent){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -242,13 +230,10 @@ class wxHtmlLinkInfo_php: public wxHtmlLinkInfo{
 	wxHtmlLinkInfo_php():wxHtmlLinkInfo(){}
 	wxHtmlLinkInfo_php(const wxString& href, const wxString& target=wxEmptyString):wxHtmlLinkInfo(href, target){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -290,13 +275,10 @@ class wxHtmlColourCell_php: public wxHtmlColourCell{
 	
 	wxHtmlColourCell_php(const wxColour& clr, int flags=wxHTML_CLR_FOREGROUND):wxHtmlColourCell(clr, flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -351,13 +333,10 @@ class wxHtmlWidgetCell_php: public wxHtmlWidgetCell{
 	
 	wxHtmlWidgetCell_php(wxWindow* wnd, int w=0):wxHtmlWidgetCell(wnd, w){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -414,13 +393,10 @@ class wxHtmlFilter_php: public wxHtmlFilter{
 		
 	bool CanRead(const wxFSFile& file) const;
 	wxString ReadFile(const wxFSFile& file) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -460,17 +436,22 @@ class wxHtmlTagHandler_php: public wxHtmlTagHandler{
 		
 	wxString GetSupportedTags();
 	bool HandleTag(const wxHtmlTag& tag);
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[1];
 
 		properties[0] = &m_Parser;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -508,13 +489,10 @@ class wxHtmlTag_php: public wxHtmlTag{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -563,13 +541,10 @@ class wxHtmlWindow_php: public wxHtmlWindow{
 	void OnLinkClicked(const wxHtmlLinkInfo& link);
 	void OnSetTitle(const wxString& title);
 	wxHtmlOpeningStatus OnOpeningURL(wxHtmlURLType type, const wxString& url, wxString* redirect) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -884,13 +859,10 @@ class wxHtmlLinkEvent_php: public wxHtmlLinkEvent{
 	
 	wxHtmlLinkEvent_php(int id, const wxHtmlLinkInfo& linkinfo):wxHtmlLinkEvent(id, linkinfo){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -953,13 +925,10 @@ class wxHtmlCellEvent_php: public wxHtmlCellEvent{
 	
 	wxHtmlCellEvent_php(wxEventType commandType, int id, wxHtmlCell* cell, const wxPoint& point, const wxMouseEvent& ev):wxHtmlCellEvent(commandType, id, cell, point, ev){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1025,13 +994,10 @@ class wxHtmlDCRenderer_php: public wxHtmlDCRenderer{
 	
 	wxHtmlDCRenderer_php():wxHtmlDCRenderer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1076,13 +1042,10 @@ class wxHtmlEasyPrinting_php: public wxHtmlEasyPrinting{
 	
 	wxHtmlEasyPrinting_php(const wxString& name="Printing", wxWindow* parentWindow=NULL):wxHtmlEasyPrinting(name, parentWindow){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1135,13 +1098,10 @@ class wxHtmlPrintout_php: public wxHtmlPrintout{
 	
 	wxHtmlPrintout_php(const wxString& title="Printout"):wxHtmlPrintout(title){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1208,13 +1168,10 @@ class wxHtmlTagsModule_php: public wxHtmlTagsModule{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1251,17 +1208,22 @@ class wxHtmlWinTagHandler_php: public wxHtmlWinTagHandler{
 	public:
 	
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[1];
 
 		properties[0] = &m_WParser;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1297,13 +1259,10 @@ class wxHtmlWinParser_php: public wxHtmlWinParser{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

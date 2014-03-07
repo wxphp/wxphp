@@ -26,13 +26,10 @@ class wxAuiToolBarEvent_php: public wxAuiToolBarEvent{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -101,13 +98,10 @@ class wxAuiToolBarItem_php: public wxAuiToolBarItem{
 	wxAuiToolBarItem_php(const wxAuiToolBarItem& c):wxAuiToolBarItem(c){}
 	wxAuiToolBarItem_php():wxAuiToolBarItem(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -196,13 +190,10 @@ class wxAuiToolBarArt_php: public wxAuiToolBarArt{
 	void SetFlags(unsigned int flags);
 	void SetFont(const wxFont& font);
 	void SetTextOrientation(int orientation);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -233,13 +224,10 @@ class wxAuiDefaultToolBarArt_php: public wxAuiDefaultToolBarArt{
 	
 	wxAuiDefaultToolBarArt_php():wxAuiDefaultToolBarArt(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -291,13 +279,10 @@ class wxAuiToolBar_php: public wxAuiToolBar{
 	wxAuiToolBar_php():wxAuiToolBar(){}
 	wxAuiToolBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& position=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxAUI_TB_DEFAULT_STYLE):wxAuiToolBar(parent, id, position, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -625,13 +610,10 @@ class wxAuiNotebook_php: public wxAuiNotebook{
 	wxAuiNotebook_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxAUI_NB_DEFAULT_STYLE):wxAuiNotebook(parent, id, pos, size, style){}
 	wxAuiNotebook_php():wxAuiNotebook(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -943,13 +925,10 @@ class wxAuiTabArt_php: public wxAuiTabArt{
 	void DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect, int bitmap_id, int button_state, int orientation, wxRect* out_rect);
 	void DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect);
 	wxAuiTabArt* Clone();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -992,13 +971,10 @@ class wxAuiDockArt_php: public wxAuiDockArt{
 	void DrawCaption(wxDC& dc, wxWindow* window, const wxString& text, const wxRect& rect, wxAuiPaneInfo& pane);
 	void DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane);
 	void DrawBackground(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1031,13 +1007,10 @@ class wxAuiManager_php: public wxAuiManager{
 	wxAuiManager_php(wxWindow* managed_wnd=NULL, unsigned int flags=wxAUI_MGR_DEFAULT):wxAuiManager(managed_wnd, flags){}
 		
 	bool ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneInfo& new_pos);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1115,13 +1088,10 @@ class wxAuiPaneInfo_php: public wxAuiPaneInfo{
 	wxAuiPaneInfo_php(const wxAuiPaneInfo& c):wxAuiPaneInfo(c){}
 	wxAuiPaneInfo_php():wxAuiPaneInfo(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1224,13 +1194,10 @@ class wxAuiManagerEvent_php: public wxAuiManagerEvent{
 	
 	wxAuiManagerEvent_php(wxEventType type=wxEVT_NULL):wxAuiManagerEvent(type){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

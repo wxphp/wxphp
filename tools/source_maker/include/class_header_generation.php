@@ -72,6 +72,25 @@ function class_virtual_declarations($class_name, $class_methods)
 }
 
 /**
+ * Checks if a given class has properties.
+ * 
+ * @param string $class_name
+ * 
+ * @return bool
+ */
+function class_has_properties($class_name)
+{
+	global $defClassProperties;
+	
+	if(isset($defClassProperties[$class_name]))
+	{
+		return true;
+	}
+    
+    return false;
+}
+
+/**
  * Generates the code to add a function to wxWidgets php class wrappers
  * that stores the pointer of all the wxWidgets class properties.
  * 
@@ -83,7 +102,7 @@ function class_init_properties_code($class_name)
 {
 	global $defClassProperties;
 	
-	$code = "";
+	$code = "void InitProperties(){\n";
 	
 	if(isset($defClassProperties[$class_name]))
 	{
@@ -124,6 +143,32 @@ function class_init_properties_code($class_name)
 	}
 	
 	$code .= tabs(2) . register_class_const_properties($class_name) . "\n";
+    
+    $code .= tabs(1) . "}\n";
+	
+	return $code;
+}
+
+/**
+ * Generates the code to add a function to wxWidgets php class wrappers
+ * that stores the pointer of all the wxWidgets class properties.
+ * 
+ * @param string $class_name
+ * 
+ * @return string
+ */
+function class_uninit_properties_code($class_name)
+{
+	global $defClassProperties;
+	
+	$code = "void UninitProperties(){\n";
+	
+	if(isset($defClassProperties[$class_name]))
+	{
+		$code .= tabs(2) . "delete[] properties;\n";
+	}
+    
+    $code .= tabs(1) . "}\n";
 	
 	return $code;
 }

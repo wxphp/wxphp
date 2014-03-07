@@ -75,7 +75,8 @@ void php_wxDataViewChoiceRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxDataViewChoiceRenderer_new(zend_class_entry *class_type 
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewChoiceRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWCHOICERENDERER_TYPE;
@@ -484,8 +481,7 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewChoiceRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -546,10 +542,6 @@ zend_object_value php_wxDataViewModel_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWMODEL_TYPE;
@@ -1536,7 +1528,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1614,7 +1606,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1705,7 +1697,7 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2252,7 +2244,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3334,7 +3326,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3545,7 +3537,8 @@ void php_wxDataViewListModel_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -3590,10 +3583,6 @@ zend_object_value php_wxDataViewListModel_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewListModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWLISTMODEL_TYPE;
@@ -3810,7 +3799,7 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3951,7 +3940,7 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -4161,7 +4150,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -4207,7 +4196,8 @@ void php_wxDataViewIndexListModel_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4253,10 +4243,6 @@ zend_object_value php_wxDataViewIndexListModel_new(zend_class_entry *class_type 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewIndexListModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWINDEXLISTMODEL_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -4288,7 +4274,8 @@ void php_wxDataViewVirtualListModel_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4334,10 +4321,6 @@ zend_object_value php_wxDataViewVirtualListModel_new(zend_class_entry *class_typ
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewVirtualListModel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWVIRTUALLISTMODEL_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -4369,7 +4352,8 @@ void php_wxDataViewItemAttr_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4414,10 +4398,6 @@ zend_object_value php_wxDataViewItemAttr_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewItemAttr_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWITEMATTR_TYPE;
@@ -4811,8 +4791,7 @@ PHP_METHOD(php_wxDataViewItemAttr, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewItemAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4857,7 +4836,8 @@ void php_wxDataViewItem_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4902,10 +4882,6 @@ zend_object_value php_wxDataViewItem_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewItem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWITEM_TYPE;
@@ -5268,8 +5244,7 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewItem*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5314,7 +5289,8 @@ void php_wxDataViewModelNotifier_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -5359,10 +5335,6 @@ zend_object_value php_wxDataViewModelNotifier_new(zend_class_entry *class_type T
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewModelNotifier_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWMODELNOTIFIER_TYPE;
@@ -5612,7 +5584,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5690,7 +5662,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -5770,7 +5742,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6033,7 +6005,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6115,8 +6087,7 @@ PHP_METHOD(php_wxDataViewModelNotifier, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewModelNotifier*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -6161,7 +6132,8 @@ void php_wxDataViewRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -6206,10 +6178,6 @@ zend_object_value php_wxDataViewRenderer_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWRENDERER_TYPE;
@@ -7394,7 +7362,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -8023,7 +7991,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -8265,7 +8233,8 @@ void php_wxDataViewTextRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8310,10 +8279,6 @@ zend_object_value php_wxDataViewTextRenderer_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewTextRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWTEXTRENDERER_TYPE;
@@ -8423,8 +8388,7 @@ PHP_METHOD(php_wxDataViewTextRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewTextRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8469,7 +8433,8 @@ void php_wxDataViewIconTextRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8514,10 +8479,6 @@ zend_object_value php_wxDataViewIconTextRenderer_new(zend_class_entry *class_typ
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewIconTextRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWICONTEXTRENDERER_TYPE;
@@ -8627,8 +8588,7 @@ PHP_METHOD(php_wxDataViewIconTextRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewIconTextRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8673,7 +8633,8 @@ void php_wxDataViewProgressRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8718,10 +8679,6 @@ zend_object_value php_wxDataViewProgressRenderer_new(zend_class_entry *class_typ
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewProgressRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWPROGRESSRENDERER_TYPE;
@@ -8844,8 +8801,7 @@ PHP_METHOD(php_wxDataViewProgressRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewProgressRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8890,7 +8846,8 @@ void php_wxDataViewSpinRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8935,10 +8892,6 @@ zend_object_value php_wxDataViewSpinRenderer_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewSpinRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWSPINRENDERER_TYPE;
@@ -9037,8 +8990,7 @@ PHP_METHOD(php_wxDataViewSpinRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewSpinRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9083,7 +9035,8 @@ void php_wxDataViewToggleRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -9128,10 +9081,6 @@ zend_object_value php_wxDataViewToggleRenderer_new(zend_class_entry *class_type 
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewToggleRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWTOGGLERENDERER_TYPE;
@@ -9241,8 +9190,7 @@ PHP_METHOD(php_wxDataViewToggleRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewToggleRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9287,7 +9235,8 @@ void php_wxDataViewDateRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -9332,10 +9281,6 @@ zend_object_value php_wxDataViewDateRenderer_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewDateRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWDATERENDERER_TYPE;
@@ -9445,8 +9390,7 @@ PHP_METHOD(php_wxDataViewDateRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewDateRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9491,7 +9435,8 @@ void php_wxDataViewCustomRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -9536,10 +9481,6 @@ zend_object_value php_wxDataViewCustomRenderer_new(zend_class_entry *class_type 
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewCustomRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWCUSTOMRENDERER_TYPE;
@@ -10457,7 +10398,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -11042,7 +10983,8 @@ void php_wxDataViewBitmapRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -11087,10 +11029,6 @@ zend_object_value php_wxDataViewBitmapRenderer_new(zend_class_entry *class_type 
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewBitmapRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWBITMAPRENDERER_TYPE;
@@ -11200,8 +11138,7 @@ PHP_METHOD(php_wxDataViewBitmapRenderer, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewBitmapRenderer*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -11246,7 +11183,8 @@ void php_wxDataViewColumn_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -11291,10 +11229,6 @@ zend_object_value php_wxDataViewColumn_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewColumn_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWCOLUMN_TYPE;
@@ -11766,8 +11700,7 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewColumn*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -11932,7 +11865,8 @@ void php_wxDataViewListStore_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -11977,10 +11911,6 @@ zend_object_value php_wxDataViewListStore_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewListStore_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWLISTSTORE_TYPE;
@@ -13009,8 +12939,7 @@ PHP_METHOD(php_wxDataViewListStore, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewListStore*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -13055,7 +12984,8 @@ void php_wxDataViewTreeStore_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -13100,10 +13030,6 @@ zend_object_value php_wxDataViewTreeStore_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewTreeStore_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWTREESTORE_TYPE;
@@ -13280,7 +13206,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13301,7 +13226,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13323,7 +13247,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13346,7 +13269,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13518,7 +13440,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13539,7 +13460,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -13561,7 +13481,6 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14706,7 +14625,6 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14913,7 +14831,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14935,7 +14852,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14958,7 +14874,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -14982,7 +14897,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 				memcpy(ptr, &value_to_return6, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo6 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo6->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15174,7 +15088,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15196,7 +15109,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15219,7 +15131,6 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15410,7 +15321,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15431,7 +15341,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15453,7 +15362,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15476,7 +15384,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 				memcpy(ptr, &value_to_return5, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo5 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15648,7 +15555,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				memcpy(ptr, &value_to_return2, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo2 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15669,7 +15575,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				memcpy(ptr, &value_to_return3, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo3 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxDataViewItem_php*) ptr;
 
@@ -15691,7 +15596,6 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 				memcpy(ptr, &value_to_return4, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo4 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxDataViewItem_php*) ptr;
 
@@ -16196,8 +16100,7 @@ PHP_METHOD(php_wxDataViewTreeStore, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewTreeStore*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -16242,7 +16145,8 @@ void php_wxDataViewIconText_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -16287,10 +16191,6 @@ zend_object_value php_wxDataViewIconText_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewIconText_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWICONTEXT_TYPE;
@@ -16908,8 +16808,7 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewIconText*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -16954,7 +16853,8 @@ void php_wxDataViewEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -16999,10 +16899,6 @@ zend_object_value php_wxDataViewEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDataViewEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATAVIEWEVENT_TYPE;
@@ -17096,7 +16992,6 @@ PHP_METHOD(php_wxDataViewEvent, GetItem)
 				memcpy(ptr, &value_to_return0, sizeof(wxDataViewItem));
 				object_init_ex(return_value, php_wxDataViewItem_entry);
 				((wxDataViewItem_php*)ptr)->phpObj = return_value;
-				((wxDataViewItem_php*)ptr)->InitProperties();
 				zo_wxDataViewItem* zo0 = (zo_wxDataViewItem*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataViewItem_php*) ptr;
 
@@ -17709,7 +17604,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
 				object_init_ex(return_value, php_wxDataFormat_entry);
 				((wxDataFormat_php*)ptr)->phpObj = return_value;
-				((wxDataFormat_php*)ptr)->InitProperties();
 				zo_wxDataFormat* zo0 = (zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxDataFormat_php*) ptr;
 
@@ -19058,8 +18952,7 @@ PHP_METHOD(php_wxDataViewEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDataViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

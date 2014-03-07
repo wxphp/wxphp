@@ -28,13 +28,10 @@ class wxAcceleratorEntry_php: public wxAcceleratorEntry{
 	wxAcceleratorEntry_php(const wxAcceleratorEntry& entry):wxAcceleratorEntry(entry){}
 	wxAcceleratorEntry_php(int flags=0, int keyCode=0, int cmd=0, wxMenuItem* item=NULL):wxAcceleratorEntry(flags, keyCode, cmd, item){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -74,13 +71,10 @@ class wxAcceleratorTable_php: public wxAcceleratorTable{
 	
 	wxAcceleratorTable_php():wxAcceleratorTable(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -120,13 +114,10 @@ class wxCalendarDateAttr_php: public wxCalendarDateAttr{
 	wxCalendarDateAttr_php(wxCalendarDateBorder border, const wxColour& colBorder=wxNullColour):wxCalendarDateAttr(border, colBorder){}
 	wxCalendarDateAttr_php(const wxColour& colText=wxNullColour, const wxColour& colBack=wxNullColour, const wxColour& colBorder=wxNullColour, const wxFont& font=wxNullFont, wxCalendarDateBorder border=wxCAL_BORDER_NONE):wxCalendarDateAttr(colText, colBack, colBorder, font, border){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -178,13 +169,10 @@ class wxPageSetupDialogData_php: public wxPageSetupDialogData{
 	wxPageSetupDialogData_php():wxPageSetupDialogData(){}
 	wxPageSetupDialogData_php(const wxPrintData& printData):wxPageSetupDialogData(printData){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -251,13 +239,10 @@ class wxPrintData_php: public wxPrintData{
 	
 	wxPrintData_php():wxPrintData(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -320,18 +305,23 @@ class wxRealPoint_php: public wxRealPoint{
 	wxRealPoint_php(double x, double y):wxRealPoint(x, y){}
 	wxRealPoint_php(const wxPoint& pt):wxRealPoint(pt){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[2];
 
 		properties[0] = &x;
 		properties[1] = &y;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -368,8 +358,8 @@ class wxRect_php: public wxRect{
 	wxRect_php(const wxPoint& pos, const wxSize& size):wxRect(pos, size){}
 	wxRect_php(const wxSize& size):wxRect(size){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[4];
 
 		properties[0] = &height;
@@ -378,10 +368,15 @@ class wxRect_php: public wxRect{
 		properties[3] = &y;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -445,18 +440,23 @@ class wxPoint_php: public wxPoint{
 	wxPoint_php(int x, int y):wxPoint(x, y){}
 	wxPoint_php(const wxRealPoint& pt):wxPoint(pt){}
 		
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[2];
 
 		properties[0] = &x;
 		properties[1] = &y;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -491,13 +491,10 @@ class wxSize_php: public wxSize{
 	wxSize_php():wxSize(){}
 	wxSize_php(int width, int height):wxSize(width, height){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -540,13 +537,10 @@ class wxListItemAttr_php: public wxListItemAttr{
 	wxListItemAttr_php():wxListItemAttr(){}
 	wxListItemAttr_php(const wxColour& colText, const wxColour& colBack, const wxFont& font):wxListItemAttr(colText, colBack, font){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -587,13 +581,10 @@ class wxListItem_php: public wxListItem{
 	
 	wxListItem_php():wxListItem(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -650,13 +641,10 @@ class wxFileType_php: public wxFileType{
 	
 	wxFileType_php(const wxFileTypeInfo& ftInfo):wxFileType(ftInfo){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -694,13 +682,10 @@ class wxPosition_php: public wxPosition{
 	wxPosition_php():wxPosition(){}
 	wxPosition_php(int row, int col):wxPosition(row, col){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -745,13 +730,10 @@ class wxRegion_php: public wxRegion{
 	wxRegion_php(const wxBitmap& bmp):wxRegion(bmp){}
 	wxRegion_php(const wxBitmap& bmp, const wxColour& transColour, int tolerance=0):wxRegion(bmp, transColour, tolerance){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -800,13 +782,10 @@ class wxStatusBarPane_php: public wxStatusBarPane{
 	
 	wxStatusBarPane_php(int style=wxSB_NORMAL, int width=0):wxStatusBarPane(style, width){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -841,13 +820,10 @@ class wxTreeItemId_php: public wxTreeItemId{
 	
 	wxTreeItemId_php():wxTreeItemId(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -888,13 +864,10 @@ class wxVariant_php: public wxVariant{
 	wxVariant_php(const wxArrayString& val, const wxString& name=wxEmptyString):wxVariant(val, name){}
 	wxVariant_php(const wxVariant& variant):wxVariant(variant){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -960,13 +933,10 @@ class wxVariantData_php: public wxVariantData{
 		
 	bool Eq(wxVariantData& data) const;
 	wxString GetType() const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1004,13 +974,10 @@ class wxVersionInfo_php: public wxVersionInfo{
 	
 	wxVersionInfo_php(const wxString& name=wxString(), int major=0, int minor=0, int micro=0, const wxString& description=wxString(), const wxString& copyright=wxString()):wxVersionInfo(name, major, minor, micro, description, copyright){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
