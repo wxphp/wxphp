@@ -28,13 +28,10 @@ class wxGBPosition_php: public wxGBPosition{
 	wxGBPosition_php():wxGBPosition(){}
 	wxGBPosition_php(int row, int col):wxGBPosition(row, col){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -70,13 +67,10 @@ class wxGridBagSizer_php: public wxGridBagSizer{
 	
 	wxGridBagSizer_php(int vgap=0, int hgap=0):wxGridBagSizer(vgap, hgap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -185,13 +179,10 @@ class wxGBSizerItem_php: public wxGBSizerItem{
 	wxGBSizerItem_php(wxWindow* window, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(window, pos, span, flag, border, userData){}
 	wxGBSizerItem_php(wxSizer* sizer, const wxGBPosition& pos, const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0, wxObject* userData=NULL):wxGBSizerItem(sizer, pos, span, flag, border, userData){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -274,13 +265,10 @@ class wxGBSpan_php: public wxGBSpan{
 	wxGBSpan_php():wxGBSpan(){}
 	wxGBSpan_php(int rowspan, int colspan):wxGBSpan(rowspan, colspan){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -316,13 +304,10 @@ class wxLayoutAlgorithm_php: public wxLayoutAlgorithm{
 	
 	wxLayoutAlgorithm_php():wxLayoutAlgorithm(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -365,13 +350,10 @@ class wxSizer_php: public wxSizer{
 		
 	void RecalcSizes();
 	wxSize CalcMin();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -444,13 +426,10 @@ class wxStdDialogButtonSizer_php: public wxStdDialogButtonSizer{
 	
 	wxStdDialogButtonSizer_php():wxStdDialogButtonSizer(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -535,13 +514,10 @@ class wxSizerItem_php: public wxSizerItem{
 	wxSizerItem_php(wxSizer* sizer, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(sizer, proportion, flag, border, userData){}
 	wxSizerItem_php(int width, int height, int proportion=0, int flag=0, int border=0, wxObject* userData=NULL):wxSizerItem(width, height, proportion, flag, border, userData){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -615,13 +591,10 @@ class wxSizerFlags_php: public wxSizerFlags{
 	
 	wxSizerFlags_php(int proportion=0):wxSizerFlags(proportion){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -673,13 +646,10 @@ class wxFlexGridSizer_php: public wxFlexGridSizer{
 	wxFlexGridSizer_php(int rows, int cols, int vgap, int hgap):wxFlexGridSizer(rows, cols, vgap, hgap){}
 	wxFlexGridSizer_php(int rows, int cols, const wxSize& gap):wxFlexGridSizer(rows, cols, gap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -777,13 +747,10 @@ class wxGridSizer_php: public wxGridSizer{
 	wxGridSizer_php(int rows, int cols, int vgap, int hgap):wxGridSizer(rows, cols, vgap, hgap){}
 	wxGridSizer_php(int rows, int cols, const wxSize& gap):wxGridSizer(rows, cols, gap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -869,13 +836,10 @@ class wxStaticBoxSizer_php: public wxStaticBoxSizer{
 	wxStaticBoxSizer_php(wxStaticBox* box, int orient):wxStaticBoxSizer(box, orient){}
 	wxStaticBoxSizer_php(int orient, wxWindow* parent, const wxString& label=wxEmptyString):wxStaticBoxSizer(orient, parent, label){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -952,13 +916,10 @@ class wxBoxSizer_php: public wxBoxSizer{
 	
 	wxBoxSizer_php(int orient):wxBoxSizer(orient){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1035,13 +996,10 @@ class wxWrapSizer_php: public wxWrapSizer{
 	wxWrapSizer_php(int orient=wxHORIZONTAL, int flags=wxWRAPSIZER_DEFAULT_FLAGS):wxWrapSizer(orient, flags){}
 		
 	bool IsSpaceItem(wxSizerItem* item) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

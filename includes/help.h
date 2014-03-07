@@ -29,13 +29,10 @@ class wxHtmlHelpController_php: public wxHtmlHelpController{
 		
 	wxHtmlHelpDialog* CreateHelpDialog(wxHtmlHelpData* data);
 	wxHtmlHelpFrame* CreateHelpFrame(wxHtmlHelpData* data);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -78,13 +75,10 @@ class wxHtmlModalHelp_php: public wxHtmlModalHelp{
 	
 	wxHtmlModalHelp_php(wxWindow* parent, const wxString& helpFile, const wxString& topic=wxEmptyString, int style=wxHF_DEFAULT_STYLE|wxHF_DIALOG|wxHF_MODAL):wxHtmlModalHelp(parent, helpFile, topic, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -116,13 +110,10 @@ class wxHtmlHelpData_php: public wxHtmlHelpData{
 	
 	wxHtmlHelpData_php():wxHtmlHelpData(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -165,13 +156,10 @@ class wxHtmlHelpDialog_php: public wxHtmlHelpDialog{
 	wxHtmlHelpDialog_php(wxHtmlHelpData* data=NULL):wxHtmlHelpDialog(data){}
 	wxHtmlHelpDialog_php(wxWindow* parent, wxWindowID id, const wxString& title=wxEmptyString, int style=wxHF_DEFAULT_STYLE, wxHtmlHelpData* data=NULL):wxHtmlHelpDialog(parent, id, title, style, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -478,13 +466,10 @@ class wxHtmlHelpFrame_php: public wxHtmlHelpFrame{
 	wxHtmlHelpFrame_php(wxHtmlHelpData* data=NULL):wxHtmlHelpFrame(data){}
 	wxHtmlHelpFrame_php(wxWindow* parent, wxWindowID id, const wxString& title=wxEmptyString, int style=wxHF_DEFAULT_STYLE, wxHtmlHelpData* data=NULL, wxConfigBase* config=NULL, const wxString& rootpath=wxEmptyString):wxHtmlHelpFrame(parent, id, title, style, data, config, rootpath){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -792,13 +777,10 @@ class wxHtmlHelpWindow_php: public wxHtmlHelpWindow{
 	wxHtmlHelpWindow_php(wxWindow* parent, int wxWindowID, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, int style=wxTAB_TRAVERSAL|wxBORDER_NONE, int helpStyle=wxHF_DEFAULT_STYLE, wxHtmlHelpData* data=NULL):wxHtmlHelpWindow(parent, wxWindowID, pos, size, style, helpStyle, data){}
 		
 	void AddToolbarButtons(wxToolBar* toolBar, int style);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1070,13 +1052,10 @@ class wxToolTip_php: public wxToolTip{
 	
 	wxToolTip_php(const wxString& tip):wxToolTip(tip){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

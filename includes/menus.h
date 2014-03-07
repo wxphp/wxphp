@@ -27,13 +27,10 @@ class wxMenuBar_php: public wxMenuBar{
 	
 	wxMenuBar_php(long style=0):wxMenuBar(style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -320,13 +317,10 @@ class wxMenu_php: public wxMenu{
 	wxMenu_php(const wxString& title, long style=0):wxMenu(title, style){}
 	wxMenu_php():wxMenu(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -423,13 +417,10 @@ class wxMenuItem_php: public wxMenuItem{
 	
 	wxMenuItem_php(wxMenu* parentMenu=NULL, int id=wxID_SEPARATOR, const wxString& text=wxEmptyString, const wxString& helpString=wxEmptyString, wxItemKind kind=wxITEM_NORMAL, wxMenu* subMenu=NULL):wxMenuItem(parentMenu, id, text, helpString, kind, subMenu){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -59,13 +59,10 @@ class wxRibbonArtProvider_php: public wxRibbonArtProvider{
 	void SetMetric(int id, int new_val);
 	void DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, wxRibbonButtonKind kind, long state, const wxString& label, const wxBitmap& bitmap_large, const wxBitmap& bitmap_small);
 	bool GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wxRibbonButtonKind kind, wxRibbonButtonBarButtonState size, const wxString& label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize* button_size, wxRect* normal_region, wxRect* dropdown_region);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -99,13 +96,10 @@ class wxRibbonBar_php: public wxRibbonBar{
 	wxRibbonBar_php():wxRibbonBar(){}
 	wxRibbonBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxRIBBON_BAR_DEFAULT_STYLE):wxRibbonBar(parent, id, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -390,13 +384,10 @@ class wxRibbonButtonBar_php: public wxRibbonButtonBar{
 	wxRibbonButtonBar_php():wxRibbonButtonBar(){}
 	wxRibbonButtonBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonButtonBar(parent, id, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -683,13 +674,10 @@ class wxRibbonControl_php: public wxRibbonControl{
 		
 	wxSize DoGetNextLargerSize(wxOrientation direction, wxSize relative_to) const;
 	wxSize DoGetNextSmallerSize(wxOrientation direction, wxSize relative_to) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -966,13 +954,10 @@ class wxRibbonGallery_php: public wxRibbonGallery{
 	wxRibbonGallery_php():wxRibbonGallery(){}
 	wxRibbonGallery_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonGallery(parent, id, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1268,13 +1253,10 @@ class wxRibbonPage_php: public wxRibbonPage{
 	wxRibbonPage_php():wxRibbonPage(){}
 	wxRibbonPage_php(wxRibbonBar* parent, wxWindowID id=wxID_ANY, const wxString& label=wxEmptyString, const wxBitmap& icon=wxNullBitmap, long style=0):wxRibbonPage(parent, id, label, icon, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1557,13 +1539,10 @@ class wxRibbonPanel_php: public wxRibbonPanel{
 	wxRibbonPanel_php():wxRibbonPanel(){}
 	wxRibbonPanel_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxString& label=wxEmptyString, const wxBitmap& minimised_icon=wxNullBitmap, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxRIBBON_PANEL_DEFAULT_STYLE):wxRibbonPanel(parent, id, label, minimised_icon, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1848,13 +1827,10 @@ class wxRibbonToolBar_php: public wxRibbonToolBar{
 	wxRibbonToolBar_php():wxRibbonToolBar(){}
 	wxRibbonToolBar_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0):wxRibbonToolBar(parent, id, pos, size, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

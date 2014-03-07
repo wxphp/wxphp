@@ -27,13 +27,10 @@ class wxClipboard_php: public wxClipboard{
 	
 	wxClipboard_php():wxClipboard(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -84,13 +81,10 @@ class wxDataFormat_php: public wxDataFormat{
 	wxDataFormat_php(wxDataFormatId format=wxDF_INVALID):wxDataFormat(format){}
 	wxDataFormat_php(const wxString& format):wxDataFormat(format){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -131,13 +125,10 @@ class wxDataObject_php: public wxDataObject{
 	size_t GetDataSize(const wxDataFormat& format) const;
 	size_t GetFormatCount(Direction dir=Get) const;
 	wxDataFormat GetPreferredFormat(Direction dir=Get) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -171,13 +162,10 @@ class wxCustomDataObject_php: public wxCustomDataObject{
 	
 	wxCustomDataObject_php(const wxDataFormat& format=wxFormatInvalid):wxCustomDataObject(format){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -220,13 +208,10 @@ class wxDataObjectComposite_php: public wxDataObjectComposite{
 	
 	wxDataObjectComposite_php():wxDataObjectComposite(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -263,13 +248,10 @@ class wxDataObjectSimple_php: public wxDataObjectSimple{
 	
 	wxDataObjectSimple_php(const wxDataFormat& format=wxFormatInvalid):wxDataObjectSimple(format){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -307,13 +289,10 @@ class wxBitmapDataObject_php: public wxBitmapDataObject{
 	
 	wxBitmapDataObject_php(const wxBitmap& bitmap=wxNullBitmap):wxBitmapDataObject(bitmap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -353,13 +332,10 @@ class wxURLDataObject_php: public wxURLDataObject{
 	
 	wxURLDataObject_php(const wxString& url=wxEmptyString):wxURLDataObject(url){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -404,13 +380,10 @@ class wxTextDataObject_php: public wxTextDataObject{
 	
 	wxTextDataObject_php(const wxString& text=wxEmptyString):wxTextDataObject(text){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -453,13 +426,10 @@ class wxFileDataObject_php: public wxFileDataObject{
 	
 	wxFileDataObject_php():wxFileDataObject(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -504,13 +474,10 @@ class wxDropTarget_php: public wxDropTarget{
 	wxDragResult OnEnter(wxCoord x, wxCoord y, wxDragResult defResult);
 	wxDragResult OnData(wxCoord x, wxCoord y, wxDragResult defResult);
 	bool OnDrop(wxCoord x, wxCoord y);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -546,13 +513,10 @@ class wxTextDropTarget_php: public wxTextDropTarget{
 		
 	bool OnDropText(wxCoord x, wxCoord y, const wxString& data);
 	bool OnDrop(wxCoord x, wxCoord y);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -588,13 +552,10 @@ class wxFileDropTarget_php: public wxFileDropTarget{
 		
 	bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames);
 	bool OnDrop(wxCoord x, wxCoord y);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

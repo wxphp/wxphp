@@ -75,7 +75,8 @@ void php_wxXmlNode_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxXmlNode_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlNode_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLNODE_TYPE;
@@ -3714,8 +3711,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxXmlNode*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3760,7 +3756,8 @@ void php_wxXmlAttribute_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -3805,10 +3802,6 @@ zend_object_value php_wxXmlAttribute_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlAttribute_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLATTRIBUTE_TYPE;
@@ -4602,8 +4595,7 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxXmlAttribute*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4648,7 +4640,8 @@ void php_wxXmlDocument_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4693,10 +4686,6 @@ zend_object_value php_wxXmlDocument_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxXmlDocument_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXXMLDOCUMENT_TYPE;
@@ -5376,7 +5365,6 @@ PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 				memcpy(ptr, &value_to_return0, sizeof(wxVersionInfo));
 				object_init_ex(return_value, php_wxVersionInfo_entry);
 				((wxVersionInfo_php*)ptr)->phpObj = return_value;
-				((wxVersionInfo_php*)ptr)->InitProperties();
 				zo_wxVersionInfo* zo0 = (zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxVersionInfo_php*) ptr;
 
@@ -6808,8 +6796,7 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxXmlDocument*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

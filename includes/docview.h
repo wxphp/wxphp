@@ -27,13 +27,10 @@ class wxFileHistory_php: public wxFileHistory{
 	
 	wxFileHistory_php(size_t maxFiles=9, wxWindowID idBase=wxID_FILE1):wxFileHistory(maxFiles, idBase){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

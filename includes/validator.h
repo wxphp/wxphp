@@ -33,13 +33,10 @@ class wxGenericValidator_php: public wxGenericValidator{
 	wxGenericValidator_php(float* valPtr):wxGenericValidator(valPtr){}
 	wxGenericValidator_php(double* valPtr):wxGenericValidator(valPtr){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -102,13 +99,10 @@ class wxValidator_php: public wxValidator{
 	
 	wxValidator_php():wxValidator(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -172,13 +166,10 @@ class wxTextValidator_php: public wxTextValidator{
 	wxTextValidator_php(long style=wxFILTER_NONE, wxString* valPtr=NULL):wxTextValidator(style, valPtr){}
 		
 	wxString IsValid(const wxString& val) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

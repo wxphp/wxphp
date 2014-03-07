@@ -28,13 +28,10 @@ class wxFFile_php: public wxFFile{
 	wxFFile_php(const wxString& filename, const wxString& mode="r"):wxFFile(filename, mode){}
 	wxFFile_php():wxFFile(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -81,13 +78,10 @@ class wxFile_php: public wxFile{
 	wxFile_php(const wxString& filename, wxFile::OpenMode mode=wxFile::read):wxFile(filename, mode){}
 	wxFile_php(int fd):wxFile(fd){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -139,13 +133,10 @@ class wxPathList_php: public wxPathList{
 	wxPathList_php():wxPathList(){}
 	wxPathList_php(const wxArrayString& arr):wxPathList(arr){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -187,13 +178,10 @@ class wxFileName_php: public wxFileName{
 	wxFileName_php(const wxString& path, const wxString& name, const wxString& ext, wxPathFormat format=wxPATH_NATIVE):wxFileName(path, name, ext, format){}
 	wxFileName_php(const wxString& volume, const wxString& path, const wxString& name, const wxString& ext, wxPathFormat format=wxPATH_NATIVE):wxFileName(volume, path, name, ext, format){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -297,13 +285,10 @@ class wxFSFile_php: public wxFSFile{
 	
 	wxFSFile_php(wxInputStream* stream, const wxString& location, const wxString& mimetype, const wxString& anchor, wxDateTime modif):wxFSFile(stream, location, mimetype, anchor, modif){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -347,13 +332,10 @@ class wxFileSystemWatcher_php: public wxFileSystemWatcher{
 	
 	wxFileSystemWatcher_php():wxFileSystemWatcher(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -415,13 +397,10 @@ class wxStandardPaths_php: public wxStandardPaths{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -75,7 +75,8 @@ void php_wxFFile_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxFFile_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFFile_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFFILE_TYPE;
@@ -244,8 +241,7 @@ PHP_METHOD(php_wxFFile, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFFile*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -1625,7 +1621,8 @@ void php_wxFile_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -1670,10 +1667,6 @@ zend_object_value php_wxFile_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFile_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILE_TYPE;
@@ -2358,8 +2351,7 @@ PHP_METHOD(php_wxFile, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFile*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3846,7 +3838,8 @@ void php_wxPathList_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -3891,10 +3884,6 @@ zend_object_value php_wxPathList_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPathList_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPATHLIST_TYPE;
@@ -4603,8 +4592,7 @@ PHP_METHOD(php_wxPathList, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPathList*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4649,7 +4637,8 @@ void php_wxFileName_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4694,10 +4683,6 @@ zend_object_value php_wxFileName_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileName_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILENAME_TYPE;
@@ -5651,8 +5636,7 @@ PHP_METHOD(php_wxFileName, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileName*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9478,7 +9462,6 @@ PHP_METHOD(php_wxFileName, DirName)
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
 
@@ -9499,7 +9482,6 @@ PHP_METHOD(php_wxFileName, DirName)
 				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxFileName_php*) ptr;
 
@@ -9750,7 +9732,6 @@ PHP_METHOD(php_wxFileName, FileName)
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
 
@@ -9771,7 +9752,6 @@ PHP_METHOD(php_wxFileName, FileName)
 				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxFileName_php*) ptr;
 
@@ -14492,7 +14472,8 @@ void php_wxFSFile_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -14537,10 +14518,6 @@ zend_object_value php_wxFSFile_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFSFile_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFSFILE_TYPE;
@@ -14640,8 +14617,7 @@ PHP_METHOD(php_wxFSFile, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFSFile*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -15334,7 +15310,8 @@ void php_wxFileSystemWatcher_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -15379,10 +15356,6 @@ zend_object_value php_wxFileSystemWatcher_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemWatcher_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEMWATCHER_TYPE;
@@ -16293,8 +16266,7 @@ PHP_METHOD(php_wxFileSystemWatcher, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileSystemWatcher*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -16339,7 +16311,8 @@ void php_wxStandardPaths_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -16384,10 +16357,6 @@ zend_object_value php_wxStandardPaths_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxStandardPaths_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTANDARDPATHS_TYPE;

@@ -75,7 +75,8 @@ void php_wxGraphicsGradientStop_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxGraphicsGradientStop_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGraphicsGradientStop_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRAPHICSGRADIENTSTOP_TYPE;
@@ -675,8 +672,7 @@ PHP_METHOD(php_wxGraphicsGradientStop, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxGraphicsGradientStop*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -721,7 +717,8 @@ void php_wxGraphicsGradientStops_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -766,10 +763,6 @@ zend_object_value php_wxGraphicsGradientStops_new(zend_class_entry *class_type T
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGraphicsGradientStops_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRAPHICSGRADIENTSTOPS_TYPE;
@@ -1141,7 +1134,6 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetEndColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
 
@@ -1247,7 +1239,6 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetStartColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
 
@@ -1357,7 +1348,6 @@ PHP_METHOD(php_wxGraphicsGradientStops, Item)
 				memcpy(ptr, &value_to_return1, sizeof(wxGraphicsGradientStop));
 				object_init_ex(return_value, php_wxGraphicsGradientStop_entry);
 				((wxGraphicsGradientStop_php*)ptr)->phpObj = return_value;
-				((wxGraphicsGradientStop_php*)ptr)->InitProperties();
 				zo_wxGraphicsGradientStop* zo1 = (zo_wxGraphicsGradientStop*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxGraphicsGradientStop_php*) ptr;
 
@@ -1740,8 +1730,7 @@ PHP_METHOD(php_wxGraphicsGradientStops, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxGraphicsGradientStops*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -1786,7 +1775,8 @@ void php_wxAnimation_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -1831,10 +1821,6 @@ zend_object_value php_wxAnimation_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxAnimation_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXANIMATION_TYPE;
@@ -2037,7 +2023,6 @@ PHP_METHOD(php_wxAnimation, GetFrame)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -2239,7 +2224,6 @@ PHP_METHOD(php_wxAnimation, GetSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -2606,8 +2590,7 @@ PHP_METHOD(php_wxAnimation, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxAnimation*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2787,7 +2770,8 @@ void php_wxBitmapHandler_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -2832,10 +2816,6 @@ zend_object_value php_wxBitmapHandler_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBitmapHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBITMAPHANDLER_TYPE;
@@ -2904,8 +2884,7 @@ PHP_METHOD(php_wxBitmapHandler, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxBitmapHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3984,7 +3963,8 @@ void php_wxBitmap_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -4029,10 +4009,6 @@ zend_object_value php_wxBitmap_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBitmap_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBITMAP_TYPE;
@@ -4352,7 +4328,6 @@ PHP_METHOD(php_wxBitmap, ConvertToDisabled)
 				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxBitmap_php*) ptr;
 
@@ -4373,7 +4348,6 @@ PHP_METHOD(php_wxBitmap, ConvertToDisabled)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxBitmap_php*) ptr;
 
@@ -4751,8 +4725,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxBitmap*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5522,7 +5495,6 @@ PHP_METHOD(php_wxBitmap, ConvertToImage)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -6613,7 +6585,6 @@ PHP_METHOD(php_wxBitmap, GetSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -6742,7 +6713,6 @@ PHP_METHOD(php_wxBitmap, GetSubBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxBitmap_php*) ptr;
 
@@ -7441,7 +7411,8 @@ void php_wxMask_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -7486,10 +7457,6 @@ zend_object_value php_wxMask_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMask_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMASK_TYPE;
@@ -8008,8 +7975,7 @@ PHP_METHOD(php_wxMask, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMask*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8054,7 +8020,8 @@ void php_wxBrush_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8099,10 +8066,6 @@ zend_object_value php_wxBrush_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxBrush_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXBRUSH_TYPE;
@@ -8198,7 +8161,6 @@ PHP_METHOD(php_wxBrush, GetColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
 
@@ -9394,8 +9356,7 @@ PHP_METHOD(php_wxBrush, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxBrush*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9440,7 +9401,8 @@ void php_wxColour_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -9485,10 +9447,6 @@ zend_object_value php_wxColour_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColour_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOUR_TYPE;
@@ -9742,8 +9700,7 @@ PHP_METHOD(php_wxColour, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxColour*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -10770,7 +10727,8 @@ void php_wxCursor_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -10815,10 +10773,6 @@ zend_object_value php_wxCursor_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCursor_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCURSOR_TYPE;
@@ -11173,8 +11127,7 @@ PHP_METHOD(php_wxCursor, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxCursor*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -11219,7 +11172,8 @@ void php_wxDCClipper_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -11264,10 +11218,6 @@ zend_object_value php_wxDCClipper_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDCClipper_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDCCLIPPER_TYPE;
@@ -11518,8 +11468,7 @@ PHP_METHOD(php_wxDCClipper, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxDCClipper*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -11564,7 +11513,8 @@ void php_wxFont_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -11609,10 +11559,6 @@ zend_object_value php_wxFont_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFont_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONT_TYPE;
@@ -12012,8 +11958,7 @@ PHP_METHOD(php_wxFont, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFont*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -12121,7 +12066,6 @@ PHP_METHOD(php_wxFont, Bold)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -12827,7 +12771,6 @@ PHP_METHOD(php_wxFont, GetPixelSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -13515,7 +13458,6 @@ PHP_METHOD(php_wxFont, Italic)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -13621,7 +13563,6 @@ PHP_METHOD(php_wxFont, Larger)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -15319,7 +15260,6 @@ PHP_METHOD(php_wxFont, Scaled)
 				memcpy(ptr, &value_to_return1, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFont_php*) ptr;
 
@@ -16833,7 +16773,6 @@ PHP_METHOD(php_wxFont, Smaller)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -16939,7 +16878,6 @@ PHP_METHOD(php_wxFont, Underlined)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -17102,7 +17040,8 @@ void php_wxFontList_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -17147,10 +17086,6 @@ zend_object_value php_wxFontList_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontList_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTLIST_TYPE;
@@ -17219,8 +17154,7 @@ PHP_METHOD(php_wxFontList, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFontList*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -17502,7 +17436,8 @@ void php_wxFontEnumerator_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -17547,10 +17482,6 @@ zend_object_value php_wxFontEnumerator_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontEnumerator_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTENUMERATOR_TYPE;
@@ -17621,7 +17552,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -17709,7 +17640,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -18421,7 +18352,8 @@ void php_wxNativeFontInfo_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -18466,10 +18398,6 @@ zend_object_value php_wxNativeFontInfo_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxNativeFontInfo_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXNATIVEFONTINFO_TYPE;
@@ -18594,8 +18522,7 @@ PHP_METHOD(php_wxNativeFontInfo, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxNativeFontInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -20707,7 +20634,8 @@ void php_wxColourDatabase_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -20752,10 +20680,6 @@ zend_object_value php_wxColourDatabase_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColourDatabase_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOURDATABASE_TYPE;
@@ -20980,7 +20904,6 @@ PHP_METHOD(php_wxColourDatabase, Find)
 				memcpy(ptr, &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxColour_php*) ptr;
 
@@ -21186,8 +21109,7 @@ PHP_METHOD(php_wxColourDatabase, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxColourDatabase*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -21232,7 +21154,8 @@ void php_wxGDIObject_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -21278,10 +21201,6 @@ zend_object_value php_wxGDIObject_new(zend_class_entry *class_type TSRMLS_DC)
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGDIObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGDIOBJECT_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -21313,7 +21232,8 @@ void php_wxGraphicsRenderer_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -21359,10 +21279,6 @@ zend_object_value php_wxGraphicsRenderer_new(zend_class_entry *class_type TSRMLS
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGraphicsRenderer_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRAPHICSRENDERER_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -21394,7 +21310,8 @@ void php_wxGraphicsMatrix_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -21440,10 +21357,6 @@ zend_object_value php_wxGraphicsMatrix_new(zend_class_entry *class_type TSRMLS_D
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGraphicsMatrix_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRAPHICSMATRIX_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -21475,7 +21388,8 @@ void php_wxIcon_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -21520,10 +21434,6 @@ zend_object_value php_wxIcon_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxIcon_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXICON_TYPE;
@@ -21724,8 +21634,7 @@ PHP_METHOD(php_wxIcon, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxIcon*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -22744,7 +22653,8 @@ void php_wxIconBundle_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -22789,10 +22699,6 @@ zend_object_value php_wxIconBundle_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxIconBundle_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXICONBUNDLE_TYPE;
@@ -23096,8 +23002,7 @@ PHP_METHOD(php_wxIconBundle, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxIconBundle*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -23325,7 +23230,6 @@ PHP_METHOD(php_wxIconBundle, GetIconOfExactSize)
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxIcon_php*) ptr;
 
@@ -23534,7 +23438,6 @@ PHP_METHOD(php_wxIconBundle, GetIconByIndex)
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxIcon_php*) ptr;
 
@@ -23931,7 +23834,6 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxIcon_php*) ptr;
 
@@ -23953,7 +23855,6 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				memcpy(ptr, &value_to_return2, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo2 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxIcon_php*) ptr;
 
@@ -23982,7 +23883,6 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				memcpy(ptr, &value_to_return0, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo0 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxIcon_php*) ptr;
 
@@ -24003,7 +23903,6 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxIcon_php*) ptr;
 
@@ -24024,7 +23923,6 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				memcpy(ptr, &value_to_return2, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo2 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxIcon_php*) ptr;
 
@@ -24067,7 +23965,8 @@ void php_wxImageHandler_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -24112,10 +24011,6 @@ zend_object_value php_wxImageHandler_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxImageHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXIMAGEHANDLER_TYPE;
@@ -25750,7 +25645,8 @@ void php_wxImage_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -25795,10 +25691,6 @@ zend_object_value php_wxImage_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxImage_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXIMAGE_TYPE;
@@ -26525,8 +26417,7 @@ PHP_METHOD(php_wxImage, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxImage*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -27861,7 +27752,6 @@ PHP_METHOD(php_wxImage, Scale)
 				memcpy(ptr, &value_to_return2, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo2 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxImage_php*) ptr;
 
@@ -27882,7 +27772,6 @@ PHP_METHOD(php_wxImage, Scale)
 				memcpy(ptr, &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxImage_php*) ptr;
 
@@ -28400,7 +28289,6 @@ PHP_METHOD(php_wxImage, Rotate90)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -28421,7 +28309,6 @@ PHP_METHOD(php_wxImage, Rotate90)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -28527,7 +28414,6 @@ PHP_METHOD(php_wxImage, Rotate180)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -28677,7 +28563,6 @@ PHP_METHOD(php_wxImage, Rotate)
 				memcpy(ptr, &value_to_return2, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo2 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxImage_php*) ptr;
 
@@ -28699,7 +28584,6 @@ PHP_METHOD(php_wxImage, Rotate)
 				memcpy(ptr, &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxImage_php*) ptr;
 
@@ -28721,7 +28605,6 @@ PHP_METHOD(php_wxImage, Rotate)
 				memcpy(ptr, &value_to_return4, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo4 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxImage_php*) ptr;
 
@@ -29590,7 +29473,6 @@ PHP_METHOD(php_wxImage, Mirror)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -29611,7 +29493,6 @@ PHP_METHOD(php_wxImage, Mirror)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -31104,7 +30985,6 @@ PHP_METHOD(php_wxImage, GetSubImage)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -31210,7 +31090,6 @@ PHP_METHOD(php_wxImage, GetSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -34216,7 +34095,6 @@ PHP_METHOD(php_wxImage, Copy)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -34329,7 +34207,6 @@ PHP_METHOD(php_wxImage, ConvertToMono)
 				memcpy(ptr, &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxImage_php*) ptr;
 
@@ -34457,7 +34334,6 @@ PHP_METHOD(php_wxImage, ConvertToGreyscale)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -34485,7 +34361,6 @@ PHP_METHOD(php_wxImage, ConvertToGreyscale)
 				memcpy(ptr, &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxImage_php*) ptr;
 
@@ -34596,7 +34471,6 @@ PHP_METHOD(php_wxImage, ConvertToDisabled)
 				memcpy(ptr, &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxImage_php*) ptr;
 
@@ -34617,7 +34491,6 @@ PHP_METHOD(php_wxImage, ConvertToDisabled)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -35367,7 +35240,6 @@ PHP_METHOD(php_wxImage, BlurVertical)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -35478,7 +35350,6 @@ PHP_METHOD(php_wxImage, BlurHorizontal)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -35589,7 +35460,6 @@ PHP_METHOD(php_wxImage, Blur)
 				memcpy(ptr, &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxImage_php*) ptr;
 
@@ -35861,7 +35731,6 @@ PHP_METHOD(php_wxImage, Size)
 				memcpy(ptr, &value_to_return2, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo2 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxImage_php*) ptr;
 
@@ -35884,7 +35753,6 @@ PHP_METHOD(php_wxImage, Size)
 				memcpy(ptr, &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo3->native_object = (wxImage_php*) ptr;
 
@@ -35907,7 +35775,6 @@ PHP_METHOD(php_wxImage, Size)
 				memcpy(ptr, &value_to_return4, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo4 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo4->native_object = (wxImage_php*) ptr;
 
@@ -35930,7 +35797,6 @@ PHP_METHOD(php_wxImage, Size)
 				memcpy(ptr, &value_to_return5, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
-				((wxImage_php*)ptr)->InitProperties();
 				zo_wxImage* zo5 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo5->native_object = (wxImage_php*) ptr;
 
@@ -35975,7 +35841,8 @@ void php_wxImageList_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -36020,10 +35887,6 @@ zend_object_value php_wxImageList_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxImageList_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXIMAGELIST_TYPE;
@@ -36485,7 +36348,6 @@ PHP_METHOD(php_wxImageList, GetBitmap)
 				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
-				((wxBitmap_php*)ptr)->InitProperties();
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxBitmap_php*) ptr;
 
@@ -36596,7 +36458,6 @@ PHP_METHOD(php_wxImageList, GetIcon)
 				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxIcon_php*) ptr;
 
@@ -37300,8 +37161,7 @@ PHP_METHOD(php_wxImageList, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxImageList*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -37498,7 +37358,8 @@ void php_wxPalette_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -37543,10 +37404,6 @@ zend_object_value php_wxPalette_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPalette_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPALETTE_TYPE;
@@ -37788,8 +37645,7 @@ PHP_METHOD(php_wxPalette, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPalette*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -38444,7 +38300,8 @@ void php_wxPen_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -38489,10 +38346,6 @@ zend_object_value php_wxPen_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPen_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPEN_TYPE;
@@ -38644,8 +38497,7 @@ PHP_METHOD(php_wxPen, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPen*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -39455,7 +39307,6 @@ PHP_METHOD(php_wxPen, GetColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
 
@@ -40286,7 +40137,8 @@ void php_wxPenList_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -40331,10 +40183,6 @@ zend_object_value php_wxPenList_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPenList_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPENLIST_TYPE;
@@ -40621,8 +40469,7 @@ PHP_METHOD(php_wxPenList, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPenList*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -40667,7 +40514,8 @@ void php_wxRendererNative_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -40712,10 +40560,6 @@ zend_object_value php_wxRendererNative_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRendererNative_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRENDERERNATIVE_TYPE;
@@ -40785,7 +40629,7 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -40868,7 +40712,7 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -40951,7 +40795,7 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41034,7 +40878,7 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41117,7 +40961,7 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41200,7 +41044,7 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41283,7 +41127,7 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41366,7 +41210,7 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41449,7 +41293,7 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41532,7 +41376,7 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41617,7 +41461,7 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41700,7 +41544,7 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41783,7 +41627,7 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -41975,7 +41819,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -42291,7 +42135,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -42369,7 +42213,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)

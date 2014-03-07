@@ -29,13 +29,10 @@ class wxXmlResourceHandler_php: public wxXmlResourceHandler{
 		
 	bool CanHandle(wxXmlNode* node);
 	wxObject* DoCreateResource();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -77,13 +74,10 @@ class wxXmlResource_php: public wxXmlResource{
 	wxXmlResource_php(int flags=wxXRC_USE_LOCALE, const wxString& domain=wxEmptyString):wxXmlResource(flags, domain){}
 		
 	void DoReportError(const wxString& xrcFile, const wxXmlNode* position, const wxString& message);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

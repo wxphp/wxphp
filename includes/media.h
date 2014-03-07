@@ -28,13 +28,10 @@ class wxMediaCtrl_php: public wxMediaCtrl{
 	wxMediaCtrl_php():wxMediaCtrl(){}
 	wxMediaCtrl_php(wxWindow* parent, wxWindowID id, const wxString& fileName=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& szBackend=wxEmptyString, const wxValidator& validator=wxDefaultValidator, const wxString& name="mediaCtrl"):wxMediaCtrl(parent, id, fileName, pos, size, style, szBackend, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -320,13 +317,10 @@ class wxSound_php: public wxSound{
 	wxSound_php(const wxString& fileName, bool isResource=false):wxSound(fileName, isResource){}
 	wxSound_php(size_t size, const void* data):wxSound(size, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

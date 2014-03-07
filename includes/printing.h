@@ -27,13 +27,10 @@ class wxPrinterDC_php: public wxPrinterDC{
 	
 	wxPrinterDC_php(const wxPrintData& printData):wxPrinterDC(printData){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -159,13 +156,10 @@ class wxPreviewControlBar_php: public wxPreviewControlBar{
 	
 	wxPreviewControlBar_php(wxPrintPreview* preview, long buttons, wxWindow* parent, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name="panel"):wxPreviewControlBar(preview, buttons, parent, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -432,13 +426,10 @@ class wxPreviewCanvas_php: public wxPreviewCanvas{
 	
 	wxPreviewCanvas_php(wxPrintPreview* preview, wxWindow* parent, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name="canvas"):wxPreviewCanvas(preview, parent, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -727,13 +718,10 @@ class wxPreviewFrame_php: public wxPreviewFrame{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1038,13 +1026,10 @@ class wxPrintPreview_php: public wxPrintPreview{
 	
 	wxPrintPreview_php(wxPrintout* printout, wxPrintout* printoutForPrinting=NULL, wxPrintDialogData* data=NULL):wxPrintPreview(printout, printoutForPrinting, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1098,13 +1083,10 @@ class wxPrinter_php: public wxPrinter{
 	
 	wxPrinter_php(wxPrintDialogData* data=NULL):wxPrinter(data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1155,13 +1137,10 @@ class wxPrintout_php: public wxPrintout{
 	void OnEndPrinting();
 	void OnPreparePrinting();
 	bool OnPrintPage(int pageNum);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1223,13 +1202,10 @@ class wxPrintDialog_php: public wxPrintDialog{
 	wxPrintDialog_php(wxWindow* parent, wxPrintDialogData* data=NULL):wxPrintDialog(parent, data){}
 	wxPrintDialog_php(wxWindow* parent, wxPrintData* data):wxPrintDialog(parent, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1271,13 +1247,10 @@ class wxPageSetupDialog_php: public wxPageSetupDialog{
 	
 	wxPageSetupDialog_php(wxWindow* parent, wxPageSetupDialogData* data=NULL):wxPageSetupDialog(parent, data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -75,7 +75,8 @@ void php_wxTextAttr_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextAttr_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTEXTATTR_TYPE;
@@ -386,8 +383,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3368,7 +3364,6 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -8802,7 +8797,6 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				memcpy(ptr, &value_to_return2, sizeof(wxTextAttr));
 				object_init_ex(return_value, php_wxTextAttr_entry);
 				((wxTextAttr_php*)ptr)->phpObj = return_value;
-				((wxTextAttr_php*)ptr)->InitProperties();
 				zo_wxTextAttr* zo2 = (zo_wxTextAttr*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxTextAttr_php*) ptr;
 

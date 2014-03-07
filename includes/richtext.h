@@ -29,13 +29,10 @@ class wxTextAttr_php: public wxTextAttr{
 	wxTextAttr_php(const wxColour& colText, const wxColour& colBack=wxNullColour, const wxFont& font=wxNullFont, wxTextAttrAlignment alignment=wxTEXT_ALIGNMENT_DEFAULT):wxTextAttr(colText, colBack, font, alignment){}
 	wxTextAttr_php():wxTextAttr(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

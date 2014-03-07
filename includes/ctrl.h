@@ -27,13 +27,10 @@ class wxAnimationCtrl_php: public wxAnimationCtrl{
 	
 	wxAnimationCtrl_php(wxWindow* parent, wxWindowID id, const wxAnimation& anim=wxNullAnimation, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxAC_DEFAULT_STYLE, const wxString& name=wxAnimationCtrlNameStr):wxAnimationCtrl(parent, id, anim, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -312,13 +309,10 @@ class wxBitmapButton_php: public wxBitmapButton{
 	wxBitmapButton_php():wxBitmapButton(){}
 	wxBitmapButton_php(wxWindow* parent, wxWindowID id, const wxBitmap& bitmap, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxBU_AUTODRAW, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxButtonNameStr):wxBitmapButton(parent, id, bitmap, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -607,13 +601,10 @@ class wxBitmapComboBox_php: public wxBitmapComboBox{
 	wxBitmapComboBox_php():wxBitmapComboBox(){}
 	wxBitmapComboBox_php(wxWindow* parent, wxWindowID id, const wxString& value, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxBitmapComboBoxNameStr):wxBitmapComboBox(parent, id, value, pos, size, choices, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -939,13 +930,10 @@ class wxButton_php: public wxButton{
 	wxButton_php(wxWindow* parent, wxWindowID id, const wxString& label=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxButtonNameStr):wxButton(parent, id, label, pos, size, style, validator, name){}
 	wxButton_php():wxButton(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1234,13 +1222,10 @@ class wxCalendarCtrl_php: public wxCalendarCtrl{
 	wxCalendarCtrl_php():wxCalendarCtrl(){}
 	wxCalendarCtrl_php(wxWindow* parent, wxWindowID id, const wxDateTime& date=wxDefaultDateTime, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCAL_SHOW_HOLIDAYS, const wxString& name=wxCalendarNameStr):wxCalendarCtrl(parent, id, date, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1530,13 +1515,10 @@ class wxCheckBox_php: public wxCheckBox{
 	wxCheckBox_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxCheckBoxNameStr):wxCheckBox(parent, id, label, pos, size, style, validator, name){}
 	wxCheckBox_php():wxCheckBox(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1813,13 +1795,10 @@ class wxCheckListBox_php: public wxCheckListBox{
 	wxCheckListBox_php():wxCheckListBox(){}
 	wxCheckListBox_php(wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name="listBox"):wxCheckListBox(parent, id, pos, size, choices, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2111,13 +2090,10 @@ class wxChoice_php: public wxChoice{
 	wxChoice_php():wxChoice(){}
 	wxChoice_php(wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxChoiceNameStr):wxChoice(parent, id, pos, size, choices, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2405,13 +2381,10 @@ class wxCollapsiblePane_php: public wxCollapsiblePane{
 	wxCollapsiblePane_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCP_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxCollapsiblePaneNameStr):wxCollapsiblePane(parent, id, label, pos, size, style, validator, name){}
 	wxCollapsiblePane_php():wxCollapsiblePane(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2692,17 +2665,22 @@ class wxComboPopup_php: public wxComboPopup{
 	wxString GetStringValue() const;
 	wxWindow* GetControl();
 	bool Create(wxWindow* parent);
-		
-	void InitProperties(){
+	
+    void InitProperties(){
 		properties = new void*[1];
 
 		properties[0] = &m_combo;
 		
 	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -2750,13 +2728,10 @@ class wxComboCtrl_php: public wxComboCtrl{
 	void DoShowPopup(const wxRect& rect, int flags);
 	void DoSetPopupControl(wxComboPopup* popup);
 	bool AnimateShow(const wxRect& rect, int flags);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3095,13 +3070,10 @@ class wxComboBox_php: public wxComboBox{
 	wxComboBox_php(wxWindow* parent, wxWindowID id, const wxString& value, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxComboBoxNameStr):wxComboBox(parent, id, value, pos, size, choices, style, validator, name){}
 	wxComboBox_php():wxComboBox(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3424,13 +3396,10 @@ class wxControl_php: public wxControl{
 	wxControl_php():wxControl(){}
 	wxControl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxControlNameStr):wxControl(parent, id, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3703,13 +3672,10 @@ class wxItemContainerImmutable_php: public wxItemContainerImmutable{
 	int GetSelection() const;
 	void SetSelection(int n);
 	void SetString(unsigned int n, const wxString& string);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3743,13 +3709,10 @@ class wxItemContainer_php: public wxItemContainer{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -3788,13 +3751,10 @@ class wxControlWithItems_php: public wxControlWithItems{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4072,13 +4032,10 @@ class wxDataViewCtrl_php: public wxDataViewCtrl{
 	wxDataViewCtrl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxDataViewCtrlNameStr):wxDataViewCtrl(parent, id, pos, size, style, validator, name){}
 	wxDataViewCtrl_php():wxDataViewCtrl(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4388,13 +4345,10 @@ class wxDataViewListCtrl_php: public wxDataViewListCtrl{
 	wxDataViewListCtrl_php():wxDataViewListCtrl(){}
 	wxDataViewListCtrl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDV_ROW_LINES, const wxValidator& validator=wxDefaultValidator):wxDataViewListCtrl(parent, id, pos, size, style, validator){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -4719,13 +4673,10 @@ class wxDataViewTreeCtrl_php: public wxDataViewTreeCtrl{
 	wxDataViewTreeCtrl_php():wxDataViewTreeCtrl(){}
 	wxDataViewTreeCtrl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDV_NO_HEADER|wxDV_ROW_LINES, const wxValidator& validator=wxDefaultValidator):wxDataViewTreeCtrl(parent, id, pos, size, style, validator){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -5058,13 +5009,10 @@ class wxGenericDirCtrl_php: public wxGenericDirCtrl{
 	wxGenericDirCtrl_php():wxGenericDirCtrl(){}
 	wxGenericDirCtrl_php(wxWindow* parent, const wxWindowID id=wxID_ANY, const wxString& dir=wxDirDialogDefaultFolderStr, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDIRCTRL_3D_INTERNAL, const wxString& filter=wxEmptyString, int defaultFilter=0, const wxString& name=wxTreeCtrlNameStr):wxGenericDirCtrl(parent, id, dir, pos, size, style, filter, defaultFilter, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -5356,13 +5304,10 @@ class wxEditableListBox_php: public wxEditableListBox{
 	wxEditableListBox_php():wxEditableListBox(){}
 	wxEditableListBox_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxEL_DEFAULT_STYLE, const wxString& name=wxEditableListBoxNameStr):wxEditableListBox(parent, id, label, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -5628,13 +5573,10 @@ class wxFileCtrl_php: public wxFileCtrl{
 	
 	wxFileCtrl_php():wxFileCtrl(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -5916,13 +5858,10 @@ class wxGauge_php: public wxGauge{
 	wxGauge_php():wxGauge(){}
 	wxGauge_php(wxWindow* parent, wxWindowID id, int range, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxGA_HORIZONTAL, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxGaugeNameStr):wxGauge(parent, id, range, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -6208,13 +6147,10 @@ class wxHeaderColumn_php: public wxHeaderColumn{
 	int GetWidth() const;
 	bool IsSortKey() const;
 	bool IsSortOrderAscending() const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -6257,13 +6193,10 @@ class wxSettableHeaderColumn_php: public wxSettableHeaderColumn{
 	void SetFlags(int flags);
 	void SetBitmap(const wxBitmap& bitmap);
 	void SetAlignment(wxAlignment align);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -6311,13 +6244,10 @@ class wxHeaderColumnSimple_php: public wxHeaderColumnSimple{
 	wxHeaderColumnSimple_php(const wxString& title, int width=wxCOL_WIDTH_DEFAULT, wxAlignment align=wxALIGN_NOT, int flags=wxCOL_DEFAULT_FLAGS):wxHeaderColumnSimple(title, width, align, flags){}
 	wxHeaderColumnSimple_php(const wxBitmap& bitmap, int width=wxCOL_WIDTH_DEFAULT, wxAlignment align=wxALIGN_CENTER, int flags=wxCOL_DEFAULT_FLAGS):wxHeaderColumnSimple(bitmap, width, align, flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -6385,13 +6315,10 @@ class wxHeaderCtrl_php: public wxHeaderCtrl{
 	void OnColumnCountChanging(unsigned int count);
 	void UpdateColumnVisibility(unsigned int idx, bool show);
 	bool UpdateColumnWidthToFit(unsigned int idx, int widthTitle);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -6672,13 +6599,10 @@ class wxHeaderCtrlSimple_php: public wxHeaderCtrlSimple{
 	wxHeaderCtrlSimple_php(wxWindow* parent, wxWindowID winid=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxHD_DEFAULT_STYLE, const wxString& name=wxHeaderCtrlNameStr):wxHeaderCtrlSimple(parent, winid, pos, size, style, name){}
 		
 	int GetBestFittingWidth(unsigned int idx) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -6970,13 +6894,10 @@ class wxHtmlListBox_php: public wxHtmlListBox{
 	wxColour GetSelectedTextBgColour(const wxColour& colBg) const;
 	wxString OnGetItemMarkup(size_t n) const;
 	wxString OnGetItem(size_t n) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -7031,13 +6952,10 @@ class wxSimpleHtmlListBox_php: public wxSimpleHtmlListBox{
 	wxSimpleHtmlListBox_php(wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style=wxHLB_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxSimpleHtmlListBoxNameStr):wxSimpleHtmlListBox(parent, id, pos, size, choices, style, validator, name){}
 	wxSimpleHtmlListBox_php():wxSimpleHtmlListBox(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -7101,13 +7019,10 @@ class wxHyperlinkCtrl_php: public wxHyperlinkCtrl{
 		
 	bool GetVisited() const;
 	void SetVisited(bool visited=true);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -7385,13 +7300,10 @@ class wxListBox_php: public wxListBox{
 	wxListBox_php(wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxListBoxNameStr):wxListBox(parent, id, pos, size, choices, style, validator, name){}
 	wxListBox_php():wxListBox(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -7685,13 +7597,10 @@ class wxListCtrl_php: public wxListCtrl{
 	int OnGetItemImage(long item) const;
 	int OnGetItemColumnImage(long item, long column) const;
 	wxListItemAttr* OnGetItemAttr(long item) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -8010,13 +7919,10 @@ class wxListView_php: public wxListView{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -8344,13 +8250,10 @@ class wxRadioBox_php: public wxRadioBox{
 	wxRadioBox_php():wxRadioBox(){}
 	wxRadioBox_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, int majorDimension=0, long style=wxRA_SPECIFY_COLS, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxRadioBoxNameStr):wxRadioBox(parent, id, label, pos, size, choices, majorDimension, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -8638,13 +8541,10 @@ class wxRadioButton_php: public wxRadioButton{
 	wxRadioButton_php():wxRadioButton(){}
 	wxRadioButton_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxRadioButtonNameStr):wxRadioButton(parent, id, label, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -8915,13 +8815,10 @@ class wxRearrangeList_php: public wxRearrangeList{
 	
 	wxRearrangeList_php():wxRearrangeList(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -9216,13 +9113,10 @@ class wxRearrangeCtrl_php: public wxRearrangeCtrl{
 	
 	wxRearrangeCtrl_php():wxRearrangeCtrl(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -9256,13 +9150,10 @@ class wxScrollBar_php: public wxScrollBar{
 	wxScrollBar_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxSB_HORIZONTAL, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxScrollBarNameStr):wxScrollBar(parent, id, pos, size, style, validator, name){}
 	wxScrollBar_php():wxScrollBar(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -9537,13 +9428,10 @@ class wxSlider_php: public wxSlider{
 	wxSlider_php():wxSlider(){}
 	wxSlider_php(wxWindow* parent, wxWindowID id, int value, int minValue, int maxValue, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxSL_HORIZONTAL, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxSliderNameStr):wxSlider(parent, id, value, minValue, maxValue, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -9822,13 +9710,10 @@ class wxSpinButton_php: public wxSpinButton{
 	wxSpinButton_php():wxSpinButton(){}
 	wxSpinButton_php(wxWindow* parent, wxWindowID id=-1, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxSP_VERTICAL, const wxString& name="spinButton"):wxSpinButton(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -10103,13 +9988,10 @@ class wxSpinCtrl_php: public wxSpinCtrl{
 	wxSpinCtrl_php():wxSpinCtrl(){}
 	wxSpinCtrl_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxString& value=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxSP_ARROW_KEYS, int min=0, int max=100, int initial=0, const wxString& name="wxSpinCtrl"):wxSpinCtrl(parent, id, value, pos, size, style, min, max, initial, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -10385,13 +10267,10 @@ class wxSpinCtrlDouble_php: public wxSpinCtrlDouble{
 	wxSpinCtrlDouble_php():wxSpinCtrlDouble(){}
 	wxSpinCtrlDouble_php(wxWindow* parent, wxWindowID id=-1, const wxString& value=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxSP_ARROW_KEYS, double min=0, double max=100, double initial=0, double inc=1, const wxString& name=wxT("wxSpinCtrlDouble")):wxSpinCtrlDouble(parent, id, value, pos, size, style, min, max, initial, inc, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -10670,13 +10549,10 @@ class wxSearchCtrl_php: public wxSearchCtrl{
 	wxSearchCtrl_php():wxSearchCtrl(){}
 	wxSearchCtrl_php(wxWindow* parent, wxWindowID id, const wxString& value=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxSearchCtrlNameStr):wxSearchCtrl(parent, id, value, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -11011,13 +10887,10 @@ class wxStaticBitmap_php: public wxStaticBitmap{
 	wxStaticBitmap_php():wxStaticBitmap(){}
 	wxStaticBitmap_php(wxWindow* parent, wxWindowID id, const wxBitmap& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxStaticBitmapNameStr):wxStaticBitmap(parent, id, label, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -11291,13 +11164,10 @@ class wxStaticBox_php: public wxStaticBox{
 	wxStaticBox_php():wxStaticBox(){}
 	wxStaticBox_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxStaticBoxNameStr):wxStaticBox(parent, id, label, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -11567,13 +11437,10 @@ class wxStaticLine_php: public wxStaticLine{
 	wxStaticLine_php():wxStaticLine(){}
 	wxStaticLine_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxLI_HORIZONTAL, const wxString& name=wxStaticLineNameStr):wxStaticLine(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -11845,13 +11712,10 @@ class wxStaticText_php: public wxStaticText{
 	wxStaticText_php():wxStaticText(){}
 	wxStaticText_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxStaticTextNameStr):wxStaticText(parent, id, label, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -12123,13 +11987,10 @@ class wxTextCtrl_php: public wxTextCtrl{
 	wxTextCtrl_php():wxTextCtrl(){}
 	wxTextCtrl_php(wxWindow* parent, wxWindowID id, const wxString& value=wxEmptyString, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxTextCtrlNameStr):wxTextCtrl(parent, id, value, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -12454,13 +12315,10 @@ class wxTextEntry_php: public wxTextEntry{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -12530,13 +12388,10 @@ class wxToggleButton_php: public wxToggleButton{
 	wxToggleButton_php():wxToggleButton(){}
 	wxToggleButton_php(wxWindow* parent, wxWindowID id, const wxString& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& val=wxDefaultValidator, const wxString& name=wxCheckBoxNameStr):wxToggleButton(parent, id, label, pos, size, style, val, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -12823,13 +12678,10 @@ class wxBitmapToggleButton_php: public wxBitmapToggleButton{
 	wxBitmapToggleButton_php():wxBitmapToggleButton(){}
 	wxBitmapToggleButton_php(wxWindow* parent, wxWindowID id, const wxBitmap& label, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxValidator& val=wxDefaultValidator, const wxString& name=wxCheckBoxNameStr):wxBitmapToggleButton(parent, id, label, pos, size, style, val, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -13116,13 +12968,10 @@ class wxTreeCtrl_php: public wxTreeCtrl{
 	wxTreeCtrl_php():wxTreeCtrl(){}
 	wxTreeCtrl_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxTR_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxTreeCtrlNameStr):wxTreeCtrl(parent, id, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -13463,13 +13312,10 @@ class wxTreeListItem_php: public wxTreeListItem{
 	
 	wxTreeListItem_php():wxTreeListItem(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -13503,13 +13349,10 @@ class wxTreeListCtrl_php: public wxTreeListCtrl{
 	wxTreeListCtrl_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxTL_DEFAULT_STYLE, const wxString& name=wxTreeListCtrlNameStr):wxTreeListCtrl(parent, id, pos, size, style, name){}
 	wxTreeListCtrl_php():wxTreeListCtrl(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -13819,13 +13662,10 @@ class wxVListBox_php: public wxVListBox{
 	void OnDrawSeparator(wxDC& dc, wxRect& rect, size_t n) const;
 	void OnDrawItem(wxDC& dc, const wxRect& rect, size_t n) const;
 	void OnDrawBackground(wxDC& dc, const wxRect& rect, size_t n) const;
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -13878,13 +13718,10 @@ class wxWebView_php: public wxWebView{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

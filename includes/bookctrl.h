@@ -27,13 +27,10 @@ class wxAuiNotebookEvent_php: public wxAuiNotebookEvent{
 	
 	wxAuiNotebookEvent_php(wxEventType command_type=wxEVT_NULL, int win_id=0):wxAuiNotebookEvent(command_type, win_id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -109,13 +106,10 @@ class wxBookCtrlBase_php: public wxBookCtrlBase{
 	wxString GetPageText(size_t nPage) const;
 	int GetPageImage(size_t nPage) const;
 	int ChangeSelection(size_t page);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -395,13 +389,10 @@ class wxBookCtrlEvent_php: public wxBookCtrlEvent{
 	
 	wxBookCtrlEvent_php(wxEventType eventType=wxEVT_NULL, int id=0, int sel=wxNOT_FOUND, int oldSel=wxNOT_FOUND):wxBookCtrlEvent(eventType, id, sel, oldSel){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -470,13 +461,10 @@ class wxChoicebook_php: public wxChoicebook{
 	wxChoicebook_php():wxChoicebook(){}
 	wxChoicebook_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxEmptyString):wxChoicebook(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -759,13 +747,10 @@ class wxListbook_php: public wxListbook{
 	wxListbook_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxEmptyString):wxListbook(parent, id, pos, size, style, name){}
 	wxListbook_php():wxListbook(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1048,13 +1033,10 @@ class wxNotebook_php: public wxNotebook{
 	wxNotebook_php():wxNotebook(){}
 	wxNotebook_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxNotebookNameStr):wxNotebook(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1347,13 +1329,10 @@ class wxToolbook_php: public wxToolbook{
 	wxToolbook_php():wxToolbook(){}
 	wxToolbook_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxEmptyString):wxToolbook(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1636,13 +1615,10 @@ class wxTreebook_php: public wxTreebook{
 	wxTreebook_php():wxTreebook(){}
 	wxTreebook_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxBK_DEFAULT, const wxString& name=wxEmptyString):wxTreebook(parent, id, pos, size, style, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

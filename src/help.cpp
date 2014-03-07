@@ -75,7 +75,8 @@ void php_wxHtmlHelpController_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxHtmlHelpController_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHtmlHelpController_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPCONTROLLER_TYPE;
@@ -376,7 +373,7 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -472,7 +469,7 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1787,8 +1784,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHtmlHelpController*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -1833,7 +1829,8 @@ void php_wxHtmlModalHelp_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -1878,10 +1875,6 @@ zend_object_value php_wxHtmlModalHelp_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHtmlModalHelp_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLMODALHELP_TYPE;
@@ -2003,8 +1996,7 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHtmlModalHelp*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2049,7 +2041,8 @@ void php_wxHtmlHelpData_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -2094,10 +2087,6 @@ zend_object_value php_wxHtmlHelpData_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHtmlHelpData_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPDATA_TYPE;
@@ -2589,8 +2578,7 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHtmlHelpData*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2647,10 +2635,6 @@ zend_object_value php_wxHtmlHelpDialog_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHtmlHelpDialog_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPDIALOG_TYPE;
@@ -3487,8 +3471,7 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHtmlHelpDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3545,10 +3528,6 @@ zend_object_value php_wxHtmlHelpFrame_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHtmlHelpFrame_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPFRAME_TYPE;
@@ -4483,8 +4462,7 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHtmlHelpFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4577,10 +4555,6 @@ zend_object_value php_wxHtmlHelpWindow_new(zend_class_entry *class_type TSRMLS_D
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHtmlHelpWindow_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHTMLHELPWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -4645,7 +4619,7 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -6254,8 +6228,7 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHtmlHelpWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -6300,7 +6273,8 @@ void php_wxToolTip_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -6345,10 +6319,6 @@ zend_object_value php_wxToolTip_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxToolTip_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTOOLTIP_TYPE;
@@ -6423,8 +6393,7 @@ PHP_METHOD(php_wxToolTip, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxToolTip*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

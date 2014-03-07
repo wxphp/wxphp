@@ -26,13 +26,10 @@ class wxArtProvider_php: public wxArtProvider{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -82,13 +79,10 @@ class wxCaret_php: public wxCaret{
 	wxCaret_php():wxCaret(){}
 	wxCaret_php(wxWindow* window, int width, int height):wxCaret(window, width, height){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -132,13 +126,10 @@ class wxNotificationMessage_php: public wxNotificationMessage{
 	wxNotificationMessage_php():wxNotificationMessage(){}
 	wxNotificationMessage_php(const wxString& title, const wxString& message=wxEmptyString, wxWindow* parent=NULL, int flags=wxICON_INFORMATION):wxNotificationMessage(title, message, parent, flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -200,13 +191,10 @@ class wxStopWatch_php: public wxStopWatch{
 	
 	wxStopWatch_php():wxStopWatch(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -243,13 +231,10 @@ class wxTaskBarIcon_php: public wxTaskBarIcon{
 	wxTaskBarIcon_php(wxTaskBarIconType iconType=wxTBI_DEFAULT_TYPE):wxTaskBarIcon(iconType){}
 		
 	wxMenu* CreatePopupMenu();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -313,13 +298,10 @@ class wxTimer_php: public wxTimer{
 	wxTimer_php():wxTimer(){}
 	wxTimer_php(wxEvtHandler* owner, int id=-1):wxTimer(owner, id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -385,13 +367,10 @@ class wxWindowDisabler_php: public wxWindowDisabler{
 	wxWindowDisabler_php(bool disable=true):wxWindowDisabler(disable){}
 	wxWindowDisabler_php(wxWindow* winToSkip):wxWindowDisabler(winToSkip){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -423,13 +402,10 @@ class wxBusyCursor_php: public wxBusyCursor{
 	
 	wxBusyCursor_php(const wxCursor* cursor=wxHOURGLASS_CURSOR):wxBusyCursor(cursor){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

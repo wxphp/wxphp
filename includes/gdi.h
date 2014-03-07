@@ -27,13 +27,10 @@ class wxGraphicsGradientStop_php: public wxGraphicsGradientStop{
 	
 	wxGraphicsGradientStop_php(wxColour col=wxTransparentColour, float pos=0.):wxGraphicsGradientStop(col, pos){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -69,13 +66,10 @@ class wxGraphicsGradientStops_php: public wxGraphicsGradientStops{
 	
 	wxGraphicsGradientStops_php(wxColour startCol=wxTransparentColour, wxColour endCol=wxTransparentColour):wxGraphicsGradientStops(startCol, endCol){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -115,13 +109,10 @@ class wxAnimation_php: public wxAnimation{
 	wxAnimation_php(const wxAnimation& anim):wxAnimation(anim){}
 	wxAnimation_php(const wxString& name, wxAnimationType type=wxANIMATION_TYPE_ANY):wxAnimation(name, type){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -166,13 +157,10 @@ class wxBitmapHandler_php: public wxBitmapHandler{
 	
 	wxBitmapHandler_php():wxBitmapHandler(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -224,13 +212,10 @@ class wxBitmap_php: public wxBitmap{
 	wxBitmap_php(const wxString& name, wxBitmapType type=wxBITMAP_DEFAULT_TYPE):wxBitmap(name, type){}
 	wxBitmap_php(const wxImage& img, int depth=wxBITMAP_SCREEN_DEPTH):wxBitmap(img, depth){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -296,13 +281,10 @@ class wxMask_php: public wxMask{
 	wxMask_php(const wxBitmap& bitmap):wxMask(bitmap){}
 	wxMask_php(const wxBitmap& bitmap, const wxColour& colour):wxMask(bitmap, colour){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -343,13 +325,10 @@ class wxBrush_php: public wxBrush{
 	wxBrush_php(const wxColour& colour, wxBrushStyle style=wxBRUSHSTYLE_SOLID):wxBrush(colour, style){}
 	wxBrush_php(const wxBitmap& stippleBitmap):wxBrush(stippleBitmap){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -401,13 +380,10 @@ class wxColour_php: public wxColour{
 	wxColour_php(const wxColour& colour):wxColour(colour){}
 	wxColour_php():wxColour(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -457,13 +433,10 @@ class wxCursor_php: public wxCursor{
 	wxCursor_php(const wxCursor& cursor):wxCursor(cursor){}
 	wxCursor_php(const wxString& cursorName, wxBitmapType type=wxCURSOR_DEFAULT_TYPE, int hotSpotX=0, int hotSpotY=0):wxCursor(cursorName, type, hotSpotX, hotSpotY){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -504,13 +477,10 @@ class wxDCClipper_php: public wxDCClipper{
 	wxDCClipper_php(wxDC& dc, const wxRect& rect):wxDCClipper(dc, rect){}
 	wxDCClipper_php(wxDC& dc, wxCoord x, wxCoord y, wxCoord w, wxCoord h):wxDCClipper(dc, x, y, w, h){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -547,13 +517,10 @@ class wxFont_php: public wxFont{
 	wxFont_php(const wxString& nativeInfoString):wxFont(nativeInfoString){}
 	wxFont_php(const wxNativeFontInfo& nativeInfo):wxFont(nativeInfo){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -631,13 +598,10 @@ class wxFontList_php: public wxFontList{
 	
 	wxFontList_php():wxFontList(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -671,13 +635,10 @@ class wxFontEnumerator_php: public wxFontEnumerator{
 		
 	bool OnFontEncoding(const wxString& font, const wxString& encoding);
 	bool OnFacename(const wxString& font);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -714,13 +675,10 @@ class wxNativeFontInfo_php: public wxNativeFontInfo{
 	wxNativeFontInfo_php():wxNativeFontInfo(){}
 	wxNativeFontInfo_php(const wxNativeFontInfo& info):wxNativeFontInfo(info){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -772,13 +730,10 @@ class wxColourDatabase_php: public wxColourDatabase{
 	
 	wxColourDatabase_php():wxColourDatabase(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -812,13 +767,10 @@ class wxGDIObject_php: public wxGDIObject{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -854,13 +806,10 @@ class wxGraphicsRenderer_php: public wxGraphicsRenderer{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -896,13 +845,10 @@ class wxGraphicsMatrix_php: public wxGraphicsMatrix{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -935,13 +881,10 @@ class wxIcon_php: public wxIcon{
 	wxIcon_php(const wxIcon& icon):wxIcon(icon){}
 	wxIcon_php():wxIcon(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -992,13 +935,10 @@ class wxIconBundle_php: public wxIconBundle{
 	wxIconBundle_php(const wxIconBundle& ic):wxIconBundle(ic){}
 	wxIconBundle_php(wxInputStream& stream, wxBitmapType type=wxBITMAP_TYPE_ANY):wxIconBundle(stream, type){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1041,13 +981,10 @@ class wxImageHandler_php: public wxImageHandler{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1107,13 +1044,10 @@ class wxImage_php: public wxImage{
 	wxImage_php(const wxSize& sz, unsigned char* data, bool static_data=false):wxImage(sz, data, static_data){}
 	wxImage_php(int width, int height, unsigned char* data, bool static_data=false):wxImage(width, height, data, static_data){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1220,13 +1154,10 @@ class wxImageList_php: public wxImageList{
 	wxImageList_php():wxImageList(){}
 	wxImageList_php(int width, int height, bool mask=true, int initialCount=1):wxImageList(width, height, mask, initialCount){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1276,13 +1207,10 @@ class wxPalette_php: public wxPalette{
 	wxPalette_php(const wxPalette& palette):wxPalette(palette){}
 	wxPalette_php(int n, const unsigned char* red, const unsigned char* green, const unsigned char* blue):wxPalette(n, red, green, blue){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1326,13 +1254,10 @@ class wxPen_php: public wxPen{
 	wxPen_php():wxPen(){}
 	wxPen_php(const wxColour& colour, int width=1, wxPenStyle style=wxPENSTYLE_SOLID):wxPen(colour, width, style){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1385,13 +1310,10 @@ class wxPenList_php: public wxPenList{
 	
 	wxPenList_php():wxPenList(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1439,13 +1361,10 @@ class wxRendererNative_php: public wxRendererNative{
 	wxSize GetCheckBoxSize(wxWindow* win);
 	int GetHeaderButtonHeight(wxWindow* win);
 	int GetHeaderButtonMargin(wxWindow* win);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

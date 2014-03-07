@@ -27,13 +27,10 @@ class wxColourPickerCtrl_php: public wxColourPickerCtrl{
 	
 	wxColourPickerCtrl_php(wxWindow* parent, wxWindowID id, const wxColour& colour=*wxBLACK, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxCLRP_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxColourPickerCtrlNameStr):wxColourPickerCtrl(parent, id, colour, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -317,13 +314,10 @@ class wxDatePickerCtrl_php: public wxDatePickerCtrl{
 	
 	wxDatePickerCtrl_php(wxWindow* parent, wxWindowID id, const wxDateTime& dt=wxDefaultDateTime, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDP_DEFAULT|wxDP_SHOWCENTURY, const wxValidator& validator=wxDefaultValidator, const wxString& name="datectrl"):wxDatePickerCtrl(parent, id, dt, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -596,13 +590,10 @@ class wxFilePickerCtrl_php: public wxFilePickerCtrl{
 	
 	wxFilePickerCtrl_php(wxWindow* parent, wxWindowID id, const wxString& path=wxEmptyString, const wxString& message=wxFileSelectorPromptStr, const wxString& wildcard=wxFileSelectorDefaultWildcardStr, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxFLP_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxFilePickerCtrlNameStr):wxFilePickerCtrl(parent, id, path, message, wildcard, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -888,13 +879,10 @@ class wxDirPickerCtrl_php: public wxDirPickerCtrl{
 	
 	wxDirPickerCtrl_php(wxWindow* parent, wxWindowID id, const wxString& path=wxEmptyString, const wxString& message=wxDirSelectorPromptStr, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxDIRP_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxDirPickerCtrlNameStr):wxDirPickerCtrl(parent, id, path, message, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1180,13 +1168,10 @@ class wxFontPickerCtrl_php: public wxFontPickerCtrl{
 	
 	wxFontPickerCtrl_php(wxWindow* parent, wxWindowID id, const wxFont& font=wxNullFont, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxFNTP_DEFAULT_STYLE, const wxValidator& validator=wxDefaultValidator, const wxString& name=wxFontPickerCtrlNameStr):wxFontPickerCtrl(parent, id, font, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1471,13 +1456,10 @@ class wxPickerBase_php: public wxPickerBase{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1758,13 +1740,10 @@ class wxTimePickerCtrl_php: public wxTimePickerCtrl{
 	
 	wxTimePickerCtrl_php(wxWindow* parent, wxWindowID id, const wxDateTime& dt=wxDefaultDateTime, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxTP_DEFAULT, const wxValidator& validator=wxDefaultValidator, const wxString& name="timectrl"):wxTimePickerCtrl(parent, id, dt, pos, size, style, validator, name){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

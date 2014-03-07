@@ -75,7 +75,8 @@ void php_wxRibbonArtProvider_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxRibbonArtProvider_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonArtProvider_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONARTPROVIDER_TYPE;
@@ -265,7 +262,7 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -347,7 +344,7 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -431,7 +428,7 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -515,7 +512,7 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -597,7 +594,7 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -679,7 +676,7 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -762,7 +759,7 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -844,7 +841,7 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -927,7 +924,7 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1013,7 +1010,7 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 	//Delete already used parameters from memory
 	for(int i=0; i<6; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1095,7 +1092,7 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1177,7 +1174,7 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1267,7 +1264,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 	//Delete already used parameters from memory
 	for(int i=0; i<8; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1382,7 +1379,6 @@ PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 					memcpy(ptr, &value_to_return1, sizeof(wxColour));
 					object_init_ex(return_value, php_wxColour_entry);
 					((wxColour_php*)ptr)->phpObj = return_value;
-					((wxColour_php*)ptr)->InitProperties();
 					zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 					zo1->native_object = (wxColour_php*) ptr;
 				}
@@ -1457,7 +1453,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1549,7 +1545,7 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1689,7 +1685,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1789,7 +1785,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1881,7 +1877,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1968,7 +1964,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2051,7 +2047,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2145,7 +2141,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2239,7 +2235,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2333,7 +2329,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2424,7 +2420,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2521,7 +2517,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 	//Delete already used parameters from memory
 	for(int i=0; i<7; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2737,7 +2733,7 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2814,7 +2810,7 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2893,7 +2889,7 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2971,7 +2967,7 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3063,7 +3059,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 	//Delete already used parameters from memory
 	for(int i=0; i<8; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3159,7 +3155,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 	//Delete already used parameters from memory
 	for(int i=0; i<10; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3220,10 +3216,6 @@ zend_object_value php_wxRibbonBar_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONBAR_TYPE;
@@ -4768,8 +4760,7 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -4829,10 +4820,6 @@ zend_object_value php_wxRibbonButtonBar_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonButtonBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONBUTTONBAR_TYPE;
@@ -6338,8 +6325,7 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonButtonBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -6922,10 +6908,6 @@ zend_object_value php_wxRibbonControl_new(zend_class_entry *class_type TSRMLS_DC
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonControl_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONCONTROL_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -6990,7 +6972,7 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -7087,7 +7069,7 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -7425,7 +7407,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxSize_php*) ptr;
 
@@ -7452,7 +7433,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				memcpy(ptr, &value_to_return2, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxSize_php*) ptr;
 
@@ -7625,7 +7605,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				memcpy(ptr, &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxSize_php*) ptr;
 
@@ -7652,7 +7631,6 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				memcpy(ptr, &value_to_return2, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo2->native_object = (wxSize_php*) ptr;
 
@@ -8427,8 +8405,7 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonControl*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8488,10 +8465,6 @@ zend_object_value php_wxRibbonGallery_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonGallery_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONGALLERY_TYPE;
@@ -11408,8 +11381,7 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonGallery*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -11469,10 +11441,6 @@ zend_object_value php_wxRibbonPage_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonPage_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONPAGE_TYPE;
@@ -12828,8 +12796,7 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonPage*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -12889,10 +12856,6 @@ zend_object_value php_wxRibbonPanel_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonPanel_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONPANEL_TYPE;
@@ -14600,8 +14563,7 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonPanel*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -14661,10 +14623,6 @@ zend_object_value php_wxRibbonToolBar_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonToolBar_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONTOOLBAR_TYPE;
@@ -16158,8 +16116,7 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonToolBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

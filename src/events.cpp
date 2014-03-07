@@ -75,7 +75,8 @@ void php_wxEventFilter_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxEventFilter_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEventFilter_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXEVENTFILTER_TYPE;
@@ -188,7 +185,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -270,8 +267,7 @@ PHP_METHOD(php_wxEventFilter, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxEventFilter*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -316,7 +312,8 @@ void php_wxKeyboardState_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -361,10 +358,6 @@ zend_object_value php_wxKeyboardState_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxKeyboardState_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXKEYBOARDSTATE_TYPE;
@@ -2113,8 +2106,7 @@ PHP_METHOD(php_wxKeyboardState, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxKeyboardState*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2159,7 +2151,8 @@ void php_wxCalendarEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -2204,10 +2197,6 @@ zend_object_value php_wxCalendarEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCalendarEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCALENDAREVENT_TYPE;
@@ -2445,7 +2434,8 @@ void php_wxColourPickerEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -2490,10 +2480,6 @@ zend_object_value php_wxColourPickerEvent_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxColourPickerEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLOURPICKEREVENT_TYPE;
@@ -2589,7 +2575,6 @@ PHP_METHOD(php_wxColourPickerEvent, GetColour)
 				memcpy(ptr, &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
-				((wxColour_php*)ptr)->InitProperties();
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxColour_php*) ptr;
 
@@ -2834,8 +2819,7 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxColourPickerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -2880,7 +2864,8 @@ void php_wxCollapsiblePaneEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -2925,10 +2910,6 @@ zend_object_value php_wxCollapsiblePaneEvent_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCollapsiblePaneEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOLLAPSIBLEPANEEVENT_TYPE;
@@ -3222,8 +3203,7 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxCollapsiblePaneEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3268,7 +3248,8 @@ void php_wxDateEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -3313,10 +3294,6 @@ zend_object_value php_wxDateEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxDateEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXDATEEVENT_TYPE;
@@ -3572,7 +3549,9 @@ void php_wxEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+			custom_object->native_object->UninitProperties();
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -3617,10 +3596,6 @@ zend_object_value php_wxEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXEVENT_TYPE;
@@ -9469,7 +9444,7 @@ PHP_METHOD(php_wxEvent, __construct)
 		native_object->phpObj = getThis();
 		
 		native_object->InitProperties();
-		
+
 		current_object = (zo_wxEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9644,7 +9619,8 @@ void php_wxEventBlocker_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -9689,10 +9665,6 @@ zend_object_value php_wxEventBlocker_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEventBlocker_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXEVENTBLOCKER_TYPE;
@@ -9900,8 +9872,7 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxEventBlocker*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9946,7 +9917,8 @@ void php_wxEvtHandler_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -9991,10 +9963,6 @@ zend_object_value php_wxEvtHandler_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEvtHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXEVTHANDLER_TYPE;
@@ -10063,8 +10031,7 @@ PHP_METHOD(php_wxEvtHandler, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxEvtHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -21110,7 +21077,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21196,7 +21163,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -21863,7 +21830,8 @@ void php_wxKeyEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -21908,10 +21876,6 @@ zend_object_value php_wxKeyEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxKeyEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXKEYEVENT_TYPE;
@@ -22922,8 +22886,7 @@ PHP_METHOD(php_wxKeyEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxKeyEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -22968,7 +22931,8 @@ void php_wxScrollWinEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -23013,10 +22977,6 @@ zend_object_value php_wxScrollWinEvent_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxScrollWinEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSCROLLWINEVENT_TYPE;
@@ -23125,8 +23085,7 @@ PHP_METHOD(php_wxScrollWinEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxScrollWinEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -23567,7 +23526,8 @@ void php_wxSysColourChangedEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -23612,10 +23572,6 @@ zend_object_value php_wxSysColourChangedEvent_new(zend_class_entry *class_type T
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSysColourChangedEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSYSCOLOURCHANGEDEVENT_TYPE;
@@ -23684,8 +23640,7 @@ PHP_METHOD(php_wxSysColourChangedEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSysColourChangedEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -23730,7 +23685,8 @@ void php_wxCommandEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -23775,10 +23731,6 @@ zend_object_value php_wxCommandEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCommandEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCOMMANDEVENT_TYPE;
@@ -23875,8 +23827,7 @@ PHP_METHOD(php_wxCommandEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxCommandEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -26328,7 +26279,8 @@ void php_wxWindowCreateEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -26373,10 +26325,6 @@ zend_object_value php_wxWindowCreateEvent_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWindowCreateEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWINDOWCREATEEVENT_TYPE;
@@ -26600,8 +26548,7 @@ PHP_METHOD(php_wxWindowCreateEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWindowCreateEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -26646,7 +26593,8 @@ void php_wxPaintEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -26691,10 +26639,6 @@ zend_object_value php_wxPaintEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPaintEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPAINTEVENT_TYPE;
@@ -26779,8 +26723,7 @@ PHP_METHOD(php_wxPaintEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPaintEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -26825,7 +26768,8 @@ void php_wxMaximizeEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -26870,10 +26814,6 @@ zend_object_value php_wxMaximizeEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMaximizeEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMAXIMIZEEVENT_TYPE;
@@ -26958,8 +26898,7 @@ PHP_METHOD(php_wxMaximizeEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMaximizeEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -27004,7 +26943,8 @@ void php_wxUpdateUIEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -27049,10 +26989,6 @@ zend_object_value php_wxUpdateUIEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxUpdateUIEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXUPDATEUIEVENT_TYPE;
@@ -28949,8 +28885,7 @@ PHP_METHOD(php_wxUpdateUIEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxUpdateUIEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -28995,7 +28930,8 @@ void php_wxClipboardTextEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -29040,10 +28976,6 @@ zend_object_value php_wxClipboardTextEvent_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxClipboardTextEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCLIPBOARDTEXTEVENT_TYPE;
@@ -29140,8 +29072,7 @@ PHP_METHOD(php_wxClipboardTextEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxClipboardTextEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -29186,7 +29117,8 @@ void php_wxMouseEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -29231,10 +29163,6 @@ zend_object_value php_wxMouseEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMouseEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMOUSEEVENT_TYPE;
@@ -32511,8 +32439,7 @@ PHP_METHOD(php_wxMouseEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMouseEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -32654,7 +32581,8 @@ void php_wxActivateEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -32699,10 +32627,6 @@ zend_object_value php_wxActivateEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxActivateEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXACTIVATEEVENT_TYPE;
@@ -32823,8 +32747,7 @@ PHP_METHOD(php_wxActivateEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxActivateEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -32966,7 +32889,8 @@ void php_wxContextMenuEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -33011,10 +32935,6 @@ zend_object_value php_wxContextMenuEvent_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxContextMenuEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCONTEXTMENUEVENT_TYPE;
@@ -33380,8 +33300,7 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxContextMenuEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -33426,7 +33345,8 @@ void php_wxEraseEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -33471,10 +33391,6 @@ zend_object_value php_wxEraseEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxEraseEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXERASEEVENT_TYPE;
@@ -33710,8 +33626,7 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxEraseEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -33756,7 +33671,8 @@ void php_wxFocusEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -33801,10 +33717,6 @@ zend_object_value php_wxFocusEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFocusEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFOCUSEVENT_TYPE;
@@ -34141,8 +34053,7 @@ PHP_METHOD(php_wxFocusEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFocusEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -34187,7 +34098,8 @@ void php_wxChildFocusEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -34232,10 +34144,6 @@ zend_object_value php_wxChildFocusEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxChildFocusEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCHILDFOCUSEVENT_TYPE;
@@ -34459,8 +34367,7 @@ PHP_METHOD(php_wxChildFocusEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxChildFocusEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -34505,7 +34412,8 @@ void php_wxNotifyEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -34550,10 +34458,6 @@ zend_object_value php_wxNotifyEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxNotifyEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXNOTIFYEVENT_TYPE;
@@ -35145,8 +35049,7 @@ PHP_METHOD(php_wxNotifyEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxNotifyEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -35191,7 +35094,8 @@ void php_wxThreadEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -35236,10 +35140,6 @@ zend_object_value php_wxThreadEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxThreadEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTHREADEVENT_TYPE;
@@ -36157,8 +36057,7 @@ PHP_METHOD(php_wxThreadEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxThreadEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -36203,7 +36102,8 @@ void php_wxHelpEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -36248,10 +36148,6 @@ zend_object_value php_wxHelpEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHelpEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHELPEVENT_TYPE;
@@ -36829,8 +36725,7 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHelpEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -36875,7 +36770,8 @@ void php_wxScrollEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -36920,10 +36816,6 @@ zend_object_value php_wxScrollEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxScrollEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSCROLLEVENT_TYPE;
@@ -37044,8 +36936,7 @@ PHP_METHOD(php_wxScrollEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxScrollEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -37486,7 +37377,8 @@ void php_wxIdleEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -37531,10 +37423,6 @@ zend_object_value php_wxIdleEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxIdleEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXIDLEEVENT_TYPE;
@@ -38015,8 +37903,7 @@ PHP_METHOD(php_wxIdleEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxIdleEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -38061,7 +37948,8 @@ void php_wxInitDialogEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -38106,10 +37994,6 @@ zend_object_value php_wxInitDialogEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxInitDialogEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXINITDIALOGEVENT_TYPE;
@@ -38194,8 +38078,7 @@ PHP_METHOD(php_wxInitDialogEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxInitDialogEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -38240,7 +38123,8 @@ void php_wxWindowDestroyEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -38285,10 +38169,6 @@ zend_object_value php_wxWindowDestroyEvent_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWindowDestroyEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWINDOWDESTROYEVENT_TYPE;
@@ -38512,8 +38392,7 @@ PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWindowDestroyEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -38558,7 +38437,8 @@ void php_wxNavigationKeyEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -38603,10 +38483,6 @@ zend_object_value php_wxNavigationKeyEvent_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxNavigationKeyEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXNAVIGATIONKEYEVENT_TYPE;
@@ -39614,8 +39490,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxNavigationKeyEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -39660,7 +39535,8 @@ void php_wxCloseEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -39705,10 +39581,6 @@ zend_object_value php_wxCloseEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCloseEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCLOSEEVENT_TYPE;
@@ -40317,8 +40189,7 @@ PHP_METHOD(php_wxCloseEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxCloseEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -40363,7 +40234,8 @@ void php_wxMenuEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -40408,10 +40280,6 @@ zend_object_value php_wxMenuEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMenuEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMENUEVENT_TYPE;
@@ -40853,8 +40721,7 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMenuEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -40899,7 +40766,8 @@ void php_wxMoveEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -40944,10 +40812,6 @@ zend_object_value php_wxMoveEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMoveEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMOVEEVENT_TYPE;
@@ -41502,8 +41366,7 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMoveEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -41548,7 +41411,8 @@ void php_wxSizeEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -41593,10 +41457,6 @@ zend_object_value php_wxSizeEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSizeEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSIZEEVENT_TYPE;
@@ -41795,7 +41655,6 @@ PHP_METHOD(php_wxSizeEvent, GetSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -42149,8 +42008,7 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSizeEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -42195,7 +42053,8 @@ void php_wxSetCursorEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -42240,10 +42099,6 @@ zend_object_value php_wxSetCursorEvent_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSetCursorEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSETCURSOREVENT_TYPE;
@@ -42869,8 +42724,7 @@ PHP_METHOD(php_wxSetCursorEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSetCursorEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -42915,7 +42769,8 @@ void php_wxFileCtrlEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -42960,10 +42815,6 @@ zend_object_value php_wxFileCtrlEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileCtrlEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILECTRLEVENT_TYPE;
@@ -43793,8 +43644,7 @@ PHP_METHOD(php_wxFileCtrlEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileCtrlEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -43839,7 +43689,8 @@ void php_wxFileDirPickerEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -43884,10 +43735,6 @@ zend_object_value php_wxFileDirPickerEvent_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileDirPickerEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEDIRPICKEREVENT_TYPE;
@@ -44190,8 +44037,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileDirPickerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -44236,7 +44082,8 @@ void php_wxFontPickerEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -44281,10 +44128,6 @@ zend_object_value php_wxFontPickerEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFontPickerEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFONTPICKEREVENT_TYPE;
@@ -44380,7 +44223,6 @@ PHP_METHOD(php_wxFontPickerEvent, GetFont)
 				memcpy(ptr, &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				((wxFont_php*)ptr)->InitProperties();
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
@@ -44625,8 +44467,7 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFontPickerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -44671,7 +44512,8 @@ void php_wxFileSystemWatcherEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -44716,10 +44558,6 @@ zend_object_value php_wxFileSystemWatcherEvent_new(zend_class_entry *class_type 
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemWatcherEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEMWATCHEREVENT_TYPE;
@@ -45404,7 +45242,8 @@ void php_wxGridEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -45449,10 +45288,6 @@ zend_object_value php_wxGridEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDEVENT_TYPE;
@@ -46461,8 +46296,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxGridEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -46507,7 +46341,8 @@ void php_wxGridSizeEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -46552,10 +46387,6 @@ zend_object_value php_wxGridSizeEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridSizeEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDSIZEEVENT_TYPE;
@@ -47344,8 +47175,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxGridSizeEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -47390,7 +47220,8 @@ void php_wxGridRangeSelectEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -47435,10 +47266,6 @@ zend_object_value php_wxGridRangeSelectEvent_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridRangeSelectEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDRANGESELECTEVENT_TYPE;
@@ -47727,7 +47554,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRightCoords)
 				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
-				((wxGridCellCoords_php*)ptr)->InitProperties();
 				zo_wxGridCellCoords* zo0 = (zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxGridCellCoords_php*) ptr;
 
@@ -48123,7 +47949,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetTopLeftCoords)
 				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
-				((wxGridCellCoords_php*)ptr)->InitProperties();
 				zo_wxGridCellCoords* zo0 = (zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxGridCellCoords_php*) ptr;
 
@@ -48738,8 +48563,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxGridRangeSelectEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -48784,7 +48608,8 @@ void php_wxGridEditorCreatedEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -48829,10 +48654,6 @@ zend_object_value php_wxGridEditorCreatedEvent_new(zend_class_entry *class_type 
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxGridEditorCreatedEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXGRIDEDITORCREATEDEVENT_TYPE;
@@ -49621,8 +49442,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxGridEditorCreatedEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -49667,7 +49487,8 @@ void php_wxHeaderCtrlEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -49712,10 +49533,6 @@ zend_object_value php_wxHeaderCtrlEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHeaderCtrlEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHEADERCTRLEVENT_TYPE;
@@ -50048,7 +49865,8 @@ void php_wxHyperlinkEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -50093,10 +49911,6 @@ zend_object_value php_wxHyperlinkEvent_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxHyperlinkEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXHYPERLINKEVENT_TYPE;
@@ -50398,8 +50212,7 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxHyperlinkEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -50444,7 +50257,8 @@ void php_wxQueryLayoutInfoEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -50489,10 +50303,6 @@ zend_object_value php_wxQueryLayoutInfoEvent_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxQueryLayoutInfoEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXQUERYLAYOUTINFOEVENT_TYPE;
@@ -50975,7 +50785,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -51599,8 +51408,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxQueryLayoutInfoEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -51645,7 +51453,8 @@ void php_wxCalculateLayoutEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -51690,10 +51499,6 @@ zend_object_value php_wxCalculateLayoutEvent_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxCalculateLayoutEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCALCULATELAYOUTEVENT_TYPE;
@@ -52203,8 +52008,7 @@ PHP_METHOD(php_wxCalculateLayoutEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxCalculateLayoutEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -52249,7 +52053,8 @@ void php_wxListEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -52294,10 +52099,6 @@ zend_object_value php_wxListEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxListEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXLISTEVENT_TYPE;
@@ -53598,8 +53399,7 @@ PHP_METHOD(php_wxListEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxListEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -53644,7 +53444,8 @@ void php_wxMediaEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -53689,10 +53490,6 @@ zend_object_value php_wxMediaEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMediaEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMEDIAEVENT_TYPE;
@@ -53789,8 +53586,7 @@ PHP_METHOD(php_wxMediaEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMediaEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -53835,7 +53631,8 @@ void php_wxMouseEventsManager_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -53880,10 +53677,6 @@ zend_object_value php_wxMouseEventsManager_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMouseEventsManager_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMOUSEEVENTSMANAGER_TYPE;
@@ -54068,7 +53861,7 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54153,7 +53946,7 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54238,7 +54031,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54317,7 +54110,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54394,7 +54187,7 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54473,7 +54266,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54552,7 +54345,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54630,7 +54423,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -54769,8 +54562,7 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMouseEventsManager*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -54815,7 +54607,8 @@ void php_wxMouseState_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -54860,10 +54653,6 @@ zend_object_value php_wxMouseState_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMouseState_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMOUSESTATE_TYPE;
@@ -56856,8 +56645,7 @@ PHP_METHOD(php_wxMouseState, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMouseState*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -56902,7 +56690,8 @@ void php_wxProcessEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -56947,10 +56736,6 @@ zend_object_value php_wxProcessEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxProcessEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPROCESSEVENT_TYPE;
@@ -57253,8 +57038,7 @@ PHP_METHOD(php_wxProcessEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxProcessEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -57299,7 +57083,8 @@ void php_wxRibbonBarEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -57344,10 +57129,6 @@ zend_object_value php_wxRibbonBarEvent_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonBarEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONBAREVENT_TYPE;
@@ -57716,8 +57497,7 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonBarEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -57762,7 +57542,8 @@ void php_wxRibbonButtonBarEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -57807,10 +57588,6 @@ zend_object_value php_wxRibbonButtonBarEvent_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonButtonBarEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONBUTTONBAREVENT_TYPE;
@@ -57970,8 +57747,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonButtonBarEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -58378,7 +58154,8 @@ void php_wxRibbonGalleryEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -58423,10 +58200,6 @@ zend_object_value php_wxRibbonGalleryEvent_new(zend_class_entry *class_type TSRM
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRibbonGalleryEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXRIBBONGALLERYEVENT_TYPE;
@@ -59068,8 +58841,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRibbonGalleryEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -59114,7 +58886,8 @@ void php_wxSashEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -59159,10 +58932,6 @@ zend_object_value php_wxSashEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSashEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSASHEVENT_TYPE;
@@ -59558,8 +59327,7 @@ PHP_METHOD(php_wxSashEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSashEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -59604,7 +59372,8 @@ void php_wxSpinEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -59649,10 +59418,6 @@ zend_object_value php_wxSpinEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSpinEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSPINEVENT_TYPE;
@@ -59948,8 +59713,7 @@ PHP_METHOD(php_wxSpinEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSpinEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -59994,7 +59758,8 @@ void php_wxSpinDoubleEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -60039,10 +59804,6 @@ zend_object_value php_wxSpinDoubleEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSpinDoubleEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSPINDOUBLEEVENT_TYPE;
@@ -60208,8 +59969,7 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSpinDoubleEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -60453,7 +60213,8 @@ void php_wxSplitterEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -60498,10 +60259,6 @@ zend_object_value php_wxSplitterEvent_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSplitterEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSPLITTEREVENT_TYPE;
@@ -61130,8 +60887,7 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSplitterEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -61176,7 +60932,8 @@ void php_wxStyledTextEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -61221,10 +60978,6 @@ zend_object_value php_wxStyledTextEvent_new(zend_class_entry *class_type TSRMLS_
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxStyledTextEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSTYLEDTEXTEVENT_TYPE;
@@ -61377,8 +61130,7 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxStyledTextEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -65468,7 +65220,8 @@ void php_wxTaskBarIconEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -65513,10 +65266,6 @@ zend_object_value php_wxTaskBarIconEvent_new(zend_class_entry *class_type TSRMLS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTaskBarIconEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTASKBARICONEVENT_TYPE;
@@ -65610,8 +65359,7 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTaskBarIconEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -65656,7 +65404,8 @@ void php_wxTimerEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -65701,10 +65450,6 @@ zend_object_value php_wxTimerEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTimerEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTIMEREVENT_TYPE;
@@ -65926,8 +65671,7 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTimerEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -65972,7 +65716,8 @@ void php_wxTreeEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -66017,10 +65762,6 @@ zend_object_value php_wxTreeEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTreeEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTREEEVENT_TYPE;
@@ -66115,7 +65856,6 @@ PHP_METHOD(php_wxTreeEvent, GetItem)
 				memcpy(ptr, &value_to_return0, sizeof(wxTreeItemId));
 				object_init_ex(return_value, php_wxTreeItemId_entry);
 				((wxTreeItemId_php*)ptr)->phpObj = return_value;
-				((wxTreeItemId_php*)ptr)->InitProperties();
 				zo_wxTreeItemId* zo0 = (zo_wxTreeItemId*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxTreeItemId_php*) ptr;
 
@@ -66537,7 +66277,6 @@ PHP_METHOD(php_wxTreeEvent, GetOldItem)
 				memcpy(ptr, &value_to_return0, sizeof(wxTreeItemId));
 				object_init_ex(return_value, php_wxTreeItemId_entry);
 				((wxTreeItemId_php*)ptr)->phpObj = return_value;
-				((wxTreeItemId_php*)ptr)->InitProperties();
 				zo_wxTreeItemId* zo0 = (zo_wxTreeItemId*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxTreeItemId_php*) ptr;
 
@@ -66978,8 +66717,7 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTreeEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -67024,7 +66762,8 @@ void php_wxWebViewEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -67069,10 +66808,6 @@ zend_object_value php_wxWebViewEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWebViewEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWEBVIEWEVENT_TYPE;
@@ -67389,8 +67124,7 @@ PHP_METHOD(php_wxWebViewEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWebViewEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -67435,7 +67169,8 @@ void php_wxWizardEvent_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -67480,10 +67215,6 @@ zend_object_value php_wxWizardEvent_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxWizardEvent_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXWIZARDEVENT_TYPE;
@@ -67720,8 +67451,7 @@ PHP_METHOD(php_wxWizardEvent, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxWizardEvent*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

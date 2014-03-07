@@ -27,13 +27,10 @@ class wxCondition_php: public wxCondition{
 	
 	wxCondition_php(wxMutex& mutex):wxCondition(mutex){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -70,13 +67,10 @@ class wxCriticalSectionLocker_php: public wxCriticalSectionLocker{
 	
 	wxCriticalSectionLocker_php(wxCriticalSection& criticalsection):wxCriticalSectionLocker(criticalsection){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -107,13 +101,10 @@ class wxThreadHelper_php: public wxThreadHelper{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -147,13 +138,10 @@ class wxCriticalSection_php: public wxCriticalSection{
 	
 	wxCriticalSection_php(wxCriticalSectionType critSecType=wxCRITSEC_DEFAULT):wxCriticalSection(critSecType){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -189,13 +177,10 @@ class wxThread_php: public wxThread{
 	wxThread_php(wxThreadKind kind=wxTHREAD_DETACHED):wxThread(kind){}
 		
 	void* Entry();
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -251,13 +236,10 @@ class wxSemaphore_php: public wxSemaphore{
 	
 	wxSemaphore_php(int initialcount=0, int maxcount=0):wxSemaphore(initialcount, maxcount){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -293,13 +275,10 @@ class wxMutexLocker_php: public wxMutexLocker{
 	
 	wxMutexLocker_php(wxMutex& mutex):wxMutexLocker(mutex){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -332,13 +311,10 @@ class wxMutex_php: public wxMutex{
 	
 	wxMutex_php(wxMutexType type=wxMUTEX_DEFAULT):wxMutex(type){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

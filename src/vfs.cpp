@@ -75,7 +75,8 @@ void php_wxFileSystem_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -120,10 +121,6 @@ zend_object_value php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystem_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEM_TYPE;
@@ -192,8 +189,7 @@ PHP_METHOD(php_wxFileSystem, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -307,7 +303,6 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				((wxFileName_php*)ptr)->InitProperties();
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
 
@@ -1432,7 +1427,8 @@ void php_wxFileSystemHandler_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -1477,10 +1473,6 @@ zend_object_value php_wxFileSystemHandler_new(zend_class_entry *class_type TSRML
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemHandler_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEMHANDLER_TYPE;
@@ -1547,7 +1539,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	//Delete already used parameters from memory
 	for(int i=0; i<1; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -1970,7 +1962,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	//Delete already used parameters from memory
 	for(int i=0; i<2; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2062,8 +2054,7 @@ PHP_METHOD(php_wxFileSystemHandler, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFileSystemHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;

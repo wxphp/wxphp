@@ -92,10 +92,6 @@ zend_object_value php_wxRefCounter_new(zend_class_entry *class_type TSRMLS_DC)
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxRefCounter_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXREFCOUNTER_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -526,8 +522,7 @@ PHP_METHOD(php_wxRefCounter, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxRefCounter*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -572,7 +567,9 @@ void php_wxObject_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+			custom_object->native_object->UninitProperties();
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -617,10 +614,6 @@ zend_object_value php_wxObject_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxObject_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXOBJECT_TYPE;
@@ -747,7 +740,7 @@ PHP_METHOD(php_wxObject, __construct)
 		native_object->phpObj = getThis();
 		
 		native_object->InitProperties();
-		
+
 		current_object = (zo_wxObject*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -8653,7 +8646,8 @@ void php_wxClassInfo_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
-			delete custom_object->native_object;
+       
+            delete custom_object->native_object;
 			
 			custom_object->native_object = NULL;
 		}
@@ -8698,10 +8692,6 @@ zend_object_value php_wxClassInfo_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxClassInfo_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXCLASSINFO_TYPE;

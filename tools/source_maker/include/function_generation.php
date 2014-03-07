@@ -1728,7 +1728,10 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									$return_called_overload .= tabs(4) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
-									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+                                    if(class_has_properties($return_type))
+                                    {
+                                        $return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+                                    }
 									$return_called_overload .= tabs(4) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
 									$return_called_overload .= tabs(4) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
 								}
@@ -1956,7 +1959,10 @@ function function_return_call($method_name, $parameters_string, $required_parame
 					$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 					$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 					$call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
-					$call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+                    if(class_has_properties($return_type))
+                    {
+                        $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+                    }
 					$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
 					$call_code .= tabs($t) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
 						
@@ -2238,7 +2244,10 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 						$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 						$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 						$call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
-						$call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+                        if(class_has_properties($return_type))
+                        {
+                            $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
+                        }
 						$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
 						$call_code .= tabs($t) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
 							

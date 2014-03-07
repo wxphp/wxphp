@@ -27,13 +27,10 @@ class wxDataViewChoiceRenderer_php: public wxDataViewChoiceRenderer{
 	
 	wxDataViewChoiceRenderer_php(const wxArrayString& choices, wxDataViewCellMode mode=wxDATAVIEW_CELL_EDITABLE, int alignment=wxDVR_DEFAULT_ALIGNMENT):wxDataViewChoiceRenderer(choices, mode, alignment){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -88,13 +85,10 @@ class wxDataViewModel_php: public wxDataViewModel{
 	void GetValue(wxVariant& variant, const wxDataViewItem& item, unsigned int col) const;
 	bool IsContainer(const wxDataViewItem& item) const;
 	bool SetValue(const wxVariant& variant, const wxDataViewItem& item, unsigned int col);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -146,13 +140,10 @@ class wxDataViewListModel_php: public wxDataViewListModel{
 	unsigned int GetCount() const;
 	unsigned int GetRow(const wxDataViewItem& item) const;
 	bool SetValueByRow(const wxVariant& variant, unsigned int row, unsigned int col);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -202,13 +193,10 @@ class wxDataViewIndexListModel_php: public wxDataViewIndexListModel{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -258,13 +246,10 @@ class wxDataViewVirtualListModel_php: public wxDataViewVirtualListModel{
 	public:
 	
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -315,13 +300,10 @@ class wxDataViewItemAttr_php: public wxDataViewItemAttr{
 	
 	wxDataViewItemAttr_php():wxDataViewItemAttr(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -358,13 +340,10 @@ class wxDataViewItem_php: public wxDataViewItem{
 	wxDataViewItem_php(const wxDataViewItem& item):wxDataViewItem(item){}
 	wxDataViewItem_php(void* id):wxDataViewItem(id){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -404,13 +383,10 @@ class wxDataViewModelNotifier_php: public wxDataViewModelNotifier{
 	bool ItemDeleted(const wxDataViewItem& parent, const wxDataViewItem& item);
 	void Resort();
 	bool ValueChanged(const wxDataViewItem& item, unsigned int col);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -445,13 +421,10 @@ class wxDataViewRenderer_php: public wxDataViewRenderer{
 		
 	bool GetValue(wxVariant& value) const;
 	bool SetValue(const wxVariant& value);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -498,13 +471,10 @@ class wxDataViewTextRenderer_php: public wxDataViewTextRenderer{
 	
 	wxDataViewTextRenderer_php(const wxString& varianttype="string", wxDataViewCellMode mode=wxDATAVIEW_CELL_INERT, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewTextRenderer(varianttype, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -552,13 +522,10 @@ class wxDataViewIconTextRenderer_php: public wxDataViewIconTextRenderer{
 	
 	wxDataViewIconTextRenderer_php(const wxString& varianttype="wxDataViewIconText", wxDataViewCellMode mode=wxDATAVIEW_CELL_INERT, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewIconTextRenderer(varianttype, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -606,13 +573,10 @@ class wxDataViewProgressRenderer_php: public wxDataViewProgressRenderer{
 	
 	wxDataViewProgressRenderer_php(const wxString& label=wxEmptyString, const wxString& varianttype="long", wxDataViewCellMode mode=wxDATAVIEW_CELL_INERT, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewProgressRenderer(label, varianttype, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -660,13 +624,10 @@ class wxDataViewSpinRenderer_php: public wxDataViewSpinRenderer{
 	
 	wxDataViewSpinRenderer_php(int min, int max, wxDataViewCellMode mode=wxDATAVIEW_CELL_EDITABLE, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewSpinRenderer(min, max, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -722,13 +683,10 @@ class wxDataViewToggleRenderer_php: public wxDataViewToggleRenderer{
 	
 	wxDataViewToggleRenderer_php(const wxString& varianttype="bool", wxDataViewCellMode mode=wxDATAVIEW_CELL_INERT, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewToggleRenderer(varianttype, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -776,13 +734,10 @@ class wxDataViewDateRenderer_php: public wxDataViewDateRenderer{
 	
 	wxDataViewDateRenderer_php(const wxString& varianttype="datetime", wxDataViewCellMode mode=wxDATAVIEW_CELL_ACTIVATABLE, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewDateRenderer(varianttype, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -831,13 +786,10 @@ class wxDataViewCustomRenderer_php: public wxDataViewCustomRenderer{
 		
 	wxSize GetSize() const;
 	bool Render(wxRect cell, wxDC* dc, int state);
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -892,13 +844,10 @@ class wxDataViewBitmapRenderer_php: public wxDataViewBitmapRenderer{
 	
 	wxDataViewBitmapRenderer_php(const wxString& varianttype="wxBitmap", wxDataViewCellMode mode=wxDATAVIEW_CELL_INERT, int align=wxDVR_DEFAULT_ALIGNMENT):wxDataViewBitmapRenderer(varianttype, mode, align){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -947,13 +896,10 @@ class wxDataViewColumn_php: public wxDataViewColumn{
 	wxDataViewColumn_php(const wxString& title, wxDataViewRenderer* renderer, unsigned int model_column, int width=wxDVC_DEFAULT_WIDTH, wxAlignment align=wxALIGN_CENTER, int flags=wxDATAVIEW_COL_RESIZABLE):wxDataViewColumn(title, renderer, model_column, width, align, flags){}
 	wxDataViewColumn_php(const wxBitmap& bitmap, wxDataViewRenderer* renderer, unsigned int model_column, int width=wxDVC_DEFAULT_WIDTH, wxAlignment align=wxALIGN_CENTER, int flags=wxDATAVIEW_COL_RESIZABLE):wxDataViewColumn(bitmap, renderer, model_column, width, align, flags){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1004,13 +950,10 @@ class wxDataViewListStore_php: public wxDataViewListStore{
 	
 	wxDataViewListStore_php():wxDataViewListStore(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1071,13 +1014,10 @@ class wxDataViewTreeStore_php: public wxDataViewTreeStore{
 	
 	wxDataViewTreeStore_php():wxDataViewTreeStore(){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1146,13 +1086,10 @@ class wxDataViewIconText_php: public wxDataViewIconText{
 	wxDataViewIconText_php(const wxString& text=wxEmptyString, const wxIcon& icon=wxNullIcon):wxDataViewIconText(text, icon){}
 	wxDataViewIconText_php(const wxDataViewIconText& other):wxDataViewIconText(other){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 
@@ -1194,13 +1131,10 @@ class wxDataViewEvent_php: public wxDataViewEvent{
 	
 	wxDataViewEvent_php(wxEventType commandType=wxEVT_NULL, int winid=0):wxDataViewEvent(commandType, winid){}
 		
-		
-	void InitProperties(){
-	}
+	
 	
 	void ***tsrm_ls;
 	zval* phpObj;
-	void** properties;
 	wxPHPObjectReferences references;
 };
 

@@ -61,7 +61,7 @@
 	//Delete already used parameters from memory
 	for(int i=0; i<<?=count($method_definition["parameters_type"])?>; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 <? } ?>
 	

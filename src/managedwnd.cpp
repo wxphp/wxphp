@@ -88,10 +88,6 @@ zend_object_value php_wxFrame_new(zend_class_entry *class_type TSRMLS_DC)
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFrame_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -315,8 +311,7 @@ PHP_METHOD(php_wxFrame, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -1512,7 +1507,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 	//Delete already used parameters from memory
 	for(int i=0; i<4; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -2737,7 +2732,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 	//Delete already used parameters from memory
 	for(int i=0; i<3; i++)
 	{
-		efree(arguments[i]);
+		zval_ptr_dtor(&arguments[i]);
 	}
 	
 	if(function_called == FAILURE)
@@ -3556,10 +3551,6 @@ zend_object_value php_wxMDIClientWindow_new(zend_class_entry *class_type TSRMLS_
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMDIClientWindow_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDICLIENTWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -3627,8 +3618,7 @@ PHP_METHOD(php_wxMDIClientWindow, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMDIClientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -3820,10 +3810,6 @@ zend_object_value php_wxMDIParentFrame_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMDIParentFrame_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDIPARENTFRAME_TYPE;
@@ -5314,8 +5300,7 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -5372,10 +5357,6 @@ zend_object_value php_wxMDIChildFrame_new(zend_class_entry *class_type TSRMLS_DC
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMDIChildFrame_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDICHILDFRAME_TYPE;
@@ -5600,8 +5581,7 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -6408,10 +6388,6 @@ zend_object_value php_wxMiniFrame_new(zend_class_entry *class_type TSRMLS_DC)
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMiniFrame_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
 
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
-
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMINIFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
@@ -6859,8 +6835,7 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxMiniFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -6952,10 +6927,6 @@ zend_object_value php_wxPopupWindow_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPopupWindow_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOPUPWINDOW_TYPE;
@@ -7345,8 +7316,7 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPopupWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -7438,10 +7408,6 @@ zend_object_value php_wxPopupTransientWindow_new(zend_class_entry *class_type TS
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPopupTransientWindow_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOPUPTRANSIENTWINDOW_TYPE;
@@ -7898,8 +7864,7 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPopupTransientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -7956,10 +7921,6 @@ zend_object_value php_wxPropertySheetDialog_new(zend_class_entry *class_type TSR
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPropertySheetDialog_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPROPERTYSHEETDIALOG_TYPE;
@@ -9404,8 +9365,7 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9462,10 +9422,6 @@ zend_object_value php_wxSplashScreen_new(zend_class_entry *class_type TSRMLS_DC)
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSplashScreen_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSPLASHSCREEN_TYPE;
@@ -9858,8 +9814,7 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxSplashScreen*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -9951,10 +9906,6 @@ zend_object_value php_wxTopLevelWindow_new(zend_class_entry *class_type TSRMLS_D
 
 	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTopLevelWindow_free, NULL TSRMLS_CC);
 	retval.handlers = zend_get_std_object_handlers();
-
-#if PHP_VERSION_ID > 50399
-	Z_OBJVAL_P(temp) = retval;
-#endif
 
     custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTOPLEVELWINDOW_TYPE;
@@ -10179,8 +10130,7 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 	{
 		native_object->phpObj = getThis();
 		
-		native_object->InitProperties();
-		
+
 		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
@@ -12714,7 +12664,6 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				((wxSize_php*)ptr)->InitProperties();
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
@@ -12912,7 +12861,6 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 				memcpy(ptr, &value_to_return0, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				((wxIcon_php*)ptr)->InitProperties();
 				zo_wxIcon* zo0 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
 				zo0->native_object = (wxIcon_php*) ptr;
 
