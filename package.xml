@@ -22,18 +22,6 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>jgmdev@gmail.com</email>
   <active>yes</active>
  </lead>
- <developer>
-  <name>Thomas Sahlin</name>
-  <user>tsahlin</user>
-  <email>unknown</email>
-  <active>yes</active>
- </developer>
- <helper>
-  <name>Dave Kimble</name>
-  <user>davekimble2</user>
-  <email>unknown</email>
-  <active>yes</active>
- </helper>
  <date>2014-03-09</date>
  <time>18:02:59</time>
  <version>
