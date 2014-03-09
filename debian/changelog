@@ -1,3 +1,39 @@
+php5-wxwidgets (3.0.0.1) unstable; urgency=low
+
+  * Added missing wxScrolledWindow methods by enabling wxScrolled, 
+    this fixes issue #30 and #32.
+  * Enabled wxClipBoard::Get() and disabled gargbage collection of 
+    native_object on wxDataObject and its childs as wxClipBoard itself, 
+    which partially fixes issue #34.
+  * Added verification of object parameter child types to allow method 
+    calls which where failing as described on issue #36. This also 
+    completely fixes issue #34, testing may be needed.
+  * Updated README_MSW adding changes needed to prevent windows xp 
+    crashes as described on issue #37.
+  * Enabled wxNonOwnedWindow::SetShape and fixed wxPrintDialog, 
+    wxPageSetupDialog inheritage.
+  * Removed error messages that appeared when failing to call 
+    wxApp::OnInit and wxApp:OnExit.
+  * Added proper type casting to wxMouseState.
+  * Should fix and close #44 by doing proper type casting when calling 
+    wxKeyboarState methods from child classes.
+  * Binded the missing wxAuiNotebookEvent event constants which closes #45.
+  * Enabled more wxStyledTextCtrl methods. 
+  * Enabled inheritance of wxStyledTextCtrl from wxTextEntry as 
+    enabled some more methods.
+  * Some fixes to the reference and interface generator as 
+    simplification of chdir() calls.
+  * Initial work to support wxInputStream::OnSysRead in order to be 
+    able to load images with the wxImage(wxInputStream) constructor.
+  * Fixed 2 memory leaks, one related to wxEvtHandler::OnEvent and the 
+    other related to the creation of new objects.
+  * Fixed memory leak caused by not uninitializing the properties 
+    member of classes like wxPoint when they were destroyed which 
+    closes #48, also modified code generator to only add the properties 
+    code when needed which made the source and library more clean.
+    
+ -- Jefferson González <jgmdev@gmail.com>  Sun, 09 Dec 2014 01:22:09 +0400
+    
 php5-wxwidgets (3.0.0.0) unstable; urgency=low
 
   * Updated debianization scripts.

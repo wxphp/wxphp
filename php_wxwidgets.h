@@ -22,7 +22,7 @@
  * Define Extension Properties 
  */
 #define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
-#define PHP_WXWIDGETS_EXTVER    "3.0.0.0"
+#define PHP_WXWIDGETS_EXTVER    "3.0.0.1"
 #define PHP_WXWIDGETS_VERSION	"3.0.0"
 
 /**
