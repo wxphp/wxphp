@@ -25,6 +25,7 @@ missing
 mkinstalldirs
 modules/
 wxWidgets-*/
+wxwidgets-*
 run-tests.php
 src/.libs
 src/*.lo

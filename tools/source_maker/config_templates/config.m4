@@ -18,18 +18,108 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	WXCONFIG_PATH=wx-config
 	
 	dnl Check for the installation path of wx-config
-	AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
-	for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
-		if test -e "$directory/wx-config"; then
-			wxwidgets_version=`$directory/wx-config --version`
-			version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
-			if test -n "$version_check"; then
-				WXCONFIG_PATH="$directory/wx-config"
-				AC_MSG_RESULT([version $wxwidgets_version found])
-				break
+	if test "$PHP_WXWIDGETS" != "yes"; then
+		AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
+		for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
+			if test -e "$directory/wx-config"; then
+				wxwidgets_version=`$directory/wx-config --version`
+				version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
+				if test -n "$version_check"; then
+					WXCONFIG_PATH="$directory/wx-config"
+					AC_MSG_RESULT([version $wxwidgets_version found])
+					break
+				fi
 			fi
+		done
+	else
+		AC_MSG_CHECKING([for webkitgtk include files])
+		WEBKITGTK=`find /usr/include -name "webkit.h"`
+		if test "$WEBKITGTK" != ""; then
+			AC_MSG_RESULT([found])
+		else
+			AC_MSG_RESULT([not found])
+			AC_MSG_ERROR([webkitgtk include files where not found])
 		fi
-	done
+		
+		AC_MSG_CHECKING([for gconf2 include files])
+		if test -e "/usr/include/gconf/2/gconf/gconf.h"; then
+			AC_MSG_RESULT([found])
+		else
+			AC_MSG_RESULT([not found])
+			AC_MSG_ERROR([gconf include files where not found])
+		fi
+		
+		AC_MSG_CHECKING([for gstreamer include files])
+		if test -e "/usr/include/gstreamer-0.10/gst/gst.h"; then
+			AC_MSG_RESULT([found])
+		else
+			AC_MSG_RESULT([not found])
+			AC_MSG_ERROR([gstreamer include files where not found])
+		fi
+		
+		AC_MSG_CHECKING([for gstreamer plugins include files])
+		if test -e "/usr/include/gstreamer-0.10/gst/audio/audio.h"; then
+			AC_MSG_RESULT([found])
+		else
+			AC_MSG_RESULT([not found])
+			AC_MSG_ERROR([gstreamer plugins include files where not found])
+		fi
+		
+		AC_MSG_CHECKING([for libjpeg include files])
+		LIBJPEG=`find /usr/include -name "jpeglib.h"`
+		if test "$LIBJPEG" != ""; then
+			AC_MSG_RESULT([found])
+		else
+			AC_MSG_RESULT([not found])
+			AC_MSG_ERROR([libjpeg include files where not found])
+		fi
+		
+		AC_MSG_CHECKING([for wget availability])
+		WGET=`which wget`
+		if test "$WGET" != ""; then
+			AC_MSG_RESULT([found])
+		else
+			AC_MSG_RESULT([not found])
+			AC_MSG_ERROR([wget was not found])
+		fi
+		
+		if test ! -e "wxWidgets-3.0.0"; then
+			echo "Downloading wxWidgets..."
+			wget http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
+			tar -xjf wxWidgets-3.0.0.tar.bz2
+			rm wxWidgets-3.0.0.tar.bz2
+		fi
+
+		dnl Build wxWidgets if not already build
+		if test ! -e "wxWidgets-3.0.0/mybuild"; then
+			echo "Starting a custom build of wxWidgets..."
+			
+			cd wxWidgets-3.0.0
+
+			mkdir mybuild
+			cd mybuild
+
+			WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.0.0\/mybuild//"`wxWidgets-build
+
+			CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2"  \
+			../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic
+
+			make
+			make install
+			
+			cd ../../
+		fi
+		
+		WXCONFIG_PATH="wxWidgets-build/bin/wx-config"
+		PHP_WXWIDGETS_MONOLITHIC="yes"
+		
+		PHP_WXWIDGETS_OTHER_LDFLAGS=`pkg-config --libs gstreamer-0.10 gstreamer-interfaces-0.10 gtk+-2.0  libpng zlib`
+		
+		PHP_WXWIDGETS_LDFLAGS="-LwxWidgets-build/lib -pthread -lwx_gtk2u-3.0 -lwxregexu-3.0 -lwxscintilla-3.0"
+		PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LDFLAGS $PHP_WXWIDGETS_OTHER_LDFLAGS -ljpeg"
+		
+		LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
+	fi
 	
 	dnl Show error if wxWidgets was not found
 	if test ! -e $WXCONFIG_PATH; then
@@ -44,7 +134,10 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	fi
 	
 	dnl Add additional includes directory
-	if test -n "$ext_srcdir"; then
+	PHP_WXWIDGETS_PEAR=`pwd | grep pear`
+	if test "$PHP_WXWIDGETS_PEAR" != ""; then
+		PHP_WXWIDGETS_CFLAGS="-I/tmp/pear/temp/wxwidgets/includes";
+	elif test -n "$ext_srcdir"; then
 		PHP_WXWIDGETS_CFLAGS="-I$ext_srcdir/includes";
 	else
 		PHP_WXWIDGETS_CFLAGS="-Iincludes";
