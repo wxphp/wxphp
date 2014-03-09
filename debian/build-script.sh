@@ -5,7 +5,7 @@
 CPU_CORES=`grep processor /proc/cpuinfo | wc -l`
 CORES_COUNT=$[(($CPU_CORES / 2) + 1)]
 
-# Clone wxWidgets from github if not available
+# Download wxWidgets from sourceforge
 if [ ! -e "wxWidgets-3.0.0" ]; then
     wget http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
     tar -xjf wxWidgets-3.0.0.tar.bz2

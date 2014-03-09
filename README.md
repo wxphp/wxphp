@@ -37,7 +37,7 @@ easier for people already familiar with the library.
 * wxWidgets 3.0.0
 * PHP5 Sources
 * wxPHP source code
-* Read the README_MSW
+* Read the README_MSW.txt
 	
 ### Install Windows SDK 6.1 and Visual C++ 2008 Express Edition
 
@@ -112,7 +112,7 @@ there may be some issues that need to be fixed*
 
 ### Compile wxPHP
 
-*Note: Make sure to read the README_MSW for some compilation and linking fixes*
+*Note: Make sure to read the README_MSW.txt for some compilation and linking fixes*
 
 1. Get wxPHP sources:
 		
@@ -439,8 +439,7 @@ directory to retrieve the configuration files skeleton and populate it
 with the list of files that need to be compiled.
 
 Use the go.sh/bat utility script to automate some of the steps necessary
-or build.sh script on the wxPHP root directory (linux only) to automate
-installation of the extension.
+or regen.sh script on the wxPHP root directory.
 	
 *NOTE: For more information about the code generator check the README 
 file on tools/source_maker directory.*

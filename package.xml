@@ -1,44 +1,330 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE package SYSTEM "../pear/package.dtd">
-<package>
- <name>wxWidgets</name>
- <summary>PHP bindings to the GUI toolkit library wxWidgets</summary>
- <maintainers>
-  <maintainer>
-   <user>seariver</user>
-   <name>Mário Soares</name>
-   <email>seariver@gmail.com</email>
-   <role>lead</role>
-  </maintainer>
-  <maintainer>
-   <user>jgmylm</user>
-   <name>Jefferson González</name>
-   <email>jgmdev@gmail.com</email>
-   <role>developer</role>
-  </maintainer>
- </maintainers>
- <description>
-Provides the neccesary bindings to build cross-platform software 
-with rich native GUIs using the combined power of the PHP language and 
-the wxWidgets library. 
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>wxwidgets</name>
+ <channel>pecl.php.net</channel>
+ <summary>PHP bindings to the GUI toolkit wxWidgets</summary>
+ <description>Provides the neccesary bindings to build cross-platform 
+software desktop applications using the wxWidgets library.
  </description>
- <license>PHP</license>
- <release>
-  <state>beta</state>
-  <version>2.9.3.1</version>
-  <date>2012-04-21</date>
-  <notes>
-Updated the binding to support newer versions of wxWidgets 2.9 - 3.0
-  </notes>
-  <filelist>
-   <file role="doc" name="CREDITS"/>
-   <file role="src" name="config.m4"/>
-   <file role="src" name="config.w32"/>
-   <file role="src" name="wxwidgets.c"/>
-   <file role="src" name="php_wxwidgets.h"/>
-  </filelist>
-  <deps>
-   <dep type="php" rel="ge" version="5" />
-  </deps>
- </release>
+ <lead>
+  <name>MÃ¡rio Soares</name>
+  <user>seariver</user>
+  <email>seariver@gmail.com</email>
+  <active>no</active>
+ </lead>
+ <lead>
+  <name>Jefferson GonzÃ¡lez</name>
+  <user>jgmylm</user>
+  <email>jgmdev@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <developer>
+  <name>Thomas Sahlin</name>
+  <user>tsahlin</user>
+  <email>unknown</email>
+  <active>yes</active>
+ </developer>
+ <helper>
+  <name>Dave Kimble</name>
+  <user>davekimble2</user>
+  <email>unknown</email>
+  <active>yes</active>
+ </helper>
+ <date>2014-03-09</date>
+ <time>18:02:59</time>
+ <version>
+  <release>3.0.0.1</release>
+  <api>3.0.0.1</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP</license>
+ <notes>
+  * Added missing wxScrolledWindow methods by enabling wxScrolled, 
+    this fixes issue #30 and #32.
+  * Enabled wxClipBoard::Get() and disabled gargbage collection of 
+    native_object on wxDataObject and its childs as wxClipBoard itself, 
+    which partially fixes issue #34.
+  * Added verification of object parameter child types to allow method 
+    calls which where failing as described on issue #36. This also 
+    completely fixes issue #34, testing may be needed.
+  * Updated README_MSW adding changes needed to prevent windows xp 
+    crashes as described on issue #37.
+  * Enabled wxNonOwnedWindow::SetShape and fixed wxPrintDialog, 
+    wxPageSetupDialog inheritage.
+  * Removed error messages that appeared when failing to call 
+    wxApp::OnInit and wxApp:OnExit.
+  * Added proper type casting to wxMouseState.
+  * Should fix and close #44 by doing proper type casting when calling 
+    wxKeyboarState methods from child classes.
+  * Binded the missing wxAuiNotebookEvent event constants which closes #45.
+  * Enabled more wxStyledTextCtrl methods. 
+  * Enabled inheritance of wxStyledTextCtrl from wxTextEntry as 
+    enabled some more methods.
+  * Some fixes to the reference and interface generator as 
+    simplification of chdir() calls.
+  * Initial work to support wxInputStream::OnSysRead in order to be 
+    able to load images with the wxImage(wxInputStream) constructor.
+  * Fixed 2 memory leaks, one related to wxEvtHandler::OnEvent and the 
+    other related to the creation of new objects.
+  * Fixed memory leak caused by not uninitializing the properties 
+    member of classes like wxPoint when they were destroyed which 
+    closes #48, also modified code generator to only add the properties 
+    code when needed which made the source and library more clean.
+ </notes>
+ <contents>
+  <dir name="/">
+   <file name="includes/app.h" role="src" />
+   <file name="includes/appmanagement.h" role="src" />
+   <file name="includes/aui.h" role="src" />
+   <file name="includes/bookctrl.h" role="src" />
+   <file name="includes/cfg.h" role="src" />
+   <file name="includes/cmndlg.h" role="src" />
+   <file name="includes/common.h" role="src" />
+   <file name="includes/containers.h" role="src" />
+   <file name="includes/ctrl.h" role="src" />
+   <file name="includes/data.h" role="src" />
+   <file name="includes/dc.h" role="src" />
+   <file name="includes/dnd.h" role="src" />
+   <file name="includes/docview.h" role="src" />
+   <file name="includes/dvc.h" role="src" />
+   <file name="includes/events.h" role="src" />
+   <file name="includes/file.h" role="src" />
+   <file name="includes/functions.h" role="src" />
+   <file name="includes/gdi.h" role="src" />
+   <file name="includes/grid.h" role="src" />
+   <file name="includes/help.h" role="src" />
+   <file name="includes/html.h" role="src" />
+   <file name="includes/logging.h" role="src" />
+   <file name="includes/managedwnd.h" role="src" />
+   <file name="includes/media.h" role="src" />
+   <file name="includes/menus.h" role="src" />
+   <file name="includes/misc.h" role="src" />
+   <file name="includes/miscwnd.h" role="src" />
+   <file name="includes/net.h" role="src" />
+   <file name="includes/object_types.h" role="src" />
+   <file name="includes/others.h" role="src" />
+   <file name="includes/pickers.h" role="src" />
+   <file name="includes/printing.h" role="src" />
+   <file name="includes/references.h" role="src" />
+   <file name="includes/ribbon.h" role="src" />
+   <file name="includes/richtext.h" role="src" />
+   <file name="includes/rtti.h" role="src" />
+   <file name="includes/stc.h" role="src" />
+   <file name="includes/streams.h" role="src" />
+   <file name="includes/threading.h" role="src" />
+   <file name="includes/validator.h" role="src" />
+   <file name="includes/vfs.h" role="src" />
+   <file name="includes/webview.h" role="src" />
+   <file name="includes/winlayout.h" role="src" />
+   <file name="includes/xml.h" role="src" />
+   <file name="includes/xrc.h" role="src" />
+   <file name="src/app.cpp" role="src" />
+   <file name="src/appmanagement.cpp" role="src" />
+   <file name="src/aui.cpp" role="src" />
+   <file name="src/bookctrl.cpp" role="src" />
+   <file name="src/cfg.cpp" role="src" />
+   <file name="src/cmndlg.cpp" role="src" />
+   <file name="src/containers.cpp" role="src" />
+   <file name="src/ctrl.cpp" role="src" />
+   <file name="src/data.cpp" role="src" />
+   <file name="src/dc.cpp" role="src" />
+   <file name="src/dnd.cpp" role="src" />
+   <file name="src/docview.cpp" role="src" />
+   <file name="src/dvc.cpp" role="src" />
+   <file name="src/events.cpp" role="src" />
+   <file name="src/file.cpp" role="src" />
+   <file name="src/functions.cpp" role="src" />
+   <file name="src/gdi.cpp" role="src" />
+   <file name="src/grid.cpp" role="src" />
+   <file name="src/help.cpp" role="src" />
+   <file name="src/html.cpp" role="src" />
+   <file name="src/logging.cpp" role="src" />
+   <file name="src/managedwnd.cpp" role="src" />
+   <file name="src/media.cpp" role="src" />
+   <file name="src/menus.cpp" role="src" />
+   <file name="src/misc.cpp" role="src" />
+   <file name="src/miscwnd.cpp" role="src" />
+   <file name="src/net.cpp" role="src" />
+   <file name="src/others.cpp" role="src" />
+   <file name="src/pickers.cpp" role="src" />
+   <file name="src/printing.cpp" role="src" />
+   <file name="src/references.cpp" role="src" />
+   <file name="src/ribbon.cpp" role="src" />
+   <file name="src/richtext.cpp" role="src" />
+   <file name="src/rtti.cpp" role="src" />
+   <file name="src/stc.cpp" role="src" />
+   <file name="src/streams.cpp" role="src" />
+   <file name="src/threading.cpp" role="src" />
+   <file name="src/validator.cpp" role="src" />
+   <file name="src/vfs.cpp" role="src" />
+   <file name="src/webview.cpp" role="src" />
+   <file name="src/winlayout.cpp" role="src" />
+   <file name="src/xml.cpp" role="src" />
+   <file name="src/xrc.cpp" role="src" />
+   <file name="config.m4" role="src" />
+   <file name="config.w32" role="src" />
+   <file name="php_wxwidgets.h" role="src" />
+   <file name="wxwidgets.cpp" role="src" />
+   <file name="template.rc" role="src" />
+   <file name="examples/lanchat/app.png" role="doc" />
+   <file name="examples/lanchat/lanchat.fbp" role="doc" />
+   <file name="examples/lanchat/lanchat.php" role="doc" />
+   <file name="examples/lanchat/resources.php" role="doc" />
+   <file name="examples/statbar/green.xpm" role="doc" />
+   <file name="examples/statbar/red.xpm" role="doc" />
+   <file name="examples/statbar/sample.xpm" role="doc" />
+   <file name="examples/statbar/statbar.php" role="doc" />
+   <file name="examples/choicelistbox.php" role="doc" />
+   <file name="examples/grid.php" role="doc" />
+   <file name="examples/styledtextctrl.php" role="doc" />
+   <file name="examples/thread.php" role="doc" />
+   <file name="examples/webview.php" role="doc" />
+   <file name="CHANGES" role="doc" />
+   <file name="CREDITS" role="doc" />
+   <file name="LICENSE" role="doc" />
+   <file name="README.md" role="doc" />
+   <file name="README_MSW.txt" role="doc" />
+   
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <providesextension>wxwidgets</providesextension>
+ <extsrcrelease>
+  <configureoption default="no" name="enable-wxwidgets-debug" prompt="Enable debugging messages in wxwidgets" />
+  <configureoption default="no" name="enable-wxwidgets-monolithic" prompt="Enable linking to monolithic version of wxWidgets" />
+ </extsrcrelease>
+ <changelog>
+  <release>
+   <version>
+    <release>3.0.0.1</release>
+    <api>3.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2014-03-09</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+  * Added missing wxScrolledWindow methods by enabling wxScrolled, 
+    this fixes issue #30 and #32.
+  * Enabled wxClipBoard::Get() and disabled gargbage collection of 
+    native_object on wxDataObject and its childs as wxClipBoard itself, 
+    which partially fixes issue #34.
+  * Added verification of object parameter child types to allow method 
+    calls which where failing as described on issue #36. This also 
+    completely fixes issue #34, testing may be needed.
+  * Updated README_MSW adding changes needed to prevent windows xp 
+    crashes as described on issue #37.
+  * Enabled wxNonOwnedWindow::SetShape and fixed wxPrintDialog, 
+    wxPageSetupDialog inheritage.
+  * Removed error messages that appeared when failing to call 
+    wxApp::OnInit and wxApp:OnExit.
+  * Added proper type casting to wxMouseState.
+  * Should fix and close #44 by doing proper type casting when calling 
+    wxKeyboarState methods from child classes.
+  * Binded the missing wxAuiNotebookEvent event constants which closes #45.
+  * Enabled more wxStyledTextCtrl methods. 
+  * Enabled inheritance of wxStyledTextCtrl from wxTextEntry as 
+    enabled some more methods.
+  * Some fixes to the reference and interface generator as 
+    simplification of chdir() calls.
+  * Initial work to support wxInputStream::OnSysRead in order to be 
+    able to load images with the wxImage(wxInputStream) constructor.
+  * Fixed 2 memory leaks, one related to wxEvtHandler::OnEvent and the 
+    other related to the creation of new objects.
+  * Fixed memory leak caused by not uninitializing the properties 
+    member of classes like wxPoint when they were destroyed which 
+    closes #48, also modified code generator to only add the properties 
+    code when needed which made the source and library more clean.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>3.0.0.0</release>
+    <api>3.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2013-12-26</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+  * Updated debianization scripts.
+  * Fix for issue #25, returned object properties are now initialized.
+  * Added netbeans project in tools directory.
+  * Enabled wxMediaCtrl, wxMediaEvent and wxURI.
+  * Fixes to readme.md
+  * Bumped wxPHP version to 3.0
+  * Fixes to make the GUI binding utility work again.
+  * Updated some parts on the development and support section
+  * Added SetItem/GetItem to wxDataViewEvent which xixes issue #8
+  * Blacklisted wxFSW_EVENT_UNMOUNT from the wxFSWFlags.
+  * Changes to get wxPHP compiling against new wxWidgets 3.0
+  * Removed duplicated classes.json copy to json dir.
+  * Fixed bug (typo) in xml_parser.php which caused functions to have no
+    default arg values.
+  * Speed optimizations in derivationsOfClass and inherits_from_class.
+  * Ported wxStatusBar sample from C++
+  * Merge pull request #18 from tsahlin/master
+  * Added a fix for functions returning wxFont objects
+  * Minor addition to .gitignore.
+  * Merge pull request #16 from tsahlin/master
+  * Added wxLog* functions
+  * Merge pull request #15 from tsahlin/master
+  * Enabled function wxGetNumberFromUser
+  * Merge pull request #14 from tsahlin/master
+  * Modified code_generator to include more constants
+  * Added initialization of a class without constructor on the zend 
+    object creation function.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>2.9.4.1</release>
+    <api>2.9.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2012-12-24</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+  * Initial debianization
+  * Added template.rc that includes wxWidgets resources for windows build.
+  * Fixed inno setup script.
+  * Updated readme.md and readme
+  * Regenerated source code to apply the fix for arguments type checking.
+  * Fixed function/methods generation code to also check if the argument 
+    type is the same as original and not only a class that inherits from 
+    the original type.
+  * Disabled wxNativeFontInfo methods: GetPixelSize and SetPixelSize, 
+    since they are undefined symbols when compiling the extension. 
+  * Re-generated the code with warning message disabled for top level 
+    windows and more constants available like wxRAISED_BORDER.
+  * Added gitignore file.
+  * Now the code generator does not skip #defines that mirror an enum, 
+    like wxRAISED_BORDER mirrors wxBORDER_RAISED.
+  * Commented out 'Remember to always call Destroy()' warning message.
+  * Updated version information on template file.
+   </notes>
+  </release>
+ </changelog>
 </package>
