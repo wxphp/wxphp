@@ -5,9 +5,10 @@ http://pear.php.net/dtd/package-2.0
 http://pear.php.net/dtd/package-2.0.xsd">
  <name>wxwidgets</name>
  <channel>pecl.php.net</channel>
- <summary>PHP bindings to the GUI toolkit wxWidgets</summary>
- <description>Provides the neccesary bindings to build cross-platform 
-software desktop applications using the wxWidgets library.
+ <summary>Cross-platform widget toolkit.</summary>
+ <description>Wraps the wxWidgets library, which allows to write 
+ multi-platform desktop applications that make use of the native 
+ graphical components available to the different platforms.
  </description>
  <lead>
   <name>Mário Soares</name>
