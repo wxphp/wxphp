@@ -87,11 +87,26 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				break;
 			}	
 			case	"characters":
+            {
+				switch($argument_type_modifier)
+				{
+					case "pointer":
+					case "const_pointer":
+						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) ".$method_definition[$parameter_names][$parameter_index].", 0);\n";
+						break;
+						
+					default: 
+						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) &".$method_definition[$parameter_names][$parameter_index].", 0);\n";
+				}
+				break;
+			}	
 			case	"void":
 			{
 				switch($argument_type_modifier)
 				{
 					case "pointer":
+                        break;
+                    
 					case "const_pointer":
 						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) ".$method_definition[$parameter_names][$parameter_index].", 0);\n";
 						break;

@@ -148,7 +148,7 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1242,7 +1242,7 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

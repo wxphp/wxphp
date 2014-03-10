@@ -2798,7 +2798,7 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -4694,7 +4694,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -4706,8 +4706,7 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 	int function_called;
 	
 	//Parameters for conversion
-	ZVAL_STRING(arguments[0], (char*) buffer, 0);
-	ZVAL_LONG(arguments[1], bufsize);
+		ZVAL_LONG(arguments[1], bufsize);
 		
 	for(int i=0; i<2; i++)
 	{

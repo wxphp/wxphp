@@ -221,7 +221,7 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -303,7 +303,7 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -385,7 +385,7 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -469,7 +469,7 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -553,7 +553,7 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -635,7 +635,7 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -717,7 +717,7 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -800,7 +800,7 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -882,7 +882,7 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -965,7 +965,7 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 	//Initilize arguments array
 	for(int i=0; i<6; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1051,7 +1051,7 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1133,7 +1133,7 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1215,7 +1215,7 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 	//Initilize arguments array
 	for(int i=0; i<8; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1417,7 +1417,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1504,7 +1504,7 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1649,7 +1649,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1736,7 +1736,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 	//Initilize arguments array
 	for(int i=0; i<7; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1836,7 +1836,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1928,7 +1928,7 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2005,7 +2005,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2098,7 +2098,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2192,7 +2192,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2286,7 +2286,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2380,7 +2380,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2471,7 +2471,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 	//Initilize arguments array
 	for(int i=0; i<7; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2692,7 +2692,7 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2774,7 +2774,7 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2851,7 +2851,7 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2930,7 +2930,7 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3008,7 +3008,7 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 	//Initilize arguments array
 	for(int i=0; i<8; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3100,7 +3100,7 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 	//Initilize arguments array
 	for(int i=0; i<10; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6934,7 +6934,7 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7031,7 +7031,7 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

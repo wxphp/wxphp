@@ -2193,7 +2193,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2272,7 +2272,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2286,8 +2286,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
 	((zo_wxDataFormat*) zend_object_store_get_object(arguments[0] TSRMLS_CC))->native_object = (wxDataFormat_php*) &format;
-	ZVAL_STRING(arguments[1], (char*) buf, 0);
-		
+			
 	for(int i=0; i<2; i++)
 	{
 		params[i] = &arguments[i];
@@ -2355,7 +2354,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2433,7 +2432,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2510,7 +2509,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7437,7 +7436,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7524,7 +7523,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defRes
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7716,7 +7715,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResu
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7795,7 +7794,7 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -8040,7 +8039,7 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -8122,7 +8121,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -8367,7 +8366,7 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -8453,7 +8452,7 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

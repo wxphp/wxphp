@@ -711,7 +711,7 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

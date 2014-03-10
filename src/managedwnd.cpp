@@ -1465,7 +1465,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2691,7 +2691,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

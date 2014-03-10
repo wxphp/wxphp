@@ -1492,7 +1492,7 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1569,7 +1569,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1657,7 +1657,7 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2207,7 +2207,7 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3286,7 +3286,7 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3760,7 +3760,7 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3903,7 +3903,7 @@ unsigned int wxDataViewListModel_php::GetRow(const wxDataViewItem& item)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -4111,7 +4111,7 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5545,7 +5545,7 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5625,7 +5625,7 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5703,7 +5703,7 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5967,7 +5967,7 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7325,7 +7325,7 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -7954,7 +7954,7 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -10358,7 +10358,7 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

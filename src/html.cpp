@@ -148,7 +148,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -236,7 +236,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5968,7 +5968,7 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6046,7 +6046,7 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6347,7 +6347,7 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -9262,7 +9262,7 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -9352,7 +9352,7 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -9440,7 +9440,7 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -9526,7 +9526,7 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -9614,7 +9614,7 @@ wxHtmlOpeningStatus wxHtmlWindow_php::OnOpeningURL(wxHtmlURLType type, const wxS
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

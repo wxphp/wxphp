@@ -5062,7 +5062,7 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5143,7 +5143,7 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5226,7 +5226,7 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5309,7 +5309,7 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5392,7 +5392,7 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5473,7 +5473,7 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5556,7 +5556,7 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5638,7 +5638,7 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5719,7 +5719,7 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -5929,7 +5929,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6082,7 +6082,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6173,7 +6173,7 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6250,7 +6250,7 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6326,7 +6326,7 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -6403,7 +6403,7 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -20619,7 +20619,7 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -20698,7 +20698,7 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -20776,7 +20776,7 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -20854,7 +20854,7 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -20932,7 +20932,7 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21009,7 +21009,7 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21087,7 +21087,7 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21165,7 +21165,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 	//Initilize arguments array
 	for(int i=0; i<7; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21327,7 +21327,7 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 	//Initilize arguments array
 	for(int i=0; i<7; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21414,7 +21414,7 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21728,7 +21728,7 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21806,7 +21806,7 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21885,7 +21885,7 @@ int wxAuiDockArt_php::GetMetric(int id)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21962,7 +21962,7 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22041,7 +22041,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22128,7 +22128,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22215,7 +22215,7 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22298,7 +22298,7 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 	//Initilize arguments array
 	for(int i=0; i<6; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22384,7 +22384,7 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22468,7 +22468,7 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 	//Initilize arguments array
 	for(int i=0; i<5; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22556,7 +22556,7 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -22640,7 +22640,7 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -23891,7 +23891,7 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

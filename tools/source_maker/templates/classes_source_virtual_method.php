@@ -21,7 +21,7 @@
 	//Initilize arguments array
 	for(int i=0; i<<?=count($method_definition["parameters_type"])?>; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 <? } ?>
 
