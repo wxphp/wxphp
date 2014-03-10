@@ -1,13 +1,13 @@
 /*
  * @author Mário Soares
  * @contributors Jefferson González
- * 
- * @license 
+ *
+ * @license
  * This file is part of wxPHP check the LICENSE file for information.
- * 
+ *
  * @description
  * Manual binding implemetation of the wxApp class
- * 
+ *
 */
 
 #include "php_wxwidgets.h"
@@ -19,13 +19,13 @@
 IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
 
 BEGIN_EXTERN_C()
-void php_wxApp_free(void *object TSRMLS_DC) 
+void php_wxApp_free(void *object TSRMLS_DC)
 {
     #ifdef USE_WXPHP_DEBUG
     php_printf("Calling php_wxApp_free on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
     php_printf("===========================================\n");
     #endif
-	
+
     zo_wxApp* custom_object = (zo_wxApp*) object;
     //delete custom_object->native_object;
     zend_object_std_dtor(&custom_object->zo TSRMLS_CC);
@@ -38,7 +38,7 @@ zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
     php_printf("Calling php_wxApp_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
     php_printf("===========================================\n");
     #endif
-	
+
     zend_object_value retval;
     zo_wxApp* custom_object;
     custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp));
@@ -60,7 +60,7 @@ zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
 
     retval.handle = zend_objects_store_put(custom_object, NULL, php_wxApp_free, NULL TSRMLS_CC);
     retval.handlers = zend_get_std_object_handlers();
-	
+
     return retval;
 }
 END_EXTERN_C()
@@ -91,7 +91,361 @@ bool wxAppWrapper::OnInit()
     return true;
 }
 
-/* {{{ proto wxApp wxApp::__construct() 
+#ifdef __WXMAC__
+void wxAppWrapper::MacNewFile()
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual MacNewFile\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    int function_called;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacNewFile", 10, &return_value, 0, NULL TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+}
+
+void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual MacOpenFiles\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval** params[1];
+    zval *arguments[1];
+
+    //Initilize arguments array
+    MAKE_STD_ZVAL(arguments[0]);
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    char* temp_string;
+    int function_called;
+
+    //Parameters for conversion
+    array_init(arguments[0]);
+    for(int i=0; i<fileNames.GetCount(); i++)
+    {
+        temp_string = (char*)malloc(sizeof(wxChar)*(fileNames[i].size()+1));
+        strcpy(temp_string, (const char *) fileNames[i].char_str());
+        add_next_index_string(arguments[0], temp_string, 1);
+        free(temp_string);
+    }
+
+    //Set parameters that are sent to function
+    params[0] = &arguments[0];
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacOpenFiles", 12, &return_value, 1, params TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    //Delete already used parameters from memory
+    zval_ptr_dtor(&arguments[0]);
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+}
+
+void wxAppWrapper::MacOpenFile(const wxString& fileName)
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual MacOpenFile\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval** params[1];
+    zval *arguments[1];
+
+    //Initilize arguments array
+    MAKE_STD_ZVAL(arguments[0]);
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    char* temp_string;
+    int function_called;
+
+    //Parameters for conversion
+    temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
+    strcpy(temp_string, (const char *) fileName.char_str());
+    ZVAL_STRING(arguments[0], temp_string, 1);
+    free(temp_string);
+
+    //Set parameters that are sent to function
+    params[0] = &arguments[0];
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacOpenFile", 11, &return_value, 1, params TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    //Delete already used parameters from memory
+    zval_ptr_dtor(&arguments[0]);
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+}
+
+void wxAppWrapper::MacOpenURL(const wxString& url)
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual MacOpenURL\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval** params[1];
+    zval *arguments[1];
+
+    //Initilize arguments array
+    MAKE_STD_ZVAL(arguments[0]);
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    char* temp_string;
+    int function_called;
+
+    //Parameters for conversion
+    temp_string = (char*)malloc(sizeof(wxChar)*(url.size()+1));
+    strcpy(temp_string, (const char *) url.char_str());
+    ZVAL_STRING(arguments[0], temp_string, 1);
+    free(temp_string);
+
+    //Set parameters that are sent to function
+    params[0] = &arguments[0];
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacOpenURL", 10, &return_value, 1, params TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    //Delete already used parameters from memory
+    zval_ptr_dtor(&arguments[0]);
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+}
+
+void wxAppWrapper::MacPrintFile(const wxString& fileName)
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual MacPrintFile\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval** params[1];
+    zval *arguments[1];
+
+    //Initilize arguments array
+    MAKE_STD_ZVAL(arguments[0]);
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    char* temp_string;
+    int function_called;
+
+    //Parameters for conversion
+    temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
+    strcpy(temp_string, (const char *) fileName.char_str());
+    ZVAL_STRING(arguments[0], temp_string, 1);
+    free(temp_string);
+
+    //Set parameters that are sent to function
+    params[0] = &arguments[0];
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacPrintFile", 12, &return_value, 1, params TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    //Delete already used parameters from memory
+    zval_ptr_dtor(&arguments[0]);
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+}
+
+void wxAppWrapper::MacReopenApp()
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual MacReopenApp\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    int function_called;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacReopenApp", 12, &return_value, 0, NULL TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+}
+
+bool wxAppWrapper::OSXIsGUIApplication()
+{
+    static zend_function* cached_function = NULL;
+    static bool is_php_user_space_implemented = true;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Invoking virtual OSXIsGUIApplication\n");
+    php_printf("===========================================\n");
+    #endif
+
+    zval* return_value;
+    MAKE_STD_ZVAL(return_value);
+
+    int function_called;
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Trying to call user defined method\n");
+    #endif
+
+    if(is_php_user_space_implemented)
+    {
+        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "OSXIsGUIApplication", 19, &return_value, 0, NULL TSRMLS_CC);
+    }
+    else
+    {
+        function_called = FAILURE;
+    }
+
+    if(function_called == FAILURE)
+    {
+        is_php_user_space_implemented = false;
+
+        #ifdef USE_WXPHP_DEBUG
+        php_printf("Invocation of user defined method failed\n");
+        #endif
+    }
+
+    #ifdef USE_WXPHP_DEBUG
+    php_printf("Returning userspace value.\n");
+    #endif
+
+    return Z_BVAL_P(return_value);
+}
+#endif
+
+/* {{{ proto wxApp wxApp::__construct()
    Constructor. */
 PHP_METHOD(php_wxApp, __construct)
 {
@@ -105,14 +459,14 @@ PHP_METHOD(php_wxApp, __construct)
     #endif
 
     current_object = (zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC);
-	    
+
     current_object->native_object = native_object;
-	    
+
     current_object->is_user_initialized = 1;
 }
 /* }}} */
 
-/* {{{ proto void wxApp::SetInstance(wxApp app) 
+/* {{{ proto void wxApp::SetInstance(wxApp app)
    Allows external code to modify global wxTheApp, but you should really know what you're doing if you call it.*/
 PHP_METHOD(php_wxApp, SetInstance)
 {
@@ -120,7 +474,7 @@ PHP_METHOD(php_wxApp, SetInstance)
 
     if(zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, (char *)"O", &objvar, php_wxApp_entry) == FAILURE)
     {
-	RETURN_NULL();
+        RETURN_NULL();
     }
 
     wxApp::SetInstance((wxAppWrapper*) ((zo_wxApp*) zend_object_store_get_object(objvar TSRMLS_CC))->native_object);
@@ -133,7 +487,7 @@ PHP_METHOD(php_wxApp, Yield)
     wxAppWrapper* native_object = ((zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC))->native_object;
 
     if (zend_parse_parameters_none() == FAILURE)
-	return;
+        return;
 
     RETURN_BOOL(((wxApp*)native_object)->Yield())
 }
