@@ -332,7 +332,7 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -413,7 +413,7 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -708,7 +708,7 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1171,7 +1171,7 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1252,7 +1252,7 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1333,7 +1333,7 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1414,7 +1414,7 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1495,7 +1495,7 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1572,7 +1572,7 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1825,7 +1825,7 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1904,7 +1904,7 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3257,7 +3257,7 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3341,7 +3341,7 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3701,7 +3701,7 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

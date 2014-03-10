@@ -129,7 +129,7 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 	//Initilize arguments array
 	for(int i=0; i<5; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -223,7 +223,7 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 	//Initilize arguments array
 	for(int i=0; i<7; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2757,7 +2757,7 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2837,7 +2837,7 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2990,7 +2990,7 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3227,7 +3227,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 	//Initilize arguments array
 	for(int i=0; i<5; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -11108,7 +11108,7 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -12894,7 +12894,7 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 	//Initilize arguments array
 	for(int i=0; i<3; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

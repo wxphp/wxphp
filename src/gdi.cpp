@@ -17509,7 +17509,7 @@ bool wxFontEnumerator_php::OnFontEncoding(const wxString& font, const wxString& 
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -17601,7 +17601,7 @@ bool wxFontEnumerator_php::OnFacename(const wxString& font)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -40587,7 +40587,7 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -40670,7 +40670,7 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -40753,7 +40753,7 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -40836,7 +40836,7 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -40919,7 +40919,7 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41002,7 +41002,7 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41085,7 +41085,7 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41168,7 +41168,7 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41251,7 +41251,7 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41334,7 +41334,7 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41417,7 +41417,7 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 	//Initilize arguments array
 	for(int i=0; i<6; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41502,7 +41502,7 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41585,7 +41585,7 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 	//Initilize arguments array
 	for(int i=0; i<4; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -41782,7 +41782,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -42098,7 +42098,7 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -42176,7 +42176,7 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

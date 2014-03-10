@@ -1500,7 +1500,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -1921,7 +1921,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

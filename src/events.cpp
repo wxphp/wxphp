@@ -148,7 +148,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21040,7 +21040,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -21126,7 +21126,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -53825,7 +53825,7 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -53910,7 +53910,7 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -53995,7 +53995,7 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -54072,7 +54072,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -54151,7 +54151,7 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -54228,7 +54228,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -54307,7 +54307,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -54386,7 +54386,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;

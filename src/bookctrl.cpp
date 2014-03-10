@@ -2165,7 +2165,7 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 	//Initilize arguments array
 	for(int i=0; i<5; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2399,7 +2399,7 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2649,7 +2649,7 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 	//Initilize arguments array
 	for(int i=0; i<2; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2730,7 +2730,7 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2870,7 +2870,7 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -2947,7 +2947,7 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
@@ -3024,7 +3024,7 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	//Initilize arguments array
 	for(int i=0; i<1; i++)
 	{
-		MAKE_STD_ZVAL(arguments[i]);
+		ALLOC_INIT_ZVAL(arguments[i]);
 	}
 
 	zval* return_value;
