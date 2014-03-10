@@ -435,6 +435,8 @@ bool wxAppWrapper::OSXIsGUIApplication()
         #ifdef USE_WXPHP_DEBUG
         php_printf("Invocation of user defined method failed\n");
         #endif
+
+        return true;
     }
 
     #ifdef USE_WXPHP_DEBUG
