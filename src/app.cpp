@@ -13,11 +13,6 @@
 #include "php_wxwidgets.h"
 #include "app.h"
 
-#ifdef __WXMAC__
-/* Header for process type transformation functions */
-#include <ApplicationServices/ApplicationServices.h>
-#endif
-
 /**
  * Set the wxWidgets application handler.
  */
@@ -84,18 +79,6 @@ int wxAppWrapper::OnExit()
 
 bool wxAppWrapper::OnInit()
 {
-     #ifdef __WXMAC__
-    /* In order to correctly receive keyboard input we need to explicitly
-     * tell mac to convert this console process to a gui process.
-     *
-     * Solution found at: 
-     * http://stackoverflow.com/questions/4341098/wxwidgets-commandline-gui-hybrid-application-fails-to-get-dialog-input
-     */
-    ProcessSerialNumber PSN;
-    GetCurrentProcess(&PSN);
-    TransformProcessType(&PSN,kProcessTransformToForegroundApplication);
-    #endif
-
     zval *retval;
     zval func_name;
 
