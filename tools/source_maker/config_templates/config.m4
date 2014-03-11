@@ -118,7 +118,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 			else
 				CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" CPPFLAGS="-fPIC -O2 -Wall -W" \
 				../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic \
-				--with-osx_cocoa --with-macosx-version-min=10.6
+				--with-osx_cocoa
 			fi
 		fi
 		
@@ -166,10 +166,16 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_WXWIDGETS_CFLAGS="$PHP_WXWIDGETS_CFLAGS $WXWIDGETS_CFLAGS"
 	
 	dnl Add gstreamer ldflags if on linux
-	PHP_WXWIDGETS_GSTREAMER_LDFLAGS=""
+	PHP_WXWIDGETS_OTHER_LDFLAGS=""
 	if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
 		if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-			PHP_WXWIDGETS_GSTREAMER_LDFLAGS=`pkg-config --libs gstreamer-0.10 gstreamer-interfaces-0.10`
+			PHP_WXWIDGETS_OTHER_LDFLAGS=`pkg-config --libs gstreamer-0.10 gstreamer-interfaces-0.10`
+		fi
+	else
+		if test "$PHP_WXWIDGETS_STATIC" != "no"; then
+			PHP_WXWIDGETS_OTHER_LDFLAGS="-framework QTKit"
+			CC=`$WXCONFIG_PATH --cc`
+			CXX=`$WXCONFIG_PATH --cxx`
 		fi
 	fi
 	
@@ -179,7 +185,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 		
 		dnl Append wxscintilla and gstreamer if static build
 		if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-			PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $PHP_WXWIDGETS_GSTREAMER_LDFLAGS"
+			PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
 			LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
 		fi
 	else
