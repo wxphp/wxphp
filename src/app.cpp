@@ -94,13 +94,15 @@ bool wxAppWrapper::OnInit()
 #ifdef __WXMAC__
 void wxAppWrapper::MacNewFile()
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual MacNewFile\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"MacNewFile", sizeof("MacNewFile")-1, 0);
 
     zval* return_value;
     MAKE_STD_ZVAL(return_value);
@@ -113,7 +115,7 @@ void wxAppWrapper::MacNewFile()
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacNewFile", 10, &return_value, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -132,13 +134,15 @@ void wxAppWrapper::MacNewFile()
 
 void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual MacOpenFiles\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenFiles", sizeof("MacOpenFiles")-1, 0);
 
     zval** params[1];
     zval *arguments[1];
@@ -171,7 +175,7 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacOpenFiles", 12, &return_value, 1, params TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -193,13 +197,15 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
 
 void wxAppWrapper::MacOpenFile(const wxString& fileName)
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual MacOpenFile\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenFile", sizeof("MacOpenFile")-1, 0);
 
     zval** params[1];
     zval *arguments[1];
@@ -228,7 +234,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacOpenFile", 11, &return_value, 1, params TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -250,13 +256,15 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
 
 void wxAppWrapper::MacOpenURL(const wxString& url)
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual MacOpenURL\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenURL", sizeof("MacOpenURL")-1, 0);
 
     zval** params[1];
     zval *arguments[1];
@@ -285,7 +293,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacOpenURL", 10, &return_value, 1, params TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -307,13 +315,15 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
 
 void wxAppWrapper::MacPrintFile(const wxString& fileName)
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual MacPrintFile\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"MacPrintFile", sizeof("MacPrintFile")-1, 0);
 
     zval** params[1];
     zval *arguments[1];
@@ -342,7 +352,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacPrintFile", 12, &return_value, 1, params TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -364,13 +374,15 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
 
 void wxAppWrapper::MacReopenApp()
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual MacReopenApp\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"MacReopenApp", sizeof("MacReopenApp")-1, 0);
 
     zval* return_value;
     MAKE_STD_ZVAL(return_value);
@@ -383,7 +395,7 @@ void wxAppWrapper::MacReopenApp()
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "MacReopenApp", 12, &return_value, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -402,13 +414,15 @@ void wxAppWrapper::MacReopenApp()
 
 bool wxAppWrapper::OSXIsGUIApplication()
 {
-    static zend_function* cached_function = NULL;
     static bool is_php_user_space_implemented = true;
 
     #ifdef USE_WXPHP_DEBUG
     php_printf("Invoking virtual OSXIsGUIApplication\n");
     php_printf("===========================================\n");
     #endif
+
+    zval function_name;
+    ZVAL_STRINGL(&function_name, (char *)"OSXIsGUIApplication", sizeof("OSXIsGUIApplication")-1, 0);
 
     zval* return_value;
     MAKE_STD_ZVAL(return_value);
@@ -421,7 +435,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
 
     if(is_php_user_space_implemented)
     {
-        function_called = wxphp_call_method((zval**) &phpObj, NULL, &cached_function, "OSXIsGUIApplication", 19, &return_value, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
     }
     else
     {
