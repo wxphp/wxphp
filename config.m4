@@ -93,7 +93,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
             AC_MSG_RESULT([found])
         else
             if test "$CURL" != ""; then
-                PHP_WXWIDGETS_DOWNLOADER="curl -o wxWidgets-3.0.0.tar.bz2"
+                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-3.0.0.tar.bz2"
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
