@@ -7,7 +7,7 @@ PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
                           
 PHP_ARG_ENABLE(wxwidgets-static, whether to link to static build of wxWidgets,
 [  --enable-wxwidgets-static
-                          Link to monolithic build of wxWidgets], no, no)
+                          Link to static build of wxWidgets], no, no)
                           
 PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWidgets,
 [  --enable-wxwidgets-monolithic
