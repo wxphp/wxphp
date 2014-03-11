@@ -85,18 +85,25 @@ if test "$PHP_WXWIDGETS" != "no"; then
 			fi
 		fi
 		
-		AC_MSG_CHECKING([for wget availability])
+		AC_MSG_CHECKING([for a CLI downloading tool like wget or curl])
+        PHP_WXWIDGETS_DOWNLOADER="wget"
 		WGET=`which wget`
+        CURL=`which curl`
 		if test "$WGET" != ""; then
 			AC_MSG_RESULT([found])
 		else
-			AC_MSG_RESULT([not found])
-			AC_MSG_ERROR([wget was not found])
+            if test "$CURL" != ""; then
+                PHP_WXWIDGETS_DOWNLOADER="curl -o wxWidgets-3.0.0.tar.bz2"
+                AC_MSG_RESULT([found])
+            else
+                AC_MSG_RESULT([not found])
+                AC_MSG_ERROR([wget and curl was not found])
+            fi
 		fi
 		
 		if test ! -e "wxWidgets-3.0.0"; then
 			echo "Downloading wxWidgets..."
-			wget http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
+			$PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
 			tar -xjf wxWidgets-3.0.0.tar.bz2
 			rm wxWidgets-3.0.0.tar.bz2
 		fi
