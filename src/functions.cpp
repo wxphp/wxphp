@@ -108,16 +108,50 @@ PHP_FUNCTION(php_wxExecute)
 {
 	char* _argStr0;
 	int _argStr0_len;
-	
-	char parse_parameters[] = "s";
+
+    long flags = 0;
+    zval* z_process = 0;
+    wxProcess* process;
+
+    long ret;
     
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &_argStr0 , &_argStr0_len ) == SUCCESS)
+	char parse_parameters[] = "s|lO";
+    
+	if(
+        zend_parse_parameters_ex(
+            ZEND_PARSE_PARAMS_QUIET, 
+            ZEND_NUM_ARGS() TSRMLS_CC, 
+            parse_parameters, 
+            &_argStr0, &_argStr0_len, 
+            &flags, &z_process, php_wxProcess_entry 
+        ) == SUCCESS
+    )
 	{
-		long ret0;
-		ret0 = wxExecute(wxString(_argStr0, wxConvUTF8));
-		
-		RETURN_LONG((long)ret0)
+
+        switch(ZEND_NUM_ARGS())
+        {
+            case 1:
+                ret = wxExecute(wxString(_argStr0, wxConvUTF8));
+                RETURN_LONG(ret)
+                break;
+
+            case 2:
+                ret = wxExecute(wxString(_argStr0, wxConvUTF8), (int) flags);
+                RETURN_LONG(ret)
+                break;
+
+            case 3:
+                process = (wxProcess*) ((zo_wxProcess*) zend_object_store_get_object(z_process TSRMLS_CC))->native_object;
+                ret = wxExecute(wxString(_argStr0, wxConvUTF8), (int) flags, process);
+                RETURN_LONG(ret)
+                break;
+
+            default:
+                WRONG_PARAM_COUNT;
+        }
 	}
+
+    RETURN_LONG((long) 0)
 }
 /* }}} */
 
