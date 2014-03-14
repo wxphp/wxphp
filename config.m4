@@ -29,15 +29,18 @@ if test "$PHP_WXWIDGETS" != "no"; then
     if test "$PHP_WXWIDGETS" != "yes"; then
         AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
         for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
-            if test -e "$directory/wx-config"; then
-                wxwidgets_version=`$directory/wx-config --version`
-                version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
-                if test -n "$version_check"; then
-                    WXCONFIG_PATH="$directory/wx-config"
-                    AC_MSG_RESULT([version $wxwidgets_version found])
-                    break
+            dnl search for know command names (prefered first)
+            for cmd in wx-config-3.0 wx-config; do
+                if test -e "$directory/$cmd"; then
+                    wxwidgets_version=`$directory/$cmd --version`
+                    version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
+                    if test -n "$version_check"; then
+                        WXCONFIG_PATH="$directory/$cmd"
+                        AC_MSG_RESULT([version $wxwidgets_version found])
+                        break
+                    fi
                 fi
-            fi
+            done
         done
     else
         dnl If not building for macosx check dependencies are met
