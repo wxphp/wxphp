@@ -1131,7 +1131,7 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetEndColour)
 				value_to_return0 = ((wxGraphicsGradientStops_php*)native_object)->GetEndColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -1236,7 +1236,7 @@ PHP_METHOD(php_wxGraphicsGradientStops, GetStartColour)
 				value_to_return0 = ((wxGraphicsGradientStops_php*)native_object)->GetStartColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -1345,7 +1345,7 @@ PHP_METHOD(php_wxGraphicsGradientStops, Item)
 				wxGraphicsGradientStop value_to_return1;
 				value_to_return1 = ((wxGraphicsGradientStops_php*)native_object)->Item((unsigned) n0);
 				void* ptr = safe_emalloc(1, sizeof(wxGraphicsGradientStop_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxGraphicsGradientStop));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxGraphicsGradientStop));
 				object_init_ex(return_value, php_wxGraphicsGradientStop_entry);
 				((wxGraphicsGradientStop_php*)ptr)->phpObj = return_value;
 				zo_wxGraphicsGradientStop* zo1 = (zo_wxGraphicsGradientStop*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -2020,7 +2020,7 @@ PHP_METHOD(php_wxAnimation, GetFrame)
 				value_to_return1 = ((wxAnimation_php*)native_object)->GetFrame((unsigned int) i0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -2221,7 +2221,7 @@ PHP_METHOD(php_wxAnimation, GetSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxAnimation_php*)native_object)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -4325,7 +4325,7 @@ PHP_METHOD(php_wxBitmap, ConvertToDisabled)
 				value_to_return0 = ((wxBitmap_php*)native_object)->ConvertToDisabled();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
 				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -4345,7 +4345,7 @@ PHP_METHOD(php_wxBitmap, ConvertToDisabled)
 				value_to_return1 = ((wxBitmap_php*)native_object)->ConvertToDisabled((unsigned char) brightness0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -5492,7 +5492,7 @@ PHP_METHOD(php_wxBitmap, ConvertToImage)
 				value_to_return0 = ((wxBitmap_php*)native_object)->ConvertToImage();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -6582,7 +6582,7 @@ PHP_METHOD(php_wxBitmap, GetSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxBitmap_php*)native_object)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -6710,7 +6710,7 @@ PHP_METHOD(php_wxBitmap, GetSubBitmap)
 				value_to_return1 = ((wxBitmap_php*)native_object)->GetSubBitmap(*(wxRect*) object_pointer0_0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -8158,7 +8158,7 @@ PHP_METHOD(php_wxBrush, GetColour)
 				value_to_return0 = ((wxBrush_php*)native_object)->GetColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -12063,7 +12063,7 @@ PHP_METHOD(php_wxFont, Bold)
 				value_to_return0 = ((wxFont_php*)native_object)->Bold();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -12768,7 +12768,7 @@ PHP_METHOD(php_wxFont, GetPixelSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxFont_php*)native_object)->GetPixelSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -13455,7 +13455,7 @@ PHP_METHOD(php_wxFont, Italic)
 				value_to_return0 = ((wxFont_php*)native_object)->Italic();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -13560,7 +13560,7 @@ PHP_METHOD(php_wxFont, Larger)
 				value_to_return0 = ((wxFont_php*)native_object)->Larger();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -15257,7 +15257,7 @@ PHP_METHOD(php_wxFont, Scaled)
 				value_to_return1 = ((wxFont_php*)native_object)->Scaled(x0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -16770,7 +16770,7 @@ PHP_METHOD(php_wxFont, Smaller)
 				value_to_return0 = ((wxFont_php*)native_object)->Smaller();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -16875,7 +16875,7 @@ PHP_METHOD(php_wxFont, Underlined)
 				value_to_return0 = ((wxFont_php*)native_object)->Underlined();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -20901,7 +20901,7 @@ PHP_METHOD(php_wxColourDatabase, Find)
 				value_to_return1 = ((wxColourDatabase_php*)native_object)->Find(wxString(colourName0, wxConvUTF8));
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23227,7 +23227,7 @@ PHP_METHOD(php_wxIconBundle, GetIconOfExactSize)
 				value_to_return1 = ((wxIconBundle_php*)native_object)->GetIconOfExactSize(*(wxSize*) object_pointer0_0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23435,7 +23435,7 @@ PHP_METHOD(php_wxIconBundle, GetIconByIndex)
 				value_to_return1 = ((wxIconBundle_php*)native_object)->GetIconByIndex((size_t) n0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23831,7 +23831,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				value_to_return1 = ((wxIconBundle_php*)native_object)->GetIcon(*(wxSize*) object_pointer0_0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23852,7 +23852,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				value_to_return2 = ((wxIconBundle_php*)native_object)->GetIcon(*(wxSize*) object_pointer0_0, (int) flags0);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo2 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23880,7 +23880,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				value_to_return0 = ((wxIconBundle_php*)native_object)->GetIcon();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo0 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23900,7 +23900,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				value_to_return1 = ((wxIconBundle_php*)native_object)->GetIcon((wxCoord) size1);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23920,7 +23920,7 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 				value_to_return2 = ((wxIconBundle_php*)native_object)->GetIcon((wxCoord) size1, (int) flags1);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo2 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -27749,7 +27749,7 @@ PHP_METHOD(php_wxImage, Scale)
 				value_to_return2 = ((wxImage_php*)native_object)->Scale((int) width0, (int) height0);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo2 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -27769,7 +27769,7 @@ PHP_METHOD(php_wxImage, Scale)
 				value_to_return3 = ((wxImage_php*)native_object)->Scale((int) width0, (int) height0, (wxImageResizeQuality) quality0);
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -28286,7 +28286,7 @@ PHP_METHOD(php_wxImage, Rotate90)
 				value_to_return0 = ((wxImage_php*)native_object)->Rotate90();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -28306,7 +28306,7 @@ PHP_METHOD(php_wxImage, Rotate90)
 				value_to_return1 = ((wxImage_php*)native_object)->Rotate90(clockwise0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -28411,7 +28411,7 @@ PHP_METHOD(php_wxImage, Rotate180)
 				value_to_return0 = ((wxImage_php*)native_object)->Rotate180();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -28560,7 +28560,7 @@ PHP_METHOD(php_wxImage, Rotate)
 				value_to_return2 = ((wxImage_php*)native_object)->Rotate(angle0, *(wxPoint*) object_pointer0_1);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo2 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -28581,7 +28581,7 @@ PHP_METHOD(php_wxImage, Rotate)
 				value_to_return3 = ((wxImage_php*)native_object)->Rotate(angle0, *(wxPoint*) object_pointer0_1, interpolating0);
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -28602,7 +28602,7 @@ PHP_METHOD(php_wxImage, Rotate)
 				value_to_return4 = ((wxImage_php*)native_object)->Rotate(angle0, *(wxPoint*) object_pointer0_1, interpolating0, (wxPoint*) object_pointer0_3);
 				((wxRefCounter *) value_to_return4.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return4, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return4, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo4 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -29470,7 +29470,7 @@ PHP_METHOD(php_wxImage, Mirror)
 				value_to_return0 = ((wxImage_php*)native_object)->Mirror();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -29490,7 +29490,7 @@ PHP_METHOD(php_wxImage, Mirror)
 				value_to_return1 = ((wxImage_php*)native_object)->Mirror(horizontally0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -30982,7 +30982,7 @@ PHP_METHOD(php_wxImage, GetSubImage)
 				value_to_return1 = ((wxImage_php*)native_object)->GetSubImage(*(wxRect*) object_pointer0_0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -31087,7 +31087,7 @@ PHP_METHOD(php_wxImage, GetSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxImage_php*)native_object)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -34092,7 +34092,7 @@ PHP_METHOD(php_wxImage, Copy)
 				value_to_return0 = ((wxImage_php*)native_object)->Copy();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -34204,7 +34204,7 @@ PHP_METHOD(php_wxImage, ConvertToMono)
 				value_to_return3 = ((wxImage_php*)native_object)->ConvertToMono((unsigned char) r0, (unsigned char) g0, (unsigned char) b0);
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -34331,7 +34331,7 @@ PHP_METHOD(php_wxImage, ConvertToGreyscale)
 				value_to_return0 = ((wxImage_php*)native_object)->ConvertToGreyscale();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -34358,7 +34358,7 @@ PHP_METHOD(php_wxImage, ConvertToGreyscale)
 				value_to_return3 = ((wxImage_php*)native_object)->ConvertToGreyscale(weight_r1, weight_g1, weight_b1);
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -34468,7 +34468,7 @@ PHP_METHOD(php_wxImage, ConvertToDisabled)
 				value_to_return0 = ((wxImage_php*)native_object)->ConvertToDisabled();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo0 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -34488,7 +34488,7 @@ PHP_METHOD(php_wxImage, ConvertToDisabled)
 				value_to_return1 = ((wxImage_php*)native_object)->ConvertToDisabled((unsigned char) brightness0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35237,7 +35237,7 @@ PHP_METHOD(php_wxImage, BlurVertical)
 				value_to_return1 = ((wxImage_php*)native_object)->BlurVertical((int) blurRadius0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35347,7 +35347,7 @@ PHP_METHOD(php_wxImage, BlurHorizontal)
 				value_to_return1 = ((wxImage_php*)native_object)->BlurHorizontal((int) blurRadius0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35457,7 +35457,7 @@ PHP_METHOD(php_wxImage, Blur)
 				value_to_return1 = ((wxImage_php*)native_object)->Blur((int) blurRadius0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo1 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35728,7 +35728,7 @@ PHP_METHOD(php_wxImage, Size)
 				value_to_return2 = ((wxImage_php*)native_object)->Size(*(wxSize*) object_pointer0_0, *(wxPoint*) object_pointer0_1);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo2 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35750,7 +35750,7 @@ PHP_METHOD(php_wxImage, Size)
 				value_to_return3 = ((wxImage_php*)native_object)->Size(*(wxSize*) object_pointer0_0, *(wxPoint*) object_pointer0_1, (int) red0);
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return3, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo3 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35772,7 +35772,7 @@ PHP_METHOD(php_wxImage, Size)
 				value_to_return4 = ((wxImage_php*)native_object)->Size(*(wxSize*) object_pointer0_0, *(wxPoint*) object_pointer0_1, (int) red0, (int) green0);
 				((wxRefCounter *) value_to_return4.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return4, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return4, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo4 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -35794,7 +35794,7 @@ PHP_METHOD(php_wxImage, Size)
 				value_to_return5 = ((wxImage_php*)native_object)->Size(*(wxSize*) object_pointer0_0, *(wxPoint*) object_pointer0_1, (int) red0, (int) green0, (int) blue0);
 				((wxRefCounter *) value_to_return5.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxImage_php), 0);
-				memcpy(ptr, &value_to_return5, sizeof(wxImage));
+				memcpy(ptr, (void*) &value_to_return5, sizeof(wxImage));
 				object_init_ex(return_value, php_wxImage_entry);
 				((wxImage_php*)ptr)->phpObj = return_value;
 				zo_wxImage* zo5 = (zo_wxImage*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -36345,7 +36345,7 @@ PHP_METHOD(php_wxImageList, GetBitmap)
 				value_to_return1 = ((wxImageList_php*)native_object)->GetBitmap((int) index0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxBitmap));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
 				zo_wxBitmap* zo1 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -36455,7 +36455,7 @@ PHP_METHOD(php_wxImageList, GetIcon)
 				value_to_return1 = ((wxImageList_php*)native_object)->GetIcon((int) index0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxIcon));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
 				zo_wxIcon* zo1 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -39304,7 +39304,7 @@ PHP_METHOD(php_wxPen, GetColour)
 				value_to_return0 = ((wxPen_php*)native_object)->GetColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);

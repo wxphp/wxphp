@@ -5362,7 +5362,7 @@ PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 				wxVersionInfo value_to_return0;
 				value_to_return0 = wxXmlDocument::GetLibraryVersionInfo();
 				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxVersionInfo));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxVersionInfo));
 				object_init_ex(return_value, php_wxVersionInfo_entry);
 				((wxVersionInfo_php*)ptr)->phpObj = return_value;
 				zo_wxVersionInfo* zo0 = (zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC);

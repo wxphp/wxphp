@@ -1725,7 +1725,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 									}
 									
 									$return_called_overload .= tabs(4) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
-									$return_called_overload .= tabs(4) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
+									$return_called_overload .= tabs(4) . "memcpy(ptr, (void*) &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
                                     if(class_has_properties($return_type))
@@ -1956,7 +1956,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
 						$call_code .= tabs($t) . "((wxRefCounter *) value_to_return{$required_parameters}.GetRefData())->IncRef();\n";
 
 					$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
-					$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
+					$call_code .= tabs($t) . "memcpy(ptr, (void*) &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 					$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 					$call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
                     if(class_has_properties($return_type))
@@ -2241,7 +2241,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                             $call_code .= tabs($t) . "((wxRefCounter *) value_to_return{$required_parameters}.GetRefData())->IncRef();\n";
 
 						$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
-						$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
+						$call_code .= tabs($t) . "memcpy(ptr, (void*) &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 						$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 						$call_code .= tabs($t) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
                         if(class_has_properties($return_type))

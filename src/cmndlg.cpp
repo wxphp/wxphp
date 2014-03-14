@@ -7536,7 +7536,7 @@ PHP_METHOD(php_wxColourData, GetCustomColour)
 				value_to_return1 = ((wxColourData_php*)native_object)->GetCustomColour((int) i0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -18557,7 +18557,7 @@ PHP_METHOD(php_wxFontData, GetInitialFont)
 				value_to_return0 = ((wxFontData_php*)native_object)->GetInitialFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -18876,7 +18876,7 @@ PHP_METHOD(php_wxFontData, GetChosenFont)
 				value_to_return0 = ((wxFontData_php*)native_object)->GetChosenFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -27090,7 +27090,7 @@ PHP_METHOD(php_wxWizard, GetPageSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxWizard_php*)native_object)->GetPageSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);

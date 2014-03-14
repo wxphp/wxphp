@@ -9459,7 +9459,7 @@ PHP_METHOD(php_wxFileName, DirName)
 				wxFileName value_to_return1;
 				value_to_return1 = wxFileName::DirName(wxString(dir0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -9479,7 +9479,7 @@ PHP_METHOD(php_wxFileName, DirName)
 				wxFileName value_to_return2;
 				value_to_return2 = wxFileName::DirName(wxString(dir0, wxConvUTF8), (wxPathFormat) format0);
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -9729,7 +9729,7 @@ PHP_METHOD(php_wxFileName, FileName)
 				wxFileName value_to_return1;
 				value_to_return1 = wxFileName::FileName(wxString(file0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -9749,7 +9749,7 @@ PHP_METHOD(php_wxFileName, FileName)
 				wxFileName value_to_return2;
 				value_to_return2 = wxFileName::FileName(wxString(file0, wxConvUTF8), (wxPathFormat) format0);
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);

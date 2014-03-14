@@ -4009,7 +4009,7 @@ PHP_METHOD(php_wxDataObjectComposite, GetReceivedFormat)
 				wxDataFormat value_to_return0;
 				value_to_return0 = ((wxDataObjectComposite_php*)native_object)->GetReceivedFormat();
 				void* ptr = safe_emalloc(1, sizeof(wxDataFormat_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxDataFormat));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxDataFormat));
 				object_init_ex(return_value, php_wxDataFormat_entry);
 				((wxDataFormat_php*)ptr)->phpObj = return_value;
 				zo_wxDataFormat* zo0 = (zo_wxDataFormat*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -5235,7 +5235,7 @@ PHP_METHOD(php_wxBitmapDataObject, GetBitmap)
 				value_to_return0 = ((wxBitmapDataObject_php*)native_object)->GetBitmap();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
 				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);

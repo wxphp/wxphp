@@ -5242,7 +5242,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginBottomRight)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxPageSetupDialogData_php*)native_object)->GetMarginBottomRight();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -5347,7 +5347,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginTopLeft)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxPageSetupDialogData_php*)native_object)->GetMarginTopLeft();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -5452,7 +5452,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginBottomRight)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxPageSetupDialogData_php*)native_object)->GetMinMarginBottomRight();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -5557,7 +5557,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginTopLeft)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxPageSetupDialogData_php*)native_object)->GetMinMarginTopLeft();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -5759,7 +5759,7 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPaperSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxPageSetupDialogData_php*)native_object)->GetPaperSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -11666,7 +11666,7 @@ PHP_METHOD(php_wxRect, Intersect)
 				wxRect value_to_return1;
 				value_to_return1 = ((wxRect_php*)native_object)->Intersect(*(wxRect*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -11897,7 +11897,7 @@ PHP_METHOD(php_wxRect, Inflate)
 				wxRect value_to_return2;
 				value_to_return2 = ((wxRect_php*)native_object)->Inflate((wxCoord) dx0, (wxCoord) dy0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -12411,7 +12411,7 @@ PHP_METHOD(php_wxRect, GetTopRight)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxRect_php*)native_object)->GetTopRight();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -12516,7 +12516,7 @@ PHP_METHOD(php_wxRect, GetTopLeft)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxRect_php*)native_object)->GetTopLeft();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -12718,7 +12718,7 @@ PHP_METHOD(php_wxRect, GetSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxRect_php*)native_object)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -12919,7 +12919,7 @@ PHP_METHOD(php_wxRect, GetPosition)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxRect_php*)native_object)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -13048,7 +13048,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 				wxRect value_to_return1;
 				value_to_return1 = ((wxRect_php*)native_object)->CenterIn(*(wxRect*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -13069,7 +13069,7 @@ PHP_METHOD(php_wxRect, CenterIn)
 				wxRect value_to_return2;
 				value_to_return2 = ((wxRect_php*)native_object)->CenterIn(*(wxRect*) object_pointer0_0, (int) dir0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -13199,7 +13199,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 				wxRect value_to_return1;
 				value_to_return1 = ((wxRect_php*)native_object)->CentreIn(*(wxRect*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -13220,7 +13220,7 @@ PHP_METHOD(php_wxRect, CentreIn)
 				wxRect value_to_return2;
 				value_to_return2 = ((wxRect_php*)native_object)->CentreIn(*(wxRect*) object_pointer0_0, (int) dir0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -13748,7 +13748,7 @@ PHP_METHOD(php_wxRect, Deflate)
 				wxRect value_to_return2;
 				value_to_return2 = ((wxRect_php*)native_object)->Deflate((wxCoord) dx3, (wxCoord) dy3);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -13950,7 +13950,7 @@ PHP_METHOD(php_wxRect, GetBottomLeft)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxRect_php*)native_object)->GetBottomLeft();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -14055,7 +14055,7 @@ PHP_METHOD(php_wxRect, GetBottomRight)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxRect_php*)native_object)->GetBottomRight();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -19050,7 +19050,7 @@ PHP_METHOD(php_wxListItem, GetTextColour)
 				value_to_return0 = ((wxListItem_php*)native_object)->GetTextColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -19743,7 +19743,7 @@ PHP_METHOD(php_wxListItem, GetBackgroundColour)
 				value_to_return0 = ((wxListItem_php*)native_object)->GetBackgroundColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -19945,7 +19945,7 @@ PHP_METHOD(php_wxListItem, GetFont)
 				value_to_return0 = ((wxListItem_php*)native_object)->GetFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -22063,7 +22063,7 @@ PHP_METHOD(php_wxRegion, ConvertToBitmap)
 				value_to_return0 = ((wxRegion_php*)native_object)->ConvertToBitmap();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxBitmap));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxBitmap));
 				object_init_ex(return_value, php_wxBitmap_entry);
 				((wxBitmap_php*)ptr)->phpObj = return_value;
 				zo_wxBitmap* zo0 = (zo_wxBitmap*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -22209,7 +22209,7 @@ PHP_METHOD(php_wxRegion, GetBox)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxRegion_php*)native_object)->GetBox();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();

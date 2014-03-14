@@ -710,7 +710,7 @@ PHP_METHOD(php_wxMediaCtrl, GetBestSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxMediaCtrl_php*)native_object)->GetBestSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);

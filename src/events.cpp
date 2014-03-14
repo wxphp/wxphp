@@ -2572,7 +2572,7 @@ PHP_METHOD(php_wxColourPickerEvent, GetColour)
 				value_to_return0 = ((wxColourPickerEvent_php*)native_object)->GetColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -22182,7 +22182,7 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxKeyEvent_php*)native_object)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -30788,7 +30788,7 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 				wxPoint value_to_return1;
 				value_to_return1 = ((wxMouseEvent_php*)native_object)->GetLogicalPosition(*(wxDC*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -40903,7 +40903,7 @@ PHP_METHOD(php_wxMoveEvent, GetPosition)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxMoveEvent_php*)native_object)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -41007,7 +41007,7 @@ PHP_METHOD(php_wxMoveEvent, GetRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxMoveEvent_php*)native_object)->GetRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -41547,7 +41547,7 @@ PHP_METHOD(php_wxSizeEvent, GetRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxSizeEvent_php*)native_object)->GetRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -41652,7 +41652,7 @@ PHP_METHOD(php_wxSizeEvent, GetSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxSizeEvent_php*)native_object)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -44220,7 +44220,7 @@ PHP_METHOD(php_wxFontPickerEvent, GetFont)
 				value_to_return0 = ((wxFontPickerEvent_php*)native_object)->GetFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -45670,7 +45670,7 @@ PHP_METHOD(php_wxGridEvent, GetPosition)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxGridEvent_php*)native_object)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -46672,7 +46672,7 @@ PHP_METHOD(php_wxGridSizeEvent, GetPosition)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxGridSizeEvent_php*)native_object)->GetPosition();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -47551,7 +47551,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRightCoords)
 				wxGridCellCoords value_to_return0;
 				value_to_return0 = ((wxGridRangeSelectEvent_php*)native_object)->GetBottomRightCoords();
 				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
 				zo_wxGridCellCoords* zo0 = (zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -47946,7 +47946,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetTopLeftCoords)
 				wxGridCellCoords value_to_return0;
 				value_to_return0 = ((wxGridRangeSelectEvent_php*)native_object)->GetTopLeftCoords();
 				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
 				zo_wxGridCellCoords* zo0 = (zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -50782,7 +50782,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetSize)
 				wxSize value_to_return0;
 				value_to_return0 = ((wxQueryLayoutInfoEvent_php*)native_object)->GetSize();
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -51687,7 +51687,7 @@ PHP_METHOD(php_wxCalculateLayoutEvent, GetRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxCalculateLayoutEvent_php*)native_object)->GetRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -53089,7 +53089,7 @@ PHP_METHOD(php_wxListEvent, GetPoint)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxListEvent_php*)native_object)->GetPoint();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -54966,7 +54966,7 @@ PHP_METHOD(php_wxMouseState, GetPosition)
 				{
 					value_to_return0 = ((wxMouseEvent_php*)native_object)->GetPosition();
 					void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-					memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+					memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 					object_init_ex(return_value, php_wxPoint_entry);
 					((wxPoint_php*)ptr)->phpObj = return_value;
 					((wxPoint_php*)ptr)->InitProperties();
@@ -54977,7 +54977,7 @@ PHP_METHOD(php_wxMouseState, GetPosition)
 				{
 					value_to_return0 = ((wxMouseState_php*)native_object)->GetPosition();
 					void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-					memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+					memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 					object_init_ex(return_value, php_wxPoint_entry);
 					((wxPoint_php*)ptr)->phpObj = return_value;
 					((wxPoint_php*)ptr)->InitProperties();
@@ -59023,7 +59023,7 @@ PHP_METHOD(php_wxSashEvent, GetDragRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxSashEvent_php*)native_object)->GetDragRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -65853,7 +65853,7 @@ PHP_METHOD(php_wxTreeEvent, GetItem)
 				wxTreeItemId value_to_return0;
 				value_to_return0 = ((wxTreeEvent_php*)native_object)->GetItem();
 				void* ptr = safe_emalloc(1, sizeof(wxTreeItemId_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxTreeItemId));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxTreeItemId));
 				object_init_ex(return_value, php_wxTreeItemId_entry);
 				((wxTreeItemId_php*)ptr)->phpObj = return_value;
 				zo_wxTreeItemId* zo0 = (zo_wxTreeItemId*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -66274,7 +66274,7 @@ PHP_METHOD(php_wxTreeEvent, GetOldItem)
 				wxTreeItemId value_to_return0;
 				value_to_return0 = ((wxTreeEvent_php*)native_object)->GetOldItem();
 				void* ptr = safe_emalloc(1, sizeof(wxTreeItemId_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxTreeItemId));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxTreeItemId));
 				object_init_ex(return_value, php_wxTreeItemId_entry);
 				((wxTreeItemId_php*)ptr)->phpObj = return_value;
 				zo_wxTreeItemId* zo0 = (zo_wxTreeItemId*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -66378,7 +66378,7 @@ PHP_METHOD(php_wxTreeEvent, GetPoint)
 				wxPoint value_to_return0;
 				value_to_return0 = ((wxTreeEvent_php*)native_object)->GetPoint();
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();

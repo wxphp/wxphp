@@ -212,7 +212,7 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxPrinterDC_php*)native_object)->GetPaperRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -5434,7 +5434,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 				wxRect value_to_return1;
 				value_to_return1 = ((wxPrintout_php*)native_object)->GetLogicalPageMarginsRect(*(wxPageSetupDialogData*) object_pointer0_0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -5544,7 +5544,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxPrintout_php*)native_object)->GetLogicalPageRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -5653,7 +5653,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxPrintout_php*)native_object)->GetLogicalPaperRect();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -6398,7 +6398,7 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxPrintout_php*)native_object)->GetPaperRectPixels();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();

@@ -4448,7 +4448,7 @@ PHP_METHOD(php_wxDisplay, GetClientArea)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxDisplay_php*)native_object)->GetClientArea();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -4651,7 +4651,7 @@ PHP_METHOD(php_wxDisplay, GetCurrentMode)
 				wxVideoMode value_to_return0;
 				value_to_return0 = ((wxDisplay_php*)native_object)->GetCurrentMode();
 				void* ptr = safe_emalloc(1, sizeof(wxVideoMode_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxVideoMode));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxVideoMode));
 				object_init_ex(return_value, php_wxVideoMode_entry);
 				((wxVideoMode_php*)ptr)->phpObj = return_value;
 				((wxVideoMode_php*)ptr)->InitProperties();
@@ -4998,7 +4998,7 @@ PHP_METHOD(php_wxDisplay, GetGeometry)
 				wxRect value_to_return0;
 				value_to_return0 = ((wxDisplay_php*)native_object)->GetGeometry();
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -6173,7 +6173,7 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 				wxFileName value_to_return1;
 				value_to_return1 = wxFileConfig::GetGlobalFile(wxString(basename0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -6394,7 +6394,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 				wxFileName value_to_return1;
 				value_to_return1 = wxFileConfig::GetLocalFile(wxString(basename0, wxConvUTF8));
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -6414,7 +6414,7 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 				wxFileName value_to_return2;
 				value_to_return2 = wxFileConfig::GetLocalFile(wxString(basename0, wxConvUTF8), (int) style0);
 				void* ptr = safe_emalloc(1, sizeof(wxFileName_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxFileName));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
 				zo_wxFileName* zo2 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -13431,7 +13431,7 @@ PHP_METHOD(php_wxSystemSettings, GetColour)
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -13544,7 +13544,7 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);

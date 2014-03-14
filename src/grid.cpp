@@ -15382,7 +15382,7 @@ PHP_METHOD(php_wxGrid, BlockToDeviceRect)
 				wxRect value_to_return2;
 				value_to_return2 = ((wxGrid_php*)native_object)->BlockToDeviceRect(*(wxGridCellCoords*) object_pointer0_0, *(wxGridCellCoords*) object_pointer0_1);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -16125,7 +16125,7 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				wxRect value_to_return2;
 				value_to_return2 = ((wxGrid_php*)native_object)->CellToRect((int) row0, (int) col0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -16152,7 +16152,7 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				wxRect value_to_return1;
 				value_to_return1 = ((wxGrid_php*)native_object)->CellToRect(*(wxGridCellCoords*) object_pointer1_0);
 				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxRect));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
@@ -19380,7 +19380,7 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 				value_to_return2 = ((wxGrid_php*)native_object)->GetCellBackgroundColour((int) row0, (int) col0);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo2 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -19617,7 +19617,7 @@ PHP_METHOD(php_wxGrid, GetCellFont)
 				value_to_return2 = ((wxGrid_php*)native_object)->GetCellFont((int) row0, (int) col0);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo2 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -19929,7 +19929,7 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 				wxSize value_to_return1;
 				value_to_return1 = ((wxGrid_php*)native_object)->GetCellSize(*(wxGridCellCoords*) object_pointer1_0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -20041,7 +20041,7 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 				value_to_return2 = ((wxGrid_php*)native_object)->GetCellTextColour((int) row0, (int) col0);
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo2 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -20426,7 +20426,7 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 				value_to_return1 = ((wxGrid_php*)native_object)->GetColGridLinePen((int) col0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxPen_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxPen));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxPen));
 				object_init_ex(return_value, php_wxPen_entry);
 				((wxPen_php*)ptr)->phpObj = return_value;
 				zo_wxPen* zo1 = (zo_wxPen*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -21253,7 +21253,7 @@ PHP_METHOD(php_wxGrid, GetColSizes)
 				wxGridSizesInfo value_to_return0;
 				value_to_return0 = ((wxGrid_php*)native_object)->GetColSizes();
 				void* ptr = safe_emalloc(1, sizeof(wxGridSizesInfo_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxGridSizesInfo));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxGridSizesInfo));
 				object_init_ex(return_value, php_wxGridSizesInfo_entry);
 				((wxGridSizesInfo_php*)ptr)->phpObj = return_value;
 				((wxGridSizesInfo_php*)ptr)->InitProperties();
@@ -21479,7 +21479,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetDefaultCellBackgroundColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -21584,7 +21584,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellFont)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetDefaultCellFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -21689,7 +21689,7 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetDefaultCellTextColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -22378,7 +22378,7 @@ PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetDefaultGridLinePen();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxPen_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPen));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxPen));
 				object_init_ex(return_value, php_wxPen_entry);
 				((wxPen_php*)ptr)->phpObj = return_value;
 				zo_wxPen* zo0 = (zo_wxPen*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23603,7 +23603,7 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetGridLineColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -23948,7 +23948,7 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetLabelBackgroundColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -24053,7 +24053,7 @@ PHP_METHOD(php_wxGrid, GetLabelFont)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetLabelFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -24158,7 +24158,7 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetLabelTextColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -24588,7 +24588,7 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 				value_to_return1 = ((wxGrid_php*)native_object)->GetRowGridLinePen((int) row0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxPen_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxPen));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxPen));
 				object_init_ex(return_value, php_wxPen_entry);
 				((wxPen_php*)ptr)->phpObj = return_value;
 				zo_wxPen* zo1 = (zo_wxPen*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -25216,7 +25216,7 @@ PHP_METHOD(php_wxGrid, GetRowSizes)
 				wxGridSizesInfo value_to_return0;
 				value_to_return0 = ((wxGrid_php*)native_object)->GetRowSizes();
 				void* ptr = safe_emalloc(1, sizeof(wxGridSizesInfo_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxGridSizesInfo));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxGridSizesInfo));
 				object_init_ex(return_value, php_wxGridSizesInfo_entry);
 				((wxGridSizesInfo_php*)ptr)->phpObj = return_value;
 				((wxGridSizesInfo_php*)ptr)->InitProperties();
@@ -25516,7 +25516,7 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetSelectionBackground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -25621,7 +25621,7 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 				value_to_return0 = ((wxGrid_php*)native_object)->GetSelectionForeground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -37517,7 +37517,7 @@ PHP_METHOD(php_wxGrid, XYToCell)
 				wxGridCellCoords value_to_return2;
 				value_to_return2 = ((wxGrid_php*)native_object)->XYToCell((int) x0, (int) y0);
 				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxGridCellCoords));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
 				zo_wxGridCellCoords* zo2 = (zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -37543,7 +37543,7 @@ PHP_METHOD(php_wxGrid, XYToCell)
 				wxGridCellCoords value_to_return1;
 				value_to_return1 = ((wxGrid_php*)native_object)->XYToCell(*(wxPoint*) object_pointer1_0);
 				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxGridCellCoords));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxGridCellCoords));
 				object_init_ex(return_value, php_wxGridCellCoords_entry);
 				((wxGridCellCoords_php*)ptr)->phpObj = return_value;
 				zo_wxGridCellCoords* zo1 = (zo_wxGridCellCoords*) zend_object_store_get_object(return_value TSRMLS_CC);

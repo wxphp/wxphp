@@ -12861,7 +12861,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetAdditionalCaretForeground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -13645,7 +13645,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCaretForeground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -13847,7 +13847,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetCaretLineBackground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -14932,7 +14932,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetEdgeColour();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -16900,7 +16900,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 				wxVersionInfo value_to_return0;
 				value_to_return0 = wxStyledTextCtrl::GetLibraryVersionInfo();
 				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxVersionInfo));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxVersionInfo));
 				object_init_ex(return_value, php_wxVersionInfo_entry);
 				((wxVersionInfo_php*)ptr)->phpObj = return_value;
 				zo_wxVersionInfo* zo0 = (zo_wxVersionInfo*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -26109,7 +26109,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->IndicatorGetForeground((int) indic0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -33237,7 +33237,7 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 				wxPoint value_to_return1;
 				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->PointFromPosition((int) pos0);
 				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxPoint));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
@@ -56540,7 +56540,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHotspotActiveBackground)
 				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveBackground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -56645,7 +56645,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHotspotActiveForeground)
 				value_to_return0 = ((wxStyledTextCtrl_php*)native_object)->GetHotspotActiveForeground();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo0 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -61949,7 +61949,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetBackground)
 				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetBackground((int) style0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -62677,7 +62677,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetFont)
 				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetFont((int) style0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo1 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -62787,7 +62787,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleGetForeground)
 				value_to_return1 = ((wxStyledTextCtrl_php*)native_object)->StyleGetForeground((int) style0);
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxColour));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				((wxColour_php*)ptr)->phpObj = return_value;
 				zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);

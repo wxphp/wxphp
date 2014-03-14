@@ -1376,7 +1376,7 @@ PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 					value_to_return1 = ((wxRibbonArtProvider_php*)native_object)->GetColor((int) id0);
 					((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 					void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-					memcpy(ptr, &value_to_return1, sizeof(wxColour));
+					memcpy(ptr, (void*) &value_to_return1, sizeof(wxColour));
 					object_init_ex(return_value, php_wxColour_entry);
 					((wxColour_php*)ptr)->phpObj = return_value;
 					zo_wxColour* zo1 = (zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -7404,7 +7404,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				wxSize value_to_return1;
 				value_to_return1 = ((wxRibbonControl_php*)native_object)->GetNextLargerSize((wxOrientation) direction0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -7430,7 +7430,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 				wxSize value_to_return2;
 				value_to_return2 = ((wxRibbonControl_php*)native_object)->GetNextLargerSize((wxOrientation) direction1, *(wxSize*) object_pointer1_1);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -7602,7 +7602,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				wxSize value_to_return1;
 				value_to_return1 = ((wxRibbonControl_php*)native_object)->GetNextSmallerSize((wxOrientation) direction0);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return1, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo1 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -7628,7 +7628,7 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 				wxSize value_to_return2;
 				value_to_return2 = ((wxRibbonControl_php*)native_object)->GetNextSmallerSize((wxOrientation) direction1, *(wxSize*) object_pointer1_1);
 				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxSize));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
 				zo_wxSize* zo2 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);

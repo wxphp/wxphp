@@ -3361,7 +3361,7 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetFont();
 				((wxRefCounter *) value_to_return0.GetRefData())->IncRef();
 				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxFont));
+				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
 				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
@@ -8794,7 +8794,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				wxTextAttr value_to_return2;
 				value_to_return2 = wxTextAttr::Merge(*(wxTextAttr*) object_pointer1_0, *(wxTextAttr*) object_pointer1_1);
 				void* ptr = safe_emalloc(1, sizeof(wxTextAttr_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxTextAttr));
+				memcpy(ptr, (void*) &value_to_return2, sizeof(wxTextAttr));
 				object_init_ex(return_value, php_wxTextAttr_entry);
 				((wxTextAttr_php*)ptr)->phpObj = return_value;
 				zo_wxTextAttr* zo2 = (zo_wxTextAttr*) zend_object_store_get_object(return_value TSRMLS_CC);
