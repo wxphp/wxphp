@@ -194,7 +194,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </dependencies>
  <providesextension>wxwidgets</providesextension>
  <extsrcrelease>
-  <configureoption default="no" name="enable-wxwidgets-debug" prompt="Enable debugging messages in wxwidgets" />
+  <configureoption default="no" name="enable-wxwidgets-debug" prompt="Enable debugging messages and symbols in wxwidgets" />
   <configureoption default="no" name="enable-wxwidgets-macosx" prompt="Enable Mac OS X building mode" />
  </extsrcrelease>
  <changelog>

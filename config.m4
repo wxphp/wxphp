@@ -157,6 +157,13 @@ if test "$PHP_WXWIDGETS" != "no"; then
     if test "$PHP_WXWIDGETS_DEBUG" != "no"; then
         dnl Yes, so set the C macro
         AC_DEFINE(USE_WXPHP_DEBUG,1,[Include debugging support in wxPHP])
+        
+        CFLAGS="$CFLAGS -g"
+        CXXFLAGS="$CXXFLAGS -g"
+    else
+        dnl Disable enforced debugging symbols
+        CFLAGS=`echo $CFLAGS | sed s/-g\ //`
+        CXXFLAGS=`echo $CFLAGS | sed s/-g\ //`
     fi
     
     dnl Add additional includes directory
