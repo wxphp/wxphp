@@ -1142,7 +1142,7 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 
 				wxIconBundle value_to_return1;
 				value_to_return1 = wxArtProvider::GetIconBundle(wxString(id0, wxConvUTF8));
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxIconBundle_php), 0);
@@ -1165,7 +1165,7 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 
 				wxIconBundle value_to_return2;
 				value_to_return2 = wxArtProvider::GetIconBundle(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8));
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxIconBundle_php), 0);
@@ -1300,7 +1300,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 
 				wxIcon value_to_return1;
 				value_to_return1 = wxArtProvider::GetIcon(wxString(id0, wxConvUTF8));
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -1323,7 +1323,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 
 				wxIcon value_to_return2;
 				value_to_return2 = wxArtProvider::GetIcon(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8));
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -1346,7 +1346,7 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 
 				wxIcon value_to_return3;
 				value_to_return3 = wxArtProvider::GetIcon(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8), *(wxSize*) object_pointer0_2);
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxIcon_php), 0);
@@ -1481,7 +1481,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 
 				wxBitmap value_to_return1;
 				value_to_return1 = wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8));
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return1.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -1504,7 +1504,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 
 				wxBitmap value_to_return2;
 				value_to_return2 = wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8));
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return2.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);
@@ -1527,7 +1527,7 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 
 				wxBitmap value_to_return3;
 				value_to_return3 = wxArtProvider::GetBitmap(wxString(id0, wxConvUTF8), wxString(client0, wxConvUTF8), *(wxSize*) object_pointer0_2);
-				#ifndef __WXMSW__
+				#if !defined(__WXMSW__) && !defined(__WXMAC__)
 				((wxRefCounter *) value_to_return3.GetRefData())->IncRef();
 				#endif
 				void* ptr = safe_emalloc(1, sizeof(wxBitmap_php), 0);

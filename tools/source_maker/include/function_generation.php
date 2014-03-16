@@ -1719,7 +1719,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                     
                                     if(inherits_from_class("wxObject", $return_type))
 									{
-										$return_called_overload .= tabs(4) . "#ifndef __WXMSW__\n";
+										$return_called_overload .= tabs(4) . "#if !defined(__WXMSW__) && !defined(__WXMAC__)\n";
                                         $return_called_overload .= tabs(4) . "((wxRefCounter *) value_to_return{$required_parameters}.GetRefData())->IncRef();\n";
 										$return_called_overload .= tabs(4) . "#endif\n";
 									}
