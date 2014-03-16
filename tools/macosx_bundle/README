@@ -1,0 +1,30 @@
+Mac OSX Bundle Generator
+========================================================================
+
+On this directory you will find a script to generate  Mac OSX bundle
+with php and wxphp. The script will ask you some information about
+the bundle you are going to generate and then it will proceed to compile
+launcher.cpp, php and wxphp. It will take a long time if you haven't 
+compiled php and wxphp already. 
+
+After the script finishes you can modify the launcher.sh script inside
+your application.app/Contents/MacOS/launcher.sh to meet your needs as change
+the icon in application.app/Contents/Resources/icon.icns
+
+========================================================================
+bundle_generator.php:
+========================================================================
+
+To start generating the bundle execute:
+
+php bundle_generator.php
+
+Note: You can execute the script from any directory where you want to 
+save the generated bundle but the bundle_generator.php script must 
+reside on the wxphp source tree.
+
+For example:
+
+    user@machine:~/Development$ php ~/wxphp/tools/macosx_bundle/bundle_generator.php
+
+That would generate the bundle in a directory named Development.

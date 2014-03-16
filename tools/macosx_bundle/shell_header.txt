@@ -1,0 +1,7 @@
+wxPHP Command Prompt
+===========================================================
+You can execute php scripts with wxWidgets code like this:
+
+    wxphp script.php
+
+===========================================================
