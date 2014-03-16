@@ -1112,8 +1112,8 @@ function remove_old_src_and_headers()
  * adding classes without a group to a group called others, removing
  * empty groups and class repetitions.
  * 
- * @param array $groups Reference to the groups array returned by the xml_parser
- * @param array $all_classes Reference to the classes array returned by xml_parser
+ * @param array $groups Reference to the groups array returned by the json_generator
+ * @param array $all_classes Reference to the classes array returned by json_generator
  */
 function prepair_groups(&$groups, $all_classes)
 {

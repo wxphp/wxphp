@@ -1,2 +1,2 @@
-(PARTIALLY DONE) Extract documentation elements using the xml_parser 
+(PARTIALLY DONE) Extract documentation elements using the json_generator 
 and include it on the generated reference.

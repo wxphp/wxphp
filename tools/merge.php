@@ -7,7 +7,7 @@
  * 
  * @description
  * Script to merge new changes done on the classes.json file generated 
- * by the xml_parser on to the classes.json file used by the source code 
+ * by the json_generator on to the classes.json file used by the source code 
  * generator. This script was created after adding some new options to
  * the generated classes.json like platforms and parameters_is_array.
  * 

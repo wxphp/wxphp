@@ -1,7 +1,7 @@
 Json Files
 ......................................
 This directory holds the json text files, result of parsing the 
-wxWidgets documentation with the xml_parser script. The files are pretty 
+wxWidgets documentation with the json_generator script. The files are pretty 
 printed to make manual edition possible as easier integration of patches.
 Previously standard php serialize functions were used making impossible 
 to edit them. We thought about using the xml format but the most easier 
@@ -45,7 +45,7 @@ Things manually added/changed to files
 ......................................
 
 This file serves as a registry of manual changes made to the generated
-files by xml_parser.php. So if we need to regenerate again these files
+files by json_generator.php. So if we need to regenerate again these files
 we don't have to go to the whole process of inspecting everything
 and just focus on the changes stored here.
 

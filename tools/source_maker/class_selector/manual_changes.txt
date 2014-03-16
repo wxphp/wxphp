@@ -2,7 +2,7 @@ Things manually added/changed to files
 ......................................
 
 This file serves as a registry of manual changes made to the generated
-files of the xml_parser. So if we need to regenerate again these files
+files of the json_generator. So if we need to regenerate again these files
 we dont have to go to the whole process of inspecting everything
 and just focus on the changes stored here.
 

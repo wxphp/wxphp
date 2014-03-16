@@ -53,7 +53,7 @@ $defFunctions = array();
 $defIni = array();
 
 
-//Load functions parsed by the xml_parser
+//Load functions parsed by the json_generator
 if(file_exists("../json/functions.json"))
 {
 	$defFunctions = unserialize_json(file_get_contents("../json/functions.json"));
@@ -83,7 +83,7 @@ if(file_exists("../json/functions.json"))
 	include("source_maker/include/functions_blacklist.php");
 }
 
-//Load classes parsed by the xml_parser
+//Load classes parsed by the json_generator
 if(file_exists("../json/classes.json"))
 {
 	$defIni = unserialize_json(file_get_contents("../json/classes.json"));
@@ -92,7 +92,7 @@ if(file_exists("../json/classes.json"))
 	unset($defIni['wxArrayString']);
 }
 
-//Load class and global enums parsed by the xml_parser
+//Load class and global enums parsed by the json_generator
 if(file_exists("../json/enums.json"))
 {
 	$defEnums = unserialize_json(file_get_contents("../json/enums.json"));
@@ -111,7 +111,7 @@ if(file_exists("../json/consts.json"))
 	include("source_maker/include/constants_blacklist.php");
 }
 
-//Load global variables parsed by the xml_parser
+//Load global variables parsed by the json_generator
 if(file_exists("../json/global_variables.json"))
 {
 	$defGlobals = unserialize_json(file_get_contents("../json/global_variables.json"));
@@ -121,7 +121,7 @@ if(file_exists("../json/global_variables.json"))
 	unset($defGlobals['wxNullRegion']);
 }
 
-//Load typedef parsed by the xml_parser
+//Load typedef parsed by the json_generator
 if(file_exists("../json/typedef.json"))
 {
 	$defTypedef = unserialize_json(file_get_contents("../json/typedef.json"));

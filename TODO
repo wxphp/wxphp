@@ -1,42 +1,19 @@
 Short term TODO
 ==============================
 
-* (FIXED) Fix segmentation bug that occurs on shutdown.
+* (DONE) Compilation testing and troubleshooting on windows
 
-* (FIXED) Check why PHP Segfaults when loading the library from the php.ini while
-  loading it with dl function works as expected.
+* (DONE) Compilation testing and troubleshooting on mac
 
-* (FIXED) fix xml_parser not using <array>[]</array> on argument types 
+* (FIXED) Fix segmentation fault on wxGTK when no wxApp is initialized.
 
-* (FIXED) Methods returning references to its own object return null,
-  this was fixed before, but after introducing wxPHPObjectReferences
-  it break up.
-  
-* (FIXED) Check for arguments[0] and [1] for example on 
-  wxLogWindow_php::OnFrameClose(wxFrame* frame) since they are possible 
-  memory leaks.
-
-* (FIXED) Strange behaviour on wxOSX where the application receives mouse
-  events correctly but not keyboard ones. I suspect of the way
-  we are initliazing the wxPHP library to run applications.
-
-* (DONE) Update config.m4 and configd.w32 to use new wxWidgets 2.9.x
-
-* (DONE) The PHP_METHODs should have some "proto" comment. This helps 
-  with some documentation tools.
-
-* (PARTIALLY) Compilation testing and troubleshooting on windows
-
-* (PARTIALLY) Compilation testing and troubleshooting on mac
+* (MAY NOT APPLY ANYMORE) Possibly declare char _wxResource[] = "wxResource" 
+  and other char strings passed to functions as const.
 
 * Implement __set to write to internal wxWidgets class properties.
 
 * Implement compare_objects handler for wxWidget classes that implement
   operator== etc...
-  
-* Replace call_user_function_ex() with zend_call_method[_with_[1-3]_param[s]
-  family of functions from zend_interfaces.h on virtual methods 
-  (Create Custom zend_method_call with arguments array support)
   
 * Use zend_parse_parameters_none() to produce a nicer error on 
   methods/functions that dont accept parameters.
@@ -44,19 +21,19 @@ Short term TODO
 * Don't use zend_error outside the engine, but use
   php_error_docref which gives a nicer error message.
   
-* Possibly declare char _wxResource[] = "wxResource" and other char
-  strings passed to functions as const.
-  
 * Add zend_error on event connect in case user passes wrong count of
   arguments
 
-* Fix segmentation fault on wxGTK when no wxApp is initialized.
+* Modify the debian and arch package generators to add a wxphp 
+  shell script that executes php -d extension=wxwidgets.so $@
   
   
 Long term TODO
 ==============================
 
-* Approach a more object oriended style for the source maker
+* (INITIAL WORK PEG) Approach a more object oriended style 
+  for the source maker
 
-* Develop a modules architecture in order to use the source maker to
-  generate the PHP bindings for any library with doxygen documentation.
+* (INITIAL WORK PEG) Develop a modules architecture in order to use 
+  the source maker to generate the PHP bindings for any library 
+  with doxygen documentation.

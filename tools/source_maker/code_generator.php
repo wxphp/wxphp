@@ -8,8 +8,8 @@
  * 
  * @description
  * Script to generate the wxWidgets extension cpp source code using as 
- * input the serialized output produced by the wxWidgets doxygen 
- * documentation xml_parser.
+ * input the json output produced by the wxWidgets doxygen 
+ * documentation parser tool json_generator.php.
  * 
  * 
 */
@@ -53,7 +53,7 @@ $defClassProperties = array();
 //Initialize class groups
 $defClassGroups = array();
 
-//Load includes parsed by the xml_parser
+//Load includes parsed by the json_generator
 if(file_exists("./../../json/includes.json"))
 {
 	$defIncludes = unserialize_json(file_get_contents("./../../json/includes.json"));
@@ -73,7 +73,7 @@ if(file_exists("./../../json/includes.json"))
 	unset($defIncludes["wx/msw/registry.h"]);
 }
 
-//Load functions parsed by the xml_parser
+//Load functions parsed by the json_generator
 if(file_exists("./../../json/functions.json"))
 {
 	$defFunctions = unserialize_json(file_get_contents("./../../json/functions.json"));
@@ -85,7 +85,7 @@ if(file_exists("./../../json/functions.json"))
 	include("include/functions_blacklist.php");
 }
 
-//Load classes parsed by the xml_parser
+//Load classes parsed by the json_generator
 if(file_exists("./../../json/classes.json"))
 {
 	$defIni = unserialize_json(file_get_contents("./../../json/classes.json"));
@@ -110,7 +110,7 @@ if(file_exists("./../../json/classes.json"))
 	unset($defIni['wxArrayString']); //Dont implement this class since it is interpreted as php native array()
 }
 
-//Load class properties parsed by the xml_parser
+//Load class properties parsed by the json_generator
 if(file_exists("./../../json/class_variables.json"))
 {
 	$defClassProperties = unserialize_json(file_get_contents("./../../json/class_variables.json"));
@@ -119,13 +119,13 @@ if(file_exists("./../../json/class_variables.json"))
 	unset($defClassProperties["wxTreeListCtrl"]);
 }
 
-//Load class properties parsed by the xml_parser
+//Load class properties parsed by the json_generator
 if(file_exists("./../../json/class_groups.json"))
 {
 	$defClassGroups = unserialize_json(file_get_contents("./../../json/class_groups.json"));
 }
 
-//Load class and global enums parsed by the xml_parser
+//Load class and global enums parsed by the json_generator
 if(file_exists("./../../json/enums.json"))
 {
 	$defEnums = unserialize_json(file_get_contents("./../../json/enums.json"));
@@ -170,7 +170,7 @@ if(file_exists("./../../json/consts.json"))
 	include("include/constants_blacklist.php");
 }
 
-//Load global variables parsed by the xml_parser
+//Load global variables parsed by the json_generator
 if(file_exists("./../../json/global_variables.json"))
 {
 	$defGlobals = unserialize_json(file_get_contents("./../../json/global_variables.json"));
@@ -184,7 +184,7 @@ if(file_exists("./../../json/global_variables.json"))
 	unset($defGlobals['wxEVT_POWER_RESUME']);
 }
 
-//Load typedef parsed by the xml_parser
+//Load typedef parsed by the json_generator
 if(file_exists("./../../json/typedef.json"))
 {
 	$defTypedef = unserialize_json(file_get_contents("./../../json/typedef.json"));

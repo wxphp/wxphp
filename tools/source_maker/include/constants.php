@@ -10,7 +10,7 @@
  * Some predefined constants to assit on the code generation.
  * 
  * The purpose is to assist the code generator manually in case
- * the xml_parser didn't return some required constants.
+ * the json_generator didn't return some required constants.
  * 
 */
 

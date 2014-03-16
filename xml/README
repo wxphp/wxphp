@@ -1,4 +1,4 @@
-This directory is scanned by the xml_parser.php script on the tools
+This directory is scanned by the json_generator.php script on the tools
 directory for the wxWidgets doxygen xml files. To generate new json
 files whose are used by the code generator.
 

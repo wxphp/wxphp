@@ -25,6 +25,6 @@ detects this and garbage would be left hanging, producing compilation
 errors. (duplicated methods with different definitions)
 
 Because of possible errors when updating the full_classes_set.json by
-running the xml_parser, I wrote a tool that tries as much to 
+running the json_generator, I wrote a tool that tries as much to 
 synchronize the classes.json with the full_classes_set.json on the
 tools directory called merge.php

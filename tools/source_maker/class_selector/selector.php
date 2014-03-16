@@ -9,7 +9,7 @@
  * @description
  * Script to generate the wxWidgets extension cpp source code using as 
  * input the serialized output produced by the wxWidgets doxygen 
- * documentation xml_parser.
+ * documentation json_generator.
  * 
  * 
 */
