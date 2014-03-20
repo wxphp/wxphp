@@ -904,3 +904,5 @@ provides it as follows: (seems to be already added on wxWidgets svn trunk)
 
 13. Modified SetBitmap on wxMenuItem removed bool parameter
 
+14. Add "deprecated":true to wxDataViewCustomRenderer::LeftClick and
+    wxDataViewCustomRenderer::Activate

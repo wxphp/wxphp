@@ -153,6 +153,9 @@ remove_functions_implementing_unknown_types($defFunctions);
 //Remove classes and methods not implemented on all 3 target platforms (windows, linux, mac)
 remove_classes_and_methods_not_crossplatform($defIni);
 
+//Remove deprecated class methods.
+remove_deprecated_methods($defIni);
+
 //Remove methods implementing unhandled argument declaration like 
 //wxRichTextCtrl::PrepareContent(wxRichTextParagraphLayoutBox &WXUNUSED(container))
 remove_methods_implementing_unhandled_arguments($defIni);

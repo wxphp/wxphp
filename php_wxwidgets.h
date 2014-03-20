@@ -4592,7 +4592,6 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl);
 PHP_METHOD(php_wxDataViewCustomRenderer, HasEditorCtrl);
 PHP_METHOD(php_wxDataViewCustomRenderer, Render);
 PHP_METHOD(php_wxDataViewCustomRenderer, RenderText);
-PHP_METHOD(php_wxDataViewCustomRenderer, LeftClick);
 PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag);
 PHP_METHOD(php_wxDataViewDateRenderer, __construct);
 PHP_METHOD(php_wxDataViewIconText, GetIcon);

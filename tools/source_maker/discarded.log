@@ -566,6 +566,7 @@ wxComboCtrl::ShowPopup
 wxComboCtrl::SetTextIndent
 wxComboCtrl::HidePopup
 wxComboCtrl::GetTextIndent
+wxDataViewCustomRenderer::LeftClick
 
 
 

@@ -162564,7 +162564,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"StartDrag":[
