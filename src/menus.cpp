@@ -4778,9 +4778,18 @@ PHP_METHOD(php_wxMenu, Append)
 	long kind0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* menuItem1 = 0;
-	wxMenuItem* object_pointer1_0 = 0;
+	long id1;
+	char* item1;
+	long item_len1;
+	zval* subMenu1 = 0;
+	wxMenu* object_pointer1_2 = 0;
+	char* helpString1;
+	long helpString_len1;
 	bool overload1_called = false;
+	//Parameters for overload 2
+	zval* menuItem2 = 0;
+	wxMenuItem* object_pointer2_0 = 0;
+	bool overload2_called = false;
 		
 	//Overload 0
 	overload0:
@@ -4801,34 +4810,68 @@ PHP_METHOD(php_wxMenu, Append)
 
 	//Overload 1
 	overload1:
+	if(!already_called && arguments_received >= 3  && arguments_received <= 4)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'lsz|s' (&id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1)\n");
+		#endif
+
+		char parse_parameters_string[] = "lsz|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1 ) == SUCCESS)
+		{
+			if(arguments_received >= 3){
+				if(Z_TYPE_P(subMenu1) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(subMenu1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(subMenu1 TSRMLS_CC))->native_object;
+					object_pointer1_2 = (wxMenu*) argument_native_object;
+					if (!object_pointer1_2 || (argument_type != PHP_WXMENU_TYPE))
+					{
+						goto overload2;
+					}
+				}
+				else if(Z_TYPE_P(subMenu1) != IS_NULL)
+				{
+					goto overload2;
+				}
+			}
+
+			overload1_called = true;
+			already_called = true;
+		}
+	}
+
+	//Overload 2
+	overload2:
 	if(!already_called && arguments_received == 1)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&menuItem1)\n");
+		php_printf("Parsing parameters with 'z' (&menuItem2)\n");
 		#endif
 
 		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuItem1 ) == SUCCESS)
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuItem2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menuItem1) == IS_OBJECT)
+				if(Z_TYPE_P(menuItem2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(menuItem1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(menuItem1 TSRMLS_CC))->native_object;
-					object_pointer1_0 = (wxMenuItem*) argument_native_object;
-					if (!object_pointer1_0 || (argument_type != PHP_WXMENUITEM_TYPE))
+					wxphp_object_type argument_type = ((zo_wxMenuItem*) zend_object_store_get_object(menuItem2 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxMenuItem*) zend_object_store_get_object(menuItem2 TSRMLS_CC))->native_object;
+					object_pointer2_0 = (wxMenuItem*) argument_native_object;
+					if (!object_pointer2_0 || (argument_type != PHP_WXMENUITEM_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menuItem' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(menuItem1) != IS_NULL)
+				else if(Z_TYPE_P(menuItem2) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menuItem' not null, could not be retreived correctly.");
 				}
 			}
 
-			overload1_called = true;
+			overload2_called = true;
 			already_called = true;
 		}
 	}
@@ -4985,14 +5028,93 @@ PHP_METHOD(php_wxMenu, Append)
 	{
 		switch(arguments_received)
 		{
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxMenu::Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2) to return object pointer\n\n");
+				#endif
+
+				wxMenuItem_php* value_to_return3;
+				value_to_return3 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2);
+
+				if(value_to_return3 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return3->references.IsUserInitialized()){
+					if(value_to_return3->phpObj != NULL){
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
+						return_is_user_initialized = true;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return3;
+				}
+
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
+					references->AddReference(return_value, "wxMenu::Append at call with 3 argument(s)");
+				}
+
+				references->AddReference(subMenu1, "wxMenu::Append at call with 3 argument(s)");
+
+				return;
+				break;
+			}
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxMenu::Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8)) to return object pointer\n\n");
+				#endif
+
+				wxMenuItem_php* value_to_return4;
+				value_to_return4 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((int) id1, wxString(item1, wxConvUTF8), (wxMenu*) object_pointer1_2, wxString(helpString1, wxConvUTF8));
+
+				if(value_to_return4 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return4->references.IsUserInitialized()){
+					if(value_to_return4->phpObj != NULL){
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
+						return_is_user_initialized = true;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value, php_wxMenuItem_entry);
+					((zo_wxMenuItem*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuItem_php*) value_to_return4;
+				}
+
+				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
+					references->AddReference(return_value, "wxMenu::Append at call with 4 argument(s)");
+				}
+
+				references->AddReference(subMenu1, "wxMenu::Append at call with 4 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload2_called)
+	{
+		switch(arguments_received)
+		{
 			case 1:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxMenu::Append((wxMenuItem*) object_pointer1_0) to return object pointer\n\n");
+				php_printf("Executing wxMenu::Append((wxMenuItem*) object_pointer2_0) to return object pointer\n\n");
 				#endif
 
 				wxMenuItem_php* value_to_return1;
-				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((wxMenuItem*) object_pointer1_0);
+				value_to_return1 = (wxMenuItem_php*) ((wxMenu_php*)native_object)->Append((wxMenuItem*) object_pointer2_0);
 
 				if(value_to_return1 == NULL){
 					ZVAL_NULL(return_value);
@@ -5016,7 +5138,7 @@ PHP_METHOD(php_wxMenu, Append)
 					references->AddReference(return_value, "wxMenu::Append at call with 1 argument(s)");
 				}
 
-				references->AddReference(menuItem1, "wxMenu::Append at call with 1 argument(s)");
+				references->AddReference(menuItem2, "wxMenu::Append at call with 1 argument(s)");
 
 				return;
 				break;

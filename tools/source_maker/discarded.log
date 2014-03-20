@@ -554,7 +554,6 @@ wxMenuItem::GetLabel
 wxMenuItem::GetLabelFromText
 wxMenuItem::GetName
 wxMenuItem::GetText
-wxMenu::Append
 wxKeyboardState::CmdDown
 wxArtProvider::Insert
 wxHtmlTag::GetBeginPos

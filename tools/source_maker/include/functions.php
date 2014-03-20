@@ -979,6 +979,9 @@ function remove_deprecated_methods(&$classes)
 	file_put_contents("discarded.log", "Deprecated Methods\n\n", FILE_APPEND);
 	foreach($classes as $class_name=>$class_methods)
 	{
+        if($class_name == "wxMenu") //Keep wxMenu::Append
+            continue;
+        
 		foreach($class_methods as $method_name=>$method_definitions)
 		{
 			//Skip _implements (inheritance) list
