@@ -33,7 +33,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
             for cmd in wx-config-3.0 wx-config; do
                 if test -e "$directory/$cmd"; then
                     wxwidgets_version=`$directory/$cmd --version`
-                    version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
+                    version_check=`echo $wxwidgets_version | grep "3.0\|3.1" && echo $wxwidgets_version | grep "0.[0-9]"`
                     if test -n "$version_check"; then
                         WXCONFIG_PATH="$directory/$cmd"
                         AC_MSG_RESULT([version $wxwidgets_version found])
