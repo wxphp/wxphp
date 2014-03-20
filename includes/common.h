@@ -429,6 +429,7 @@
 #if defined(PHP_WIN32) && defined(mode_t)
 #undef mode_t
 #endif
+
 /**
  * Include PHP Standard Header
  */
