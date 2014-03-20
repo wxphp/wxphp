@@ -58,7 +58,6 @@ static zend_function_entry php_wxArtProvider_functions[] = {
 	PHP_ME(php_wxArtProvider, PushBack, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxArtProvider, Push, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxArtProvider, Pop, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxArtProvider, Insert, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxArtProvider, HasNativeProvider, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxArtProvider, GetSizeHint, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxArtProvider, GetNativeSizeHint, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)

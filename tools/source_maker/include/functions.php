@@ -969,6 +969,59 @@ function remove_classes_and_methods_not_crossplatform(&$classes)
 	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
 }
 
+/**
+ * Removes all deprecated methods from classes.
+ * 
+ * @param array $classes
+ */
+function remove_deprecated_methods(&$classes)
+{
+	file_put_contents("discarded.log", "Deprecated Methods\n\n", FILE_APPEND);
+	foreach($classes as $class_name=>$class_methods)
+	{
+        if($class_name == "wxEvtHandler" || $class_name == "wxMenu")
+            continue;
+        
+		foreach($class_methods as $method_name=>$method_definitions)
+		{
+			//Skip _implements (inheritance) list
+			if($method_name{0} == "_")
+				continue;
+				
+			//Remove protected methods from method_definitions
+			$temp_definitions = array();
+			foreach($method_definitions as $method_index=>$method_definition)
+			{
+				//Just save method overloads that aren't deprecated
+				if($method_definition["deprecated"])
+				{
+					file_put_contents("discarded.log", "$class_name::$method_name\n", FILE_APPEND);
+					
+					//Skip deprecated methods
+					continue;
+				}
+				
+				$temp_definitions[] = $method_definition;
+			}
+			$method_definitions = $temp_definitions;
+			unset($temp_definitions);
+			
+			//If there are method overloads not deprecated save them
+			if(count($method_definitions))
+			{
+				$classes[$class_name][$method_name] = $method_definitions;
+			}
+			//If no overload was found completely remove the method
+			else
+			{
+				unset($classes[$class_name][$method_name]);
+			}
+		}
+	}
+	
+	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
+}
+
 function remove_methods_implementing_unhandled_arguments(&$classes)
 {
 	file_put_contents("discarded.log", "Methods implemented unhandled argument declarations\n\n", FILE_APPEND);

@@ -9500,7 +9500,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetInitialSize":[
@@ -9877,7 +9878,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetPosition":[
@@ -10661,7 +10663,8 @@
 					null,
 					"NULL",
 					"NULL"
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"AddFilter":[
@@ -20096,7 +20099,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetMinSize":[
@@ -22652,7 +22656,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"Show":[
@@ -22739,7 +22744,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetSizer":[
@@ -22768,7 +22774,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetRatio":[
@@ -37155,7 +37162,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetMenu":[
@@ -37608,7 +37616,8 @@
 				"parameters_default_value":[
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetMenuLabel":[
@@ -37865,7 +37874,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetSubMenu":[
@@ -38303,7 +38313,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetLabelFromText":[
@@ -38332,7 +38343,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetLabelText":[
@@ -38419,7 +38431,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetSubMenu":[
@@ -38477,7 +38490,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"IsCheckable":[
@@ -39169,7 +39183,8 @@
 					null,
 					null,
 					"wxEmptyString"
-				]
+				],
+				"deprecated":true
 			},
 			{
 				"return_type":"wxMenuItem*",
@@ -41459,7 +41474,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"ControlDown":[
@@ -50614,7 +50630,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"HasNativeProvider":[
@@ -94405,7 +94422,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"OnCellMouseHover":[
@@ -94446,7 +94464,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"OnLinkClicked":[
@@ -94475,7 +94494,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"OnSetTitle":[
@@ -100023,7 +100043,8 @@
 				"parameters_default_value":[
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetSelectedTextColour":[
@@ -101201,7 +101222,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetEndPos1":[
@@ -101230,7 +101252,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetEndPos2":[
@@ -101259,7 +101282,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetName":[
@@ -102254,7 +102278,8 @@
 					"wxCURSOR_DEFAULT_TYPE",
 					"0",
 					"0"
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"_implements":[
@@ -135726,7 +135751,8 @@
 				],
 				"parameters_default_value":[
 					"0"
-				]
+				],
+				"deprecated":true
 			}
 		]
 	},
@@ -136245,7 +136271,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"OnMouseEnter":[
@@ -143771,7 +143798,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetColAttr":[
@@ -151951,7 +151979,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetValue":[
@@ -152009,7 +152038,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetTextCtrlStyle":[
@@ -152744,7 +152774,8 @@
 				],
 				"parameters_default_value":[
 					"false"
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetValue":[
@@ -152831,7 +152862,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"GetTextCtrl":[
@@ -162538,7 +162570,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"StartDrag":[
@@ -171953,7 +171986,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"IsIconized":[
@@ -178416,7 +178450,8 @@
 				],
 				"parameters_default_value":[
 					
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"IsShown":[

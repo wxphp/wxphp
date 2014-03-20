@@ -276,7 +276,6 @@ static zend_function_entry php_wxBannerWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -543,7 +542,6 @@ static zend_function_entry php_wxInfoBar_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -934,7 +932,6 @@ static zend_function_entry php_wxSashLayoutWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -1212,7 +1209,6 @@ static zend_function_entry php_wxPanel_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -1485,7 +1481,6 @@ static zend_function_entry php_wxSashWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -1764,7 +1759,6 @@ static zend_function_entry php_wxSplitterWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -2047,7 +2041,6 @@ static zend_function_entry php_wxStatusBar_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -2089,7 +2082,6 @@ class wxToolBar_php: public wxToolBar{
 	wxToolBar_php():wxToolBar(){}
 	wxToolBar_php(wxWindow* parent, wxWindowID id, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxTB_HORIZONTAL, const wxString& name=wxToolBarNameStr):wxToolBar(parent, id, pos, size, style, name){}
 		
-	void OnRightClick(int toolId, long x, long y);
 	void OnMouseEnter(int toolId);
 	bool OnLeftClick(int toolId, bool toggleDown);
 	
@@ -2337,7 +2329,6 @@ static zend_function_entry php_wxToolBar_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -2649,7 +2640,6 @@ static zend_function_entry php_wxHScrolledWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -2677,7 +2667,6 @@ class wxWindow_php: public wxWindow{
 	void OnInternalIdle();
 	bool ProcessEvent(wxEvent& event);
 	void QueueEvent(wxEvent* event);
-	void SetInitialBestSize(const wxSize& size);
 	
 	
 	void ***tsrm_ls;
@@ -2927,7 +2916,6 @@ static zend_function_entry php_wxWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -3189,7 +3177,6 @@ static zend_function_entry php_wxWizardPage_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)
@@ -3457,7 +3444,6 @@ static zend_function_entry php_wxWizardPageSimple_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)

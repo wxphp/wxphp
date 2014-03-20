@@ -272,7 +272,6 @@ static zend_function_entry php_wxMediaCtrl_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)

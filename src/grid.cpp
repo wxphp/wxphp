@@ -31430,12 +31430,6 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 	char* s1;
 	long s_len1;
 	bool overload1_called = false;
-	//Parameters for overload 2
-	char* val2;
-	long val_len2;
-	long row2;
-	long col2;
-	bool overload2_called = false;
 		
 	//Overload 0
 	overload0:
@@ -31474,33 +31468,16 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 					object_pointer1_0 = (wxGridCellCoords*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
-						goto overload2;
+						zend_error(E_ERROR, "Parameter 'coords' could not be retreived correctly.");
 					}
 				}
 				else if(Z_TYPE_P(coords1) != IS_NULL)
 				{
-					goto overload2;
+					zend_error(E_ERROR, "Parameter 'coords' not null, could not be retreived correctly.");
 				}
 			}
 
 			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sll' (&val2, &val_len2, &row2, &col2)\n");
-		#endif
-
-		char parse_parameters_string[] = "sll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val2, &val_len2, &row2, &col2 ) == SUCCESS)
-		{
-			overload2_called = true;
 			already_called = true;
 		}
 	}
@@ -31538,25 +31515,6 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 				((wxGrid_php*)native_object)->SetCellValue(*(wxGridCellCoords*) object_pointer1_0, wxString(s1, wxConvUTF8));
 
 				references->AddReference(coords1, "wxGrid::SetCellValue at call with 2 argument(s)");
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::SetCellValue(wxString(val2, wxConvUTF8), (int) row2, (int) col2)\n\n");
-				#endif
-
-				((wxGrid_php*)native_object)->SetCellValue(wxString(val2, wxConvUTF8), (int) row2, (int) col2);
-
 
 				return;
 				break;

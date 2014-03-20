@@ -539,6 +539,42 @@ wxStandardPaths::SetInstallPrefix
 
 
 
+Deprecated Methods
+
+wxWindow::SetInitialBestSize
+wxWindow::SetPalette
+wxSizer::SetVirtualSizeHints
+wxSizerItem::SetWindow
+wxSizerItem::SetSpacer
+wxSizerItem::SetSizer
+wxMenuBar::GetLabelTop
+wxMenuBar::SetLabelTop
+wxMenuItem::SetText
+wxMenuItem::GetLabel
+wxMenuItem::GetLabelFromText
+wxMenuItem::GetName
+wxMenuItem::GetText
+wxKeyboardState::CmdDown
+wxArtProvider::Insert
+wxHtmlWindow::OnCellClicked
+wxHtmlWindow::OnCellMouseHover
+wxHtmlWindow::OnLinkClicked
+wxHtmlListBox::OnLinkClicked
+wxHtmlTag::GetBeginPos
+wxHtmlTag::GetEndPos1
+wxHtmlTag::GetEndPos2
+wxCursor::wxCursor
+wxThreadHelper::Create
+wxToolBar::OnRightClick
+wxGrid::SetCellValue
+wxComboCtrl::ShowPopup
+wxComboCtrl::SetTextIndent
+wxComboCtrl::HidePopup
+wxComboCtrl::GetTextIndent
+wxDataViewCustomRenderer::LeftClick
+
+
+
 Methods implemented unhandled argument declarations
 
 

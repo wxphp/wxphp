@@ -125,7 +125,6 @@ END_EXTERN_C()
 static zend_function_entry php_wxThreadHelper_functions[] = {
 	PHP_ME(php_wxThreadHelper, GetThread, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThreadHelper, CreateThread, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxThreadHelper, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif

@@ -512,9 +512,6 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTag_functions[] = {
 	PHP_ME(php_wxHtmlTag, GetAllParams, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxHtmlTag, GetBeginPos, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxHtmlTag, GetEndPos1, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxHtmlTag, GetEndPos2, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlTag, GetName, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlTag, GetParam, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlTag, GetParamAsColour, NULL, ZEND_ACC_PUBLIC)
@@ -536,9 +533,6 @@ class wxHtmlWindow_php: public wxHtmlWindow{
 	wxHtmlWindow_php():wxHtmlWindow(){}
 	wxHtmlWindow_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxHW_DEFAULT_STYLE, const wxString& name="htmlWindow"):wxHtmlWindow(parent, id, pos, size, style, name){}
 		
-	bool OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, const wxMouseEvent& event);
-	void OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y);
-	void OnLinkClicked(const wxHtmlLinkInfo& link);
 	void OnSetTitle(const wxString& title);
 	wxHtmlOpeningStatus OnOpeningURL(wxHtmlURLType type, const wxString& url, wxString* redirect) const;
 	
@@ -783,7 +777,6 @@ static zend_function_entry php_wxHtmlWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetOwnBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetOwnForegroundColour, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetPreviousHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetThemeEnabled, NULL, ZEND_ACC_PUBLIC)

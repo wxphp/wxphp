@@ -431,7 +431,6 @@ class wxCursor_php: public wxCursor{
 	wxCursor_php():wxCursor(){}
 	wxCursor_php(const wxImage& image):wxCursor(image){}
 	wxCursor_php(const wxCursor& cursor):wxCursor(cursor){}
-	wxCursor_php(const wxString& cursorName, wxBitmapType type=wxCURSOR_DEFAULT_TYPE, int hotSpotX=0, int hotSpotY=0):wxCursor(cursorName, type, hotSpotX, hotSpotY){}
 		
 	
 	

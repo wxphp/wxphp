@@ -86,7 +86,6 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxKeyboardState_functions[] = {
 	PHP_ME(php_wxKeyboardState, AltDown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxKeyboardState, CmdDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, ControlDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, GetModifiers, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, HasModifiers, NULL, ZEND_ACC_PUBLIC)
@@ -592,7 +591,6 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxKeyEvent_functions[] = {
 	PHP_ME(php_wxKeyboardState, AltDown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxKeyboardState, CmdDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, ControlDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, GetModifiers, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, HasModifiers, NULL, ZEND_ACC_PUBLIC)
@@ -1198,7 +1196,6 @@ static zend_function_entry php_wxMouseEvent_functions[] = {
 	PHP_ME(php_wxEvent, Skip, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEvent, StopPropagation, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, AltDown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxKeyboardState, CmdDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, ControlDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, GetModifiers, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, HasModifiers, NULL, ZEND_ACC_PUBLIC)
@@ -3466,7 +3463,6 @@ END_EXTERN_C()
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMouseState_functions[] = {
 	PHP_ME(php_wxKeyboardState, AltDown, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxKeyboardState, CmdDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, ControlDown, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, GetModifiers, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxKeyboardState, HasModifiers, NULL, ZEND_ACC_PUBLIC)

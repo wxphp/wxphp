@@ -194,6 +194,12 @@ for ($i = 0; $i < $entries->length; $i++)
 			{
 				$function_name = $class_xpath->evaluate("name", $class_member->item($member))->item(0)->nodeValue;
 				
+                $deprecated = false;
+                if(stristr($class_xpath->evaluate("detaileddescription", $class_member->item($member))->item(0)->nodeValue, "deprecated") !== false)
+                {
+                    $deprecated = true;
+                }
+                
 				//If method is implemented only on some platforms we store them
 				$platforms = false;
 				$member_availability = $class_xpath->evaluate("detaileddescription/para/onlyfor", $class_member->item($member));
@@ -302,23 +308,33 @@ for ($i = 0; $i < $entries->length; $i++)
 						}
 					}
 				}
-				
-				if($platforms)
-				{
-					$classes[$name][$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
-					"constant"=>$function_constant, "virtual"=>$function_virtual, "pure_virtual"=>$function_pure_virtual, 
-					"static"=>$function_static, "protected"=>$function_protected, "parameters_type"=>$parameters_type, 
-					"parameters_is_array"=>$parameters_is_array, "parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
-					"parameters_required"=>$parameters_required, "parameters_default_value"=>$parameters_values, "platforms"=>$platforms);
-				}
-				else
-				{
-					$classes[$name][$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
-					"constant"=>$function_constant, "virtual"=>$function_virtual, "pure_virtual"=>$function_pure_virtual, 
-					"static"=>$function_static, "protected"=>$function_protected, "parameters_type"=>$parameters_type, 
-					"parameters_is_array"=>$parameters_is_array, "parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
-					"parameters_required"=>$parameters_required, "parameters_default_value"=>$parameters_values);
-				}
+                
+                $function_properties = array();
+                $function_properties["return_type"] = $function_type;
+                $function_properties["brief_description"] = $function_brief_description;
+                $function_properties["constant"] = $function_constant;
+                $function_properties["virtual"] = $function_virtual;
+                $function_properties["pure_virtual"] = $function_pure_virtual;
+                $function_properties["static"] = $function_static;
+                $function_properties["protected"] = $function_protected;
+                $function_properties["parameters_type"] = $parameters_type;
+                $function_properties["parameters_is_array"] = $parameters_is_array;
+                $function_properties["parameters_extra"] = $parameters_extra;
+                $function_properties["parameters_name"] = $parameters_name;
+                $function_properties["parameters_required"] = $parameters_required;
+                $function_properties["parameters_default_value"] = $parameters_values;
+                
+                if($platforms)
+                {
+                    $function_properties["platforms"] = $platforms;
+                }
+                
+                if($deprecated)
+                {
+                    $function_properties["deprecated"] = $deprecated;
+                }
+                
+                $classes[$name][$function_name][] = $function_properties;
 			}
 			
 			//Class enumerations
