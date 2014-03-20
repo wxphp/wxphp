@@ -6,19 +6,19 @@ CPU_CORES=`grep processor /proc/cpuinfo | wc -l`
 CORES_COUNT=$[(($CPU_CORES / 2) + 1)]
 
 # Download wxWidgets from sourceforge
-if [ ! -e "wxWidgets-3.0.0" ]; then
-    wget http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
-    tar -xjf wxWidgets-3.0.0.tar.bz2
-    rm wxWidgets-3.0.0.tar.bz2
+if [ ! -e "wxWidgets-3.1.0" ]; then
+    wget http://downloads.sourceforge.net/wxwindows/wxWidgets-3.1.0.tar.bz2
+    tar -xjf wxWidgets-3.1.0.tar.bz2
+    rm wxWidgets-3.1.0.tar.bz2
 fi
 
 # Build wxWidgets if not already build
-cd wxWidgets-3.0.0
+cd wxWidgets-3.1.0
 
 mkdir mybuild
 cd mybuild
 
-WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.0.0\/mybuild//"`wxWidgets-build
+WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.1.0\/mybuild//"`wxWidgets-build
 
 CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2"  \
 ../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic

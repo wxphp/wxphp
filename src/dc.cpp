@@ -9675,7 +9675,7 @@ PHP_METHOD(php_wxDC, GetBackground)
 /* }}} */
 
 /* {{{ proto int wxDC::GetBackgroundMode()
-   Returns the current background mode: wxSOLID or wxTRANSPARENT. */
+   Returns the current background mode: wxPENSTYLE_SOLID or wxPENSTYLE_TRANSPARENT. */
 PHP_METHOD(php_wxDC, GetBackgroundMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18782,7 +18782,7 @@ PHP_METHOD(php_wxDC, SetBackground)
 /* }}} */
 
 /* {{{ proto  wxDC::SetBackgroundMode(int mode)
-   mode may be one of wxSOLID and wxTRANSPARENT. */
+   mode may be one of wxPENSTYLE_SOLID and wxPENSTYLE_TRANSPARENT. */
 PHP_METHOD(php_wxDC, SetBackgroundMode)
 {
 	#ifdef USE_WXPHP_DEBUG

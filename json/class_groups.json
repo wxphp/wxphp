@@ -248,6 +248,9 @@
 	],
 	"group_class_dc":[
 		"wxFontMetrics",
+		"wxSVGBitmapHandler",
+		"wxSVGBitmapEmbedHandler",
+		"wxSVGBitmapFileHandler",
 		"wxDC",
 		"wxBufferedDC",
 		"wxAutoBufferedPaintDC",

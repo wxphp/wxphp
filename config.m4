@@ -1,5 +1,5 @@
 PHP_ARG_WITH(wxwidgets,for wxWidgets support,
-[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.0.0).])
+[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.1.0).])
 
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
@@ -96,7 +96,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
             AC_MSG_RESULT([found])
         else
             if test "$CURL" != ""; then
-                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-3.0.0.tar.bz2"
+                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-3.1.0.tar.bz2"
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
@@ -104,22 +104,22 @@ if test "$PHP_WXWIDGETS" != "no"; then
             fi
         fi
         
-        if test ! -e "wxWidgets-3.0.0"; then
+        if test ! -e "wxWidgets-3.1.0"; then
             echo "Downloading wxWidgets..."
-            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
-            tar -xjf wxWidgets-3.0.0.tar.bz2
-            rm wxWidgets-3.0.0.tar.bz2
+            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-3.1.0.tar.bz2
+            tar -xjf wxWidgets-3.1.0.tar.bz2
+            rm wxWidgets-3.1.0.tar.bz2
         fi
 
         dnl Build wxWidgets if not already build
         echo "Starting a custom build of wxWidgets..."
         
-        cd wxWidgets-3.0.0
+        cd wxWidgets-3.1.0
 
         mkdir mybuild
         cd mybuild
 
-        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.0.0\/mybuild//"`wxWidgets-build
+        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.1.0\/mybuild//"`wxWidgets-build
 
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then

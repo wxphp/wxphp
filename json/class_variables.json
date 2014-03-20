@@ -1793,6 +1793,69 @@
 			"protected":true,
 			"public":false
 		},
+		"m_scale":{
+			"type":"double",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_lastWindowSize":{
+			"type":"wxSize",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_setupScrollbarsCount":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_setupScrollbarsCountInOnSize":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_enableImages":{
+			"type":"bool",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_enableDelayedImageLoading":{
+			"type":"bool",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_delayedImageProcessingRequired":{
+			"type":"bool",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_delayedImageProcessingTime":{
+			"type":"wxLongLong",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_delayedImageProcessingTimer":{
+			"type":"wxTimer",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
 		"sm_availableFontNames":{
 			"type":"wxArrayString",
 			"static":true,
@@ -1804,6 +1867,34 @@
 	"wxRichTextDrawingContext":{
 		"m_buffer":{
 			"type":"wxRichTextBuffer *",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_enableVirtualAttributes":{
+			"type":"bool",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_enableImages":{
+			"type":"bool",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_enableDelayedImageLoading":{
+			"type":"bool",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_layingOut":{
+			"type":"bool",
 			"static":false,
 			"mutable":false,
 			"protected":false,
@@ -2032,6 +2123,20 @@
 			"mutable":false,
 			"protected":true,
 			"public":false
+		},
+		"m_originalImageSize":{
+			"type":"wxSize",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_imageState":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
 		}
 	},
 	"wxRichTextImageBlock":{
@@ -2192,6 +2297,13 @@
 	"wxRichTextParagraph":{
 		"m_cachedLines":{
 			"type":"wxRichTextLineList",
+			"static":false,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
+		"m_impactedByFloatingObjects":{
+			"type":"int",
 			"static":false,
 			"mutable":false,
 			"protected":true,
@@ -2609,6 +2721,20 @@
 		},
 		"m_verticalAlignment":{
 			"type":"wxTextBoxAttrVerticalAlignment",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_whitespaceMode":{
+			"type":"wxTextBoxAttrWhitespaceMode",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_cornerRadius":{
+			"type":"wxTextAttrDimension",
 			"static":false,
 			"mutable":false,
 			"protected":false,

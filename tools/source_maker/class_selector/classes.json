@@ -3774,7 +3774,7 @@
 		"SetSizeHints":[
 			{
 				"return_type":"void",
-				"brief_description":"Prepare for changing positions of multiple child windows.",
+				"brief_description":"This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
 				"constant":false,
 				"virtual":true,
 				"pure_virtual":false,
@@ -9972,7 +9972,7 @@
 		"SetWindowVariant":[
 			{
 				"return_type":"void",
-				"brief_description":"This function can be called under all platforms but only does anything under Mac OS X 10.3+ currently.",
+				"brief_description":"Chooses a different variant of the window display to use.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -31051,7 +31051,7 @@
 		"GetBackgroundMode":[
 			{
 				"return_type":"int",
-				"brief_description":"Returns the current background mode: wxSOLID or wxTRANSPARENT.",
+				"brief_description":"Returns the current background mode: wxPENSTYLE_SOLID or wxPENSTYLE_TRANSPARENT.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -32570,7 +32570,7 @@
 		"SetBackgroundMode":[
 			{
 				"return_type":"void",
-				"brief_description":"mode may be one of wxSOLID and wxTRANSPARENT.",
+				"brief_description":"mode may be one of wxPENSTYLE_SOLID and wxPENSTYLE_TRANSPARENT.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,
@@ -35384,7 +35384,7 @@
 		"GetNativeFontInfo":[
 			{
 				"return_type":"const wxNativeFontInfo*",
-				"brief_description":"Returns the encoding of this font.",
+				"brief_description":"Returns a font with the same face\/size as the given one but with normal weight and style and not underlined nor stricken through.",
 				"constant":true,
 				"virtual":false,
 				"pure_virtual":false,
@@ -38593,9 +38593,11 @@
 					"const wxBitmap&"
 				],
 				"parameters_is_array":[
+					false,
 					false
 				],
 				"parameters_extra":[
+					false,
 					false
 				],
 				"parameters_name":[
@@ -143361,7 +143363,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetCellBackgroundColour":[
@@ -143652,7 +143655,8 @@
 					null,
 					null,
 					null
-				]
+				],
+				"deprecated":true
 			},
 			{
 				"return_type":"void",
@@ -143679,7 +143683,8 @@
 				],
 				"parameters_default_value":[
 					null
-				]
+				],
+				"deprecated":true
 			}
 		],
 		"SetCellValue":[
@@ -217083,7 +217088,7 @@
 		"GetState":[
 			{
 				"return_type":"wxMediaState",
-				"brief_description":"Obtains the state the playback of the media is in -.",
+				"brief_description":"Obtains the state the playback of the media is in.",
 				"constant":false,
 				"virtual":false,
 				"pure_virtual":false,

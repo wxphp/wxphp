@@ -2,7 +2,7 @@
 
 pkgname=php-wxwidgets-git
 pkgver=20132012
-_pkgver=3.0.0
+_pkgver=3.1.0
 pkgrel=1
 pkgdesc="PHP bindings to the cross-platform wxWidgets GUI Toolkit library."
 arch=('i686' 'x86_64')

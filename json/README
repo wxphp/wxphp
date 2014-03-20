@@ -86,9 +86,10 @@ consts.json (Fixed on wxWidgets SVN)
 includes.json
 ======================
 1. Remove: wx/preferences.h
+2. Remove: wx/html/webkit.h
 
 
-enums.json
+enums.json (Fixed on wxWidgets SVN)
 ======================
 1. Added: "wxMediaState":[
 			"wxMEDIASTATE_STOPPED",
