@@ -30,7 +30,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
         AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.1.x])
         for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
             dnl search for know command names (prefered first)
-            for cmd in wx-config-3.0 wx-config; do
+            for cmd in wx-config-3.1 wx-config; do
                 if test -e "$directory/$cmd"; then
                     wxwidgets_version=`$directory/$cmd --version`
                     version_check=`echo $wxwidgets_version | grep "3.1" && echo $wxwidgets_version | grep "0.[0-9]"`
