@@ -554,16 +554,12 @@ wxMenuItem::GetLabel
 wxMenuItem::GetLabelFromText
 wxMenuItem::GetName
 wxMenuItem::GetText
+wxMenu::Append
 wxKeyboardState::CmdDown
 wxArtProvider::Insert
-wxHtmlWindow::OnCellClicked
-wxHtmlWindow::OnCellMouseHover
-wxHtmlWindow::OnLinkClicked
-wxHtmlListBox::OnLinkClicked
 wxHtmlTag::GetBeginPos
 wxHtmlTag::GetEndPos1
 wxHtmlTag::GetEndPos2
-wxCursor::wxCursor
 wxThreadHelper::Create
 wxToolBar::OnRightClick
 wxGrid::SetCellValue
@@ -571,7 +567,6 @@ wxComboCtrl::ShowPopup
 wxComboCtrl::SetTextIndent
 wxComboCtrl::HidePopup
 wxComboCtrl::GetTextIndent
-wxDataViewCustomRenderer::LeftClick
 
 
 

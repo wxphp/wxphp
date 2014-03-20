@@ -195,7 +195,7 @@ for ($i = 0; $i < $entries->length; $i++)
 				$function_name = $class_xpath->evaluate("name", $class_member->item($member))->item(0)->nodeValue;
 				
                 $deprecated = false;
-                if(stristr($class_xpath->evaluate("detaileddescription", $class_member->item($member))->item(0)->nodeValue, "deprecated") !== false)
+                if(strstr($class_xpath->evaluate("detaileddescription", $class_member->item($member))->item(0)->nodeValue, "Deprecated") !== false)
                 {
                     $deprecated = true;
                 }

@@ -8944,6 +8944,270 @@ PHP_METHOD(php_wxHtmlWindow, LoadFile)
 }
 /* }}} */
 
+/* {{{ proto bool wxHtmlWindow::OnCellClicked(wxHtmlCell &cell, int x, int y, wxMouseEvent event)
+   This method is called when a mouse button is clicked inside wxHtmlWindow. */
+bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, const wxMouseEvent& event)
+{
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxHtmlWindow::OnCellClicked\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval** params[4];
+	zval *arguments[4];
+	
+	//Initilize arguments array
+	for(int i=0; i<4; i++)
+	{
+		ALLOC_INIT_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnCellClicked", 0);
+	char* temp_string;
+	void* return_object;
+	int function_called;
+	
+	//Parameters for conversion
+	object_init_ex(arguments[0], php_wxHtmlCell_entry);
+	((zo_wxHtmlCell*) zend_object_store_get_object(arguments[0] TSRMLS_CC))->native_object = (wxHtmlCell_php*) cell;
+	ZVAL_LONG(arguments[1], x);
+	ZVAL_LONG(arguments[2], y);
+	object_init_ex(arguments[3], php_wxMouseEvent_entry);
+	((zo_wxMouseEvent*) zend_object_store_get_object(arguments[3] TSRMLS_CC))->native_object = (wxMouseEvent_php*) &event;
+		
+	for(int i=0; i<4; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnCellClicked", 13, &return_value, 4, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
+    
+    	
+	//Delete already used parameters from memory
+	for(int i=0; i<4; i++)
+	{
+		zval_ptr_dtor(&arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
+	{
+		is_php_user_space_implemented = false;
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return Z_BVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxHtmlWindow::OnCellClicked(cell, x, y, event);
+}
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::OnCellMouseHover(wxHtmlCell &cell, int x, int y)
+   This method is called when a mouse moves over an HTML cell. */
+void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
+{
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxHtmlWindow::OnCellMouseHover\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval** params[3];
+	zval *arguments[3];
+	
+	//Initilize arguments array
+	for(int i=0; i<3; i++)
+	{
+		ALLOC_INIT_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnCellMouseHover", 0);
+	char* temp_string;
+	void* return_object;
+	int function_called;
+	
+	//Parameters for conversion
+	object_init_ex(arguments[0], php_wxHtmlCell_entry);
+	((zo_wxHtmlCell*) zend_object_store_get_object(arguments[0] TSRMLS_CC))->native_object = (wxHtmlCell_php*) cell;
+	ZVAL_LONG(arguments[1], x);
+	ZVAL_LONG(arguments[2], y);
+		
+	for(int i=0; i<3; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnCellMouseHover", 16, &return_value, 3, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
+    
+    	
+	//Delete already used parameters from memory
+	for(int i=0; i<3; i++)
+	{
+		zval_ptr_dtor(&arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
+	{
+		is_php_user_space_implemented = false;
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return;
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	wxHtmlWindow::OnCellMouseHover(cell, x, y);
+}
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::OnLinkClicked(wxHtmlLinkInfo link)
+   Called when user clicks on hypertext link. */
+void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
+{
+	static zend_function* cached_function = NULL;
+	static bool is_php_user_space_implemented = true;
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxHtmlWindow::OnLinkClicked\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval** params[1];
+	zval *arguments[1];
+	
+	//Initilize arguments array
+	for(int i=0; i<1; i++)
+	{
+		ALLOC_INIT_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnLinkClicked", 0);
+	char* temp_string;
+	void* return_object;
+	int function_called;
+	
+	//Parameters for conversion
+	object_init_ex(arguments[0], php_wxHtmlLinkInfo_entry);
+	((zo_wxHtmlLinkInfo*) zend_object_store_get_object(arguments[0] TSRMLS_CC))->native_object = (wxHtmlLinkInfo_php*) &link;
+		
+	for(int i=0; i<1; i++)
+	{
+		params[i] = &arguments[i];
+	}
+
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(is_php_user_space_implemented)
+	{
+		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnLinkClicked", 13, &return_value, 1, params TSRMLS_CC);
+	}
+	else
+	{
+		function_called = FAILURE;
+	}
+    
+    	
+	//Delete already used parameters from memory
+	for(int i=0; i<1; i++)
+	{
+		zval_ptr_dtor(&arguments[i]);
+	}
+	
+	if(function_called == FAILURE)
+	{
+		is_php_user_space_implemented = false;
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return;
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	wxHtmlWindow::OnLinkClicked(link);
+}
+/* }}} */
+
 /* {{{ proto  wxHtmlWindow::OnSetTitle(string title)
    Called on parsing <TITLE> tag. */
 void wxHtmlWindow_php::OnSetTitle(const wxString& title)

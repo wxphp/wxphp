@@ -10908,6 +10908,13 @@ PHP_METHOD(php_wxCursor, __construct)
 	zval* cursor2 = 0;
 	wxCursor* object_pointer2_0 = 0;
 	bool overload2_called = false;
+	//Parameters for overload 3
+	char* cursorName3;
+	long cursorName_len3;
+	long type3;
+	long hotSpotX3;
+	long hotSpotY3;
+	bool overload3_called = false;
 		
 	//Overload 0
 	overload0:
@@ -10976,16 +10983,33 @@ PHP_METHOD(php_wxCursor, __construct)
 					object_pointer2_0 = (wxCursor*) argument_native_object;
 					if (!object_pointer2_0 )
 					{
-						zend_error(E_ERROR, "Parameter 'cursor' could not be retreived correctly.");
+						goto overload3;
 					}
 				}
 				else if(Z_TYPE_P(cursor2) != IS_NULL)
 				{
-					zend_error(E_ERROR, "Parameter 'cursor' not null, could not be retreived correctly.");
+					goto overload3;
 				}
 			}
 
 			overload2_called = true;
+			already_called = true;
+		}
+	}
+
+	//Overload 3
+	overload3:
+	if(!already_called && arguments_received >= 1  && arguments_received <= 4)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's|lll' (&cursorName3, &cursorName_len3, &type3, &hotSpotX3, &hotSpotY3)\n");
+		#endif
+
+		char parse_parameters_string[] = "s|lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursorName3, &cursorName_len3, &type3, &hotSpotX3, &hotSpotY3 ) == SUCCESS)
+		{
+			overload3_called = true;
 			already_called = true;
 		}
 	}
@@ -11042,6 +11066,57 @@ PHP_METHOD(php_wxCursor, __construct)
 
 				native_object->references.Initialize();
 				((wxCursor_php*) native_object)->references.AddReference(cursor2, "wxCursor::wxCursor at call with 1 argument(s)");
+				break;
+			}
+		}
+	}
+
+	if(overload3_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(wxString(cursorName3, wxConvUTF8))\n");
+				#endif
+
+				native_object = new wxCursor_php(wxString(cursorName3, wxConvUTF8));
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(wxString(cursorName3, wxConvUTF8), (wxBitmapType) type3)\n");
+				#endif
+
+				native_object = new wxCursor_php(wxString(cursorName3, wxConvUTF8), (wxBitmapType) type3);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 3:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(wxString(cursorName3, wxConvUTF8), (wxBitmapType) type3, (int) hotSpotX3)\n");
+				#endif
+
+				native_object = new wxCursor_php(wxString(cursorName3, wxConvUTF8), (wxBitmapType) type3, (int) hotSpotX3);
+
+				native_object->references.Initialize();
+				break;
+			}
+			case 4:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(wxString(cursorName3, wxConvUTF8), (wxBitmapType) type3, (int) hotSpotX3, (int) hotSpotY3)\n");
+				#endif
+
+				native_object = new wxCursor_php(wxString(cursorName3, wxConvUTF8), (wxBitmapType) type3, (int) hotSpotX3, (int) hotSpotY3);
+
+				native_object->references.Initialize();
 				break;
 			}
 		}

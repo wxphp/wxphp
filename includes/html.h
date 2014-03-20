@@ -533,6 +533,9 @@ class wxHtmlWindow_php: public wxHtmlWindow{
 	wxHtmlWindow_php():wxHtmlWindow(){}
 	wxHtmlWindow_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=wxHW_DEFAULT_STYLE, const wxString& name="htmlWindow"):wxHtmlWindow(parent, id, pos, size, style, name){}
 		
+	bool OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, const wxMouseEvent& event);
+	void OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y);
+	void OnLinkClicked(const wxHtmlLinkInfo& link);
 	void OnSetTitle(const wxString& title);
 	wxHtmlOpeningStatus OnOpeningURL(wxHtmlURLType type, const wxString& url, wxString* redirect) const;
 	

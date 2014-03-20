@@ -10663,8 +10663,7 @@
 					null,
 					"NULL",
 					"NULL"
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"AddFilter":[
@@ -94422,8 +94421,7 @@
 					null,
 					null,
 					null
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"OnCellMouseHover":[
@@ -94464,8 +94462,7 @@
 					null,
 					null,
 					null
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"OnLinkClicked":[
@@ -94494,8 +94491,7 @@
 				],
 				"parameters_default_value":[
 					null
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"OnSetTitle":[
@@ -100043,8 +100039,7 @@
 				"parameters_default_value":[
 					null,
 					null
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"GetSelectedTextColour":[
@@ -102278,8 +102273,7 @@
 					"wxCURSOR_DEFAULT_TYPE",
 					"0",
 					"0"
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"_implements":[
@@ -162570,8 +162564,7 @@
 					null,
 					null,
 					null
-				],
-				"deprecated":true
+				]
 			}
 		],
 		"StartDrag":[

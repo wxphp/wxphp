@@ -6863,6 +6863,7 @@ class wxHtmlListBox_php: public wxHtmlListBox{
 	wxHtmlListBox_php():wxHtmlListBox(){}
 	wxHtmlListBox_php(wxWindow* parent, wxWindowID id=wxID_ANY, const wxPoint& pos=wxDefaultPosition, const wxSize& size=wxDefaultSize, long style=0, const wxString& name=wxHtmlListBoxNameStr):wxHtmlListBox(parent, id, pos, size, style, name){}
 		
+	void OnLinkClicked(size_t n, const wxHtmlLinkInfo& link);
 	wxColour GetSelectedTextColour(const wxColour& colFg) const;
 	wxColour GetSelectedTextBgColour(const wxColour& colBg) const;
 	wxString OnGetItemMarkup(size_t n) const;

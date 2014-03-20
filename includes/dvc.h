@@ -668,6 +668,7 @@ static zend_function_entry php_wxDataViewSpinRenderer_functions[] = {
 	PHP_ME(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, HasEditorCtrl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, RenderText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewCustomRenderer, LeftClick, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, StartDrag, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewSpinRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
@@ -829,6 +830,7 @@ static zend_function_entry php_wxDataViewCustomRenderer_functions[] = {
 	PHP_ME(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, HasEditorCtrl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, RenderText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewCustomRenderer, LeftClick, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewCustomRenderer, StartDrag, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
