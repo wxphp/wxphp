@@ -275,6 +275,8 @@ foreach($defFunctions as $function_name=>$function_definitions)
 					
 					if($argument_value == "wxString()")
 						$argument_value = "''";
+					elseif(strpos($argument_value, "|") !== false)
+						$argument_value = "null";
 						
 					$argument_type = explode(" ", $argument_data);
 					
@@ -309,8 +311,10 @@ foreach($defIni as $class_name=>$class_methods)
 	//Move constructor to top if available
 	if(isset($class_methods[$class_name]))
 	{
-		$constructor = array();
-		$constructor[$class_name] = $class_methods[$class_name];
+		$constructor = array(
+			'__construct' => $class_methods[$class_name],
+			$class_name   => $class_methods[$class_name]
+		);
 		
 		unset($class_methods[$class_name]);
 		
@@ -345,11 +349,11 @@ foreach($defIni as $class_name=>$class_methods)
 	
 	foreach($class_methods as $method_name=>$method_definitions)
 	{
-		if($method_name{0} != "_")
+		if($method_name{0} != "_" || $method_name{1} == "_")
 		{
 			$content .= generata_documentation($method_name, $method_definitions, 1)."\n";
 			
-			$content .= "\t";
+			$content .= "\tpublic ";
 			
 			if($method_definitions[0]["static"])
 			{
@@ -369,7 +373,7 @@ foreach($defIni as $class_name=>$class_methods)
 					{
 						$arguments .= $argument_data;
 						
-						if($method_definition["parameters_default_value"][$parameter_index])
+						if(isset($method_definition["parameters_default_value"][$parameter_index]))
 						{
 							$argument_value = $method_definition["parameters_default_value"][$parameter_index];
 					
@@ -383,7 +387,7 @@ foreach($defIni as $class_name=>$class_methods)
 								$argument_value = str_replace(array("wxT(", ")"), "", $argument_value);
 							elseif($argument_value{0} == "w" && $argument_value{1} == "x" && "" . strstr($argument_value, "(") . "" != "")
 								$argument_value = "null";
-							elseif(count(explode("|", $argument_value)) > 1)
+							elseif(strpos($argument_value, "|") !== false)
 								$argument_value = "null";
 								
 							$argument_type = explode(" ", $argument_data);
@@ -708,7 +712,13 @@ function get_type_doc_param($type, $type_name, $function_name, $class_name=null)
 	return $method_type;
 }
 
-
+/**
+ * @param string $type Type of the parameter (declared as a reference in case the value needs to be substitued).
+ * @param string $type_name
+ * @param string $function_name
+ * @param string $class_name
+ * @return string
+ */
 function get_argument_declaration($type, $type_name, $function_name, $class_name=null)
 {
 	$declaration_modifier = "";
@@ -928,7 +938,7 @@ function get_argument_declaration($type, $type_name, $function_name, $class_name
 			{
 				case "pointer": //object*
 				case "reference": //object&
-					$method_type = "$cleaned_type &\$$type_name";
+					$method_type = "$cleaned_type \$$type_name";
 					break;
 					
 				case "const_pointer": //const bool* Array
@@ -946,5 +956,3 @@ function get_argument_declaration($type, $type_name, $function_name, $class_name
 	
 	return $method_type;
 }
-
-?>
