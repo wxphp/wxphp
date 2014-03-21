@@ -45,8 +45,6 @@ PHP_FUNCTION(php_wxUninitialize);
 
 PHP_FUNCTION(php_wxWakeUpIdle);
 
-PHP_FUNCTION(php_wxYield);
-
 PHP_FUNCTION(php_wxSafeYield);
 
 PHP_FUNCTION(php_wxExit);
@@ -116,8 +114,6 @@ PHP_FUNCTION(php_wxGetOSDirectory);
 PHP_FUNCTION(php_wxParseCommonDialogsFilter);
 
 PHP_FUNCTION(php_wxDirExists);
-
-PHP_FUNCTION(php_wxSplitPath);
 
 PHP_FUNCTION(php_wxRenameFile);
 
@@ -259,13 +255,7 @@ PHP_FUNCTION(php_wxEnableTopLevelWindows);
 
 PHP_FUNCTION(php_wxFindWindowAtPoint);
 
-PHP_FUNCTION(php_wxFindWindowByLabel);
-
-PHP_FUNCTION(php_wxFindWindowByName);
-
 PHP_FUNCTION(php_wxFindMenuItemId);
-
-PHP_FUNCTION(php_wxNewId);
 
 PHP_FUNCTION(php_wxRegisterId);
 
@@ -304,8 +294,6 @@ PHP_FUNCTION(php_wxMilliSleep);
 PHP_FUNCTION(php_wxNow);
 
 PHP_FUNCTION(php_wxSleep);
-
-PHP_FUNCTION(php_wxUsleep);
 
 PHP_FUNCTION(php_wxIsEmpty);
 

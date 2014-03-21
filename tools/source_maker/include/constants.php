@@ -808,7 +808,6 @@ $defConsts["wxEVT_END_SESSION"] = true;
 $defConsts["wxEVT_ENTER_WINDOW"] = true;
 $defConsts["wxEVT_ERASE_BACKGROUND	"] = true;
 $defConsts["wxEVT_GRID_CELL_BEGIN_DRAG"] = true;
-$defConsts["wxEVT_GRID_CELL_CHANGE"] = true;
 $defConsts["wxEVT_GRID_CELL_LEFT_CLICK"] = true;
 $defConsts["wxEVT_GRID_CELL_LEFT_DCLICK"] = true;
 $defConsts["wxEVT_GRID_CELL_RIGHT_CLICK"] = true;

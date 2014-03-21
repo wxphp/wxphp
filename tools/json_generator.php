@@ -481,6 +481,12 @@ for ($i = 0; $i < $entries->length; $i++)
 						$function_type = $file_xpath->evaluate("type", $file_members->item($member))->item(0)->nodeValue;
 						$function_brief_description = trim($file_xpath->evaluate("briefdescription", $file_members->item($member))->item(0)->nodeValue);
 						$function_type = str_replace(array(" *", " &"), array("*", "&"), $function_type);
+                        
+                        $deprecated = false;
+                        if(strstr($file_xpath->evaluate("detaileddescription", $file_members->item($member))->item(0)->nodeValue, "Deprecated") !== false)
+                        {
+                            $deprecated = true;
+                        }
 						
 						//Check all function parameters
 						$function_parameters = $file_xpath->evaluate("param", $file_members->item($member));
@@ -530,11 +536,23 @@ for ($i = 0; $i < $entries->length; $i++)
 								$parameters_value[] = null;
 							}
 						}
+                        
+                        $function_properties = array();
+                        $function_properties["return_type"] = $function_type;
+                        $function_properties["brief_description"] = $function_brief_description;
+                        $function_properties["parameters_type"] = $parameters_type;
+                        $function_properties["parameters_is_array"] = $parameters_is_array;
+                        $function_properties["parameters_extra"] = $parameters_extra;
+                        $function_properties["parameters_name"] = $parameters_name;
+                        $function_properties["parameters_required"] = $parameters_required;
+                        $function_properties["parameters_default_value"] = $parameters_value;
+                        
+                        if($deprecated)
+                        {
+                            $function_properties["deprecated"] = $deprecated;
+                        }
 						
-						$functions[$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
-						"parameters_type"=>$parameters_type, "parameters_is_array"=>$parameters_is_array, 
-						"parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
-						"parameters_required"=>$parameters_required, "parameters_default_value"=>$parameters_value);
+						$functions[$function_name][] = $function_properties;
 					}
 				}
 			}

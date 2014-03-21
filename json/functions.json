@@ -189,7 +189,8 @@
 			],
 			"parameters_default_value":[
 				
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxSafeYield":[
@@ -1107,7 +1108,8 @@
 				null,
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxVLogTrace":[
@@ -3744,7 +3746,8 @@
 			],
 			"parameters_default_value":[
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxUnix2DosFilename":[
@@ -3768,7 +3771,8 @@
 			],
 			"parameters_default_value":[
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxDirExists":[
@@ -3834,7 +3838,8 @@
 				null,
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxFileModificationTime":[
@@ -4017,7 +4022,8 @@
 			"parameters_default_value":[
 				"NULL",
 				"1000"
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxPathOnly":[
@@ -4378,7 +4384,8 @@
 			],
 			"parameters_default_value":[
 				null
-			]
+			],
+			"deprecated":true
 		},
 		{
 			"return_type":"char*",
@@ -4429,7 +4436,8 @@
 			"parameters_default_value":[
 				null,
 				"NULL"
-			]
+			],
+			"deprecated":true
 		},
 		{
 			"return_type":"bool",
@@ -5135,7 +5143,8 @@
 			"parameters_default_value":[
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxTraceLevel":[
@@ -5171,7 +5180,8 @@
 				null,
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxMakeMetafilePlaceable":[
@@ -6938,7 +6948,8 @@
 			"parameters_default_value":[
 				null,
 				"NULL"
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxFindWindowByName":[
@@ -6967,7 +6978,8 @@
 			"parameters_default_value":[
 				null,
 				"NULL"
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxFindMenuItemId":[
@@ -7027,7 +7039,8 @@
 			],
 			"parameters_default_value":[
 				
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxRegisterId":[
@@ -7216,7 +7229,8 @@
 			],
 			"parameters_default_value":[
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxQsort":[
@@ -7369,7 +7383,8 @@
 			"parameters_default_value":[
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxGetFreeMemory":[
@@ -7469,7 +7484,8 @@
 			"parameters_default_value":[
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxGetFullHostName":[
@@ -7569,7 +7585,8 @@
 			"parameters_default_value":[
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxGetUserName":[
@@ -7621,7 +7638,8 @@
 			"parameters_default_value":[
 				null,
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxGetOsDescription":[
@@ -8172,7 +8190,8 @@
 			],
 			"parameters_default_value":[
 				null
-			]
+			],
+			"deprecated":true
 		}
 	],
 	"wxMakeFloatingPointValidator":[

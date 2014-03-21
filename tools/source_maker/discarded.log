@@ -506,6 +506,17 @@ const wchar_t*	unsigned long wxStrtoul_l(const wchar_t* c, wchar_t** endptr, int
 
 
 
+Deprecated Functions
+
+bool wxYield()
+void wxSplitPath(const wxString& fullname, wxString* path, wxString* name, wxString* ext)
+wxWindow* wxFindWindowByLabel(const wxString& label, wxWindow* parent=NULL)
+wxWindow* wxFindWindowByName(const wxString& name, wxWindow* parent=NULL)
+int wxNewId()
+void wxUsleep(unsigned long milliseconds)
+
+
+
 Not Crossplatform Classes
 
 wxMouseCaptureLostEvent

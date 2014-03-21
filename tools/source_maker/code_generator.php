@@ -182,6 +182,11 @@ if(file_exists("./../../json/global_variables.json"))
 	unset($defGlobals['wxEVT_POWER_SUSPENDED']);
 	unset($defGlobals['wxEVT_POWER_SUSPEND_CANCEL']);
 	unset($defGlobals['wxEVT_POWER_RESUME']);
+    
+    //Disable wxWebKitCtrl constants since it is only available for mac
+    unset($defGlobals['wxEVT_WEBKIT_STATE_CHANGED']);
+    unset($defGlobals['wxEVT_WEBKIT_BEFORE_LOAD']);
+    unset($defGlobals['wxEVT_WEBKIT_NEW_WINDOW']);
 }
 
 //Load typedef parsed by the json_generator
@@ -222,6 +227,9 @@ remove_methods_implementing_unknown_types($defIni);
 
 //Removes functions implementing unknown parameter types or return types
 remove_functions_implementing_unknown_types($defFunctions);
+
+//Remove deprecated functions.
+remove_deprecated_functions($defFunctions);
 
 //Remove classes and methods not implemented on all 3 target platforms (windows, linux, mac)
 remove_classes_and_methods_not_crossplatform($defIni);

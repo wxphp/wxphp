@@ -895,6 +895,68 @@ function remove_functions_implementing_unknown_types(&$functions)
 }
 
 /**
+ * For removing global functions marked as deprecated.
+ * 
+ * @param array $functions Reference to variable that holds list of functions
+ */
+function remove_deprecated_functions(&$functions)
+{
+	file_put_contents("discarded.log", "Deprecated Functions\n\n", FILE_APPEND);
+	
+	foreach($functions as $function_name=>$function_definitions)
+	{
+		$removed_definitions = 0;
+		
+		foreach($function_definitions as $function_index=>$function_definition)
+		{
+			$index_to_remove =  $function_index - $removed_definitions;
+			
+			$removed = false;
+			
+			//Check return type
+			if($function_definition["deprecated"])
+			{
+				file_put_contents(
+                    "discarded.log", 
+                    $function_definition["return_type"]
+                    . " $function_name(" 
+                    . function_arguments_string($function_definition) 
+                    . ")\n"
+                    , FILE_APPEND
+                );
+                
+				unset($functions[$function_name][$index_to_remove]);
+				$removed = true;
+			}
+			
+			if($removed)
+			{
+				$removed_definitions++;
+					
+				//Remove functions with no definitions
+				if(count($functions[$function_name]) <= 0)
+				{
+					unset($functions[$function_name]);
+				}
+				//Reassign functions definitions indexes
+				else
+				{
+					$temp_definitions = $functions[$function_name];
+					$functions[$function_name] = array();
+					
+					foreach($temp_definitions as $temp_definition)
+					{
+						$functions[$function_name][] = $temp_definition;
+					}
+				}
+			}
+		}
+	}
+	
+	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
+}
+
+/**
  * Removes methods and classes that arent implemented on all
  * target platforms (windows, linux, mac)
  * 

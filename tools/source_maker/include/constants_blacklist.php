@@ -140,4 +140,25 @@ unset($defConsts['wxSTC_FS_ERROR']);
 unset($defConsts['wxSTC_FS_HEXNUMBER']);
 unset($defConsts['wxSTC_FS_LABEL']);
 
+//Disable wxWebKitCtrl constants since it is only available for mac
+unset($defConsts['wxWEBKIT_STATE_START']);
+unset($defConsts['wxWEBKIT_STATE_NEGOTIATING']);
+unset($defConsts['wxWEBKIT_STATE_REDIRECTING']);
+unset($defConsts['wxWEBKIT_STATE_TRANSFERRING']);
+unset($defConsts['wxWEBKIT_STATE_STOP']);
+unset($defConsts['wxWEBKIT_STATE_FAILED']);
+unset($defConsts['wxWEBKIT_NAV_LINK_CLICKED']);
+unset($defConsts['wxWEBKIT_NAV_BACK_NEXT']);
+unset($defConsts['wxWEBKIT_NAV_FORM_SUBMITTED']);
+unset($defConsts['wxWEBKIT_NAV_RELOAD']);
+unset($defConsts['wxWEBKIT_NAV_FORM_RESUBMITTED']);
+unset($defConsts['wxWEBKIT_NAV_OTHER']);
+
+unset($defGlobals['wxEVT_WEBKIT_STATE_CHANGED']);
+unset($defGlobals['wxEVT_WEBKIT_BEFORE_LOAD']);
+unset($defGlobals['wxEVT_WEBKIT_NEW_WINDOW']);
+
+//Disable deprecated constants
+unset($defConsts['wxTR_EXTENDED']);
+
 ?>
