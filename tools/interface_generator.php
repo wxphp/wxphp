@@ -206,7 +206,11 @@ print "   Numeric...\n";
 fwrite($library, "//wxWidgets constants\n\n");
 foreach($defConsts as $constant_name=>$constant_value)
 {
-	fwrite($library, "define('$constant_name', 1);\n");
+	if(!isset($defConsts[$constant_value]))
+	{
+		$constant_value = cleanup_constant_value($constant_value);
+	}
+	fwrite($library, "define('{$constant_name}', {$constant_value});\n");
 }
 fwrite($library, "\n");
 
@@ -232,11 +236,10 @@ foreach($defEnums[1] as $enumName=>$enumList)
 		)
 			continue;
 			
-		fwrite($library, "define('$enumValue', 1);\n");
+		fwrite($library, "define('{$enumValue}', 1);\n");
 	}
 }
 fwrite($library, "\n");
-
 
 //Write global object constants
 print "   Objects...\n";
@@ -244,7 +247,8 @@ print "   Objects...\n";
 fwrite($library, "//wxWidgets object constants\n\n");
 foreach($defGlobals as $constant_name=>$constant_type)
 {
-	fwrite($library, "define('$constant_name', 1);\n");
+	$constant_type = str_replace(array("const ", "*", "&"), "", $constant_type);
+	fwrite($library, "define('{$constant_name}', '{$constant_type}');\n");
 }
 fwrite($library, "\n");
 
@@ -263,7 +267,7 @@ foreach($defFunctions as $function_name=>$function_definitions)
 	{
 		foreach($function_definition["parameters_type"] as $parameter_index=>$parameter_type)
 		{
-			$argument_data = get_argument_declaration($parameter_type, $function_definition["parameters_name"][$parameter_index], $function_name);
+			$argument_data = get_argument_declaration(array($parameter_type), $function_definition["parameters_name"][$parameter_index], $function_name);
 			
 			if($argument_data)
 			{
@@ -279,8 +283,6 @@ foreach($defFunctions as $function_name=>$function_definitions)
 						$argument_value = "null";
 						
 					$argument_type = explode(" ", $argument_data);
-					
-					print_r($argument_type);
 					
 					if(count($argument_type) > 1 && $argument_type[0] != "array")
 						$arguments .= "=null";
@@ -351,60 +353,66 @@ foreach($defIni as $class_name=>$class_methods)
 	{
 		if($method_name{0} != "_" || $method_name{1} == "_")
 		{
-			$content .= generata_documentation($method_name, $method_definitions, 1)."\n";
+			$method_name       = lcfirst($method_name);
+			$method_definition = combine_arrays($method_definitions);
+			
+			$content .= generata_documentation($method_name, $method_definition, 1)."\n";
 			
 			$content .= "\tpublic ";
 			
 			if($method_definitions[0]["static"])
 			{
-				$content .= " static ";
+				$content .= "static ";
 			}
-			
 			$content .= "function " . php_method_name($method_name) . "(";
 	
 			$arguments = "";
-			foreach($method_definitions as $method_index=>$method_definition)
+			foreach($method_definition["parameters_type"] as $parameter_index => $parameter_types)
 			{
-				foreach($method_definition["parameters_type"] as $parameter_index=>$parameter_type)
+				$parameter_name = normalize_param_name($method_definition['parameters_name'][$parameter_index]);				
+				$argument_data  = get_argument_declaration($parameter_types, $parameter_name, $method_name, $class_name);
+				
+				if($argument_data)
 				{
-					$argument_data = get_argument_declaration($parameter_type, $method_definition["parameters_name"][$parameter_index], $method_name, $class_name);
+					$arguments .= $argument_data;
 					
-					if($argument_data)
+					$argument_values = array();
+					if(isset($method_definition["parameters_default_value"][$parameter_index]))
 					{
-						$arguments .= $argument_data;
-						
-						if(isset($method_definition["parameters_default_value"][$parameter_index]))
-						{
-							$argument_value = $method_definition["parameters_default_value"][$parameter_index];
-					
-							if($argument_value == "wxString()")
-								$argument_value = "''";
-							elseif($argument_value{0} == "(")
-								$argument_value = "null";
-							elseif($argument_value{0} == "_" && $argument_value{1} == "(")
-								$argument_value = str_replace(array("_(", ")"), "", $argument_value);
-							elseif($argument_value{0} == "w" && $argument_value{1} == "x" && $argument_value{2} == "T" && $argument_value{3} == "(")
-								$argument_value = str_replace(array("wxT(", ")"), "", $argument_value);
-							elseif($argument_value{0} == "w" && $argument_value{1} == "x" && "" . strstr($argument_value, "(") . "" != "")
-								$argument_value = "null";
-							elseif(strpos($argument_value, "|") !== false)
-								$argument_value = "null";
-								
-							$argument_type = explode(" ", $argument_data);
-							
-							if(count($argument_type) > 1 && $argument_type[0] != "array")
-								$arguments .= "=null";
-							else
-								$arguments .= "=" . $argument_value;
-						}
-						
-						$arguments .= ", ";
+						$argument_values = $method_definition["parameters_default_value"][$parameter_index];
 					}
+
+					if(count($argument_values) == 1)
+					{
+						$argument_value = reset($argument_values);
+						if($argument_value === null)
+							$argument_value = "null";
+						elseif($argument_value == "wxString()")
+							$argument_value = "''";
+						elseif($argument_value{0} == "(")
+							$argument_value = "null";
+						elseif($argument_value{0} == "_" && $argument_value{1} == "(")
+							$argument_value = str_replace(array("_(", ")"), "", $argument_value);
+						elseif($argument_value{0} == "w" && $argument_value{1} == "x" && $argument_value{2} == "T" && $argument_value{3} == "(")
+							$argument_value = str_replace(array("wxT(", ")"), "", $argument_value);
+						elseif($argument_value{0} == "w" && $argument_value{1} == "x" && "" . strstr($argument_value, "(") . "" != "")
+							$argument_value = "null";
+						elseif(strpos($argument_value, "|") !== false)
+							$argument_value = "null";
+											
+						$arguments .= " = {$argument_value}";
+					}
+					elseif(count($argument_values) > 1)
+					{
+						$arguments .= " = null";						
+					}
+					
+					$arguments .= ", ";
 				}
 			}
 			$arguments = trim($arguments, ", ");
 			$content .= $arguments;
-			$content .= "){}\n\n";
+			$content .= ") {}\n\n";
 		}
 	}
 	
@@ -413,13 +421,83 @@ foreach($defIni as $class_name=>$class_methods)
 	$content .= "}\n\n";
 	fwrite($library, $content);
 }
-fwrite($library, "}\n\n?>\n");
+fwrite($library, "}\n");
 
 fclose($library);
 
 print "\n\nDone!";
 
-function generata_documentation($function_name, $function_definitions, $tabs=0)
+function combine_arrays(array $arrays)
+{
+	$combinedArray = array();
+	$minParamCount = -1;
+	$maxParamCount = 0;
+	foreach($arrays as $key => $array)
+	{
+		$combinedArray = combine_array($array, $combinedArray, $key, $minParamCount, $maxParamCount);
+	}
+	
+	for($i = $minParamCount; $i < $maxParamCount; $i++)
+	{
+		if(empty($combinedArray['parameters_default_value'][$i]))
+		{
+			$combinedArray['parameters_default_value'][$i] = array(null);
+		}
+	}
+
+	return $combinedArray;
+}
+
+function combine_array($array, $combinedArray, $key, &$minParamCount, &$maxParamCount)
+{
+	if(!is_array($array))
+	{
+		return $array;
+	}
+
+	foreach($array as $index => $value)
+	{
+		if(!($combinedArray[$index]))
+		{
+			$combinedArray[$index] = array();
+		}
+		
+		if(is_array($value))
+		{
+			if($index == 'parameters_type')
+			{
+				$paramCount = count($value);
+				if($paramCount > $maxParamCount)
+				{
+					$maxParamCount = $paramCount;
+					if($minParamCount == -1)
+					{
+						$minParamCount = $paramCount;
+					}
+				}
+
+				if($paramCount < $minParamCount)
+				{
+					$minParamCount = $paramCount;
+				}
+			}
+
+			$combinedArray[$index] = combine_array($value, $combinedArray[$index], $key, $minParamCount, $maxParamCount);
+		}
+		else
+		{
+			if($value !== null && !in_array($value, $combinedArray[$index]))
+			{
+				// index = parameters_name
+				$combinedArray[$index][$key] = $value;
+			}
+		}
+	}
+	
+	return $combinedArray;
+}
+
+function generata_documentation($function_name, $function_definition, $tabs=0)
 {
 	$tabs_count = $tabs;
 	$tabs = "";
@@ -430,303 +508,345 @@ function generata_documentation($function_name, $function_definitions, $tabs=0)
 	
 	$documentation = $tabs . "/**\n";
 	
-	$first_description = true;
-	$parameters = array();
-	
-	foreach($function_definitions as $function_index=>$function_definition)
+	if($function_definition["brief_description"])
 	{
-		if($first_description)
+		foreach($function_definition["brief_description"] as $description)
 		{
-			if($function_definition["brief_description"])
-				$documentation .= $tabs . " * " . $function_definition["brief_description"] . "\n";
-			else
-				$documentation .= $tabs . " * " . $function_name . "\n";
-				
-			$first_description = false;
-		}
-			
-		foreach($function_definition["parameters_type"] as $parameter_index=>$parameter_type)
-		{
-			if(!isset($parameters[$function_definition["parameters_name"][$parameter_index]]))
-			{
-				$parameters[$function_definition["parameters_name"][$parameter_index]] = true;
-				
-				$param_data = get_type_doc_param($parameter_type, $function_definition["parameters_name"][$parameter_index], $function_name);
-				
-				if($param_data)
-				{
-					$documentation .= $tabs . " * @param " . $param_data . "\n";
-				}
-			}
-		}
-		
-		if($function_index+1 == count($function_definitions))
-		{
-			$return_data = str_replace(" \$", "", get_type_doc_param($function_definition["return_type"], "", $function_name));
-			
-			if($return_data)
-				$documentation .= $tabs . " * @return " . $return_data . "\n";
+			$documentation .= $tabs . " * {$description}\n";					
 		}
 	}
+	else
+	{
+		$documentation .= $tabs . " * {$function_name}\n";
+	}
+	
+	foreach($function_definition["parameters_type"] as $parameter_index=>$parameter_types)
+	{
+		$parameter_name = normalize_param_name($function_definition['parameters_name'][$parameter_index]);
+		$param_data = get_type_doc_param($parameter_types, $parameter_name, $function_name);
+		
+		if($param_data)
+		{
+			$documentation .= $tabs . " * @param " . $param_data . "\n";
+		}
+	}
+	
+	$return_data = str_replace(" \$", "", get_type_doc_param($function_definition["return_type"], "", $function_name));
+	
+	if($return_data)
+		$documentation .= $tabs . " * @return " . $return_data . "\n";
 	
 	$documentation .= $tabs . " */";
 	
 	return $documentation;
 }
 
-function get_type_doc_param($type, $type_name, $function_name, $class_name=null)
+/**
+ * @param array|string $parameter_names
+ * @return mixed
+ */
+function normalize_param_name($parameter_names)
 {
-	$declaration_modifier = "";
-	$standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
-	
-	$cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
-	
-	$method_type = "";
-	
-	switch($standard_type)
+	if(!is_array($parameter_names))
 	{
-		case	"bool":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //bool*
-				case "reference": //bool&
-					$method_type = "bool \$$type_name";
-					break;
-					
-				case "const_pointer": //const bool* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const bool&
-				case "none": //bool
-				case "const_none": //const bool
-					$method_type = "bool \$$type_name";
-					break;
-			}
-			break;
-		}	
-		case	"integer":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //integer*
-				case "reference": //integer&
-					$method_type = "integer \$$type_name";
-					break;
-					
-				case "const_pointer": //const integer* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const integer&
-				case "none": //integer
-				case "const_none": //const integer
-					$method_type = "integer \$$type_name";
-					break;
-			}
-			break;
-		}	
-		case	"class_enum":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //integer*
-				case "reference": //integer&
-					$method_type = "$cleaned_type \$$type_name";
-					break;
-					
-				case "const_pointer": //const integer* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const integer&
-				case "none": //integer
-				case "const_none": //const integer
-					$method_type = "$cleaned_type \$$type_name";
-					break;
-			}
-			break;
-		}	
-		case	"global_enum":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //integer*
-				case "reference": //integer&
-					$method_type = "$cleaned_type \$$type_name";
-					break;
-					
-				case "const_pointer": //const integer* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const integer&
-				case "none": //integer
-				case "const_none": //const integer
-					$method_type = "$cleaned_type \$$type_name";
-					break;
-			}
-			break;
-		}
-		case	"float":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //float*
-				case "reference": //float&
-					$method_type = "float \$$type_name";
-					break;
-					
-				case "const_pointer": //const float* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const float&
-				case "none": //float
-				case "const_none": //const float
-					$method_type = "float \$$type_name";
-					break;
-			}
-			break;
-		}
-		case	"characters":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //char*
-				case "reference": //char&
-					$method_type = "string \$$type_name";
-					break;
-					
-				case "const_pointer": //const char*
-					$method_type = "string \$$type_name";
-					break;
-				
-				case "const_reference": //const char&
-				case "none": //char
-				case "const_none": //const char
-					$method_type = "string \$$type_name";
-					break;
-			}
-			break;
-		}
-		case	"void":
-		{
-			switch($declaration_modifier)
-			{
-				case "const_pointer_pointer": //const void**
-				case "pointer_pointer":
-				case "const_pointer": //const void*
-				case "pointer": //void*
-					$method_type = "mixed \$$type_name";						
-					break;
-			}
-			break;
-		}
-		case	"date":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //long*
-				case "reference": //long&
-					$method_type = "timestamp \$$type_name";
-					break;
-					
-				case "const_pointer": //const long* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const long&
-				case "none": //long
-				case "const_none": //const long
-					$method_type = "timestamp \$$type_name";
-					break;
-			}
-			break;
-		}	
-		case	"string":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //wxString*
-				case "reference": //wxString&
-					$method_type = "string \$$type_name";
-					break;
-					
-				case "const_pointer": //const wxString* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const wxString&
-				case "none": //wxString
-				case "const_none": //const wxString
-					$method_type = "string \$$type_name";
-					break;
-			}
-			break;
-		}
-		case	"strings_array":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //wxArrayString*
-				case "reference": //wxArrayString&
-					$method_type = "array \$$type_name";
-					break;
-					
-				case "const_pointer": //const wxArrayString* Array
-					$method_type = "array \$$type_name";
-					break;
-				
-				case "const_reference": //const wxArrayString&
-				case "none": //wxArrayString
-				case "const_none": //const wxArrayString
-					$method_type = "array \$$type_name";
-					break;
-			}
-			break;
-		}	
-		case "object":
-		{
-			switch($declaration_modifier)
-			{
-				case "pointer": //object*
-				case "reference": //object&
-					$method_type = "$cleaned_type \$$type_name";
-					break;
-					
-				case "const_pointer": //const bool* Array
-				case "const_reference": //const bool&
-				case "none": //bool
-				case "const_none": //const bool
-					$method_type = "$cleaned_type \$$type_name";
-					break;
-			}
-			break;
-		}	
-		default: 
-			
+		return $parameter_names;
 	}
 	
-	return $method_type;
+	$parameter_name = "";
+	$first = true;
+	foreach($parameter_names as $param)
+	{
+		if($first == true)
+		{
+			$first = false;
+			$parameter_name .= $param;
+		}
+		elseif($param !== null)
+		{
+			$parameter_name .= "Or" . ucfirst($param);
+		}
+	}
+	
+	return $parameter_name;
+}
+
+function get_type_doc_param($types, $type_name, $function_name, $class_name=null)
+{
+	$declaration_modifier = "";
+	$method_types = array();
+	
+	foreach($types as $type)
+	{
+		$standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
+		
+		$cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
+		
+		$method_type = "";
+		
+		switch($standard_type)
+		{
+			case	"bool":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //bool*
+					case "reference": //bool&
+						$method_type = "bool";
+						break;
+						
+					case "const_pointer": //const bool* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const bool&
+					case "none": //bool
+					case "const_none": //const bool
+						$method_type = "bool";
+						break;
+				}
+				break;
+			}	
+			case	"integer":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //integer*
+					case "reference": //integer&
+						$method_type = "integer";
+						break;
+						
+					case "const_pointer": //const integer* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const integer&
+					case "none": //integer
+					case "const_none": //const integer
+						$method_type = "integer";
+						break;
+				}
+				break;
+			}	
+			case	"class_enum":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //integer*
+					case "reference": //integer&
+						$method_type = "$cleaned_type";
+						break;
+						
+					case "const_pointer": //const integer* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const integer&
+					case "none": //integer
+					case "const_none": //const integer
+						$method_type = "$cleaned_type";
+						break;
+				}
+				break;
+			}	
+			case	"global_enum":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //integer*
+					case "reference": //integer&
+						$method_type = "$cleaned_type";
+						break;
+						
+					case "const_pointer": //const integer* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const integer&
+					case "none": //integer
+					case "const_none": //const integer
+						$method_type = "$cleaned_type";
+						break;
+				}
+				break;
+			}
+			case	"float":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //float*
+					case "reference": //float&
+						$method_type = "float";
+						break;
+						
+					case "const_pointer": //const float* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const float&
+					case "none": //float
+					case "const_none": //const float
+						$method_type = "float";
+						break;
+				}
+				break;
+			}
+			case	"characters":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //char*
+					case "reference": //char&
+						$method_type = "string";
+						break;
+						
+					case "const_pointer": //const char*
+						$method_type = "string";
+						break;
+					
+					case "const_reference": //const char&
+					case "none": //char
+					case "const_none": //const char
+						$method_type = "string";
+						break;
+				}
+				break;
+			}
+			case	"void":
+			{
+				switch($declaration_modifier)
+				{
+					case "const_pointer_pointer": //const void**
+					case "pointer_pointer":
+					case "const_pointer": //const void*
+					case "pointer": //void*
+						$method_type = "mixed";						
+						break;
+				}
+				break;
+			}
+			case	"date":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //long*
+					case "reference": //long&
+						$method_type = "timestamp";
+						break;
+						
+					case "const_pointer": //const long* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const long&
+					case "none": //long
+					case "const_none": //const long
+						$method_type = "timestamp";
+						break;
+				}
+				break;
+			}	
+			case	"string":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //wxString*
+					case "reference": //wxString&
+						$method_type = "string";
+						break;
+						
+					case "const_pointer": //const wxString* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const wxString&
+					case "none": //wxString
+					case "const_none": //const wxString
+						$method_type = "string";
+						break;
+				}
+				break;
+			}
+			case	"strings_array":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //wxArrayString*
+					case "reference": //wxArrayString&
+						$method_type = "array";
+						break;
+						
+					case "const_pointer": //const wxArrayString* Array
+						$method_type = "array";
+						break;
+					
+					case "const_reference": //const wxArrayString&
+					case "none": //wxArrayString
+					case "const_none": //const wxArrayString
+						$method_type = "array";
+						break;
+				}
+				break;
+			}	
+			case "object":
+			{
+				switch($declaration_modifier)
+				{
+					case "pointer": //object*
+					case "reference": //object&
+						$method_type = "$cleaned_type";
+						break;
+						
+					case "const_pointer": //const bool* Array
+					case "const_reference": //const bool&
+					case "none": //bool
+					case "const_none": //const bool
+						$method_type = "$cleaned_type";
+						break;
+				}
+				break;
+			}	
+			default: 
+				
+		}
+		
+		$method_types[] = $method_type;
+	}
+	
+	return implode('|', $method_types) . " \$$type_name";
 }
 
 /**
- * @param string $type Type of the parameter (declared as a reference in case the value needs to be substitued).
+ * @param string[] $types Type of the parameter (declared as a reference in case the value needs to be substitued).
  * @param string $type_name
  * @param string $function_name
  * @param string $class_name
  * @return string
  */
-function get_argument_declaration($type, $type_name, $function_name, $class_name=null)
+function get_argument_declaration(array $types, $type_name, $function_name, $class_name=null)
 {
 	$declaration_modifier = "";
-	$standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
-	
-	$cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
-	
+	$standard_types = array();
+	$cleaned_types = array();
 	$method_type = "";
+
+	foreach($types as $type)
+	{
+		$standard_types[parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true)] = true;
+		$cleaned_types[str_replace(array("const ", "*", "&"), "", $type)] = true;	
+	}
+
+	if(count($standard_types) == 1 && count($cleaned_types) == 1)
+	{
+		$standard_types = array_keys($standard_types);
+		$cleaned_types  = array_keys($cleaned_types);
+		$standard_type  = reset($standard_types);
+		$cleaned_type   = reset($cleaned_types);
+	}
+	else
+	{
+		$standard_type = "mixed";
+		$cleaned_type  = "mixed";
+	}
 	
 	switch($standard_type)
 	{
@@ -951,8 +1071,35 @@ function get_argument_declaration($type, $type_name, $function_name, $class_name
 			break;
 		}	
 		default: 
-			
+		{
+			$method_type = "\$$type_name";
+		}
 	}
 	
 	return $method_type;
+}
+
+function cleanup_constant_value($constant_value)
+{
+	if($constant_value === true)
+	{
+		$constant_value = "true";
+	}
+	elseif($constant_value === false)
+	{
+		$constant_value = "false";
+	}
+	elseif(substr($constant_value, -1) != ")" && strpos($constant_value, "0x") !== 0 && !is_numeric($constant_value))
+	{
+		$constant_value = "'{$constant_value}'";
+	}
+	
+	if($constant_value{0} == "(" && substr($constant_value, -1) == ")")
+	{
+		$constant_value = substr($constant_value, 1, -1);
+	}
+
+	$constant_value = str_replace("\\\n", "\n", $constant_value);
+	
+	return $constant_value;
 }
