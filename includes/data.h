@@ -93,12 +93,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAcceleratorTable_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAcceleratorTable, IsOk, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAcceleratorTable, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
@@ -191,12 +185,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPageSetupDialogData_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPageSetupDialogData, EnableHelp, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPageSetupDialogData, EnableMargins, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPageSetupDialogData, EnableOrientation, NULL, ZEND_ACC_PUBLIC)
@@ -261,12 +249,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrintData_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrintData, GetBin, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrintData, GetCollate, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrintData, GetColour, NULL, ZEND_ACC_PUBLIC)
@@ -752,12 +734,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRegion_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRegion, Clear, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRegion, Contains, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRegion, ConvertToBitmap, NULL, ZEND_ACC_PUBLIC)
@@ -886,12 +862,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxVariant_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariant, Append, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariant, Clear, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariant, ClearList, NULL, ZEND_ACC_PUBLIC)

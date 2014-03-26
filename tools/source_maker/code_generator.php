@@ -472,12 +472,27 @@ $entries .= "\n";
 
 //Generate classes and constants initialization code for the MINIT function
 $classes = "";
-foreach($defIni as $class_name => $class_methods)
+$sorted_classes = sort_classes_by_inheritance();
+foreach($sorted_classes as $class_name => $class_methods)
 {
 	$classes .= "\tchar PHP_{$class_name}_name[] = \"$class_name\";\n";
 	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_name, php_{$class_name}_functions);\n";
-	$classes .= "\tce.create_object = php_{$class_name}_new;\n";
-	$classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
+    
+    if(
+        isset($class_methods["_implements"]) && 
+        count($class_methods["_implements"]) < 2 && 
+        isset($defIni[$class_methods["_implements"][0]])
+    )
+    {   
+        $classes .= "\tphp_{$class_name}_entry = zend_register_internal_class_ex(&ce, php_{$class_methods['_implements'][0]}_entry, NULL TSRMLS_CC);\n";
+    }
+    else
+    {
+        $classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
+    }
+    
+    $classes .= "\tphp_{$class_name}_entry->create_object = php_{$class_name}_new;\n";
+    
 	$classes .= "\n";
 }
 

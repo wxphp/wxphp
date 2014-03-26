@@ -159,12 +159,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlDocument_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlDocument, AppendToProlog, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlDocument, DetachDocumentNode, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlDocument, DetachRoot, NULL, ZEND_ACC_PUBLIC)

@@ -49,12 +49,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystem_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileSystem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxFileSystem, URLToFileName, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileSystem, OpenFile, NULL, ZEND_ACC_PUBLIC)
@@ -102,12 +96,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystemHandler_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileSystemHandler, FindFirst, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileSystemHandler, FindNext, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileSystemHandler, GetMimeTypeFromExt, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)

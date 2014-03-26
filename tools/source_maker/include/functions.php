@@ -198,6 +198,97 @@ function is_ref_counted_class($class)
 }
 
 /**
+ * Sort global classes array by inheritance in which parent classes are at top
+ * and childs at bottom.
+ * 
+ * @global array $defIni
+ * 
+ * @return array New array of classes sorted out.
+ */
+function sort_classes_by_inheritance()
+{
+    global $defIni;
+    
+    $classes_inheritance = array();
+    
+    foreach($defIni as $class_name => $class_methods)
+    {
+        if(
+            isset($class_methods["_implements"]) &&
+            isset($defIni[$class_methods["_implements"][0]])
+        )
+        {
+            $classes_inheritance[$class_name]++;
+            
+            foreach($class_methods["_implements"] as $parent_name)
+            {
+                if(isset($defIni[$parent_name]))
+                {
+                    $classes_inheritance[$parent_name]++;
+                }
+            }
+        }
+        else
+        {
+            $classes_inheritance[$class_name] = 10000;
+        }
+    }
+    
+    resort_classes_by_inheritance($classes_inheritance);
+    
+    arsort($classes_inheritance);
+    
+    $sorted_classes = array();
+    
+    foreach($classes_inheritance as $class_name=>$sort_value)
+    {
+        $sorted_classes[$class_name] = $defIni[$class_name];
+    }
+    
+    return $sorted_classes;
+}
+
+/**
+ * Recursive function to assist sort_classes_by_inheritance().
+ * 
+ * @global array $defIni
+ * 
+ * @param array $classes_inheritance
+ */
+function resort_classes_by_inheritance(&$classes_inheritance)
+{
+    global $defIni;
+    
+    $resorted = false;
+    
+    foreach($classes_inheritance as $class_name => $child_sort_value)
+    {
+        if(
+            isset($defIni[$class_name]["_implements"]) &&
+            isset($defIni[$defIni[$class_name]["_implements"][0]])
+        )
+        {
+            foreach($defIni[$class_name]["_implements"] as $parent_name)
+            {
+                if(isset($defIni[$parent_name]))
+                {
+                    if($classes_inheritance[$parent_name] <= $child_sort_value)
+                    {
+                        $classes_inheritance[$parent_name] = $child_sort_value+1;
+                        $resorted = true;
+                    }
+                }
+            }
+        }
+    }
+    
+    if($resorted)
+    {
+        resort_classes_by_inheritance($classes_inheritance);
+    }
+}
+
+/**
  * Generates an array of all the classes the inherit from a given one.
  * 
  * @param string $class Name of the class to search for derivations.
@@ -251,10 +342,11 @@ function derivationsOfClass($class)
  * @param $classN The name of the class to which generate the methods
  * @param $ctor boolean value to indicate if constructors should be generated or not
  * @param $output A reference variable where the output of the function will be stored.
+ * @param $multiple_inheritance If true will explictly return all methods it inherit from.
  * 
  * @return array All function names
  */
-function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
+function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inheritance = false)
 {
 	global $defIni;
 	$class_methods = "";
@@ -310,11 +402,17 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 	
 	//becarefull not to mark a subclasse that is derived from another
 	//this should be recursive
-	if(isset($classDef['_implements']))
+	if(
+        (isset($classDef['_implements']) && 
+        count($classDef['_implements']) > 1) ||
+        $multiple_inheritance
+    )
 	{
+        $multiple_inheritance = true;
+        
 		foreach($classDef['_implements'] as $imp)
 		{
-			$ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar));
+			$ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar, $multiple_inheritance));
 			continue;
 			
 			if(!isset($defIni[$imp]))

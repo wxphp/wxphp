@@ -49,12 +49,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileHistory_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileHistory, AddFileToHistory, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileHistory, AddFilesToMenu, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileHistory, GetBaseId, NULL, ZEND_ACC_PUBLIC)

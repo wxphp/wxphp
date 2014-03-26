@@ -51,12 +51,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResourceHandler_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlResourceHandler, CreateResource, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlResourceHandler, SetParentResource, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlResourceHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -96,12 +90,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResource_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlResource, AddHandler, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlResource, AttachUnknownControl, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlResource, ClearHandlers, NULL, ZEND_ACC_PUBLIC)

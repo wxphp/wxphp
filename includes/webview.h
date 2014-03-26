@@ -123,7 +123,6 @@ END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWebViewArchiveHandler_functions[] = {
-	PHP_ME(php_wxWebViewHandler, GetName, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWebViewArchiveHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxWebViewArchiveHandler, GetFile, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
