@@ -1,8 +1,8 @@
 # Maintainer: Jefferson González <jgmdev@gmail.com>
 
 pkgname=php-wxwidgets-git
-pkgver=20132012
-_pkgver=3.1.0
+pkgver=20140403
+_pkgver=master
 pkgrel=1
 pkgdesc="PHP bindings to the cross-platform wxWidgets GUI Toolkit library."
 arch=('i686' 'x86_64')
@@ -16,12 +16,12 @@ pkgver() {
 }
 
 source=(
-	"http://downloads.sourceforge.net/wxwindows/wxWidgets-${_pkgver}.tar.bz2"
-	"https://github.com/wxphp/wxphp/archive/master.zip"
+	"wxWidgets-master.zip::https://github.com/wxWidgets/wxWidgets/archive/master.zip"
+	"wxphp-master.zip::https://github.com/wxphp/wxphp/archive/master.zip"
 )
 
 sha1sums=(
-	'756a9c54d1f411e262f03bacb78ccef085a9880a'
+	'SKIP'
 	'SKIP'
 )
 
@@ -54,7 +54,7 @@ build() {
 	
 	php tools/reference_generator.php
 	
-	WX_LDFLAGS="-L${srcdir}/wxWidgets-static/lib -pthread -lwx_gtk2u-3.0 -lwx_gtk2u_gl-3.0 -lwxregexu-3.0 -lwxscintilla-3.0"
+	WX_LDFLAGS="-L${srcdir}/wxWidgets-static/lib -pthread -lwx_gtk2u-3.1 -lwx_gtk2u_gl-3.1 -lwxregexu-3.1 -lwxscintilla-3.1"
 	OTHER_LDFLAGS=`pkg-config --libs gstreamer-0.10 gstreamer-interfaces-0.10 gtk+-2.0 libpng zlib`
 	
 	LDFLAGS="${WX_LDFLAGS} ${OTHER_LDFLAGS} -ljpeg" \
@@ -66,11 +66,19 @@ build() {
 }
 
 package() {
+	mkdir -p "${pkgdir}/usr/bin"
 	mkdir -p "${pkgdir}/usr/share/doc/${pkgname}"
 	
+	# Add documentation to package
 	cd "${srcdir}/wxphp-build"
 	cp -rf doc/* "${pkgdir}/usr/share/doc/${pkgname}/"
 	
+	# Add wxphp shell script to package
+	echo "#!/bin/sh" > "${pkgdir}/usr/bin/wxphp"
+	echo "exec /usr/bin/php -d extension=wxwidgets.so \"\$@\"" >> "${pkgdir}/usr/bin/wxphp"
+	chmod 0755 "${pkgdir}/usr/bin/wxphp"
+	
+	# Copy wxwidgets php module
 	EXTENSIONS_DIR=`php-config --extension-dir`
 	CHROOT_EXTENSION_DIR="${pkgdir}${EXTENSIONS_DIR}"
 	
