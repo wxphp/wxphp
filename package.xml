@@ -160,7 +160,6 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <file name="config.w32" role="src" />
    <file name="php_wxwidgets.h" role="src" />
    <file name="wxwidgets.cpp" role="src" />
-   <file name="template.rc" role="src" />
    <file name="examples/lanchat/app.png" role="doc" />
    <file name="examples/lanchat/lanchat.fbp" role="doc" />
    <file name="examples/lanchat/lanchat.php" role="doc" />
