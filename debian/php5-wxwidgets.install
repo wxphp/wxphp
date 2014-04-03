@@ -1,1 +1,2 @@
-debian/wxwidgets.ini /etc/php5/cli/conf.d/
+debian/wxwidgets.ini /etc/php5/mods-available/
+debian/wxphp /usr/bin/

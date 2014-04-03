@@ -39,6 +39,8 @@ override_dh_auto_install:
 override_dh_fixperms:
 	dh_fixperms
 	find debian/php5-wxwidgets/usr/share/doc/php5-wxwidgets -type f -print0 | xargs -0 chmod 644
+	chmod 0755 debian/wxphp
+	chmod 0755 debian/php5-wxwidgets/usr/bin/wxphp
 
 install: build
 	dh install
@@ -50,7 +52,7 @@ binary-indep:
 binary-arch: build install
 	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-wxwidgets.substvars
 	LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):/opt/wxwidgets-php/lib dh_shlibdeps
-	strip "debian/php5-wxwidgets`php-config5 --extension-dir`/wxwidgets.so"
+	strip -s "debian/php5-wxwidgets`php-config5 --extension-dir`/wxwidgets.so"
 	dh binary-arch
 
 binary: binary-arch binary-indep

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/php -d extension=wxwidgets.so "$@"
