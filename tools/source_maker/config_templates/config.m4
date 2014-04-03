@@ -89,14 +89,14 @@ if test "$PHP_WXWIDGETS" != "no"; then
         fi
         
         AC_MSG_CHECKING([for a CLI downloading tool like wget or curl])
-        PHP_WXWIDGETS_DOWNLOADER="wget"
+        PHP_WXWIDGETS_DOWNLOADER="wget -O wxWidgets-master.zip"
         WGET=`which wget`
         CURL=`which curl`
         if test "$WGET" != ""; then
             AC_MSG_RESULT([found])
         else
             if test "$CURL" != ""; then
-                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-3.1.0.tar.bz2"
+                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-master.zip"
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
@@ -104,22 +104,22 @@ if test "$PHP_WXWIDGETS" != "no"; then
             fi
         fi
         
-        if test ! -e "wxWidgets-3.1.0"; then
+        if test ! -e "wxWidgets-master"; then
             echo "Downloading wxWidgets..."
-            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-3.1.0.tar.bz2
-            tar -xjf wxWidgets-3.1.0.tar.bz2
-            rm wxWidgets-3.1.0.tar.bz2
+            $PHP_WXWIDGETS_DOWNLOADER https://github.com/wxWidgets/wxWidgets/archive/master.zip
+            unzip wxWidgets-master.zip
+            rm wxWidgets-master.zip
         fi
 
         dnl Build wxWidgets if not already build
         echo "Starting a custom build of wxWidgets..."
         
-        cd wxWidgets-3.1.0
+        cd wxWidgets-master
 
         mkdir mybuild
         cd mybuild
 
-        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.1.0\/mybuild//"`wxWidgets-build
+        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-master\/mybuild//"`wxWidgets-build
 
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
@@ -198,7 +198,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
         
         dnl Append wxscintilla and gstreamer if static build
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
+            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.1 $PHP_WXWIDGETS_OTHER_LDFLAGS"
             LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
         fi
     else
