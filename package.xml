@@ -22,11 +22,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>jgmdev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2014-03-09</date>
+ <date>2014-04-05</date>
  <time>18:02:59</time>
  <version>
-  <release>3.0.0.1</release>
-  <api>3.0.0.1</api>
+  <release>3.0.0.2</release>
+  <api>3.0.0.2</api>
  </version>
  <stability>
   <release>stable</release>
@@ -34,37 +34,28 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://www.php.net/license">PHP</license>
  <notes>
-  * Added missing wxScrolledWindow methods by enabling wxScrolled, 
-    this fixes issue #30 and #32.
-  * Enabled wxClipBoard::Get() and disabled gargbage collection of 
-    native_object on wxDataObject and its childs as wxClipBoard itself, 
-    which partially fixes issue #34.
-  * Added verification of object parameter child types to allow method 
-    calls which where failing as described on issue #36. This also 
-    completely fixes issue #34, testing may be needed.
-  * Updated README_MSW adding changes needed to prevent windows xp 
-    crashes as described on issue #37.
-  * Enabled wxNonOwnedWindow::SetShape and fixed wxPrintDialog, 
-    wxPageSetupDialog inheritage.
-  * Removed error messages that appeared when failing to call 
-    wxApp::OnInit and wxApp:OnExit.
-  * Added proper type casting to wxMouseState.
-  * Should fix and close #44 by doing proper type casting when calling 
-    wxKeyboarState methods from child classes.
-  * Binded the missing wxAuiNotebookEvent event constants which closes #45.
-  * Enabled more wxStyledTextCtrl methods. 
-  * Enabled inheritance of wxStyledTextCtrl from wxTextEntry as 
-    enabled some more methods.
-  * Some fixes to the reference and interface generator as 
-    simplification of chdir() calls.
-  * Initial work to support wxInputStream::OnSysRead in order to be 
-    able to load images with the wxImage(wxInputStream) constructor.
-  * Fixed 2 memory leaks, one related to wxEvtHandler::OnEvent and the 
-    other related to the creation of new objects.
-  * Fixed memory leak caused by not uninitializing the properties 
-    member of classes like wxPoint when they were destroyed which 
-    closes #48, also modified code generator to only add the properties 
-    code when needed which made the source and library more clean.
+  * Fixed wxInputStream::OnSysRead thanks to johannes from pecl. This 
+    functionality should be enough for loading images from phar files 
+    as described on issue #35.
+  * Moving mac process transformation code to wxEntry (chrisnharvey).
+  * Enabled some MacOSX specific wxApp virtual methods as requested by ydk2.
+  * Modified bool wxApp::OSXIsGUIApplication() to return true by 
+    default if no user space side function is found.
+  * Improved config.m4 and added initial support for macosx.
+  * Fixed some segfaults on macosx due to newly introduced wxApp 
+    virtual methods which may be called with an uninitialized phpobj.
+  * Added curl as another option to download wxWidgets from config.m4.
+  * Improved wxExecute function.
+  * Added macosx bundle icon.
+  * also search for wx-config-3.0 (remicollet)
+  * Type casted to void* on memcpy calls.
+  * Added tool to generate Mac OSX bundles of wxphp.
+  * Fixed mac osx segfault caused by incrementing the refcount on 
+    objects returned by static methods.
+  * Renamed xml_parser.php to json_generator.php.
+  * added the way to work with conflicting mode_t declaration needs 
+    some header in wx distro to be patched (weltling)
+  * Removed template.rc (weltling)
  </notes>
  <contents>
   <dir name="/">
@@ -197,6 +188,42 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <configureoption default="no" name="enable-wxwidgets-macosx" prompt="Enable Mac OS X building mode" />
  </extsrcrelease>
  <changelog>
+  <release>
+   <version>
+    <release>3.0.0.2</release>
+    <api>3.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2014-04-05</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+  * Fixed wxInputStream::OnSysRead thanks to johannes from pecl. This 
+    functionality should be enough for loading images from phar files 
+    as described on issue #35.
+  * Moving mac process transformation code to wxEntry (chrisnharvey).
+  * Enabled some MacOSX specific wxApp virtual methods as requested by ydk2.
+  * Modified bool wxApp::OSXIsGUIApplication() to return true by 
+    default if no user space side function is found.
+  * Improved config.m4 and added initial support for macosx.
+  * Fixed some segfaults on macosx due to newly introduced wxApp 
+    virtual methods which may be called with an uninitialized phpobj.
+  * Added curl as another option to download wxWidgets from config.m4.
+  * Improved wxExecute function.
+  * Added macosx bundle icon.
+  * also search for wx-config-3.0 (remicollet)
+  * Type casted to void* on memcpy calls.
+  * Added tool to generate Mac OSX bundles of wxphp.
+  * Fixed mac osx segfault caused by incrementing the refcount on 
+    objects returned by static methods.
+  * Renamed xml_parser.php to json_generator.php.
+  * added the way to work with conflicting mode_t declaration needs 
+    some header in wx distro to be patched (weltling)
+  * Removed template.rc (weltling)
+   </notes>
+  </release>
   <release>
    <version>
     <release>3.0.0.1</release>
