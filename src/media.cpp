@@ -2256,7 +2256,7 @@ PHP_METHOD(php_wxMediaCtrl, __construct)
 /* }}} */
 
 /* {{{ proto wxMediaState wxMediaCtrl::GetState()
-   Obtains the state the playback of the media is in. */
+   Obtains the state the playback of the media is in -. */
 PHP_METHOD(php_wxMediaCtrl, GetState)
 {
 	#ifdef USE_WXPHP_DEBUG

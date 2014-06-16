@@ -1,5 +1,5 @@
 PHP_ARG_WITH(wxwidgets,for wxWidgets support,
-[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.1.0).])
+[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.0.0).])
 
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
@@ -27,13 +27,13 @@ if test "$PHP_WXWIDGETS" != "no"; then
     
     dnl Check for the installation path of wx-config
     if test "$PHP_WXWIDGETS" != "yes"; then
-        AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.1.x])
+        AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
         for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
             dnl search for know command names (prefered first)
-            for cmd in wx-config-3.1 wx-config; do
+            for cmd in wx-config-3.0 wx-config; do
                 if test -e "$directory/$cmd"; then
                     wxwidgets_version=`$directory/$cmd --version`
-                    version_check=`echo $wxwidgets_version | grep "3.1" && echo $wxwidgets_version | grep "0.[0-9]"`
+                    version_check=`echo $wxwidgets_version | grep "3.0" && echo $wxwidgets_version | grep "0.[0-9]"`
                     if test -n "$version_check"; then
                         WXCONFIG_PATH="$directory/$cmd"
                         AC_MSG_RESULT([version $wxwidgets_version found])
@@ -89,14 +89,14 @@ if test "$PHP_WXWIDGETS" != "no"; then
         fi
         
         AC_MSG_CHECKING([for a CLI downloading tool like wget or curl])
-        PHP_WXWIDGETS_DOWNLOADER="wget -O wxWidgets-master.zip"
+        PHP_WXWIDGETS_DOWNLOADER="wget"
         WGET=`which wget`
         CURL=`which curl`
         if test "$WGET" != ""; then
             AC_MSG_RESULT([found])
         else
             if test "$CURL" != ""; then
-                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-master.zip"
+                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-3.0.0.tar.bz2"
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
@@ -104,22 +104,22 @@ if test "$PHP_WXWIDGETS" != "no"; then
             fi
         fi
         
-        if test ! -e "wxWidgets-master"; then
+        if test ! -e "wxWidgets-3.0.0"; then
             echo "Downloading wxWidgets..."
-            $PHP_WXWIDGETS_DOWNLOADER https://github.com/wxWidgets/wxWidgets/archive/master.zip
-            unzip wxWidgets-master.zip
-            rm wxWidgets-master.zip
+            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.0.tar.bz2
+            tar -xjf wxWidgets-3.0.0.tar.bz2
+            rm wxWidgets-3.0.0.tar.bz2
         fi
 
         dnl Build wxWidgets if not already build
         echo "Starting a custom build of wxWidgets..."
         
-        cd wxWidgets-master
+        cd wxWidgets-3.0.0
 
         mkdir mybuild
         cd mybuild
 
-        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-master\/mybuild//"`wxWidgets-build
+        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.0.0\/mybuild//"`wxWidgets-build
 
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
@@ -198,7 +198,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
         
         dnl Append wxscintilla and gstreamer if static build
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.1 $PHP_WXWIDGETS_OTHER_LDFLAGS"
+            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
             LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
         fi
     else

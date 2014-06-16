@@ -16898,7 +16898,7 @@ PHP_METHOD(php_wxFont, Underlined)
 /* }}} */
 
 /* {{{ proto wxNativeFontInfo wxFont::GetNativeFontInfo()
-   Returns a font with the same face/size as the given one but with normal weight and style and not underlined nor stricken through. */
+   Returns the encoding of this font. */
 PHP_METHOD(php_wxFont, GetNativeFontInfo)
 {
 	#ifdef USE_WXPHP_DEBUG

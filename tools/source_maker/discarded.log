@@ -572,9 +572,6 @@ wxHtmlTag::GetEndPos1
 wxHtmlTag::GetEndPos2
 wxThreadHelper::Create
 wxToolBar::OnRightClick
-wxGrid::SetCellAlignment
-wxGrid::SetCellTextColour
-wxGrid::SetCellTextColour
 wxGrid::SetCellValue
 wxComboCtrl::ShowPopup
 wxComboCtrl::SetTextIndent
@@ -595,7 +592,6 @@ wxDEBUG_LEVEL = ""
 wxEXPLICIT = ""
 wxFAIL = ""
 wxLongLongFmtSpec = ""
-wxOVERRIDE = ""
 wxPG_ARRAY_DELIMITER = "wxS("Delimiter")"
 wxPG_ATTR_AUTOCOMPLETE = "wxS("AutoComplete")"
 wxPG_ATTR_DEFAULT_VALUE = "wxS("DefaultValue")"
