@@ -37,7 +37,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                     if test -n "$version_check"; then
                         WXCONFIG_PATH="$directory/$cmd"
                         AC_MSG_RESULT([version $wxwidgets_version found])
-                        break
+                        break 2
                     fi
                 fi
             done
