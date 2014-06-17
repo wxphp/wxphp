@@ -1,15 +1,15 @@
 # Maintainer: Jefferson González <jgmdev@gmail.com>
 
 pkgname=php-wxwidgets-git
-pkgver=20140616
-_pkgver=3.0.0
+pkgver=20140617
+_pkgver=3.0.1
 pkgrel=1
 pkgdesc="PHP bindings to the cross-platform wxWidgets GUI Toolkit library."
 arch=('i686' 'x86_64')
 url="http://wxphp.org"
 license=('PHP')
-depends=('gtk2' 'libgl' 'libxxf86vm' 'libsm' 'sdl' 'gstreamer' 'php' 'webkitgtk2')
-makedepends=('mesa' 'glu' 'libxt' 'gstreamer' 'php' 'webkitgtk2')
+depends=('gtk3' 'libgl' 'libxxf86vm' 'libsm' 'sdl' 'gstreamer' 'php' 'webkitgtk')
+makedepends=('mesa' 'glu' 'libxt' 'gstreamer' 'php' 'webkitgtk')
 
 pkgver() {
 	date +%Y%m%d
@@ -21,7 +21,7 @@ source=(
 )
 
 sha1sums=(
-	'756a9c54d1f411e262f03bacb78ccef085a9880a'
+	'73e58521d6871c9f4d1e7974c6e3a81629fddcf8'
 	'SKIP'
 )
 
@@ -42,7 +42,7 @@ build() {
 	
 	CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" \
 	./configure --prefix="${srcdir}/wxWidgets-static" \
-		--with-{gtk=2,libjpeg=sys,libpng=sys,libtiff=sys,libxpm=sys,opengl,regex=builtin,sdl} \
+		--with-{gtk=3,libjpeg=sys,libpng=sys,libtiff=sys,libxpm=sys,opengl,regex=builtin,sdl} \
 		--enable-{graphics_ctx,unicode,monolithic} \
 		--disable-shared
 		
@@ -54,13 +54,10 @@ build() {
 	
 	php tools/reference_generator.php
 	
-	WX_LDFLAGS="-L${srcdir}/wxWidgets-static/lib -pthread -lwx_gtk2u-3.0 -lwx_gtk2u_gl-3.0 -lwxregexu-3.0 -lwxscintilla-3.0"
-	OTHER_LDFLAGS=`pkg-config --libs gstreamer-0.10 gstreamer-interfaces-0.10 gtk+-2.0 libpng zlib`
-	
-	LDFLAGS="${WX_LDFLAGS} ${OTHER_LDFLAGS} -ljpeg" \
 	./configure \
 		--with-wxwidgets="${srcdir}/wxWidgets-static" \
-		--enable-wxwidgets-monolithic
+		--enable-wxwidgets-monolithic \
+		--enable-wxwidgets-static
 		
 	make
 }
