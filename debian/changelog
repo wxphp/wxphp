@@ -1,3 +1,30 @@
+php5-wxwidgets (3.0.0.2) unstable; urgency=low
+
+  * Fixed wxInputStream::OnSysRead thanks to johannes from pecl. This 
+    functionality should be enough for loading images from phar files 
+    as described on issue #35.
+  * Moving mac process transformation code to wxEntry (chrisnharvey).
+  * Enabled some MacOSX specific wxApp virtual methods as requested by ydk2.
+  * Modified bool wxApp::OSXIsGUIApplication() to return true by 
+    default if no user space side function is found.
+  * Improved config.m4 and added initial support for macosx.
+  * Fixed some segfaults on macosx due to newly introduced wxApp 
+    virtual methods which may be called with an uninitialized phpobj.
+  * Added curl as another option to download wxWidgets from config.m4.
+  * Improved wxExecute function.
+  * Added macosx bundle icon.
+  * also search for wx-config-3.0 (remicollet)
+  * Type casted to void* on memcpy calls.
+  * Added tool to generate Mac OSX bundles of wxphp.
+  * Fixed mac osx segfault caused by incrementing the refcount on 
+    objects returned by static methods.
+  * Renamed xml_parser.php to json_generator.php.
+  * added the way to work with conflicting mode_t declaration needs 
+    some header in wx distro to be patched (weltling)
+  * Removed template.rc (weltling)
+  
+ -- Jefferson González <jgmdev@gmail.com>  Sat, 05 Apr 2014 01:22:09 +0400
+
 php5-wxwidgets (3.0.0.1) unstable; urgency=low
 
   * Added missing wxScrolledWindow methods by enabling wxScrolled, 
@@ -32,7 +59,7 @@ php5-wxwidgets (3.0.0.1) unstable; urgency=low
     closes #48, also modified code generator to only add the properties 
     code when needed which made the source and library more clean.
     
- -- Jefferson González <jgmdev@gmail.com>  Sun, 09 Dec 2014 01:22:09 +0400
+ -- Jefferson González <jgmdev@gmail.com>  Sun, 09 Mar 2014 01:22:09 +0400
     
 php5-wxwidgets (3.0.0.0) unstable; urgency=low
 
