@@ -508,14 +508,11 @@ PHP_METHOD(php_wxApp, GetInstance)
     }
     else if(instance->phpObj != NULL)
     {
-        php_printf("aqui");
         *return_value = *instance->phpObj;
         zval_add_ref(&instance->phpObj);
     }
     else
     {
-        php_printf("aca");
-        
         object_init_ex(return_value, php_wxApp_entry);
         
         ((zo_wxApp*) 
