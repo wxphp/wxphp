@@ -19,9 +19,9 @@ extern zend_class_entry *php_wxApp_entry;
 
 class wxAppWrapper : public wxApp
 {
-	public:
-		bool OnInit();
-		int OnExit();
+    public:
+        bool OnInit();
+        int OnExit();
 
         #ifdef __WXMAC__
         void MacNewFile();
@@ -33,8 +33,8 @@ class wxAppWrapper : public wxApp
         bool OSXIsGUIApplication();
         #endif
 
-		zval* phpObj;
-		void ***tsrm_ls;
+        zval* phpObj;
+        void ***tsrm_ls;
 };
 
 BEGIN_EXTERN_C()
@@ -51,10 +51,21 @@ zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 static zend_function_entry php_wxApp_functions[] = {
-	PHP_ME(php_wxApp, SetInstance ,NULL,ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxApp, Yield ,NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	{ NULL, NULL, NULL }
+    PHP_ME(php_wxApp, SetInstance, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetInstance, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetAppDisplayName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetAppName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetClassName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetVendorDisplayName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, GetVendorName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetAppDisplayName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetAppName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetClassName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetVendorDisplayName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, SetVendorName, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, Yield, NULL, ZEND_ACC_PUBLIC)
+    PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+    { NULL, NULL, NULL }
 };
 
 #endif //WXPHP_APP_H_GUARD

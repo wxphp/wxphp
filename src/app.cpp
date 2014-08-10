@@ -497,6 +497,34 @@ PHP_METHOD(php_wxApp, SetInstance)
 }
 /* }}} */
 
+/* {{{ proto void wxApp::GetInstance() */
+PHP_METHOD(php_wxApp, GetInstance)
+{
+    wxAppWrapper* instance = (wxAppWrapper*) wxApp::GetInstance();
+
+    if(instance == NULL)
+    {
+        ZVAL_NULL(return_value);
+    }
+    else if(instance->phpObj != NULL)
+    {
+        php_printf("aqui");
+        *return_value = *instance->phpObj;
+        zval_add_ref(&instance->phpObj);
+    }
+    else
+    {
+        php_printf("aca");
+        
+        object_init_ex(return_value, php_wxApp_entry);
+        
+        ((zo_wxApp*) 
+            zend_object_store_get_object(return_value TSRMLS_CC)
+        )->native_object = (wxAppWrapper*) instance;
+    }
+}
+/* }}} */
+
 /* {{{ proto bool wxApp::Yield() */
 PHP_METHOD(php_wxApp, Yield)
 {
@@ -506,5 +534,301 @@ PHP_METHOD(php_wxApp, Yield)
         return;
 
     RETURN_BOOL(((wxApp*)native_object)->Yield())
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::GetAppDisplayName(string name) */
+PHP_METHOD(php_wxApp, GetAppDisplayName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+            
+    wxString value_to_return;
+    value_to_return = ((wxApp*)native_object)->GetAppDisplayName();
+    
+    char* temp_string;
+    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
+    strcpy (temp_string, (const char *) value_to_return.char_str() );
+    
+    ZVAL_STRING(return_value, temp_string, 1);
+    
+    free(temp_string);
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::GetAppName(string name) */
+PHP_METHOD(php_wxApp, GetAppName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    wxString value_to_return;
+    value_to_return = ((wxApp*)native_object)->GetAppName();
+    
+    char* temp_string;
+    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
+    strcpy (temp_string, (const char *) value_to_return.char_str() );
+    
+    ZVAL_STRING(return_value, temp_string, 1);
+    
+    free(temp_string);
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::GetClassName(string name) */
+PHP_METHOD(php_wxApp, GetClassName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    wxString value_to_return;
+    value_to_return = ((wxApp*)native_object)->GetClassName();
+    
+    char* temp_string;
+    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
+    strcpy (temp_string, (const char *) value_to_return.char_str() );
+    
+    ZVAL_STRING(return_value, temp_string, 1);
+    
+    free(temp_string);
+}
+/* }}} */
+ 
+/* {{{ proto bool wxApp::GetVendorDisplayName(string name) */
+PHP_METHOD(php_wxApp, GetVendorDisplayName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    wxString value_to_return;
+    value_to_return = ((wxApp*)native_object)->GetVendorDisplayName();
+    
+    char* temp_string;
+    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
+    strcpy (temp_string, (const char *) value_to_return.char_str() );
+    
+    ZVAL_STRING(return_value, temp_string, 1);
+    
+    free(temp_string);
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::GetVendorName(string name) */
+PHP_METHOD(php_wxApp, GetVendorName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    wxString value_to_return;
+    value_to_return = ((wxApp*)native_object)->GetVendorName();
+    
+    char* temp_string;
+    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
+    strcpy (temp_string, (const char *) value_to_return.char_str() );
+    
+    ZVAL_STRING(return_value, temp_string, 1);
+    
+    free(temp_string);
+}
+/* }}} */
+
+
+/* {{{ proto bool wxApp::SetAppDisplayName(string name) */
+PHP_METHOD(php_wxApp, SetAppDisplayName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    char* name;
+	long name_len;
+
+    if(ZEND_NUM_ARGS() > 0)
+    {
+        char parse_parameters_string[] = "s";
+        
+		if(
+            zend_parse_parameters_ex(
+                ZEND_PARSE_PARAMS_QUIET, 
+                ZEND_NUM_ARGS() 
+                TSRMLS_CC, 
+                parse_parameters_string, 
+                &name, 
+                &name_len 
+            ) == SUCCESS
+        )
+		{
+			((wxApp*)native_object)->SetAppDisplayName(
+                wxString(name, wxConvUTF8)
+            );
+		}
+    }
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::SetAppName(string name) */
+PHP_METHOD(php_wxApp, SetAppName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    char* name;
+	long name_len;
+
+    if(ZEND_NUM_ARGS() > 0)
+    {
+        char parse_parameters_string[] = "s";
+        
+		if(
+            zend_parse_parameters_ex(
+                ZEND_PARSE_PARAMS_QUIET, 
+                ZEND_NUM_ARGS() 
+                TSRMLS_CC, 
+                parse_parameters_string, 
+                &name, 
+                &name_len 
+            ) == SUCCESS
+        )
+		{
+			((wxApp*)native_object)->SetAppName(
+                wxString(name, wxConvUTF8)
+            );
+		}
+    }
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::SetClassName(string name) */
+PHP_METHOD(php_wxApp, SetClassName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    char* name;
+	long name_len;
+
+    if(ZEND_NUM_ARGS() > 0)
+    {
+        char parse_parameters_string[] = "s";
+        
+		if(
+            zend_parse_parameters_ex(
+                ZEND_PARSE_PARAMS_QUIET, 
+                ZEND_NUM_ARGS() 
+                TSRMLS_CC, 
+                parse_parameters_string, 
+                &name, 
+                &name_len 
+            ) == SUCCESS
+        )
+		{
+			((wxApp*)native_object)->SetClassName(
+                wxString(name, wxConvUTF8)
+            );
+		}
+    }
+}
+/* }}} */
+ 
+/* {{{ proto bool wxApp::SetVendorDisplayName(string name) */
+PHP_METHOD(php_wxApp, SetVendorDisplayName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    char* name;
+	long name_len;
+
+    if(ZEND_NUM_ARGS() > 0)
+    {
+        char parse_parameters_string[] = "s";
+        
+		if(
+            zend_parse_parameters_ex(
+                ZEND_PARSE_PARAMS_QUIET, 
+                ZEND_NUM_ARGS() 
+                TSRMLS_CC, 
+                parse_parameters_string, 
+                &name, 
+                &name_len 
+            ) == SUCCESS
+        )
+		{
+			((wxApp*)native_object)->SetVendorDisplayName(
+                wxString(name, wxConvUTF8)
+            );
+		}
+    }
+}
+/* }}} */
+
+/* {{{ proto bool wxApp::SetVendorName(string name) */
+PHP_METHOD(php_wxApp, SetVendorName)
+{
+    wxAppWrapper* native_object = (
+        (zo_wxApp*) 
+        zend_object_store_get_object(
+            getThis() TSRMLS_CC
+        )
+    )->native_object;
+    
+    char* name;
+	long name_len;
+
+    if(ZEND_NUM_ARGS() > 0)
+    {
+        char parse_parameters_string[] = "s";
+        
+		if(
+            zend_parse_parameters_ex(
+                ZEND_PARSE_PARAMS_QUIET, 
+                ZEND_NUM_ARGS() 
+                TSRMLS_CC, 
+                parse_parameters_string, 
+                &name, 
+                &name_len 
+            ) == SUCCESS
+        )
+		{
+			((wxApp*)native_object)->SetVendorName(
+                wxString(name, wxConvUTF8)
+            );
+		}
+    }
 }
 /* }}} */

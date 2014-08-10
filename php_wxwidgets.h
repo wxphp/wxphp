@@ -74,7 +74,18 @@ class wxPhpClientData : public wxClientData
  * Predefined wxApp class method bindings
  */
 PHP_METHOD(php_wxApp, __construct);
+PHP_METHOD(php_wxApp, GetInstance);
 PHP_METHOD(php_wxApp, SetInstance);
+PHP_METHOD(php_wxApp, GetAppDisplayName);
+PHP_METHOD(php_wxApp, GetAppName);
+PHP_METHOD(php_wxApp, GetClassName);
+PHP_METHOD(php_wxApp, GetVendorDisplayName);
+PHP_METHOD(php_wxApp, GetVendorName);
+PHP_METHOD(php_wxApp, SetAppDisplayName);
+PHP_METHOD(php_wxApp, SetAppName);
+PHP_METHOD(php_wxApp, SetClassName);
+PHP_METHOD(php_wxApp, SetVendorDisplayName);
+PHP_METHOD(php_wxApp, SetVendorName);
 PHP_METHOD(php_wxApp, Yield);
 
 /**
