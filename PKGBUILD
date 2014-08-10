@@ -1,14 +1,14 @@
 # Maintainer: Jefferson González <jgmdev@gmail.com>
 
 pkgname=php-wxwidgets-git
-pkgver=20140617
+pkgver=20140810
 _pkgver=3.0.1
 pkgrel=1
 pkgdesc="PHP bindings to the cross-platform wxWidgets GUI Toolkit library."
 arch=('i686' 'x86_64')
 url="http://wxphp.org"
 license=('PHP')
-depends=('gtk3' 'libgl' 'libxxf86vm' 'libsm' 'sdl' 'gstreamer' 'php' 'webkitgtk')
+depends=('gtk3' 'libgl' 'libxxf86vm' 'libsm' 'sdl' 'sdl_sound' 'gstreamer' 'php' 'webkitgtk')
 makedepends=('mesa' 'glu' 'libxt' 'gstreamer' 'php' 'webkitgtk')
 
 pkgver() {

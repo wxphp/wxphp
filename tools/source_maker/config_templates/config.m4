@@ -78,6 +78,22 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_ERROR([gstreamer plugins include files where not found])
             fi
             
+            AC_MSG_CHECKING([for SDL include files])
+            if test -e "/usr/include/SDL/SDL.h"; then
+                AC_MSG_RESULT([found])
+            else
+                AC_MSG_RESULT([not found])
+                AC_MSG_ERROR([SDL include files where not found])
+            fi
+            
+            AC_MSG_CHECKING([for SDL audio include files])
+            if test -e "/usr/include/SDL/SDL_audio.h"; then
+                AC_MSG_RESULT([found])
+            else
+                AC_MSG_RESULT([not found])
+                AC_MSG_ERROR([SDL audio include files where not found])
+            fi
+            
             AC_MSG_CHECKING([for libjpeg include files])
             LIBJPEG=`find /usr/include -name "jpeglib.h"`
             if test "$LIBJPEG" != ""; then
@@ -124,7 +140,8 @@ if test "$PHP_WXWIDGETS" != "no"; then
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
                 CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2"  \
-                ../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic
+                ../configure --prefix=$WX_BUILD_DIR --disable-shared \
+                --enable-monolithic --with-{gtk=3,sdl}
             else
                 CFLAGS="-fPIC -O2 -Wall -W" CXXFLAGS="-fPIC -O2" CPPFLAGS="-fPIC -O2 -Wall -W" \
                 ../configure --prefix=$WX_BUILD_DIR --disable-shared --enable-monolithic \
@@ -178,11 +195,11 @@ if test "$PHP_WXWIDGETS" != "no"; then
     dnl Append wx-config flags to wxphp compiler flags 
     PHP_WXWIDGETS_CFLAGS="$PHP_WXWIDGETS_CFLAGS $WXWIDGETS_CFLAGS"
     
-    dnl Add gstreamer ldflags if on linux
+    dnl Add gstreamer and sdl ldflags if on linux
     PHP_WXWIDGETS_OTHER_LDFLAGS=""
     if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_OTHER_LDFLAGS=`pkg-config --libs gstreamer-0.10 gstreamer-interfaces-0.10`
+            PHP_WXWIDGETS_OTHER_LDFLAGS=`pkg-config --libs sdl gstreamer-0.10 gstreamer-interfaces-0.10`
         fi
     else
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
