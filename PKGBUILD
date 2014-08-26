@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 url="http://wxphp.org"
 license=('PHP')
 depends=('gtk3' 'libgl' 'libxxf86vm' 'libsm' 'sdl' 'sdl_sound' 'gstreamer' 'php' 'webkitgtk')
-makedepends=('mesa' 'glu' 'libxt' 'gstreamer' 'php' 'webkitgtk')
+makedepends=('mesa' 'glu' 'libxt' 'gstreamer' 'sdl' 'sdl_sound' 'php' 'webkitgtk')
 
 pkgver() {
 	date +%Y%m%d
