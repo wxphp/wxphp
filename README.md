@@ -8,7 +8,7 @@ Documentation: [http://github.com/wxphp/wxphp/wiki](http://github.com/wxphp/wxph
 * [Building and Installing on Linux/Unix Environments](#building-and-installing-on-linuxunix-environments)
 * [Creating a DEB Package](#creating-a-deb-package)
 * [Linking statically to wxWidgets on Linux/Unix/MacOSX](#linking-statically-to-wxwidgets-on-linuxunixmacosx)
-* [Building on MacOSX Lion](#building-on-macosx-lion)
+* [Building on Mac OS X](#building-on-mac-os-x)
 * [Running the examples](#running-the-examples)
 * [Third Party Tools](#third-party-tools)
 * [Development](#development)
@@ -286,33 +286,39 @@ size (a little bit) of final libraries as increase performance could be
 
 
 
-## Building on MacOSX Lion
+## Building on Mac OS X
 
 The process of building on mac is the same as on linux the only
 differences are the way we configure wxWidgets build, as the applications
 needed. We have tested with the php version available on mac ports.
 
+*Note: In this example we will be building against Mac OS X Mavericks (10.9).
+If you are running a different version of Mac OS, then replace references to 10.9
+with the version you are running. You can find this in "About This Mac"*
+
 ### Requirements
     
 1. [Xcode (for a working compiling environment)](https://developer.apple.com/technologies/tools/)
     
-2. [Mac Ports (for PHP development environment and binaries)](http://www.macports.org/)
+2. [Homebrew (for PHP development environment and binaries)](http://brew.sh/)
 
-### Install PHP from Mac Ports
+### Install PHP from Homebrew
 
-This process could take a long time since mac ports application
+This process could take a long time since homebrew
 downloads php sources and dependency sources and compiles.
 
-	sudo port install php5
+	brew install php55
+	
+*Note: You may need to run ```brew tap homebrew/php``` for the PHP packages to be available in homebrew*
 
 ### Get wxWidgets sources and build
 
 	git clone https://github.com/wxWidgets/wxWidgets.git wxWidgets.git
-	git checkout tags/WX_3_0_0
+	git checkout tags/WX_3_0_1
 	cd wxWidgets.git
 	mkdir mybuild
 	cd mybuild
-	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
+	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.9 --with-macosx-sdk=/Developer/SDKs/MacOSX10.9.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
 
 *Note: if non 64 bit architecture just remove the x86_64 flags from the configure command*
 
@@ -323,9 +329,9 @@ downloads php sources and dependency sources and compiles.
 
 	cd wxphp
 	phpize
-	./configure --with-wxwidgets=/opt/wxWidgets
+	./configure --with-wxwidgets=/opt/wxWidgets --enable-wxwidgets-macosx
 	make
-	sudo make install
+	make install
 
 
 
