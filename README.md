@@ -318,7 +318,7 @@ downloads php sources and dependency sources and compiles.
 	cd wxWidgets.git
 	mkdir mybuild
 	cd mybuild
-	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.9.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
+	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.9 --with-macosx-sdk=/Developer/SDKs/MacOSX10.9.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
 
 *Note: if non 64 bit architecture just remove the x86_64 flags from the configure command*
 
