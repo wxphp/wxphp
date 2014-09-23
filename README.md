@@ -8,7 +8,7 @@ Documentation: [http://github.com/wxphp/wxphp/wiki](http://github.com/wxphp/wxph
 * [Building and Installing on Linux/Unix Environments](#building-and-installing-on-linuxunix-environments)
 * [Creating a DEB Package](#creating-a-deb-package)
 * [Linking statically to wxWidgets on Linux/Unix/MacOSX](#linking-statically-to-wxwidgets-on-linuxunixmacosx)
-* [Building on Mac OS X](#building-on-macosx)
+* [Building on Mac OS X](#building-on-mac-os-x)
 * [Running the examples](#running-the-examples)
 * [Third Party Tools](#third-party-tools)
 * [Development](#development)
