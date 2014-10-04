@@ -290,7 +290,7 @@ size (a little bit) of final libraries as increase performance could be
 
 The process of building on mac is the same as on linux the only
 differences are the way we configure wxWidgets build, as the applications
-needed. We have tested with the php version available on mac ports.
+needed. We have tested with the php version available on homebrew.
 
 *Note: In this example we will be building against Mac OS X Mavericks (10.9).
 If you are running a different version of Mac OS, then replace references to 10.9
@@ -318,12 +318,14 @@ downloads php sources and dependency sources and compiles.
 	cd wxWidgets.git
 	mkdir mybuild
 	cd mybuild
-	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.9 --with-macosx-sdk=/Developer/SDKs/MacOSX10.9.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
+	../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.9 --with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk --prefix=/opt/wxWidgets CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
 
 *Note: if non 64 bit architecture just remove the x86_64 flags from the configure command*
 
 	make
 	sudo make install
+	
+*Note: The location of your Mac OS X SDK may vary depending on your version of OS X. It is most likely to be located in ```/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.x.sdk``` but may also be located in ```/Developer/SDKs/MacOSX10.x.sdk```*
 
 ### Compile wxPHP as usual
 
