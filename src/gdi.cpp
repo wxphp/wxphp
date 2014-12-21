@@ -27327,15 +27327,15 @@ PHP_METHOD(php_wxImage, SetData)
 	#endif
 	
 	//Parameters for overload 0
-	long* data0;
-	zval* data0_ref;
+	char* data0;
+    long data0_len;
 	long new_width0;
 	long new_height0;
 	bool static_data0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	long* data1;
-	zval* data1_ref;
+	char* data1;
+    char* data1_len;
 	bool static_data1;
 	bool overload1_called = false;
 		
@@ -27348,14 +27348,11 @@ PHP_METHOD(php_wxImage, SetData)
 		php_printf("Parsing parameters with 'lll|b' (data0, &new_width0, &new_height0, &static_data0)\n");
 		#endif
 
-		char parse_parameters_string[] = "lll|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, data0, &new_width0, &new_height0, &static_data0 ) == SUCCESS)
+		char parse_parameters_string[] = "sll|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0, &data0_len, &new_width0, &new_height0, &static_data0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
-
-			char parse_references_string[] = "zzz|z";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &data0_ref, &dummy, &dummy, &dummy );
 		}
 	}
 
@@ -27368,14 +27365,11 @@ PHP_METHOD(php_wxImage, SetData)
 		php_printf("Parsing parameters with 'l|b' (data1, &static_data1)\n");
 		#endif
 
-		char parse_parameters_string[] = "l|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, data1, &static_data1 ) == SUCCESS)
+		char parse_parameters_string[] = "s|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data1, &data1_len, &static_data1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
-
-			char parse_references_string[] = "z|z";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &data1_ref, &dummy );
 		}
 	}
 
@@ -27392,13 +27386,6 @@ PHP_METHOD(php_wxImage, SetData)
 
 				((wxImage_php*)native_object)->SetData((unsigned char*) data0, (int) new_width0, (int) new_height0);
 
-				size_t elements_returned0_0 = sizeof(data0)/sizeof(*data0);
-				array_init(data0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(data0_ref, data0[i]);
-				}
-
 				return;
 				break;
 			}
@@ -27409,13 +27396,6 @@ PHP_METHOD(php_wxImage, SetData)
 				#endif
 
 				((wxImage_php*)native_object)->SetData((unsigned char*) data0, (int) new_width0, (int) new_height0, static_data0);
-
-				size_t elements_returned0_0 = sizeof(data0)/sizeof(*data0);
-				array_init(data0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(data0_ref, data0[i]);
-				}
 
 				return;
 				break;
@@ -27435,13 +27415,6 @@ PHP_METHOD(php_wxImage, SetData)
 
 				((wxImage_php*)native_object)->SetData((unsigned char*) data1);
 
-				size_t elements_returned1_0 = sizeof(data1)/sizeof(*data1);
-				array_init(data1_ref);
-				for(size_t i=0; i<elements_returned1_0; i++)
-				{
-					add_next_index_long(data1_ref, data1[i]);
-				}
-
 				return;
 				break;
 			}
@@ -27452,13 +27425,6 @@ PHP_METHOD(php_wxImage, SetData)
 				#endif
 
 				((wxImage_php*)native_object)->SetData((unsigned char*) data1, static_data1);
-
-				size_t elements_returned1_0 = sizeof(data1)/sizeof(*data1);
-				array_init(data1_ref);
-				for(size_t i=0; i<elements_returned1_0; i++)
-				{
-					add_next_index_long(data1_ref, data1[i]);
-				}
 
 				return;
 				break;
@@ -32454,7 +32420,7 @@ PHP_METHOD(php_wxImage, GetGreen)
 }
 /* }}} */
 
-/* {{{ proto int wxImage::GetData()
+/* {{{ proto string wxImage::GetData()
    Returns the image data as an array. */
 PHP_METHOD(php_wxImage, GetData)
 {
@@ -32530,10 +32496,12 @@ PHP_METHOD(php_wxImage, GetData)
 			case 0:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxImage::GetData())\n\n");
+				php_printf("Executing RETURN_STRING(wxImage::GetData())\n\n");
 				#endif
-
-				ZVAL_LONG(return_value, *(((wxImage_php*)native_object)->GetData()));
+                
+                char* value_to_return0;
+				value_to_return0 = (char*) ((wxImage_php*)native_object)->GetData();
+				ZVAL_STRING(return_value, value_to_return0, 1);
 
 
 				return;
