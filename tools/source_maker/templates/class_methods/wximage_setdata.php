@@ -100,7 +100,10 @@ PHP_METHOD(php_wxImage, SetData)
 		
 	if(overload0_called)
 	{
-		switch(arguments_received)
+        char* data0_copy = (char*) malloc(sizeof(data0));
+        memcpy(data0_copy, data0, sizeof(data0));
+        
+        switch(arguments_received)
 		{
 			case 3:
 			{
@@ -108,7 +111,7 @@ PHP_METHOD(php_wxImage, SetData)
 				php_printf("Executing wxImage::SetData((unsigned char*) data0, (int) new_width0, (int) new_height0)\n\n");
 				#endif
 
-				((wxImage_php*)native_object)->SetData((unsigned char*) data0, (int) new_width0, (int) new_height0);
+				((wxImage_php*)native_object)->SetData((unsigned char*) data0_copy, (int) new_width0, (int) new_height0);
 
 				return;
 				break;
@@ -119,7 +122,7 @@ PHP_METHOD(php_wxImage, SetData)
 				php_printf("Executing wxImage::SetData((unsigned char*) data0, (int) new_width0, (int) new_height0, static_data0)\n\n");
 				#endif
 
-				((wxImage_php*)native_object)->SetData((unsigned char*) data0, (int) new_width0, (int) new_height0, static_data0);
+				((wxImage_php*)native_object)->SetData((unsigned char*) data0_copy, (int) new_width0, (int) new_height0, static_data0);
 
 				return;
 				break;
@@ -129,6 +132,9 @@ PHP_METHOD(php_wxImage, SetData)
 
 	if(overload1_called)
 	{
+        char* data1_copy = (char*) malloc(sizeof(data1));
+        memcpy(data1_copy, data1, sizeof(data1));
+        
 		switch(arguments_received)
 		{
 			case 1:
@@ -137,7 +143,7 @@ PHP_METHOD(php_wxImage, SetData)
 				php_printf("Executing wxImage::SetData((unsigned char*) data1)\n\n");
 				#endif
 
-				((wxImage_php*)native_object)->SetData((unsigned char*) data1);
+				((wxImage_php*)native_object)->SetData((unsigned char*) data1_copy);
 
 				return;
 				break;
@@ -148,7 +154,7 @@ PHP_METHOD(php_wxImage, SetData)
 				php_printf("Executing wxImage::SetData((unsigned char*) data1, static_data1)\n\n");
 				#endif
 
-				((wxImage_php*)native_object)->SetData((unsigned char*) data1, static_data1);
+				((wxImage_php*)native_object)->SetData((unsigned char*) data1_copy, static_data1);
 
 				return;
 				break;
