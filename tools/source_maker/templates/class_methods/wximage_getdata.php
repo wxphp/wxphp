@@ -77,9 +77,26 @@ PHP_METHOD(php_wxImage, GetData)
 				php_printf("Executing RETURN_STRING(wxImage::GetData())\n\n");
 				#endif
                 
-                char* value_to_return0;
-				value_to_return0 = (char*) ((wxImage_php*)native_object)->GetData();
-				ZVAL_STRING(return_value, value_to_return0, 1);
+                long bytes_count = ((wxImage_php*)native_object)->GetWidth() *
+                    ((wxImage_php*)native_object)->GetHeight() *
+                    3
+                ;
+                
+                unsigned char* value_to_return0;
+				value_to_return0 = (unsigned char*) emalloc(bytes_count);
+                
+                memcpy(
+                    value_to_return0, 
+                    ((wxImage_php*)native_object)->GetData(), 
+                    bytes_count
+                );
+                
+				ZVAL_STRINGL(
+                    return_value, 
+                    (char*) value_to_return0, 
+                    bytes_count, 
+                    0
+                );
 
 
 				return;
