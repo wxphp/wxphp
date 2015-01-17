@@ -1,13 +1,13 @@
 /*
  * @author Mário Soares
  * @contributors Jefferson González
- * 
- * @license 
+ *
+ * @license
  * This file is part of wxPHP check the LICENSE file for information.
- * 
+ *
  * @description
  * Manual binding declaration to the wxApp class
- * 
+ *
 */
 
 #ifndef WXPHP_APP_H_GUARD
@@ -20,6 +20,7 @@ extern zend_class_entry *php_wxApp_entry;
 class wxAppWrapper : public wxApp
 {
     public:
+        wxAppWrapper():wxApp(),phpObj(0),tsrm_ls((void ***) ts_resource_ex(0, NULL)){}
         bool OnInit();
         int OnExit();
 
