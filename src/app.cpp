@@ -86,10 +86,12 @@ bool wxAppWrapper::OnInit()
 
     wxFileSystem::AddHandler(new wxZipFSHandler);
 
+    #ifdef ZTS
     if(!phpObj)
     {
         tsrm_ls = (void ***) ts_resource_ex(0, NULL);
     }
+    #endif
 
     call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
 

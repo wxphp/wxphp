@@ -20,7 +20,10 @@ extern zend_class_entry *php_wxApp_entry;
 class wxAppWrapper : public wxApp
 {
     public:
+        #ifdef ZTS
         wxAppWrapper():wxApp(),phpObj(0),tsrm_ls((void ***) ts_resource_ex(0, NULL)){}
+        #endif
+
         bool OnInit();
         int OnExit();
 
