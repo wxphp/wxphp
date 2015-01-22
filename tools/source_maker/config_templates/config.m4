@@ -1,5 +1,9 @@
 PHP_ARG_WITH(wxwidgets,for wxWidgets support,
-[  --with-wxwidgets[=DIR]    enable wxWidgets extension (requires wxWidgets >= 3.0.0).])
+[  --with-wxwidgets[=DIR]    Enable wxWidgets extension (requires wxWidgets >= 3.0.0).])
+
+PHP_ARG_WITH(wxwidgets-version,set wxWidgets version,
+[  --with-wxwidgets[=VERSION]
+                             Explicitly set wxWidgets version to download and compile], no, no)
 
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
@@ -18,6 +22,13 @@ PHP_ARG_ENABLE(wxwidgets-macosx, whether to build for Mac OS X,
                           Build the library for Mac OS X], no, no)
 
 if test "$PHP_WXWIDGETS" != "no"; then
+
+    dnl Set the wxWidgets version to download and compile
+    PHP_WX_VERSION="3.0.2"
+
+    if test "$PHP_WXWIDGETS_VERSION" != "no"; then
+        PHP_WX_VERSION=$PHP_WXWIDGETS_VERSION
+    fi
 
     dnl Instruct the PHP build system to use a C++ compiler
     PHP_REQUIRE_CXX()
@@ -112,7 +123,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
             AC_MSG_RESULT([found])
         else
             if test "$CURL" != ""; then
-                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-3.0.1.tar.bz2"
+                PHP_WXWIDGETS_DOWNLOADER="curl -L -o wxWidgets-${PHP_WX_VERSION}.tar.bz2"
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
@@ -120,22 +131,22 @@ if test "$PHP_WXWIDGETS" != "no"; then
             fi
         fi
         
-        if test ! -e "wxWidgets-3.0.1"; then
+        if test ! -e "wxWidgets-${PHP_WX_VERSION}"; then
             echo "Downloading wxWidgets..."
-            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.1.tar.bz2
-            tar -xjf wxWidgets-3.0.1.tar.bz2
-            rm wxWidgets-3.0.1.tar.bz2
+            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-$PHP_WX_VERSION.tar.bz2
+            tar -xjf wxWidgets-$PHP_WX_VERSION.tar.bz2
+            rm wxWidgets-$PHP_WX_VERSION.tar.bz2
         fi
 
         dnl Build wxWidgets if not already build
         echo "Starting a custom build of wxWidgets..."
         
-        cd wxWidgets-3.0.1
+        cd wxWidgets-$PHP_WX_VERSION
 
         mkdir mybuild
         cd mybuild
 
-        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-3.0.1\/mybuild//"`wxWidgets-build
+        WX_BUILD_DIR=`pwd | sed "s/wxWidgets-${PHP_WX_VERSION}\/mybuild//"`wxWidgets-build
 
         if test ! -e "Makefile"; then
             if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
