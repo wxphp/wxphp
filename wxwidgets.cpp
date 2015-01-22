@@ -1291,7 +1291,22 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	#ifdef ISOLATION_AWARE_ENABLED
     wxPHPSetActivationContext();
 	#endif
+
+    /**
+     * Define some version constants.
+     */
+    REGISTER_STRING_CONSTANT(
+        "WXWIDGETS_EXTENSION_VERSION", 
+        (char*) PHP_WXWIDGETS_EXTVER, 
+        CONST_CS | CONST_PERSISTENT
+    );
 	
+    REGISTER_STRING_CONSTANT(
+        "WXWIDGETS_LIBRARY_VERSION", 
+        (char*) PHP_WXWIDGETS_VERSION, 
+        CONST_CS | CONST_PERSISTENT
+    );
+
     zend_class_entry ce; /* Temporary variable used to initialize class entries */
 
 	/**
