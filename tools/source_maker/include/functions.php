@@ -667,6 +667,10 @@ function remove_virtual_methods_overrides(&$classes)
 	
 	foreach($classes as $class_name=>$class_methods)
 	{
+        // Skip some classes which don't cause any harm
+        if(in_array($class_name, array("wxInputStream", "wxOutputStream")))
+            continue;
+        
 		foreach($class_methods as $method_name=>$method_definitions)
 		{
 			//Only remove virtual methods that override non virtual methods with the same name

@@ -3168,6 +3168,11 @@ PHP_METHOD(php_wxOutputStream, Write)
 	zval* stream_in0 = 0;
 	wxInputStream* object_pointer0_0 = 0;
 	bool overload0_called = false;
+	//Parameters for overload 1
+	char* buffer1;
+	long buffer_len1;
+	long size1;
+	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -3189,16 +3194,33 @@ PHP_METHOD(php_wxOutputStream, Write)
 					object_pointer0_0 = (wxInputStream*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXINPUTSTREAM_TYPE && argument_type != PHP_WXFFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEINPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter 'stream_in' could not be retreived correctly.");
+						goto overload1;
 					}
 				}
 				else if(Z_TYPE_P(stream_in0) != IS_NULL)
 				{
-					zend_error(E_ERROR, "Parameter 'stream_in' not null, could not be retreived correctly.");
+					goto overload1;
 				}
 			}
 
 			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
+		#endif
+
+		char parse_parameters_string[] = "sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
+		{
+			overload1_called = true;
 			already_called = true;
 		}
 	}
@@ -3237,6 +3259,45 @@ PHP_METHOD(php_wxOutputStream, Write)
 				}
 
 				references->AddReference(stream_in0, "wxOutputStream::Write at call with 1 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxOutputStream::Write((const void*) buffer1, (size_t) size1) to return object reference\n\n");
+				#endif
+
+				wxOutputStream_php* value_to_return2;
+				value_to_return2 = (wxOutputStream_php*) &((wxOutputStream_php*)native_object)->Write((const void*) buffer1, (size_t) size1);
+
+				if(value_to_return2->references.IsUserInitialized()){
+					if(value_to_return2->phpObj != NULL){
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
+						return_is_user_initialized = true;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxOutputStream_entry);
+					((zo_wxOutputStream*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxOutputStream_php*) value_to_return2;
+				}
+
+				if((void*)value_to_return2 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+					references->AddReference(return_value, "wxOutputStream::Write at call with 2 argument(s)");
+				}
+
 
 				return;
 				break;
@@ -4475,6 +4536,12 @@ PHP_METHOD(php_wxInputStream, Read)
 	zval* stream_out0 = 0;
 	wxOutputStream* object_pointer0_0 = 0;
 	bool overload0_called = false;
+	//Parameters for overload 1
+	char* buffer1;
+	long buffer_len1;
+	zval* buffer1_ref;
+	long size1;
+	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -4496,17 +4563,37 @@ PHP_METHOD(php_wxInputStream, Read)
 					object_pointer0_0 = (wxOutputStream*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFFILESTREAM_TYPE && argument_type != PHP_WXFILEOUTPUTSTREAM_TYPE && argument_type != PHP_WXFILESTREAM_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter 'stream_out' could not be retreived correctly.");
+						goto overload1;
 					}
 				}
 				else if(Z_TYPE_P(stream_out0) != IS_NULL)
 				{
-					zend_error(E_ERROR, "Parameter 'stream_out' not null, could not be retreived correctly.");
+					goto overload1;
 				}
 			}
 
 			overload0_called = true;
 			already_called = true;
+		}
+	}
+
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received == 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'sl' (&buffer1, &buffer_len1, &size1)\n");
+		#endif
+
+		char parse_parameters_string[] = "sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffer1, &buffer_len1, &size1 ) == SUCCESS)
+		{
+			overload1_called = true;
+			already_called = true;
+
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &buffer1_ref, &dummy );
 		}
 	}
 
@@ -4544,6 +4631,46 @@ PHP_METHOD(php_wxInputStream, Read)
 				}
 
 				references->AddReference(stream_out0, "wxInputStream::Read at call with 1 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxInputStream::Read((void*) buffer1, (size_t) size1) to return object reference\n\n");
+				#endif
+
+				wxInputStream_php* value_to_return2;
+				value_to_return2 = (wxInputStream_php*) &((wxInputStream_php*)native_object)->Read((void*) buffer1, (size_t) size1);
+
+				if(value_to_return2->references.IsUserInitialized()){
+					if(value_to_return2->phpObj != NULL){
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
+						return_is_user_initialized = true;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxInputStream_entry);
+					((zo_wxInputStream*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxInputStream_php*) value_to_return2;
+				}
+
+				if((void*)value_to_return2 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
+					references->AddReference(return_value, "wxInputStream::Read at call with 2 argument(s)");
+				}
+
+				ZVAL_STRING(buffer1_ref, (char*) buffer1, 1);
 
 				return;
 				break;

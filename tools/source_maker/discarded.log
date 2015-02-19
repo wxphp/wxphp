@@ -76,8 +76,6 @@ Virtual Overrides
 wxAuiNotebook::AddPage
 wxSpinCtrl::SetValue
 wxSpinCtrlDouble::SetValue
-wxInputStream::Read
-wxOutputStream::Write
 wxToolBar::SetMargins
 wxToolBar::AddTool
 wxGrid::GetDefaultEditorForCell
