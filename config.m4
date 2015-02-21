@@ -203,6 +203,20 @@ if test "$PHP_WXWIDGETS" != "no"; then
     dnl Retreive and store wxWidgets compiler flags
     WXWIDGETS_CFLAGS=`$WXCONFIG_PATH --cxxflags`
     
+    dnl Add some header paths required for wxWindow::GetHandle()
+    if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
+        WXWIDGETS_IS_GTK2=`$WXCONFIG_PATH --list | grep "config is gtk2"`
+        WXWIDGETS_IS_GTK3=`$WXCONFIG_PATH --list | grep "config is gtk3"`
+        
+        if test "$WXWIDGETS_IS_GTK2" != ""; then
+            GTK2_CFLAGS=`pkg-config gtk+-2.0 --cflags`
+            WXWIDGETS_CFLAGS="$WXWIDGETS_CFLAGS $GTK2_CFLAGS"
+        elif test "$WXWIDGETS_IS_GTK3" != ""; then
+            GTK3_CFLAGS=`pkg-config gtk+-3.0 --cflags`
+            WXWIDGETS_CFLAGS="$WXWIDGETS_CFLAGS $GTK3_CFLAGS"
+        fi
+    fi
+    
     dnl Append wx-config flags to wxphp compiler flags 
     PHP_WXWIDGETS_CFLAGS="$PHP_WXWIDGETS_CFLAGS $WXWIDGETS_CFLAGS"
     

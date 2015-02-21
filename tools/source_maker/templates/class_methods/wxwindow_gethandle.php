@@ -1,3 +1,36 @@
+// GetXWindow implementation from:
+// https://github.com/wxWidgets/wxPython/blob/master/src/helpers.cpp#L28
+
+#ifdef __WXMSW__
+#include <wx/msw/private.h>
+#include <wx/msw/winundef.h>
+#include <wx/msw/msvcrt.h>
+#endif
+
+#ifdef __WXGTK__
+#include <gtk/gtk.h>
+#include <gdk/gdkx.h>
+#ifdef __WXGTK3__
+#define GetXWindow(wxwin) (wxwin)->m_wxwindow ? \
+                          GDK_WINDOW_XID(gtk_widget_get_window((wxwin)->m_wxwindow)) :	\
+                          GDK_WINDOW_XID(gtk_widget_get_window((wxwin)->m_widget))
+#else
+#define GetXWindow(wxwin) (wxwin)->m_wxwindow ? \
+                          GDK_WINDOW_XWINDOW((wxwin)->m_wxwindow->window) : \
+                          GDK_WINDOW_XWINDOW((wxwin)->m_widget->window)
+#endif
+#include <locale.h>
+#endif
+
+#ifdef __WXX11__
+#include "wx/x11/privx.h"
+#define GetXWindow(wxwin)   ((Window)(wxwin)->GetHandle())
+#endif
+
+#ifdef __WXMAC__
+#include <wx/osx/private.h>
+#endif
+
 /* {{{ proto int wxWindow::GetHandle()
    Returns the platform-specific handle of the physical window. */
 PHP_METHOD(php_wxWindow, GetHandle)
@@ -541,7 +574,52 @@ PHP_METHOD(php_wxWindow, GetHandle)
 				php_printf("Executing RETURN_LONG(wxWindow::GetHandle())\n\n");
 				#endif
 
-				ZVAL_LONG(return_value, (size_t) ((wxWindow_php*)native_object)->GetHandle());
+                #ifdef __WXMSW__
+                    ZVAL_LONG(
+                        return_value, 
+                        (size_t) ((wxWindow_php*)native_object)->GetHandle()
+                    );
+                #endif
+
+                #if defined(__WXGTK__) || defined(__WXX11__)
+                    wxWindow* win = (wxWindow*) native_object;
+                    #ifdef __WXGTK3__
+                        if(gtk_widget_get_window(win->m_wxwindow))
+                        {
+                            ZVAL_LONG(
+                                return_value, 
+                                (size_t) GDK_WINDOW_XID(
+                                    gtk_widget_get_window(win->m_wxwindow)
+                                )
+                            );
+                        }
+                        else if(gtk_widget_get_window(win->m_widget))
+                        {
+                            ZVAL_LONG(
+                                return_value, 
+                                (size_t) GDK_WINDOW_XID(
+                                    gtk_widget_get_window(win->m_widget)
+                                )
+                            );
+                        }
+                        else
+                        {
+                            ZVAL_LONG(return_value, 0);
+                        }
+                    #else
+                            ZVAL_LONG(
+                                return_value, 
+                                (size_t) GetXWindow(win)
+                            );
+                    #endif
+                #endif
+
+                #ifdef __WXMAC__
+                    ZVAL_LONG(
+                        return_value, 
+                        (size_t) ((wxWindow_php*)native_object)->GetHandle()
+                    );
+                #endif
 
 
 				return;
