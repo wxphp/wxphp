@@ -260,6 +260,7 @@ PHP_METHOD(php_wxWindow, GetExtraStyle);
 PHP_METHOD(php_wxWindow, GetFont);
 PHP_METHOD(php_wxWindow, GetForegroundColour);
 PHP_METHOD(php_wxWindow, GetGrandParent);
+PHP_METHOD(php_wxWindow, GetHandle);
 PHP_METHOD(php_wxWindow, GetHelpText);
 PHP_METHOD(php_wxWindow, GetHelpTextAtPoint);
 PHP_METHOD(php_wxWindow, GetId);

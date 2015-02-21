@@ -193,6 +193,7 @@ static zend_function_entry php_wxBookCtrlBase_functions[] = {
 	PHP_ME(php_wxWindow, GetFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, GetForegroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, GetGrandParent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetHandle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, GetHelpText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, GetHelpTextAtPoint, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, GetId, NULL, ZEND_ACC_PUBLIC)

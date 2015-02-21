@@ -193,6 +193,8 @@ if(file_exists("./../../json/global_variables.json"))
 if(file_exists("./../../json/typedef.json"))
 {
 	$defTypedef = unserialize_json(file_get_contents("./../../json/typedef.json"));
+    
+    $defTypedef["WXWidget"] = "size_t";
 }
 
 //Prepair class groups to generate different source files correctly

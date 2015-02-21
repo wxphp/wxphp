@@ -120,7 +120,6 @@ Methods duplicated on multiple base classes and not all virtual
 
 Methods implementing unknown types
 
-WXWidget	WXWidget wxWindow::GetHandle()
 wxImage::HSVValue	wxImage::HSVValue wxImage::RGBtoHSV(const wxImage::RGBValue& rgb)
 wxImage::RGBValue	wxImage::RGBValue wxImage::HSVtoRGB(const wxImage::HSVValue& hsv)
 wxList&	wxList& wxImage::GetHandlers()
