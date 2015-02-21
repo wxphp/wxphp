@@ -174,6 +174,13 @@ class ConvertFrame extends wxFrame {
 			$this->m_status->SetValue(0);
 			
 			$this->m_timer->Stop();
+			
+			// Ensure thread isn't running before Delete
+			while($this->document_converter->IsRunning()){}
+			$this->document_converter->Delete();
+			
+			//Assign new thread
+			$this->document_converter = new DocumentConverter($this);
 		}
 	}
 	
