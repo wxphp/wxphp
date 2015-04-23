@@ -1,3 +1,42 @@
+v3.0.2.0 - April 23 2015
+
+  * Updated the thread.php example to work properly.
+  * Remove delete on the wxThread garbage collector function, which 
+    should fix most issues on #84.
+  * Modified wxWindow::GetHandle to return the XWindowID on Gtk which 
+    should really fix #86.
+  * Enabled wxWindow::GetHandle by casting WXWidget to size_t.
+  * Enabled wxOutputStream::Write and wxInputStream::Read variations 
+    that take a 'void* buf' as argument which should fix issue #87
+  * Updated version numbers and added userland version constants: 
+    WXWIDGETS_LIBRARY_VERSION and WXWIDGETS_EXTENSION_VERSION.
+  * Added --with-wxwidgets-version to package.xml so 'pecl install 
+    wxwidgets' can ask for a different version of wxWidgets library to 
+    download and compile.
+  * Set the default wxWidgets version to download and compile on linux 
+    and mac to 3.0.2. Also added a new configure option 
+    --with-wxwidgets-version to explicitly change the version of 
+    wxWidgets to download, eg: --with-wxwidgets-version=3.0.1
+  * Forgot to conditionally fetch tsrm on wxAppWrapper.
+  * Fetch TSRM on wxAppWrapper which probably fixes issue #70
+  * Unmodified copy of wxImage::GetData to zval which fixes #75.
+  * Own the data parameter on wxImage SetData to really fix issue #75.
+  * Custom templates for wxImage GetData and SetData which fix 
+    and close #75.
+  * Updating location of Mac OS X SDK in docs (chrisnharvey).
+  * Updating docs for building on Mac OS X (chrisnharvey)
+  * Updating link to heading
+  * Updating macosx-version-min to 10.9
+  * Added sdl, sdl_sound as dependencies on archlinux PKGBUILD.
+  * Updated config.m4 to require sdl and sdl_sound on linux which 
+    fixes #2.
+  * Removed some testing printf code.
+  * Added some wxApp methods.
+  * Fix to correctly brake search for wx-config when first found in 
+    config.m4 file.
+  * Added wxPHP shell script in /usr/bin/wxphp.
+  * Added some wxApp methods.
+
 v3.0.0.2 - April 05 2014
 
   * Fixed wxInputStream::OnSysRead thanks to johannes from pecl. This 

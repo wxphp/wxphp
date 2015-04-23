@@ -22,11 +22,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>jgmdev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2014-04-05</date>
+ <date>2015-04-23</date>
  <time>18:02:59</time>
  <version>
-  <release>3.0.0.2</release>
-  <api>3.0.0.2</api>
+  <release>3.0.2.0</release>
+  <api>3.0.2.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -34,28 +34,42 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://www.php.net/license">PHP</license>
  <notes>
-  * Fixed wxInputStream::OnSysRead thanks to johannes from pecl. This 
-    functionality should be enough for loading images from phar files 
-    as described on issue #35.
-  * Moving mac process transformation code to wxEntry (chrisnharvey).
-  * Enabled some MacOSX specific wxApp virtual methods as requested by ydk2.
-  * Modified bool wxApp::OSXIsGUIApplication() to return true by 
-    default if no user space side function is found.
-  * Improved config.m4 and added initial support for macosx.
-  * Fixed some segfaults on macosx due to newly introduced wxApp 
-    virtual methods which may be called with an uninitialized phpobj.
-  * Added curl as another option to download wxWidgets from config.m4.
-  * Improved wxExecute function.
-  * Added macosx bundle icon.
-  * also search for wx-config-3.0 (remicollet)
-  * Type casted to void* on memcpy calls.
-  * Added tool to generate Mac OSX bundles of wxphp.
-  * Fixed mac osx segfault caused by incrementing the refcount on 
-    objects returned by static methods.
-  * Renamed xml_parser.php to json_generator.php.
-  * added the way to work with conflicting mode_t declaration needs 
-    some header in wx distro to be patched (weltling)
-  * Removed template.rc (weltling)
+  * Updated the thread.php example to work properly.
+  * Remove delete on the wxThread garbage collector function, which 
+    should fix most issues on #84.
+  * Modified wxWindow::GetHandle to return the XWindowID on Gtk which 
+    should really fix #86.
+  * Enabled wxWindow::GetHandle by casting WXWidget to size_t.
+  * Enabled wxOutputStream::Write and wxInputStream::Read variations 
+    that take a 'void* buf' as argument which should fix issue #87
+  * Updated version numbers and added userland version constants: 
+    WXWIDGETS_LIBRARY_VERSION and WXWIDGETS_EXTENSION_VERSION.
+  * Added --with-wxwidgets-version to package.xml so 'pecl install 
+    wxwidgets' can ask for a different version of wxWidgets library to 
+    download and compile.
+  * Set the default wxWidgets version to download and compile on linux 
+    and mac to 3.0.2. Also added a new configure option 
+    --with-wxwidgets-version to explicitly change the version of 
+    wxWidgets to download, eg: --with-wxwidgets-version=3.0.1
+  * Forgot to conditionally fetch tsrm on wxAppWrapper.
+  * Fetch TSRM on wxAppWrapper which probably fixes issue #70
+  * Unmodified copy of wxImage::GetData to zval which fixes #75.
+  * Own the data parameter on wxImage SetData to really fix issue #75.
+  * Custom templates for wxImage GetData and SetData which fix 
+    and close #75.
+  * Updating location of Mac OS X SDK in docs (chrisnharvey).
+  * Updating docs for building on Mac OS X (chrisnharvey)
+  * Updating link to heading
+  * Updating macosx-version-min to 10.9
+  * Added sdl, sdl_sound as dependencies on archlinux PKGBUILD.
+  * Updated config.m4 to require sdl and sdl_sound on linux which 
+    fixes #2.
+  * Removed some testing printf code.
+  * Added some wxApp methods.
+  * Fix to correctly brake search for wx-config when first found in 
+    config.m4 file.
+  * Added wxPHP shell script in /usr/bin/wxphp.
+  * Added some wxApp methods.
  </notes>
  <contents>
   <dir name="/">
@@ -189,6 +203,56 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <configureoption default="no" name="enable-wxwidgets-macosx" prompt="Enable Mac OS X building mode" />
  </extsrcrelease>
  <changelog>
+  <release>
+   <version>
+    <release>3.0.2.0</release>
+    <api>3.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2015-04-23</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+  * Updated the thread.php example to work properly.
+  * Remove delete on the wxThread garbage collector function, which 
+    should fix most issues on #84.
+  * Modified wxWindow::GetHandle to return the XWindowID on Gtk which 
+    should really fix #86.
+  * Enabled wxWindow::GetHandle by casting WXWidget to size_t.
+  * Enabled wxOutputStream::Write and wxInputStream::Read variations 
+    that take a 'void* buf' as argument which should fix issue #87
+  * Updated version numbers and added userland version constants: 
+    WXWIDGETS_LIBRARY_VERSION and WXWIDGETS_EXTENSION_VERSION.
+  * Added --with-wxwidgets-version to package.xml so 'pecl install 
+    wxwidgets' can ask for a different version of wxWidgets library to 
+    download and compile.
+  * Set the default wxWidgets version to download and compile on linux 
+    and mac to 3.0.2. Also added a new configure option 
+    --with-wxwidgets-version to explicitly change the version of 
+    wxWidgets to download, eg: --with-wxwidgets-version=3.0.1
+  * Forgot to conditionally fetch tsrm on wxAppWrapper.
+  * Fetch TSRM on wxAppWrapper which probably fixes issue #70
+  * Unmodified copy of wxImage::GetData to zval which fixes #75.
+  * Own the data parameter on wxImage SetData to really fix issue #75.
+  * Custom templates for wxImage GetData and SetData which fix 
+    and close #75.
+  * Updating location of Mac OS X SDK in docs (chrisnharvey).
+  * Updating docs for building on Mac OS X (chrisnharvey)
+  * Updating link to heading
+  * Updating macosx-version-min to 10.9
+  * Added sdl, sdl_sound as dependencies on archlinux PKGBUILD.
+  * Updated config.m4 to require sdl and sdl_sound on linux which 
+    fixes #2.
+  * Removed some testing printf code.
+  * Added some wxApp methods.
+  * Fix to correctly brake search for wx-config when first found in 
+    config.m4 file.
+  * Added wxPHP shell script in /usr/bin/wxphp.
+  * Added some wxApp methods.
+   </notes>
+  </release>
   <release>
    <version>
     <release>3.0.0.2</release>

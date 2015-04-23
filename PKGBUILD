@@ -1,8 +1,8 @@
 # Maintainer: Jefferson González <jgmdev@gmail.com>
 
 pkgname=php-wxwidgets-git
-pkgver=20140810
-_pkgver=3.0.1
+pkgver=20150423
+_pkgver=3.0.2
 pkgrel=1
 pkgdesc="PHP bindings to the cross-platform wxWidgets GUI Toolkit library."
 arch=('i686' 'x86_64')
@@ -21,7 +21,7 @@ source=(
 )
 
 sha1sums=(
-	'73e58521d6871c9f4d1e7974c6e3a81629fddcf8'
+	'SKIP'
 	'SKIP'
 )
 
