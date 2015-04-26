@@ -20,4 +20,7 @@ other necessary changes depending on your environment.
 
 The setup.php is included on the installation file and the purpose of 
 this script is to generate the php.ini with correct extensions directory
-value as the setenv.bat with correct path to php interpreter.
+value.
+
+setenv.bat is a static file and gets the correct path to the
+php interpreter on its own (https://github.com/wxphp/wxphp/issues/88).
