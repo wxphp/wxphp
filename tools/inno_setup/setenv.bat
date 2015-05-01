@@ -1,6 +1,7 @@
 @ECHO OFF
 
-set Path=%Path%;wxPHP\php
+rem https://github.com/wxphp/wxphp/issues/88
+set Path=%~dp0php;%Path%
 
 echo wxPHP Command Prompt
 echo ===========================================================

@@ -1,26 +1,30 @@
 <?php
 
-$setenv_bat_path = "setenv.bat";
-
-$php_path = getcwd() . "\\php";
+// https://github.com/wxphp/wxphp/issues/88
+// static setenv.bat, disable code
+//$setenv_bat_path = "setenv.bat";
+//
+//$php_path = getcwd() . "\\php";
 
 $php_ini_path = "php/php.ini";
 
 $extensions_path = getcwd() . "\\php\\ext\\";
 
-$setenv_bat = "
-@ECHO OFF
-
-set Path=%Path%;$php_path
-
-echo wxPHP Command Prompt
-echo ===========================================================
-echo You can execute php scripts with wxWidgets code like this:
-echo.
-echo     wxphp script.php
-echo.
-echo ===========================================================
-";
+// https://github.com/wxphp/wxphp/issues/88
+// static setenv.bat, disable code
+// $setenv_bat = "
+// @ECHO OFF
+//
+// set Path=%Path%;$php_path
+//
+// echo wxPHP Command Prompt
+// echo ===========================================================
+// echo You can execute php scripts with wxWidgets code like this:
+// echo.
+// echo     wxphp script.php
+// echo.
+// echo ===========================================================
+// ";
 
 $php_ini = "
 [PHP]
@@ -1952,6 +1956,8 @@ extension=php_wxwidgets.dll
 ";
 
 
-file_put_contents($setenv_bat_path, $setenv_bat);
+// https://github.com/wxphp/wxphp/issues/88
+// static setenv.bat, disable code
+//file_put_contents($setenv_bat_path, $setenv_bat);
 file_put_contents($php_ini_path, $php_ini);
 ?>
