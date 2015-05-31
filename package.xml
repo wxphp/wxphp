@@ -22,7 +22,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>jgmdev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2015-04-23</date>
+ <date>2015-05-30</date>
  <time>18:02:59</time>
  <version>
   <release>3.0.2.0</release>
@@ -185,6 +185,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <file name="examples/webview.php" role="doc" />
    <file name="CHANGES" role="doc" />
    <file name="CREDITS" role="doc" />
+   <file name="INSTALL.md" role="doc" />
    <file name="LICENSE" role="doc" />
    <file name="README.md" role="doc" />
    <file name="README_MSW.txt" role="doc" />
