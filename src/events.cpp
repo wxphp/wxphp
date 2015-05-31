@@ -11395,6 +11395,10 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 	zval* filter0 = 0;
 	wxEventFilter* object_pointer0_0 = 0;
 	bool overload0_called = false;
+	//Parameters for overload 1
+	zval* filter1 = 0;
+	wxHtmlFilter* object_pointer1_0 = 0;
+	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -11416,16 +11420,50 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 					object_pointer0_0 = (wxEventFilter*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXEVENTFILTER_TYPE))
 					{
-						zend_error(E_ERROR, "Parameter 'filter' could not be retreived correctly.");
+						goto overload1;
 					}
 				}
 				else if(Z_TYPE_P(filter0) != IS_NULL)
+				{
+					goto overload1;
+				}
+			}
+
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received == 1 && (current_object_type == PHP_WXHTMLWINDOW_TYPE))
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'z' (&filter1)\n");
+		#endif
+
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filter1 ) == SUCCESS)
+		{
+			if(arguments_received >= 1){
+				if(Z_TYPE_P(filter1) == IS_OBJECT)
+				{
+					wxphp_object_type argument_type = ((zo_wxHtmlFilter*) zend_object_store_get_object(filter1 TSRMLS_CC))->object_type;
+					argument_native_object = (void*) ((zo_wxHtmlFilter*) zend_object_store_get_object(filter1 TSRMLS_CC))->native_object;
+					object_pointer1_0 = (wxHtmlFilter*) argument_native_object;
+					if (!object_pointer1_0 || (argument_type != PHP_WXHTMLFILTER_TYPE))
+					{
+						zend_error(E_ERROR, "Parameter 'filter' could not be retreived correctly.");
+					}
+				}
+				else if(Z_TYPE_P(filter1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'filter' not null, could not be retreived correctly.");
 				}
 			}
 
-			overload0_called = true;
+			overload1_called = true;
 			already_called = true;
 		}
 	}
@@ -11443,6 +11481,26 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 				#endif
 
 				wxEvtHandler::AddFilter((wxEventFilter*) object_pointer0_0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Static ");
+				php_printf("Executing wxHtmlWindow::AddFilter((wxHtmlFilter*) object_pointer1_0)\n\n");
+				#endif
+
+				wxHtmlWindow::AddFilter((wxHtmlFilter*) object_pointer1_0);
 
 
 				return;

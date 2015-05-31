@@ -29,6 +29,7 @@ wxwidgets-*
 run-tests.php
 src/.libs
 src/*.lo
+src/*.loT
 wxwidgets.la
 wxwidgets.lo
 xml/*.xml

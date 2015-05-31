@@ -44,11 +44,11 @@ PHP_METHOD(php_<?=$class_name?>, <?=php_method_name($method_name)?>)
 	}
 	#endif
 	
-	<?=function_parameters($method_definitions, $method_name, $class_name)?>
+	<?=function_parameters($method_definitions_ex, $method_name, $class_name)?>
 	
-	<?=function_called_overload($method_definitions, $method_name, $class_name)?>
+	<?=function_called_overload($method_definitions_ex, $method_name, $class_name)?>
 	
-	<?=function_return($method_definitions, $method_name, $class_name)?>
+	<?=function_return($method_definitions_ex, $method_name, $class_name)?>
 	
 	//In case wrong type/count of parameters was passed
 	if(!already_called)

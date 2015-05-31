@@ -472,6 +472,81 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array(), $multiple_inher
 	return $ar;
 }
 
+function class_method_append_overrides($class_name, $method_name, &$method_definitions)
+{
+    global $defIni;
+    
+    static $childs = array();
+    
+    if(!isset($childs[$class_name]))
+    {
+        $childs = array(
+            $class_name => derivationsOfClass($class_name)
+        );
+    }
+    
+    foreach($childs[$class_name] as $child_name=>$child_isset)
+    {   
+        if(isset($defIni[$child_name][$method_name]))
+        {
+            $found_match = false;
+            
+            $definitions_not_found = array();
+
+            foreach($defIni[$child_name][$method_name] as $method_definition)
+            {
+                $no_match = true;
+                
+                foreach($defIni[$class_name][$method_name] as $parent_method_definition)
+                {
+                    if(
+                        $parent_method_definition["return_type"] 
+                        != 
+                        $method_definition["return_type"]
+                    )
+                        continue;
+
+                    if(
+                        count($parent_method_definition["parameters_type"])
+                        !=
+                        count($method_definition["parameters_type"])
+                    )
+                        continue;
+
+                    if(
+                        $parent_method_definition["parameters_type"]
+                        !=
+                        $method_definition["parameters_type"]
+                    )
+                        continue;
+                    
+                    $no_match = false;
+                    $found_match = true;
+                }
+                
+                if($no_match)
+                {
+                    $method_definition["override_class"] = $child_name;
+                    
+                    $definitions_not_found[] = $method_definition;
+                }
+            }
+
+            if(!$found_match)
+            {
+                $method_definitions = array_merge($method_definitions, $definitions_not_found);
+                /*print "$class_name -> $child_name::$method_name\n";
+                print_r($definitions_not_found);
+                
+                if($child_name == "wxGenericProgressDialog")
+                    exit;
+                 * 
+                 */
+            }
+        }
+    }
+}
+
 /**
  * Checks if a class has all pure virtual methods implemented by the
  * wrapper so it can be initialized.
