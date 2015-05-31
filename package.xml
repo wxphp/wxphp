@@ -70,6 +70,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
     config.m4 file.
   * Added wxPHP shell script in /usr/bin/wxphp.
   * Added some wxApp methods.
+  * Automated Mac OSX detection which should fix #94.
+  * Simplified README.md and added building steps into INSTALL.md.
+  * Removed trace of debugging code.
+  * Merge child class method overrides that differ into parent methods 
+    which should fix #97.
  </notes>
  <contents>
   <dir name="/">
@@ -211,7 +216,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
     <release>stable</release>
     <api>stable</api>
    </stability>
-   <date>2015-04-23</date>
+   <date>2015-05-30</date>
    <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
    <notes>
   * Updated the thread.php example to work properly.
@@ -250,6 +255,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
     config.m4 file.
   * Added wxPHP shell script in /usr/bin/wxphp.
   * Added some wxApp methods.
+  * Automated Mac OSX detection which should fix #94.
+  * Simplified README.md and added building steps into INSTALL.md.
+  * Removed trace of debugging code.
+  * Merge child class method overrides that differ into parent methods 
+    which should fix #97.
    </notes>
   </release>
   <release>

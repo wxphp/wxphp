@@ -36,6 +36,11 @@ php5-wxwidgets (3.0.2.0) unstable; urgency=low
     config.m4 file.
   * Added wxPHP shell script in /usr/bin/wxphp.
   * Added some wxApp methods.
+  * Automated Mac OSX detection which should fix #94.
+  * Simplified README.md and added building steps into INSTALL.md.
+  * Removed trace of debugging code.
+  * Merge child class method overrides that differ into parent methods 
+    which should fix #97.
   
  -- Jefferson González <jgmdev@gmail.com>  Thu, 23 Apr 2014 01:22:09 +0400
 
@@ -161,4 +166,3 @@ php5-wxwidgets (2.9.4.0) unstable; urgency=low
   * Initial debianization
 
  -- Jefferson González <jgmdev@gmail.com>  Wed, 16 May 2012 01:22:09 +0400
-
