@@ -110,6 +110,10 @@ or php-win.exe
 		0 ICON win32\build\php.ico
 		#include <wx/msw/wx.rc>
 		#endif
+		
+	Note: This may not be the case anymore, since the Windows OS
+	pecl automated builds administrator (welting) reported
+	success on builds without doing this change.
 
 3. in order to only include the wx.rc file when the system is building
 the php.exe or php-win.exe.
