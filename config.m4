@@ -16,10 +16,6 @@ PHP_ARG_ENABLE(wxwidgets-static, whether to link to static build of wxWidgets,
 PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWidgets,
 [  --enable-wxwidgets-monolithic
                           Link to monolithic build of wxWidgets], no, no)
-                          
-PHP_ARG_ENABLE(wxwidgets-macosx, whether to build for Mac OS X,
-[  --enable-wxwidgets-macosx
-                          Build the library for Mac OS X], no, no)
 
 if test "$PHP_WXWIDGETS" != "no"; then
 
@@ -35,6 +31,14 @@ if test "$PHP_WXWIDGETS" != "no"; then
     
     dnl Default wx-config command
     WXCONFIG_PATH=wx-config
+    
+    dnl Check if we are building for mac
+    IS_MAC=`uname -a | grep Darwin`
+    if test "$IS_MAC" != ""; then
+        PHP_WXWIDGETS_MACOSX="yes"
+    else
+        PHP_WXWIDGETS_MACOSX="no"
+    fi
     
     dnl Check for the installation path of wx-config
     if test "$PHP_WXWIDGETS" != "yes"; then
