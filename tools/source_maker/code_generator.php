@@ -264,8 +264,6 @@ foreach($defClassGroups as $header_name => $v)
 	$header_name = str_replace("group_class_", "", $header_name);
 	$header_files .= "#include \"$header_name.h\"\n";
 }
-
- file_put_contents("test.log", "");
 	
 //Generate classes source and header files
 foreach($defClassGroups as $file_name => $class_list)
