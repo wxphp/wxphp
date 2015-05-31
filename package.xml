@@ -22,7 +22,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>jgmdev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2015-04-23</date>
+ <date>2015-05-30</date>
  <time>18:02:59</time>
  <version>
   <release>3.0.2.0</release>
@@ -70,6 +70,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
     config.m4 file.
   * Added wxPHP shell script in /usr/bin/wxphp.
   * Added some wxApp methods.
+  * Automated Mac OSX detection which should fix #94.
+  * Simplified README.md and added building steps into INSTALL.md.
+  * Removed trace of debugging code.
+  * Merge child class method overrides that differ into parent methods 
+    which should fix #97.
  </notes>
  <contents>
   <dir name="/">
@@ -180,6 +185,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <file name="examples/webview.php" role="doc" />
    <file name="CHANGES" role="doc" />
    <file name="CREDITS" role="doc" />
+   <file name="INSTALL.md" role="doc" />
    <file name="LICENSE" role="doc" />
    <file name="README.md" role="doc" />
    <file name="README_MSW.txt" role="doc" />
@@ -200,7 +206,6 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <extsrcrelease>
   <configureoption default="3.0.2" name="with-wxwidgets-version" prompt="Set the wxWidgets library version to download and compile" />
   <configureoption default="no" name="enable-wxwidgets-debug" prompt="Enable debugging messages and symbols in wxwidgets" />
-  <configureoption default="no" name="enable-wxwidgets-macosx" prompt="Enable Mac OS X building mode" />
  </extsrcrelease>
  <changelog>
   <release>
@@ -212,7 +217,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
     <release>stable</release>
     <api>stable</api>
    </stability>
-   <date>2015-04-23</date>
+   <date>2015-05-30</date>
    <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
    <notes>
   * Updated the thread.php example to work properly.
@@ -251,6 +256,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
     config.m4 file.
   * Added wxPHP shell script in /usr/bin/wxphp.
   * Added some wxApp methods.
+  * Automated Mac OSX detection which should fix #94.
+  * Simplified README.md and added building steps into INSTALL.md.
+  * Removed trace of debugging code.
+  * Merge child class method overrides that differ into parent methods 
+    which should fix #97.
    </notes>
   </release>
   <release>

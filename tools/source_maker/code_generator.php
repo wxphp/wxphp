@@ -354,6 +354,14 @@ foreach($defClassGroups as $file_name => $class_list)
 					"".strpos($method_name, "On")."" != "0"
 			)
 			{
+                $method_definitions_ex = $method_definitions;
+                
+                class_method_append_overrides(
+                    $class_name, 
+                    $method_name, 
+                    $method_definitions_ex
+                );
+                
 				ob_start();
 				include("templates/classes_source_method.php");
 				$classes_source_code .= ob_get_contents();

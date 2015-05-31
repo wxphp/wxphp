@@ -2828,6 +2828,16 @@ PHP_METHOD(php_wxDataObject, SetData)
 	char* buf0;
 	long buf_len0;
 	bool overload0_called = false;
+	//Parameters for overload 1
+	long len1;
+	char* buf1;
+	long buf_len1;
+	bool overload1_called = false;
+	//Parameters for overload 2
+	long size2;
+	char* data2;
+	long data_len2;
+	bool overload2_called = false;
 		
 	//Overload 0
 	overload0:
@@ -2849,16 +2859,50 @@ PHP_METHOD(php_wxDataObject, SetData)
 					object_pointer0_0 = (wxDataFormat*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
-						zend_error(E_ERROR, "Parameter 'format' could not be retreived correctly.");
+						goto overload1;
 					}
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
-					zend_error(E_ERROR, "Parameter 'format' not null, could not be retreived correctly.");
+					goto overload1;
 				}
 			}
 
 			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+	//Overload 1
+	overload1:
+	if(!already_called && arguments_received == 2 && (current_object_type == PHP_WXDATAOBJECTSIMPLE_TYPE || current_object_type == PHP_WXTEXTDATAOBJECT_TYPE || current_object_type == PHP_WXURLDATAOBJECT_TYPE || current_object_type == PHP_WXFILEDATAOBJECT_TYPE || current_object_type == PHP_WXBITMAPDATAOBJECT_TYPE || current_object_type == PHP_WXCUSTOMDATAOBJECT_TYPE))
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'ls' (&len1, &buf1, &buf_len1)\n");
+		#endif
+
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &len1, &buf1, &buf_len1 ) == SUCCESS)
+		{
+			overload1_called = true;
+			already_called = true;
+		}
+	}
+
+	//Overload 2
+	overload2:
+	if(!already_called && arguments_received == 2 && (current_object_type == PHP_WXCUSTOMDATAOBJECT_TYPE))
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'ls' (&size2, &data2, &data_len2)\n");
+		#endif
+
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size2, &data2, &data_len2 ) == SUCCESS)
+		{
+			overload2_called = true;
 			already_called = true;
 		}
 	}
@@ -2877,6 +2921,44 @@ PHP_METHOD(php_wxDataObject, SetData)
 				ZVAL_BOOL(return_value, ((wxDataObject_php*)native_object)->SetData(*(wxDataFormat*) object_pointer0_0, (size_t) len0, (const void*) buf0));
 
 				references->AddReference(format0, "wxDataObject::SetData at call with 3 argument(s)");
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload1_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxDataObjectSimple::SetData((size_t) len1, (const void*) buf1))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxDataObjectSimple_php*)native_object)->SetData((size_t) len1, (const void*) buf1));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+	if(overload2_called)
+	{
+		switch(arguments_received)
+		{
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxCustomDataObject::SetData((size_t) size2, (const void*) data2))\n\n");
+				#endif
+
+				ZVAL_BOOL(return_value, ((wxCustomDataObject_php*)native_object)->SetData((size_t) size2, (const void*) data2));
+
 
 				return;
 				break;

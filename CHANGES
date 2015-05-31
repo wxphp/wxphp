@@ -1,4 +1,4 @@
-v3.0.2.0 - April 23 2015
+v3.0.2.0 - May 30 2015
 
   * Updated the thread.php example to work properly.
   * Remove delete on the wxThread garbage collector function, which 
@@ -36,6 +36,11 @@ v3.0.2.0 - April 23 2015
     config.m4 file.
   * Added wxPHP shell script in /usr/bin/wxphp.
   * Added some wxApp methods.
+  * Automated Mac OSX detection which should fix #94.
+  * Simplified README.md and added building steps into INSTALL.md.
+  * Removed trace of debugging code.
+  * Merge child class method overrides that differ into parent methods 
+    which should fix #97.
 
 v3.0.0.2 - April 05 2014
 
@@ -145,4 +150,3 @@ v2.9.4.1 - December 24 2012
     like wxRAISED_BORDER mirrors wxBORDER_RAISED.
   * Commented out 'Remember to always call Destroy()' warning message.
   * Updated version information on template file.
-
