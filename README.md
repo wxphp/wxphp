@@ -1,18 +1,47 @@
 [![Build Status](https://img.shields.io/travis/wxphp/wxphp/master.svg?style=flat-square)](https://travis-ci.org/wxphp/wxphp)
 
-**Homepage:** [http://wxphp.org/](http://wxphp.org/)
+**[Homepage](http://wxphp.org/)** 
 |
-**Documentation**: [http://github.com/wxphp/wxphp/wiki](http://github.com/wxphp/wxphp/wiki)
+**[Documentation](http://github.com/wxphp/wxphp/wiki)**
+|
+**[Downloads](http://wxphp.org/download)**
+|
+**[Applications](http://wxphp.org/applications)**
+|
+**[News](http://wxphp.org/news)**
+|
+**[Chat](http://wxphp.org/chat)**
 
 ---
 
-wxPHP stands for "wxwidgets for PHP" and it is a binding for the great 
-cross-platform library [wxWidgets](http://wxwidgets.org/) used to 
-develop GUI applications. The purpose is to bring all the facilities 
-available on PHP as easyness of programming to assist on the development
-of cross-platform desktop applications. The syntax used is very similar 
-to the one used on original implementation of wxWidgets C++, making it 
-easier for people already familiar with the library.
+[![wxPHP Logo](http://wxphp.org/themes/wxphp/images/logo.png)](http://wxphp.org) 
+
+wxPHP stands for "wxwidgets for PHP" and it is a php binding/wrapper 
+for the cross-platform library [wxWidgets](http://wxwidgets.org/), 
+which gives you the ability to develop desktop applications using the 
+php programming language. This applications can be executed on windows, 
+linux and macosx using the same code base with a native look and feel.
+
+One of the ideas is that you can use your php web applications code 
+base and logic to create native desktop applications that communicate 
+to them transparently. This way you can give your users a seamless and 
+native experience from the desktop while staying in sync with your 
+web apps.
+
+There are many more use cases, but we invite you to download and 
+try this project by your self. We hope everyone can enjoy it as much 
+as we have enjoyed developing it.
+
+## wxFormBuilder
+
+wxFormBuilder is a RAD tool for wxWidgets GUI design. So to make 
+development with wxPHP more easier we added php support to it.
+For more information visit the [project page](http://wxformbuilder.org/).
+		
+Integration of PHP support wouldn't be possible without the help
+of [RedTide](https://github.com/redtide) and the rest of 
+[wxFormBuilder team](https://sourceforge.net/p/wxformbuilder/_members/), 
+Thanks a lot!
 
 ## Support
 
@@ -22,6 +51,10 @@ Any problems, please file an issue or visit the forums:
 * [http://forums.wxphp.org/](http://forums.wxphp.org/)
 * [https://groups.google.com/forum/#!forum/wxphp](https://groups.google.com/forum/#!forum/wxphp)
 	
-don't forget to also visit the github.com project page at:
+GitHub.com project page where development occurs:
 	
 * [https://github.com/wxphp/wxphp](https://github.com/wxphp/wxphp)
+
+SourceForge.net project page which hosts the binary builds.
+
+* [https://sourceforge.net/projects/wxphp](https://sourceforge.net/projects/wxphp)

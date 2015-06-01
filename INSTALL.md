@@ -10,7 +10,6 @@
 * [Linking statically to wxWidgets on Linux/Unix/MacOSX](#linking-statically-to-wxwidgets-on-linuxunixmacosx)
 * [Building on Mac OS X](#building-on-mac-os-x)
 * [Running the examples](#running-the-examples)
-* [Third Party Tools](#third-party-tools)
 * [Development](#development)
 
 
@@ -339,26 +338,6 @@ and run the php interpreter on each file as follows:
 on windows you can also do
 	
 	php-win thread.php
-
-
-
-
-## Third Party Tools
-
-### wxFormBuilder - a RAD tool for wxWidgets GUI design.
-
-We worked on adding php support to this great forms designer.
-For more information visit the official website:
-		
- * [http://wxformbuilder.org/](http://wxformbuilder.org/)
-	
-Also You can find the latest nightly builds for windows with
-PHP support at:
-	
- * [http://sourceforge.net/projects/wxformbuilder/files/](http://sourceforge.net/projects/wxformbuilder/files/)
-		
-Integration of PHP support wouldn't be possible without the help
-of RedTide and the rest of wxFormBuilder team, Thanks a lot!
 		
 	
 
