@@ -127,6 +127,25 @@ class MainWindow extends wxFrame {
 	
 }
 
-$window = new MainWindow();
-$window->Show();
+class MyApp extends wxApp 
+{
+    function OnInit()
+    {
+	$mf = new MainWindow();
+
+	$mf->Show();
+	$mf->Centre();
+
+	return 0;
+    }
+
+    function OnExit()
+    {
+	return 0;
+    }
+}
+
+$app = new MyApp();
+
+wxApp::SetInstance($app);
 wxEntry();
