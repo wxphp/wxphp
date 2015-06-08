@@ -88,7 +88,7 @@ void php_<?=$class_name?>_free(void *object TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-<?if($class_name != "wxGridCellRenderer" && $class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData" && $class_name != "wxTreeItemData" && $class_name != "wxClipBoard" && $class_name != "wxDataObject" && !inherits_from_class("wxGridCellEditor", $class_name) && !inherits_from_class("wxDataObject", $class_name)){?>
+<?if($class_name != "wxDropTarget" && $class_name != "wxGridCellRenderer" && $class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData" && $class_name != "wxTreeItemData" && $class_name != "wxClipBoard" && $class_name != "wxDataObject" && !inherits_from_class("wxGridCellEditor", $class_name) && !inherits_from_class("wxDataObject", $class_name) && !inherits_from_class("wxDropTarget", $class_name)){?>
 	if(custom_object->native_object != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
