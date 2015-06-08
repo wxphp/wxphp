@@ -41,6 +41,9 @@ php5-wxwidgets (3.0.2.0) unstable; urgency=low
   * Removed trace of debugging code.
   * Merge child class method overrides that differ into parent methods 
     which should fix #97.
+  * Added drag and drop example.
+  * Disabled pointer deletion for wxDropTarget and child classes
+    to fix segmentation fault which fixes #98.
   
  -- Jefferson González <jgmdev@gmail.com>  Thu, 23 Apr 2014 01:22:09 +0400
 

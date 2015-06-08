@@ -41,6 +41,9 @@ v3.0.2.0 - May 30 2015
   * Removed trace of debugging code.
   * Merge child class method overrides that differ into parent methods 
     which should fix #97.
+  * Added drag and drop example.
+  * Disabled pointer deletion for wxDropTarget and child classes
+    to fix segmentation fault which fixes #98.
 
 v3.0.0.2 - April 05 2014
 
