@@ -75,6 +75,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
   * Removed trace of debugging code.
   * Merge child class method overrides that differ into parent methods 
     which should fix #97.
+  * Added drag and drop example.
+  * Disabled pointer deletion for wxDropTarget and child classes
+    to fix segmentation fault which fixes #98.
  </notes>
  <contents>
   <dir name="/">
@@ -178,6 +181,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <file name="examples/statbar/red.xpm" role="doc" />
    <file name="examples/statbar/sample.xpm" role="doc" />
    <file name="examples/statbar/statbar.php" role="doc" />
+   <file name="examples/dragdrop.php" role="doc" />
    <file name="examples/choicelistbox.php" role="doc" />
    <file name="examples/grid.php" role="doc" />
    <file name="examples/styledtextctrl.php" role="doc" />
@@ -261,6 +265,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
   * Removed trace of debugging code.
   * Merge child class method overrides that differ into parent methods 
     which should fix #97.
+  * Added drag and drop example.
+  * Disabled pointer deletion for wxDropTarget and child classes
+    to fix segmentation fault which fixes #98.
    </notes>
   </release>
   <release>
