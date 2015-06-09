@@ -21,9 +21,16 @@
 /**
  * Define Extension Properties 
  */
-#define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
-#define PHP_WXWIDGETS_EXTVER    "3.0.2.0"
-#define PHP_WXWIDGETS_VERSION	"3.0.2"
+#define PHP_WXWIDGETS_EXTNAME        "wxWidgets"
+#define PHP_WXWIDGETS_VERSION        "3.0.2.0"
+
+/**
+ * Define php compatible library version string
+ */
+#define WXVERTOSTR_HELPER(s) #s
+#define WXVERTOSTR(s) WXVERTOSTR_HELPER(s)
+#define WXWIDGETS_LIBRARY_VERSION    WXVERTOSTR(wxMAJOR_VERSION) "." WXVERTOSTR(wxMINOR_VERSION) "." WXVERTOSTR(wxRELEASE_NUMBER)
+
 
 /**
  * Import configure options when building outside 

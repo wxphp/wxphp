@@ -1297,13 +1297,13 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
      */
     REGISTER_STRING_CONSTANT(
         "WXWIDGETS_EXTENSION_VERSION", 
-        (char*) PHP_WXWIDGETS_EXTVER, 
+        (char*) PHP_WXWIDGETS_VERSION, 
         CONST_CS | CONST_PERSISTENT
     );
 	
     REGISTER_STRING_CONSTANT(
         "WXWIDGETS_LIBRARY_VERSION", 
-        (char*) PHP_WXWIDGETS_VERSION, 
+        (char*)  WXWIDGETS_LIBRARY_VERSION, 
         CONST_CS | CONST_PERSISTENT
     );
 
@@ -9528,8 +9528,8 @@ PHP_MINFO_FUNCTION(php_wxWidgets)
 {
 	php_info_print_table_start();
 	php_info_print_table_header(2, "wxWidgets", "enabled");
-	php_info_print_table_row(2, "Extension Version", PHP_WXWIDGETS_EXTVER);
-	php_info_print_table_row(2, "wxWidgets Version", PHP_WXWIDGETS_VERSION);
+	php_info_print_table_row(2, "Extension Version", PHP_WXWIDGETS_VERSION);
+	php_info_print_table_row(2, "Library Version",  WXWIDGETS_LIBRARY_VERSION);
 	php_info_print_table_end();
 }
 
@@ -9546,7 +9546,7 @@ zend_module_entry wxWidgets_module_entry = {
     PHP_RINIT(php_wxWidgets),		/* RINIT (request initialization function) */
     NULL, 							/* RSHUTDOWN (request shutdown function) */
     PHP_MINFO(php_wxWidgets),		/* MINFO (module information function) */
-    PHP_WXWIDGETS_EXTVER,
+    PHP_WXWIDGETS_VERSION,
     STANDARD_MODULE_PROPERTIES
 };
 
