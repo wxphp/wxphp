@@ -1,4 +1,5 @@
 [![Build Status](https://img.shields.io/travis/wxphp/wxphp/master.svg?style=flat-square)](https://travis-ci.org/wxphp/wxphp)
+[![Download wxPHP](https://img.shields.io/sourceforge/dw/wxphp.svg)](https://sourceforge.net/projects/wxphp/files/latest/download)
 
 **[Homepage](http://wxphp.org/)** 
 |
