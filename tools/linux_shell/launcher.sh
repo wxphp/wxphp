@@ -5,7 +5,7 @@ SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 if [ "$(whereis x-terminal-emulator)" != "x-terminal-emulator:" ]; then
     TERMINAL="x-terminal-emulator -e"
 elif [ "$(whereis xfce4-terminal)" != "xfce4-terminal:" ]; then
-    TERMINAL="xfce4-terminal --icon=codelite -e"
+    TERMINAL="xfce4-terminal --icon=wxphp -e"
 elif [ "$(whereis lxterminal)" != "lxterminal:" ]; then
     TERMINAL="lxterminal -e"
 elif [ "$(whereis gnome-terminal)" != "gnome-terminal:" ]; then
