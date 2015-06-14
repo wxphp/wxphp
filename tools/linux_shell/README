@@ -1,0 +1,21 @@
+Linux wxPHP Shell
+========================================================================
+
+On this directory you will find a script to launch a terminal with
+a message telling the user how to launch wxphp scripts. This
+scripts can be packaged and used to add an application menu entry
+for wxPHP.
+
+========================================================================
+launcher.sh:
+========================================================================
+
+Verifies the current system for a valid terminal emulator and
+launches it.
+
+========================================================================
+shell.sh:
+========================================================================
+
+Executed by launcher.sh this file outputs shell_header.txt and executes
+/bin/bash so the user can start processing commands.
