@@ -206,7 +206,7 @@ class ConvertFrame extends wxFrame {
 	function onClearClick( $event ){
 		if(wxMessageBox("Are you sure you want to clear the added files?", "", wxYES_NO) == wxYES)
 		{
-			$this->m_pdfList->Set(array(), null);
+			$this->m_pdfList->Clear();
 		}
 	}
 	
