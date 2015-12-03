@@ -36,7 +36,8 @@ class MainFrame extends wxFrame
         // Create the folder if it does not exist
         $this->checkFolderExists();
 
-        // Use a timer to start the file watcher when the event loop starts
+        // Use a timer to start the file watcher after the event loop starts. This seems to be
+        // necessary to avoid the fatal error "File system watcher needs an event loop".
         $this->timer = new wxTimer($this);
         $this->Connect(wxEVT_TIMER, array($this, "onTimer"));
         $this->timer->Start(100);
