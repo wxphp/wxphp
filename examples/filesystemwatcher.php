@@ -17,8 +17,10 @@ wxEntry();
 
 class MainFrame extends wxFrame
 {
-    // Folder to monitor
-    const RELATIVE_PATH = './watch';
+    // This is the folder to monitor. To successfully get information on FS events that occur
+    // inside a folder, such as creates and deletes, the watched folder must end with a
+    // trailing slash.
+    const RELATIVE_PATH = './watch/';
 
     protected $watcher;
     protected $timer;
@@ -93,12 +95,9 @@ class MainFrame extends wxFrame
     /**
      * Creates a FS watcher
      *
-     * FIXME presently I am trying either add() and addTree(), but can't seem to get information
-     * on a file that is added or deleted to a folder. add() responds to the events but I
-     * can't see a way to get that information (without scanning for it manually, which seems
-     * to defeat a major point of the watcher).
-     * 
-     * TODO try adding a trailing slash to the directory?
+     * The add() method is sufficient to watch file operations directly inside that folder,
+     * but for that the watched path must have a trailing slash. addTree() is suitable if
+     * all operations within the folder recursively should be watched.
      * 
      * Here are the wxFSWFlags we can filter by:
      * 
@@ -131,7 +130,7 @@ class MainFrame extends wxFrame
         $filename = $event->GetPath()->getFullName();
         $newFilename = $event->GetNewPath()->getFullName();
         $description = $event->ToString();
-        $this->logger("File event: $description, path: $filename or $newFilename");
+        $this->logger("File event: $description, path: $filename, new path: $newFilename");
     }
 }
 
