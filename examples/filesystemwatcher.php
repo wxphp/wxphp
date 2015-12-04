@@ -145,17 +145,17 @@ class MainFrame extends wxFrame
 
 class myApp extends wxApp
 {
-	public function OnInit()
-	{
-		// Create a window (works fine)
+    public function OnInit()
+    {
+        // Create a window (works fine)
         $main = new MainFrame();
         $main->Show();
 
-		return true;
+        return true;
     }
 
-	public function OnExit()
-	{
-		return 0;
-	}
+    public function OnExit()
+    {
+        return 0;
+    }
 }
