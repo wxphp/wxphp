@@ -8,6 +8,14 @@
  * 
  * @description This is a simple demonstration of file system watcher events.
  * 
+ * Run this using:
+ *
+ *     /usr/bin/php -d extension=wxwidgets.so filesystemwatcher.php
+ *
+ * To demonstrate the watcher, a folder called "watch" will be created. Simply create a terminal
+ * window and cd to that folder, then touch and delete files, and they will be reported in
+ * the logging window.
+ *
  * Tested on PHP 5.5.9-1ubuntu4.14.
  */
 
