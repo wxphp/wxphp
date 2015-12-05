@@ -184,6 +184,9 @@ class AcceptConnections extends wxThread
 
 class LanChat extends LanChatFrame
 {
+    // Needs to be public so the thread can see it
+    public $connections;
+
 	function __construct()
 	{
 		parent::__construct(null);
