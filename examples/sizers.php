@@ -13,14 +13,48 @@
  *     /usr/bin/php -d extension=wxwidgets.so sizers.php
  *
  * @todo Need a description here
- * @todo Can a border be added to the sizer?
- * @todo Add a horizontal demo
  */
 
 $app = new myApp();
 wxApp::SetInstance($app);
 wxEntry();
 
+/**
+ * @todo Make the controller window a panel rather than a frame?
+ */
+class ControlFrame extends wxFrame
+{
+    public function __construct($parent = null)
+    {
+		parent::__construct(
+            $parent,
+            wxID_TOP,
+            "Controller",
+            wxDefaultPosition,
+            new wxSize(300, 200)
+        );
+
+        $choices = array("Vertical wxBoxSizer", "Horizontal wxBoxSizer");
+        $comboBox = new wxComboBox($this, wxID_ANY, "", wxDefaultPosition, new wxSize(250, 20), $choices);
+
+        $sizer = new wxBoxSizer(wxVERTICAL);
+        $sizer->Add($comboBox, 0, wxALL, 8);
+        // Attach to the closeup event, rather than wxEVT_COMBOBOX_DROPDOWN
+        $this->Connect(wxEVT_COMBOBOX_CLOSEUP, [$this, "comboBoxChangeEvent"]);
+
+        $this->SetSizer($sizer);
+    }
+
+    public function comboBoxChangeEvent(wxCommandEvent $event)
+    {
+        $name = get_class($event);
+        echo "Hello $name\n";
+    }
+}
+
+/**
+ * @todo Can a border be added to the sizer?
+ */
 class MainFrame extends wxFrame
 {
     protected $sizer;
@@ -35,12 +69,11 @@ class MainFrame extends wxFrame
             new wxSize(400, 300)
         );
 
-        $this->sizer = new wxBoxSizer(wxVERTICAL);
+        // Set up demo
+        #$this->demo_vertical_boxsizer();
+        $this->demo_horizontal_boxsizer();
 
-        $this->createBox("One", new wxSize(300, 30));
-        $this->createBox("Two", new wxSize(200, 50));
-        $this->createBox("Three", new wxSize(100, 120));
-
+        // Inform the window of the new sizer in operation
         $this->SetSizer($this->sizer);
     }
 
@@ -65,6 +98,24 @@ class MainFrame extends wxFrame
     {
         return $this->sizer;
     }
+
+    protected function demo_vertical_boxsizer()
+    {
+        $this->sizer = new wxBoxSizer(wxVERTICAL);
+
+        $this->createBox("One", new wxSize(300, 30));
+        $this->createBox("Two", new wxSize(200, 50));
+        $this->createBox("Three", new wxSize(100, 120));
+    }
+
+    protected function demo_horizontal_boxsizer()
+    {
+        $this->sizer = new wxBoxSizer(wxHORIZONTAL);
+
+        $this->createBox("One", new wxSize(100, 30));
+        $this->createBox("Two", new wxSize(80, 60));
+        $this->createBox("Three", new wxSize(80, 150));
+    }
 }
 
 class myApp extends wxApp
@@ -73,6 +124,9 @@ class myApp extends wxApp
     {
         $main = new MainFrame();
         $main->Show();
+
+        $controller = new ControlFrame();
+        $controller->Show();
 
         return true;
     }
