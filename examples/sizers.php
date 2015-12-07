@@ -24,10 +24,9 @@ wxEntry();
  */
 class ControlFrame extends wxFrame
 {
-    protected $comboBox;
     protected $handler;
 
-    public function __construct($parent = null)
+    public function __construct(array $demoNames, $parent = null)
     {
 		parent::__construct(
             $parent,
@@ -37,23 +36,20 @@ class ControlFrame extends wxFrame
             new wxSize(300, 200)
         );
 
-        $choices = array("Vertical wxBoxSizer", "Horizontal wxBoxSizer");
-        $this->comboBox = new wxComboBox($this, wxID_ANY, "", wxDefaultPosition, new wxSize(250, 20), $choices);
+        $choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
 
         $sizer = new wxBoxSizer(wxVERTICAL);
-        $sizer->Add($this->comboBox, 0, wxALL, 8);
-        // Attach to the closeup event, rather than wxEVT_COMBOBOX_DROPDOWN
-        $this->Connect(wxEVT_COMBOBOX_CLOSEUP, [$this, "comboBoxChangeEvent"]);
+        $sizer->Add($choiceCtrl, 0, wxALL, 8);
+        $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
 
         $this->SetSizer($sizer);
     }
 
-    public function comboBoxChangeEvent(wxCommandEvent $event)
+    public function controlChangeEvent(wxCommandEvent $event)
     {
-        // FIXME this is wrong - it is the old value, not the new one
-        echo $this->comboBox->GetValue() . "\n";
+        $index = $event->GetInt();
         $func = $this->handler;
-        $func();
+        $func($index);
     }
 
     public function setChangeHandler($handler)
@@ -80,9 +76,7 @@ class MainFrame extends wxFrame
         );
 
         // Set up demo
-        $this->demo_vertical_boxsizer();
-        $this->destroyCurrentSizer();
-        $this->demo_horizontal_boxsizer();
+        $this->demo_vertical_wxboxsizer();
 
         // Inform the window of the new sizer in operation
         $this->SetSizer($this->sizer);
@@ -134,15 +128,36 @@ class MainFrame extends wxFrame
 
     /**
      * Needs to be public to receive calls from outside
-     * 
-     * @todo Call the appropriate demo
      */
-    public function switchDemo()
+    public function switchDemo($index)
     {
-        echo "Got event\n";
+        $names = $this->getDemoNames();
+        $rawName = isset($names[$index]) ? $names[$index] : null;
+
+        if ($rawName)
+        {
+            $methodName = 'demo_' . strtolower(
+                str_replace(' ', '_', $rawName)
+            );
+
+            // Destroy all the current elements
+            $this->destroyCurrentSizer();
+
+            // Call the appropriate demo to create new items
+            $this->$methodName();
+
+            // Tell the window about the new sizer and ask it to refresh
+            $this->SetSizer($this->sizer);
+            $this->Layout();
+        }
     }
 
-    protected function demo_vertical_boxsizer()
+    public function getDemoNames()
+    {
+        return ["Vertical wxBoxSizer", "Horizontal wxBoxSizer"];
+    }
+
+    protected function demo_vertical_wxboxsizer()
     {
         $this->sizer = new wxBoxSizer(wxVERTICAL);
 
@@ -151,7 +166,7 @@ class MainFrame extends wxFrame
         $this->createBox("Three", new wxSize(100, 120));
     }
 
-    protected function demo_horizontal_boxsizer()
+    protected function demo_horizontal_wxboxsizer()
     {
         $this->sizer = new wxBoxSizer(wxHORIZONTAL);
 
@@ -168,12 +183,12 @@ class myApp extends wxApp
         $main = new MainFrame();
         $main->Show();
 
-        $controller = new ControlFrame();
+        $controller = new ControlFrame($main->getDemoNames());
         $controller->Show();
         $controller->setChangeHandler(
-            function() use ($main)
+            function($index) use ($main)
             {
-                $main->switchDemo();
+                $main->switchDemo($index);
             }
         );
 
