@@ -58,9 +58,6 @@ class ControlFrame extends wxFrame
     }
 }
 
-/**
- * @todo Can a border be added to the sizer?
- */
 class MainFrame extends wxFrame
 {
     protected $sizer;
