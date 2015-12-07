@@ -70,7 +70,8 @@ class MainFrame extends wxFrame
         );
 
         // Set up demo
-        #$this->demo_vertical_boxsizer();
+        $this->demo_vertical_boxsizer();
+        $this->destroyCurrentSizer();
         $this->demo_horizontal_boxsizer();
 
         // Inform the window of the new sizer in operation
@@ -97,6 +98,28 @@ class MainFrame extends wxFrame
     protected function getSizerDevice()
     {
         return $this->sizer;
+    }
+
+    protected function destroyCurrentSizer()
+    {
+        $sizer = $this->getSizerDevice();
+        if (!$sizer)
+        {
+            return;
+        }
+
+        $count = $sizer->GetItemCount();
+        for($i = 0; $i < $count; $i++)
+        {
+            // Zero is the first item
+            $child = $sizer->GetItem(0);
+            $win = $child->GetWindow();
+            $win->Destroy();
+        }
+
+        // Destroy sizer as well
+        $this->SetSizer(null);
+        $this->sizer = null;
     }
 
     protected function demo_vertical_boxsizer()
