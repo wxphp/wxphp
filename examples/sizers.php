@@ -29,7 +29,7 @@ class ControlFrame extends wxFrame
 
     public function __construct(array $demoNames, $parent = null)
     {
-		parent::__construct(
+        parent::__construct(
             $parent,
             wxID_TOP,
             "Controller",
