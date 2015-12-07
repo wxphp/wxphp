@@ -24,6 +24,9 @@ wxEntry();
  */
 class ControlFrame extends wxFrame
 {
+    protected $comboBox;
+    protected $handler;
+
     public function __construct($parent = null)
     {
 		parent::__construct(
@@ -35,10 +38,10 @@ class ControlFrame extends wxFrame
         );
 
         $choices = array("Vertical wxBoxSizer", "Horizontal wxBoxSizer");
-        $comboBox = new wxComboBox($this, wxID_ANY, "", wxDefaultPosition, new wxSize(250, 20), $choices);
+        $this->comboBox = new wxComboBox($this, wxID_ANY, "", wxDefaultPosition, new wxSize(250, 20), $choices);
 
         $sizer = new wxBoxSizer(wxVERTICAL);
-        $sizer->Add($comboBox, 0, wxALL, 8);
+        $sizer->Add($this->comboBox, 0, wxALL, 8);
         // Attach to the closeup event, rather than wxEVT_COMBOBOX_DROPDOWN
         $this->Connect(wxEVT_COMBOBOX_CLOSEUP, [$this, "comboBoxChangeEvent"]);
 
@@ -47,8 +50,15 @@ class ControlFrame extends wxFrame
 
     public function comboBoxChangeEvent(wxCommandEvent $event)
     {
-        $name = get_class($event);
-        echo "Hello $name\n";
+        // FIXME this is wrong - it is the old value, not the new one
+        echo $this->comboBox->GetValue() . "\n";
+        $func = $this->handler;
+        $func();
+    }
+
+    public function setChangeHandler($handler)
+    {
+        $this->handler = $handler;
     }
 }
 
@@ -122,6 +132,16 @@ class MainFrame extends wxFrame
         $this->sizer = null;
     }
 
+    /**
+     * Needs to be public to receive calls from outside
+     * 
+     * @todo Call the appropriate demo
+     */
+    public function switchDemo()
+    {
+        echo "Got event\n";
+    }
+
     protected function demo_vertical_boxsizer()
     {
         $this->sizer = new wxBoxSizer(wxVERTICAL);
@@ -150,6 +170,12 @@ class myApp extends wxApp
 
         $controller = new ControlFrame();
         $controller->Show();
+        $controller->setChangeHandler(
+            function() use ($main)
+            {
+                $main->switchDemo();
+            }
+        );
 
         return true;
     }
