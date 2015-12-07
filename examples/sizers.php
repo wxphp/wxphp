@@ -21,7 +21,6 @@ wxEntry();
 
 /**
  * @todo Make the controller window a panel rather than a frame?
- * @todo Give the sizer window a better name
  */
 class ControlFrame extends wxFrame
 {
@@ -95,7 +94,7 @@ class MainFrame extends wxFrame
 		parent::__construct(
             $parent,
             wxID_TOP,
-            "Vertical wxBoxSizer demo",
+            "Sizer demo",
             wxDefaultPosition,
             new wxSize(400, 300)
         );
