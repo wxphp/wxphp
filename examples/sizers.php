@@ -21,10 +21,12 @@ wxEntry();
 
 /**
  * @todo Make the controller window a panel rather than a frame?
+ * @todo Position the windows next to each other
  */
 class ControlFrame extends wxFrame
 {
     protected $handler;
+    protected $choiceCtrl;
 
     public function __construct(array $demoNames, $parent = null)
     {
@@ -36,18 +38,43 @@ class ControlFrame extends wxFrame
             new wxSize(300, 200)
         );
 
-        $choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
+        $this->choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
 
         $sizer = new wxBoxSizer(wxVERTICAL);
-        $sizer->Add($choiceCtrl, 0, wxALL, 8);
+        $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
 
         $this->SetSizer($sizer);
     }
 
+    /**
+     * Receive a WX event from the choice control
+     *
+     * @param wxCommandEvent $event
+     */
     public function controlChangeEvent(wxCommandEvent $event)
     {
-        $index = $event->GetInt();
+        $this->activateChoice($event->GetInt());
+    }
+
+    /**
+     * Set the menu choice and call the attached handler
+     *
+     * @param integer $index
+     */
+    public function setChoice($index)
+    {
+        $this->choiceCtrl->SetSelection($index);
+        $this->activateChoice($index);
+    }
+
+    /**
+     * Just calls the attached handler
+     *
+     * @param integer $index
+     */
+    protected function activateChoice($index)
+    {
         $func = $this->handler;
         $func($index);
     }
@@ -71,12 +98,6 @@ class MainFrame extends wxFrame
             wxDefaultPosition,
             new wxSize(400, 300)
         );
-
-        // Set up demo
-        $this->demo_vertical_wxboxsizer();
-
-        // Inform the window of the new sizer in operation
-        $this->SetSizer($this->sizer);
     }
 
     protected function createBox($text, wxSize $size)
@@ -188,6 +209,8 @@ class myApp extends wxApp
                 $main->switchDemo($index);
             }
         );
+        // Must be called after the handler is set
+        $controller->setChoice(0);
 
         return true;
     }
