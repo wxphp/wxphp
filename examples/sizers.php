@@ -21,7 +21,7 @@ wxEntry();
 
 /**
  * @todo Make the controller window a panel rather than a frame?
- * @todo Position the windows next to each other
+ * @todo Give the sizer window a better name
  */
 class ControlFrame extends wxFrame
 {
@@ -37,6 +37,7 @@ class ControlFrame extends wxFrame
             wxDefaultPosition,
             new wxSize(300, 200)
         );
+        $this->SetPosition(new wxPoint(100, 100));
 
         $this->choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
 
@@ -98,6 +99,7 @@ class MainFrame extends wxFrame
             wxDefaultPosition,
             new wxSize(400, 300)
         );
+        $this->SetPosition(new wxPoint(450, 100));
     }
 
     protected function createBox($text, wxSize $size)
