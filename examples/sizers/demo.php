@@ -60,8 +60,26 @@ class DemoFrame extends wxFrame
             // Zero is the first item. As we delete items, the maximum index available
             // reduces, so it is sensible just to repeatedly delete the first item.
             $child = $sizer->GetItem(0);
-            $ctrl = $child->GetWindow();
-            $ctrl->Destroy();
+            if ($ctrl = $child->GetWindow())
+            {
+                $ctrl->Destroy();
+            }
+            // Sizers within this sizer need special treatment
+            elseif ($childSizer = $child->GetSizer())
+            {
+                // Delete all the child controls in this size
+                $childCount = $childSizer->GetItemCount();
+                for($j = 0; $j < $childCount; $j++)
+                {
+                    $childSizerItem = $childSizer->GetItem(0);
+                    $childCtrl = $childSizerItem->GetWindow();
+                    $childCtrl->Destroy();
+                }
+
+                // There is no Destroy for the child sizer, so I'll assume here that the first
+                // (or only) item is the sizer we wish to remove
+                $sizer->Remove(0);
+            }
         }
 
         // Destroy sizer as well
