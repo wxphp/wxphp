@@ -1,95 +1,8 @@
 <?php
 
-/* 
- * @author https://github.com/halfer
- * 
- * @license 
- * This file is part of wxPHP, check the LICENSE file for information.
- * 
- * @description This is a simple demonstration of sizer devices.
- * 
- * Run this using:
- *
- *     /usr/bin/php -d extension=wxwidgets.so sizers.php
- *
- * @todo Need a description here
- */
-
-$app = new myApp();
-wxApp::SetInstance($app);
-wxEntry();
-
 /**
- * FIXME Destroying controls after showing the H/V demo results in a crash
- * @todo Add a widget to reset the spacing in the current sizer?
- * @todo Add a widget to specify which sides spaces are added on?
- * @todo Can we have a help box in the controller window, with helpful info?
+ * This frame contains the sizer demonstrations
  */
-class ControlFrame extends wxFrame
-{
-    protected $handler;
-    protected $choiceCtrl;
-
-    public function __construct(array $demoNames, $parent = null)
-    {
-        // The "dialog style" means that the window deliberately cannot be resized
-        parent::__construct(
-            $parent,
-            wxID_TOP,
-            "Sizer controller",
-            wxDefaultPosition,
-            new wxSize(300, 200),
-            wxDEFAULT_DIALOG_STYLE
-        );
-        $this->SetPosition(new wxPoint(100, 100));
-
-        $this->choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
-
-        $sizer = new wxBoxSizer(wxVERTICAL);
-        $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
-        $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
-
-        $this->SetSizer($sizer);
-    }
-
-    /**
-     * Receive a WX event from the choice control
-     *
-     * @param wxCommandEvent $event
-     */
-    public function controlChangeEvent(wxCommandEvent $event)
-    {
-        $this->activateChoice($event->GetInt());
-    }
-
-    /**
-     * Set the menu choice and call the attached handler
-     *
-     * @param integer $index
-     */
-    public function setChoice($index)
-    {
-        $this->choiceCtrl->SetSelection($index);
-        $this->activateChoice($index);
-    }
-
-    /**
-     * Just calls the attached handler
-     *
-     * @param integer $index
-     */
-    protected function activateChoice($index)
-    {
-        $func = $this->handler;
-        $func($index);
-    }
-
-    public function setChangeHandler($handler)
-    {
-        $this->handler = $handler;
-    }
-}
-
 class DemoFrame extends wxFrame
 {
     protected $sizer;
@@ -225,32 +138,5 @@ class DemoFrame extends wxFrame
         $this->createBox("Three", new wxSize(50, 30), $hSizer);
         $this->createBox("Four", new wxSize(100, 40), $hSizer);
         $this->createBox("Five", new wxSize(80, 100), $hSizer);
-    }
-}
-
-class myApp extends wxApp
-{
-    public function OnInit()
-    {
-        $main = new DemoFrame();
-        $main->Show();
-
-        $controller = new ControlFrame($main->getDemoNames());
-        $controller->Show();
-        $controller->setChangeHandler(
-            function($index) use ($main)
-            {
-                $main->switchDemo($index);
-            }
-        );
-        // Must be called after the handler is set
-        $controller->setChoice(0);
-
-        return true;
-    }
-
-    public function OnExit()
-    {
-        return 0;
     }
 }
