@@ -8,11 +8,16 @@ class ControlFrame extends wxFrame
     const ID_DEMO =  10000;
     const ID_HORIZ = 10001;
 
+    // Callbacks for various events
     protected $changeDemohandler;
+
+    // Controls that need to be referred to class-wide
     protected $choiceCtrl;
     protected $helpCtrl;
-    protected $helpStrings;
     protected $horizCtrl;
+
+    // Misc class properties
+    protected $helpStrings;
 
     public function __construct(array $demoNames, array $helpStrings, $parent = null)
     {
