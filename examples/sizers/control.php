@@ -28,17 +28,17 @@ class ControlFrame extends wxFrame
             wxID_TOP,
             "Sizer controller",
             wxDefaultPosition,
-            new wxSize(300, 200),
+            new wxSize(350, 200),
             wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
 
         $this->choiceCtrl =
-            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(250, 29), $demoNames);
+            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(330, 29), $demoNames);
         $this->helpCtrl =
-            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(290, 100));
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(330, 100));
         $this->horizCtrl =
-            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(250, 29), ["Left", "Right"]);
+            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(120, 29), ["Left", "Right"]);
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
@@ -109,7 +109,7 @@ class ControlFrame extends wxFrame
     protected function setHelp($index)
     {
         $this->helpCtrl->SetLabel($this->helpStrings[$index]);
-        $this->helpCtrl->Wrap(200);
+        $this->helpCtrl->Wrap(330);
     }
 
     public function setChangeDemoHandler($changeDemoHandler)
