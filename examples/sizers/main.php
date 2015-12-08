@@ -32,7 +32,7 @@ class myApp extends wxApp
 
         $controller = new ControlFrame($main->getDemoNames(), $main->getHelpStrings());
         $controller->Show();
-        $controller->setChangeHandler(
+        $controller->setChangeDemoHandler(
             function($index) use ($main)
             {
                 $main->switchDemo($index);

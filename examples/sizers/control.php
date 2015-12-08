@@ -8,7 +8,7 @@ class ControlFrame extends wxFrame
     const ID_DEMO =  10000;
     const ID_HORIZ = 10001;
 
-    protected $handler;
+    protected $changeDemohandler;
     protected $choiceCtrl;
     protected $helpCtrl;
     protected $helpStrings;
@@ -84,7 +84,7 @@ class ControlFrame extends wxFrame
     {
         $this->setHelp($index);
 
-        $func = $this->handler;
+        $func = $this->changeDemoHandler;
         $func($index);
     }
 
@@ -104,8 +104,8 @@ class ControlFrame extends wxFrame
         $this->helpCtrl->Wrap(200);
     }
 
-    public function setChangeHandler($handler)
+    public function setChangeDemoHandler($changeDemoHandler)
     {
-        $this->handler = $handler;
+        $this->changeDemoHandler = $changeDemoHandler;
     }
 }
