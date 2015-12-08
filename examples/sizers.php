@@ -20,9 +20,9 @@ wxApp::SetInstance($app);
 wxEntry();
 
 /**
- * @todo Make the controller window a panel rather than a frame?
  * @todo Add a widget to reset the spacing in the current sizer?
  * @todo Add a widget to specify which sides spaces are added on?
+ * @todo Can we have a help box in the controller window, with helpful info?
  */
 class ControlFrame extends wxFrame
 {
@@ -31,12 +31,14 @@ class ControlFrame extends wxFrame
 
     public function __construct(array $demoNames, $parent = null)
     {
+        // The "dialog style" means that the window deliberately cannot be resized
         parent::__construct(
             $parent,
             wxID_TOP,
-            "Controller",
+            "Sizer controller",
             wxDefaultPosition,
-            new wxSize(300, 200)
+            new wxSize(300, 200),
+            wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
 
