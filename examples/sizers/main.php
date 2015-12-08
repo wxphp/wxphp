@@ -13,6 +13,7 @@
  *
  * @todo Add a widget to reset the spacing in the current sizer?
  * @todo Add a widget to specify which sides spaces are added on?
+ * @todo Add a widget to reset the justification in the outer sizer? All sizers?
  */
 
 require_once __DIR__ . '/control.php';
