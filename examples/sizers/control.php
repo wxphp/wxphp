@@ -58,8 +58,12 @@ class ControlFrame extends wxFrame
     protected function initAlignControls(wxSizer $sizer)
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
+        $labelHoriz =
+            new wxStaticText($this, wxID_ANY, 'H alignment', wxDefaultPosition, new wxSize(86, 18));
         $this->horizCtrl =
-            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(120, 29), ["Left", "Right"]);
+            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(80, 29), ["Left", "Right"]);
+
+        $hSizer->Add($labelHoriz, 0, wxALIGN_CENTER_VERTICAL);
         $hSizer->Add($this->horizCtrl);
 
         $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
