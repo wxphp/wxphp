@@ -13,7 +13,6 @@
  *
  * @todo Add a widget to reset the spacing in the current sizer?
  * @todo Add a widget to specify which sides spaces are added on?
- * @todo Can we have a help box in the controller window, with helpful info?
  */
 
 require_once __DIR__ . '/control.php';
@@ -30,7 +29,7 @@ class myApp extends wxApp
         $main = new DemoFrame();
         $main->Show();
 
-        $controller = new ControlFrame($main->getDemoNames());
+        $controller = new ControlFrame($main->getDemoNames(), $main->getHelpStrings());
         $controller->Show();
         $controller->setChangeHandler(
             function($index) use ($main)

@@ -122,6 +122,23 @@ class DemoFrame extends wxFrame
         ];
     }
 
+    /**
+     * Help strings relating to each demo
+     *
+     * These could go in the control class, but I rather like keeping them with the
+     * demos they pertain to.
+     *
+     * @return array
+     */
+    public function getHelpStrings()
+    {
+        return [
+            "This demontrates a wxBoxSizer that arranges elements in a vertical fashion.",
+            "This demo shows a wxBoxSizer that arranges elements horizontally.",
+            "Here we have an outer wxBoxSizer arranging blocks vertically, and one of the blocks is itself a wxBoxSizer that arranges its children rightwards."
+        ];
+    }
+
     protected function demo_vertical_wxboxsizer()
     {
         $this->sizer = new wxBoxSizer(wxVERTICAL);

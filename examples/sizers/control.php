@@ -7,8 +7,10 @@ class ControlFrame extends wxFrame
 {
     protected $handler;
     protected $choiceCtrl;
+    protected $helpCtrl;
+    protected $helpStrings;
 
-    public function __construct(array $demoNames, $parent = null)
+    public function __construct(array $demoNames, array $helpStrings, $parent = null)
     {
         // The "dialog style" means that the window deliberately cannot be resized
         parent::__construct(
@@ -22,12 +24,17 @@ class ControlFrame extends wxFrame
         $this->SetPosition(new wxPoint(100, 100));
 
         $this->choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
+        $this->helpCtrl = new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(290, 100));
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
-        $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
-
+        $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
         $this->SetSizer($sizer);
+
+        // Save the help strings in this class too
+        $this->helpStrings = $helpStrings;
+
+        $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
     }
 
     /**
@@ -47,6 +54,7 @@ class ControlFrame extends wxFrame
      */
     public function setChoice($index)
     {
+        $this->setHelp($index);
         $this->choiceCtrl->SetSelection($index);
         $this->activateChoice($index);
     }
@@ -58,8 +66,16 @@ class ControlFrame extends wxFrame
      */
     protected function activateChoice($index)
     {
+        $this->setHelp($index);
+
         $func = $this->handler;
         $func($index);
+    }
+
+    protected function setHelp($index)
+    {
+        $this->helpCtrl->SetLabel($this->helpStrings[$index]);
+        $this->helpCtrl->Wrap(200);
     }
 
     public function setChangeHandler($handler)
