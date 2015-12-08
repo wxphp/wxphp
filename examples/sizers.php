@@ -20,6 +20,7 @@ wxApp::SetInstance($app);
 wxEntry();
 
 /**
+ * FIXME Destroying controls after showing the H/V demo results in a crash
  * @todo Add a widget to reset the spacing in the current sizer?
  * @todo Add a widget to specify which sides spaces are added on?
  * @todo Can we have a help box in the controller window, with helpful info?
