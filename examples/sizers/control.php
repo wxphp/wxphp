@@ -73,7 +73,7 @@ class ControlFrame extends wxFrame
      *
      * @param integer $index
      */
-    public function setChoice($index)
+    public function setDemoChoice($index)
     {
         $this->setHelp($index);
         $this->choiceCtrl->SetSelection($index);

@@ -39,7 +39,7 @@ class myApp extends wxApp
             }
         );
         // Must be called after the handler is set
-        $controller->setChoice(0);
+        $controller->setDemoChoice(0);
 
         return true;
     }
