@@ -37,19 +37,32 @@ class ControlFrame extends wxFrame
             new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(330, 29), $demoNames);
         $this->helpCtrl =
             new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(330, 100));
-        $this->horizCtrl =
-            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(120, 29), ["Left", "Right"]);
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
         $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
-        $sizer->Add($this->horizCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->initAlignControls($sizer);
         $this->SetSizer($sizer);
 
         // Save the help strings in this class too
         $this->helpStrings = $helpStrings;
 
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
+    }
+
+    /**
+     * @todo Add a label to the control, then add another label/widget for vertical
+     *
+     * @param wxSizer $sizer
+     */
+    protected function initAlignControls(wxSizer $sizer)
+    {
+        $hSizer = new wxBoxSizer(wxHORIZONTAL);
+        $this->horizCtrl =
+            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(120, 29), ["Left", "Right"]);
+        $hSizer->Add($this->horizCtrl);
+
+        $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
     }
 
     /**
