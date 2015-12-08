@@ -6,6 +6,7 @@
 class DemoFrame extends wxFrame
 {
     protected $sizer;
+    protected $alignOptions = 0;
 
     public function __construct($parent = null)
     {
@@ -92,10 +93,13 @@ class DemoFrame extends wxFrame
     /**
      * Needs to be public to receive calls from outside
      */
-    public function switchDemo($index)
+    public function switchDemo($index, $alignOptions)
     {
         $names = $this->getDemoNames();
         $rawName = isset($names[$index]) ? $names[$index] : null;
+
+        /// Save alignment options
+        $this->setAlignOptions($alignOptions);
 
         if ($rawName)
         {
@@ -181,8 +185,13 @@ class DemoFrame extends wxFrame
     {
         $flags = new wxSizerFlags(0);
         $flags->Border(wxALL, $border);
-        $flags->Align(wxALIGN_RIGHT + wxALIGN_BOTTOM);
+        $flags->Align($this->alignOptions);
 
         return $flags;
+    }
+
+    protected function setAlignOptions($alignOptions)
+    {
+        $this->alignOptions = $alignOptions;
     }
 }

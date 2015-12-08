@@ -18,6 +18,7 @@ class ControlFrame extends wxFrame
 
     // Misc class properties
     protected $helpStrings;
+    protected $demoIndex;
 
     public function __construct(array $demoNames, array $helpStrings, $parent = null)
     {
@@ -90,7 +91,9 @@ class ControlFrame extends wxFrame
         $this->setHelp($index);
 
         $func = $this->changeDemoHandler;
-        $func($index);
+        $func($index, $this->getSizerFlags());
+
+        $this->demoIndex = $index;
     }
 
     /**
@@ -100,7 +103,7 @@ class ControlFrame extends wxFrame
      */
     protected function changeHorizEvent($index)
     {
-
+        $this->changeDemoEvent($this->demoIndex);
     }
 
     protected function setHelp($index)
@@ -112,5 +115,23 @@ class ControlFrame extends wxFrame
     public function setChangeDemoHandler($changeDemoHandler)
     {
         $this->changeDemoHandler = $changeDemoHandler;
+    }
+
+    protected function getSizerFlags()
+    {
+        $flags = 0;
+
+        $horiz = $this->horizCtrl->GetSelection();
+        switch ($horiz)
+        {
+            case 0:
+                $flags += wxALIGN_LEFT;
+                break;
+            case 1:
+                $flags += wxALIGN_RIGHT;
+                break;
+        }
+
+        return $flags;
     }
 }
