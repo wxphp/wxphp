@@ -109,7 +109,11 @@ class ControlFrame extends wxFrame
     protected function setHelp($index)
     {
         $this->helpCtrl->SetLabel($this->helpStrings[$index]);
+
+        // The wrapping can change the control size, so it's worth asking the window
+        // to re-layout its controls
         $this->helpCtrl->Wrap(330);
+        $this->Layout();
     }
 
     public function setChangeDemoHandler($changeDemoHandler)
