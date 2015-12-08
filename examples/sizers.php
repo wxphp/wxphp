@@ -89,7 +89,7 @@ class ControlFrame extends wxFrame
     }
 }
 
-class MainFrame extends wxFrame
+class DemoFrame extends wxFrame
 {
     protected $sizer;
 
@@ -231,7 +231,7 @@ class myApp extends wxApp
 {
     public function OnInit()
     {
-        $main = new MainFrame();
+        $main = new DemoFrame();
         $main->Show();
 
         $controller = new ControlFrame($main->getDemoNames());
