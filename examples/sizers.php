@@ -103,7 +103,7 @@ class MainFrame extends wxFrame
         $this->SetPosition(new wxPoint(450, 100));
     }
 
-    protected function createBox($text, wxSize $size)
+    protected function createBox($text, wxSize $size, wxSizer $sizer = null)
     {
         $ctrl = new wxTextCtrl(
             $this,
@@ -116,7 +116,11 @@ class MainFrame extends wxFrame
 
         // The third parameter here indicates what side(s) to add spacing to, and the
         // fourth parameter is the amount of spacing to add, in pixels
-        $this->getSizerDevice()->Add($ctrl, 0, wxALL, 8);
+        if (!$sizer)
+        {
+            $sizer = $this->getSizerDevice();
+        }
+        $sizer->Add($ctrl, 0, wxALL, 8);
 
         return $ctrl;
     }
@@ -177,7 +181,11 @@ class MainFrame extends wxFrame
 
     public function getDemoNames()
     {
-        return ["Vertical wxBoxSizer", "Horizontal wxBoxSizer"];
+        return [
+            "Vertical wxBoxSizer",
+            "Horizontal wxBoxSizer",
+            "Vert and horiz wxBoxSizers",
+        ];
     }
 
     protected function demo_vertical_wxboxsizer()
@@ -196,6 +204,24 @@ class MainFrame extends wxFrame
         $this->createBox("One", new wxSize(100, 30));
         $this->createBox("Two", new wxSize(80, 60));
         $this->createBox("Three", new wxSize(80, 150));
+    }
+
+    protected function demo_vert_and_horiz_wxboxsizers()
+    {
+        $this->sizer = new wxBoxSizer(wxVERTICAL);
+
+        $this->createBox("One", new wxSize(100, 30));
+        $this->createBox("Two", new wxSize(80, 60));
+
+        // Create an H sizer and add it to the main V sizer. There's no need for additional
+        // spacing here, since the inner sizer spacing seems to inherit from the main one
+        $hSizer = new wxBoxSizer(wxHORIZONTAL);
+        $this->sizer->Add($hSizer, 0, wxALL, 0);
+
+        // Add several items to spread out horizontally in the H sizer
+        $this->createBox("Three", new wxSize(50, 30), $hSizer);
+        $this->createBox("Four", new wxSize(100, 40), $hSizer);
+        $this->createBox("Five", new wxSize(80, 100), $hSizer);
     }
 }
 
