@@ -21,6 +21,8 @@ wxEntry();
 
 /**
  * @todo Make the controller window a panel rather than a frame?
+ * @todo Add a widget to reset the spacing in the current sizer?
+ * @todo Add a widget to specify which sides spaces are added on?
  */
 class ControlFrame extends wxFrame
 {
@@ -112,7 +114,8 @@ class MainFrame extends wxFrame
             wxTE_READONLY
         );
 
-        // @todo Document the params here - can't find much info
+        // The third parameter here indicates what side(s) to add spacing to, and the
+        // fourth parameter is the amount of spacing to add, in pixels
         $this->getSizerDevice()->Add($ctrl, 0, wxALL, 8);
 
         return $ctrl;
@@ -134,10 +137,11 @@ class MainFrame extends wxFrame
         $count = $sizer->GetItemCount();
         for($i = 0; $i < $count; $i++)
         {
-            // Zero is the first item
+            // Zero is the first item. As we delete items, the maximum index available
+            // reduces, so it is sensible just to repeatedly delete the first item.
             $child = $sizer->GetItem(0);
-            $win = $child->GetWindow();
-            $win->Destroy();
+            $ctrl = $child->GetWindow();
+            $ctrl->Destroy();
         }
 
         // Destroy sizer as well
