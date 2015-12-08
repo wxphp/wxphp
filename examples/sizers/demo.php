@@ -30,13 +30,15 @@ class DemoFrame extends wxFrame
             wxTE_READONLY
         );
 
-        // The third parameter here indicates what side(s) to add spacing to, and the
-        // fourth parameter is the amount of spacing to add, in pixels
+        // If we're not using a child sizer, use the parent
         if (!$sizer)
         {
             $sizer = $this->getSizerDevice();
         }
-        $sizer->Add($ctrl, 0, wxALL, 8);
+
+        // There are a number of different approaches to adding an item to a sizer - using a
+        // flags class may be the clearest
+        $sizer->Add($ctrl, $this->createSizerFlags(8));
 
         return $ctrl;
     }
@@ -167,11 +169,20 @@ class DemoFrame extends wxFrame
         // Create an H sizer and add it to the main V sizer. There's no need for additional
         // spacing here, since the inner sizer spacing seems to inherit from the main one
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
-        $this->sizer->Add($hSizer, 0, wxALL, 0);
+        $this->sizer->Add($hSizer, $this->createSizerFlags());
 
         // Add several items to spread out horizontally in the H sizer
         $this->createBox("Three", new wxSize(50, 30), $hSizer);
         $this->createBox("Four", new wxSize(100, 40), $hSizer);
         $this->createBox("Five", new wxSize(80, 100), $hSizer);
+    }
+
+    protected function createSizerFlags($border = 0)
+    {
+        $flags = new wxSizerFlags(0);
+        $flags->Border(wxALL, $border);
+        $flags->Align(wxALIGN_RIGHT + wxALIGN_BOTTOM);
+
+        return $flags;
     }
 }

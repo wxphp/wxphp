@@ -5,10 +5,14 @@
  */
 class ControlFrame extends wxFrame
 {
+    const ID_DEMO =  10000;
+    const ID_HORIZ = 10001;
+
     protected $handler;
     protected $choiceCtrl;
     protected $helpCtrl;
     protected $helpStrings;
+    protected $horizCtrl;
 
     public function __construct(array $demoNames, array $helpStrings, $parent = null)
     {
@@ -23,12 +27,17 @@ class ControlFrame extends wxFrame
         );
         $this->SetPosition(new wxPoint(100, 100));
 
-        $this->choiceCtrl = new wxChoice($this, wxID_ANY, wxDefaultPosition, new wxSize(250, 29), $demoNames);
-        $this->helpCtrl = new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(290, 100));
+        $this->choiceCtrl =
+            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(250, 29), $demoNames);
+        $this->helpCtrl =
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(290, 100));
+        $this->horizCtrl =
+            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(250, 29), ["Left", "Right"]);
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
         $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $sizer->Add($this->horizCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
         $this->SetSizer($sizer);
 
         // Save the help strings in this class too
@@ -44,7 +53,14 @@ class ControlFrame extends wxFrame
      */
     public function controlChangeEvent(wxCommandEvent $event)
     {
-        $this->activateChoice($event->GetInt());
+        if ($event->GetId() === self::ID_DEMO)
+        {
+            $this->changeDemoEvent($event->GetInt());
+        }
+        elseif ($event->GetId() === self::ID_HORIZ)
+        {
+            $this->changeHorizEvent($event->GetInt());
+        }
     }
 
     /**
@@ -56,20 +72,30 @@ class ControlFrame extends wxFrame
     {
         $this->setHelp($index);
         $this->choiceCtrl->SetSelection($index);
-        $this->activateChoice($index);
+        $this->changeDemoEvent($index);
     }
 
     /**
-     * Just calls the attached handler
+     * Handles a request to change the demo
      *
      * @param integer $index
      */
-    protected function activateChoice($index)
+    protected function changeDemoEvent($index)
     {
         $this->setHelp($index);
 
         $func = $this->handler;
         $func($index);
+    }
+
+    /**
+     * Handles a request to change the horizontal justification options
+     *
+     * @param integer $index
+     */
+    protected function changeHorizEvent($index)
+    {
+
     }
 
     protected function setHelp($index)
