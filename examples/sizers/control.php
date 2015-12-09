@@ -85,6 +85,9 @@ class ControlFrame extends wxFrame
         $choiceCtrl =
             new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(90, 29), $choices);
 
+        // Select the first element for both alignment choosers
+        $choiceCtrl->SetSelection(0);
+
         // Let's add left-spacing in the sizer if there's already controls in here
         $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
 
