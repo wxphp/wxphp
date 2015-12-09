@@ -32,9 +32,9 @@ class myApp extends wxApp
         $controller = new ControlFrame($main->getDemoNames(), $main->getHelpStrings());
         $controller->Show();
         $controller->setChangeDemoHandler(
-            function($index, $flags) use ($main)
+            function($index, $flags, $borderSize) use ($main)
             {
-                $main->switchDemo($index, $flags);
+                $main->switchDemo($index, $flags, $borderSize);
             }
         );
         // Must be called after the handler is set

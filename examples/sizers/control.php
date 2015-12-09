@@ -19,6 +19,7 @@ class ControlFrame extends wxFrame
     protected $helpCtrl;
     protected $horizCtrl;
     protected $vertCtrl;
+    protected $borderCtrl;
 
     // Misc class properties
     protected $helpStrings;
@@ -47,12 +48,15 @@ class ControlFrame extends wxFrame
         $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
         $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
         $this->initAlignControls($sizer);
+        $this->initBorderSizeControl($sizer);
         $this->SetSizer($sizer);
 
         // Save the help strings in this class too
         $this->helpStrings = $helpStrings;
 
+        // Here's some widget events
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
+        $this->Connect(wxEVT_SPINCTRL, [$this, "controlSpinEvent"]);
     }
 
     /**
@@ -98,6 +102,20 @@ class ControlFrame extends wxFrame
         return $choiceCtrl;
     }
 
+    protected function initBorderSizeControl(wxSizer $sizer)
+    {
+        $hSizer = new wxBoxSizer(wxHORIZONTAL);
+        $labelCtrl =
+            new wxStaticText($this, wxID_ANY, "Border size: ", wxDefaultPosition, new wxSize(110, 18));
+        $this->borderCtrl =
+            new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, 26), wxSP_ARROW_KEYS, 0, 12);
+        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
+        $hSizer->Add($this->borderCtrl);
+
+        // Add the child sizer to the main one (going down)
+        $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+    }
+
     /**
      * Receive a WX event from the choice control
      *
@@ -137,7 +155,7 @@ class ControlFrame extends wxFrame
         $this->setHelp($index);
 
         $func = $this->changeDemoHandler;
-        $func($index, $this->getSizerFlags());
+        $func($index, $this->getSizerFlags(), $this->getBorderSize());
 
         $this->demoIndex = $index;
     }
@@ -148,6 +166,11 @@ class ControlFrame extends wxFrame
      * @param integer $index
      */
     protected function changeAlignmentEvent($index)
+    {
+        $this->changeDemoEvent($this->demoIndex);
+    }
+
+    public function controlSpinEvent()
     {
         $this->changeDemoEvent($this->demoIndex);
     }
@@ -202,5 +225,10 @@ class ControlFrame extends wxFrame
         }
 
         return $flags;
+    }
+
+    protected function getBorderSize()
+    {
+        return $this->borderCtrl->GetValue();
     }
 }

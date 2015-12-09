@@ -7,6 +7,7 @@ class DemoFrame extends wxFrame
 {
     protected $sizer;
     protected $alignOptions = 0;
+    protected $borderSize;
 
     public function __construct($parent = null)
     {
@@ -39,7 +40,7 @@ class DemoFrame extends wxFrame
 
         // There are a number of different approaches to adding an item to a sizer - using a
         // flags class may be the clearest
-        $sizer->Add($ctrl, $this->createSizerFlags(8));
+        $sizer->Add($ctrl, $this->createSizerFlags($this->borderSize));
 
         return $ctrl;
     }
@@ -93,13 +94,14 @@ class DemoFrame extends wxFrame
     /**
      * Needs to be public to receive calls from outside
      */
-    public function switchDemo($index, $alignOptions)
+    public function switchDemo($index, $alignOptions, $borderSize)
     {
         $names = $this->getDemoNames();
         $rawName = isset($names[$index]) ? $names[$index] : null;
 
-        /// Save alignment options
+        /// Save alignment/border options
         $this->setAlignOptions($alignOptions);
+        $this->setBorderSize($borderSize);
 
         if ($rawName)
         {
@@ -193,5 +195,10 @@ class DemoFrame extends wxFrame
     protected function setAlignOptions($alignOptions)
     {
         $this->alignOptions = $alignOptions;
+    }
+
+    protected function setBorderSize($borderSize)
+    {
+        $this->borderSize = $borderSize;
     }
 }
