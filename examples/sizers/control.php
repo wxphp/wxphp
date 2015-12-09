@@ -190,7 +190,7 @@ class ControlFrame extends wxFrame
         $this->setHelp($index);
 
         $func = $this->changeDemoHandler;
-        $func($index, $this->getSizerFlags(), $this->getBorderAddFlags(), $this->getBorderSize());
+        $func($index, $this->getAlignmentFlags(), $this->getBorderAddFlags(), $this->getBorderSize());
 
         $this->demoIndex = $index;
     }
@@ -230,7 +230,7 @@ class ControlFrame extends wxFrame
         $this->changeDemoHandler = $changeDemoHandler;
     }
 
-    protected function getSizerFlags()
+    protected function getAlignmentFlags()
     {
         $flags = 0;
 
