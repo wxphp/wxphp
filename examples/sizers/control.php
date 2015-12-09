@@ -81,9 +81,9 @@ class ControlFrame extends wxFrame
     protected function initAlignmentControl(wxSizer $hSizer, $label, $choiceId, $choices)
     {
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(70, 18));
+            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(67, 18));
         $choiceCtrl =
-            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(80, 29), $choices);
+            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(85, 29), $choices);
 
         // Let's add left-spacing in the sizer if there's already controls in here
         $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
