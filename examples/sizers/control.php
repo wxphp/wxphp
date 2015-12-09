@@ -5,8 +5,11 @@
  */
 class ControlFrame extends wxFrame
 {
+    // Not sure what good practice is here - there's lots of predefined ID codes in
+    // wxWidgets, though it's probably not all important to avoid them.
     const ID_DEMO =  10000;
     const ID_HORIZ = 10001;
+    const ID_VERT = 10002;
 
     // Callbacks for various events
     protected $changeDemohandler;
@@ -15,6 +18,7 @@ class ControlFrame extends wxFrame
     protected $choiceCtrl;
     protected $helpCtrl;
     protected $horizCtrl;
+    protected $vertCtrl;
 
     // Misc class properties
     protected $helpStrings;
@@ -61,7 +65,14 @@ class ControlFrame extends wxFrame
     protected function initAlignControls(wxSizer $sizer)
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
-        $this->horizCtrl = $this->initAlignmentControl($hSizer, 'H alignment', self::ID_HORIZ, ["Left", "Centre", "Right"]);
+        $this->horizCtrl = $this->initAlignmentControl(
+            $hSizer, 'H align:',
+            self::ID_HORIZ, ["Left", "Centre", "Right"]
+        );
+        $this->vertCtrl = $this->initAlignmentControl(
+            $hSizer, 'V align:',
+            self::ID_VERT, ["Top", "Centre", "Bottom"]
+        );
 
         // Add the child sizer to the main one (going down)
         $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
@@ -70,12 +81,15 @@ class ControlFrame extends wxFrame
     protected function initAlignmentControl(wxSizer $hSizer, $label, $choiceId, $choices)
     {
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(86, 18));
+            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(70, 18));
         $choiceCtrl =
             new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(80, 29), $choices);
 
+        // Let's add left-spacing in the sizer if there's already controls in here
+        $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
+
         // Add the controls to the child sizer (going across)
-        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
+        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxLEFT, $leftSpace);
         $hSizer->Add($choiceCtrl);
 
         return $choiceCtrl;
