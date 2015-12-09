@@ -83,7 +83,7 @@ class ControlFrame extends wxFrame
         $labelCtrl =
             new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(67, 18));
         $choiceCtrl =
-            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(85, 29), $choices);
+            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(90, 29), $choices);
 
         // Let's add left-spacing in the sizer if there's already controls in here
         $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
@@ -106,9 +106,9 @@ class ControlFrame extends wxFrame
         {
             $this->changeDemoEvent($event->GetInt());
         }
-        elseif ($event->GetId() === self::ID_HORIZ)
+        elseif ($event->GetId() === self::ID_HORIZ || $event->GetId() === self::ID_VERT)
         {
-            $this->changeHorizEvent($event->GetInt());
+            $this->changeAlignmentEvent($event->GetInt());
         }
     }
 
@@ -144,7 +144,7 @@ class ControlFrame extends wxFrame
      *
      * @param integer $index
      */
-    protected function changeHorizEvent($index)
+    protected function changeAlignmentEvent($index)
     {
         $this->changeDemoEvent($this->demoIndex);
     }
@@ -168,6 +168,7 @@ class ControlFrame extends wxFrame
     {
         $flags = 0;
 
+        // Set the horizontal alignment flags
         $horiz = $this->horizCtrl->GetSelection();
         switch ($horiz)
         {
@@ -179,6 +180,21 @@ class ControlFrame extends wxFrame
                 break;
             case 2:
                 $flags += wxALIGN_RIGHT;
+                break;
+        }
+
+        // Set the vertical alignment flags
+        $vert = $this->vertCtrl->GetSelection();
+        switch ($vert)
+        {
+            case 0:
+                $flags += wxALIGN_TOP;
+                break;
+            case 1:
+                $flags += wxALIGN_CENTER_VERTICAL;
+                break;
+            case 2:
+                $flags += wxALIGN_BOTTOM;
                 break;
         }
 
