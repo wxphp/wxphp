@@ -9,11 +9,10 @@
  *
  * Run this using:
  *
- *     /usr/bin/php -d extension=wxwidgets.so sizers.php
+ *     /usr/bin/php -d extension=wxwidgets.so sizers/main.php
  *
  * @todo Add a widget to reset the spacing in the current sizer?
  * @todo Add a widget to specify which sides spaces are added on?
- * @todo Add a new widget to handle vert justification
  */
 
 require_once __DIR__ . '/control.php';
