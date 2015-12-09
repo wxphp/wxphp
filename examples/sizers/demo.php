@@ -7,6 +7,7 @@ class DemoFrame extends wxFrame
 {
     protected $sizer;
     protected $alignOptions = 0;
+    protected $borderOptions = 0;
     protected $borderSize;
 
     public function __construct($parent = null)
@@ -94,13 +95,14 @@ class DemoFrame extends wxFrame
     /**
      * Needs to be public to receive calls from outside
      */
-    public function switchDemo($index, $alignOptions, $borderSize)
+    public function switchDemo($index, $alignOptions, $borderOptions, $borderSize)
     {
         $names = $this->getDemoNames();
         $rawName = isset($names[$index]) ? $names[$index] : null;
 
         /// Save alignment/border options
         $this->setAlignOptions($alignOptions);
+        $this->setBorderOptions($borderOptions);
         $this->setBorderSize($borderSize);
 
         if ($rawName)
@@ -186,7 +188,7 @@ class DemoFrame extends wxFrame
     protected function createSizerFlags($border = 0)
     {
         $flags = new wxSizerFlags(0);
-        $flags->Border($this->alignOptions, $border); // FIXME rename "alignOptions"
+        $flags->Border($this->borderOptions, $border);
         $flags->Align($this->alignOptions);
 
         return $flags;
@@ -195,6 +197,11 @@ class DemoFrame extends wxFrame
     protected function setAlignOptions($alignOptions)
     {
         $this->alignOptions = $alignOptions;
+    }
+
+    protected function setBorderOptions($borderOptions)
+    {
+        $this->borderOptions = $borderOptions;
     }
 
     protected function setBorderSize($borderSize)

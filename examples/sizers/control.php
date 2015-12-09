@@ -190,8 +190,7 @@ class ControlFrame extends wxFrame
         $this->setHelp($index);
 
         $func = $this->changeDemoHandler;
-        $flags = $this->getSizerFlags() + $this->getBorderAddFlags();
-        $func($index, $flags, $this->getBorderSize());
+        $func($index, $this->getSizerFlags(), $this->getBorderAddFlags(), $this->getBorderSize());
 
         $this->demoIndex = $index;
     }
