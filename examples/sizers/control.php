@@ -33,6 +33,7 @@ class ControlFrame extends wxFrame
         );
         $this->SetPosition(new wxPoint(100, 100));
 
+        // Create the main drop-down and help controls
         $this->choiceCtrl =
             new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(330, 29), $demoNames);
         $this->helpCtrl =
@@ -51,7 +52,9 @@ class ControlFrame extends wxFrame
     }
 
     /**
-     * @todo Add a label to the control, then add another label/widget for vertical
+     * Sets up the alignment controls
+     *
+     * @todo Add another label/widget for vertical alignment
      *
      * @param wxSizer $sizer
      */
@@ -61,11 +64,13 @@ class ControlFrame extends wxFrame
         $labelHoriz =
             new wxStaticText($this, wxID_ANY, 'H alignment', wxDefaultPosition, new wxSize(86, 18));
         $this->horizCtrl =
-            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(80, 29), ["Left", "Right"]);
+            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(80, 29), ["Left", "Centre", "Right"]);
 
+        // Add the controls to the child sizer (going across)
         $hSizer->Add($labelHoriz, 0, wxALIGN_CENTER_VERTICAL);
         $hSizer->Add($this->horizCtrl);
 
+        // Add the child sizer to the main one (going down)
         $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
     }
 
@@ -149,6 +154,9 @@ class ControlFrame extends wxFrame
                 $flags += wxALIGN_LEFT;
                 break;
             case 1:
+                $flags += wxALIGN_CENTER_HORIZONTAL;
+                break;
+            case 2:
                 $flags += wxALIGN_RIGHT;
                 break;
         }
