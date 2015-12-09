@@ -19,7 +19,8 @@ class ControlFrame extends wxFrame
     protected $helpCtrl;
     protected $horizCtrl;
     protected $vertCtrl;
-    protected $borderCtrl;
+    protected $borderSizeCtrl;
+    protected $borderAddCtrls = [];
 
     // Misc class properties
     protected $helpStrings;
@@ -58,6 +59,7 @@ class ControlFrame extends wxFrame
         // Here's some widget events
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
         $this->Connect(wxEVT_SPINCTRL, [$this, "controlSpinEvent"]);
+        $this->Connect(wxEVT_CHECKBOX, [$this, "controlCheckBoxEvent"]);
     }
 
     /**
@@ -108,10 +110,10 @@ class ControlFrame extends wxFrame
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
             new wxStaticText($this, wxID_ANY, "Border size: ", wxDefaultPosition, new wxSize(110, 18));
-        $this->borderCtrl =
+        $this->borderSizeCtrl =
             new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, 26), wxSP_ARROW_KEYS, 0, 12);
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
-        $hSizer->Add($this->borderCtrl);
+        $hSizer->Add($this->borderSizeCtrl);
 
         // Add the child sizer to the main one (going down)
         $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
@@ -144,6 +146,9 @@ class ControlFrame extends wxFrame
             new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(80, 24));
         $checkBox->setValue(true);
         $hSizer->Add($checkBox);
+
+        // Add this tick box to a control array
+        $this->borderAddCtrls[] = $checkBox;
     }
 
     /**
@@ -185,7 +190,8 @@ class ControlFrame extends wxFrame
         $this->setHelp($index);
 
         $func = $this->changeDemoHandler;
-        $func($index, $this->getSizerFlags(), $this->getBorderSize());
+        $flags = $this->getSizerFlags() + $this->getBorderAddFlags();
+        $func($index, $flags, $this->getBorderSize());
 
         $this->demoIndex = $index;
     }
@@ -201,6 +207,11 @@ class ControlFrame extends wxFrame
     }
 
     public function controlSpinEvent()
+    {
+        $this->changeDemoEvent($this->demoIndex);
+    }
+
+    public function controlCheckBoxEvent()
     {
         $this->changeDemoEvent($this->demoIndex);
     }
@@ -259,6 +270,23 @@ class ControlFrame extends wxFrame
 
     protected function getBorderSize()
     {
-        return $this->borderCtrl->GetValue();
+        return $this->borderSizeCtrl->GetValue();
+    }
+
+    protected function getBorderAddFlags()
+    {
+        $flags = 0;
+        $edges = [wxLEFT, wxTOP, wxRIGHT, wxBOTTOM];
+
+        foreach ($this->borderAddCtrls as $ord => $borderAddCtrl)
+        {
+            // If this tick box is ticked, add the corresponding flag
+            if ($borderAddCtrl->GetValue())
+            {
+                $flags += $edges[$ord];
+            }
+        }
+
+        return $flags;
     }
 }

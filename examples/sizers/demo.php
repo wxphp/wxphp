@@ -186,7 +186,7 @@ class DemoFrame extends wxFrame
     protected function createSizerFlags($border = 0)
     {
         $flags = new wxSizerFlags(0);
-        $flags->Border(wxALL, $border);
+        $flags->Border($this->alignOptions, $border); // FIXME rename "alignOptions"
         $flags->Align($this->alignOptions);
 
         return $flags;
