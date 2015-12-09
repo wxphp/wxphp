@@ -143,7 +143,7 @@ class DemoFrame extends wxFrame
         return [
             "This demontrates a wxBoxSizer that arranges elements in a vertical fashion.",
             "This demo shows a wxBoxSizer that arranges elements horizontally.",
-            "Here we have an outer wxBoxSizer arranging blocks vertically, and one of the blocks is itself a wxBoxSizer that arranges its children rightwards."
+            "Here we have an outer wxBoxSizer arranging blocks vertically, and one of the blocks is itself a wxBoxSizer that arranges its children rightwards.\n\nInterestingly, the child sizer seems to inherit its parent border width even though its own border is zero."
         ];
     }
 
