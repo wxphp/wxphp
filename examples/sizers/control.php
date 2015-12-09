@@ -61,17 +61,24 @@ class ControlFrame extends wxFrame
     protected function initAlignControls(wxSizer $sizer)
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
-        $labelHoriz =
-            new wxStaticText($this, wxID_ANY, 'H alignment', wxDefaultPosition, new wxSize(86, 18));
-        $this->horizCtrl =
-            new wxChoice($this, self::ID_HORIZ, wxDefaultPosition, new wxSize(80, 29), ["Left", "Centre", "Right"]);
-
-        // Add the controls to the child sizer (going across)
-        $hSizer->Add($labelHoriz, 0, wxALIGN_CENTER_VERTICAL);
-        $hSizer->Add($this->horizCtrl);
+        $this->horizCtrl = $this->initAlignmentControl($hSizer, 'H alignment', self::ID_HORIZ, ["Left", "Centre", "Right"]);
 
         // Add the child sizer to the main one (going down)
         $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+    }
+
+    protected function initAlignmentControl(wxSizer $hSizer, $label, $choiceId, $choices)
+    {
+        $labelCtrl =
+            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(86, 18));
+        $choiceCtrl =
+            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(80, 29), $choices);
+
+        // Add the controls to the child sizer (going across)
+        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
+        $hSizer->Add($choiceCtrl);
+
+        return $choiceCtrl;
     }
 
     /**
