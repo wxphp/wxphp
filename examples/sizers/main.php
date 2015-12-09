@@ -13,6 +13,7 @@
  *
  * @todo Add a widget to reset the spacing in the current sizer?
  * @todo Add a widget to specify which sides spaces are added on?
+ * @todo Don't add a trailing space to labels to add extra horiz space
  */
 
 require_once __DIR__ . '/control.php';

@@ -33,7 +33,7 @@ class ControlFrame extends wxFrame
             wxID_TOP,
             "Sizer controller",
             wxDefaultPosition,
-            new wxSize(350, 260),
+            new wxSize(350, 330),
             wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
@@ -49,6 +49,7 @@ class ControlFrame extends wxFrame
         $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
         $this->initAlignControls($sizer);
         $this->initBorderSizeControl($sizer);
+        $this->initBorderAddControls($sizer);
         $this->SetSizer($sizer);
 
         // Save the help strings in this class too
@@ -114,6 +115,35 @@ class ControlFrame extends wxFrame
 
         // Add the child sizer to the main one (going down)
         $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+    }
+
+    protected function initBorderAddControls(wxSizer $sizer)
+    {
+        $hSizer1 = new wxBoxSizer(wxHORIZONTAL);
+        $labelCtrl =
+            new wxStaticText($this, wxID_ANY, "Borders: ", wxDefaultPosition, new wxSize(110, 18));
+        $hSizer1->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
+
+        // Add the first child sizer to the main one (going down)
+        $sizer->Add($hSizer1, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+
+        $hSizer2 = new wxBoxSizer(wxHORIZONTAL);
+
+        $this->initBorderAddControl($hSizer2, "Left");
+        $this->initBorderAddControl($hSizer2, "Top");
+        $this->initBorderAddControl($hSizer2, "Right");
+        $this->initBorderAddControl($hSizer2, "Bottom");
+
+        // Add the second child sizer to the main one (going down)
+        $sizer->Add($hSizer2, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+    }
+
+    protected function initBorderAddControl(wxSizer $hSizer, $label)
+    {
+        $checkBox =
+            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(80, 24));
+        $checkBox->setValue(true);
+        $hSizer->Add($checkBox);
     }
 
     /**
