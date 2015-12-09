@@ -41,7 +41,7 @@ class ControlFrame extends wxFrame
         $this->choiceCtrl =
             new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(330, 29), $demoNames);
         $this->helpCtrl =
-            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(330, 100));
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(330, 65));
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
