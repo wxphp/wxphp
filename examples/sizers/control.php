@@ -41,13 +41,14 @@ class ControlFrame extends wxFrame
 
         // Create the main drop-down and help controls
         $this->choiceCtrl =
-            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(330, 29), $demoNames);
+            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(-1, 29), $demoNames);
         $this->helpCtrl =
-            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(330, 130));
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(-1, 130));
 
         $sizer = new wxBoxSizer(wxVERTICAL);
-        $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
-        $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        // The menu and help controls are set to expand to the window width
+        $sizer->Add($this->choiceCtrl, 0, wxALL + wxEXPAND, 8);
+        $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
         $this->initAlignControls($sizer);
         $this->initBorderSizeControl($sizer);
         $this->initBorderAddControls($sizer);
@@ -87,10 +88,11 @@ class ControlFrame extends wxFrame
 
     protected function initAlignmentControl(wxSizer $hSizer, $label, $choiceId, $choices)
     {
+        // The width of -1 means auto-size
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(67, 18));
+            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, 18));
         $choiceCtrl =
-            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(90, 29), $choices);
+            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(-1, 29), $choices);
 
         // Select the first element for both alignment choosers
         $choiceCtrl->SetSelection(0);
@@ -100,6 +102,7 @@ class ControlFrame extends wxFrame
 
         // Add the controls to the child sizer (going across)
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxLEFT, $leftSpace);
+        $hSizer->AddSpacer(8);
         $hSizer->Add($choiceCtrl);
 
         return $choiceCtrl;
@@ -109,10 +112,14 @@ class ControlFrame extends wxFrame
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Border size:", wxDefaultPosition, new wxSize(110, 18));
+            new wxStaticText($this, wxID_ANY, "Border size:", wxDefaultPosition, new wxSize(-1, 18));
+
+        // I'm leaving the spinner at a generous fixed with, since GTK renders it rather
+        // wide otherwise
         $this->borderSizeCtrl =
             new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, 26), wxSP_ARROW_KEYS, 0, 12);
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
+        $hSizer->AddSpacer(8);
         $hSizer->Add($this->borderSizeCtrl);
 
         // Add the child sizer to the main one (going down)
@@ -123,7 +130,7 @@ class ControlFrame extends wxFrame
     {
         $hSizer1 = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Borders:", wxDefaultPosition, new wxSize(110, 18));
+            new wxStaticText($this, wxID_ANY, "Borders:", wxDefaultPosition, new wxSize(-1, 18));
         $hSizer1->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
 
         // Add the first child sizer to the main one (going down)
@@ -144,7 +151,7 @@ class ControlFrame extends wxFrame
     protected function initBorderAddControl(wxSizer $hSizer, $label)
     {
         $checkBox =
-            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(80, 24));
+            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, 24));
         $checkBox->setValue(true);
         $hSizer->Add($checkBox);
 
