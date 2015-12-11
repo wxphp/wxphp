@@ -11,6 +11,10 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so sizers/main.php
  *
+ * For more information on how to use sizers generally, this article is excellent:
+ *
+ *     http://docs.wxwidgets.org/trunk/overview_sizer.html
+ *
  * @todo Remove trailing space to labels to add extra horiz space
  * @todo Quit when the controller window is closed
  * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
