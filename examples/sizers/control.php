@@ -129,7 +129,8 @@ class ControlFrame extends wxFrame
         // Add the first child sizer to the main one (going down)
         $sizer->Add($hSizer1, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
 
-        $hSizer2 = new wxBoxSizer(wxHORIZONTAL);
+        // Unlike a box sizer, a grid sizer doesn't seem to emit errors when adding checkboxes
+        $hSizer2 = new wxGridSizer(4, 0, 0);
 
         $this->initBorderAddControl($hSizer2, "Left");
         $this->initBorderAddControl($hSizer2, "Top");

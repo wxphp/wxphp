@@ -12,7 +12,6 @@
  *     /usr/bin/php -d extension=wxwidgets.so sizers/main.php
  *
  * @todo Remove trailing space to labels to add extra horiz space
- * @todo Investigate Gtk-CRITICAL and Gtk-WARNING from checkboxes
  * @todo Quit when the controller window is closed
  * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
  *      - something to do with the wrapping text control?
