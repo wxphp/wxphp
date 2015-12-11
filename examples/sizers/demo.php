@@ -129,6 +129,7 @@ class DemoFrame extends wxFrame
             "Vertical wxBoxSizer",
             "Horizontal wxBoxSizer",
             "Vert and horiz wxBoxSizers",
+            "wxGridSizer",
         ];
     }
 
@@ -145,7 +146,8 @@ class DemoFrame extends wxFrame
         return [
             "This demontrates a wxBoxSizer that arranges elements in a vertical fashion.",
             "This demo shows a wxBoxSizer that arranges elements horizontally.",
-            "Here we have an outer wxBoxSizer arranging blocks vertically, and one of the blocks is itself a wxBoxSizer that arranges its children rightwards.\n\nInterestingly, the child sizer seems to inherit its parent border width even though its own border is zero."
+            "Here we have an outer wxBoxSizer arranging blocks vertically, and one of the blocks is itself a wxBoxSizer that arranges its children rightwards.\n\nInterestingly, the child sizer seems to inherit its parent border width even though its own border is zero.",
+            "The wxGridSizer uses the available width for a specified number of columns, then flows new elements onto the next row.\n\nThe rows are set to an equal height such that all available vertical space is utilised.",
         ];
     }
 
@@ -183,6 +185,35 @@ class DemoFrame extends wxFrame
         $this->createBox("Three", new wxSize(50, 30), $hSizer);
         $this->createBox("Four", new wxSize(100, 40), $hSizer);
         $this->createBox("Five", new wxSize(80, 100), $hSizer);
+    }
+
+    /**
+     * Demonstrates the grid sizer
+     *
+     * We generate the random sizes once, so that when we redraw (e.g. to change border
+     * options) the sizes don't jiggle all over the shop
+     *
+     * @staticvar array $sizes
+     */
+    protected function demo_wxgridsizer()
+    {
+        static $sizes = array();
+
+        // Generate the sizes if they're not already generated
+        if (!$sizes)
+        {
+            for ($i = 0; $i < 10; $i++)
+            {
+                $sizes[] = [rand(0, 25), rand(0, 50)];
+            }
+        }
+
+        $this->sizer = new wxGridSizer(4);
+
+        foreach ($sizes as $ord => $sizePair)
+        {
+            $this->createBox("Item $ord", new wxSize(55 + $sizePair[0], 30 + $sizePair[1]));
+        }
     }
 
     protected function createSizerFlags($border = 0)
