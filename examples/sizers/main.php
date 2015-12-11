@@ -20,6 +20,9 @@
  * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
  *      - something to do with the wrapping text control?
  * @todo Occasionally one of the drop-down menus does not draw properly - not wide enough?
+ * @todo Try using some -1 control sizes so that items auto-size (maybe that will help with
+ *      redraw problems?)
+ * @todo Add some frames around things in the control panel
  */
 
 require_once __DIR__ . '/control.php';
