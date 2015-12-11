@@ -15,7 +15,6 @@
  *
  *     http://docs.wxwidgets.org/trunk/overview_sizer.html
  *
- * @todo Remove trailing space to labels to add extra horiz space
  * @todo Quit when the controller window is closed
  * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
  *      - something to do with the wrapping text control?

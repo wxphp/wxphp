@@ -109,7 +109,7 @@ class ControlFrame extends wxFrame
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Border size: ", wxDefaultPosition, new wxSize(110, 18));
+            new wxStaticText($this, wxID_ANY, "Border size:", wxDefaultPosition, new wxSize(110, 18));
         $this->borderSizeCtrl =
             new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, 26), wxSP_ARROW_KEYS, 0, 12);
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
@@ -123,7 +123,7 @@ class ControlFrame extends wxFrame
     {
         $hSizer1 = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Borders: ", wxDefaultPosition, new wxSize(110, 18));
+            new wxStaticText($this, wxID_ANY, "Borders:", wxDefaultPosition, new wxSize(110, 18));
         $hSizer1->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
 
         // Add the first child sizer to the main one (going down)
