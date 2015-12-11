@@ -129,6 +129,7 @@ class DemoFrame extends wxFrame
             "Vertical wxBoxSizer",
             "Horizontal wxBoxSizer",
             "Vert and horiz wxBoxSizers",
+            "wxStaticBoxSizer",
             "wxGridSizer",
         ];
     }
@@ -147,6 +148,7 @@ class DemoFrame extends wxFrame
             "This demontrates a wxBoxSizer that arranges elements in a vertical fashion.",
             "This demo shows a wxBoxSizer that arranges elements horizontally.",
             "Here we have an outer wxBoxSizer arranging blocks vertically, and one of the blocks is itself a wxBoxSizer that arranges its children rightwards.\n\nInterestingly, the child sizer seems to inherit its parent border width even though its own border is zero.",
+            "A wxStaticBoxSizer operates in the same way as a wxBoxSizer, but draws a frame around the contents. This is useful to group related controls together.\n\nHere, this sizer is added to a box sizer so external border spacing can be added.",
             "The wxGridSizer uses the available width for a specified number of columns, then flows new elements onto the next row.\n\nThe rows are set to an equal height such that all available vertical space is utilised.",
         ];
     }
@@ -185,6 +187,21 @@ class DemoFrame extends wxFrame
         $this->createBox("Three", new wxSize(50, 30), $hSizer);
         $this->createBox("Four", new wxSize(100, 40), $hSizer);
         $this->createBox("Five", new wxSize(80, 100), $hSizer);
+    }
+
+    protected function demo_wxstaticboxsizer()
+    {
+        $this->sizer = new wxBoxSizer(wxHORIZONTAL);
+
+        $box = new wxStaticBox($this, wxID_ANY, "Frame title");
+        $innerSizer = new wxStaticBoxSizer($box, wxHORIZONTAL);
+
+        // Add the child sizer to the main sizer, and set an outer border
+        $this->sizer->Add($innerSizer, $this->createSizerFlags($this->borderSize));
+
+        $this->createBox("One", new wxSize(100, 30), $innerSizer);
+        $this->createBox("Two", new wxSize(80, 60), $innerSizer);
+        $this->createBox("Three", new wxSize(80, 150), $innerSizer);
     }
 
     /**
