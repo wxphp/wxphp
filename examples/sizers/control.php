@@ -34,7 +34,7 @@ class ControlFrame extends wxFrame
             wxID_TOP,
             "Sizer controller",
             wxDefaultPosition,
-            new wxSize(350, 350),
+            new wxSize(350, 370),
             wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
@@ -50,8 +50,12 @@ class ControlFrame extends wxFrame
         $sizer->Add($this->choiceCtrl, 0, wxALL + wxEXPAND, 8);
         $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
         $this->initAlignControls($sizer);
-        $this->initBorderSizeControl($sizer);
-        $this->initBorderAddControls($sizer);
+
+        // Put these controls in a frame
+        $frameSizer = $this->createFrameSizer("Border", wxVERTICAL);
+        $this->initBorderSizeControl($frameSizer);
+        $this->initBorderAddControls($frameSizer);
+        $sizer->Add($frameSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8); // @todo Share code with same in initAlignControls
         $this->SetSizer($sizer);
 
         // Save the help strings in this class too
@@ -73,8 +77,7 @@ class ControlFrame extends wxFrame
     protected function initAlignControls(wxSizer $sizer)
     {
         // Put these controls in a frame sizer
-        $box = new wxStaticBox($this, wxID_ANY, "Alignment");
-        $hSizer = new wxStaticBoxSizer($box, wxHORIZONTAL);
+        $hSizer = $this->createFrameSizer("Alignment", wxHORIZONTAL);
 
         $this->horizCtrl = $this->initAlignmentControl(
             $hSizer, 'H align:',
@@ -298,5 +301,10 @@ class ControlFrame extends wxFrame
         }
 
         return $flags;
+    }
+
+    protected function createFrameSizer($label, $orientation)
+    {
+        return new wxStaticBoxSizer(new wxStaticBox($this, wxID_ANY, $label), $orientation);
     }
 }
