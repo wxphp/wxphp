@@ -34,7 +34,7 @@ class ControlFrame extends wxFrame
             wxID_TOP,
             "Sizer controller",
             wxDefaultPosition,
-            new wxSize(350, 330),
+            new wxSize(350, 350),
             wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
@@ -72,7 +72,10 @@ class ControlFrame extends wxFrame
      */
     protected function initAlignControls(wxSizer $sizer)
     {
-        $hSizer = new wxBoxSizer(wxHORIZONTAL);
+        // Put these controls in a frame sizer
+        $box = new wxStaticBox($this, wxID_ANY, "Alignment");
+        $hSizer = new wxStaticBoxSizer($box, wxHORIZONTAL);
+
         $this->horizCtrl = $this->initAlignmentControl(
             $hSizer, 'H align:',
             self::ID_HORIZ, ["Left", "Centre", "Right"]
@@ -101,9 +104,9 @@ class ControlFrame extends wxFrame
         $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
 
         // Add the controls to the child sizer (going across)
-        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxLEFT, $leftSpace);
+        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxALL, 8);
         $hSizer->AddSpacer(8);
-        $hSizer->Add($choiceCtrl);
+        $hSizer->Add($choiceCtrl, 0, wxALL, 8);
 
         return $choiceCtrl;
     }
