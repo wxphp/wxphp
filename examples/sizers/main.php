@@ -18,6 +18,12 @@
  * @todo Quit when the controller window is closed
  * @todo Occasionally one of the drop-down menus does not draw properly - not wide enough?
  * @todo Add some frames around things in the control panel
+ * @todo A control window height of -1 doesn't work due to the text resize - maybe add in
+ *      text to get this working and then null it?
+ * @todo StaticBoxSizer introduces GTK console warnings, tried a few things already:
+ *      - add in a GridSizer child to FrameSizers
+ *      - make each FrameSizer a child of a new GridSizer
+ *      - swap outer BoxSizer with FlexGridSizer with a single column
  */
 
 require_once __DIR__ . '/control.php';
