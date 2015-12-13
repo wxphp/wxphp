@@ -55,7 +55,7 @@ class ControlFrame extends wxFrame
         $frameSizer = $this->createFrameSizer("Border", wxVERTICAL);
         $this->initBorderSizeControl($frameSizer);
         $this->initBorderAddControls($frameSizer);
-        $sizer->Add($frameSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8); // @todo Share code with same in initAlignControls
+        $this->addItemToSizer($sizer, $frameSizer);
         $this->SetSizer($sizer);
 
         // Save the help strings in this class too
@@ -77,7 +77,7 @@ class ControlFrame extends wxFrame
     protected function initAlignControls(wxSizer $sizer)
     {
         // Put these controls in a frame sizer
-        $hSizer = $this->createFrameSizer("Alignment", wxHORIZONTAL);
+        $hSizer = $this->createFrameSizer("Alignment", wxHORIZONTAL); // @todo Rename to $frameSizer
 
         $this->horizCtrl = $this->initAlignmentControl(
             $hSizer, 'H align:',
@@ -89,7 +89,7 @@ class ControlFrame extends wxFrame
         );
 
         // Add the child sizer to the main one (going down)
-        $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->addItemToSizer($sizer, $hSizer);
     }
 
     protected function initAlignmentControl(wxSizer $hSizer, $label, $choiceId, $choices)
@@ -104,7 +104,7 @@ class ControlFrame extends wxFrame
         $choiceCtrl->SetSelection(0);
 
         // Let's add left-spacing in the sizer if there's already controls in here
-        $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
+        $leftSpace = $hSizer->GetItemCount() ? 16 : 0; // @todo Convert this to a conditional AddSpacer?
 
         // Add the controls to the child sizer (going across)
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxALL, 8);
@@ -129,7 +129,7 @@ class ControlFrame extends wxFrame
         $hSizer->Add($this->borderSizeCtrl);
 
         // Add the child sizer to the main one (going down)
-        $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->addItemToSizer($sizer, $hSizer);
     }
 
     protected function initBorderAddControls(wxSizer $sizer)
@@ -151,7 +151,7 @@ class ControlFrame extends wxFrame
         $this->initBorderAddControl($hSizer2, "Bottom");
 
         // Add the second child sizer to the main one (going down)
-        $sizer->Add($hSizer2, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->addItemToSizer($sizer, $hSizer2);
     }
 
     protected function initBorderAddControl(wxSizer $hSizer, $label)
@@ -306,5 +306,11 @@ class ControlFrame extends wxFrame
     protected function createFrameSizer($label, $orientation)
     {
         return new wxStaticBoxSizer(new wxStaticBox($this, wxID_ANY, $label), $orientation);
+    }
+
+    // @todo Type-hint $item as "wxSizer $childSizer"?
+    protected function addItemToSizer(wxSizer $sizer, $item)
+    {
+        $sizer->Add($item, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
     }
 }
