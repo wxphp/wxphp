@@ -308,9 +308,8 @@ class ControlFrame extends wxFrame
         return new wxStaticBoxSizer(new wxStaticBox($this, wxID_ANY, $label), $orientation);
     }
 
-    // @todo Type-hint $item as "wxSizer $childSizer"?
-    protected function addItemToSizer(wxSizer $sizer, $item)
+    protected function addItemToSizer(wxSizer $sizer, wxSizer $childSizer)
     {
-        $sizer->Add($item, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
+        $sizer->Add($childSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
     }
 }
