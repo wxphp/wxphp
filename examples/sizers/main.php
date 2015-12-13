@@ -26,6 +26,7 @@
  *      - add in a GridSizer child to FrameSizers
  *      - make each FrameSizer a child of a new GridSizer
  *      - swap outer BoxSizer with FlexGridSizer with a single column
+ *      - add long dummy text to the static box sizer
  */
 
 require_once __DIR__ . '/control.php';
