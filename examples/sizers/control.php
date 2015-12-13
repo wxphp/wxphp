@@ -104,7 +104,10 @@ class ControlFrame extends wxFrame
         $choiceCtrl->SetSelection(0);
 
         // Let's add left-spacing in the sizer if there's already controls in here
-        $leftSpace = $hSizer->GetItemCount() ? 16 : 0; // @todo Convert this to a conditional AddSpacer?
+        if ($hSizer->GetItemCount())
+        {
+            $hSizer->AddSpacer(20);
+        }
 
         // Add the controls to the child sizer (going across)
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxALL, 8);
