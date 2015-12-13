@@ -16,8 +16,6 @@
  *     http://docs.wxwidgets.org/trunk/overview_sizer.html
  *
  * @todo Quit when the controller window is closed
- * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
- *      - something to do with the wrapping text control?
  * @todo Occasionally one of the drop-down menus does not draw properly - not wide enough?
  * @todo Add some frames around things in the control panel
  */

@@ -65,6 +65,9 @@ class ControlFrame extends wxFrame
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
         $this->Connect(wxEVT_SPINCTRL, [$this, "controlSpinEvent"]);
         $this->Connect(wxEVT_CHECKBOX, [$this, "controlCheckBoxEvent"]);
+
+        // Fixes redraw glitches just before the loop starts
+        $this->Layout();
     }
 
     /**
