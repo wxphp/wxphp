@@ -121,6 +121,10 @@ class DemoFrame extends wxFrame
             $this->SetSizer($this->sizer);
             $this->Layout();
         }
+        else
+        {
+            trigger_error("No such demo", E_USER_WARNING);
+        }
     }
 
     public function getDemoNames()
