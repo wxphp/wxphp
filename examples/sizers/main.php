@@ -28,6 +28,8 @@
  *      - make each FrameSizer a child of a new GridSizer
  *      - swap outer BoxSizer with FlexGridSizer with a single column
  *      - move window construction to Show()
+ * @todo Right-align the alignment menu drop-downs, so that the vertical dropdown sits flush
+ *      with the right hand edge of the frame (with an appropriate border of course)
  */
 
 require_once __DIR__ . '/control.php';
