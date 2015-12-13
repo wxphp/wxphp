@@ -18,6 +18,7 @@
  * @todo Quit when the controller window is closed
  * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
  *      - something to do with the wrapping text control?
+ *      - tried adding long dummy text to the static box sizer, no difference
  * @todo Occasionally one of the drop-down menus does not draw properly - not wide enough?
  * @todo Add some frames around things in the control panel
  * @todo A control window height of -1 doesn't work due to the text resize - maybe add in
@@ -26,7 +27,7 @@
  *      - add in a GridSizer child to FrameSizers
  *      - make each FrameSizer a child of a new GridSizer
  *      - swap outer BoxSizer with FlexGridSizer with a single column
- *      - add long dummy text to the static box sizer
+ *      - move window construction to Show()
  */
 
 require_once __DIR__ . '/control.php';
