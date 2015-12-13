@@ -249,8 +249,7 @@ class ControlFrame extends wxFrame
         $flags = 0;
 
         // Set the horizontal alignment flags
-        $horiz = $this->horizCtrl->GetSelection();
-        switch ($horiz)
+        switch ($this->getHorizAlignChoice())
         {
             case 0:
                 $flags += wxALIGN_LEFT;
@@ -264,8 +263,7 @@ class ControlFrame extends wxFrame
         }
 
         // Set the vertical alignment flags
-        $vert = $this->vertCtrl->GetSelection();
-        switch ($vert)
+        switch ($this->getVertAlignChoice())
         {
             case 0:
                 $flags += wxALIGN_TOP;
@@ -279,6 +277,16 @@ class ControlFrame extends wxFrame
         }
 
         return $flags;
+    }
+
+    protected function getHorizAlignChoice()
+    {
+        return $this->horizCtrl->GetSelection();
+    }
+
+    protected function getVertAlignChoice()
+    {
+        return $this->vertCtrl->GetSelection();
     }
 
     protected function getBorderSize()
