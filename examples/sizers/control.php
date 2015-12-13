@@ -52,7 +52,7 @@ class ControlFrame extends wxFrame
         $this->initAlignControls($sizer);
 
         // Put these controls in a frame
-        $frameSizer = $this->createFrameSizer("Border", wxVERTICAL);
+        $frameSizer = $this->createFrameSizer("Borders", wxVERTICAL);
         $this->initBorderSizeControl($frameSizer);
         $this->initBorderAddControls($frameSizer);
         $this->addItemToSizer($sizer, $frameSizer);
@@ -118,7 +118,7 @@ class ControlFrame extends wxFrame
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Border size:", wxDefaultPosition, new wxSize(-1, 18));
+            new wxStaticText($this, wxID_ANY, "Width:", wxDefaultPosition, new wxSize(-1, 18));
 
         // I'm leaving the spinner at a generous fixed with, since GTK renders it rather
         // wide otherwise
@@ -135,9 +135,6 @@ class ControlFrame extends wxFrame
     protected function initBorderAddControls(wxSizer $sizer)
     {
         $hSizer1 = new wxBoxSizer(wxHORIZONTAL);
-        $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Borders:", wxDefaultPosition, new wxSize(-1, 18));
-        $hSizer1->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
 
         // Add the first child sizer to the main one (going down)
         $sizer->Add($hSizer1, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
