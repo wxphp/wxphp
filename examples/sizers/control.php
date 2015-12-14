@@ -14,6 +14,7 @@ class ControlFrame extends wxFrame
     // Guideline width for the help text. We can't set this to -1 otherwise using the Fit()
     // feature makes it far too wide - maybe it prefers that to wrapping vertically?
     const HELP_WIDTH = 330;
+    protected $helpWidth = 330;
 
     // Callbacks for various events
     protected $changeDemohandler;
@@ -64,6 +65,9 @@ class ControlFrame extends wxFrame
 
         // Save the help strings in this class too
         $this->helpStrings = $helpStrings;
+
+        // Expand the help text to the largest size it will need to be
+        $this->setHelpControlSize();
 
         // Here's some widget events
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
@@ -237,14 +241,45 @@ class ControlFrame extends wxFrame
         $this->changeDemoEvent($this->demoIndex);
     }
 
+    /**
+     * Sets the width and height of the help control to ideal dimensions
+     */
+    protected function setHelpControlSize()
+    {
+        // Use the size of the window minus border sizes to get a width to lock to (can't use -1
+        // since it is a wrapped control, and it would grow too big if autosized)
+        $this->helpWidth = $this->GetMinSize()->getWidth() - 30;
+        $this->helpCtrl->SetSize(new wxSize($this->helpWidth, -1));
+
+        // Set the control to every possible value - the Fit() will ensure it will only
+        // ever grow and not reduce in size
+        for($i = 0; $i < count($this->helpStrings); $i++)
+        {
+            $this->setHelp($i);
+        }
+
+        // Finally reset the text, it will be set again via setDemoChoice()
+        $this->helpCtrl->SetLabel('');
+    }
+
+    /**
+     * Resets the wrapped help text
+     *
+     * This seems to be a bit of a hack, but it produces good results. Setting the wrap dimensions
+     * before the text prevents drawing on the screen and then resetting the width, which results
+     * in areas that do not get updated. Then we reset the label, but in doing so this seems
+     * to cause the control to forget its wrapping, so we do that again!
+     *
+     * Finally we call Fit() to ask the window to increase in size if necessary.
+     *
+     * @param integer $index
+     */
     protected function setHelp($index)
     {
+        $this->helpCtrl->Wrap($this->helpWidth);
         $this->helpCtrl->SetLabel($this->helpStrings[$index]);
-
-        // The wrapping can change the control size, so it's worth asking the window
-        // to re-layout its controls
-        $this->helpCtrl->Wrap(self::HELP_WIDTH);
-        $this->Layout();
+        $this->helpCtrl->Wrap($this->helpWidth);
+        $this->Fit();
     }
 
     public function setChangeDemoHandler($changeDemoHandler)
