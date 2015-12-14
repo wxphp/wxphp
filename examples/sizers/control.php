@@ -11,6 +11,10 @@ class ControlFrame extends wxFrame
     const ID_HORIZ = 10001;
     const ID_VERT = 10002;
 
+    // Guideline width for the help text. We can't set this to -1 otherwise using the Fit()
+    // feature makes it far too wide - maybe it prefers that to wrapping vertically?
+    const HELP_WIDTH = 330;
+
     // Callbacks for various events
     protected $changeDemohandler;
 
@@ -34,7 +38,7 @@ class ControlFrame extends wxFrame
             wxID_TOP,
             "Sizer controller",
             wxDefaultPosition,
-            new wxSize(-1, 370),
+            new wxSize(-1, -1),
             wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
@@ -43,7 +47,7 @@ class ControlFrame extends wxFrame
         $this->choiceCtrl =
             new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(-1, -1), $demoNames);
         $this->helpCtrl =
-            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(-1, 130));
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(self::HELP_WIDTH, -1));
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         // The menu and help controls are set to expand to the window width
@@ -209,6 +213,8 @@ class ControlFrame extends wxFrame
         $func($index, $this->getAlignmentFlags(), $this->getBorderAddFlags(), $this->getBorderSize());
 
         $this->demoIndex = $index;
+
+        $this->Fit();
     }
 
     /**
@@ -237,7 +243,7 @@ class ControlFrame extends wxFrame
 
         // The wrapping can change the control size, so it's worth asking the window
         // to re-layout its controls
-        $this->helpCtrl->Wrap(330);
+        $this->helpCtrl->Wrap(self::HELP_WIDTH);
         $this->Layout();
     }
 
