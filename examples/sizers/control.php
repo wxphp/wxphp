@@ -41,7 +41,7 @@ class ControlFrame extends wxFrame
 
         // Create the main drop-down and help controls
         $this->choiceCtrl =
-            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(-1, 29), $demoNames);
+            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(-1, -1), $demoNames);
         $this->helpCtrl =
             new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(-1, 130));
 
@@ -99,9 +99,9 @@ class ControlFrame extends wxFrame
     {
         // The width of -1 means auto-size
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, 18));
+            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, -1));
         $choiceCtrl =
-            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(-1, 29), $choices);
+            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(-1, -1), $choices);
 
         // Select the first element for both alignment choosers
         $choiceCtrl->SetSelection(0);
@@ -123,12 +123,12 @@ class ControlFrame extends wxFrame
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Width:", wxDefaultPosition, new wxSize(-1, 18));
+            new wxStaticText($this, wxID_ANY, "Width:", wxDefaultPosition, new wxSize(-1, -1));
 
         // I'm leaving the spinner at a generous fixed with, since GTK renders it rather
         // wide otherwise
         $this->borderSizeCtrl =
-            new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, 26), wxSP_ARROW_KEYS, 0, 12);
+            new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, -1), wxSP_ARROW_KEYS, 0, 12);
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
         $hSizer->AddSpacer(8);
         $hSizer->Add($this->borderSizeCtrl);
@@ -159,7 +159,7 @@ class ControlFrame extends wxFrame
     protected function initBorderAddControl(wxSizer $hSizer, $label)
     {
         $checkBox =
-            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, 24));
+            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, -1));
         $checkBox->setValue(true);
         $hSizer->Add($checkBox);
 
