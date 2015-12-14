@@ -19,7 +19,7 @@ class DemoFrame extends wxFrame
             wxDefaultPosition,
             new wxSize(400, 300)
         );
-        $this->SetPosition(new wxPoint(500, 100));
+        $this->SetPosition(new wxPoint(600, 100));
     }
 
     protected function createBox($text, wxSize $size, wxSizer $sizer = null)

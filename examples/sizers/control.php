@@ -56,7 +56,7 @@ class ControlFrame extends wxFrame
         $this->initBorderSizeControl($frameSizer);
         $this->initBorderAddControls($frameSizer);
         $this->addItemToSizer($sizer, $frameSizer);
-        $this->SetSizer($sizer);
+        $this->SetSizerAndFit($sizer);
 
         // Save the help strings in this class too
         $this->helpStrings = $helpStrings;
@@ -114,7 +114,7 @@ class ControlFrame extends wxFrame
 
         // Add the controls to the child sizer (going across)
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxALL, 8);
-        $hSizer->Add($choiceCtrl, 0, wxLEFT + wxTOP + wxBOTTOM, 8);
+        $hSizer->Add($choiceCtrl, 0, wxALL, 8);
 
         return $choiceCtrl;
     }
