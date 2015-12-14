@@ -48,7 +48,7 @@ class ControlFrame extends wxFrame
         $sizer = new wxBoxSizer(wxVERTICAL);
         // The menu and help controls are set to expand to the window width
         $sizer->Add($this->choiceCtrl, 0, wxALL + wxEXPAND, 8);
-        $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
+        $sizer->Add($this->helpCtrl, 1, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
         $this->initAlignControls($sizer);
 
         // Put these controls in a frame
