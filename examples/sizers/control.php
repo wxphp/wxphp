@@ -11,11 +11,6 @@ class ControlFrame extends wxFrame
     const ID_HORIZ = 10001;
     const ID_VERT = 10002;
 
-    // Guideline width for the help text. We can't set this to -1 otherwise using the Fit()
-    // feature makes it far too wide - maybe it prefers that to wrapping vertically?
-    const HELP_WIDTH = 330;
-    protected $helpWidth = 330;
-
     // Callbacks for various events
     protected $changeDemohandler;
 
@@ -30,6 +25,10 @@ class ControlFrame extends wxFrame
     // Misc class properties
     protected $helpStrings;
     protected $demoIndex;
+
+    // Guideline width for the help text. We can't set this to -1 otherwise using the Fit()
+    // feature makes it far too wide - maybe it prefers that to wrapping vertically?
+    protected $helpWidth = 330;
 
     public function __construct(array $demoNames, array $helpStrings, $parent = null)
     {
@@ -48,7 +47,7 @@ class ControlFrame extends wxFrame
         $this->choiceCtrl =
             new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(-1, -1), $demoNames);
         $this->helpCtrl =
-            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(self::HELP_WIDTH, -1));
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize($this->helpWidth, -1));
 
         $sizer = new wxBoxSizer(wxVERTICAL);
         // The menu and help controls are set to expand to the window width
