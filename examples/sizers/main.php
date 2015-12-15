@@ -11,12 +11,21 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so sizers/main.php
  *
- * @todo Remove trailing space to labels to add extra horiz space
- * @todo Investigate Gtk-CRITICAL and Gtk-WARNING from checkboxes
+ * For more information on how to use sizers generally, this article is excellent:
+ *
+ *     http://docs.wxwidgets.org/trunk/overview_sizer.html
+ *
  * @todo Quit when the controller window is closed
  * @todo I get very occasional redraw strangeness in the controller, but not often enough to debug
  *      - something to do with the wrapping text control?
- * @todo Occasionally one of the drop-down menus does not draw properly - not wide enough?
+ *      - tried adding long dummy text to the static box sizer, no difference
+ * @todo StaticBoxSizer introduces GTK console warnings, tried a few things already:
+ *      - add in a GridSizer child to FrameSizers
+ *      - make each FrameSizer a child of a new GridSizer
+ *      - swap outer BoxSizer with FlexGridSizer with a single column
+ *      - move window construction to Show()
+ *      - ** Ah, could wxEXPAND be the cause of these? Adding one resulted in 16 warnings
+ *        ** instead of 8!
  */
 
 require_once __DIR__ . '/control.php';

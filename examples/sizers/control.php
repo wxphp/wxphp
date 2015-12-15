@@ -26,6 +26,10 @@ class ControlFrame extends wxFrame
     protected $helpStrings;
     protected $demoIndex;
 
+    // Guideline width for the help text. We can't set this to -1 otherwise using the Fit()
+    // feature makes it far too wide - maybe it prefers that to wrapping vertically?
+    protected $helpWidth = 330;
+
     public function __construct(array $demoNames, array $helpStrings, $parent = null)
     {
         // The "dialog style" means that the window deliberately cannot be resized
@@ -34,32 +38,43 @@ class ControlFrame extends wxFrame
             wxID_TOP,
             "Sizer controller",
             wxDefaultPosition,
-            new wxSize(350, 330),
+            new wxSize(-1, -1),
             wxDEFAULT_DIALOG_STYLE
         );
         $this->SetPosition(new wxPoint(100, 100));
 
         // Create the main drop-down and help controls
         $this->choiceCtrl =
-            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(330, 29), $demoNames);
+            new wxChoice($this, self::ID_DEMO, wxDefaultPosition, new wxSize(-1, -1), $demoNames);
         $this->helpCtrl =
-            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize(330, 130));
+            new wxStaticText($this, wxID_ANY, '', wxDefaultPosition, new wxSize($this->helpWidth, -1));
 
         $sizer = new wxBoxSizer(wxVERTICAL);
-        $sizer->Add($this->choiceCtrl, 0, wxALL, 8);
-        $sizer->Add($this->helpCtrl, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        // The menu and help controls are set to expand to the window width
+        $sizer->Add($this->choiceCtrl, 0, wxALL + wxEXPAND, 8);
+        $sizer->Add($this->helpCtrl, 1, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
         $this->initAlignControls($sizer);
-        $this->initBorderSizeControl($sizer);
-        $this->initBorderAddControls($sizer);
-        $this->SetSizer($sizer);
+
+        // Put these controls in a frame
+        $frameSizer = $this->createFrameSizer("Borders", wxVERTICAL);
+        $this->initBorderSizeControl($frameSizer);
+        $this->initBorderAddControls($frameSizer);
+        $this->addItemToSizer($sizer, $frameSizer);
+        $this->SetSizerAndFit($sizer);
 
         // Save the help strings in this class too
         $this->helpStrings = $helpStrings;
+
+        // Expand the help text to the largest size it will need to be
+        $this->setHelpControlSize();
 
         // Here's some widget events
         $this->Connect(wxEVT_CHOICE, [$this, "controlChangeEvent"]);
         $this->Connect(wxEVT_SPINCTRL, [$this, "controlSpinEvent"]);
         $this->Connect(wxEVT_CHECKBOX, [$this, "controlCheckBoxEvent"]);
+
+        // Fixes redraw glitches just before the loop starts
+        $this->Layout();
     }
 
     /**
@@ -71,36 +86,42 @@ class ControlFrame extends wxFrame
      */
     protected function initAlignControls(wxSizer $sizer)
     {
-        $hSizer = new wxBoxSizer(wxHORIZONTAL);
+        // Put these controls in a frame sizer
+        $hSizer = $this->createFrameSizer("Alignment", wxHORIZONTAL); // @todo Rename to $frameSizer
+
         $this->horizCtrl = $this->initAlignmentControl(
-            $hSizer, 'H align:',
+            $hSizer, 'Horizontal:',
             self::ID_HORIZ, ["Left", "Centre", "Right"]
         );
         $this->vertCtrl = $this->initAlignmentControl(
-            $hSizer, 'V align:',
+            $hSizer, 'Vertical:',
             self::ID_VERT, ["Top", "Centre", "Bottom"]
         );
 
         // Add the child sizer to the main one (going down)
-        $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->addItemToSizer($sizer, $hSizer);
     }
 
     protected function initAlignmentControl(wxSizer $hSizer, $label, $choiceId, $choices)
     {
+        // The width of -1 means auto-size
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(67, 18));
+            new wxStaticText($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, -1));
         $choiceCtrl =
-            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(90, 29), $choices);
+            new wxChoice($this, $choiceId, wxDefaultPosition, new wxSize(-1, -1), $choices);
 
         // Select the first element for both alignment choosers
         $choiceCtrl->SetSelection(0);
 
         // Let's add left-spacing in the sizer if there's already controls in here
-        $leftSpace = $hSizer->GetItemCount() ? 16 : 0;
+        if ($hSizer->GetItemCount())
+        {
+            $hSizer->AddSpacer(8);
+        }
 
         // Add the controls to the child sizer (going across)
-        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxLEFT, $leftSpace);
-        $hSizer->Add($choiceCtrl);
+        $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL + wxALL, 8);
+        $hSizer->Add($choiceCtrl, 0, wxALL, 8);
 
         return $choiceCtrl;
     }
@@ -109,27 +130,29 @@ class ControlFrame extends wxFrame
     {
         $hSizer = new wxBoxSizer(wxHORIZONTAL);
         $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Border size: ", wxDefaultPosition, new wxSize(110, 18));
+            new wxStaticText($this, wxID_ANY, "Width:", wxDefaultPosition, new wxSize(-1, -1));
+
+        // I'm leaving the spinner at a generous fixed with, since GTK renders it rather
+        // wide otherwise
         $this->borderSizeCtrl =
-            new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, 26), wxSP_ARROW_KEYS, 0, 12);
+            new wxSpinCtrl($this, wxID_ANY, "8", wxDefaultPosition, new wxSize(100, -1), wxSP_ARROW_KEYS, 0, 12);
         $hSizer->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
+        $hSizer->AddSpacer(8);
         $hSizer->Add($this->borderSizeCtrl);
 
         // Add the child sizer to the main one (going down)
-        $sizer->Add($hSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->addItemToSizer($sizer, $hSizer);
     }
 
     protected function initBorderAddControls(wxSizer $sizer)
     {
         $hSizer1 = new wxBoxSizer(wxHORIZONTAL);
-        $labelCtrl =
-            new wxStaticText($this, wxID_ANY, "Borders: ", wxDefaultPosition, new wxSize(110, 18));
-        $hSizer1->Add($labelCtrl, 0, wxALIGN_CENTER_VERTICAL);
 
         // Add the first child sizer to the main one (going down)
         $sizer->Add($hSizer1, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
 
-        $hSizer2 = new wxBoxSizer(wxHORIZONTAL);
+        // Unlike a box sizer, a grid sizer doesn't seem to emit errors when adding checkboxes
+        $hSizer2 = new wxGridSizer(4, 0, 0);
 
         $this->initBorderAddControl($hSizer2, "Left");
         $this->initBorderAddControl($hSizer2, "Top");
@@ -137,13 +160,13 @@ class ControlFrame extends wxFrame
         $this->initBorderAddControl($hSizer2, "Bottom");
 
         // Add the second child sizer to the main one (going down)
-        $sizer->Add($hSizer2, 0, wxLEFT + wxRIGHT + wxBOTTOM, 8);
+        $this->addItemToSizer($sizer, $hSizer2);
     }
 
     protected function initBorderAddControl(wxSizer $hSizer, $label)
     {
         $checkBox =
-            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(80, 24));
+            new wxCheckBox($this, wxID_ANY, $label, wxDefaultPosition, new wxSize(-1, -1));
         $checkBox->setValue(true);
         $hSizer->Add($checkBox);
 
@@ -193,6 +216,8 @@ class ControlFrame extends wxFrame
         $func($index, $this->getAlignmentFlags(), $this->getBorderAddFlags(), $this->getBorderSize());
 
         $this->demoIndex = $index;
+
+        $this->Fit();
     }
 
     /**
@@ -215,14 +240,45 @@ class ControlFrame extends wxFrame
         $this->changeDemoEvent($this->demoIndex);
     }
 
+    /**
+     * Sets the width and height of the help control to ideal dimensions
+     */
+    protected function setHelpControlSize()
+    {
+        // Use the size of the window minus border sizes to get a width to lock to (can't use -1
+        // since it is a wrapped control, and it would grow too big if autosized)
+        $this->helpWidth = $this->GetMinSize()->getWidth() - 30;
+        $this->helpCtrl->SetSize(new wxSize($this->helpWidth, -1));
+
+        // Set the control to every possible value - the Fit() will ensure it will only
+        // ever grow and not reduce in size
+        for($i = 0; $i < count($this->helpStrings); $i++)
+        {
+            $this->setHelp($i);
+        }
+
+        // Finally reset the text, it will be set again via setDemoChoice()
+        $this->helpCtrl->SetLabel('');
+    }
+
+    /**
+     * Resets the wrapped help text
+     *
+     * This seems to be a bit of a hack, but it produces good results. Setting the wrap dimensions
+     * before the text prevents drawing on the screen and then resetting the width, which results
+     * in areas that do not get updated. Then we reset the label, but in doing so this seems
+     * to cause the control to forget its wrapping, so we do that again!
+     *
+     * Finally we call Fit() to ask the window to increase in size if necessary.
+     *
+     * @param integer $index
+     */
     protected function setHelp($index)
     {
+        $this->helpCtrl->Wrap($this->helpWidth);
         $this->helpCtrl->SetLabel($this->helpStrings[$index]);
-
-        // The wrapping can change the control size, so it's worth asking the window
-        // to re-layout its controls
-        $this->helpCtrl->Wrap(330);
-        $this->Layout();
+        $this->helpCtrl->Wrap($this->helpWidth);
+        $this->Fit();
     }
 
     public function setChangeDemoHandler($changeDemoHandler)
@@ -235,8 +291,7 @@ class ControlFrame extends wxFrame
         $flags = 0;
 
         // Set the horizontal alignment flags
-        $horiz = $this->horizCtrl->GetSelection();
-        switch ($horiz)
+        switch ($this->getHorizAlignChoice())
         {
             case 0:
                 $flags += wxALIGN_LEFT;
@@ -250,8 +305,7 @@ class ControlFrame extends wxFrame
         }
 
         // Set the vertical alignment flags
-        $vert = $this->vertCtrl->GetSelection();
-        switch ($vert)
+        switch ($this->getVertAlignChoice())
         {
             case 0:
                 $flags += wxALIGN_TOP;
@@ -265,6 +319,16 @@ class ControlFrame extends wxFrame
         }
 
         return $flags;
+    }
+
+    protected function getHorizAlignChoice()
+    {
+        return $this->horizCtrl->GetSelection();
+    }
+
+    protected function getVertAlignChoice()
+    {
+        return $this->vertCtrl->GetSelection();
     }
 
     protected function getBorderSize()
@@ -287,5 +351,15 @@ class ControlFrame extends wxFrame
         }
 
         return $flags;
+    }
+
+    protected function createFrameSizer($label, $orientation)
+    {
+        return new wxStaticBoxSizer(new wxStaticBox($this, wxID_ANY, $label), $orientation);
+    }
+
+    protected function addItemToSizer(wxSizer $sizer, wxSizer $childSizer)
+    {
+        $sizer->Add($childSizer, 0, wxLEFT + wxRIGHT + wxBOTTOM + wxEXPAND, 8);
     }
 }
