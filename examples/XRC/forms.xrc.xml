@@ -5,12 +5,20 @@
 		<size>500,-1</size>
 		<title>Diary entry</title>
 		<object class="wxFlexGridSizer">
-			<rows>5</rows>
+			<rows>6</rows>
 			<cols>1</cols>
 			<vgap>0</vgap>
 			<hgap>0</hgap>
 			<growablecols></growablecols>
 			<growablerows></growablerows>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>8</border>
+				<object class="wxStaticText" name="m_staticText12">
+					<label>These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor.</label>
+				</object>
+			</object>
 			<object class="sizeritem">
 				<option>1</option>
 				<flag>wxALIGN_TOP|wxEXPAND|wxLEFT|wxRIGHT</flag>
@@ -173,7 +181,7 @@
 								<flag>wxALL</flag>
 								<border>5</border>
 								<object class="wxRadioButton" name="m_radioBtn1">
-									<label>RadioBtn</label>
+									<label>Option 1</label>
 									<value>0</value>
 								</object>
 							</object>
@@ -182,7 +190,7 @@
 								<flag>wxALL</flag>
 								<border>5</border>
 								<object class="wxRadioButton" name="m_radioBtn2">
-									<label>RadioBtn</label>
+									<label>Option 2</label>
 									<value>0</value>
 								</object>
 							</object>
