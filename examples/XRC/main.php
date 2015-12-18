@@ -41,19 +41,16 @@ class myApp extends wxApp
         $frame = new wxFrame();
         $resource->LoadFrame($frame, NULL, 'frmOne');
 
+        // Re-wrap and re-fit the text control - this gets the correct amount of vertical
+        // size for the wrapped text and its borders
         $textCtrl = wxDynamicCast(
             $frame->FindWindow('m_staticText12'),
             "wxStaticText"
         );
-#        $textCtrl->Wrap(400);
+        $textCtrl->Wrap(460);
 
         $frame->Layout();
         $frame->Show();
-#        $frame->Fit();
-
-#        $sizer = $frame->GetSizer();
-#        $sizer->Layout();
-
-#        $frame->SetSizerAndFit($sizer);
+        $frame->Fit();
     }
 }
