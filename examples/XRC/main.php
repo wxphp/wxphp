@@ -43,8 +43,8 @@ class myApp extends wxApp
         $resource->InitAllHandlers();
         $resource->Load(__DIR__ . '/forms.xrc.xml');
         
-        $frame = new wxFrame();
-        $resource->LoadFrame($frame, NULL, 'frmOne');
+        $frame = new wxDialog();
+        $resource->LoadDialog($frame, NULL, 'frmOne');
 
         // Re-wrap and re-fit the text control - this gets the correct amount of vertical
         // size for the wrapped text and its borders

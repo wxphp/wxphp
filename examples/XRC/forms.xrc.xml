@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
-	<object class="wxFrame" name="frmOne">
-		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+	<object class="wxDialog" name="frmOne">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
 		<size>500,-1</size>
 		<title>Diary entry</title>
 		<object class="wxFlexGridSizer">
