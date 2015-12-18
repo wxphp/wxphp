@@ -13,7 +13,7 @@
 			<growablerows></growablerows>
 			<object class="sizeritem">
 				<option>0</option>
-				<flag>wxALL|wxEXPAND</flag>
+				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>8</border>
 				<object class="wxStaticText" name="m_staticText12">
 					<label>These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor.</label>
@@ -21,7 +21,7 @@
 			</object>
 			<object class="sizeritem">
 				<option>1</option>
-				<flag>wxALIGN_TOP|wxEXPAND|wxLEFT|wxRIGHT</flag>
+				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
@@ -72,7 +72,7 @@
 			</object>
 			<object class="sizeritem">
 				<option>1</option>
-				<flag>wxALIGN_TOP|wxEXPAND|wxLEFT|wxRIGHT</flag>
+				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
@@ -145,7 +145,7 @@
 			</object>
 			<object class="sizeritem">
 				<option>1</option>
-				<flag>wxALIGN_TOP|wxEXPAND|wxLEFT|wxRIGHT</flag>
+				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
