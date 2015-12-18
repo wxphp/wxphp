@@ -40,6 +40,20 @@ class myApp extends wxApp
         
         $frame = new wxFrame();
         $resource->LoadFrame($frame, NULL, 'frmOne');
+
+        $textCtrl = wxDynamicCast(
+            $frame->FindWindow('m_staticText12'),
+            "wxStaticText"
+        );
+#        $textCtrl->Wrap(400);
+
+        $frame->Layout();
         $frame->Show();
+#        $frame->Fit();
+
+#        $sizer = $frame->GetSizer();
+#        $sizer->Layout();
+
+#        $frame->SetSizerAndFit($sizer);
     }
 }
