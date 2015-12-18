@@ -9,7 +9,7 @@
  *
  * Run this using:
  *
- *     /usr/bin/php -d extension=wxwidgets.so sizers/main.php
+ *     /usr/bin/php -d extension=wxwidgets.so XRC/main.php
  *
  * For information generally on loading window definitions via XRC, read this:
  *
