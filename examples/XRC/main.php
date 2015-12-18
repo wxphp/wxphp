@@ -18,6 +18,11 @@
  * The forms.fpb file is the source file for forms.xrc.xml, and while the XML file can be
  * edited directly, it makes more sense to use wxFormBuilder to edit and then export as XRC XML.
  * 
+ * Note that wxFormBuilder 3.1.59-beta seems to have a bug where adding a wrap width to a static
+ * text control is not reflected in the generated XRC. I am therefore setting it manually in
+ * the code. Another way to do this is to write a script to inject <wrap>460</wrap> into the
+ * xrc file, but it's easier to do it here.
+ *
  * @todo Tidy up the names of elements in the editor
  * @todo Attach some event handlers
  * @todo Can spinners be auto-sized without being too wide (currently using a hard-coded
