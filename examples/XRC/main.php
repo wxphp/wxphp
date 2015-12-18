@@ -49,7 +49,6 @@ class myApp extends wxApp
         );
         $textCtrl->Wrap(460);
 
-        $frame->Layout();
         $frame->Show();
         $frame->Fit();
     }
