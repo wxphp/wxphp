@@ -24,6 +24,7 @@
  * xrc file, but it's easier to do it here.
  *
  * @todo Tidy up the names of elements in the editor
+ * @todo Quit application when dialogue box is closed
  * @todo Attach some event handlers
  * @todo Can spinners be auto-sized without being too wide (currently using a hard-coded
  *      width at present)
