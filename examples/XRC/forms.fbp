@@ -82,7 +82,7 @@
                 <property name="growablerows"></property>
                 <property name="hgap">0</property>
                 <property name="minimum_size"></property>
-                <property name="name">fgSizer4</property>
+                <property name="name">sizerWholeForm</property>
                 <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
                 <property name="permission">none</property>
                 <property name="rows">6</property>
@@ -102,7 +102,7 @@
                         <property name="label">These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor.</property>
                         <property name="maximum_size">-1,-1</property>
                         <property name="minimum_size">-1,-1</property>
-                        <property name="name">m_staticText12</property>
+                        <property name="name">staticHelp</property>
                         <property name="permission">protected</property>
                         <property name="pos"></property>
                         <property name="size">480,-1</property>
@@ -150,7 +150,7 @@
                         <property name="id">wxID_ANY</property>
                         <property name="label">Colour</property>
                         <property name="minimum_size"></property>
-                        <property name="name">sbSizer1</property>
+                        <property name="name">sizerColour</property>
                         <property name="orient">wxVERTICAL</property>
                         <property name="permission">none</property>
                         <event name="OnUpdateUI"></event>
@@ -160,7 +160,7 @@
                             <property name="proportion">1</property>
                             <object class="wxBoxSizer" expanded="0">
                                 <property name="minimum_size"></property>
-                                <property name="name">bSizer9</property>
+                                <property name="name">bSizerColourInner</property>
                                 <property name="orient">wxHORIZONTAL</property>
                                 <property name="permission">none</property>
                                 <object class="sizeritem" expanded="1">
@@ -178,7 +178,7 @@
                                         <property name="label">Foreground:</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_staticText2</property>
+                                        <property name="name">staticColourForeground</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -233,7 +233,7 @@
                                         <property name="id">wxID_ANY</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">colPicker</property>
+                                        <property name="name">colPickerForeground</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -288,7 +288,7 @@
                                         <property name="label">Background:</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_staticText1</property>
+                                        <property name="name">staticColourBackground</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -343,7 +343,7 @@
                                         <property name="id">wxID_ANY</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_colourPicker3</property>
+                                        <property name="name">colPickerBackground</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -395,7 +395,7 @@
                         <property name="id">wxID_ANY</property>
                         <property name="label">Date/time</property>
                         <property name="minimum_size"></property>
-                        <property name="name">sbSizer2</property>
+                        <property name="name">sizerDate</property>
                         <property name="orient">wxVERTICAL</property>
                         <property name="permission">none</property>
                         <event name="OnUpdateUI"></event>
@@ -405,7 +405,7 @@
                             <property name="proportion">1</property>
                             <object class="wxBoxSizer" expanded="0">
                                 <property name="minimum_size"></property>
-                                <property name="name">bSizer4</property>
+                                <property name="name">sizerDateInner</property>
                                 <property name="orient">wxHORIZONTAL</property>
                                 <property name="permission">none</property>
                                 <object class="sizeritem" expanded="1">
@@ -423,7 +423,7 @@
                                         <property name="label">Date:</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_staticText21</property>
+                                        <property name="name">staticDate</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -477,7 +477,7 @@
                                         <property name="id">wxID_ANY</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_datePicker2</property>
+                                        <property name="name">datePicker</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -532,7 +532,7 @@
                                         <property name="label">Time:</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_staticText2111</property>
+                                        <property name="name">staticTime</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -589,7 +589,7 @@
                                         <property name="maximum_size">-1,-1</property>
                                         <property name="min">0</property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_spinCtrl1</property>
+                                        <property name="name">spinHours</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size">100,-1</property>
@@ -646,7 +646,7 @@
                                         <property name="label">:</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_staticText211</property>
+                                        <property name="name">staticTimeColon</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -703,7 +703,7 @@
                                         <property name="maximum_size">-1,-1</property>
                                         <property name="min">0</property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_spinCtrl2</property>
+                                        <property name="name">spinMinutes</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size">100,-1</property>
@@ -757,7 +757,7 @@
                         <property name="id">wxID_ANY</property>
                         <property name="label">Attachments</property>
                         <property name="minimum_size"></property>
-                        <property name="name">sbSizer4</property>
+                        <property name="name">sizerFiles</property>
                         <property name="orient">wxVERTICAL</property>
                         <property name="permission">none</property>
                         <event name="OnUpdateUI"></event>
@@ -776,7 +776,7 @@
                                 <property name="maximum_size"></property>
                                 <property name="message">Select a file</property>
                                 <property name="minimum_size"></property>
-                                <property name="name">m_filePicker2</property>
+                                <property name="name">filePicker</property>
                                 <property name="permission">protected</property>
                                 <property name="pos"></property>
                                 <property name="size"></property>
@@ -828,7 +828,7 @@
                         <property name="id">wxID_ANY</property>
                         <property name="label">Some radio buttons</property>
                         <property name="minimum_size"></property>
-                        <property name="name">sbSizer41</property>
+                        <property name="name">sizerRadio</property>
                         <property name="orient">wxVERTICAL</property>
                         <property name="permission">none</property>
                         <event name="OnUpdateUI"></event>
@@ -838,7 +838,7 @@
                             <property name="proportion">1</property>
                             <object class="wxBoxSizer" expanded="1">
                                 <property name="minimum_size"></property>
-                                <property name="name">bSizer5</property>
+                                <property name="name">sizerRadioInner</property>
                                 <property name="orient">wxHORIZONTAL</property>
                                 <property name="permission">none</property>
                                 <object class="sizeritem" expanded="1">
@@ -856,7 +856,7 @@
                                         <property name="label">Option 1</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_radioBtn1</property>
+                                        <property name="name">radioOption1</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -912,7 +912,7 @@
                                         <property name="label">Option 2</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_radioBtn2</property>
+                                        <property name="name">radioButton2</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -963,7 +963,7 @@
                     <property name="proportion">1</property>
                     <object class="wxBoxSizer" expanded="0">
                         <property name="minimum_size"></property>
-                        <property name="name">vertSizer</property>
+                        <property name="name">sizerActions</property>
                         <property name="orient">wxVERTICAL</property>
                         <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
@@ -991,7 +991,7 @@
                                         <property name="label">Cancel</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_button2</property>
+                                        <property name="name">actionCancel</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>
@@ -1047,7 +1047,7 @@
                                         <property name="label">OK</property>
                                         <property name="maximum_size"></property>
                                         <property name="minimum_size"></property>
-                                        <property name="name">m_button3</property>
+                                        <property name="name">actionOK</property>
                                         <property name="permission">protected</property>
                                         <property name="pos"></property>
                                         <property name="size"></property>

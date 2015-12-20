@@ -23,7 +23,6 @@
  * the code. Another way to do this is to write a script to inject <wrap>460</wrap> into the
  * xrc file, but it's easier to do it here.
  *
- * @todo Tidy up the names of elements in the editor
  * @todo Quit application when dialogue box is closed
  * @todo Attach some event handlers
  * @todo Can spinners be auto-sized without being too wide (currently using a hard-coded
@@ -50,7 +49,7 @@ class myApp extends wxApp
         // Re-wrap and re-fit the text control - this gets the correct amount of vertical
         // size for the wrapped text and its borders
         $textCtrl = wxDynamicCast(
-            $frame->FindWindow('m_staticText12'),
+            $frame->FindWindow('staticHelp'),
             "wxStaticText"
         );
         $textCtrl->Wrap(460);
