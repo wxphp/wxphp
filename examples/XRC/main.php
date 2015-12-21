@@ -23,7 +23,6 @@
  * the code. Another way to do this is to write a script to inject <wrap>460</wrap> into the
  * xrc file, but it's easier to do it here.
  *
- * @todo Quit application when dialogue box is closed
  * @todo Attach some event handlers
  * @todo Can spinners be auto-sized without being too wide (currently using a hard-coded
  *      width at present)
@@ -35,6 +34,26 @@ $app = new myApp();
 wxApp::SetInstance($app);
 wxEntry();
 
+/**
+ * Dialog windows don't seem to attract the "top level" window status that by default causes
+ * a WX application to quit automatically when they are closed. Accordingly we trap this event
+ * and exit manually
+ */
+class resourceDemoDialog extends wxDialog
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->Connect(wxEVT_CLOSE_WINDOW, array($this, "onWindowClose"));
+    }
+
+	public function onWindowClose(wxCloseEvent $event)
+	{
+        // Are there any wxWidgets tidy-up calls we need to make?
+        exit();
+    }
+}
+
 class myApp extends wxApp
 {
     public function OnInit()
@@ -43,7 +62,7 @@ class myApp extends wxApp
         $resource->InitAllHandlers();
         $resource->Load(__DIR__ . '/forms.xrc.xml');
         
-        $frame = new wxDialog();
+        $frame = new resourceDemoDialog();
         $resource->LoadDialog($frame, NULL, 'frmOne');
 
         // Re-wrap and re-fit the text control - this gets the correct amount of vertical
