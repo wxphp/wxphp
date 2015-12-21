@@ -23,11 +23,10 @@
  * the code. Another way to do this is to write a script to inject <wrap>460</wrap> into the
  * xrc file, but it's easier to do it here.
  *
- * @todo Attach some event handlers
- * @todo Can spinners be auto-sized without being too wide (currently using a hard-coded
- *      width at present)
+ * @todo Put in some more windows (a wxFrame perhaps)
  * @todo Put in some more controls e.g. tabs
- * @todo Put in some more windows
+ * @todo Can spinners be auto-sized without being too wide? (currently using a hard-coded
+ *      width at present)
  */
 
 $app = new myApp();
