@@ -67,11 +67,11 @@ class resourceDemoDialog extends wxDialog
         $message = null;
         if ($buttonCtrl->GetName() === self::ELMT_CANCEL)
         {
-            $message = "Clicked cancel";
+            $message = "Clicked cancel: this would normally close the dialogue without taking any action";
         }
         elseif ($buttonCtrl->GetName() === self::ELMT_OK)
         {
-            $message = "Clicked OK";
+            $message = "Clicked OK: this would normally close the dialogue and take the usual action (e.g. creating a diary entry)";
         }
 
         // If we have a message, let's see it
