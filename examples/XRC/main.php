@@ -55,8 +55,8 @@ class resourceDemoDialog extends wxDialog
         $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
     }
 
-	public function onWindowClose(wxCloseEvent $event)
-	{
+    public function onWindowClose(wxCloseEvent $event)
+    {
         // Are there any wxWidgets tidy-up calls we need to make?
         exit();
     }
