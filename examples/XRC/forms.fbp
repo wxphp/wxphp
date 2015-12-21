@@ -99,7 +99,7 @@
                         <property name="font"></property>
                         <property name="hidden">0</property>
                         <property name="id">wxID_ANY</property>
-                        <property name="label">These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor.</property>
+                        <property name="label">These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor. Attaching to events is demonstrated by the OK and Cancel action buttons at the bottom of the form.</property>
                         <property name="maximum_size">-1,-1</property>
                         <property name="minimum_size">-1,-1</property>
                         <property name="name">staticHelp</property>

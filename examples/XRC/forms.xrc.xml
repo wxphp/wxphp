@@ -17,7 +17,7 @@
 				<border>8</border>
 				<object class="wxStaticText" name="staticHelp">
 					<size>480,-1</size>
-					<label>These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor.</label>
+					<label>These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor. Attaching to events is demonstrated by the OK and Cancel action buttons at the bottom of the form.</label>
 				</object>
 			</object>
 			<object class="sizeritem">

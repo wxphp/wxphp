@@ -41,16 +41,44 @@ wxEntry();
  */
 class resourceDemoDialog extends wxDialog
 {
+    const ELMT_CANCEL = 'actionCancel';
+    const ELMT_OK = 'actionOK';
+
     public function __construct()
     {
         parent::__construct();
+
+        // Attach some GUI event handlers
         $this->Connect(wxEVT_CLOSE_WINDOW, array($this, "onWindowClose"));
+        $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
     }
 
 	public function onWindowClose(wxCloseEvent $event)
 	{
         // Are there any wxWidgets tidy-up calls we need to make?
         exit();
+    }
+
+    public function onButtonClick($event)
+    {
+        $buttonCtrl = wxDynamicCast($event->GetEventObject(), "wxButton");
+
+        // We use the element names to recognise them - easier than using IDs
+        $message = null;
+        if ($buttonCtrl->GetName() === self::ELMT_CANCEL)
+        {
+            $message = "Clicked cancel";
+        }
+        elseif ($buttonCtrl->GetName() === self::ELMT_OK)
+        {
+            $message = "Clicked OK";
+        }
+
+        // If we have a message, let's see it
+        if ($message)
+        {
+            wxMessageBox($message);
+        }
     }
 }
 
