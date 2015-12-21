@@ -25,6 +25,9 @@
  *
  * @todo Put in some more windows (a wxFrame perhaps)
  * @todo Put in some more controls e.g. tabs
+ * @todo I've noticed that the XRC format is similar to the FBP save output from wxFormBuilder -
+ *      would be interesting to write a script to auto-convert one to the other, perhaps using
+ *      inotify-tools to watch the source file and to keep the XRC in sync
  * @todo Can spinners be auto-sized without being too wide? (currently using a hard-coded
  *      width at present)
  */
