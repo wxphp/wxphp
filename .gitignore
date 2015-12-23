@@ -36,6 +36,9 @@ xml/*.xml
 xml/*.xsd
 xml/*.xslt
 
+# Don't commit autocomplete file
+tools/wxwidgets.php
+
 # Ignore editors
 /tools/nbproject/private/
 /nbproject/
