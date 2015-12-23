@@ -35,4 +35,8 @@ wxwidgets.lo
 xml/*.xml
 xml/*.xsd
 xml/*.xslt
+
+# Ignore editors
 /tools/nbproject/private/
+/nbproject/
+
