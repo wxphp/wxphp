@@ -15,9 +15,9 @@
 				<option>0</option>
 				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>8</border>
-				<object class="wxStaticText" name="m_staticText12">
+				<object class="wxStaticText" name="staticHelp">
 					<size>480,-1</size>
-					<label>These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor.</label>
+					<label>These controls don&apos;t really do anything - they&apos;re just to demonstrate loading windows and controls created using the wxFormEditor. Attaching to events is demonstrated by the OK and Cancel action buttons at the bottom of the form.</label>
 				</object>
 			</object>
 			<object class="sizeritem">
@@ -37,7 +37,7 @@
 								<option>0</option>
 								<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
 								<border>5</border>
-								<object class="wxStaticText" name="m_staticText2">
+								<object class="wxStaticText" name="staticColourForeground">
 									<label>Foreground:</label>
 								</object>
 							</object>
@@ -45,7 +45,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxColourPickerCtrl" name="colPicker">
+								<object class="wxColourPickerCtrl" name="colPickerForeground">
 									<value>#000000</value>
 									<style>wxCLRP_DEFAULT_STYLE</style>
 								</object>
@@ -54,7 +54,7 @@
 								<option>0</option>
 								<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
 								<border>5</border>
-								<object class="wxStaticText" name="m_staticText1">
+								<object class="wxStaticText" name="staticColourBackground">
 									<label>Background:</label>
 								</object>
 							</object>
@@ -62,7 +62,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxColourPickerCtrl" name="m_colourPicker3">
+								<object class="wxColourPickerCtrl" name="colPickerBackground">
 									<value>#000000</value>
 									<style>wxCLRP_DEFAULT_STYLE</style>
 								</object>
@@ -88,7 +88,7 @@
 								<option>0</option>
 								<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
 								<border>5</border>
-								<object class="wxStaticText" name="m_staticText21">
+								<object class="wxStaticText" name="staticDate">
 									<label>Date:</label>
 								</object>
 							</object>
@@ -96,7 +96,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxDatePickerCtrl" name="m_datePicker2">
+								<object class="wxDatePickerCtrl" name="datePicker">
 									<style>wxDP_DEFAULT|wxDP_SHOWCENTURY</style>
 								</object>
 							</object>
@@ -104,7 +104,7 @@
 								<option>0</option>
 								<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
 								<border>5</border>
-								<object class="wxStaticText" name="m_staticText2111">
+								<object class="wxStaticText" name="staticTime">
 									<label>Time:</label>
 								</object>
 							</object>
@@ -112,7 +112,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxSpinCtrl" name="m_spinCtrl1">
+								<object class="wxSpinCtrl" name="spinHours">
 									<style>wxSP_ARROW_KEYS</style>
 									<size>100,-1</size>
 									<value>0</value>
@@ -124,7 +124,7 @@
 								<option>0</option>
 								<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
 								<border>5</border>
-								<object class="wxStaticText" name="m_staticText211">
+								<object class="wxStaticText" name="staticTimeColon">
 									<label>:</label>
 								</object>
 							</object>
@@ -132,7 +132,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxSpinCtrl" name="m_spinCtrl2">
+								<object class="wxSpinCtrl" name="spinMinutes">
 									<style>wxSP_ARROW_KEYS</style>
 									<size>100,-1</size>
 									<value>0</value>
@@ -155,7 +155,7 @@
 						<option>0</option>
 						<flag>wxALL</flag>
 						<border>5</border>
-						<object class="wxFilePickerCtrl" name="m_filePicker2">
+						<object class="wxFilePickerCtrl" name="filePicker">
 							<value></value>
 							<message>Select a file</message>
 							<wildcard>*.*</wildcard>
@@ -181,7 +181,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxRadioButton" name="m_radioBtn1">
+								<object class="wxRadioButton" name="radioOption1">
 									<label>Option 1</label>
 									<value>0</value>
 								</object>
@@ -190,7 +190,7 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxRadioButton" name="m_radioBtn2">
+								<object class="wxRadioButton" name="radioButton2">
 									<label>Option 2</label>
 									<value>0</value>
 								</object>
@@ -215,7 +215,7 @@
 								<option>0</option>
 								<flag>wxRIGHT</flag>
 								<border>5</border>
-								<object class="wxButton" name="m_button2">
+								<object class="wxButton" name="actionCancel">
 									<label>Cancel</label>
 									<default>0</default>
 								</object>
@@ -224,7 +224,7 @@
 								<option>0</option>
 								<flag></flag>
 								<border>5</border>
-								<object class="wxButton" name="m_button3">
+								<object class="wxButton" name="actionOK">
 									<label>OK</label>
 									<default>0</default>
 								</object>

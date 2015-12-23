@@ -23,17 +23,66 @@
  * the code. Another way to do this is to write a script to inject <wrap>460</wrap> into the
  * xrc file, but it's easier to do it here.
  *
- * @todo Tidy up the names of elements in the editor
- * @todo Attach some event handlers
- * @todo Can spinners be auto-sized without being too wide (currently using a hard-coded
- *      width at present)
+ * @todo Put in some more windows (a wxFrame perhaps)
  * @todo Put in some more controls e.g. tabs
- * @todo Put in some more windows
+ * @todo I've noticed that the XRC format is similar to the FBP save output from wxFormBuilder -
+ *      would be interesting to write a script to auto-convert one to the other, perhaps using
+ *      inotify-tools to watch the source file and to keep the XRC in sync
+ * @todo Can spinners be auto-sized without being too wide? (currently using a hard-coded
+ *      width at present)
  */
 
 $app = new myApp();
 wxApp::SetInstance($app);
 wxEntry();
+
+/**
+ * Dialog windows don't seem to attract the "top level" window status that by default causes
+ * a WX application to quit automatically when they are closed. Accordingly we trap this event
+ * and exit manually
+ */
+class resourceDemoDialog extends wxDialog
+{
+    const ELMT_CANCEL = 'actionCancel';
+    const ELMT_OK = 'actionOK';
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Attach some GUI event handlers
+        $this->Connect(wxEVT_CLOSE_WINDOW, array($this, "onWindowClose"));
+        $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
+    }
+
+    public function onWindowClose(wxCloseEvent $event)
+    {
+        // Are there any wxWidgets tidy-up calls we need to make?
+        exit();
+    }
+
+    public function onButtonClick($event)
+    {
+        $buttonCtrl = wxDynamicCast($event->GetEventObject(), "wxButton");
+
+        // We use the element names to recognise them - easier than using IDs
+        $message = null;
+        if ($buttonCtrl->GetName() === self::ELMT_CANCEL)
+        {
+            $message = "Clicked cancel: this would normally close the dialogue without taking any action";
+        }
+        elseif ($buttonCtrl->GetName() === self::ELMT_OK)
+        {
+            $message = "Clicked OK: this would normally close the dialogue and take the usual action (e.g. creating a diary entry)";
+        }
+
+        // If we have a message, let's see it
+        if ($message)
+        {
+            wxMessageBox($message);
+        }
+    }
+}
 
 class myApp extends wxApp
 {
@@ -43,13 +92,13 @@ class myApp extends wxApp
         $resource->InitAllHandlers();
         $resource->Load(__DIR__ . '/forms.xrc.xml');
         
-        $frame = new wxDialog();
+        $frame = new resourceDemoDialog();
         $resource->LoadDialog($frame, NULL, 'frmOne');
 
         // Re-wrap and re-fit the text control - this gets the correct amount of vertical
         // size for the wrapped text and its borders
         $textCtrl = wxDynamicCast(
-            $frame->FindWindow('m_staticText12'),
+            $frame->FindWindow('staticHelp'),
             "wxStaticText"
         );
         $textCtrl->Wrap(460);
