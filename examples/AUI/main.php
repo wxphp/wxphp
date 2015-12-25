@@ -11,6 +11,7 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so AUI/main.php
  * 
+ * @todo Add a controller window
  * @todo Can we add some wxPane windows?
  * @todo Is there any control over what drags look like?
  */
