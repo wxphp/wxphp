@@ -79,4 +79,9 @@ class auiDemoDialog extends wxFrame
         $this->manager->UnInit();
         exit();
     }
+
+    public function getAuiManager()
+    {
+        return $this->manager;
+    }
 }

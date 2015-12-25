@@ -24,11 +24,52 @@ wxEntry();
 
 class controllerDialog extends wxDialog
 {
+    protected $managedWindow;
+
     public function Show()
     {
         $this->SetPosition(new wxPoint(200, 200));
 
         return parent::Show();
+    }
+
+    public function SetManagedWindow(auiDemoDialog $managedWindow)
+    {
+        $this->managedWindow = $managedWindow;
+
+        $this->Connect(wxEVT_COMMAND_CHECKBOX_CLICKED, array($this, "onTickboxChangeEvent"));
+    }
+
+    public function onTickboxChangeEvent(wxEvent $event)
+    {
+        $manager = $this->managedWindow->getAuiManager();
+        /*
+         * wxAUI_MGR_TRANSPARENT_DRAG
+         * wxAUI_MGR_TRANSPARENT_HINT
+         */
+        $manager->SetFlags($this->getManagerFlags());
+        $manager->Update();
+    }
+
+    protected function getManagerFlags()
+    {
+        $flags = 0;
+
+        $controls = [
+            'tickFloating' => wxAUI_MGR_ALLOW_FLOATING,
+            'tickActive' => wxAUI_MGR_ALLOW_ACTIVE_PANE,
+        ];
+        foreach ($controls as $controlName => $flag)
+        {
+            $ctrl = wxDynamicCast($this->FindWindow($controlName), "wxCheckBox");
+            /* @var $ctrl \wxCheckBox */
+            if ($ctrl->GetValue())
+            {
+                $flags += $flag;
+            }
+        }
+
+        return $flags;
     }
 }
 
@@ -40,12 +81,13 @@ class myApp extends wxApp
         $resource->InitAllHandlers();
         $resource->Load(__DIR__ . '/forms.xrc.xml');
 
-        $controllerFrame = new controllerDialog();
-        $resource->LoadDialog($controllerFrame, NULL, 'frmController');
-        $controllerFrame->Show();
-
         $frame = new auiDemoDialog();
         $frame->Show();
         $frame->Center();
+
+        $controllerFrame = new controllerDialog();
+        $resource->LoadDialog($controllerFrame, NULL, 'frmController');
+        $controllerFrame->SetManagedWindow($frame);
+        $controllerFrame->Show();
     }
 }
