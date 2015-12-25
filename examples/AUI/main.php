@@ -10,6 +10,9 @@
  * Run this using:
  *
  *     /usr/bin/php -d extension=wxwidgets.so AUI/main.php
+ * 
+ * @todo Can we add some wxPane windows?
+ * @todo Is there any control over what drags look like?
  */
 
 $app = new myApp();
@@ -26,11 +29,11 @@ class auiDemoDialog extends wxFrame
 
         $this->manager = new wxAuiManager($this);
 
-        // Try creating some text controls, and add them as AUI panes
-        for ($i = 0; $i <= 3; $i++)
+        // Let's create some text controls, and add them as AUI panes
+        for ($i = 0; $i <= 7; $i++)
         {
-            $textCtrl = new wxTextCtrl($this, -1, "Pane $i - sample text");
-            $this->manager->AddPane($textCtrl);
+            $textCtrl = new wxTextCtrl($this, -1, "Pane $i");
+            $this->manager->AddPane($textCtrl, $this->getPanePosition($i));
         }
 
         // This inits the manager system
@@ -39,6 +42,32 @@ class auiDemoDialog extends wxFrame
         $this->Connect(wxEVT_CLOSE_WINDOW, array($this, "onWindowClose"));
 
         $this->Layout();
+    }
+
+    /**
+     * Determine which position to add a new panel
+     *
+     * @param integer $index
+     * @return integer
+     */
+    protected function getPanePosition($index)
+    {
+        $pos = wxBOTTOM;
+
+        switch ($index % 4)
+        {
+            case 0:
+                $pos = wxLEFT;
+                break;
+            case 1:
+                $pos = wxTOP;
+                break;
+            case 2:
+                $pos = wxRIGHT;
+                break;
+        }
+
+        return $pos;
     }
 
     /**
