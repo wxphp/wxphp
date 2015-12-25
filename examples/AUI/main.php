@@ -22,10 +22,28 @@ $app = new myApp();
 wxApp::SetInstance($app);
 wxEntry();
 
+class controllerDialog extends wxDialog
+{
+    public function Show()
+    {
+        $this->SetPosition(new wxPoint(200, 200));
+
+        return parent::Show();
+    }
+}
+
 class myApp extends wxApp
 {
     public function OnInit()
     {
+        $resource = new wxXmlResource();
+        $resource->InitAllHandlers();
+        $resource->Load(__DIR__ . '/forms.xrc.xml');
+
+        $controllerFrame = new controllerDialog();
+        $resource->LoadDialog($controllerFrame, NULL, 'frmController');
+        $controllerFrame->Show();
+
         $frame = new auiDemoDialog();
         $frame->Show();
         $frame->Center();
