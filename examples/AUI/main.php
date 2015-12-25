@@ -36,6 +36,10 @@ class auiDemoDialog extends wxFrame
             $this->manager->AddPane($textCtrl, $this->getPanePosition($i));
         }
 
+        // Add a control in the centre
+        $centreControl = new wxTextCtrl($this, -1, "Centre control");
+        $this->manager->AddPane($centreControl, wxCENTRE);
+
         // This inits the manager system
         $this->manager->Update();
 
