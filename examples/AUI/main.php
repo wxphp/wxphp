@@ -56,18 +56,26 @@ class controllerDialog extends wxDialog
             'tickActive' => wxAUI_MGR_ALLOW_ACTIVE_PANE,
             'tickTransDrag' => wxAUI_MGR_TRANSPARENT_DRAG,
             'tickTransHint' => wxAUI_MGR_TRANSPARENT_HINT,
-            #'tickVenetianHint' => wxAUI_MGR_VENETIAN_BLINDS_HINT,
-            #'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
-            #'tickHintFade' => wxAUI_MGR_HINT_FADE,
-            #'noVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
+            'tickVenetianHint' => wxAUI_MGR_VENETIAN_BLINDS_HINT,
+            'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
+            'tickHintFade' => wxAUI_MGR_HINT_FADE,
+            'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
         ];
         foreach ($controls as $controlName => $flag)
         {
-            $ctrl = wxDynamicCast($this->FindWindow($controlName), "wxCheckBox");
-            /* @var $ctrl \wxCheckBox */
-            if ($ctrl->GetValue())
+            $window = $this->FindWindow($controlName);
+            if ($window)
             {
-                $flags += $flag;
+                $ctrl = wxDynamicCast($window, "wxCheckBox");
+                /* @var $ctrl \wxCheckBox */
+                if ($ctrl->GetValue())
+                {
+                    $flags += $flag;
+                }
+            }
+            else
+            {
+                trigger_error("Control not found", E_USER_NOTICE);
             }
         }
 
