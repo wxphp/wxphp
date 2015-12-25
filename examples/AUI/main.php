@@ -33,7 +33,9 @@ class auiDemoDialog extends wxFrame
         for ($i = 0; $i <= 7; $i++)
         {
             $textCtrl = new wxTextCtrl($this, -1, "Pane $i");
-            $this->manager->AddPane($textCtrl, $this->getPanePosition($i), "Caption $i");
+            $paneInfo = new wxAuiPaneInfo();
+            $this->setPaneSettings($paneInfo, $i);
+            $this->manager->AddPane($textCtrl, $paneInfo);
         }
 
         // Add a control in the centre
@@ -49,29 +51,30 @@ class auiDemoDialog extends wxFrame
     }
 
     /**
-     * Determine which position to add a new panel
+     * Determine individual panel settings
      *
+     * @param wxAuiPaneInfo $info
      * @param integer $index
-     * @return integer
      */
-    protected function getPanePosition($index)
+    protected function setPaneSettings(wxAuiPaneInfo $info, $index)
     {
-        $pos = wxBOTTOM;
-
+        // I couldn't get $info->Direction(wxRIGHT) to work, so am using the methods instead
         switch ($index % 4)
         {
             case 0:
-                $pos = wxLEFT;
+                $info->Left();
                 break;
             case 1:
-                $pos = wxTOP;
+                $info->Top();
                 break;
             case 2:
-                $pos = wxRIGHT;
+                $info->Right();
                 break;
+            default:
+                $info->Bottom();
         }
 
-        return $pos;
+        $info->Caption("Caption $index");
     }
 
     /**
