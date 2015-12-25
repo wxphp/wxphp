@@ -43,10 +43,6 @@ class controllerDialog extends wxDialog
     public function onTickboxChangeEvent(wxEvent $event)
     {
         $manager = $this->managedWindow->getAuiManager();
-        /*
-         * wxAUI_MGR_TRANSPARENT_DRAG
-         * wxAUI_MGR_TRANSPARENT_HINT
-         */
         $manager->SetFlags($this->getManagerFlags());
         $manager->Update();
     }
@@ -58,6 +54,12 @@ class controllerDialog extends wxDialog
         $controls = [
             'tickFloating' => wxAUI_MGR_ALLOW_FLOATING,
             'tickActive' => wxAUI_MGR_ALLOW_ACTIVE_PANE,
+            'tickTransDrag' => wxAUI_MGR_TRANSPARENT_DRAG,
+            'tickTransHint' => wxAUI_MGR_TRANSPARENT_HINT,
+            #'tickVenetianHint' => wxAUI_MGR_VENETIAN_BLINDS_HINT,
+            #'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
+            #'tickHintFade' => wxAUI_MGR_HINT_FADE,
+            #'noVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
         ];
         foreach ($controls as $controlName => $flag)
         {

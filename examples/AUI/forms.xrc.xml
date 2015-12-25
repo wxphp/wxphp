@@ -22,7 +22,7 @@
 						<flag>wxEXPAND</flag>
 						<border>5</border>
 						<object class="wxGridSizer">
-							<rows>2</rows>
+							<rows>4</rows>
 							<cols>2</cols>
 							<vgap>0</vgap>
 							<hgap>0</hgap>
@@ -32,7 +32,7 @@
 								<border>5</border>
 								<object class="wxCheckBox" name="tickFloating">
 									<label>Allow floating</label>
-									<checked>1</checked>
+									<checked>0</checked>
 								</object>
 							</object>
 							<object class="sizeritem">
@@ -62,63 +62,42 @@
 									<checked>0</checked>
 								</object>
 							</object>
-						</object>
-					</object>
-				</object>
-			</object>
-		</object>
-	</object>
-	<object class="wxDialog" name="frmControllerNew">
-		<style>wxDEFAULT_DIALOG_STYLE</style>
-		<title></title>
-		<object class="wxFlexGridSizer">
-			<rows>2</rows>
-			<cols>1</cols>
-			<vgap>0</vgap>
-			<hgap>0</hgap>
-			<growablecols></growablecols>
-			<growablerows></growablerows>
-			<object class="sizeritem">
-				<option>1</option>
-				<flag>wxEXPAND</flag>
-				<border>5</border>
-				<object class="wxBoxSizer">
-					<orient>wxHORIZONTAL</orient>
-					<object class="sizeritem">
-						<option>0</option>
-						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-						<border>5</border>
-						<object class="wxStaticText" name="staticPanesLabel">
-							<label>Pane:</label>
-						</object>
-					</object>
-					<object class="sizeritem">
-						<option>0</option>
-						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-						<border>5</border>
-						<object class="wxChoice" name="choicePanes">
-							<selection>0</selection>
-							<content>
-								<item>Pane 0</item>
-							</content>
-						</object>
-					</object>
-				</object>
-			</object>
-			<object class="sizeritem">
-				<option>1</option>
-				<flag>wxALL|wxEXPAND</flag>
-				<border>5</border>
-				<object class="wxStaticBoxSizer">
-					<orient>wxVERTICAL</orient>
-					<label>Pane options</label>
-					<object class="sizeritem">
-						<option>0</option>
-						<flag>wxALL</flag>
-						<border>5</border>
-						<object class="wxCheckBox" name="tickDemo">
-							<label>Tick me!</label>
-							<checked>0</checked>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="tickVenetianHint">
+									<label>Venetian blinds hint</label>
+									<checked>0</checked>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="tickRectangleHint">
+									<label>Rectangle hint</label>
+									<checked>0</checked>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="tickHintFade">
+									<label>Hint fade</label>
+									<checked>0</checked>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="tickNoVenetianHintFade">
+									<label>No venetian blinds hint fade</label>
+									<checked>0</checked>
+								</object>
+							</object>
 						</object>
 					</object>
 				</object>
