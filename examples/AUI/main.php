@@ -63,12 +63,17 @@ class auiDemoDialog extends wxFrame
         {
             case 0:
                 $info->Left();
+                $info->Gripper();
+                $info->GripperTop();
+                $info->CaptionVisible(false);
                 break;
             case 1:
                 $info->Top();
+                $info->PinButton();
                 break;
             case 2:
                 $info->Right();
+                $info->MaximizeButton();
                 break;
             default:
                 $info->Bottom();
