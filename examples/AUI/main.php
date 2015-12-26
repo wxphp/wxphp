@@ -171,6 +171,13 @@ class controllerDialog extends wxDialog
         }
     }
 
+    /**
+     * Returns an array to convert between flag const and element name
+     *
+     * Flags are detailed here: http://docs.wxwidgets.org/3.0/classwx_aui_manager.html
+     *
+     * @return array
+     */
     protected function getFlagNames()
     {
         return [
