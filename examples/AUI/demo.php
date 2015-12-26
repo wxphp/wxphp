@@ -80,6 +80,11 @@ class auiDemoDialog extends wxFrame
         exit();
     }
 
+    /**
+     * Gets the currently set AUI manager instance
+     *
+     * @return \wxAuiManager
+     */
     public function getAuiManager()
     {
         return $this->manager;

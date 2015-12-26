@@ -28,6 +28,10 @@ class controllerDialog extends wxDialog
 
     public function Show()
     {
+        // Set the tickboxes as per the GUI settings
+        $this->setManagerFlags();
+
+        // Move the window out of the way of the main one
         $this->SetPosition(new wxPoint(200, 200));
 
         return parent::Show();
@@ -47,7 +51,49 @@ class controllerDialog extends wxDialog
         $manager->Update();
     }
 
+    /**
+     * An interation method to get tickbox settings
+     *
+     * @return function
+     */
     protected function getManagerFlags()
+    {
+        return $this->flagIterator(function(\wxCheckBox $ctrl, $flag)
+            {
+                return $ctrl->GetValue() ? $flag : 0;
+            }
+        );
+    }
+
+    /**
+     * An interation method to set tickbox settings in the control panel
+     *
+     * @return function
+     */
+    protected function setManagerFlags()
+    {
+        $managedWindow = $this->getManagedWindow();
+
+        return $this->flagIterator(function(\wxCheckBox $ctrl, $flag) use ($managedWindow)
+            {
+                // Get the flags for the manager
+                $flags = $managedWindow->getAuiManager()->GetFlags();
+
+                // Reflect the bitwise flag in the tickbox setting
+                $ctrl->SetValue($flags & $flag);
+            }
+        );
+    }
+
+    /**
+     * General iteration function for getting and setting manager flags
+     *
+     * The flags var is only of use for getter callers (it is not mandatory to use it)
+     *
+     * @param function $function
+     * @return integer
+     */
+    protected function flagIterator($function)
     {
         $flags = 0;
 
@@ -57,11 +103,7 @@ class controllerDialog extends wxDialog
             if ($window)
             {
                 $ctrl = wxDynamicCast($window, "wxCheckBox");
-                /* @var $ctrl \wxCheckBox */
-                if ($ctrl->GetValue())
-                {
-                    $flags += $flag;
-                }
+                $flags += $function($ctrl, $flag);
             }
             else
             {
@@ -84,6 +126,16 @@ class controllerDialog extends wxDialog
             'tickHintFade' => wxAUI_MGR_HINT_FADE,
             'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
         ];
+    }
+
+    /**
+     * Gets the currently notified managed window
+     *
+     * @return \auiDemoDialog
+     */
+    public function getManagedWindow()
+    {
+        return $this->managedWindow;
     }
 }
 
