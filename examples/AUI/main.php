@@ -51,17 +51,7 @@ class controllerDialog extends wxDialog
     {
         $flags = 0;
 
-        $controls = [
-            'tickFloating' => wxAUI_MGR_ALLOW_FLOATING,
-            'tickActive' => wxAUI_MGR_ALLOW_ACTIVE_PANE,
-            'tickTransDrag' => wxAUI_MGR_TRANSPARENT_DRAG,
-            'tickTransHint' => wxAUI_MGR_TRANSPARENT_HINT,
-            'tickVenetianHint' => wxAUI_MGR_VENETIAN_BLINDS_HINT,
-            'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
-            'tickHintFade' => wxAUI_MGR_HINT_FADE,
-            'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
-        ];
-        foreach ($controls as $controlName => $flag)
+        foreach ($this->getFlagNames() as $controlName => $flag)
         {
             $window = $this->FindWindow($controlName);
             if ($window)
@@ -80,6 +70,20 @@ class controllerDialog extends wxDialog
         }
 
         return $flags;
+    }
+
+    protected function getFlagNames()
+    {
+        return [
+            'tickFloating' => wxAUI_MGR_ALLOW_FLOATING,
+            'tickActive' => wxAUI_MGR_ALLOW_ACTIVE_PANE,
+            'tickTransDrag' => wxAUI_MGR_TRANSPARENT_DRAG,
+            'tickTransHint' => wxAUI_MGR_TRANSPARENT_HINT,
+            'tickVenetianHint' => wxAUI_MGR_VENETIAN_BLINDS_HINT,
+            'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
+            'tickHintFade' => wxAUI_MGR_HINT_FADE,
+            'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
+        ];
     }
 }
 
