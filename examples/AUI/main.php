@@ -11,7 +11,6 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so AUI/main.php
  * 
- * @todo Use control disablement to indicate incompatible flag choices
  * @todo Can we add some wxPane windows?
  * @todo Is there any control over what drags look like?
  */
@@ -30,6 +29,7 @@ class controllerDialog extends wxDialog
     {
         // Set the tickboxes as per the GUI settings
         $this->setManagerFlags();
+        $this->resetEnablements();
 
         // Move the window out of the way of the main one
         $this->SetPosition(new wxPoint(200, 200));
@@ -46,8 +46,9 @@ class controllerDialog extends wxDialog
 
     public function onTickboxChangeEvent(wxEvent $event)
     {
-        $manager = $this->managedWindow->getAuiManager();
+        $manager = $this->getManagedWindow()->getAuiManager();
         $manager->SetFlags($this->getManagerFlags());
+        $this->resetEnablements();
         $manager->Update();
     }
 
@@ -112,6 +113,39 @@ class controllerDialog extends wxDialog
         }
 
         return $flags;
+    }
+
+    /**
+     * Enables/disables tick boxes depending on other values
+     *
+     * @todo Finish these off, the one below is one of many
+     * @todo Untick items that are disabled
+     */
+    protected function resetEnablements()
+    {
+        $flags = $this->getManagedWindow()->getAuiManager()->GetFlags();
+        $allowDrag = $flags & wxAUI_MGR_ALLOW_FLOATING;
+
+        // Allow dragging affects most flags
+        $this->setTickBoxEnabled('tickTransDrag', $allowDrag);
+    }
+
+    /**
+     * Enables or disables the tick box controls
+     *
+     * @param string $controlName
+     * @param boolean $enabled
+     */
+    protected function setTickBoxEnabled($controlName, $enabled)
+    {
+        // Find the control
+        $window = $this->FindWindow($controlName);
+        if ($window)
+        {
+            $ctrl = wxDynamicCast($window, "wxCheckBox");
+            /* @var $ctrl \wxCheckBox */
+            $enabled ? $ctrl->Enable() : $ctrl->Disable();
+        }
     }
 
     protected function getFlagNames()
