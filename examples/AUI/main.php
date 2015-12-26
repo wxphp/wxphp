@@ -29,7 +29,7 @@ class controllerDialog extends wxDialog
     {
         // Set the tickboxes as per the GUI settings
         $this->setManagerFlags();
-        $this->resetEnablements();
+        $this->resetEnablementsAndMutExChoices();
 
         // Move the window out of the way of the main one
         $this->SetPosition(new wxPoint(200, 200));
@@ -48,8 +48,9 @@ class controllerDialog extends wxDialog
     {
         $manager = $this->getManagedWindow()->getAuiManager();
         $manager->SetFlags($this->getManagerFlags());
-        $this->resetEnablements();
         $manager->Update();
+
+        $this->resetEnablementsAndMutExChoices($event);
     }
 
     /**
@@ -115,10 +116,14 @@ class controllerDialog extends wxDialog
         return $flags;
     }
 
+    protected function resetEnablementsAndMutExChoices(wxEvent $event = null)
+    {
+        $this->resetEnablements();
+        $this->resetMutExChoices($event);
+    }
+
     /**
      * Enables/disables tick boxes depending on other values
-     *
-     * @todo Finish these off, the one below is one of many
      */
     protected function resetEnablements()
     {
@@ -132,6 +137,14 @@ class controllerDialog extends wxDialog
         $this->setTickBoxEnabled('tickRectangleHint', $allowDrag);
         $this->setTickBoxEnabled('tickHintFade', $allowDrag);
         $this->setTickBoxEnabled('tickNoVenetianHintFade', $allowDrag);
+    }
+
+    /**
+     * Forced *Hint items to be mutually exclusive
+     */
+    protected function resetMutExChoices(wxEvent $event = null)
+    {
+        // @todo Finish this
     }
 
     /**
