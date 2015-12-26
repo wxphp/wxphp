@@ -46,10 +46,12 @@ class controllerDialog extends wxDialog
 
     public function onTickboxChangeEvent(wxEvent $event)
     {
+        // Reset the manager and redraw the controls
         $manager = $this->getManagedWindow()->getAuiManager();
         $manager->SetFlags($this->getManagerFlags());
         $manager->Update();
 
+        // Do this last so it takes new manager settings into account
         $this->resetEnablementsAndMutExChoices($event);
     }
 
@@ -119,7 +121,10 @@ class controllerDialog extends wxDialog
     protected function resetEnablementsAndMutExChoices(wxEvent $event = null)
     {
         $this->resetEnablements();
-        $this->resetMutExChoices($event);
+        if ($event)
+        {
+            $this->resetMutExChoices($event);
+        }
     }
 
     /**
@@ -142,9 +147,31 @@ class controllerDialog extends wxDialog
     /**
      * Forced *Hint items to be mutually exclusive
      */
-    protected function resetMutExChoices(wxEvent $event = null)
+    protected function resetMutExChoices(wxEvent $event)
     {
-        // @todo Finish this
+        // Is the control one of the affected mutually-exclusivev choices?
+        $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
+        /* @var $ctrl wxCheckBox */
+        $hintNames = ['tickTransHint', 'tickVenetianHint', 'tickRectangleHint'];
+        if (!in_array($ctrl->GetName(), $hintNames))
+        {
+            return;
+        }
+
+        // Only proceed if the control is ticked
+        if (!$ctrl->GetValue())
+        {
+            return;
+        }
+
+        // Deselect the others
+        foreach ($hintNames as $controlName)
+        {
+            if ($controlName != $ctrl->GetName())
+            {
+                $this->setTickBoxValue($controlName, false);
+            }
+        }
     }
 
     /**
@@ -168,6 +195,18 @@ class controllerDialog extends wxDialog
             {
                 $ctrl->SetValue(false);
             }
+        }
+    }
+
+    protected function setTickBoxValue($controlName, $ticked)
+    {
+        // Find the control
+        $window = $this->FindWindow($controlName);
+        if ($window)
+        {
+            $ctrl = wxDynamicCast($window, "wxCheckBox");
+            /* @var $ctrl \wxCheckBox */
+            $ctrl->SetValue($ticked);
         }
     }
 
