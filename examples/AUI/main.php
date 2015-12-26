@@ -119,7 +119,6 @@ class controllerDialog extends wxDialog
      * Enables/disables tick boxes depending on other values
      *
      * @todo Finish these off, the one below is one of many
-     * @todo Untick items that are disabled
      */
     protected function resetEnablements()
     {
@@ -150,6 +149,12 @@ class controllerDialog extends wxDialog
             $ctrl = wxDynamicCast($window, "wxCheckBox");
             /* @var $ctrl \wxCheckBox */
             $enabled ? $ctrl->Enable() : $ctrl->Disable();
+
+            // If the control is disabled, let's turn it off too
+            if (!$enabled)
+            {
+                $ctrl->SetValue(false);
+            }
         }
     }
 
