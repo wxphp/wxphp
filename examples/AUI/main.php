@@ -126,8 +126,13 @@ class controllerDialog extends wxDialog
         $flags = $this->getManagedWindow()->getAuiManager()->GetFlags();
         $allowDrag = $flags & wxAUI_MGR_ALLOW_FLOATING;
 
-        // Allow dragging affects most flags
+        // Allow dragging affects all flags except "allow active pane"
         $this->setTickBoxEnabled('tickTransDrag', $allowDrag);
+        $this->setTickBoxEnabled('tickTransHint', $allowDrag);
+        $this->setTickBoxEnabled('tickVenetianHint', $allowDrag);
+        $this->setTickBoxEnabled('tickRectangleHint', $allowDrag);
+        $this->setTickBoxEnabled('tickHintFade', $allowDrag);
+        $this->setTickBoxEnabled('tickNoVenetianHintFade', $allowDrag);
     }
 
     /**
