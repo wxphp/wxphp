@@ -182,6 +182,7 @@ class controllerDialog extends wxDialog
             'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
             'tickHintFade' => wxAUI_MGR_HINT_FADE,
             'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
+            'tickLiveResize' => wxAUI_MGR_LIVE_RESIZE,
         ];
     }
 

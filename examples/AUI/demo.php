@@ -12,7 +12,7 @@ class auiDemoDialog extends wxFrame
     {
         parent::__construct(null, wxID_ANY, "AUI demo", wxDefaultPosition, new wxSize(600, 500));
 
-        $this->manager = new wxAuiManager($this, wxAUI_MGR_DEFAULT + wxAUI_MGR_LIVE_RESIZE);
+        $this->manager = new wxAuiManager($this, wxAUI_MGR_DEFAULT);
 
         // Let's create some text controls, and add them as AUI panes
         for ($i = 0; $i <= 7; $i++)

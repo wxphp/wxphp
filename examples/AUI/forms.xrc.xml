@@ -22,7 +22,7 @@
 						<flag>wxEXPAND</flag>
 						<border>5</border>
 						<object class="wxGridSizer">
-							<rows>4</rows>
+							<rows>5</rows>
 							<cols>2</cols>
 							<vgap>0</vgap>
 							<hgap>0</hgap>
@@ -95,6 +95,15 @@
 								<border>5</border>
 								<object class="wxCheckBox" name="tickNoVenetianHintFade">
 									<label>No venetian blinds hint fade</label>
+									<checked>0</checked>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="tickLiveResize">
+									<label>Live resize</label>
 									<checked>0</checked>
 								</object>
 							</object>
