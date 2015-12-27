@@ -12,7 +12,7 @@
 			<growablerows></growablerows>
 			<object class="sizeritem">
 				<option>1</option>
-				<flag>wxBOTTOM|wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
+				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
@@ -109,6 +109,15 @@
 							</object>
 						</object>
 					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxButton" name="actionOpenAll">
+					<label>Open all panes</label>
+					<default>0</default>
 				</object>
 			</object>
 		</object>
