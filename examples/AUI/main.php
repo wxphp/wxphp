@@ -29,7 +29,9 @@ class controllerDialog extends wxDialog
     {
         // Set the tickboxes as per the GUI settings
         $this->setManagerFlags();
-        $this->resetEnablementsAndMutExChoices();
+
+        // We assume that mutexs are set up correctly to start off with
+        $this->resetEnablements();
 
         // Move the window out of the way of the main one
         $this->SetPosition(new wxPoint(200, 200));
@@ -46,13 +48,16 @@ class controllerDialog extends wxDialog
 
     public function onTickboxChangeEvent(wxEvent $event)
     {
+        // Handle mutexs choices first, so the flag value does not conflict
+        $this->resetMutExChoices($event);
+
         // Reset the manager and redraw the controls
         $manager = $this->getManagedWindow()->getAuiManager();
         $manager->SetFlags($this->getManagerFlags());
         $manager->Update();
 
         // Do this last so it takes new manager settings into account
-        $this->resetEnablementsAndMutExChoices($event);
+        $this->resetEnablements();
     }
 
     /**
@@ -116,15 +121,6 @@ class controllerDialog extends wxDialog
         }
 
         return $flags;
-    }
-
-    protected function resetEnablementsAndMutExChoices(wxEvent $event = null)
-    {
-        $this->resetEnablements();
-        if ($event)
-        {
-            $this->resetMutExChoices($event);
-        }
     }
 
     /**
