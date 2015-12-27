@@ -64,6 +64,10 @@ class auiDemoDialog extends wxFrame
                 $info->Bottom();
         }
 
+        // Allow panes to be reopened again
+        $info->DestroyOnClose(false);
+        $info->Name('auiPane' . $index);
+
         $info->Caption("Caption $index");
     }
 

@@ -44,6 +44,7 @@ class controllerDialog extends wxDialog
         $this->managedWindow = $managedWindow;
 
         $this->Connect(wxEVT_COMMAND_CHECKBOX_CLICKED, array($this, "onTickboxChangeEvent"));
+        $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
     }
 
     public function onTickboxChangeEvent(wxEvent $event)
@@ -168,6 +169,19 @@ class controllerDialog extends wxDialog
                 $this->setTickBoxValue($controlName, false);
             }
         }
+    }
+
+    public function onButtonClick(wxEvent $event)
+    {
+        // Show all available panes
+        for($i = 0; $i <= 7; $i++)
+        {
+            $info = $this->getManagedWindow()->getAuiManager()->GetPane('auiPane' . $i);
+            $info->Show();
+        }
+
+        // Redraw the managed window
+        $this->getManagedWindow()->getAuiManager()->Update();
     }
 
     /**
