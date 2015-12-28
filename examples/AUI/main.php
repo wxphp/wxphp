@@ -146,7 +146,7 @@ class controllerDialog extends wxDialog
      */
     protected function resetMutExChoices(wxEvent $event)
     {
-        // Is the control one of the affected mutually-exclusivev choices?
+        // Is the control one of the affected mutually-exclusive choices?
         $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
         /* @var $ctrl wxCheckBox */
         $hintNames = ['tickTransHint', 'tickVenetianHint', 'tickRectangleHint'];
