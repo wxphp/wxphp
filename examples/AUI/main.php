@@ -30,7 +30,7 @@ class controllerDialog extends wxDialog
         // Set the tickboxes as per the GUI settings
         $this->setManagerFlags();
 
-        // We assume that mutexs are set up correctly to start off with
+        // Enable/disable tickboxes as appropriate
         $this->resetEnablements();
 
         // Move the window out of the way of the main one
