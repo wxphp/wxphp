@@ -12,7 +12,7 @@
 			<growablerows></growablerows>
 			<object class="sizeritem">
 				<option>1</option>
-				<flag>wxBOTTOM|wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
+				<flag>wxEXPAND|wxLEFT|wxRIGHT|wxTOP</flag>
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
@@ -22,7 +22,7 @@
 						<flag>wxEXPAND</flag>
 						<border>5</border>
 						<object class="wxGridSizer">
-							<rows>4</rows>
+							<rows>5</rows>
 							<cols>2</cols>
 							<vgap>0</vgap>
 							<hgap>0</hgap>
@@ -98,8 +98,26 @@
 									<checked>0</checked>
 								</object>
 							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="tickLiveResize">
+									<label>Live resize</label>
+									<checked>0</checked>
+								</object>
+							</object>
 						</object>
 					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxButton" name="actionOpenAll">
+					<label>Open all panes</label>
+					<default>0</default>
 				</object>
 			</object>
 		</object>

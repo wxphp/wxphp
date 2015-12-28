@@ -11,7 +11,6 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so AUI/main.php
  * 
- * @todo Use control disablement to indicate incompatible flag choices
  * @todo Can we add some wxPane windows?
  * @todo Is there any control over what drags look like?
  */
@@ -31,6 +30,9 @@ class controllerDialog extends wxDialog
         // Set the tickboxes as per the GUI settings
         $this->setManagerFlags();
 
+        // Enable/disable tickboxes as appropriate
+        $this->resetEnablements();
+
         // Move the window out of the way of the main one
         $this->SetPosition(new wxPoint(200, 200));
 
@@ -42,13 +44,21 @@ class controllerDialog extends wxDialog
         $this->managedWindow = $managedWindow;
 
         $this->Connect(wxEVT_COMMAND_CHECKBOX_CLICKED, array($this, "onTickboxChangeEvent"));
+        $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
     }
 
     public function onTickboxChangeEvent(wxEvent $event)
     {
-        $manager = $this->managedWindow->getAuiManager();
+        // Handle mutexs choices first, so the flag value does not conflict
+        $this->resetMutExChoices($event);
+
+        // Reset the manager and redraw the controls
+        $manager = $this->getManagedWindow()->getAuiManager();
         $manager->SetFlags($this->getManagerFlags());
         $manager->Update();
+
+        // Do this last so it takes new manager settings into account
+        $this->resetEnablements();
     }
 
     /**
@@ -114,6 +124,109 @@ class controllerDialog extends wxDialog
         return $flags;
     }
 
+    /**
+     * Enables/disables tick boxes depending on other values
+     */
+    protected function resetEnablements()
+    {
+        $flags = $this->getManagedWindow()->getAuiManager()->GetFlags();
+        $allowDrag = $flags & wxAUI_MGR_ALLOW_FLOATING;
+
+        // Allow dragging affects all flags except "allow active pane"
+        $this->setTickBoxEnabled('tickTransDrag', $allowDrag);
+        $this->setTickBoxEnabled('tickTransHint', $allowDrag);
+        $this->setTickBoxEnabled('tickVenetianHint', $allowDrag);
+        $this->setTickBoxEnabled('tickRectangleHint', $allowDrag);
+        $this->setTickBoxEnabled('tickHintFade', $allowDrag);
+        $this->setTickBoxEnabled('tickNoVenetianHintFade', $allowDrag);
+    }
+
+    /**
+     * Forced *Hint items to be mutually exclusive
+     */
+    protected function resetMutExChoices(wxEvent $event)
+    {
+        // Is the control one of the affected mutually-exclusive choices?
+        $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
+        /* @var $ctrl wxCheckBox */
+        $hintNames = ['tickTransHint', 'tickVenetianHint', 'tickRectangleHint'];
+        if (!in_array($ctrl->GetName(), $hintNames))
+        {
+            return;
+        }
+
+        // Only proceed if the control is ticked
+        if (!$ctrl->GetValue())
+        {
+            return;
+        }
+
+        // Deselect the others
+        foreach ($hintNames as $controlName)
+        {
+            if ($controlName != $ctrl->GetName())
+            {
+                $this->setTickBoxValue($controlName, false);
+            }
+        }
+    }
+
+    public function onButtonClick(wxEvent $event)
+    {
+        // Show all available panes
+        for($i = 0; $i <= 7; $i++)
+        {
+            $info = $this->getManagedWindow()->getAuiManager()->GetPane('auiPane' . $i);
+            $info->Show();
+        }
+
+        // Redraw the managed window
+        $this->getManagedWindow()->getAuiManager()->Update();
+    }
+
+    /**
+     * Enables or disables the tick box controls
+     *
+     * @param string $controlName
+     * @param boolean $enabled
+     */
+    protected function setTickBoxEnabled($controlName, $enabled)
+    {
+        // Find the control
+        $window = $this->FindWindow($controlName);
+        if ($window)
+        {
+            $ctrl = wxDynamicCast($window, "wxCheckBox");
+            /* @var $ctrl \wxCheckBox */
+            $enabled ? $ctrl->Enable() : $ctrl->Disable();
+
+            // If the control is disabled, let's turn it off too
+            if (!$enabled)
+            {
+                $ctrl->SetValue(false);
+            }
+        }
+    }
+
+    protected function setTickBoxValue($controlName, $ticked)
+    {
+        // Find the control
+        $window = $this->FindWindow($controlName);
+        if ($window)
+        {
+            $ctrl = wxDynamicCast($window, "wxCheckBox");
+            /* @var $ctrl \wxCheckBox */
+            $ctrl->SetValue($ticked);
+        }
+    }
+
+    /**
+     * Returns an array to convert between flag const and element name
+     *
+     * Flags are detailed here: http://docs.wxwidgets.org/3.0/classwx_aui_manager.html
+     *
+     * @return array
+     */
     protected function getFlagNames()
     {
         return [
@@ -125,6 +238,7 @@ class controllerDialog extends wxDialog
             'tickRectangleHint' => wxAUI_MGR_RECTANGLE_HINT,
             'tickHintFade' => wxAUI_MGR_HINT_FADE,
             'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
+            'tickLiveResize' => wxAUI_MGR_LIVE_RESIZE,
         ];
     }
 
