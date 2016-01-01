@@ -25,6 +25,13 @@ class controllerDialog extends wxDialog
 {
     protected $managedWindow;
 
+    // Frame captions are read from the window and stored here
+    protected $captions = [
+        'sizerPanesDockingOptions' => '',
+        'sizerPanesButtonOptions' => '',
+        'sizerPanesOtherOptions' => '',
+    ];
+
     public function Show()
     {
         // Set the tickboxes as per the GUI settings
@@ -36,9 +43,23 @@ class controllerDialog extends wxDialog
         // Move the window out of the way of the main one
         $this->SetPosition(new wxPoint(200, 200));
 
+        // Set up event handlers
+        $this->Connect(wxEVT_COMMAND_SPINCTRL_UPDATED, array($this, "onSpinnerChangeEvent"));
+
+        // Read and set the default pane captions
+        $this->captureFrameCaptions();
+        $this->setCurrentPane();
+
         return parent::Show();
     }
 
+    /**
+     * Set the window to manage through AUI
+     *
+     * @todo Move the event handler inits to Show()?
+     *
+     * @param auiDemoDialog $managedWindow
+     */
     public function SetManagedWindow(auiDemoDialog $managedWindow)
     {
         $this->managedWindow = $managedWindow;
@@ -182,6 +203,67 @@ class controllerDialog extends wxDialog
 
         // Redraw the managed window
         $this->getManagedWindow()->getAuiManager()->Update();
+    }
+
+    public function onSpinnerChangeEvent(wxEvent $event)
+    {
+        $ctrl = wxDynamicCast($event->GetEventObject(), "wxSpinCtrl");
+        /* @var $ctrl wxSpinCtrl */
+        $this->setCurrentPane($ctrl->GetValue());
+    }
+
+    protected function captureFrameCaptions()
+    {
+        foreach ($this->captions as $controlName => $dummyValue)
+        {
+            // @todo I don't think we can find sizers this way
+            $obj = $this->FindWindow($controlName);
+            if ($obj)
+            {
+                $ctrl = wxDynamicCast($obj, "wxStaticBoxSizer");
+                if ($ctrl)
+                {
+                    /* @var $ctrl wxStaticBoxSizer */
+                    echo $ctrl->GetStaticBox()->GetLabel();
+                }
+                else
+                {
+                    echo "Not found again\n";
+                }
+            }
+            else
+            {
+                echo "$controlName not found\n";
+            }
+        }
+    }
+
+    protected function getSizerByName($controlName, wxSizer $sizer = null)
+    {
+        if (!$sizer)
+        {
+            $sizer = $this->GetSizer();
+        }
+
+        // $sizer->GetItemCount()
+        for ($i = 0; $i < 100; $i++)
+        {
+            $item = $sizer->GetItemById($i, true);
+            if ($item)
+            {
+                echo "Found ";
+            }
+        }
+    }
+
+    protected function setCurrentPane($pane = 0)
+    {
+        $caption = [
+            'sizerPanesDockingOptions' => '',
+            'sizerPanesButtonOptions' => '',
+            'sizerPanesButtonOptions' => '',
+        ];
+        echo "Set current pane: $pane\n";
     }
 
     /**
