@@ -278,14 +278,26 @@ class controllerDialog extends wxDialog
         return $sizersFound;
     }
 
+    /**
+     * Resets the pane controls to reflect the specified pane number
+     *
+     * @todo Still need to modify the tickbox settings
+     *
+     * @param integer $pane
+     */
     protected function setCurrentPane($pane = 0)
     {
-        $caption = [
-            'sizerPanesDockingOptions' => '',
-            'sizerPanesButtonOptions' => '',
-            'sizerPanesButtonOptions' => '',
-        ];
-        echo "Set current pane: $pane\n";
+        foreach ($this->captions as $controlName => $caption)
+        {
+            $sizers = $this->getSizerContainersByElementName($controlName);
+            if (count($sizers) == 3)
+            {
+                $sizer = wxDynamicCast($sizers[1], "wxStaticBoxSizer");
+                /* @var $sizer wxStaticBoxSizer */
+                // "X" is the placeholder for the pane number
+                $sizer->GetStaticBox()->SetLabel(str_replace('X', $pane, $caption));
+            }
+        }
     }
 
     /**
