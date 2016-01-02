@@ -214,7 +214,7 @@ class controllerDialog extends wxDialog
 
     protected function captureFrameCaptions()
     {
-        foreach ($this->captions as $controlName => $dummyValue)
+        foreach (array_keys($this->captions) as $controlName)
         {
             $sizers = $this->getSizerContainersByElementName($controlName);
             if (count($sizers) == 3)
