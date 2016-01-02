@@ -750,7 +750,7 @@
                     <property name="proportion">1</property>
                     <object class="wxStaticBoxSizer" expanded="1">
                         <property name="id">wxID_ANY</property>
-                        <property name="label">Docking for pane 0</property>
+                        <property name="label">Docking for pane X</property>
                         <property name="minimum_size"></property>
                         <property name="name">sizerPanesDockingOptions</property>
                         <property name="orient">wxVERTICAL</property>
@@ -1062,7 +1062,7 @@
                     <property name="proportion">1</property>
                     <object class="wxStaticBoxSizer" expanded="1">
                         <property name="id">wxID_ANY</property>
-                        <property name="label">Buttons for pane 0</property>
+                        <property name="label">Buttons for pane X</property>
                         <property name="minimum_size"></property>
                         <property name="name">sizerPanesButtonOptions</property>
                         <property name="orient">wxVERTICAL</property>
@@ -1374,7 +1374,7 @@
                     <property name="proportion">1</property>
                     <object class="wxStaticBoxSizer" expanded="1">
                         <property name="id">wxID_ANY</property>
-                        <property name="label">Other options for pane 0</property>
+                        <property name="label">Other options for pane X</property>
                         <property name="minimum_size"></property>
                         <property name="name">sizerPanesOtherOptions</property>
                         <property name="orient">wxVERTICAL</property>

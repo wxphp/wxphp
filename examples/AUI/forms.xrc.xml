@@ -144,7 +144,7 @@
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
-					<label>Docking for pane 0</label>
+					<label>Docking for pane X</label>
 					<object class="sizeritem">
 						<option>1</option>
 						<flag>wxEXPAND</flag>
@@ -211,7 +211,7 @@
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
-					<label>Buttons for pane 0</label>
+					<label>Buttons for pane X</label>
 					<object class="sizeritem">
 						<option>1</option>
 						<flag>wxEXPAND</flag>
@@ -278,7 +278,7 @@
 				<border>5</border>
 				<object class="wxStaticBoxSizer">
 					<orient>wxVERTICAL</orient>
-					<label>Other options for pane 0</label>
+					<label>Other options for pane X</label>
 					<object class="sizeritem">
 						<option>1</option>
 						<flag>wxEXPAND</flag>
