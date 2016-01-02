@@ -27,9 +27,9 @@ class controllerDialog extends wxDialog
 
     // Frame captions are read from the window and stored here
     protected $captions = [
-        'sizerPanesDockingOptions' => '',
-        'sizerPanesButtonOptions' => '',
-        'sizerPanesOtherOptions' => '',
+        'tickDockable' => '',
+#        'tickButtonClose' => '',
+#        'tickFloatable' => '',
     ];
 
     public function Show()
@@ -216,44 +216,86 @@ class controllerDialog extends wxDialog
     {
         foreach ($this->captions as $controlName => $dummyValue)
         {
-            // @todo I don't think we can find sizers this way
-            $obj = $this->FindWindow($controlName);
-            if ($obj)
-            {
-                $ctrl = wxDynamicCast($obj, "wxStaticBoxSizer");
-                if ($ctrl)
-                {
-                    /* @var $ctrl wxStaticBoxSizer */
-                    echo $ctrl->GetStaticBox()->GetLabel();
-                }
-                else
-                {
-                    echo "Not found again\n";
-                }
-            }
-            else
-            {
-                echo "$controlName not found\n";
-            }
+            $sizers = $this->getSizerContainersByElementName($controlName);
+            echo "Found " . count($sizers) . " levels\n";
+//            $obj = $this->FindWindow($controlName);
+//            if ($obj)
+//            {
+//                // Go up the sizer tree until we get a wxStaticBoxSizer
+//                $sizer = $obj->GetContainingSizer();
+//                $sizer = $sizer->GetContainingSizer();
+//
+//                if ($sizer)
+//                {
+//                    /* @var $sizer wxStaticBoxSizer */
+//                    echo $sizer->GetStaticBox()->GetLabel();
+//                }
+//                else
+//                {
+//                    echo "Not found again\n";
+//                }
+//            }
+//            else
+//            {
+//                echo "$controlName not found\n";
+//            }
         }
     }
 
-    protected function getSizerByName($controlName, wxSizer $sizer = null)
+    /**
+     * Fetches the sizer ancestors that contain a named element
+     *
+     * @todo Would be good to set the correct type here, so we can detect the staticboxsizer
+     */
+    protected function getSizerContainersByElementName($controlName, array $sizers = [], array $sizersFound = [])
     {
-        if (!$sizer)
+        // If no sizers have been passed, this is the first call - so get the sizer for the
+        // whole window as root
+        if (!$sizers)
         {
-            $sizer = $this->GetSizer();
+            $sizers[] = $this->GetSizer();
         }
 
-        // $sizer->GetItemCount()
-        for ($i = 0; $i < 100; $i++)
+        // The current sizer is the last one
+        $sizer = end($sizers);
+
+        for ($i = 0; $i < $sizer->GetItemCount(); $i++)
         {
-            $item = $sizer->GetItemById($i, true);
+            /* @var $item wxSizerItem */
+            $item = $sizer->GetItem($i);
             if ($item)
             {
-                echo "Found ";
+                if ($item->IsSizer())
+                {
+                    #echo str_repeat('  ', count($sizers));
+                    #echo "Sizer\n";
+                    // Recursively call self to dig into a child sizer
+                    $theseSizers = $this->getSizerContainersByElementName(
+                        $controlName,
+                        array_merge($sizers, [$item->GetSizer()]),
+                        $sizersFound
+                    );
+                    if ($theseSizers)
+                    {
+                        $sizersFound = $theseSizers;
+                    }
+                }
+                elseif ($item->IsWindow())
+                {
+                    #echo str_repeat('  ', count($sizers));
+                    #echo "Name: " . $item->GetWindow()->GetName() . "\n";
+                    if ($item->GetWindow()->GetName() === $controlName)
+                    {
+                        $sizersFound = $sizers;
+                        break;
+                    }
+                }
             }
         }
+
+        #echo "Has " . count($sizers) . " levels\n";
+
+        return $sizersFound;
     }
 
     protected function setCurrentPane($pane = 0)
