@@ -70,6 +70,28 @@ class controllerDialog extends wxDialog
 
     public function onTickboxChangeEvent(wxEvent $event)
     {
+        // Get the control names for the manager and the pane tickboxes
+        $managerControlNames = array_keys($this->getFlagNames());
+
+        // Has a manager tickbox been clicked?
+        $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
+        if (in_array($ctrl->GetName(), $managerControlNames))
+        {
+            $this->onManagerTickBoxChange($event);
+        }
+        // @todo Has a pane tickbox been clicked?
+        elseif (true)
+        {
+        }
+        // This should not happen
+        else
+        {
+            trigger_error("Unexpected tickbox clicked", E_USER_WARNING);
+        }
+    }
+
+    public function onManagerTickBoxChange(wxEvent $event)
+    {
         // Handle mutexs choices first, so the flag value does not conflict
         $this->resetMutExChoices($event);
 
@@ -311,7 +333,25 @@ class controllerDialog extends wxDialog
      */
     protected function setPaneTickBoxValues($pane)
     {
-        // @todo This code needs writing
+        // Read the settings for the specified pane
+        $paneInfo = $this->getManagedWindow()->getPaneSettings('auiPane' . $pane);
+
+        // @todo Use these methods to set the tickboxes
+        $paneInfo->IsDockable();
+        $paneInfo->IsLeftDockable();
+        $paneInfo->IsTopDockable();
+        $paneInfo->IsRightDockable();
+        $paneInfo->IsBottomDockable();
+
+        $paneInfo->HasCloseButton();
+        $paneInfo->HasMaximizeButton();
+        $paneInfo->HasMinimizeButton();
+        $paneInfo->HasPinButton();
+
+        $paneInfo->IsFloatable();
+        $paneInfo->IsFixed();
+        $paneInfo->HasGripper();
+        $paneInfo->HasGripperTop();
     }
 
     /**
@@ -354,6 +394,8 @@ class controllerDialog extends wxDialog
      * Returns an array to convert between flag const and element name
      *
      * Flags are detailed here: http://docs.wxwidgets.org/3.0/classwx_aui_manager.html
+     *
+     * @todo Change getFlagNames to getManagerFlagNames
      *
      * @return array
      */

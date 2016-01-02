@@ -71,6 +71,11 @@ class auiDemoDialog extends wxFrame
         $info->Caption("Caption $index");
     }
 
+    public function getPaneSettings($name)
+    {
+        return $this->getAuiManager()->GetPane($name);
+    }
+
     /**
      * Shuts down the AUI manager before the frame throws away references
      * 
