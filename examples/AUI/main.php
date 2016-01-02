@@ -336,23 +336,12 @@ class controllerDialog extends wxDialog
         // Read the settings for the specified pane
         $paneInfo = $this->getManagedWindow()->getPaneSettings('auiPane' . $pane);
 
-        // @todo Use these methods to set the tickboxes
-        // @todo Use getPaneMethods to implement the reading
-        $paneInfo->IsDockable();
-        $paneInfo->IsLeftDockable();
-        $paneInfo->IsTopDockable();
-        $paneInfo->IsRightDockable();
-        $paneInfo->IsBottomDockable();
-
-        $paneInfo->HasCloseButton();
-        $paneInfo->HasPinButton();
-        $paneInfo->HasMaximizeButton();
-        $paneInfo->HasMinimizeButton();
-
-        $paneInfo->IsFloatable();
-        $paneInfo->IsFixed();
-        $paneInfo->HasGripper();
-        $paneInfo->HasGripperTop();
+        // Use these methods to set the tickbox values
+        foreach ($this->getPaneMethods() as $controlName => $methodName)
+        {
+            $boolean = $paneInfo->$methodName();
+            $this->setTickBoxValue($controlName, $boolean);
+        }
     }
 
     /**
