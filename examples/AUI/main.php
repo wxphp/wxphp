@@ -28,8 +28,8 @@ class controllerDialog extends wxDialog
     // Frame captions are read from the window and stored here
     protected $captions = [
         'tickDockable' => '',
-#        'tickButtonClose' => '',
-#        'tickFloatable' => '',
+        'tickButtonClose' => '',
+        'tickFloatable' => '',
     ];
 
     public function Show()
@@ -217,28 +217,14 @@ class controllerDialog extends wxDialog
         foreach ($this->captions as $controlName => $dummyValue)
         {
             $sizers = $this->getSizerContainersByElementName($controlName);
-            echo "Found " . count($sizers) . " levels\n";
-//            $obj = $this->FindWindow($controlName);
-//            if ($obj)
-//            {
-//                // Go up the sizer tree until we get a wxStaticBoxSizer
-//                $sizer = $obj->GetContainingSizer();
-//                $sizer = $sizer->GetContainingSizer();
-//
-//                if ($sizer)
-//                {
-//                    /* @var $sizer wxStaticBoxSizer */
-//                    echo $sizer->GetStaticBox()->GetLabel();
-//                }
-//                else
-//                {
-//                    echo "Not found again\n";
-//                }
-//            }
-//            else
-//            {
-//                echo "$controlName not found\n";
-//            }
+            if (count($sizers) == 3)
+            {
+                // We know the static box sizer is the penultimate sizer, so we get the 1st
+                // (middle) not the 2nd (last) entry
+                $sizer = wxDynamicCast($sizers[1], "wxStaticBoxSizer");
+                /* @var $sizer wxStaticBoxSizer */
+                $this->captions[$controlName] = $sizer->GetStaticBox()->GetLabel();
+            }
         }
     }
 
