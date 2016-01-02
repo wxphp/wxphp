@@ -281,11 +281,15 @@ class controllerDialog extends wxDialog
     /**
      * Resets the pane controls to reflect the specified pane number
      *
-     * @todo Still need to modify the tickbox settings
-     *
      * @param integer $pane
      */
     protected function setCurrentPane($pane = 0)
+    {
+        $this->setPaneLabels($pane);
+        $this->setPaneTickBoxValues($pane);
+    }
+
+    protected function setPaneLabels($pane)
     {
         foreach ($this->captions as $controlName => $caption)
         {
@@ -298,6 +302,16 @@ class controllerDialog extends wxDialog
                 $sizer->GetStaticBox()->SetLabel(str_replace('X', $pane, $caption));
             }
         }
+    }
+
+    /**
+     * Resets the pane tick boxes for the given pane
+     *
+     * @param integer $pane
+     */
+    protected function setPaneTickBoxValues($pane)
+    {
+        // @todo This code needs writing
     }
 
     /**
