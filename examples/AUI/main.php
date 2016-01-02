@@ -267,8 +267,6 @@ class controllerDialog extends wxDialog
             {
                 if ($item->IsSizer())
                 {
-                    #echo str_repeat('  ', count($sizers));
-                    #echo "Sizer\n";
                     // Recursively call self to dig into a child sizer
                     $theseSizers = $this->getSizerContainersByElementName(
                         $controlName,
@@ -282,8 +280,6 @@ class controllerDialog extends wxDialog
                 }
                 elseif ($item->IsWindow())
                 {
-                    #echo str_repeat('  ', count($sizers));
-                    #echo "Name: " . $item->GetWindow()->GetName() . "\n";
                     if ($item->GetWindow()->GetName() === $controlName)
                     {
                         $sizersFound = $sizers;
@@ -292,8 +288,6 @@ class controllerDialog extends wxDialog
                 }
             }
         }
-
-        #echo "Has " . count($sizers) . " levels\n";
 
         return $sizersFound;
     }
