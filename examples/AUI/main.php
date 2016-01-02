@@ -337,6 +337,7 @@ class controllerDialog extends wxDialog
         $paneInfo = $this->getManagedWindow()->getPaneSettings('auiPane' . $pane);
 
         // @todo Use these methods to set the tickboxes
+        // @todo Use getPaneMethods to implement the reading
         $paneInfo->IsDockable();
         $paneInfo->IsLeftDockable();
         $paneInfo->IsTopDockable();
@@ -344,9 +345,9 @@ class controllerDialog extends wxDialog
         $paneInfo->IsBottomDockable();
 
         $paneInfo->HasCloseButton();
+        $paneInfo->HasPinButton();
         $paneInfo->HasMaximizeButton();
         $paneInfo->HasMinimizeButton();
-        $paneInfo->HasPinButton();
 
         $paneInfo->IsFloatable();
         $paneInfo->IsFixed();
@@ -409,6 +410,30 @@ class controllerDialog extends wxDialog
             'tickHintFade' => wxAUI_MGR_HINT_FADE,
             'tickNoVenetianHintFade' => wxAUI_MGR_NO_VENETIAN_BLINDS_FADE,
             'tickLiveResize' => wxAUI_MGR_LIVE_RESIZE,
+        ];
+    }
+
+    /**
+     * Returns an array to convert between PaneInfo getter method and element name
+     *
+     * @return array
+     */
+    protected function getPaneMethods()
+    {
+        return [
+            'tickDockable' => 'IsDockable',
+            'tickDockLeft' => 'IsLeftDockable',
+            'tickDockTop' => 'IsTopDockable',
+            'tickDockRight' => 'IsRightDockable',
+            'tickDockBottom' => 'IsBottomDockable',
+            'tickButtonClose' => 'HasCloseButton',
+            'tickButtonPin' => 'HasPinButton',
+            'tickButtonMaximise' => 'HasMaximizeButton',
+            'tickButtonMinimise' => 'HasMinimizeButton',
+            'tickFloatable' => 'IsFloatable',
+            'tickFixed' => 'IsFixed',
+            'tickGripper' => 'HasGripper',
+            'tickGripperTop' => 'HasGripperTop',
         ];
     }
 
