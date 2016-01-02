@@ -71,7 +71,7 @@ class controllerDialog extends wxDialog
     public function onTickboxChangeEvent(wxEvent $event)
     {
         // Get the control names for the manager and the pane tickboxes
-        $managerControlNames = array_keys($this->getFlagNames());
+        $managerControlNames = array_keys($this->getManagerFlagNames());
 
         // Has a manager tickbox been clicked?
         $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
@@ -150,7 +150,7 @@ class controllerDialog extends wxDialog
     {
         $flags = 0;
 
-        foreach ($this->getFlagNames() as $controlName => $flag)
+        foreach ($this->getManagerFlagNames() as $controlName => $flag)
         {
             $window = $this->FindWindow($controlName);
             if ($window)
@@ -391,15 +391,13 @@ class controllerDialog extends wxDialog
     }
 
     /**
-     * Returns an array to convert between flag const and element name
+     * Returns an array to convert between manager flag const and element name
      *
      * Flags are detailed here: http://docs.wxwidgets.org/3.0/classwx_aui_manager.html
      *
-     * @todo Change getFlagNames to getManagerFlagNames
-     *
      * @return array
      */
-    protected function getFlagNames()
+    protected function getManagerFlagNames()
     {
         return [
             'tickFloating' => wxAUI_MGR_ALLOW_FLOATING,
