@@ -14,7 +14,7 @@ trait Pane
 
         // Get the currently selected pane
         $paneIndex = $this->getSelectedPaneIndex();
-        /* @var $info wxAuiPaneInfo */
+        /* @var $paneInfo wxAuiPaneInfo */
         $paneInfo = $this->getPaneInfoByIndex($paneIndex);
 
         // Set new flag true/false on paneinfo, using setter methods
@@ -24,10 +24,28 @@ trait Pane
         $method = $methods[$ctrl->GetName()];
         $paneInfo->$method($ctrl->GetValue());
 
+        /* @var $window \wxTextCtrl */
+        /* @var $manager \wxAuiManager */
+        $window = $this->getManagedWindow()->getWindowByIndex($paneIndex);
+        $manager = $this->getManagedWindow()->getAuiManager();
+
+        // Doesn't seem to work at all
+
+        // This sort of works, but the pane sometimes ends up being moved
+        $manager->DetachPane($window);
+        $manager->AddPane($window, $paneInfo);
+
+        // This does not work at all
+        #$paneInfo->Hide();
+        #$paneInfo->Show();
+
 // Debugging
 echo "Control: " . $ctrl->GetName() . "\n";
 echo "Method: " . $method . "\n";
 echo "Boolean: " . ($ctrl->GetValue() ? 'true' : 'false') . "\n";
+
+        // The string should be a "perspective string"
+        #$this->getManagedWindow()->getAuiManager()->LoadPaneInfo('auiPane0', $paneInfo);
 
         // Now redraw the panes
         $this->getManagedWindow()->getAuiManager()->Update();
