@@ -4,6 +4,13 @@
  * This file contains the main demo window class
  */
 
+namespace WxPhpExamples\AUI;
+
+use wxFrame, wxSize;
+use wxAuiManager, wxAuiPaneInfo;
+use wxCloseEvent;
+use wxTextCtrl;
+
 class auiDemoDialog extends wxFrame
 {
     protected $manager;
