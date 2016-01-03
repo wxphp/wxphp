@@ -10,7 +10,7 @@ trait Manager
     protected function onManagerTickBoxChange(wxEvent $event)
     {
         // Handle mutexs choices first, so the flag value does not conflict
-        $this->resetMutExChoices($event);
+        $this->resetManagerMutExChoices($event);
 
         // Reset the manager and redraw the controls
         $manager = $this->getManagedWindow()->getAuiManager();
@@ -75,7 +75,7 @@ trait Manager
     /**
      * Forced *Hint items to be mutually exclusive
      */
-    protected function resetMutExChoices(wxEvent $event)
+    protected function resetManagerMutExChoices(wxEvent $event)
     {
         // Is the control one of the affected mutually-exclusive choices?
         $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
@@ -99,50 +99,6 @@ trait Manager
             {
                 $this->setTickBoxValue($controlName, false);
             }
-        }
-    }
-
-    /**
-     * Resets the pane controls to reflect the specified pane number
-     *
-     * @param integer $pane
-     */
-    protected function setCurrentPane($pane = 0)
-    {
-        $this->setPaneLabels($pane);
-        $this->setPaneTickBoxValues($pane);
-    }
-
-    protected function setPaneLabels($pane)
-    {
-        foreach ($this->captions as $controlName => $caption)
-        {
-            $sizers = $this->getSizerContainersByElementName($controlName);
-            if (count($sizers) == 3)
-            {
-                $sizer = wxDynamicCast($sizers[1], "wxStaticBoxSizer");
-                /* @var $sizer wxStaticBoxSizer */
-                // "X" is the placeholder for the pane number
-                $sizer->GetStaticBox()->SetLabel(str_replace('X', $pane, $caption));
-            }
-        }
-    }
-
-    /**
-     * Resets the pane tick boxes for the given pane
-     *
-     * @param integer $pane
-     */
-    protected function setPaneTickBoxValues($pane)
-    {
-        // Read the settings for the specified pane
-        $paneInfo = $this->getManagedWindow()->getPaneSettings('auiPane' . $pane);
-
-        // Use these methods to set the tickbox values
-        foreach ($this->getPaneMethods() as $controlName => $methodName)
-        {
-            $boolean = $paneInfo->$methodName();
-            $this->setTickBoxValue($controlName, $boolean);
         }
     }
 
