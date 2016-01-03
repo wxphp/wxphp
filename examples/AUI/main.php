@@ -11,8 +11,10 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so AUI/main.php
  * 
- * @todo Can we add some wxPane windows?
- * @todo Is there any control over what drags look like?
+ * @todo Is there a better way to refresh panes other than detaching and re-adding? This
+ *       sometimes moves the pane to a new attachment location, which is confusing
+ * @todo If resizeable is turned off, I often get crashes on resize - wxPHP issue?
+ * @todo If gripper is turned off, disable gripper top and unselect it
  */
 
 namespace WxPhpExamples\AUI;
