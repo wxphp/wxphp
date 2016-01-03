@@ -72,6 +72,7 @@ class controllerDialog extends wxDialog
     {
         // Get the control names for the manager and the pane tickboxes
         $managerControlNames = array_keys($this->getManagerFlagNames());
+        $paneControlNames = array_keys($this->getPaneMethods());
 
         // Has a manager tickbox been clicked?
         $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
@@ -79,9 +80,10 @@ class controllerDialog extends wxDialog
         {
             $this->onManagerTickBoxChange($event);
         }
-        // @todo Has a pane tickbox been clicked?
-        elseif (true)
+        // Has a pane tickbox been clicked?
+        elseif (in_array($ctrl->GetName(), $paneControlNames))
         {
+            $this->onPaneTickBoxChange($event);
         }
         // This should not happen
         else
@@ -90,7 +92,7 @@ class controllerDialog extends wxDialog
         }
     }
 
-    public function onManagerTickBoxChange(wxEvent $event)
+    protected function onManagerTickBoxChange(wxEvent $event)
     {
         // Handle mutexs choices first, so the flag value does not conflict
         $this->resetMutExChoices($event);
@@ -102,6 +104,12 @@ class controllerDialog extends wxDialog
 
         // Do this last so it takes new manager settings into account
         $this->resetEnablements();
+    }
+
+    protected function onPaneTickBoxChange(wxEvent $event)
+    {
+        // @todo Add code here
+        echo "Clicked pane tick box\n";
     }
 
     /**
