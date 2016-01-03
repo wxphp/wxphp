@@ -62,7 +62,7 @@ class controllerDialog extends \wxDialog
     {
         // Get the control names for the manager and the pane tickboxes
         $managerControlNames = array_keys($this->getManagerFlagNames());
-        $paneControlNames = array_keys($this->getPaneMethods());
+        $paneControlNames = array_keys($this->getPaneGetterMethods());
 
         // Has a manager tickbox been clicked?
         $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
@@ -86,6 +86,8 @@ class controllerDialog extends \wxDialog
      * General iteration function for getting and setting tick boxes
      *
      * The flags var is only of use for manager getter callers (it is not mandatory to use it)
+     *
+     * @todo I think this is only for the manager, so move it to the Manager trait?
      *
      * @param function $function
      * @return integer

@@ -2,6 +2,7 @@
 
 namespace WxPhpExamples\AUI;
 
+use wxCheckBox;
 use wxEvent;
 use wxAuiPaneInfo;
 
@@ -14,9 +15,22 @@ trait Pane
         // Get the currently selected pane
         $paneIndex = $this->getSelectedPaneIndex();
         /* @var $info wxAuiPaneInfo */
-        $info = $this->getPaneInfoByIndex($paneIndex);
+        $paneInfo = $this->getPaneInfoByIndex($paneIndex);
 
-        // @todo Set new settings on $info, either using flags or using setter methods
+        // Set new flag true/false on paneinfo, using setter methods
+        /* @var $ctrl wxCheckBox */
+        $ctrl = wxDynamicCast($event->GetEventObject(), "wxCheckBox");
+        $methods = $this->getPaneSetterMethods();
+        $method = $methods[$ctrl->GetName()];
+        $paneInfo->$method($ctrl->GetValue());
+
+// Debugging
+echo "Control: " . $ctrl->GetName() . "\n";
+echo "Method: " . $method . "\n";
+echo "Boolean: " . ($ctrl->GetValue() ? 'true' : 'false') . "\n";
+
+        // Now redraw the panes
+        $this->getManagedWindow()->getAuiManager()->Update();
     }
 
     /**
@@ -56,7 +70,7 @@ trait Pane
         $paneInfo = $this->getManagedWindow()->getPaneSettings('auiPane' . $pane);
 
         // Use these methods to set the tickbox values
-        foreach ($this->getPaneMethods() as $controlName => $methodName)
+        foreach ($this->getPaneGetterMethods() as $controlName => $methodName)
         {
             $boolean = $paneInfo->$methodName();
             $this->setTickBoxValue($controlName, $boolean);
@@ -68,7 +82,7 @@ trait Pane
      *
      * @return array
      */
-    protected function getPaneMethods()
+    protected function getPaneGetterMethods()
     {
         return [
             'tickDockable' => 'IsDockable',
@@ -84,6 +98,30 @@ trait Pane
             'tickFixed' => 'IsFixed',
             'tickGripper' => 'HasGripper',
             'tickGripperTop' => 'HasGripperTop',
+        ];
+    }
+
+    /**
+     * Returns an array to convert between PaneInfo setter method and element name
+     *
+     * @return array
+     */
+    protected function getPaneSetterMethods()
+    {
+        return [
+            'tickDockable' => 'Dockable',
+            'tickDockLeft' => 'LeftDockable',
+            'tickDockTop' => 'TopDockable',
+            'tickDockRight' => 'RightDockable',
+            'tickDockBottom' => 'BottomDockable',
+            'tickButtonClose' => 'CloseButton',
+            'tickButtonPin' => 'PinButton',
+            'tickButtonMaximise' => 'MaximizeButton',
+            'tickButtonMinimise' => 'MinimizeButton',
+            'tickFloatable' => 'Floatable',
+            'tickFixed' => 'Fixed',
+            'tickGripper' => 'Gripper',
+            'tickGripperTop' => 'GripperTop',
         ];
     }
 }
