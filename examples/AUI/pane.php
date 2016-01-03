@@ -113,7 +113,7 @@ echo "Boolean: " . ($ctrl->GetValue() ? 'true' : 'false') . "\n";
             'tickButtonMaximise' => 'HasMaximizeButton',
             'tickButtonMinimise' => 'HasMinimizeButton',
             'tickFloatable' => 'IsFloatable',
-            'tickFixed' => 'IsFixed',
+            'tickResizable' => 'IsResizable',
             'tickGripper' => 'HasGripper',
             'tickGripperTop' => 'HasGripperTop',
         ];
@@ -137,7 +137,7 @@ echo "Boolean: " . ($ctrl->GetValue() ? 'true' : 'false') . "\n";
             'tickButtonMaximise' => 'MaximizeButton',
             'tickButtonMinimise' => 'MinimizeButton',
             'tickFloatable' => 'Floatable',
-            'tickFixed' => 'Fixed',
+            'tickResizable' => 'Resizable',
             'tickGripper' => 'Gripper',
             'tickGripperTop' => 'GripperTop',
         ];

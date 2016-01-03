@@ -294,8 +294,8 @@
 								<option>0</option>
 								<flag>wxALL</flag>
 								<border>5</border>
-								<object class="wxCheckBox" name="tickFixed">
-									<label>Fixed size</label>
+								<object class="wxCheckBox" name="tickResizable">
+									<label>Resizable</label>
 									<checked>0</checked>
 								</object>
 							</object>
