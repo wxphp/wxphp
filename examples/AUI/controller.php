@@ -83,14 +83,14 @@ class controllerDialog extends \wxDialog
     }
 
     /**
-     * General iteration function for getting and setting manager flags
+     * General iteration function for getting and setting tick boxes
      *
-     * The flags var is only of use for getter callers (it is not mandatory to use it)
+     * The flags var is only of use for manager getter callers (it is not mandatory to use it)
      *
      * @param function $function
      * @return integer
      */
-    protected function flagIterator($function)
+    protected function tickBoxIterator($function)
     {
         $flags = 0;
 

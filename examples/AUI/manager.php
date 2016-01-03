@@ -28,7 +28,7 @@ trait Manager
      */
     protected function getManagerFlags()
     {
-        return $this->flagIterator(function(wxCheckBox $ctrl, $flag)
+        return $this->tickBoxIterator(function(wxCheckBox $ctrl, $flag)
             {
                 return $ctrl->GetValue() ? $flag : 0;
             }
@@ -44,7 +44,7 @@ trait Manager
     {
         $managedWindow = $this->getManagedWindow();
 
-        return $this->flagIterator(function(wxCheckBox $ctrl, $flag) use ($managedWindow)
+        return $this->tickBoxIterator(function(wxCheckBox $ctrl, $flag) use ($managedWindow)
             {
                 // Get the flags for the manager
                 $flags = $managedWindow->getAuiManager()->GetFlags();
