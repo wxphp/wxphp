@@ -4,6 +4,7 @@ namespace WxPhpExamples\AUI;
 
 use wxPoint;
 use wxEvent;
+use wxAuiPaneInfo;
 
 class controllerDialog extends \wxDialog
 {
@@ -122,8 +123,7 @@ class controllerDialog extends \wxDialog
         // Show all available panes
         for($i = 0; $i <= 7; $i++)
         {
-            $info = $this->getManagedWindow()->getAuiManager()->GetPane('auiPane' . $i);
-            $info->Show();
+            $this->getPaneInfoByIndex($i)->Show();
         }
 
         // Redraw the managed window
@@ -132,9 +132,26 @@ class controllerDialog extends \wxDialog
 
     public function onSpinnerChangeEvent(wxEvent $event)
     {
-        $ctrl = wxDynamicCast($event->GetEventObject(), "wxSpinCtrl");
-        /* @var $ctrl wxSpinCtrl */
-        $this->setCurrentPane($ctrl->GetValue());
+        $this->setCurrentPane($this->getSelectedPaneIndex());
+    }
+
+    protected function getSelectedPaneIndex()
+    {
+        $obj = $this->FindWindow('spinPane');
+        $ctrl = wxDynamicCast($obj, "wxSpinCtrl");
+
+        return $ctrl->GetValue();
+    }
+
+    /**
+     * Fetches the specified pane info object
+     *
+     * @param integer $index
+     * @return wxAuiPaneInfo
+     */
+    protected function getPaneInfoByIndex($index)
+    {
+        return $this->getManagedWindow()->getAuiManager()->GetPane('auiPane' . $index);
     }
 
     /**

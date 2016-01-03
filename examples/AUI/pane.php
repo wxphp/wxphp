@@ -3,13 +3,20 @@
 namespace WxPhpExamples\AUI;
 
 use wxEvent;
+use wxAuiPaneInfo;
 
 trait Pane
 {
     protected function onPaneTickBoxChange(wxEvent $event)
     {
-        // @todo Add code here
         echo "Clicked pane tick box\n";
+
+        // Get the currently selected pane
+        $paneIndex = $this->getSelectedPaneIndex();
+        /* @var $info wxAuiPaneInfo */
+        $info = $this->getPaneInfoByIndex($paneIndex);
+
+        // @todo Set new settings on $info, either using flags or using setter methods
     }
 
     /**
