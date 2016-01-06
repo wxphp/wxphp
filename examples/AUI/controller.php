@@ -40,6 +40,11 @@ class controllerDialog extends \wxDialog
         $this->captureFrameCaptions();
         $this->setCurrentPane();
 
+        // Disable the resize property for now - see notes in main.php. It's too crashy at
+        // present, but I'm minded to keep it visible, so users know at least it is available
+        // for their own experimentation.
+        $this->setTickBoxEnabled('tickResizable', false, false);
+
         return parent::Show();
     }
 
@@ -230,8 +235,9 @@ class controllerDialog extends \wxDialog
      *
      * @param string $controlName
      * @param boolean $enabled
+     * @param boolean $autoUntick
      */
-    protected function setTickBoxEnabled($controlName, $enabled)
+    protected function setTickBoxEnabled($controlName, $enabled, $autoUntick = true)
     {
         // Find the control
         $window = $this->FindWindow($controlName);
@@ -242,7 +248,7 @@ class controllerDialog extends \wxDialog
             $enabled ? $ctrl->Enable() : $ctrl->Disable();
 
             // If the control is disabled, let's turn it off too
-            if (!$enabled)
+            if (!$enabled && $autoUntick)
             {
                 $ctrl->SetValue(false);
             }
