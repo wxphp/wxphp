@@ -8,10 +8,17 @@ use wxAuiPaneInfo;
 
 trait Pane
 {
+    /**
+     * Refreshes the panes after a property modification
+     *
+     * This is not ideal as it detaches and re-attaches the pane, which can force it to
+     * move. It's not a bad start, but I'd like to improve this, see:
+     * http://stackoverflow.com/q/34597763
+     *
+     * @param wxEvent $event
+     */
     protected function onPaneTickBoxChange(wxEvent $event)
     {
-        echo "Clicked pane tick box\n";
-
         // Get the currently selected pane
         $paneIndex = $this->getSelectedPaneIndex();
         /* @var $paneInfo wxAuiPaneInfo */
@@ -29,23 +36,9 @@ trait Pane
         $window = $this->getManagedWindow()->getWindowByIndex($paneIndex);
         $manager = $this->getManagedWindow()->getAuiManager();
 
-        // Doesn't seem to work at all
-
         // This sort of works, but the pane sometimes ends up being moved
         $manager->DetachPane($window);
         $manager->AddPane($window, $paneInfo);
-
-        // This does not work at all
-        #$paneInfo->Hide();
-        #$paneInfo->Show();
-
-// Debugging
-echo "Control: " . $ctrl->GetName() . "\n";
-echo "Method: " . $method . "\n";
-echo "Boolean: " . ($ctrl->GetValue() ? 'true' : 'false') . "\n";
-
-        // The string should be a "perspective string"
-        #$this->getManagedWindow()->getAuiManager()->LoadPaneInfo('auiPane0', $paneInfo);
 
         // Now redraw the panes
         $this->getManagedWindow()->getAuiManager()->Update();
