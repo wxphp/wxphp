@@ -4,9 +4,17 @@
  * This file contains the main demo window class
  */
 
+namespace WxPhpExamples\AUI;
+
+use wxFrame, wxSize;
+use wxAuiManager, wxAuiPaneInfo;
+use wxCloseEvent;
+use wxTextCtrl;
+
 class auiDemoDialog extends wxFrame
 {
     protected $manager;
+    protected $controls = [];
 
     public function __construct()
     {
@@ -17,10 +25,10 @@ class auiDemoDialog extends wxFrame
         // Let's create some text controls, and add them as AUI panes
         for ($i = 0; $i <= 7; $i++)
         {
-            $textCtrl = new wxTextCtrl($this, -1, "Pane $i");
+            $this->controls[$i] = new wxTextCtrl($this, -1, "Pane $i");
             $paneInfo = new wxAuiPaneInfo();
             $this->setPaneSettings($paneInfo, $i);
-            $this->manager->AddPane($textCtrl, $paneInfo);
+            $this->manager->AddPane($this->controls[$i], $paneInfo);
         }
 
         // Add a control in the centre
@@ -69,6 +77,16 @@ class auiDemoDialog extends wxFrame
         $info->Name('auiPane' . $index);
 
         $info->Caption("Caption $index");
+    }
+
+    public function getPaneSettings($name)
+    {
+        return $this->getAuiManager()->GetPane($name);
+    }
+
+    public function getWindowByIndex($index)
+    {
+        return $this->controls[$index];
     }
 
     /**
