@@ -162,19 +162,13 @@ class controllerDialog extends \wxDialog
         // can parse it out from the perpective string
         $info = $event->GetPane();
         $persp = $this->getManagedWindow()->getAuiManager()->SavePaneInfo($info);
-        $items = explode(';', $persp);
-        $namePair = $items[0];
-
-        // Parse the key-value pair
-        $nameItems = explode('=', $namePair);
-        $name = trim($nameItems[1]);
 
         // Fish out the number, which represents the pane ordinal
         $matches = [];
-        preg_match('#\d+#', $name, $matches);
+        preg_match('#name=auiPane(\d+)#', $persp, $matches);
         if ($matches)
         {
-            $index = $matches[0];
+            $index = $matches[1];
             $this->windowSaves[$index] = $persp;
         }
     }
