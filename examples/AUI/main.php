@@ -11,8 +11,6 @@
  *
  *     /usr/bin/php -d extension=wxwidgets.so AUI/main.php
  * 
- * @todo Is there a better way to refresh panes other than detaching and re-adding? This
- *       sometimes moves the pane to a new attachment location, which is confusing
  * @todo If resizeable is turned off, I often get crashes on resize - wxPHP issue? I have
  *       disabled this control for now, but readers can re-enable it if they wish
  * @todo If gripper is turned off, disable gripper top and unselect it

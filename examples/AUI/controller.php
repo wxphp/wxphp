@@ -4,6 +4,7 @@ namespace WxPhpExamples\AUI;
 
 use wxPoint;
 use wxEvent;
+use wxAuiManagerEvent;
 use wxAuiPaneInfo;
 
 class controllerDialog extends \wxDialog
@@ -14,6 +15,7 @@ class controllerDialog extends \wxDialog
     use \WxPhpExamples\AUI\Pane;
 
     protected $managedWindow;
+    protected $windowSaves = [];
 
     // Frame captions are read from the window and stored here
     protected $captions = [
@@ -61,6 +63,7 @@ class controllerDialog extends \wxDialog
 
         $this->Connect(wxEVT_COMMAND_CHECKBOX_CLICKED, array($this, "onTickboxChangeEvent"));
         $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
+        $managedWindow->Connect(wxEVT_AUI_PANE_CLOSE, array($this, "onPaneClose"));
     }
 
     public function onTickboxChangeEvent(wxEvent $event)
@@ -130,11 +133,51 @@ class controllerDialog extends \wxDialog
         // Show all available panes
         for($i = 0; $i <= 7; $i++)
         {
-            $this->getPaneInfoByIndex($i)->Show();
+            $this->getManagedWindow()->getAuiManager()->LoadPaneInfo(
+                $this->windowSaves[$i],
+                $this->getPaneInfoByIndex($i)
+            );
         }
 
         // Redraw the managed window
         $this->getManagedWindow()->getAuiManager()->Update();
+    }
+
+    /**
+     * Handles the pane close before it is closed (it can still be vetoed)
+     *
+     * The logic here cycles through the panes and gets a perspective string for each one. We
+     * then unset the closed flag (as we don't want to save that) and save a new perspective
+     * string to the saved panes list.
+     *
+     * @param wxAuiManagerEvent $event
+     */
+    public function onPaneClose(wxAuiManagerEvent $event)
+    {
+        for($i = 0; $i <= 7; $i++)
+        {
+            $pi = $this->getPaneInfoByIndex($i);
+            $persp = $this->getManagedWindow()->getAuiManager()->SavePaneInfo($pi);
+
+            // Split perspective string into pieces, get the second one (state)
+            $items = explode(';', $persp);
+            $state = $items[2];
+
+            // Decode the bitfield within
+            $stateItems = explode('=', $state);
+            $stateBitfield = (int) $stateItems[1];
+
+            // Set up bitmask to ignore closed state
+            $bitMask = (-1 ^ 2);
+
+            // Reset the perspective string minus the closed state bit
+            $replacementBitfield = $stateBitfield & $bitMask;
+            $items[2] = "state=" . $replacementBitfield;
+            $newPersp = implode(';', $items);
+
+            // Finally save the perspective
+            $this->windowSaves[$i] = $newPersp;
+        }
     }
 
     public function onSpinnerChangeEvent(wxEvent $event)

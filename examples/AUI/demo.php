@@ -84,6 +84,12 @@ class auiDemoDialog extends wxFrame
         return $this->getAuiManager()->GetPane($name);
     }
 
+    /**
+     * Returns the window item from the managed pane
+     *
+     * @param integer $index
+     * @return \wxWindow
+     */
     public function getWindowByIndex($index)
     {
         return $this->controls[$index];
