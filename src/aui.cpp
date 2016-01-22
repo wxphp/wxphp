@@ -25721,6 +25721,7 @@ void php_wxAuiPaneInfo_free(void *object TSRMLS_DC)
 			php_printf("Deleting pointer with delete\n");
 			#endif
 			
+			custom_object->native_object->UninitProperties();
        
             delete custom_object->native_object;
 			
@@ -25892,6 +25893,7 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 	{
 		native_object->phpObj = getThis();
 		
+		native_object->InitProperties();
 
 		current_object = (zo_wxAuiPaneInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
 		
@@ -25914,6 +25916,67 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 }
 /* }}} */
 
+PHP_METHOD(php_wxAuiPaneInfo, __get)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxAuiPaneInfo::__get\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	int arguments_received = ZEND_NUM_ARGS();
+	zo_wxAuiPaneInfo* current_object;
+	wxAuiPaneInfo_php* native_object;
+	
+	char* name;
+	int name_len;
+	
+	//Get native object of the php object that called the method
+	if (getThis() != NULL) 
+	{
+		current_object = (zo_wxAuiPaneInfo*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		
+		if(current_object->native_object == NULL)
+		{
+			zend_error(E_ERROR, "Failed to get the native object for wxAuiPaneInfo::wxAuiPaneInfo call\n");
+			
+			return;
+		}
+		else
+		{
+			native_object = current_object->native_object;
+		}
+	}
+	else
+	{
+		zend_error(E_ERROR, "Could not process __get call as static\n");
+	}
+	
+	char parse_parameters_string[] = "s";
+	
+	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name, &name_len ) == FAILURE)
+	{
+		RETVAL_NULL();
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Property to get: %s\n", name);
+	php_printf("===========================================\n\n");
+	#endif
+	
+	if(false){}
+	else if(strcmp("name", name) == 0)
+	{
+		RETVAL_STRING(*((wxString*) native_object->properties[0]).char_str());
+	}
+	else if(strcmp("caption", name) == 0)
+	{
+		RETVAL_STRING(*((wxString*) native_object->properties[1]).char_str());
+	}
+	else
+	{
+		RETVAL_NULL();
+	}
+}
 /* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Window(wxWindow &w)
    Window() assigns the window pointer that the wxAuiPaneInfo should use. */
 PHP_METHOD(php_wxAuiPaneInfo, Window)

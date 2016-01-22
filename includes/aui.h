@@ -559,6 +559,19 @@ class wxAuiPaneInfo_php: public wxAuiPaneInfo{
 	wxAuiPaneInfo_php():wxAuiPaneInfo(){}
 		
 	
+    void InitProperties(){
+		properties = new void*[2];
+
+		properties[0] = &name;
+		properties[1] = &caption;
+		
+	}
+
+    void UninitProperties(){
+		delete[] properties;
+	}
+
+    void** properties;
 	
 	void ***tsrm_ls;
 	zval* phpObj;
@@ -652,6 +665,7 @@ static zend_function_entry php_wxAuiPaneInfo_functions[] = {
 	PHP_ME(php_wxAuiPaneInfo, BottomDockable, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiPaneInfo, Bottom, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiPaneInfo, BestSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxAuiPaneInfo, __get, wxphp_aui_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif
