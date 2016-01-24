@@ -139,7 +139,7 @@ function classes_get_property_code($class_name)
 
                         case "reference":
                         case "none":
-                            $code .= tabs(2) . "RETVAL_STRING(*((wxString*) native_object->properties[$property_index]).char_str(), 1);\n";
+                            $code .= tabs(2) . "RETVAL_STRING((const char*) *((wxString*) native_object->properties[$property_index])->char_str(), 1);\n";
                             break;
                     }
                     break;

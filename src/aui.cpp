@@ -25966,11 +25966,11 @@ PHP_METHOD(php_wxAuiPaneInfo, __get)
 	if(false){}
 	else if(strcmp("name", name) == 0)
 	{
-		RETVAL_STRING(*((wxString*) native_object->properties[0]).char_str(), 1);
+		RETVAL_STRING((const char*) *((wxString*) native_object->properties[0])->char_str(), 1);
 	}
 	else if(strcmp("caption", name) == 0)
 	{
-		RETVAL_STRING(*((wxString*) native_object->properties[1]).char_str(), 1);
+		RETVAL_STRING((const char*) *((wxString*) native_object->properties[1])->char_str(), 1);
 	}
 	else
 	{
