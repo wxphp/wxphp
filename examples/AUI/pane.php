@@ -52,6 +52,24 @@ trait Pane
 
         // Now redraw the panes
         $this->getManagedWindow()->getAuiManager()->Update();
+
+        $this->applySpecialRules($ctrl);
+    }
+
+    /**
+     * If the supplied tickbox is the gripper tick, this shows/hides the top gripper tick
+     *
+     * This helps to indicate that the top gripper flag will not make any difference unless
+     * the gripper flag is set also.
+     *
+     * @param wxCheckBox $ctrl
+     */
+    protected function applySpecialRules(wxCheckBox $ctrl)
+    {
+        if ($ctrl->GetName() == 'tickGripper')
+        {
+            $this->setTickBoxEnabled('tickGripperTop', $ctrl->GetValue(), false);
+        }
     }
 
     /**
@@ -96,6 +114,10 @@ trait Pane
             $boolean = $paneInfo->$methodName();
             $this->setTickBoxValue($controlName, $boolean);
         }
+
+        // Apply special rules at the start
+        $ctrl = wxDynamicCast($this->FindWindow('tickGripper'), "wxCheckBox");
+        $this->applySpecialRules($ctrl);
     }
 
     /**

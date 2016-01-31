@@ -13,7 +13,10 @@
  * 
  * @todo If resizeable is turned off, I often get crashes on resize - wxPHP issue? I have
  *       disabled this control for now, but readers can re-enable it if they wish
- * @todo If gripper is turned off, disable gripper top and unselect it
+ * @todo Repeated clicking on the gripper tickbox for various panes results eventually in a
+ *       wxPHP segmentation fault - I expect this would be less of a problem if pane updates
+ *       were done in a better fashion (see pane.php:onPaneTickBoxChange) but this issue
+ *       would be good to fix C-side anyway
  */
 
 namespace WxPhpExamples\AUI;
