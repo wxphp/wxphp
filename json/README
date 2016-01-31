@@ -1,46 +1,46 @@
 Json Files
 ......................................
-This directory holds the json text files, result of parsing the 
-wxWidgets documentation with the json_generator script. The files are pretty 
+This directory holds the json text files, result of parsing the
+wxWidgets documentation with the json_generator script. The files are pretty
 printed to make manual edition possible as easier integration of patches.
-Previously standard php serialize functions were used making impossible 
-to edit them. We thought about using the xml format but the most easier 
+Previously standard php serialize functions were used making impossible
+to edit them. We thought about using the xml format but the most easier
 format to convert php arrays to human editable files was json.
 
 Files on this directory:
 
-	classes.json:
-		Classes and it's methods with detailed information.
-		
-	class_groups.json:
-		Defines to which group a class belongs in order to generate
-		multiple source files instead of generating a single huge one.
-		
-	classes_variables.json
-		Store the member variables of classes to be able to implement
-		__get and __set
-		
-	consts.json 
-		#define macro names and the values.
-		
-	enums.json
-		Class enumerations and global enumerations.
-		
-	functions.json
-		wxWidgets global functions with detailed information.
-		
-	global_variables.json
-		Various global variables found while parsing like wx_NORMAL_FONT
-		
-	includes.json
-		The include files of the parsed files (this include files are
-		added to common.h for correct compilation)
-		
-	typedef.json
-		Name of variables declared as typedef with 
-		the original type value.
-		
-		
+    classes.json:
+        Classes and it's methods with detailed information.
+
+    class_groups.json:
+        Defines to which group a class belongs in order to generate
+        multiple source files instead of generating a single huge one.
+
+    classes_variables.json
+        Store the member variables of classes to be able to implement
+        __get and __set
+
+    consts.json
+        #define macro names and the values.
+
+    enums.json
+        Class enumerations and global enumerations.
+
+    functions.json
+        wxWidgets global functions with detailed information.
+
+    global_variables.json
+        Various global variables found while parsing like wx_NORMAL_FONT
+
+    includes.json
+        The include files of the parsed files (this include files are
+        added to common.h for correct compilation)
+
+    typedef.json
+        Name of variables declared as typedef with
+        the original type value.
+
+
 Things manually added/changed to files
 ......................................
 
@@ -71,11 +71,11 @@ global_variables.json (Fixed on wxWidgets SVN)
 4. EDIT: "wxSWISS_FONT":"wxFont", > "wxSWISS_FONT":"wxFont*"
 
 5. Add: "wxEVT_MEDIA_LOADED":"wxEventType",
-	"wxEVT_MEDIA_STOP":"wxEventType",
-	"wxEVT_MEDIA_FINISHED":"wxEventType",
-	"wxEVT_MEDIA_STATECHANGED":"wxEventType",
-	"wxEVT_MEDIA_PLAY":"wxEventType",
-	"wxEVT_MEDIA_PAUSE":"wxEventType",
+    "wxEVT_MEDIA_STOP":"wxEventType",
+    "wxEVT_MEDIA_FINISHED":"wxEventType",
+    "wxEVT_MEDIA_STATECHANGED":"wxEventType",
+    "wxEVT_MEDIA_PLAY":"wxEventType",
+    "wxEVT_MEDIA_PAUSE":"wxEventType",
 
 
 consts.json (Fixed on wxWidgets SVN)
@@ -91,7 +91,27 @@ includes.json
 enums.json
 ======================
 1. Added: "wxMediaState":[
-			"wxMEDIASTATE_STOPPED",
-			"wxMEDIASTATE_PAUSED",
-			"wxMEDIASTATE_PLAYING"
-		],
+            "wxMEDIASTATE_STOPPED",
+            "wxMEDIASTATE_PAUSED",
+            "wxMEDIASTATE_PLAYING"
+        ],
+
+
+class_variables.json
+======================
+1. Added: "wxAuiPaneInfo":{
+        "name":{
+            "type":"wxString",
+            "static":false,
+            "mutable":false,
+            "protected":false,
+            "public":true
+        },
+        "caption":{
+            "type":"wxString",
+            "static":false,
+            "mutable":false,
+            "protected":false,
+            "public":true
+        }
+    }

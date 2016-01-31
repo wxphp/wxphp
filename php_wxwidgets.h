@@ -1239,6 +1239,7 @@ PHP_METHOD(php_wxAuiDockArt, DrawGripper);
 PHP_METHOD(php_wxAuiDockArt, DrawCaption);
 PHP_METHOD(php_wxAuiDockArt, DrawBorder);
 PHP_METHOD(php_wxAuiDockArt, DrawBackground);
+PHP_METHOD(php_wxAuiPaneInfo, __get);
 PHP_METHOD(php_wxAuiPaneInfo, __construct);
 PHP_METHOD(php_wxAuiPaneInfo, Window);
 PHP_METHOD(php_wxAuiPaneInfo, TopDockable);
