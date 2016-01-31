@@ -124,11 +124,15 @@ class controllerDialog extends \wxDialog
     /**
      * This is called when any button click event happens in this window
      *
-     * @todo Move the contents of this method to another one called reopenAllPanes()
-     *
      * @param wxEvent $event
      */
     public function onButtonClick(wxEvent $event)
+    {
+        // Not currently checking which button was clicked, as this is the only button
+        $this->reopenAllPanes();
+    }
+
+    protected function reopenAllPanes()
     {
         // Show all available panes
         for($i = 0; $i <= 7; $i++)
