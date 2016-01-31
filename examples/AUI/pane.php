@@ -15,6 +15,16 @@ trait Pane
      * move. It's not a bad start, but I'd like to improve this, see:
      * http://stackoverflow.com/q/34597763
      *
+     * 2016-01-31: I've tried to replace the DetachPane/AddPane with code that resets the
+     * perspective, to force a redraw without needing to re-attach but this does not always work:
+     *
+     *     $perspective = $manager->SavePaneInfo($this->getPaneInfoByIndex($paneIndex));
+     *     $manager->LoadPaneInfo($perspective, $this->getPaneInfoByIndex($paneIndex));
+     *
+     * Setting the gripper (top or side) works fine without either this block or attaching and
+     * reattaching. However it looks like detect/re-attach is necessary for close, pin and
+     * maximise buttons. Could be a wxPHP bug?
+     *
      * @param wxEvent $event
      */
     protected function onPaneTickBoxChange(wxEvent $event)
