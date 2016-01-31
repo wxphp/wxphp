@@ -125,8 +125,6 @@ class controllerDialog extends \wxDialog
      * This is called when any button click event happens in this window
      *
      * @todo Move the contents of this method to another one called reopenAllPanes()
-     * @todo Only open items that are not already open - since moves are not recorded unless
-     * there has been a following close operation
      *
      * @param wxEvent $event
      */
@@ -137,6 +135,8 @@ class controllerDialog extends \wxDialog
         {
             if (isset($this->windowSaves[$i]))
             {
+                // Any items in here must be closed, since open windows do not feature
+                // in the saved windows array
                 $this->getManagedWindow()->getAuiManager()->LoadPaneInfo(
                     $this->windowSaves[$i],
                     $this->getPaneInfoByIndex($i)
@@ -146,6 +146,10 @@ class controllerDialog extends \wxDialog
 
         // Redraw the managed window
         $this->getManagedWindow()->getAuiManager()->Update();
+
+        // Once we have restored the panes we can throw their saves states away - this
+        // will be re-added when they close
+        $this->windowSaves = [];
     }
 
     /**
