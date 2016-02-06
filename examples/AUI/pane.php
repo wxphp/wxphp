@@ -15,6 +15,16 @@ trait Pane
      * move. It's not a bad start, but I'd like to improve this, see:
      * http://stackoverflow.com/q/34597763
      *
+     * 2016-01-31: I've tried to replace the DetachPane/AddPane with code that resets the
+     * perspective, to force a redraw without needing to re-attach but this does not always work:
+     *
+     *     $perspective = $manager->SavePaneInfo($this->getPaneInfoByIndex($paneIndex));
+     *     $manager->LoadPaneInfo($perspective, $this->getPaneInfoByIndex($paneIndex));
+     *
+     * Setting the gripper (top or side) works fine without either this block or attaching and
+     * reattaching. However it looks like detect/re-attach is necessary for close, pin and
+     * maximise buttons. Could be a wxPHP bug?
+     *
      * @param wxEvent $event
      */
     protected function onPaneTickBoxChange(wxEvent $event)
@@ -42,6 +52,24 @@ trait Pane
 
         // Now redraw the panes
         $this->getManagedWindow()->getAuiManager()->Update();
+
+        $this->applySpecialRules($ctrl);
+    }
+
+    /**
+     * If the supplied tickbox is the gripper tick, this shows/hides the top gripper tick
+     *
+     * This helps to indicate that the top gripper flag will not make any difference unless
+     * the gripper flag is set also.
+     *
+     * @param wxCheckBox $ctrl
+     */
+    protected function applySpecialRules(wxCheckBox $ctrl)
+    {
+        if ($ctrl->GetName() == 'tickGripper')
+        {
+            $this->setTickBoxEnabled('tickGripperTop', $ctrl->GetValue(), false);
+        }
     }
 
     /**
@@ -86,6 +114,10 @@ trait Pane
             $boolean = $paneInfo->$methodName();
             $this->setTickBoxValue($controlName, $boolean);
         }
+
+        // Apply special rules at the start
+        $ctrl = wxDynamicCast($this->FindWindow('tickGripper'), "wxCheckBox");
+        $this->applySpecialRules($ctrl);
     }
 
     /**

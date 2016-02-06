@@ -4,6 +4,7 @@ namespace WxPhpExamples\AUI;
 
 use wxPoint;
 use wxEvent;
+use wxAuiManagerEvent;
 use wxAuiPaneInfo;
 
 class controllerDialog extends \wxDialog
@@ -14,6 +15,7 @@ class controllerDialog extends \wxDialog
     use \WxPhpExamples\AUI\Pane;
 
     protected $managedWindow;
+    protected $windowSaves = [];
 
     // Frame captions are read from the window and stored here
     protected $captions = [
@@ -61,6 +63,7 @@ class controllerDialog extends \wxDialog
 
         $this->Connect(wxEVT_COMMAND_CHECKBOX_CLICKED, array($this, "onTickboxChangeEvent"));
         $this->Connect(wxEVT_COMMAND_BUTTON_CLICKED, array($this, "onButtonClick"));
+        $managedWindow->Connect(wxEVT_AUI_PANE_CLOSE, array($this, "onPaneClose"));
     }
 
     public function onTickboxChangeEvent(wxEvent $event)
@@ -121,20 +124,61 @@ class controllerDialog extends \wxDialog
     /**
      * This is called when any button click event happens in this window
      *
-     * @todo Move the contents of this method to another one called reopenAllPanes()
-     *
      * @param wxEvent $event
      */
     public function onButtonClick(wxEvent $event)
     {
+        // Not currently checking which button was clicked, as this is the only button
+        $this->reopenAllPanes();
+    }
+
+    protected function reopenAllPanes()
+    {
         // Show all available panes
         for($i = 0; $i <= 7; $i++)
         {
-            $this->getPaneInfoByIndex($i)->Show();
+            if (isset($this->windowSaves[$i]))
+            {
+                // Any items in here must be closed, since open windows do not feature
+                // in the saved windows array
+                $this->getManagedWindow()->getAuiManager()->LoadPaneInfo(
+                    $this->windowSaves[$i],
+                    $this->getPaneInfoByIndex($i)
+                );
+            }
         }
 
         // Redraw the managed window
         $this->getManagedWindow()->getAuiManager()->Update();
+
+        // Once we have restored the panes we can throw their saves states away - this
+        // will be re-added when they close
+        $this->windowSaves = [];
+    }
+
+    /**
+     * Handles the pane close before it is closed (it can still be vetoed)
+     *
+     * The logic here determines the index of the closing pane, and uses this to save its
+     * pre-close perspective string.
+     *
+     * @param wxAuiManagerEvent $event
+     */
+    public function onPaneClose(wxAuiManagerEvent $event)
+    {
+        // In the absence of being able to read the pane name from a paneinfo method, we
+        // can parse it out from the perpective string
+        $info = $event->GetPane();
+        $persp = $this->getManagedWindow()->getAuiManager()->SavePaneInfo($info);
+
+        // Fish out the number, which represents the pane ordinal
+        $matches = [];
+        preg_match('#name=auiPane(\d+)#', $persp, $matches);
+        if ($matches)
+        {
+            $index = $matches[1];
+            $this->windowSaves[$index] = $persp;
+        }
     }
 
     public function onSpinnerChangeEvent(wxEvent $event)
