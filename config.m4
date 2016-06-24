@@ -8,11 +8,11 @@ PHP_ARG_WITH(wxwidgets-version,set wxWidgets version,
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
                           Enable debugging messages support in wxPHP], no, no)
-                          
+
 PHP_ARG_ENABLE(wxwidgets-static, whether to link to static build of wxWidgets,
 [  --enable-wxwidgets-static
                           Link to static build of wxWidgets], no, no)
-                          
+
 PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWidgets,
 [  --enable-wxwidgets-monolithic
                           Link to monolithic build of wxWidgets], no, no)
@@ -28,10 +28,10 @@ if test "$PHP_WXWIDGETS" != "no"; then
 
     dnl Instruct the PHP build system to use a C++ compiler
     PHP_REQUIRE_CXX()
-    
+
     dnl Default wx-config command
     WXCONFIG_PATH=wx-config
-    
+
     dnl Check if we are building for mac
     IS_MAC=`uname -a | grep Darwin`
     if test "$IS_MAC" != ""; then
@@ -39,7 +39,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
     else
         PHP_WXWIDGETS_MACOSX="no"
     fi
-    
+
     dnl Check for the installation path of wx-config
     if test "$PHP_WXWIDGETS" != "yes"; then
         AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 3.0.x])
@@ -68,7 +68,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([webkitgtk include files where not found])
             fi
-            
+
             AC_MSG_CHECKING([for gconf2 include files])
             if test -e "/usr/include/gconf/2/gconf/gconf.h"; then
                 AC_MSG_RESULT([found])
@@ -76,7 +76,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([gconf include files where not found])
             fi
-            
+
             AC_MSG_CHECKING([for gstreamer include files])
             if test -e "/usr/include/gstreamer-0.10/gst/gst.h"; then
                 AC_MSG_RESULT([found])
@@ -84,7 +84,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([gstreamer include files where not found])
             fi
-            
+
             AC_MSG_CHECKING([for gstreamer plugins include files])
             if test -e "/usr/include/gstreamer-0.10/gst/audio/audio.h"; then
                 AC_MSG_RESULT([found])
@@ -92,7 +92,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([gstreamer plugins include files where not found])
             fi
-            
+
             AC_MSG_CHECKING([for SDL include files])
             if test -e "/usr/include/SDL/SDL.h"; then
                 AC_MSG_RESULT([found])
@@ -100,7 +100,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([SDL include files where not found])
             fi
-            
+
             AC_MSG_CHECKING([for SDL audio include files])
             if test -e "/usr/include/SDL/SDL_audio.h"; then
                 AC_MSG_RESULT([found])
@@ -108,7 +108,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_RESULT([not found])
                 AC_MSG_ERROR([SDL audio include files where not found])
             fi
-            
+
             AC_MSG_CHECKING([for libjpeg include files])
             LIBJPEG=`find /usr/include -name "jpeglib.h"`
             if test "$LIBJPEG" != ""; then
@@ -118,7 +118,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_ERROR([libjpeg include files where not found])
             fi
         fi
-        
+
         AC_MSG_CHECKING([for a CLI downloading tool like wget or curl])
         PHP_WXWIDGETS_DOWNLOADER="wget"
         WGET=`which wget`
@@ -134,17 +134,17 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 AC_MSG_ERROR([wget and curl was not found])
             fi
         fi
-        
+
         if test ! -e "wxWidgets-${PHP_WX_VERSION}"; then
             echo "Downloading wxWidgets..."
-            $PHP_WXWIDGETS_DOWNLOADER http://downloads.sourceforge.net/wxwindows/wxWidgets-$PHP_WX_VERSION.tar.bz2
+            $PHP_WXWIDGETS_DOWNLOADER https://github.com/wxWidgets/wxWidgets/releases/download/v$PHP_WX_VERSION/wxWidgets-$PHP_WX_VERSION.tar.bz2
             tar -xjf wxWidgets-$PHP_WX_VERSION.tar.bz2
             rm wxWidgets-$PHP_WX_VERSION.tar.bz2
         fi
 
         dnl Build wxWidgets if not already build
         echo "Starting a custom build of wxWidgets..."
-        
+
         cd wxWidgets-$PHP_WX_VERSION
 
         mkdir mybuild
@@ -163,37 +163,37 @@ if test "$PHP_WXWIDGETS" != "no"; then
                 --with-osx_cocoa
             fi
         fi
-        
-        make
+
+        make -j `nproc`
         make install
-        
+
         cd ../../
 
         WXCONFIG_PATH="wxWidgets-build/bin/wx-config"
         PHP_WXWIDGETS_STATIC="yes"
         PHP_WXWIDGETS_MONOLITHIC="yes"
     fi
-    
+
     dnl Show error if wxWidgets was not found
     if test ! -e $WXCONFIG_PATH; then
         AC_MSG_RESULT([not found])
         AC_MSG_ERROR([A matching wxWidgets installation was not found])
     fi
-    
+
     dnl Enable static mode
     if test "$PHP_WXWIDGETS_STATIC" != "no"; then
         WXCONFIG_PATH="$WXCONFIG_PATH --static"
     fi
-    
+
     dnl Check whether to enable debugging messages
     if test "$PHP_WXWIDGETS_DEBUG" != "no"; then
         dnl Yes, so set the C macro
         AC_DEFINE(USE_WXPHP_DEBUG,1,[Include debugging support in wxPHP])
-        
+
         CFLAGS="$CFLAGS -g"
         CXXFLAGS="$CXXFLAGS -g"
     fi
-    
+
     dnl Add additional includes directory
     PHP_WXWIDGETS_PEAR=`pwd | grep pear`
     if test "$PHP_WXWIDGETS_PEAR" != ""; then
@@ -203,15 +203,15 @@ if test "$PHP_WXWIDGETS" != "no"; then
     else
         PHP_WXWIDGETS_CFLAGS="-Iincludes";
     fi
-    
+
     dnl Retreive and store wxWidgets compiler flags
     WXWIDGETS_CFLAGS=`$WXCONFIG_PATH --cxxflags`
-    
+
     dnl Add some header paths required for wxWindow::GetHandle()
     if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
         WXWIDGETS_IS_GTK2=`$WXCONFIG_PATH --list | grep "config is gtk2"`
         WXWIDGETS_IS_GTK3=`$WXCONFIG_PATH --list | grep "config is gtk3"`
-        
+
         if test "$WXWIDGETS_IS_GTK2" != ""; then
             GTK2_CFLAGS=`pkg-config gtk+-2.0 --cflags`
             WXWIDGETS_CFLAGS="$WXWIDGETS_CFLAGS $GTK2_CFLAGS"
@@ -220,10 +220,10 @@ if test "$PHP_WXWIDGETS" != "no"; then
             WXWIDGETS_CFLAGS="$WXWIDGETS_CFLAGS $GTK3_CFLAGS"
         fi
     fi
-    
-    dnl Append wx-config flags to wxphp compiler flags 
+
+    dnl Append wx-config flags to wxphp compiler flags
     PHP_WXWIDGETS_CFLAGS="$PHP_WXWIDGETS_CFLAGS $WXWIDGETS_CFLAGS"
-    
+
     dnl Add gstreamer and sdl ldflags if on linux
     PHP_WXWIDGETS_OTHER_LDFLAGS=""
     if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
@@ -237,11 +237,11 @@ if test "$PHP_WXWIDGETS" != "no"; then
             CXX=`$WXCONFIG_PATH --cxx`
         fi
     fi
-    
+
     dnl Retreive and store wxWidgets library flags
     if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
         PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
-        
+
         dnl Append wxscintilla and gstreamer if static build
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
             PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
@@ -250,19 +250,19 @@ if test "$PHP_WXWIDGETS" != "no"; then
     else
         PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs xrc,webview,stc,richtext,ribbon,propgrid,aui,html,qa,adv,core,xml,net,media,base`
     fi
-    
+
     dnl Append wxWidgets flags to the compiler flags and suppress warning flags
     CXXFLAGS="$CXXFLAGS $PHP_WXWIDGETS_CFLAGS"
 
     dnl Add header search paths to the PHP build system
     PHP_EVAL_INCLINE($PHP_WXWIDGETS_CFLAGS)
-    
-    dnl Add libraries and or library search paths to the PHP build system 
+
+    dnl Add libraries and or library search paths to the PHP build system
     PHP_EVAL_LIBLINE($PHP_WXWIDGETS_LIBS, WXWIDGETS_SHARED_LIBADD)
 
     dnl Adds variable with value into Makefile for example CC = gcc
     PHP_SUBST(WXWIDGETS_SHARED_LIBADD)
-    
+
     dnl Link the C++ standard library
     PHP_ADD_LIBRARY(stdc++, 1, WXWIDGETS_SHARED_LIBADD)
 
