@@ -1,7 +1,8 @@
 [![Build Status](https://img.shields.io/travis/wxphp/wxphp/master.svg?style=flat-square)](https://travis-ci.org/wxphp/wxphp)
 [![Download wxPHP](https://img.shields.io/sourceforge/dw/wxphp.svg)](https://sourceforge.net/projects/wxphp/files/latest/download)
+[![Project Stats](https://www.openhub.net/p/wxphp/widgets/project_thin_badge?format=gif&ref=Thin+badge)](https://www.openhub.net/p/wxphp)
 
-**[Homepage](http://wxphp.org/)** 
+**[Homepage](http://wxphp.org/)**
 |
 **[Documentation](http://github.com/wxphp/wxphp/wiki)**
 |
@@ -15,45 +16,45 @@
 
 ---
 
-[![wxPHP Logo](http://wxphp.org/themes/wxphp/images/logo.png)](http://wxphp.org) 
+[![wxPHP Logo](http://wxphp.org/themes/wxphp/images/logo.png)](http://wxphp.org)
 
-wxPHP stands for "wxwidgets for PHP" and it is a php binding/wrapper 
-for the cross-platform library [wxWidgets](http://wxwidgets.org/), 
-which gives you the ability to develop desktop applications using the 
-php programming language. This applications can be executed on windows, 
+wxPHP stands for "wxwidgets for PHP" and it is a php binding/wrapper
+for the cross-platform library [wxWidgets](http://wxwidgets.org/),
+which gives you the ability to develop desktop applications using the
+php programming language. This applications can be executed on windows,
 linux and macosx using the same code base with a native look and feel.
 
-One of the ideas is that you can use your php web applications code 
-base and logic to create native desktop applications that communicate 
-to them transparently. This way you can give your users a seamless and 
-native experience from the desktop while staying in sync with your 
+One of the ideas is that you can use your php web applications code
+base and logic to create native desktop applications that communicate
+to them transparently. This way you can give your users a seamless and
+native experience from the desktop while staying in sync with your
 web apps.
 
-There are many more use cases, but we invite you to download and 
-try this project by your self. We hope everyone can enjoy it as much 
+There are many more use cases, but we invite you to download and
+try this project by your self. We hope everyone can enjoy it as much
 as we have enjoyed developing it.
 
 ## wxFormBuilder
 
-wxFormBuilder is a RAD tool for wxWidgets GUI design. So to make 
+wxFormBuilder is a RAD tool for wxWidgets GUI design. So to make
 development with wxPHP more easier we added php support to it.
 For more information visit the [project page](http://wxformbuilder.org/).
-		
+
 Integration of PHP support wouldn't be possible without the help
-of [RedTide](https://github.com/redtide) and the rest of 
-[wxFormBuilder team](https://sourceforge.net/p/wxformbuilder/_members/), 
+of [RedTide](https://github.com/redtide) and the rest of
+[wxFormBuilder team](https://sourceforge.net/p/wxformbuilder/_members/),
 Thanks a lot!
 
 ## Support
 
 Any problems, please file an issue or visit the forums:
-	
+
 * [http://github.com/wxphp/wxphp/issues](http://github.com/wxphp/wxphp/issues)
 * [http://forums.wxphp.org/](http://forums.wxphp.org/)
 * [https://groups.google.com/forum/#!forum/wxphp](https://groups.google.com/forum/#!forum/wxphp)
-	
+
 GitHub.com project page where development occurs:
-	
+
 * [https://github.com/wxphp/wxphp](https://github.com/wxphp/wxphp)
 
 SourceForge.net project page which hosts the binary builds.
