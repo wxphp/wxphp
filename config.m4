@@ -20,7 +20,7 @@ PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWi
 if test "$PHP_WXWIDGETS" != "no"; then
 
     dnl Set the wxWidgets version to download and compile
-    PHP_WX_VERSION="3.0.2"
+    PHP_WX_VERSION="3.0.4"
 
     if test "$PHP_WXWIDGETS_VERSION" != "no"; then
         PHP_WX_VERSION=$PHP_WXWIDGETS_VERSION
@@ -78,7 +78,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
             fi
 
             AC_MSG_CHECKING([for gstreamer include files])
-            if test -e "/usr/include/gstreamer-0.10/gst/gst.h"; then
+            if test -e "/usr/include/gstreamer-1.0/gst/gst.h"; then
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
@@ -86,7 +86,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
             fi
 
             AC_MSG_CHECKING([for gstreamer plugins include files])
-            if test -e "/usr/include/gstreamer-0.10/gst/audio/audio.h"; then
+            if test -e "/usr/include/gstreamer-1.0/gst/video/video.h"; then
                 AC_MSG_RESULT([found])
             else
                 AC_MSG_RESULT([not found])
@@ -228,7 +228,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
     PHP_WXWIDGETS_OTHER_LDFLAGS=""
     if test "$PHP_WXWIDGETS_MACOSX" == "no"; then
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_OTHER_LDFLAGS=`pkg-config --libs sdl gstreamer-0.10 gstreamer-interfaces-0.10`
+            PHP_WXWIDGETS_OTHER_LDFLAGS=`pkg-config --libs sdl gstreamer-1.0 gstreamer-video-1.0`
         fi
     else
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
@@ -244,7 +244,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 
         dnl Append wxscintilla and gstreamer if static build
         if test "$PHP_WXWIDGETS_STATIC" != "no"; then
-            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
+            PHP_WXWIDGETS_LDFLAGS="$PHP_WXWIDGETS_LIBS -lwxscintilla-3.0 -lwebkitgtk-3.0 $PHP_WXWIDGETS_OTHER_LDFLAGS"
             LDFLAGS="$LDFLAGS $PHP_WXWIDGETS_LDFLAGS"
         fi
     else
