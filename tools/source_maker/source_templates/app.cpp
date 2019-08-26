@@ -32,16 +32,15 @@ void php_wxApp_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
 {
     #ifdef USE_WXPHP_DEBUG
     php_printf("Calling php_wxApp_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
     php_printf("===========================================\n");
     #endif
 
-    zend_object_value retval;
     zo_wxApp* custom_object;
-    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp));
+    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp) + zend_object_properties_size(class_type));
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
 
@@ -51,17 +50,16 @@ zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
     zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
     #else
-    object_properties_init(&custom_object->zo, class_type);
+    //object_properties_init(&custom_object->zo, class_type);
     #endif
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAPP_TYPE;
     custom_object->is_user_initialized = 0;
 
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxApp_free, NULL TSRMLS_CC);
-    retval.handlers = zend_get_std_object_handlers();
+    custom_object->zo.handlers = zend_get_std_object_handlers();
 
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 

@@ -51,7 +51,7 @@ struct zo_wxApp
 };
 
 void php_wxApp_free(void *object TSRMLS_DC);
-zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 static zend_function_entry php_wxApp_functions[] = {

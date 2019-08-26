@@ -35,7 +35,7 @@ struct zo_<?=$class_name?>
 };
 
 void php_<?=$class_name?>_free(void *object TSRMLS_DC);
-zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES

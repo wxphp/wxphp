@@ -143,7 +143,7 @@ void php_<?=$class_name?>_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_<?=$class_name?>_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
@@ -151,9 +151,8 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
 	#endif
 	
 	zval *temp;
-    zend_object_value retval;
     zo_<?=$class_name?>* custom_object;
-    custom_object = (zo_<?=$class_name?>*) emalloc(sizeof(zo_<?=$class_name?>));
+    custom_object = (zo_<?=$class_name?>*) emalloc(sizeof(zo_<?=$class_name?>) + zend_object_properties_size(class_type));
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
 
@@ -162,18 +161,18 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
     zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
     zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
 #else
-	object_properties_init(&custom_object->zo, class_type);
+	//object_properties_init(&custom_object->zo, class_type);
 #endif
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_<?=$class_name?>_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
+	//retval.handle = zend_objects_store_put(custom_object, NULL, php_<?=$class_name?>_free, NULL TSRMLS_CC);
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
     custom_object->native_object = NULL;
 <? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
 #if PHP_VERSION_ID > 50399
     MAKE_STD_ZVAL(temp);
 	Z_TYPE_P(temp) = IS_OBJECT;
-	Z_OBJVAL_P(temp) = retval;
+	Z_OBJVAL_P(temp) = &custom_object->zo;
 #endif
 
 	custom_object->native_object = new <?=$class_name?>_php();
@@ -185,7 +184,7 @@ zend_object_value php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_D
 	custom_object->object_type = PHP_<?=strtoupper($class_name)?>_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
