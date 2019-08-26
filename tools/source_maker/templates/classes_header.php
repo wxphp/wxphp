@@ -1,5 +1,5 @@
 extern zend_class_entry* php_<?=$class_name?>_entry;
-void php_<?=$class_name?>_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_<?=$class_name?>_destruction_handler(zend_resource * TSRMLS_DC);
 
 class <?=$class_name?>_php<?if($class_name == "wxScrolled"){?>: public <?=$class_name?><wxPanel><?} elseif(!$class_methods["_forward_declaration"]){?>: public <?=$class_name?><?}?>
 {
