@@ -72,4 +72,10 @@ static zend_function_entry php_wxApp_functions[] = {
     { NULL, NULL, NULL }
 };
 
+static inline struct zo_wxApp * php_wxApp_fetch_object(zend_object *obj) {
+      return (struct zo_wxApp *)((char *)obj - XtOffsetOf(struct zo_wxApp, zo));
+}
+
+#define Z_wxApp_P(zv) php_wxApp_fetch_object(Z_OBJ_P(zv))
+
 #endif //WXPHP_APP_H_GUARD
