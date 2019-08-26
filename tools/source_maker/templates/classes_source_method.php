@@ -21,7 +21,7 @@ PHP_METHOD(php_<?=$class_name?>, <?=php_method_name($method_name)?>)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_<?=$class_name?>*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_<?=$class_name?>_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

@@ -571,7 +571,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 		$object_constants .= tabs(2) . "zval z_wx_transparent_color;\n";
 		$object_constants .= tabs(2) . "wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n";
 		$object_constants .= tabs(2) . "object_init_ex(&z_wx_transparent_color, php_wxColour_entry);\n";
-		$object_constants .= tabs(2) . "((zo_wxColour*) zend_object_store_get_object(&z_wx_transparent_color TSRMLS_CC))->native_object = (wxColour_php*) _wx_transparent_color;\n";
+		$object_constants .= tabs(2) . "Z_wxColour_P(&z_wx_transparent_color TSRMLS_CC)->native_object = (wxColour_php*) _wx_transparent_color;\n";
 		$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"wxTransparentColour\", z_wx_transparent_color, CONST_CS | CONST_PERSISTENT);\n";
 		continue;
 	}
@@ -709,7 +709,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 				case "const_pointer":
 					$object_constants .= tabs(2) . "zval z_{$variable_name};\n";
 					$object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
-					$object_constants .= tabs(2) . "((zo_{$plain_type}*) zend_object_store_get_object(&z_{$variable_name} TSRMLS_CC))->native_object = ({$plain_type}_php*) {$variable_name};\n";
+					$object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name} TSRMLS_CC)->native_object = ({$plain_type}_php*) {$variable_name};\n";
 					$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
 					break;
 					
@@ -719,7 +719,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 				case "const_none":
 					$object_constants .= tabs(2) . "zval z_{$variable_name};\n";
 					$object_constants .= tabs(2) . "object_init_ex(&z_{$variable_name}, php_{$plain_type}_entry);\n";
-					$object_constants .= tabs(2) . "((zo_{$plain_type}*) zend_object_store_get_object(&z_{$variable_name} TSRMLS_CC))->native_object = ({$plain_type}_php*) &{$variable_name};\n";
+					$object_constants .= tabs(2) . "Z_{$plain_type}_P(&z_{$variable_name} TSRMLS_CC)->native_object = ({$plain_type}_php*) &{$variable_name};\n";
 					$object_constants .= tabs(2) . "wxPHP_REGISTER_OBJECT_CONSTANT(\"$variable_name\", z_{$variable_name}, CONST_CS | CONST_PERSISTENT);\n\n";
 					break;
 			}

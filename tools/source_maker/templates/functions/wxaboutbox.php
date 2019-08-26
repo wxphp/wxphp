@@ -12,7 +12,7 @@ PHP_FUNCTION(php_wxAboutBox)
 		RETURN_NULL();
 	}
 	
-	info = (wxAboutDialogInfo*) ((zo_wxAboutDialogInfo*) zend_object_store_get_object(object TSRMLS_CC))->native_object;
+	info = (wxAboutDialogInfo*) Z_wxAboutDialogInfo_P(object TSRMLS_CC)->native_object;
 	
 	wxAboutBox(*info);
 }

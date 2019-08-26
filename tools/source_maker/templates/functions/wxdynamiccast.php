@@ -12,7 +12,7 @@ PHP_FUNCTION(php_wxDynamicCast)
 	{
 		if(Z_TYPE_P(object) == IS_OBJECT)
 		{
-			native_object = (void*) ((zo_wxObject*) zend_object_store_get_object(object TSRMLS_CC))->native_object;
+			native_object = (void*) Z_wxObject_P(object TSRMLS_CC)->native_object;
 			
 			if(!native_object)
 			{
@@ -34,7 +34,7 @@ PHP_FUNCTION(php_wxDynamicCast)
 		{
 			object_init_ex(return_value, php_<?=$className?>_entry);
 			<?=$className?>* return_native_object = wxDynamicCast(native_object, <?=$className?>_php);
-			((zo_<?=$className?>*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (<?=$className?>_php*) return_native_object;
+    Z_<?=$className?>_P(return_value TSRMLS_CC)->native_object = (<?=$className?>_php*) return_native_object;
 			return;
 		}
 <?}?>

@@ -20,7 +20,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		#endif
 		
 		object_init_ex(arg[0], php_<?=$kevn?>_entry);
-		((zo_<?=$kevn?>*) zend_object_store_get_object(arg[0] TSRMLS_CC))->native_object = (<?=$kevn?>_php*) &evnt;
+    Z_<?=$kevn?>_P(arg[0] TSRMLS_CC)->native_object = (<?=$kevn?>_php*) &evnt;
 	}
 	<? } ?>
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxEvent")))
@@ -30,7 +30,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		#endif
 		
 		object_init_ex(arg[0], php_wxEvent_entry);
-		((zo_wxEvent*) zend_object_store_get_object(arg[0] TSRMLS_CC))->native_object = (wxEvent_php*) &evnt;
+    Z_wxEvent_P(arg[0] TSRMLS_CC)->native_object = (wxEvent_php*) &evnt;
 	}
 	else
 	{
@@ -88,7 +88,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 	//Get native object of the php object that called the method
 	if (getThis() != NULL) 
 	{
-		current_object = (zo_<?=$class_name?>*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_<?=$class_name?>_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

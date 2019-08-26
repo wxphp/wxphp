@@ -481,7 +481,7 @@ PHP_METHOD(php_wxApp, __construct)
     native_object->tsrm_ls = tsrm_ls;
     #endif
 
-    current_object = (zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC);
+    current_object = Z_wxApp_P(getThis());
 
     current_object->native_object = native_object;
 
@@ -500,7 +500,7 @@ PHP_METHOD(php_wxApp, SetInstance)
         RETURN_NULL();
     }
 
-    wxApp::SetInstance((wxAppWrapper*) ((zo_wxApp*) zend_object_store_get_object(objvar TSRMLS_CC))->native_object);
+    wxApp::SetInstance((wxAppWrapper*) Z_wxApp_P(objvar TSRMLS_CC)->native_object);
 }
 /* }}} */
 
@@ -521,10 +521,8 @@ PHP_METHOD(php_wxApp, GetInstance)
     else
     {
         object_init_ex(return_value, php_wxApp_entry);
-        
-        ((zo_wxApp*) 
-            zend_object_store_get_object(return_value TSRMLS_CC)
-        )->native_object = (wxAppWrapper*) instance;
+    
+        Z_wxApp_P(return_value TSRMLS_CC)->native_object = (wxAppWrapper*) instance;
     }
 }
 /* }}} */
@@ -532,7 +530,7 @@ PHP_METHOD(php_wxApp, GetInstance)
 /* {{{ proto bool wxApp::Yield() */
 PHP_METHOD(php_wxApp, Yield)
 {
-    wxAppWrapper* native_object = ((zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC))->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
 
     if (zend_parse_parameters_none() == FAILURE)
         return;
@@ -544,13 +542,8 @@ PHP_METHOD(php_wxApp, Yield)
 /* {{{ proto bool wxApp::GetAppDisplayName(string name) */
 PHP_METHOD(php_wxApp, GetAppDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
-            
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
+    
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetAppDisplayName();
     
@@ -567,12 +560,7 @@ PHP_METHOD(php_wxApp, GetAppDisplayName)
 /* {{{ proto bool wxApp::GetAppName(string name) */
 PHP_METHOD(php_wxApp, GetAppName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetAppName();
@@ -590,12 +578,7 @@ PHP_METHOD(php_wxApp, GetAppName)
 /* {{{ proto bool wxApp::GetClassName(string name) */
 PHP_METHOD(php_wxApp, GetClassName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetClassName();
@@ -613,12 +596,7 @@ PHP_METHOD(php_wxApp, GetClassName)
 /* {{{ proto bool wxApp::GetVendorDisplayName(string name) */
 PHP_METHOD(php_wxApp, GetVendorDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetVendorDisplayName();
@@ -636,12 +614,7 @@ PHP_METHOD(php_wxApp, GetVendorDisplayName)
 /* {{{ proto bool wxApp::GetVendorName(string name) */
 PHP_METHOD(php_wxApp, GetVendorName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetVendorName();
@@ -660,12 +633,7 @@ PHP_METHOD(php_wxApp, GetVendorName)
 /* {{{ proto bool wxApp::SetAppDisplayName(string name) */
 PHP_METHOD(php_wxApp, SetAppDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -696,12 +664,7 @@ PHP_METHOD(php_wxApp, SetAppDisplayName)
 /* {{{ proto bool wxApp::SetAppName(string name) */
 PHP_METHOD(php_wxApp, SetAppName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -732,12 +695,7 @@ PHP_METHOD(php_wxApp, SetAppName)
 /* {{{ proto bool wxApp::SetClassName(string name) */
 PHP_METHOD(php_wxApp, SetClassName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -768,12 +726,7 @@ PHP_METHOD(php_wxApp, SetClassName)
 /* {{{ proto bool wxApp::SetVendorDisplayName(string name) */
 PHP_METHOD(php_wxApp, SetVendorDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -804,12 +757,7 @@ PHP_METHOD(php_wxApp, SetVendorDisplayName)
 /* {{{ proto bool wxApp::SetVendorName(string name) */
 PHP_METHOD(php_wxApp, SetVendorName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;

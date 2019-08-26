@@ -102,7 +102,7 @@ PHP_FUNCTION(php_wxExecute)
                 break;
 
             case 3:
-                process = (wxProcess*) ((zo_wxProcess*) zend_object_store_get_object(z_process TSRMLS_CC))->native_object;
+                process = (wxProcess*) Z_wxProcess_P(z_process TSRMLS_CC)->native_object;
                 ret = wxExecute(wxString(_argStr0, wxConvUTF8), (int) flags, process);
                 RETURN_LONG(ret)
                 break;
@@ -245,8 +245,7 @@ PHP_FUNCTION(php_wxLogStatus)
 	{
 		// Called with wxFrame as first parameter
 	
-		frame = (wxFrame*)
-			((zo_wxFrame*) zend_object_store_get_object(zFrame TSRMLS_CC))->native_object;
+		frame = (wxFrame*) Z_wxFrame_P(zFrame TSRMLS_CC)->native_object;
 
 		message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1);
 	}

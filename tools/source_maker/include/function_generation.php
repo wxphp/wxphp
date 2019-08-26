@@ -659,8 +659,8 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					$object_retrieve_code .= "\t\t\tif(arguments_received >= ".($parameter_index+1)."){\n";
 					$object_retrieve_code .= "\t\t\t\tif(Z_TYPE_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") == IS_OBJECT)\n";
 					$object_retrieve_code .= "\t\t\t\t{\n";
-					$object_retrieve_code .= "\t\t\t\t\twxphp_object_type argument_type = ((zo_$argument_plain_type*) zend_object_store_get_object(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC))->object_type;\n";
-					$object_retrieve_code .= "\t\t\t\t\targument_native_object = (void*) ((zo_$argument_plain_type*) zend_object_store_get_object(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC))->native_object;\n";
+					$object_retrieve_code .= "\t\t\t\t\twxphp_object_type argument_type = Z_{$argument_plain_type}_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC)->object_type;\n";
+					$object_retrieve_code .= "\t\t\t\t\targument_native_object = (void*) Z_{$argument_plain_type}_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC)->native_object;\n";
 					$object_retrieve_code .= "\t\t\t\t\tobject_pointer{$declaration_index}_{$parameter_index} = ($argument_plain_type*) argument_native_object;\n";
 					$object_retrieve_code .= "\t\t\t\t\tif (!object_pointer{$declaration_index}_{$parameter_index} ";
 					if(trim($typeVerifierStr) != "")
@@ -1664,7 +1664,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								$return_called_overload .= tabs(4) . "else{\n";
 								$return_called_overload .= tabs(5) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
-								$return_called_overload .= tabs(5) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) value_to_return{$required_parameters};\n";
+								$return_called_overload .= tabs(5) . "Z_{$return_type}_P(return_value TSRMLS_CC)->native_object = ({$return_type}_php*) value_to_return{$required_parameters};\n";
 								$return_called_overload .= tabs(4) . "}\n\n";
 
 								if(!$declaration["static"] && $class_name)
@@ -1712,7 +1712,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								$return_called_overload .= tabs(4) . "else{\n";
 								$return_called_overload .= tabs(5) . "object_init_ex(return_value,php_{$return_type}_entry);\n";
-								$return_called_overload .= tabs(5) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = ({$return_type}_php*) value_to_return{$required_parameters};\n";
+								$return_called_overload .= tabs(5) . "Z_{$return_type}_P(return_value TSRMLS_CC)->native_object = ({$return_type}_php*) value_to_return{$required_parameters};\n";
 								$return_called_overload .= tabs(4) . "}\n\n";
 
 								if(!$declaration["static"] && $class_name)
@@ -1763,7 +1763,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
                                     {
                                         $return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
                                     }
-									$return_called_overload .= tabs(4) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+									$return_called_overload .= tabs(4) . "zo_{$return_type}* zo{$required_parameters} = Z_{$return_type}_P(return_value TSRMLS_CC);\n";
 									$return_called_overload .= tabs(4) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
 								}
 								break;
@@ -1994,7 +1994,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
                     {
                         $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
                     }
-					$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+					$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = Z_{$return_type}_P(return_value TSRMLS_CC);\n";
 					$call_code .= tabs($t) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
 
 					break;
@@ -2279,7 +2279,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
                         {
                             $call_code .= tabs($t) . "(({$return_type}_php*)ptr)->InitProperties();\n";
                         }
-						$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = (zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC);\n";
+						$call_code .= tabs($t) . "zo_{$return_type}* zo{$required_parameters} = Z_{$return_type}_P(return_value TSRMLS_CC);\n";
 						$call_code .= tabs($t) . "zo{$required_parameters}->native_object = ({$return_type}_php*) ptr;\n";
 
 						break;

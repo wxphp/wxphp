@@ -22,7 +22,7 @@ PHP_METHOD(php_wxImage, GetData)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxImage*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxImage_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

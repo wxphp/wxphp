@@ -30,7 +30,7 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 		native_object->InitProperties();
 <?}?>
 
-		current_object = (zo_<?=$class_name?>*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_<?=$class_name?>_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		

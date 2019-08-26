@@ -52,3 +52,11 @@ static zend_function_entry php_<?=$class_name?>_functions[] = {
 };
 #endif
 
+
+static inline struct zo_<?=$class_name?> * php_<?=$class_name?>_fetch_object(zend_object *obj) {
+      return (struct zo_<?=$class_name?> *)((char *)obj - XtOffsetOf(struct zo_<?=$class_name?>, zo));
+}
+
+#define Z_<?=$class_name?>_P(zv) php_<?=$class_name?>_fetch_object(Z_OBJ_P(zv))
+
+//struct zo_<?=$class_name?>* obj = Z_<?=$class_name?>_P(getThis());

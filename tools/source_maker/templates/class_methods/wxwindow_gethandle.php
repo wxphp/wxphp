@@ -55,7 +55,7 @@ PHP_METHOD(php_wxWindow, GetHandle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

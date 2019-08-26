@@ -150,14 +150,14 @@ function classes_get_property_code($class_name)
                         case "pointer":
                         case "pointer_pointer":
                             $code .= tabs(2) . "object_init_ex(return_value, php_{$property_type}_entry);\n";
-                            $code .= tabs(2) . "((zo_{$class_name}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (({$property_type}_php*) *((void**) native_object->properties[$property_index]));\n";
+                            $code .= tabs(2) . "Z_{$class_name}_P(return_value TSRMLS_CC)->native_object = (({$property_type}_php*) *((void**) native_object->properties[$property_index]));\n";
                             $code .= tabs(2) . "return;\n";
                             break;
 
                         case "reference":
                         case "none":
                             $code .= tabs(2) . "object_init_ex(return_value, php_{$property_type}_entry);\n";
-                            $code .= tabs(2) . "((zo_{$class_name}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (({$property_type}_php*) native_object->properties[$property_index]);\n";
+                            $code .= tabs(2) . "Z_{$class_name}_P(return_value TSRMLS_CC)->native_object = (({$property_type}_php*) native_object->properties[$property_index]);\n";
                             $code .= tabs(2) . "return;\n";
                             break;
                     }

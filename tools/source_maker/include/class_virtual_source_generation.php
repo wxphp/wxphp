@@ -178,19 +178,19 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 					case "pointer":
 					case "const_pointer":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
-						$output .= tabs(1) . "((zo_{$argument_type}*) zend_object_store_get_object(arguments[$parameter_index] TSRMLS_CC))->native_object = ({$argument_type}_php*) ".$method_definition[$parameter_names][$parameter_index].";\n";
+						$output .= tabs(1) . "Z_{$argument_type}_P(arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) ".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 				
 					case "reference":
 					case "const_reference":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
-						$output .= tabs(1) . "((zo_{$argument_type}*) zend_object_store_get_object(arguments[$parameter_index] TSRMLS_CC))->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
+						$output .= tabs(1) . "Z_{$argument_type}_P(arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 						
 					case "none":
 					case "const_none":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
-						$output .= tabs(1) . "((zo_{$argument_type}*) zend_object_store_get_object(arguments[$parameter_index] TSRMLS_CC))->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
+						$output .= tabs(1) . "Z_{$argument_type}_P(arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 				}
 				break;
@@ -407,11 +407,11 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 		{
 			$output .= "if(Z_TYPE_P(return_value) == IS_OBJECT)\n";
 			$output .= tabs(1) . "{\n";
-			$output .= tabs(2) . "return_object = (void*) ((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;\n";
+			$output .= tabs(2) . "return_object = (void*) Z_{$return_type}_P(return_value TSRMLS_CC)->native_object;\n";
 			$output .= tabs(1) . "}\n\n";
 			
 			$output .= tabs(1) . "//Threat it as a normal object on the calling function and not a php user space intiialized one\n";
-			$output .= tabs(1) . "((zo_{$return_type}*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;\n";
+			$output .= tabs(1) . "Z_{$return_type}_P(return_value TSRMLS_CC)->is_user_initialized = 0;\n";
 			$output .= tabs(1) . "{$return_type}_php* var = ({$return_type}_php*) return_object;\n";
 			$output .= tabs(1) . "var->references.UnInitialize();\n\n";
 			
