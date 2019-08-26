@@ -168,7 +168,7 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC)
 	custom_object->zo.handlers = zend_get_std_object_handlers();
 
     custom_object->native_object = NULL;
-<? if(!in_array("__construct", funcsOfClass($class_name, 1)) && has_all_pure_virtual_implemented($class_name)){ ?>
+<? if(!in_array("__construct", funcsOfClass($class_name, 1, $output)) && has_all_pure_virtual_implemented($class_name)){ ?>
 #if PHP_VERSION_ID > 50399
     MAKE_STD_ZVAL(temp);
 	Z_TYPE_P(temp) = IS_OBJECT;
