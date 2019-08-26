@@ -70,7 +70,7 @@ int wxAppWrapper::OnExit()
     zval *retval;
     zval func_name;
 
-    ZVAL_STRINGL(&func_name, (char *)"OnExit", sizeof("OnExit")-1, 0);
+    ZVAL_STRINGL(&func_name, (char *)"OnExit", sizeof("OnExit")-1);
 
     call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
 
@@ -82,7 +82,7 @@ bool wxAppWrapper::OnInit()
     zval *retval;
     zval func_name;
 
-    ZVAL_STRINGL(&func_name, (char *)"OnInit", sizeof("OnInit")-1, 0);
+    ZVAL_STRINGL(&func_name, (char *)"OnInit", sizeof("OnInit")-1);
 
     wxFileSystem::AddHandler(new wxZipFSHandler);
 
@@ -109,7 +109,7 @@ void wxAppWrapper::MacNewFile()
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacNewFile", sizeof("MacNewFile")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacNewFile", sizeof("MacNewFile")-1);
 
     zval* return_value;
     MAKE_STD_ZVAL(return_value);
@@ -149,7 +149,7 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenFiles", sizeof("MacOpenFiles")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenFiles", sizeof("MacOpenFiles")-1);
 
     zval** params[1];
     zval *arguments[1];
@@ -212,7 +212,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenFile", sizeof("MacOpenFile")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenFile", sizeof("MacOpenFile")-1);
 
     zval** params[1];
     zval *arguments[1];
@@ -229,7 +229,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     //Parameters for conversion
     temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
     strcpy(temp_string, (const char *) fileName.char_str());
-    ZVAL_STRING(arguments[0], temp_string, 1);
+    ZVAL_STRING(arguments[0], temp_string);
     free(temp_string);
 
     //Set parameters that are sent to function
@@ -271,7 +271,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenURL", sizeof("MacOpenURL")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenURL", sizeof("MacOpenURL")-1);
 
     zval** params[1];
     zval *arguments[1];
@@ -288,7 +288,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     //Parameters for conversion
     temp_string = (char*)malloc(sizeof(wxChar)*(url.size()+1));
     strcpy(temp_string, (const char *) url.char_str());
-    ZVAL_STRING(arguments[0], temp_string, 1);
+    ZVAL_STRING(arguments[0], temp_string);
     free(temp_string);
 
     //Set parameters that are sent to function
@@ -330,7 +330,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacPrintFile", sizeof("MacPrintFile")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacPrintFile", sizeof("MacPrintFile")-1);
 
     zval** params[1];
     zval *arguments[1];
@@ -347,7 +347,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     //Parameters for conversion
     temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
     strcpy(temp_string, (const char *) fileName.char_str());
-    ZVAL_STRING(arguments[0], temp_string, 1);
+    ZVAL_STRING(arguments[0], temp_string);
     free(temp_string);
 
     //Set parameters that are sent to function
@@ -389,7 +389,7 @@ void wxAppWrapper::MacReopenApp()
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacReopenApp", sizeof("MacReopenApp")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacReopenApp", sizeof("MacReopenApp")-1);
 
     zval* return_value;
     MAKE_STD_ZVAL(return_value);
@@ -429,7 +429,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"OSXIsGUIApplication", sizeof("OSXIsGUIApplication")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"OSXIsGUIApplication", sizeof("OSXIsGUIApplication")-1);
 
     zval* return_value;
     MAKE_STD_ZVAL(return_value);
@@ -558,7 +558,7 @@ PHP_METHOD(php_wxApp, GetAppDisplayName)
     temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
     strcpy (temp_string, (const char *) value_to_return.char_str() );
     
-    ZVAL_STRING(return_value, temp_string, 1);
+    ZVAL_STRING(return_value, temp_string);
     
     free(temp_string);
 }
@@ -581,7 +581,7 @@ PHP_METHOD(php_wxApp, GetAppName)
     temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
     strcpy (temp_string, (const char *) value_to_return.char_str() );
     
-    ZVAL_STRING(return_value, temp_string, 1);
+    ZVAL_STRING(return_value, temp_string);
     
     free(temp_string);
 }
@@ -604,7 +604,7 @@ PHP_METHOD(php_wxApp, GetClassName)
     temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
     strcpy (temp_string, (const char *) value_to_return.char_str() );
     
-    ZVAL_STRING(return_value, temp_string, 1);
+    ZVAL_STRING(return_value, temp_string);
     
     free(temp_string);
 }
@@ -627,7 +627,7 @@ PHP_METHOD(php_wxApp, GetVendorDisplayName)
     temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
     strcpy (temp_string, (const char *) value_to_return.char_str() );
     
-    ZVAL_STRING(return_value, temp_string, 1);
+    ZVAL_STRING(return_value, temp_string);
     
     free(temp_string);
 }
@@ -650,7 +650,7 @@ PHP_METHOD(php_wxApp, GetVendorName)
     temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
     strcpy (temp_string, (const char *) value_to_return.char_str() );
     
-    ZVAL_STRING(return_value, temp_string, 1);
+    ZVAL_STRING(return_value, temp_string);
     
     free(temp_string);
 }

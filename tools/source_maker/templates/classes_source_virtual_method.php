@@ -28,7 +28,7 @@
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
 	zval function_name;
-	ZVAL_STRING(&function_name, "<?=$method_name?>", 0);
+	ZVAL_STRING(&function_name, "<?=$method_name?>");
 	char* temp_string;
 	void* return_object;
 	int function_called;

@@ -58,7 +58,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 	wxname = (char*)emalloc(sizeof(wxChar)*(ce->GetString().size()+1));
 	strcpy(wxname, (const char *) ce->GetString().char_str());
 	
-	ZVAL_STRING(fc_name, wxname, 1);
+	ZVAL_STRING(fc_name, wxname);
 
 	if(call_user_function(NULL, &(co->phpObj), fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE)
 	{

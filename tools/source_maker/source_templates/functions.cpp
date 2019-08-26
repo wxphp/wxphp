@@ -43,7 +43,7 @@ zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
 		WRONG_PARAM_COUNT_WITH_RETVAL(NULL);
 	}
 		
-	ZVAL_STRINGL(&funcName, "sprintf", sizeof("sprintf") - 1, 0);
+	ZVAL_STRINGL(&funcName, "sprintf", sizeof("sprintf") - 1);
 
 	if (call_user_function_ex(EG(function_table), NULL, &funcName, &string,
 		argc - offset, argv + offset, 0, NULL TSRMLS_CC) == SUCCESS)

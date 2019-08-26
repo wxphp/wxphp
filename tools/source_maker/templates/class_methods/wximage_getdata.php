@@ -94,8 +94,7 @@ PHP_METHOD(php_wxImage, GetData)
 				ZVAL_STRINGL(
                     return_value, 
                     (char*) value_to_return0, 
-                    bytes_count, 
-                    0
+                    bytes_count
                 );
 
 
