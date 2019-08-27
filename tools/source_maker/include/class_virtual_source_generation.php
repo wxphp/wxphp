@@ -64,11 +64,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "ZVAL_LONG(arguments[$parameter_index], *".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_LONG(&arguments[$parameter_index], *".$method_definition[$parameter_names][$parameter_index].");\n";
 						break;
 						
 					default: 
-						$output .= "ZVAL_LONG(arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_LONG(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].");\n";
 				}
 				break;
 			}	
@@ -122,11 +122,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "ZVAL_LONG(arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."->GetTicks());\n";
+						$output .= "ZVAL_LONG(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."->GetTicks());\n";
 						break;
 						
 					default: 
-						$output .= "ZVAL_LONG(arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].".GetTicks());\n";
+						$output .= "ZVAL_LONG(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].".GetTicks());\n";
 				}
 				break;
 			}
