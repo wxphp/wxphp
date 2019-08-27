@@ -104,7 +104,7 @@ function classes_get_property_code($class_name)
                     {
                         case "pointer":
                         case "pointer_pointer":
-                            $code .= tabs(2) . "RETVAL_STRING(((char*) *((void**) native_object->properties[$property_index])), 1);\n";
+                            $code .= tabs(2) . "RETVAL_STRING(((char*) *((void**) native_object->properties[$property_index])));\n";
                             break;
 
                         case "reference":
@@ -134,12 +134,12 @@ function classes_get_property_code($class_name)
                     {
                         case "pointer":
                         case "pointer_pointer":
-                            $code .= tabs(2) . "RETVAL_STRING(*((wxString*) *((void**) native_object->properties[$property_index])).char_str(), 1);\n";
+                            $code .= tabs(2) . "RETVAL_STRING(*((wxString*) *((void**) native_object->properties[$property_index])));\n";
                             break;
 
                         case "reference":
                         case "none":
-                            $code .= tabs(2) . "RETVAL_STRING((const char*) *((wxString*) native_object->properties[$property_index])->char_str(), 1);\n";
+                            $code .= tabs(2) . "RETVAL_STRING((const char*) *((wxString*) native_object->properties[$property_index]));\n";
                             break;
                     }
                     break;
