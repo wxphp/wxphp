@@ -156,24 +156,14 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC)
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	//object_properties_init(&custom_object->zo, class_type);
-#endif
-
 	//retval.handle = zend_objects_store_put(custom_object, NULL, php_<?=$class_name?>_free, NULL TSRMLS_CC);
 	custom_object->zo.handlers = zend_get_std_object_handlers();
 
     custom_object->native_object = NULL;
 <? if(!in_array("__construct", funcsOfClass($class_name, 1, $output)) && has_all_pure_virtual_implemented($class_name)){ ?>
-#if PHP_VERSION_ID > 50399
     MAKE_STD_ZVAL(temp);
 	Z_TYPE_P(temp) = IS_OBJECT;
 	Z_OBJVAL_P(temp) = &custom_object->zo;
-#endif
 
 	custom_object->native_object = new <?=$class_name?>_php();
 	custom_object->native_object->phpObj = temp;	

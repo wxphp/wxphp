@@ -44,15 +44,6 @@ zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
 
-    #if PHP_VERSION_ID < 50399
-    zval *temp;
-    ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-    #else
-    //object_properties_init(&custom_object->zo, class_type);
-    #endif
-
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAPP_TYPE;
     custom_object->is_user_initialized = 0;
