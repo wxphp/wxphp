@@ -926,7 +926,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
 								$return_called_overload .= tabs(5) . "{\n";
 								$return_called_overload .= tabs(6) . "convert_to_boolean_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "bools_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = Z_BVAL_PP(temp_array_value{$declaration_index}_{$parameter_index});\n";
+								$return_called_overload .= tabs(6) . "bools_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = Z_TYPE_INFO_PP(temp_array_value{$declaration_index}_{$parameter_index}) == IS_TRUE;\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";

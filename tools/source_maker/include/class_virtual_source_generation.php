@@ -354,7 +354,7 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 	{
 		case	"bool":
 		{
-			$output = "return Z_BVAL_P(return_value);\n";
+			$output = "return Z_TYPE_INFO_P(return_value) == IS_TRUE;\n";
 			break;
 		}
 		case	"integer":

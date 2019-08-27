@@ -453,7 +453,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_BVAL_P(return_value);
+    return Z_TYPE_INFO(return_value) == IS_TRUE;
 }
 #endif
 
