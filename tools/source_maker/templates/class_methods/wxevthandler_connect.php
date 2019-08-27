@@ -53,12 +53,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 	ce = (wxCommandEvent*) evnt.m_callbackUserData;
 	co = (wxPhpClientData*) ce->GetClientObject();
 
-	MAKE_STD_ZVAL(fc_name);
-	
-	wxname = (char*)emalloc(sizeof(wxChar)*(ce->GetString().size()+1));
-	strcpy(wxname, (const char *) ce->GetString().char_str());
-	
-	ZVAL_STRING(fc_name, wxname);
+	ZVAL_STRING(&fc_name, ce->GetString().char_str());
 
 	if(call_user_function(NULL, &(co->phpObj), fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE)
 	{

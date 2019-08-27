@@ -1121,7 +1121,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= tabs(4) . "ZVAL_STRING($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_STRING(&{$reference_name}, $variable_name);\n";
 								break;
 
 							case "reference":
@@ -1899,7 +1899,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
 			{
 				case "const_pointer":
 				case "pointer":
-					$call_code .= tabs($t) . "ZVAL_STRING(return_value, (char*) $method_name($parameters_string));\n";
+					$call_code .= tabs($t) . "ZVAL_STRING(&return_value, (char*) $method_name($parameters_string));\n";
 					break;
 
 				case "const_none":
@@ -2175,7 +2175,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_STRING(return_value, (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_STRING(&return_value, (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 
 					case "const_none":

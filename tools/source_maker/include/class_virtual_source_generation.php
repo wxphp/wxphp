@@ -92,11 +92,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) ".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_STRING(&arguments[$parameter_index], (char*) ".$method_definition[$parameter_names][$parameter_index].");\n";
 						break;
 						
 					default: 
-						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) &".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_STRING(&arguments[$parameter_index], (char*) &".$method_definition[$parameter_names][$parameter_index].");\n";
 				}
 				break;
 			}	
@@ -108,11 +108,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
                         break;
                     
 					case "const_pointer":
-						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) ".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_STRING(&arguments[$parameter_index], (char*) ".$method_definition[$parameter_names][$parameter_index].");\n";
 						break;
 						
 					default: 
-						$output .= "ZVAL_STRING(arguments[$parameter_index], (char*) &".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_STRING(&arguments[$parameter_index], (char*) &".$method_definition[$parameter_names][$parameter_index].");\n";
 				}
 				break;
 			}	
@@ -136,17 +136,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "temp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index]."->size()+1));\n";
-						$output .= tabs(1) . "strcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index]."->char_str());\n";
-						$output .= tabs(1) . "ZVAL_STRING(arguments[$parameter_index], temp_string);\n";
-						$output .= tabs(1) . "free(temp_string);\n";
+						$output .= "ZVAL_STRING(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."->char_str());\n";
 						break;
 						
-					default: 
-						$output .= "temp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index].".size()+1));\n";
-						$output .= tabs(1) . "strcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index].".char_str());\n";
-						$output .= tabs(1) . "ZVAL_STRING(arguments[$parameter_index], temp_string);\n";
-						$output .= tabs(1) . "free(temp_string);\n";
+					default:
+							$output .= "ZVAL_STRING(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].".char_str());\n";
 				}
 				break;
 			}	

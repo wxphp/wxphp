@@ -216,10 +216,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     int function_called;
 
     //Parameters for conversion
-    temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
-    strcpy(temp_string, (const char *) fileName.char_str());
-    ZVAL_STRING(arguments[0], temp_string);
-    free(temp_string);
+    ZVAL_STRING(&arguments[0], fileName.char_str());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
@@ -275,10 +272,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     int function_called;
 
     //Parameters for conversion
-    temp_string = (char*)malloc(sizeof(wxChar)*(url.size()+1));
-    strcpy(temp_string, (const char *) url.char_str());
-    ZVAL_STRING(arguments[0], temp_string);
-    free(temp_string);
+    ZVAL_STRING(&arguments[0], url.char_str());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
@@ -334,10 +328,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     int function_called;
 
     //Parameters for conversion
-    temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
-    strcpy(temp_string, (const char *) fileName.char_str());
-    ZVAL_STRING(arguments[0], temp_string);
-    free(temp_string);
+    ZVAL_STRING(arguments[0], fileName.char_str());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
@@ -536,13 +527,7 @@ PHP_METHOD(php_wxApp, GetAppDisplayName)
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetAppDisplayName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
@@ -554,13 +539,7 @@ PHP_METHOD(php_wxApp, GetAppName)
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetAppName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
@@ -572,13 +551,7 @@ PHP_METHOD(php_wxApp, GetClassName)
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetClassName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
  
@@ -590,13 +563,7 @@ PHP_METHOD(php_wxApp, GetVendorDisplayName)
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetVendorDisplayName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
@@ -608,13 +575,7 @@ PHP_METHOD(php_wxApp, GetVendorName)
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetVendorName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
