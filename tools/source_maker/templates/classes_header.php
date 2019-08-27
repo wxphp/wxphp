@@ -58,5 +58,3 @@ static inline struct zo_<?=$class_name?> * php_<?=$class_name?>_fetch_object(zen
 }
 
 #define Z_<?=$class_name?>_P(zv) php_<?=$class_name?>_fetch_object(Z_OBJ_P(zv))
-
-//struct zo_<?=$class_name?>* obj = Z_<?=$class_name?>_P(getThis());
