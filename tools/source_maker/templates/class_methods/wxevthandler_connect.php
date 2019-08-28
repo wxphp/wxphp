@@ -6,8 +6,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
+	zval arg[1];
 	TSRMLS_FETCH();
 
 	if(0)
@@ -19,8 +18,8 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		php_printf("Converting event type '<?=$kevn?>' to zval to call user function.\n\n");
 		#endif
 		
-		object_init_ex(arg[0], php_<?=$kevn?>_entry);
-    Z_<?=$kevn?>_P(arg[0] TSRMLS_CC)->native_object = (<?=$kevn?>_php*) &evnt;
+		object_init_ex(&arg[0], php_<?=$kevn?>_entry);
+    Z_<?=$kevn?>_P(&arg[0] TSRMLS_CC)->native_object = (<?=$kevn?>_php*) &evnt;
 	}
 	<? } ?>
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxEvent")))
@@ -29,8 +28,8 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 		php_printf("Converting event type 'wxEvent' to zval to call user function.\n\n");
 		#endif
 		
-		object_init_ex(arg[0], php_wxEvent_entry);
-    Z_wxEvent_P(arg[0] TSRMLS_CC)->native_object = (wxEvent_php*) &evnt;
+		object_init_ex(&arg[0], php_wxEvent_entry);
+    Z_wxEvent_P(&arg[0] TSRMLS_CC)->native_object = (wxEvent_php*) &evnt;
 	}
 	else
 	{
@@ -46,7 +45,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 
 	char* wxname;
 	zval dummy;
-	zval* fc_name;
+	zval fc_name;
 	wxCommandEvent* ce;
 	wxPhpClientData* co;
 
@@ -55,7 +54,7 @@ void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 
 	ZVAL_STRING(&fc_name, ce->GetString().char_str());
 
-	if(call_user_function(NULL, &(co->phpObj), fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE)
+	if(call_user_function(NULL, co->phpObj, &fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE)
 	{
 		wxString errorMessage = "Failed to call method: '";
 		errorMessage += ce->GetString().char_str();
@@ -101,11 +100,11 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 		zend_error(E_ERROR, "Could not process Connect call as static\n");
 	}
 
-	zval* fc;
+	zval fc;
 	long flag, id0 = 0, id1 = 0;
 
-	zval** fc_obj;
-	zval** fc_name;
+	zval* fc_obj;
+	zval* fc_name;
 	char* ct;
 	int args = ZEND_NUM_ARGS();
 	
@@ -120,7 +119,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lllz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_4, &id0, &id1, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_4, &id0, &id1, &flag , (void*)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -130,7 +129,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"llz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_3, &id0, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_3, &id0, &flag , (void*)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -140,7 +139,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_2, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_2, &flag , (void*)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -149,16 +148,16 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 		default:
 			zend_error(E_ERROR, "Wrong amount of parameters");
 	}
+
+	fc_obj = zend_hash_index_find(Z_ARRVAL_P(&fc), 0);
+	fc_name = zend_hash_index_find(Z_ARRVAL_P(&fc), 1);
+	Z_ADDREF_P(fc_obj);
 	
-	zend_hash_index_find(Z_ARRVAL_P(fc), 0, (void**)&fc_obj);
-	zend_hash_index_find(Z_ARRVAL_P(fc), 1, (void**)&fc_name);
-	Z_ADDREF_P(*fc_obj);
-	
-	ct = Z_STRVAL_PP(fc_name);
+	ct = Z_STRVAL_P(fc_name);
 
 	wxCommandEvent* ce = new wxCommandEvent();
 	ce->SetString(wxString::Format(wxT("%s"), ct));
-	ce->SetClientObject(new wxPhpClientData(*fc_obj));
+	ce->SetClientObject(new wxPhpClientData(fc_obj));
 	
 	switch(args)
 	{

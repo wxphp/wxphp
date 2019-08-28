@@ -29,15 +29,13 @@
 zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
 {
 	int		argc = ZEND_NUM_ARGS();
-	zval	***argv;
-	zval	funcName, *string, *retVal = NULL;
+	zval	*argv;
+	zval	funcName, *string, *retVal;
 	
 	if (argc < 1) {
 		WRONG_PARAM_COUNT_WITH_RETVAL(NULL);
 	}
-	
-	argv = (zval ***) safe_emalloc(argc, sizeof(zval **), 0);
-	
+		
 	if (zend_get_parameters_array_ex(argc, argv) == FAILURE) {
 		efree(argv);
 		WRONG_PARAM_COUNT_WITH_RETVAL(NULL);
@@ -45,13 +43,13 @@ zval * wxphp_sprintf(INTERNAL_FUNCTION_PARAMETERS, int offset = 0)
 		
 	ZVAL_STRINGL(&funcName, "sprintf", sizeof("sprintf") - 1);
 
-	if (call_user_function_ex(EG(function_table), NULL, &funcName, &string,
+	if (call_user_function_ex(EG(function_table), NULL, &funcName, string,
 		argc - offset, argv + offset, 0, NULL TSRMLS_CC) == SUCCESS)
 	{
 		if (Z_TYPE_P(string) == IS_STRING)
 			retVal = string;
 		else
-			zval_ptr_dtor(&string);
+			zval_ptr_dtor(string);
 	}
 	
 	efree(argv);
@@ -71,7 +69,7 @@ PHP_FUNCTION(php_wxExecute)
 	int _argStr0_len;
 
     long flags = 0;
-    zval* z_process = 0;
+    zval z_process;
     wxProcess* process;
 
     long ret;
@@ -102,7 +100,7 @@ PHP_FUNCTION(php_wxExecute)
                 break;
 
             case 3:
-                process = (wxProcess*) Z_wxProcess_P(z_process TSRMLS_CC)->native_object;
+                process = (wxProcess*) Z_wxProcess_P(&z_process TSRMLS_CC)->native_object;
                 ret = wxExecute(wxString(_argStr0, wxConvUTF8), (int) flags, process);
                 RETURN_LONG(ret)
                 break;
@@ -144,7 +142,7 @@ PHP_FUNCTION(php_wxEntry)
    Converts a wxWidgets constant object to dynamic in order to be able to access its methods like wxC2D(wxNORMAL_FONT)->GetPointSize(). */
 PHP_FUNCTION(php_wxC2D)
 {	
-	zval* constant_object = 0;
+	zval constant_object;
 	
 	char parse_parameters[] = "z";
     
@@ -152,7 +150,7 @@ PHP_FUNCTION(php_wxC2D)
     {
 		if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &constant_object ) == SUCCESS)
 		{	
-			*return_value = *constant_object;
+			return_value = &constant_object;
 			zval_add_ref(&constant_object);
 			return;
 		}
@@ -171,7 +169,7 @@ PHP_FUNCTION(php_wxLogError)
 	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
 	{
 		wxLogError(Z_STRVAL_P(message));
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */
@@ -185,7 +183,7 @@ PHP_FUNCTION(php_wxLogFatalError)
 	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
 	{
 		wxLogFatalError(Z_STRVAL_P(message));
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */
@@ -207,7 +205,7 @@ PHP_FUNCTION(php_wxLogGeneric)
 		if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1))
 		{
 			wxLogGeneric(logLevel, Z_STRVAL_P(message));
-			zval_ptr_dtor(&message);
+			zval_ptr_dtor(message);
 		}
 	}
 }
@@ -222,7 +220,7 @@ PHP_FUNCTION(php_wxLogMessage)
 	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
 	{
 		wxLogMessage(Z_STRVAL_P(message));
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */
@@ -233,7 +231,7 @@ PHP_FUNCTION(php_wxLogStatus)
 {
 	char		parse[] = "O";
 	wxFrame 	*frame = NULL;
-	zval		*zFrame;
+	zval		zFrame;
 	zval		*message;
 	
 	if (ZEND_NUM_ARGS() < 1) {
@@ -245,7 +243,7 @@ PHP_FUNCTION(php_wxLogStatus)
 	{
 		// Called with wxFrame as first parameter
 	
-		frame = (wxFrame*) Z_wxFrame_P(zFrame TSRMLS_CC)->native_object;
+		frame = (wxFrame*) Z_wxFrame_P(&zFrame TSRMLS_CC)->native_object;
 
 		message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1);
 	}
@@ -259,7 +257,7 @@ PHP_FUNCTION(php_wxLogStatus)
 		else
 			wxLogStatus(Z_STRVAL_P(message));
 	
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */
@@ -273,7 +271,7 @@ PHP_FUNCTION(php_wxLogSysError)
 	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
 	{
 		wxLogSysError(Z_STRVAL_P(message));
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */
@@ -287,7 +285,7 @@ PHP_FUNCTION(php_wxLogVerbose)
 	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
 	{
 		wxLogVerbose(Z_STRVAL_P(message));
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */
@@ -301,7 +299,7 @@ PHP_FUNCTION(php_wxLogWarning)
 	if (message = wxphp_sprintf(INTERNAL_FUNCTION_PARAM_PASSTHRU))
 	{
 		wxLogWarning(Z_STRVAL_P(message));
-		zval_ptr_dtor(&message);
+		zval_ptr_dtor(message);
 	}
 }
 /* }}} */

@@ -10,7 +10,8 @@ PHP_FUNCTION(php_<?=$function_name?>)
 	
 	//Variables used thru the code
 	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	bool return_is_user_initialized = false;
 	

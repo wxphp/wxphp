@@ -3,7 +3,7 @@
 PHP_FUNCTION(php_wxAboutBox)
 {
 	wxAboutDialogInfo *info;
-	zval *object;
+	zval object;
 	
 	char parse_parameters[] = "O";
 	
@@ -12,7 +12,7 @@ PHP_FUNCTION(php_wxAboutBox)
 		RETURN_NULL();
 	}
 	
-	info = (wxAboutDialogInfo*) Z_wxAboutDialogInfo_P(object TSRMLS_CC)->native_object;
+	info = (wxAboutDialogInfo*) Z_wxAboutDialogInfo_P(&object TSRMLS_CC)->native_object;
 	
 	wxAboutBox(*info);
 }

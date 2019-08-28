@@ -78,11 +78,11 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "ZVAL_DOUBLE(arguments[$parameter_index], *".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_DOUBLE(&arguments[$parameter_index], *".$method_definition[$parameter_names][$parameter_index].");\n";
 						break;
 						
 					default: 
-						$output .= "ZVAL_DOUBLE(arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].");\n";
+						$output .= "ZVAL_DOUBLE(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index].");\n";
 				}
 				break;
 			}	
@@ -154,13 +154,10 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 						break;
 						
 					default: 
-						$output .= "array_init(arguments[$parameter_index]);\n";
+						$output .= "array_init(&arguments[$parameter_index]);\n";
 						$output .= tabs(1) . "for(int i=0; i<".$method_definition[$parameter_names][$parameter_index].".GetCount(); i++)\n";
 						$output .= tabs(1) . "{\n";
-						$output .= tabs(2) . "temp_string = (char*)malloc(sizeof(wxChar)*(".$method_definition[$parameter_names][$parameter_index]."[i].size()+1));\n";
-						$output .= tabs(2) . "strcpy(temp_string, (const char *) ".$method_definition[$parameter_names][$parameter_index]."[i].char_str());\n";
-						$output .= tabs(2) . "add_next_index_string(arguments[$parameter_index], temp_string, 1);\n";
-						$output .= tabs(2) . "free(temp_string);\n";
+						$output .= tabs(2) . "add_next_index_string(&arguments[$parameter_index], ".$method_definition[$parameter_names][$parameter_index]."[i].char_str());\n";
 						$output .= tabs(1) . "}\n";
 				}
 				break;
@@ -171,20 +168,20 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				{
 					case "pointer":
 					case "const_pointer":
-						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
-						$output .= tabs(1) . "Z_{$argument_type}_P(arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) ".$method_definition[$parameter_names][$parameter_index].";\n";
+						$output .= "object_init_ex(&arguments[$parameter_index], php_{$argument_type}_entry);\n";
+						$output .= tabs(1) . "Z_{$argument_type}_P(&arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 				
 					case "reference":
 					case "const_reference":
-						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
-						$output .= tabs(1) . "Z_{$argument_type}_P(arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
+						$output .= "object_init_ex(&arguments[$parameter_index], php_{$argument_type}_entry);\n";
+						$output .= tabs(1) . "Z_{$argument_type}_P(&arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 						
 					case "none":
 					case "const_none":
-						$output .= "object_init_ex(arguments[$parameter_index], php_{$argument_type}_entry);\n";
-						$output .= tabs(1) . "Z_{$argument_type}_P(arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
+						$output .= "object_init_ex(&arguments[$parameter_index], php_{$argument_type}_entry);\n";
+						$output .= tabs(1) . "Z_{$argument_type}_P(&arguments[$parameter_index] TSRMLS_CC)->native_object = ({$argument_type}_php*) &".$method_definition[$parameter_names][$parameter_index].";\n";
 						break;
 				}
 				break;
@@ -269,7 +266,7 @@ function class_virtual_method_parameters_set_references($method_definition, $met
 				switch($argument_type_modifier)
 				{
 					case "pointer":
-                        $reference_code .= tabs(2) . "memcpy ((void*) $parameter_name, (void*) Z_STRVAL_P(arguments[$parameter_index]), Z_STRLEN_P(arguments[$parameter_index]));\n";
+                        $reference_code .= tabs(2) . "memcpy ((void*) $parameter_name, (void*) Z_STRVAL_P(&arguments[$parameter_index]), Z_STRLEN_P(&arguments[$parameter_index]));\n";
 				}
 				break;
 			}	
@@ -348,24 +345,24 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 	{
 		case	"bool":
 		{
-			$output = "return Z_TYPE_INFO_P(return_value) == IS_TRUE;\n";
+			$output = "return Z_TYPE_INFO_P(&return_value) == IS_TRUE;\n";
 			break;
 		}
 		case	"integer":
 		case	"class_enum":
 		case	"global_enum":
 		{
-			$output .= "return ($return_type) Z_LVAL_P(return_value);\n";
+			$output .= "return ($return_type) Z_LVAL_P(&return_value);\n";
 			break;
 		}
 		case	"float":
 		{
-			$output .= "return Z_DVAL_P(return_value);\n";
+			$output .= "return Z_DVAL_P(&return_value);\n";
 			break;
 		}
 		case	"characters":
 		{
-			$output .= "return Z_STRVAL_P(return_value);\n";
+			$output .= "return Z_STRVAL_P(&return_value);\n";
 			break;
 		}
 		case "void":
@@ -374,7 +371,7 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 			{
 				case "const_pointer":
 				case "pointer":
-					$output .= "return (void*) Z_STRVAL_P(return_value);\n";
+					$output .= "return (void*) Z_STRVAL_P(&return_value);\n";
 					break;
 				
 				default:	
@@ -385,12 +382,12 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 		}
 		case	"date":
 		{
-			$output .= "return wxDateTime(Z_LVAL_P(return_value));\n";
+			$output .= "return wxDateTime(Z_LVAL_P(&return_value));\n";
 			break;
 		}		
 		case	"string":
 		{
-			$output .= "return wxString(Z_STRVAL_P(return_value), wxConvUTF8);\n";
+			$output .= "return wxString(Z_STRVAL_P(&return_value), wxConvUTF8);\n";
 			break;
 		}	
 		/*case "strings_array":
@@ -399,13 +396,13 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 			
 		case "object":
 		{
-			$output .= "if(Z_TYPE_P(return_value) == IS_OBJECT)\n";
+			$output .= "if(Z_TYPE_P(&return_value) == IS_OBJECT)\n";
 			$output .= tabs(1) . "{\n";
-			$output .= tabs(2) . "return_object = (void*) Z_{$return_type}_P(return_value TSRMLS_CC)->native_object;\n";
+			$output .= tabs(2) . "return_object = (void*) Z_{$return_type}_P(&return_value TSRMLS_CC)->native_object;\n";
 			$output .= tabs(1) . "}\n\n";
 			
 			$output .= tabs(1) . "//Threat it as a normal object on the calling function and not a php user space intiialized one\n";
-			$output .= tabs(1) . "Z_{$return_type}_P(return_value TSRMLS_CC)->is_user_initialized = 0;\n";
+			$output .= tabs(1) . "Z_{$return_type}_P(&return_value TSRMLS_CC)->is_user_initialized = 0;\n";
 			$output .= tabs(1) . "{$return_type}_php* var = ({$return_type}_php*) return_object;\n";
 			$output .= tabs(1) . "var->references.UnInitialize();\n\n";
 			

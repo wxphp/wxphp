@@ -150,23 +150,22 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
+	zval temp;
     zo_<?=$class_name?>* custom_object;
     custom_object = (zo_<?=$class_name?>*) emalloc(sizeof(zo_<?=$class_name?>) + zend_object_properties_size(class_type));
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
 
-	//retval.handle = zend_objects_store_put(custom_object, NULL, php_<?=$class_name?>_free, NULL TSRMLS_CC);
 	custom_object->zo.handlers = zend_get_std_object_handlers();
 
     custom_object->native_object = NULL;
 <? if(!in_array("__construct", funcsOfClass($class_name, 1, $output)) && has_all_pure_virtual_implemented($class_name)){ ?>
-    MAKE_STD_ZVAL(temp);
-	Z_TYPE_P(temp) = IS_OBJECT;
-	Z_OBJVAL_P(temp) = &custom_object->zo;
+
+	Z_TYPE_INFO(temp) = IS_OBJECT;
+	Z_OBJ(temp) = &custom_object->zo;
 
 	custom_object->native_object = new <?=$class_name?>_php();
-	custom_object->native_object->phpObj = temp;	
+	custom_object->native_object->phpObj = &temp;
 #ifdef ZTS 
 	custom_object->native_object->TSRMLS_C = TSRMLS_C;
 #endif

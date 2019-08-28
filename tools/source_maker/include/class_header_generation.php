@@ -298,19 +298,17 @@ function register_class_const_properties($class_name)
 					{
 						case "const_pointer":
 						case "const_pointer_pointer":
-							$code .= "\tzval* {$property_name}_zval;\n";
-							$code .= "\tMAKE_STD_ZVAL({$property_name}_zval)\n";
-							$code .= "\tobject_init_ex({$property_name}_zval, php_{$property_type}_entry);\n";
-							$code .= "\tZ_{$property_type}_P({$property_name}_zval TSRMLS_CC)->native_object = ({$property_type}_php*) {$property_name};\n";
+							$code .= "\tzval {$property_name}_zval;\n";
+							$code .= "\tobject_init_ex(&{$property_name}_zval, php_{$property_type}_entry);\n";
+							$code .= "\tZ_{$property_type}_P(&{$property_name}_zval TSRMLS_CC)->native_object = ({$property_type}_php*) {$property_name};\n";
 							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_CC);\n";
 							break;
 							
 						case "const_reference":
 						case "const_none":
-							$code .= "\tzval* {$property_name}_zval;\n";
-							$code .= "\tMAKE_STD_ZVAL({$property_name}_zval)\n";
-							$code .= "\tobject_init_ex({$property_name}_zval, php_{$property_type}_entry);\n";
-							$code .= "\tZ_{$property_type}_P({$property_name}_zval TSRMLS_CC)->native_object = ({$property_type}_php*) &{$property_name};\n";
+							$code .= "\tzval {$property_name}_zval;\n";
+							$code .= "\tobject_init_ex(&{$property_name}_zval, php_{$property_type}_entry);\n";
+							$code .= "\tZ_{$property_type}_P(&{$property_name}_zval TSRMLS_CC)->native_object = ({$property_type}_php*) {$property_name};\n";
 							$code .= "\tzend_declare_class_constant(php_{$class_name}_entry, \"$property_name\", ".strlen($property_name).", {$property_name}_zval TSRMLS_CC);\n";
 							break;
 					}

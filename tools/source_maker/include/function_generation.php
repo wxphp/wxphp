@@ -50,16 +50,16 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 					{
 						case "pointer": //bool*
 							$parameters .= "bool* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_pointer": //const bool* Array
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 
 						case "reference": //bool&
 							$parameters .= "bool " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const bool&
@@ -78,16 +78,16 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 					{
 						case "pointer": //long*
 							$parameters .= "long* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_pointer": //const long* Array
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 
 						case "reference": //long&
 							$parameters .= "long " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const long&
@@ -104,16 +104,16 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 					{
 						case "pointer": //double*
 							$parameters .= "double* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_pointer": //const double* Array
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 
 						case "reference": //double&
 							$parameters .= "double " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const double&
@@ -131,7 +131,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 						case "pointer": //char* with reference
 							$parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							$parameters .= "\tlong " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_pointer": //const char*
@@ -141,7 +141,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 
 						case "reference": //char&
 							$parameters .= "\tlong " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const char&
@@ -164,7 +164,7 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 							$parameters .= "\tlong " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
 
 							if($declaration_modifier == "pointer" || $declaration_modifier == "pointer_pointer")
-								$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+								$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 
 							break;
 					}
@@ -176,16 +176,16 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 					{
 						case "pointer": //long*
 							$parameters .= "time_t " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_pointer": //const long* Array
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 
 						case "reference": //long&
 							$parameters .= "time_t " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const long&
@@ -203,20 +203,20 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 						case "pointer": //wxString*
 							$parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							$parameters .= "\tlong " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_pointer": //const wxString* Array
 						case "const_reference_array": //const wxString&[]
 						case "const_none_array": //const wxString[]
 						case "none_array": //wxString[]
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 
 						case "reference": //wxString&
 							$parameters .= "char* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							$parameters .= "\tlong " . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ";\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const wxString&
@@ -241,21 +241,21 @@ function function_parameters($method_definitions, $method_name, $class_name=null
 							break;
 
 						case "reference": //wxArrayString&
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . " = 0;\n";
-							$parameters .= "\tzval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
+							$parameters .= "\tzval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref;\n";
 							break;
 
 						case "const_reference": //const wxArrayString&
 						case "none": //wxArrayString
 						case "const_none": //const wxArrayString
-							$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . " = 0;\n";
+							$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 							break;
 					}
 					break;
 				}
 				case "object":
 				{
-					$parameters .= "zval* " . $declaration[$parameter_names][$parameter_index] . $declaration_index . " = 0;\n";
+					$parameters .= "zval " . $declaration[$parameter_names][$parameter_index] . $declaration_index . ";\n";
 					$parameters .= "\t{$plain_type}* object_pointer{$declaration_index}_{$parameter_index} = 0;\n";
 					break;
 				}
@@ -373,20 +373,20 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters_string .= "b";
 							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const bool* Array
 							$zend_parse_parameters_string .= "a";
-							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+							$references_parameters .= "dummy, ";
 							break;
 
 						case "reference": //bool&
 							$zend_parse_parameters_string .= "b";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_reference": //const bool&
@@ -394,7 +394,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						case "const_none": //const bool
 							$zend_parse_parameters_string .= "b";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -409,20 +409,20 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const long* Array
 							$zend_parse_parameters_string .= "a";
-							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+							$references_parameters .= "dummy, ";
 							break;
 
 						case "reference": //long&
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_reference": //const long&
@@ -430,7 +430,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						case "const_none": //const long
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -443,20 +443,20 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters_string .= "d";
 							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const double* Array
 							$zend_parse_parameters_string .= "a";
-							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+							$references_parameters .= "dummy, ";
 							break;
 
 						case "reference": //double&
 							$zend_parse_parameters_string .= "d";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_reference": //const double&
@@ -464,7 +464,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						case "const_none": //const double
 							$zend_parse_parameters_string .= "d";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -478,21 +478,21 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const char*
 							$zend_parse_parameters_string .= "s";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 
 						case "reference": //char&
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_reference": //const char&
@@ -500,7 +500,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						case "const_none": //const char
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -515,7 +515,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const void*
@@ -523,7 +523,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters_string .= "s";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -536,20 +536,20 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const long* Array
 							$zend_parse_parameters_string .= "a";
-							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+							$references_parameters .= "dummy, ";
 							break;
 
 						case "reference": //long&
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_reference": //const long&
@@ -557,7 +557,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						case "const_none": //const long
 							$zend_parse_parameters_string .= "l";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -571,7 +571,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_pointer": //const wxString* array
@@ -579,8 +579,8 @@ function function_called_overload($method_definitions, $method_name, $class_name
 						case "const_none_array": //const wxString[]
 						case "none_array": //wxString[]
 							$zend_parse_parameters_string .= "a";
-							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+							$references_parameters .= "dummy, ";
 							break;
 
 						case "reference": //wxString&
@@ -588,7 +588,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
 							$references_found = true;
-							$references_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
+							$references_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . "_ref, ";
 							break;
 
 						case "const_reference": //const wxString&
@@ -597,7 +597,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 							$zend_parse_parameters_string .= "s";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
 							$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . "_len" . $declaration_index . ", ";
-							$references_parameters .= "&dummy, ";
+							$references_parameters .= "dummy, ";
 							break;
 					}
 					break;
@@ -606,8 +606,8 @@ function function_called_overload($method_definitions, $method_name, $class_name
 				{
 					//wxArrayString
 					$zend_parse_parameters_string .= "a";
-					$zend_parse_parameters .= "&" . $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
-					$references_parameters .= "&dummy, ";
+					$zend_parse_parameters .= $declaration[$parameter_names][$parameter_index] . $declaration_index . ", ";
+					$references_parameters .= "dummy, ";
 					break;
 				}
 				case "object":
@@ -657,10 +657,10 @@ function function_called_overload($method_definitions, $method_name, $class_name
 					}
 
 					$object_retrieve_code .= "\t\t\tif(arguments_received >= ".($parameter_index+1)."){\n";
-					$object_retrieve_code .= "\t\t\t\tif(Z_TYPE_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") == IS_OBJECT)\n";
+					$object_retrieve_code .= "\t\t\t\tif(Z_TYPE(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") == IS_OBJECT)\n";
 					$object_retrieve_code .= "\t\t\t\t{\n";
-					$object_retrieve_code .= "\t\t\t\t\twxphp_object_type argument_type = Z_{$argument_plain_type}_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC)->object_type;\n";
-					$object_retrieve_code .= "\t\t\t\t\targument_native_object = (void*) Z_{$argument_plain_type}_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC)->native_object;\n";
+					$object_retrieve_code .= "\t\t\t\t\twxphp_object_type argument_type = Z_{$argument_plain_type}_P(&".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC)->object_type;\n";
+					$object_retrieve_code .= "\t\t\t\t\targument_native_object = (void*) Z_{$argument_plain_type}_P(&".$declaration[$parameter_names][$parameter_index] . $declaration_index." TSRMLS_CC)->native_object;\n";
 					$object_retrieve_code .= "\t\t\t\t\tobject_pointer{$declaration_index}_{$parameter_index} = ($argument_plain_type*) argument_native_object;\n";
 					$object_retrieve_code .= "\t\t\t\t\tif (!object_pointer{$declaration_index}_{$parameter_index} ";
 					if(trim($typeVerifierStr) != "")
@@ -681,7 +681,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
 
 					$object_retrieve_code .= "\t\t\t\t\t}\n";
 					$object_retrieve_code .= "\t\t\t\t}\n";
-					$object_retrieve_code .= "\t\t\t\telse if(Z_TYPE_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") != IS_NULL)\n";
+					$object_retrieve_code .= "\t\t\t\telse if(Z_TYPE(".$declaration[$parameter_names][$parameter_index] . $declaration_index.") != IS_NULL)\n";
 					$object_retrieve_code .= "\t\t\t\t{\n";
 
 					if(($declaration_index+1) != $declarations_count && $declarations_count > 1)
@@ -795,7 +795,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
-							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
+							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
 							$return_called_overload .= tabs(2) . "bool* bools_array{$declaration_index}_{$parameter_index} = new bool[array_count{$declaration_index}_{$parameter_index}];\n";
@@ -812,7 +812,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
-							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
+							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
 							$return_called_overload .= tabs(2) . "{$plain_type}* integers_array{$declaration_index}_{$parameter_index} = new {$plain_type}[array_count{$declaration_index}_{$parameter_index}];\n";
@@ -829,7 +829,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
-							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
+							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
 							$return_called_overload .= tabs(2) . "{$plain_type}* floats_array{$declaration_index}_{$parameter_index} = new {$plain_type}[array_count{$declaration_index}_{$parameter_index}];\n";
@@ -849,7 +849,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
-							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
+							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
 							$return_called_overload .= tabs(2) . "wxString* strings_array{$declaration_index}_{$parameter_index} = new wxString[array_count{$declaration_index}_{$parameter_index}];\n";
@@ -871,7 +871,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
-							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
+							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
 							$return_called_overload .= tabs(2) . "wxDateTime* dates_array{$declaration_index}_{$parameter_index} = new wxDateTime[array_count{$declaration_index}_{$parameter_index}];\n";
@@ -920,13 +920,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 
 							case "const_pointer": //const bool* Array
 								$return_called_overload .= tabs(4) . "int array_index{$declaration_index}_{$parameter_index} = 0;\n";
-								$return_called_overload .= tabs(4) . "zval** temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
+								$return_called_overload .= tabs(4) . "zval* temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
 								$return_called_overload .= tabs(4) . "while(bools_continue{$declaration_index}_{$parameter_index})\n";
 								$return_called_overload .= tabs(4) . "{\n";
-								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
+								$return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF(&".$variable_name."), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
 								$return_called_overload .= tabs(5) . "{\n";
 								$return_called_overload .= tabs(6) . "convert_to_boolean_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "bools_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = Z_TYPE_INFO_PP(temp_array_value{$declaration_index}_{$parameter_index}) == IS_TRUE;\n";
+								$return_called_overload .= tabs(6) . "bools_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = Z_TYPE_INFO_P(temp_array_value{$declaration_index}_{$parameter_index}) == IS_TRUE;\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";
@@ -956,15 +956,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 								$after_return_called_overload .= tabs(4) . "size_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
-								$after_return_called_overload .= tabs(4) . "array_init($reference_name);\n";
+								$after_return_called_overload .= tabs(4) . "array_init(&{$reference_name});\n";
 								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
 								$after_return_called_overload .= tabs(4) . "{\n";
-								$after_return_called_overload .= tabs(5) . "add_next_index_long($reference_name, {$variable_name}[i]);\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_long(&{$reference_name}, {$variable_name}[i]);\n";
 								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 
 							case "reference":
-								$after_return_called_overload .= tabs(4) . "ZVAL_BOOL($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_BOOL(&{$reference_name}, $variable_name);\n";
 								break;
 						}
 						break;
@@ -989,13 +989,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 
 							case "const_pointer": //const integer* Array
 								$return_called_overload .= tabs(4) . "int array_index{$declaration_index}_{$parameter_index} = 0;\n";
-								$return_called_overload .= tabs(4) . "zval** temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
+								$return_called_overload .= tabs(4) . "zval* temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
 								$return_called_overload .= tabs(4) . "while(integers_continue{$declaration_index}_{$parameter_index})\n";
 								$return_called_overload .= tabs(4) . "{\n";
-								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
+								$return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF(&".$variable_name."), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
 								$return_called_overload .= tabs(5) . "{\n";
 								$return_called_overload .= tabs(6) . "convert_to_long_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "integers_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = ($argument_parameter_type) Z_LVAL_PP(temp_array_value{$declaration_index}_{$parameter_index});\n";
+								$return_called_overload .= tabs(6) . "integers_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = ($argument_parameter_type) Z_LVAL_P(temp_array_value{$declaration_index}_{$parameter_index});\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";
@@ -1025,15 +1025,15 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 								$after_return_called_overload .= tabs(4) . "size_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
-								$after_return_called_overload .= tabs(4) . "array_init($reference_name);\n";
+								$after_return_called_overload .= tabs(4) . "array_init(&{$reference_name});\n";
 								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
 								$after_return_called_overload .= tabs(4) . "{\n";
-								$after_return_called_overload .= tabs(5) . "add_next_index_long($reference_name, {$variable_name}[i]);\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_long(&{$reference_name}, {$variable_name}[i]);\n";
 								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 
 							case "reference":
-								$after_return_called_overload .= tabs(4) . "ZVAL_LONG($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_LONG(&{$reference_name}, $variable_name);\n";
 								break;
 						}
 						break;
@@ -1048,13 +1048,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 
 							case "const_pointer": //const double* Array
 								$return_called_overload .= tabs(4) . "int array_index{$declaration_index}_{$parameter_index} = 0;\n";
-								$return_called_overload .= tabs(4) . "zval** temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
+								$return_called_overload .= tabs(4) . "zval* temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
 								$return_called_overload .= tabs(4) . "while(floats_continue{$declaration_index}_{$parameter_index})\n";
 								$return_called_overload .= tabs(4) . "{\n";
-								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
+								$return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF(&".$variable_name."), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
 								$return_called_overload .= tabs(5) . "{\n";
 								$return_called_overload .= tabs(6) . "convert_to_double_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "floats_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = ($argument_parameter_type) Z_DVAL_PP(temp_array_value{$declaration_index}_{$parameter_index});\n";
+								$return_called_overload .= tabs(6) . "floats_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = ($argument_parameter_type) Z_DVAL_P(temp_array_value{$declaration_index}_{$parameter_index});\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";
@@ -1084,10 +1084,10 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 								$after_return_called_overload .= tabs(4) . "size_t elements_returned{$declaration_index}_{$parameter_index} = sizeof($variable_name)/sizeof(*$variable_name);\n";
-								$after_return_called_overload .= tabs(4) . "array_init($reference_name);\n";
+								$after_return_called_overload .= tabs(4) . "array_init(&{$reference_name});\n";
 								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<elements_returned{$declaration_index}_{$parameter_index}; i++)\n";
 								$after_return_called_overload .= tabs(4) . "{\n";
-								$after_return_called_overload .= tabs(5) . "add_next_index_long($reference_name, {$variable_name}[i]);\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_long(&{$reference_name}, {$variable_name}[i]);\n";
 								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 
@@ -1125,7 +1125,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								break;
 
 							case "reference":
-								$after_return_called_overload .= tabs(4) . "ZVAL_LONG($reference_name, $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_LONG(&{$reference_name}, $variable_name);\n";
 								break;
 						}
 						break;
@@ -1150,7 +1150,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						switch($declaration_modifier)
 						{
 							case "pointer":
-								$after_return_called_overload .= tabs(4) . "ZVAL_STRING($reference_name, (char*) $variable_name);\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_STRING(&{$reference_name}, (char*) $variable_name);\n";
 								break;
 						}
 						break;
@@ -1166,13 +1166,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 
 							case "const_pointer": //const date* Array
 								$return_called_overload .= tabs(4) . "int array_index{$declaration_index}_{$parameter_index} = 0;\n";
-								$return_called_overload .= tabs(4) . "zval** temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
+								$return_called_overload .= tabs(4) . "zval* temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
 								$return_called_overload .= tabs(4) . "while(dates_continue{$declaration_index}_{$parameter_index})\n";
 								$return_called_overload .= tabs(4) . "{\n";
-								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
+								$return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF(&".$variable_name."), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
 								$return_called_overload .= tabs(5) . "{\n";
 								$return_called_overload .= tabs(6) . "convert_to_long_ex(temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "dates_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = wxDateTime((time_t) Z_LVAL_PP(temp_array_value{$declaration_index}_{$parameter_index}));\n";
+								$return_called_overload .= tabs(6) . "dates_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = wxDateTime((time_t) Z_LVAL_P(temp_array_value{$declaration_index}_{$parameter_index}));\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";
@@ -1203,7 +1203,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "reference":
-								$after_return_called_overload .= tabs(4) . "ZVAL_LONG($reference_name, date_time{$declaration_index}_{$parameter_index}.GetTicks());\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_LONG(&{$reference_name}, date_time{$declaration_index}_{$parameter_index}.GetTicks());\n";
 								break;
 						}
 						break;
@@ -1222,13 +1222,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							case "const_none_array": //const wxString[]
 							case "none_array": //wxString[]
 								$return_called_overload .= tabs(4) . "int array_index{$declaration_index}_{$parameter_index} = 0;\n";
-								$return_called_overload .= tabs(4) . "zval** temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
+								$return_called_overload .= tabs(4) . "zval* temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
 								$return_called_overload .= tabs(4) . "while(strings_continue{$declaration_index}_{$parameter_index})\n";
 								$return_called_overload .= tabs(4) . "{\n";
-								$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
+								$return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF(&".$variable_name."), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
 								$return_called_overload .= tabs(5) . "{\n";
-								$return_called_overload .= tabs(6) . "convert_to_string(*temp_array_value{$declaration_index}_{$parameter_index});\n";
-								$return_called_overload .= tabs(6) . "strings_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = wxString(Z_STRVAL_PP(temp_array_value{$declaration_index}_{$parameter_index}), wxConvUTF8);\n";
+								$return_called_overload .= tabs(6) . "convert_to_string(temp_array_value{$declaration_index}_{$parameter_index});\n";
+								$return_called_overload .= tabs(6) . "strings_array{$declaration_index}_{$parameter_index}[array_index{$declaration_index}_{$parameter_index}] = wxString(Z_STRVAL_P(temp_array_value{$declaration_index}_{$parameter_index}), wxConvUTF8);\n";
 								$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else\n";
@@ -1259,11 +1259,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "reference":
-								$after_return_called_overload .= tabs(4) . "char* temp_string{$declaration_index}_{$parameter_index};\n";
-								$after_return_called_overload .= tabs(4) . "temp_string{$declaration_index}_{$parameter_index} = (char*)malloc(sizeof(wxChar)*(string_arg{$declaration_index}_{$parameter_index}.size()+1));\n";
-								$after_return_called_overload .= tabs(4) . "strcpy (temp_string{$declaration_index}_{$parameter_index}, (const char *) string_arg{$declaration_index}_{$parameter_index}.char_str() );\n";
-								$after_return_called_overload .= tabs(4) . "ZVAL_STRING($reference_name, (char*) temp_string{$declaration_index}_{$parameter_index});\n";
-								$after_return_called_overload .= tabs(4) . "free(temp_string{$declaration_index}_{$parameter_index});\n\n";
+								$after_return_called_overload .= tabs(4) . "ZVAL_STRING(&{$reference_name}, string_arg{$declaration_index}_{$parameter_index}.char_str());\n";
 								break;
 						}
 						break;
@@ -1271,13 +1267,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					case	"strings_array":
 					{
 						$return_called_overload .= tabs(4) . "int array_index{$declaration_index}_{$parameter_index} = 0;\n";
-						$return_called_overload .= tabs(4) . "zval** temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
+						$return_called_overload .= tabs(4) . "zval* temp_array_value{$declaration_index}_{$parameter_index} = 0;\n";
 						$return_called_overload .= tabs(4) . "while(strings_continue{$declaration_index}_{$parameter_index})\n";
 						$return_called_overload .= tabs(4) . "{\n";
-						$return_called_overload .= tabs(5) . "if(zend_hash_index_find(HASH_OF(".$variable_name."), array_index{$declaration_index}_{$parameter_index}, (void**)&temp_array_value{$declaration_index}_{$parameter_index}) == SUCCESS)\n";
+						$return_called_overload .= tabs(5) . "if((temp_array_value{$declaration_index}_{$parameter_index} = zend_hash_index_find(HASH_OF(&".$variable_name."), array_index{$declaration_index}_{$parameter_index})) != NULL)\n";
 						$return_called_overload .= tabs(5) . "{\n";
-						$return_called_overload .= tabs(6) . "convert_to_string(*temp_array_value{$declaration_index}_{$parameter_index});\n";
-						$return_called_overload .= tabs(6) . "strings_array{$declaration_index}_{$parameter_index}.Add(wxString(Z_STRVAL_PP(temp_array_value{$declaration_index}_{$parameter_index}), wxConvUTF8));\n";
+						$return_called_overload .= tabs(6) . "convert_to_string(temp_array_value{$declaration_index}_{$parameter_index});\n";
+						$return_called_overload .= tabs(6) . "strings_array{$declaration_index}_{$parameter_index}.Add(wxString(Z_STRVAL_P(temp_array_value{$declaration_index}_{$parameter_index}), wxConvUTF8));\n";
 						$return_called_overload .= tabs(6) . "array_index{$declaration_index}_{$parameter_index}++;\n";
 						$return_called_overload .= tabs(5) . "}\n";
 						$return_called_overload .= tabs(5) . "else\n";
@@ -1306,14 +1302,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							case "pointer":
 							case "reference":
-								$after_return_called_overload .= tabs(4) . "char* temp_string{$declaration_index}_{$parameter_index};\n";
-								$after_return_called_overload .= tabs(4) . "array_init($variable_name);\n";
+								//$after_return_called_overload .= tabs(4) . "char* temp_string{$declaration_index}_{$parameter_index};\n";
+								$after_return_called_overload .= tabs(4) . "array_init(&{$variable_name});\n";
 								$after_return_called_overload .= tabs(4) . "for(size_t i=0; i<strings_array{$declaration_index}_{$parameter_index}.GetCount(); i++)\n";
 								$after_return_called_overload .= tabs(4) . "{\n";
-								$after_return_called_overload .= tabs(5) . "temp_string{$declaration_index}_{$parameter_index} = (char*)malloc(sizeof(wxChar)*(strings_array{$declaration_index}_{$parameter_index}[i].size()+1));\n";
-								$after_return_called_overload .= tabs(5) . "strcpy (temp_string{$declaration_index}_{$parameter_index}, (const char *) strings_array{$declaration_index}_{$parameter_index}[i].char_str() );\n";
-								$after_return_called_overload .= tabs(5) . "add_next_index_string($variable_name, (char*) temp_string{$declaration_index}_{$parameter_index}, 1);\n";
-								$after_return_called_overload .= tabs(5) . "free(temp_string{$declaration_index}_{$parameter_index});\n\n";
+								$after_return_called_overload .= tabs(5) . "add_next_index_string(&{$variable_name}, strings_array{$declaration_index}_{$parameter_index}[i].char_str());\n";
 								$after_return_called_overload .= tabs(4) . "}\n";
 								break;
 						}
@@ -1327,9 +1320,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$parameters_string .= "(".$declaration[$parameter_types][$parameter_index].") object_pointer{$declaration_index}_{$parameter_index}" . ", ";
 
 								if(!$declaration["static"] && $class_name && !$is_constructor)
-									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
+									$after_return_called_overload .= tabs(4) . "references->AddReference(&{$variable_name}, \"$class_name::$method_name at call 1 with $required_parameters argument(s)\");\n";
 								else if($is_constructor)
-									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) native_object)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) native_object)->references.AddReference(&{$variable_name}, \"$class_name::$method_name at call 2 with $required_parameters argument(s)\");\n";
 								break;
 
 							case "reference": //object&
@@ -1337,9 +1330,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$parameters_string .= "*(".$argument_parameter_type."*) object_pointer{$declaration_index}_{$parameter_index}" . ", ";
 
 								if(!$declaration["static"] && $class_name && !$is_constructor)
-									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
+									$after_return_called_overload .= tabs(4) . "references->AddReference(&{$variable_name}, \"$class_name::$method_name at call 3 with $required_parameters argument(s)\");\n";
 								else if($is_constructor)
-									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) native_object)->references.AddReference($variable_name, \"$class_name::$method_name at call with $required_parameters argument(s)\");\n";
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) native_object)->references.AddReference(&{$variable_name}, \"$class_name::$method_name at call 4 with $required_parameters argument(s)\");\n";
 								break;
 
 							case "none": //char
@@ -1392,7 +1385,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							{
 								case "pointer":
 								case "const_pointer":
-									$return_called_overload .= tabs(4) . "ZVAL_BOOL(return_value, *($class_name_ex::$method_name($parameters_string)));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_BOOL(&return_value, *($class_name_ex::$method_name($parameters_string)));\n";
 									break;
 
 								default:
@@ -1428,7 +1421,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							{
 								case "pointer":
 								case "const_pointer":
-									$return_called_overload .= tabs(4) . "ZVAL_LONG(return_value, *($class_name_ex::$method_name($parameters_string)));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_LONG(&return_value, *($class_name_ex::$method_name($parameters_string)));\n";
 									break;
 
 								default:
@@ -1462,11 +1455,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							{
 								case "pointer":
 								case "const_pointer":
-									$return_called_overload .= tabs(4) . "ZVAL_DOUBLE(return_value, *($class_name_ex::$method_name($parameters_string)));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_DOUBLE(&return_value, *($class_name_ex::$method_name($parameters_string)));\n";
 									break;
 
 								default:
-									$return_called_overload .= tabs(4) . "ZVAL_DOUBLE(return_value, $class_name_ex::$method_name($parameters_string));\n";
+									$return_called_overload .= tabs(4) . "ZVAL_DOUBLE(&return_value, $class_name_ex::$method_name($parameters_string));\n";
 									break;
 							}
 						}
@@ -1576,11 +1569,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						{
 							$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name_ex::$method_name($parameters_string);\n";
 						}
-						$return_called_overload .= tabs(4) . "char* temp_string{$required_parameters};\n";
-						$return_called_overload .= tabs(4) . "temp_string{$required_parameters} = (char*)malloc(sizeof(wxChar)*(value_to_return{$required_parameters}.size()+1));\n";
-						$return_called_overload .= tabs(4) . "strcpy (temp_string{$required_parameters}, (const char *) value_to_return{$required_parameters}.char_str() );\n";
-						$return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, temp_string{$required_parameters});\n";
-						$return_called_overload .= tabs(4) . "free(temp_string{$required_parameters});\n";
+						$return_called_overload .= tabs(4) . "ZVAL_STRING(return_value, value_to_return{$required_parameters}.char_str());\n";
 						break;
 					}
 					case "strings_array":
@@ -1610,14 +1599,11 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name_ex::$method_name($parameters_string);\n";
 						}
 
-						$return_called_overload .= tabs(4) . "char* temp_string{$required_parameters};\n";
+						//$return_called_overload .= tabs(4) . "char* temp_string{$required_parameters};\n";
 						$return_called_overload .= tabs(4) . "array_init(return_value);\n";
 						$return_called_overload .= tabs(4) . "for(size_t i=0; i<value_to_return{$required_parameters}.GetCount(); i++)\n";
 						$return_called_overload .= tabs(4) . "{\n";
-						$return_called_overload .= tabs(5) . "temp_string{$required_parameters} = (char*)malloc(sizeof(wxChar)*(value_to_return{$required_parameters}[i].size()+1));\n";
-						$return_called_overload .= tabs(5) . "strcpy (temp_string{$required_parameters}, (const char *) value_to_return{$required_parameters}[i].char_str() );\n";
-						$return_called_overload .= tabs(5) . "add_next_index_string(return_value, (char*) temp_string{$required_parameters}, 1);\n";
-						$return_called_overload .= tabs(5) . "free(temp_string{$required_parameters});\n";
+						$return_called_overload .= tabs(5) . "add_next_index_string(return_value, value_to_return{$required_parameters}[i].char_str());\n";
 						$return_called_overload .= tabs(4) . "}\n";
 						break;
 					}
@@ -1654,8 +1640,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								$return_called_overload .= tabs(4) . "else if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
 								$return_called_overload .= tabs(5) . "if(value_to_return{$required_parameters}->phpObj != NULL){\n";
-								$return_called_overload .= tabs(6) . "*return_value = *value_to_return{$required_parameters}->phpObj;\n";
-								$return_called_overload .= tabs(6) . "zval_add_ref(&value_to_return{$required_parameters}->phpObj);\n";
+								$return_called_overload .= tabs(6) . "return_value = value_to_return{$required_parameters}->phpObj;\n";
+								$return_called_overload .= tabs(6) . "zval_add_ref(value_to_return{$required_parameters}->phpObj);\n";
 								$return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else{\n";
@@ -1670,7 +1656,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								if(!$declaration["static"] && $class_name)
 								{
 									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return{$required_parameters} != (void*)native_object && return_is_user_initialized){\n";
-									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name_ex::$method_name at call with $required_parameters argument(s)\");\n";
+									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name_ex::$method_name at call 5 with $required_parameters argument(s)\");\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
 
@@ -1702,8 +1688,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								}
 								$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
 								$return_called_overload .= tabs(5) . "if(value_to_return{$required_parameters}->phpObj != NULL){\n";
-								$return_called_overload .= tabs(6) . "*return_value = *value_to_return{$required_parameters}->phpObj;\n";
-								$return_called_overload .= tabs(6) . "zval_add_ref(&value_to_return{$required_parameters}->phpObj);\n";
+								$return_called_overload .= tabs(6) . "return_value = value_to_return{$required_parameters}->phpObj;\n";
+								$return_called_overload .= tabs(6) . "zval_add_ref(value_to_return{$required_parameters}->phpObj);\n";
 								$return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else{\n";
@@ -1718,7 +1704,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								if(!$declaration["static"] && $class_name)
 								{
 									$return_called_overload .= tabs(4) . "if((void*)value_to_return{$required_parameters} != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self\n";
-									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name_ex::$method_name at call with $required_parameters argument(s)\");\n";
+									$return_called_overload .= tabs(5) . "references->AddReference(return_value, \"$class_name_ex::$method_name at call 6 with $required_parameters argument(s)\");\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
 
@@ -1821,7 +1807,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
 			{
 				case "const_pointer":
 				case "pointer":
-					$call_code .= tabs($t) . "ZVAL_BOOL(return_value, *($method_name($parameters_string)));\n";
+					$call_code .= tabs($t) . "ZVAL_BOOL(&return_value, *($method_name($parameters_string)));\n";
 					break;
 
 				case "const_reference":
@@ -1859,7 +1845,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
 			{
 				case "const_pointer":
 				case "pointer":
-					$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, *($method_name($parameters_string)));\n";
+					$call_code .= tabs($t) . "ZVAL_DOUBLE(&return_value, *($method_name($parameters_string)));\n";
 					break;
 
 				case "const_reference":
@@ -2084,12 +2070,12 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
+						$call_code .= tabs($t) . "ZVAL_BOOL(&return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
 						break;
 
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "ZVAL_BOOL(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_BOOL(&return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 
 					case "const_none":
@@ -2112,7 +2098,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "ZVAL_LONG(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_LONG(&return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 
 					case "const_none":
@@ -2128,12 +2114,12 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
+						$call_code .= tabs($t) . "ZVAL_DOUBLE(&return_value, *((({$derivation_class_name}_php*)native_object)->$method_name($parameters_string)));\n";
 						break;
 
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "ZVAL_DOUBLE(return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_DOUBLE(&return_value, (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 
 					case "const_none":
@@ -2175,7 +2161,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "ZVAL_STRING(&return_value, (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
+						$call_code .= tabs($t) . "ZVAL_STRING(return_value, (char*) (({$derivation_class_name}_php*)native_object)->$method_name($parameters_string));\n";
 						break;
 
 					case "const_none":

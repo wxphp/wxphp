@@ -10,23 +10,14 @@
 	#endif
 	
 <? if(count($method_definition["parameters_type"])<=0){ ?>
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
+	zval* params[1];
+	zval arguments[1];
 <? } else{ ?>
-	zval** params[<?=count($method_definition["parameters_type"])?>];
-	zval *arguments[<?=count($method_definition["parameters_type"])?>];
-	
-	//Initilize arguments array
-	for(int i=0; i<<?=count($method_definition["parameters_type"])?>; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[<?=count($method_definition["parameters_type"])?>];
+	zval arguments[<?=count($method_definition["parameters_type"])?>];
 <? } ?>
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
 	ZVAL_STRING(&function_name, "<?=$method_name?>");
 	char* temp_string;
@@ -48,7 +39,7 @@
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "<?=$method_name?>", <?=strlen($method_name)?>, &return_value, <?=count($method_definition["parameters_type"])?>, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "<?=$method_name?>", <?=strlen($method_name)?>, &return_value, <?=count($method_definition["parameters_type"])?>, params TSRMLS_CC);
 	}
 	else
 	{

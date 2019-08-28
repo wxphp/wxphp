@@ -494,7 +494,7 @@ foreach($sorted_classes as $class_name => $class_methods)
         isset($defIni[$class_methods["_implements"][0]])
     )
     {   
-        $classes .= "\tphp_{$class_name}_entry = zend_register_internal_class_ex(&ce, php_{$class_methods['_implements'][0]}_entry, NULL TSRMLS_CC);\n";
+        $classes .= "\tphp_{$class_name}_entry = zend_register_internal_class_ex(&ce, php_{$class_methods['_implements'][0]}_entry);\n";
     }
     else
     {

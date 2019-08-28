@@ -1,7 +1,7 @@
 <?=proto_begin($function_name)?>
 PHP_FUNCTION(php_wxDynamicCast)
 {
-	zval* object = 0;
+	zval object;
 	char* object_type;
 	int object_type_len = 0;
 	void* native_object = 0;
@@ -10,9 +10,9 @@ PHP_FUNCTION(php_wxDynamicCast)
 	
 	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &object , &object_type , &object_type_len ) == SUCCESS)
 	{
-		if(Z_TYPE_P(object) == IS_OBJECT)
+		if(Z_TYPE_P(&object) == IS_OBJECT)
 		{
-			native_object = (void*) Z_wxObject_P(object TSRMLS_CC)->native_object;
+			native_object = (void*) Z_wxObject_P(&object TSRMLS_CC)->native_object;
 			
 			if(!native_object)
 			{

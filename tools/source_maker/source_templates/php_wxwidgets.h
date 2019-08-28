@@ -22,7 +22,7 @@
  * Define Extension Properties 
  */
 #define PHP_WXWIDGETS_EXTNAME        "wxWidgets"
-#define PHP_WXWIDGETS_VERSION        "3.0.2.0"
+#define PHP_WXWIDGETS_VERSION        "3.0.4.0"
 
 /**
  * Define php compatible library version string
@@ -64,7 +64,7 @@ END_EXTERN_C()
  * Custom zend_method_call function to call methods with more than 2 parameters
  */
 BEGIN_EXTERN_C()
-int wxphp_call_method(zval **object_pp, zend_class_entry *obj_ce, zend_function **fn_proxy, const char *function_name, int function_name_len, zval **retval_ptr_ptr, int param_count, zval*** params TSRMLS_DC);
+int wxphp_call_method(zval *object_p, zend_class_entry *obj_ce, zend_function **fn_proxy, const char *function_name, int function_name_len, zval *retval_ptr, int param_count, zval** params TSRMLS_DC);
 END_EXTERN_C()
 
 class wxPhpClientData : public wxClientData
