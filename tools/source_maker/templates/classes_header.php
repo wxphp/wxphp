@@ -26,13 +26,13 @@ class <?=$class_name?>_php<?if($class_name == "wxScrolled"){?>: public <?=$class
 };
 
 BEGIN_EXTERN_C()
-struct zo_<?=$class_name?> 
+typedef struct _zo_<?=$class_name?>
 {
-    zend_object zo;
     <?=$class_name?>_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_<?=$class_name?>;
 
 void php_<?=$class_name?>_free(void *object TSRMLS_DC);
 zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC);
@@ -53,8 +53,8 @@ static zend_function_entry php_<?=$class_name?>_functions[] = {
 #endif
 
 
-static inline struct zo_<?=$class_name?> * php_<?=$class_name?>_fetch_object(zend_object *obj) {
-      return (struct zo_<?=$class_name?> *)((char *)obj - XtOffsetOf(struct zo_<?=$class_name?>, zo));
+static inline zo_<?=$class_name?> * php_<?=$class_name?>_fetch_object(zend_object *obj) {
+      return (zo_<?=$class_name?> *)((char *)obj - XtOffsetOf(zo_<?=$class_name?>, zo));
 }
 
 #define Z_<?=$class_name?>_P(zv) php_<?=$class_name?>_fetch_object(Z_OBJ_P(zv))

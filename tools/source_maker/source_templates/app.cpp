@@ -40,15 +40,16 @@ zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
     #endif
 
     zo_wxApp* custom_object;
-    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp) + zend_object_properties_size(class_type));
+    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp) + abs((int)zend_object_properties_size(class_type)));
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+    object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
+
+    custom_object->zo.handlers = zend_get_std_object_handlers();
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAPP_TYPE;
     custom_object->is_user_initialized = 0;
-
-    custom_object->zo.handlers = zend_get_std_object_handlers();
 
     return &custom_object->zo;
 }

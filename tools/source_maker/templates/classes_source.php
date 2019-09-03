@@ -150,17 +150,18 @@ zend_object* php_<?=$class_name?>_new(zend_class_entry *class_type TSRMLS_DC)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval temp;
-    zo_<?=$class_name?>* custom_object;
-    custom_object = (zo_<?=$class_name?>*) emalloc(sizeof(zo_<?=$class_name?>) + zend_object_properties_size(class_type));
+	zo_<?=$class_name?>* custom_object;
+	custom_object = (zo_<?=$class_name?>*) ecalloc(1, sizeof(zo_<?=$class_name?>) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
 	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 <? if(!in_array("__construct", funcsOfClass($class_name, 1, $output)) && has_all_pure_virtual_implemented($class_name)){ ?>
 
+	zval temp;
 	Z_TYPE_INFO(temp) = IS_OBJECT;
 	Z_OBJ(temp) = &custom_object->zo;
 
