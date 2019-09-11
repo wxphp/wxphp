@@ -11,10 +11,10 @@ class MyDialog extends wxDialog
         $gridSizer = new wxGridSizer(0, 2, 0, 0);
 
         $label = new wxStaticText($this, -1, 'label', new wxPoint(-1, -1), new wxSize(-1, -1), 0);
-        $gridSizer->Add($label);
-        /*
-                $textBox = new wxTextCtrl($this, -1, '', new wxPoint(-1, -1), new wxSize(-1, -1), 0);
-                $gridSizer->Add($textBox, 0, 0, 5);*/
+        $gridSizer->Add($label, 0, 0, 1);
+
+        $textBox = new wxTextCtrl($this, -1, '', new wxPoint(-1, -1), new wxSize(-1, -1), 0);
+        $gridSizer->Add($textBox, 0, 0, 2);
 
         $this->SetSizer($gridSizer);
         $this->Layout();
