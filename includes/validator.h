@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_validator_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGenericValidator_entry;
-void php_wxGenericValidator_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGenericValidator_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGenericValidator_php: public wxGenericValidator{
 	public:
@@ -41,16 +41,15 @@ class wxGenericValidator_php: public wxGenericValidator{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGenericValidator 
-{
-    zend_object zo;
+typedef struct _zo_wxGenericValidator{
     wxGenericValidator_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGenericValidator;
 
 void php_wxGenericValidator_free(void *object TSRMLS_DC);
-zend_object_value php_wxGenericValidator_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGenericValidator_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -63,8 +62,14 @@ static zend_function_entry php_wxGenericValidator_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGenericValidator * php_wxGenericValidator_fetch_object(zend_object *obj) {
+      return (zo_wxGenericValidator *)((char *)obj - XtOffsetOf(zo_wxGenericValidator, zo));
+}
+
+#define Z_wxGenericValidator_P(zv) php_wxGenericValidator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxValidator_entry;
-void php_wxValidator_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxValidator_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxValidator_php: public wxValidator{
 	public:
@@ -79,16 +84,15 @@ class wxValidator_php: public wxValidator{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxValidator 
-{
-    zend_object zo;
+typedef struct _zo_wxValidator{
     wxValidator_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxValidator;
 
 void php_wxValidator_free(void *object TSRMLS_DC);
-zend_object_value php_wxValidator_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxValidator_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -105,8 +109,14 @@ static zend_function_entry php_wxValidator_functions[] = {
 };
 #endif
 
+
+static inline zo_wxValidator * php_wxValidator_fetch_object(zend_object *obj) {
+      return (zo_wxValidator *)((char *)obj - XtOffsetOf(zo_wxValidator, zo));
+}
+
+#define Z_wxValidator_P(zv) php_wxValidator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextValidator_entry;
-void php_wxTextValidator_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxTextValidator_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxTextValidator_php: public wxTextValidator{
 	public:
@@ -122,16 +132,15 @@ class wxTextValidator_php: public wxTextValidator{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxTextValidator 
-{
-    zend_object zo;
+typedef struct _zo_wxTextValidator{
     wxTextValidator_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxTextValidator;
 
 void php_wxTextValidator_free(void *object TSRMLS_DC);
-zend_object_value php_wxTextValidator_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxTextValidator_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -154,4 +163,10 @@ static zend_function_entry php_wxTextValidator_functions[] = {
 };
 #endif
 
+
+static inline zo_wxTextValidator * php_wxTextValidator_fetch_object(zend_object *obj) {
+      return (zo_wxTextValidator *)((char *)obj - XtOffsetOf(zo_wxTextValidator, zo));
+}
+
+#define Z_wxTextValidator_P(zv) php_wxTextValidator_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_VALIDATOR_H_GUARD

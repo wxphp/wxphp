@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_vfs_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFileSystem_entry;
-void php_wxFileSystem_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFileSystem_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFileSystem_php: public wxFileSystem{
 	public:
@@ -35,16 +35,15 @@ class wxFileSystem_php: public wxFileSystem{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFileSystem 
-{
-    zend_object zo;
+typedef struct _zo_wxFileSystem{
     wxFileSystem_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFileSystem;
 
 void php_wxFileSystem_free(void *object TSRMLS_DC);
-zend_object_value php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -64,8 +63,14 @@ static zend_function_entry php_wxFileSystem_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFileSystem * php_wxFileSystem_fetch_object(zend_object *obj) {
+      return (zo_wxFileSystem *)((char *)obj - XtOffsetOf(zo_wxFileSystem, zo));
+}
+
+#define Z_wxFileSystem_P(zv) php_wxFileSystem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileSystemHandler_entry;
-void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFileSystemHandler_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFileSystemHandler_php: public wxFileSystemHandler{
 	public:
@@ -82,16 +87,15 @@ class wxFileSystemHandler_php: public wxFileSystemHandler{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFileSystemHandler 
-{
-    zend_object zo;
+typedef struct _zo_wxFileSystemHandler{
     wxFileSystemHandler_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFileSystemHandler;
 
 void php_wxFileSystemHandler_free(void *object TSRMLS_DC);
-zend_object_value php_wxFileSystemHandler_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFileSystemHandler_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -104,4 +108,10 @@ static zend_function_entry php_wxFileSystemHandler_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFileSystemHandler * php_wxFileSystemHandler_fetch_object(zend_object *obj) {
+      return (zo_wxFileSystemHandler *)((char *)obj - XtOffsetOf(zo_wxFileSystemHandler, zo));
+}
+
+#define Z_wxFileSystemHandler_P(zv) php_wxFileSystemHandler_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_VFS_H_GUARD

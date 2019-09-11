@@ -97,36 +97,26 @@ void php_wxFileSystem_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFileSystem_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFileSystem_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxFileSystem* custom_object;
-    custom_object = (zo_wxFileSystem*) emalloc(sizeof(zo_wxFileSystem));
+	zo_wxFileSystem* custom_object;
+	custom_object = (zo_wxFileSystem*) ecalloc(1, sizeof(zo_wxFileSystem) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystem_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEM_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -144,7 +134,8 @@ PHP_METHOD(php_wxFileSystem, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -190,7 +181,7 @@ PHP_METHOD(php_wxFileSystem, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -226,7 +217,8 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -235,7 +227,7 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -303,7 +295,7 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 				memcpy(ptr, (void*) &value_to_return1, sizeof(wxFileName));
 				object_init_ex(return_value, php_wxFileName_entry);
 				((wxFileName_php*)ptr)->phpObj = return_value;
-				zo_wxFileName* zo1 = (zo_wxFileName*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxFileName* zo1 = Z_wxFileName_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxFileName_php*) ptr;
 
 
@@ -337,7 +329,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -346,7 +339,7 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -416,8 +409,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						*return_value = *value_to_return1->phpObj;
-						zval_add_ref(&value_to_return1->phpObj);
+						return_value = value_to_return1->phpObj;
+						zval_add_ref(value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -426,11 +419,11 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 				}
 				else{
 					object_init_ex(return_value, php_wxFSFile_entry);
-					((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFSFile_php*) value_to_return1;
+					Z_wxFSFile_P(return_value TSRMLS_CC)->native_object = (wxFSFile_php*) value_to_return1;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFileSystem::OpenFile at call with 1 argument(s)");
+					references->AddReference(return_value, "wxFileSystem::OpenFile at call 5 with 1 argument(s)");
 				}
 
 
@@ -451,8 +444,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						*return_value = *value_to_return2->phpObj;
-						zval_add_ref(&value_to_return2->phpObj);
+						return_value = value_to_return2->phpObj;
+						zval_add_ref(value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -461,11 +454,11 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 				}
 				else{
 					object_init_ex(return_value, php_wxFSFile_entry);
-					((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFSFile_php*) value_to_return2;
+					Z_wxFSFile_P(return_value TSRMLS_CC)->native_object = (wxFSFile_php*) value_to_return2;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFileSystem::OpenFile at call with 2 argument(s)");
+					references->AddReference(return_value, "wxFileSystem::OpenFile at call 5 with 2 argument(s)");
 				}
 
 
@@ -499,7 +492,8 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -508,7 +502,7 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -603,7 +597,8 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -612,7 +607,7 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -669,11 +664,7 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxFileSystem_php*)native_object)->GetPath();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -706,7 +697,8 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -715,7 +707,7 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -772,11 +764,7 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxFileSystem_php*)native_object)->FindNext();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -809,7 +797,8 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -818,7 +807,7 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -882,11 +871,7 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 
 				wxString value_to_return1;
 				value_to_return1 = ((wxFileSystem_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
+				ZVAL_STRING(return_value, value_to_return1.char_str());
 
 
 				return;
@@ -900,11 +885,7 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 
 				wxString value_to_return2;
 				value_to_return2 = ((wxFileSystem_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8), (int) flags0);
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
+				ZVAL_STRING(return_value, value_to_return2.char_str());
 
 
 				return;
@@ -937,7 +918,8 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -946,7 +928,7 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -977,7 +959,7 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 	//Parameters for overload 0
 	char* pStr0;
 	long pStr_len0;
-	zval* pStr0_ref;
+	zval pStr0_ref;
 	char* path0;
 	long path_len0;
 	char* file0;
@@ -1000,7 +982,7 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 			already_called = true;
 
 			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &pStr0_ref, &dummy, &dummy );
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, pStr0_ref, dummy, dummy );
 		}
 	}
 
@@ -1018,12 +1000,7 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 
 				ZVAL_BOOL(return_value, ((wxFileSystem_php*)native_object)->FindFileInPath(&string_arg0_0, wxString(path0, wxConvUTF8), wxString(file0, wxConvUTF8)));
 
-				char* temp_string0_0;
-				temp_string0_0 = (char*)malloc(sizeof(wxChar)*(string_arg0_0.size()+1));
-				strcpy (temp_string0_0, (const char *) string_arg0_0.char_str() );
-				ZVAL_STRING(pStr0_ref, (char*) temp_string0_0, 1);
-				free(temp_string0_0);
-
+				ZVAL_STRING(&pStr0_ref, string_arg0_0.char_str());
 
 				return;
 				break;
@@ -1055,7 +1032,8 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1064,7 +1042,7 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1093,7 +1071,7 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 	#endif
 	
 	//Parameters for overload 0
-	zval* filename0 = 0;
+	zval filename0;
 	wxFileName* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1110,17 +1088,17 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(filename0) == IS_OBJECT)
+				if(Z_TYPE(filename0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFileName*) zend_object_store_get_object(filename0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFileName*) zend_object_store_get_object(filename0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFileName_P(&filename0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileName_P(&filename0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileName*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'filename' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(filename0) != IS_NULL)
+				else if(Z_TYPE(filename0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'filename' not null, could not be retreived correctly.");
 				}
@@ -1145,11 +1123,7 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 
 				wxString value_to_return1;
 				value_to_return1 = wxFileSystem::FileNameToURL(*(wxFileName*) object_pointer0_0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
+				ZVAL_STRING(return_value, value_to_return1.char_str());
 
 
 				return;
@@ -1182,7 +1156,8 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1191,7 +1166,7 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1298,7 +1273,8 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1307,7 +1283,7 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystem*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystem_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1336,7 +1312,7 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 	#endif
 	
 	//Parameters for overload 0
-	zval* handler0 = 0;
+	zval handler0;
 	wxFileSystemHandler* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1353,17 +1329,17 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(handler0) == IS_OBJECT)
+				if(Z_TYPE(handler0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFileSystemHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFileSystemHandler*) zend_object_store_get_object(handler0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFileSystemHandler_P(&handler0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFileSystemHandler_P(&handler0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFileSystemHandler*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXFILESYSTEMHANDLER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'handler' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(handler0) != IS_NULL)
+				else if(Z_TYPE(handler0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'handler' not null, could not be retreived correctly.");
 				}
@@ -1449,36 +1425,26 @@ void php_wxFileSystemHandler_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxFileSystemHandler_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFileSystemHandler_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFileSystemHandler_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxFileSystemHandler* custom_object;
-    custom_object = (zo_wxFileSystemHandler*) emalloc(sizeof(zo_wxFileSystemHandler));
+	zo_wxFileSystemHandler* custom_object;
+	custom_object = (zo_wxFileSystemHandler*) ecalloc(1, sizeof(zo_wxFileSystemHandler) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileSystemHandler_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILESYSTEMHANDLER_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -1494,28 +1460,18 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "CanOpen", 0);
+	ZVAL_STRING(&function_name, "CanOpen");
 	char* temp_string;
 	void* return_object;
 	int function_called;
 	
 	//Parameters for conversion
-	temp_string = (char*)malloc(sizeof(wxChar)*(location.size()+1));
-	strcpy(temp_string, (const char *) location.char_str());
-	ZVAL_STRING(arguments[0], temp_string, 1);
-	free(temp_string);
+	ZVAL_STRING(&arguments[0], location.char_str());
 		
 	for(int i=0; i<1; i++)
 	{
@@ -1528,7 +1484,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "CanOpen", 7, &return_value, 1, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "CanOpen", 7, &return_value, 1, params TSRMLS_CC);
 	}
 	else
 	{
@@ -1557,7 +1513,7 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 	php_printf("Returning userspace value.\n");
 	#endif
 		
-	return Z_BVAL_P(return_value);
+	return Z_TYPE_INFO_P(&return_value) == IS_TRUE;
 	
 }
 /* }}} */
@@ -1577,7 +1533,8 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1586,7 +1543,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystemHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystemHandler_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1650,11 +1607,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 
 				wxString value_to_return1;
 				value_to_return1 = ((wxFileSystemHandler_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
+				ZVAL_STRING(return_value, value_to_return1.char_str());
 
 
 				return;
@@ -1668,11 +1621,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 
 				wxString value_to_return2;
 				value_to_return2 = ((wxFileSystemHandler_php*)native_object)->FindFirst(wxString(wildcard0, wxConvUTF8), (int) flags0);
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
+				ZVAL_STRING(return_value, value_to_return2.char_str());
 
 
 				return;
@@ -1705,7 +1654,8 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1714,7 +1664,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystemHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystemHandler_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1771,11 +1721,7 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxFileSystemHandler_php*)native_object)->FindNext();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -1808,7 +1754,8 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1817,7 +1764,7 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileSystemHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystemHandler_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1881,11 +1828,7 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 
 				wxString value_to_return1;
 				value_to_return1 = wxFileSystemHandler::GetMimeTypeFromExt(wxString(location0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
+				ZVAL_STRING(return_value, value_to_return1.char_str());
 
 
 				return;
@@ -1915,30 +1858,20 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[2];
-	zval *arguments[2];
-	
-	//Initilize arguments array
-	for(int i=0; i<2; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[2];
+	zval arguments[2];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OpenFile", 0);
+	ZVAL_STRING(&function_name, "OpenFile");
 	char* temp_string;
 	void* return_object;
 	int function_called;
 	
 	//Parameters for conversion
-	object_init_ex(arguments[0], php_wxFileSystem_entry);
-	((zo_wxFileSystem*) zend_object_store_get_object(arguments[0] TSRMLS_CC))->native_object = (wxFileSystem_php*) &fs;
-	temp_string = (char*)malloc(sizeof(wxChar)*(location.size()+1));
-	strcpy(temp_string, (const char *) location.char_str());
-	ZVAL_STRING(arguments[1], temp_string, 1);
-	free(temp_string);
+	object_init_ex(&arguments[0], php_wxFileSystem_entry);
+	Z_wxFileSystem_P(&arguments[0] TSRMLS_CC)->native_object = (wxFileSystem_php*) &fs;
+	ZVAL_STRING(&arguments[1], location.char_str());
 		
 	for(int i=0; i<2; i++)
 	{
@@ -1951,7 +1884,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OpenFile", 8, &return_value, 2, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OpenFile", 8, &return_value, 2, params TSRMLS_CC);
 	}
 	else
 	{
@@ -1980,13 +1913,13 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	php_printf("Returning userspace value.\n");
 	#endif
 		
-	if(Z_TYPE_P(return_value) == IS_OBJECT)
+	if(Z_TYPE_P(&return_value) == IS_OBJECT)
 	{
-		return_object = (void*) ((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;
+		return_object = (void*) Z_wxFSFile_P(&return_value TSRMLS_CC)->native_object;
 	}
 
 	//Threat it as a normal object on the calling function and not a php user space intiialized one
-	((zo_wxFSFile*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;
+	Z_wxFSFile_P(&return_value TSRMLS_CC)->is_user_initialized = 0;
 	wxFSFile_php* var = (wxFSFile_php*) return_object;
 	var->references.UnInitialize();
 
@@ -2009,7 +1942,8 @@ PHP_METHOD(php_wxFileSystemHandler, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -2055,7 +1989,7 @@ PHP_METHOD(php_wxFileSystemHandler, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxFileSystemHandler*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileSystemHandler_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		

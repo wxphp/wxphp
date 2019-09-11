@@ -97,36 +97,26 @@ void php_wxTextAttr_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxTextAttr_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxTextAttr* custom_object;
-    custom_object = (zo_wxTextAttr*) emalloc(sizeof(zo_wxTextAttr));
+	zo_wxTextAttr* custom_object;
+	custom_object = (zo_wxTextAttr*) ecalloc(1, sizeof(zo_wxTextAttr) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTextAttr_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTEXTATTR_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -144,21 +134,22 @@ PHP_METHOD(php_wxTextAttr, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* attr0 = 0;
+	zval attr0;
 	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* colText1 = 0;
+	zval colText1;
 	wxColour* object_pointer1_0 = 0;
-	zval* colBack1 = 0;
+	zval colBack1;
 	wxColour* object_pointer1_1 = 0;
-	zval* font1 = 0;
+	zval font1;
 	wxFont* object_pointer1_2 = 0;
 	long alignment1;
 	bool overload1_called = false;
@@ -178,17 +169,17 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(attr0) == IS_OBJECT)
+				if(Z_TYPE(attr0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(attr0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(attr0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(&attr0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(&attr0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(attr0) != IS_NULL)
+				else if(Z_TYPE(attr0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -212,51 +203,51 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &alignment1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(colText1) == IS_OBJECT)
+				if(Z_TYPE(colText1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colText1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colText1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(&colText1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(&colText1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxColour*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(colText1) != IS_NULL)
+				else if(Z_TYPE(colText1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(colBack1) == IS_OBJECT)
+				if(Z_TYPE(colBack1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colBack1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colBack1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(&colBack1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(&colBack1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxColour*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(colBack1) != IS_NULL)
+				else if(Z_TYPE(colBack1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(font1) == IS_OBJECT)
+				if(Z_TYPE(font1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(&font1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(&font1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxFont*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(font1) != IS_NULL)
+				else if(Z_TYPE(font1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -294,7 +285,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxTextAttr*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(attr0, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&attr0, "wxTextAttr::wxTextAttr at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -313,7 +304,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 1 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -325,8 +316,8 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 2 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 2 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colBack1, "wxTextAttr::wxTextAttr at call 4 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -338,9 +329,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colBack1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&font1, "wxTextAttr::wxTextAttr at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -352,9 +343,9 @@ PHP_METHOD(php_wxTextAttr, __construct)
 				native_object = new wxTextAttr_php(*(wxColour*) object_pointer1_0, *(wxColour*) object_pointer1_1, *(wxFont*) object_pointer1_2, (wxTextAttrAlignment) alignment1);
 
 				native_object->references.Initialize();
-				((wxTextAttr_php*) native_object)->references.AddReference(colText1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(colBack1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
-				((wxTextAttr_php*) native_object)->references.AddReference(font1, "wxTextAttr::wxTextAttr at call with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colText1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&colBack1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
+				((wxTextAttr_php*) native_object)->references.AddReference(&font1, "wxTextAttr::wxTextAttr at call 4 with 4 argument(s)");
 				break;
 			}
 		}
@@ -384,7 +375,7 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -420,7 +411,8 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -429,7 +421,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -458,7 +450,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 	#endif
 	
 	//Parameters for overload 0
-	zval* font0 = 0;
+	zval font0;
 	wxFont* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -476,17 +468,17 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT)
+				if(Z_TYPE(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
+				else if(Z_TYPE(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -510,7 +502,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 
 				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0);
 
-				references->AddReference(font0, "wxTextAttr::SetFont at call with 1 argument(s)");
+				references->AddReference(&font0, "wxTextAttr::SetFont at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -523,7 +515,7 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 
 				((wxTextAttr_php*)native_object)->SetFont(*(wxFont*) object_pointer0_0, (int) flags0);
 
-				references->AddReference(font0, "wxTextAttr::SetFont at call with 2 argument(s)");
+				references->AddReference(&font0, "wxTextAttr::SetFont at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -555,7 +547,8 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -564,7 +557,7 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -658,7 +651,8 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -667,7 +661,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -760,7 +754,8 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -769,7 +764,7 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -862,7 +857,8 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -871,7 +867,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -900,7 +896,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval* colText0 = 0;
+	zval colText0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -917,17 +913,17 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(colText0) == IS_OBJECT)
+				if(Z_TYPE(colText0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colText0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colText0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(&colText0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(&colText0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colText' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(colText0) != IS_NULL)
+				else if(Z_TYPE(colText0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colText' not null, could not be retreived correctly.");
 				}
@@ -951,7 +947,7 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 
 				((wxTextAttr_php*)native_object)->SetTextColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colText0, "wxTextAttr::SetTextColour at call with 1 argument(s)");
+				references->AddReference(&colText0, "wxTextAttr::SetTextColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -983,7 +979,8 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -992,7 +989,7 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1085,7 +1082,8 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1094,7 +1092,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1188,7 +1186,8 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1197,7 +1196,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1290,7 +1289,8 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1299,7 +1299,7 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1392,7 +1392,8 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1401,7 +1402,7 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1494,7 +1495,8 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1503,7 +1505,7 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1597,7 +1599,8 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1606,7 +1609,7 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1699,7 +1702,8 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1708,7 +1712,7 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1814,7 +1818,8 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1823,7 +1828,7 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1916,7 +1921,8 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1925,7 +1931,7 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2018,7 +2024,8 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2027,7 +2034,7 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2120,7 +2127,8 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2129,7 +2137,7 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2222,7 +2230,8 @@ PHP_METHOD(php_wxTextAttr, Apply)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2231,7 +2240,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2260,9 +2269,9 @@ PHP_METHOD(php_wxTextAttr, Apply)
 	#endif
 	
 	//Parameters for overload 0
-	zval* style0 = 0;
+	zval style0;
 	wxTextAttr* object_pointer0_0 = 0;
-	zval* compareWith0 = 0;
+	zval compareWith0;
 	wxTextAttr* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -2279,34 +2288,34 @@ PHP_METHOD(php_wxTextAttr, Apply)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, php_wxTextAttr_entry, &compareWith0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(style0) == IS_OBJECT)
+				if(Z_TYPE(style0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(style0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(style0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(&style0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(&style0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'style' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(style0) != IS_NULL)
+				else if(Z_TYPE(style0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'style' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(compareWith0) == IS_OBJECT)
+				if(Z_TYPE(compareWith0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(compareWith0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(compareWith0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(&compareWith0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(&compareWith0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXTEXTATTR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'compareWith' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(compareWith0) != IS_NULL)
+				else if(Z_TYPE(compareWith0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'compareWith' not null, could not be retreived correctly.");
 				}
@@ -2330,7 +2339,7 @@ PHP_METHOD(php_wxTextAttr, Apply)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0));
 
-				references->AddReference(style0, "wxTextAttr::Apply at call with 1 argument(s)");
+				references->AddReference(&style0, "wxTextAttr::Apply at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -2343,8 +2352,8 @@ PHP_METHOD(php_wxTextAttr, Apply)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->Apply(*(wxTextAttr*) object_pointer0_0, (const wxTextAttr*) object_pointer0_1));
 
-				references->AddReference(style0, "wxTextAttr::Apply at call with 2 argument(s)");
-				references->AddReference(compareWith0, "wxTextAttr::Apply at call with 2 argument(s)");
+				references->AddReference(&style0, "wxTextAttr::Apply at call 3 with 2 argument(s)");
+				references->AddReference(&compareWith0, "wxTextAttr::Apply at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -2376,7 +2385,8 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2385,7 +2395,7 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2473,7 +2483,8 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2482,7 +2493,7 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2542,8 +2553,8 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2552,11 +2563,11 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 				}
 				else{
 					object_init_ex(return_value,php_wxColour_entry);
-					((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) value_to_return0;
+					Z_wxColour_P(return_value TSRMLS_CC)->native_object = (wxColour_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxTextAttr::GetBackgroundColour at call with 0 argument(s)");
+					references->AddReference(return_value, "wxTextAttr::GetBackgroundColour at call 6 with 0 argument(s)");
 				}
 
 
@@ -2590,7 +2601,8 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2599,7 +2611,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2656,11 +2668,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletFont();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -2693,7 +2701,8 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2702,7 +2711,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2759,11 +2768,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletName();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -2796,7 +2801,8 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2805,7 +2811,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2893,7 +2899,8 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2902,7 +2909,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2990,7 +2997,8 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2999,7 +3007,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3056,11 +3064,7 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetBulletText();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -3093,7 +3097,8 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3102,7 +3107,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3159,11 +3164,7 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetCharacterStyleName();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -3196,7 +3197,8 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3205,7 +3207,7 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3293,7 +3295,8 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3302,7 +3305,7 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3364,7 +3367,7 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 				memcpy(ptr, (void*) &value_to_return0, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				((wxFont_php*)ptr)->phpObj = return_value;
-				zo_wxFont* zo0 = (zo_wxFont*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxFont* zo0 = Z_wxFont_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxFont_php*) ptr;
 
 
@@ -3398,7 +3401,8 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3407,7 +3411,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3436,7 +3440,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 	#endif
 	
 	//Parameters for overload 0
-	zval* font0 = 0;
+	zval font0;
 	wxFont* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -3454,17 +3458,17 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT)
+				if(Z_TYPE(font0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFont*) zend_object_store_get_object(font0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFont_P(&font0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFont_P(&font0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFont*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'font' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
+				else if(Z_TYPE(font0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'font' not null, could not be retreived correctly.");
 				}
@@ -3488,7 +3492,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0));
 
-				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 1 argument(s)");
+				references->AddReference(&font0, "wxTextAttr::GetFontAttributes at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -3501,7 +3505,7 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 
 				ZVAL_BOOL(return_value, ((wxTextAttr_php*)native_object)->GetFontAttributes(*(wxFont*) object_pointer0_0, (int) flags0));
 
-				references->AddReference(font0, "wxTextAttr::GetFontAttributes at call with 2 argument(s)");
+				references->AddReference(&font0, "wxTextAttr::GetFontAttributes at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -3533,7 +3537,8 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3542,7 +3547,7 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3630,7 +3635,8 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3639,7 +3645,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3696,11 +3702,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetFontFaceName();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -3733,7 +3735,8 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3742,7 +3745,7 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3830,7 +3833,8 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3839,7 +3843,7 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3927,7 +3931,8 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3936,7 +3941,7 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4024,7 +4029,8 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4033,7 +4039,7 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4121,7 +4127,8 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4130,7 +4137,7 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4218,7 +4225,8 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4227,7 +4235,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4315,7 +4323,8 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4324,7 +4333,7 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4412,7 +4421,8 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4421,7 +4431,7 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4509,7 +4519,8 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4518,7 +4529,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4575,11 +4586,7 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetListStyleName();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -4612,7 +4619,8 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4621,7 +4629,7 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4709,7 +4717,8 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4718,7 +4727,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4806,7 +4815,8 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4815,7 +4825,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4903,7 +4913,8 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4912,7 +4923,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4969,11 +4980,7 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetParagraphStyleName();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -5006,7 +5013,8 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5015,7 +5023,7 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5103,7 +5111,8 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5112,7 +5121,7 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5172,8 +5181,8 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5182,11 +5191,11 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 				}
 				else{
 					object_init_ex(return_value,php_wxColour_entry);
-					((zo_wxColour*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxColour_php*) value_to_return0;
+					Z_wxColour_P(return_value TSRMLS_CC)->native_object = (wxColour_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxTextAttr::GetTextColour at call with 0 argument(s)");
+					references->AddReference(return_value, "wxTextAttr::GetTextColour at call 6 with 0 argument(s)");
 				}
 
 
@@ -5220,7 +5229,8 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5229,7 +5239,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5317,7 +5327,8 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5326,7 +5337,7 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5414,7 +5425,8 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5423,7 +5435,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5480,11 +5492,7 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTextAttr_php*)native_object)->GetURL();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -5517,7 +5525,8 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5526,7 +5535,7 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5614,7 +5623,8 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5623,7 +5633,7 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5711,7 +5721,8 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5720,7 +5731,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5808,7 +5819,8 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5817,7 +5829,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5905,7 +5917,8 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5914,7 +5927,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6002,7 +6015,8 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6011,7 +6025,7 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6099,7 +6113,8 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6108,7 +6123,7 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6196,7 +6211,8 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6205,7 +6221,7 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6298,7 +6314,8 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6307,7 +6324,7 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6395,7 +6412,8 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6404,7 +6422,7 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6492,7 +6510,8 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6501,7 +6520,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6589,7 +6608,8 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6598,7 +6618,7 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6686,7 +6706,8 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6695,7 +6716,7 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6783,7 +6804,8 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6792,7 +6814,7 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6880,7 +6902,8 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6889,7 +6912,7 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6977,7 +7000,8 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6986,7 +7010,7 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7074,7 +7098,8 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7083,7 +7108,7 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7171,7 +7196,8 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7180,7 +7206,7 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7268,7 +7294,8 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7277,7 +7304,7 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7365,7 +7392,8 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7374,7 +7402,7 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7462,7 +7490,8 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7471,7 +7500,7 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7559,7 +7588,8 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7568,7 +7598,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7656,7 +7686,8 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7665,7 +7696,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7753,7 +7784,8 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7762,7 +7794,7 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7850,7 +7882,8 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7859,7 +7892,7 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7947,7 +7980,8 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7956,7 +7990,7 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8044,7 +8078,8 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8053,7 +8088,7 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8141,7 +8176,8 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8150,7 +8186,7 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8238,7 +8274,8 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8247,7 +8284,7 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8335,7 +8372,8 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8344,7 +8382,7 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8432,7 +8470,8 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8441,7 +8480,7 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8529,7 +8568,8 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8538,7 +8578,7 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8626,7 +8666,8 @@ PHP_METHOD(php_wxTextAttr, Merge)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8635,7 +8676,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8664,13 +8705,13 @@ PHP_METHOD(php_wxTextAttr, Merge)
 	#endif
 	
 	//Parameters for overload 0
-	zval* overlay0 = 0;
+	zval overlay0;
 	wxTextAttr* object_pointer0_0 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* base1 = 0;
+	zval base1;
 	wxTextAttr* object_pointer1_0 = 0;
-	zval* overlay1 = 0;
+	zval overlay1;
 	wxTextAttr* object_pointer1_1 = 0;
 	bool overload1_called = false;
 		
@@ -8687,17 +8728,17 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &overlay0, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(overlay0) == IS_OBJECT)
+				if(Z_TYPE(overlay0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(overlay0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(overlay0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(&overlay0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(&overlay0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(overlay0) != IS_NULL)
+				else if(Z_TYPE(overlay0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -8721,34 +8762,34 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &base1, php_wxTextAttr_entry, &overlay1, php_wxTextAttr_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(base1) == IS_OBJECT)
+				if(Z_TYPE(base1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(base1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(base1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(&base1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(&base1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'base' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(base1) != IS_NULL)
+				else if(Z_TYPE(base1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'base' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(overlay1) == IS_OBJECT)
+				if(Z_TYPE(overlay1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxTextAttr*) zend_object_store_get_object(overlay1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxTextAttr*) zend_object_store_get_object(overlay1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxTextAttr_P(&overlay1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxTextAttr_P(&overlay1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxTextAttr*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'overlay' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(overlay1) != IS_NULL)
+				else if(Z_TYPE(overlay1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'overlay' not null, could not be retreived correctly.");
 				}
@@ -8772,7 +8813,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 
 				((wxTextAttr_php*)native_object)->Merge(*(wxTextAttr*) object_pointer0_0);
 
-				references->AddReference(overlay0, "wxTextAttr::Merge at call with 1 argument(s)");
+				references->AddReference(&overlay0, "wxTextAttr::Merge at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -8797,7 +8838,7 @@ PHP_METHOD(php_wxTextAttr, Merge)
 				memcpy(ptr, (void*) &value_to_return2, sizeof(wxTextAttr));
 				object_init_ex(return_value, php_wxTextAttr_entry);
 				((wxTextAttr_php*)ptr)->phpObj = return_value;
-				zo_wxTextAttr* zo2 = (zo_wxTextAttr*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxTextAttr* zo2 = Z_wxTextAttr_P(return_value TSRMLS_CC);
 				zo2->native_object = (wxTextAttr_php*) ptr;
 
 
@@ -8831,7 +8872,8 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8840,7 +8882,7 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8933,7 +8975,8 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8942,7 +8985,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8971,7 +9014,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 	#endif
 	
 	//Parameters for overload 0
-	zval* colBack0 = 0;
+	zval colBack0;
 	wxColour* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8988,17 +9031,17 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(colBack0) == IS_OBJECT)
+				if(Z_TYPE(colBack0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxColour*) zend_object_store_get_object(colBack0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxColour*) zend_object_store_get_object(colBack0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxColour_P(&colBack0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColour_P(&colBack0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxColour*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'colBack' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(colBack0) != IS_NULL)
+				else if(Z_TYPE(colBack0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'colBack' not null, could not be retreived correctly.");
 				}
@@ -9022,7 +9065,7 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 
 				((wxTextAttr_php*)native_object)->SetBackgroundColour(*(wxColour*) object_pointer0_0);
 
-				references->AddReference(colBack0, "wxTextAttr::SetBackgroundColour at call with 1 argument(s)");
+				references->AddReference(&colBack0, "wxTextAttr::SetBackgroundColour at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -9054,7 +9097,8 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9063,7 +9107,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9157,7 +9201,8 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9166,7 +9211,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9260,7 +9305,8 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9269,7 +9315,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9362,7 +9408,8 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9371,7 +9418,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9464,7 +9511,8 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9473,7 +9521,7 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9567,7 +9615,8 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9576,7 +9625,7 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9670,7 +9719,8 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9679,7 +9729,7 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9772,7 +9822,8 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9781,7 +9832,7 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9874,7 +9925,8 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9883,7 +9935,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9977,7 +10029,8 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9986,7 +10039,7 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -10079,7 +10132,8 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -10088,7 +10142,7 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTextAttr*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTextAttr_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

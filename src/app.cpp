@@ -32,57 +32,47 @@ void php_wxApp_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC)
 {
     #ifdef USE_WXPHP_DEBUG
     php_printf("Calling php_wxApp_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
     php_printf("===========================================\n");
     #endif
 
-    zend_object_value retval;
     zo_wxApp* custom_object;
-    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp));
+    custom_object = (zo_wxApp*) emalloc(sizeof(zo_wxApp) + abs((int)zend_object_properties_size(class_type)));
 
     zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+    object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-    #if PHP_VERSION_ID < 50399
-    zval *temp;
-    ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-    #else
-    object_properties_init(&custom_object->zo, class_type);
-    #endif
+    custom_object->zo.handlers = zend_get_std_object_handlers();
 
     custom_object->native_object = NULL;
     custom_object->object_type = PHP_WXAPP_TYPE;
     custom_object->is_user_initialized = 0;
 
-    retval.handle = zend_objects_store_put(custom_object, NULL, php_wxApp_free, NULL TSRMLS_CC);
-    retval.handlers = zend_get_std_object_handlers();
-
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
 int wxAppWrapper::OnExit()
 {
-    zval *retval;
+    zval retval;
     zval func_name;
+    
+    ZVAL_STRINGL(&func_name, (char *)"OnExit", sizeof("OnExit")-1);
 
-    ZVAL_STRINGL(&func_name, (char *)"OnExit", sizeof("OnExit")-1, 0);
-
-    call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
+    call_user_function_ex(NULL, phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
 
     return 0;
 }
 
 bool wxAppWrapper::OnInit()
 {
-    zval *retval;
+    zval retval;
     zval func_name;
 
-    ZVAL_STRINGL(&func_name, (char *)"OnInit", sizeof("OnInit")-1, 0);
+    ZVAL_STRINGL(&func_name, (char *)"OnInit", sizeof("OnInit")-1);
 
     wxFileSystem::AddHandler(new wxZipFSHandler);
 
@@ -93,7 +83,7 @@ bool wxAppWrapper::OnInit()
     }
     #endif
 
-    call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
+    call_user_function_ex(NULL, phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC);
 
     return true;
 }
@@ -109,10 +99,9 @@ void wxAppWrapper::MacNewFile()
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacNewFile", sizeof("MacNewFile")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacNewFile", sizeof("MacNewFile")-1);
 
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     int function_called;
 
@@ -122,7 +111,7 @@ void wxAppWrapper::MacNewFile()
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -149,28 +138,21 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenFiles", sizeof("MacOpenFiles")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenFiles", sizeof("MacOpenFiles")-1);
 
-    zval** params[1];
-    zval *arguments[1];
+    zval* params[1];
+    zval arguments[1];
 
-    //Initilize arguments array
-    MAKE_STD_ZVAL(arguments[0]);
-
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     char* temp_string;
     int function_called;
 
     //Parameters for conversion
-    array_init(arguments[0]);
+    array_init(&arguments[0]);
     for(int i=0; i<fileNames.GetCount(); i++)
     {
-        temp_string = (char*)malloc(sizeof(wxChar)*(fileNames[i].size()+1));
-        strcpy(temp_string, (const char *) fileNames[i].char_str());
-        add_next_index_string(arguments[0], temp_string, 1);
-        free(temp_string);
+        add_next_index_string(&arguments[0], fileNames[i].char_str());
     }
 
     //Set parameters that are sent to function
@@ -182,7 +164,7 @@ void wxAppWrapper::MacOpenFiles ( const wxArrayString &  fileNames)
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -212,25 +194,18 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenFile", sizeof("MacOpenFile")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenFile", sizeof("MacOpenFile")-1);
 
-    zval** params[1];
-    zval *arguments[1];
+    zval* params[1];
+    zval arguments[1];
 
-    //Initilize arguments array
-    MAKE_STD_ZVAL(arguments[0]);
-
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     char* temp_string;
     int function_called;
 
     //Parameters for conversion
-    temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
-    strcpy(temp_string, (const char *) fileName.char_str());
-    ZVAL_STRING(arguments[0], temp_string, 1);
-    free(temp_string);
+    ZVAL_STRING(&arguments[0], fileName.char_str());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
@@ -241,7 +216,7 @@ void wxAppWrapper::MacOpenFile(const wxString& fileName)
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -271,25 +246,18 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacOpenURL", sizeof("MacOpenURL")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacOpenURL", sizeof("MacOpenURL")-1);
 
-    zval** params[1];
-    zval *arguments[1];
+    zval* params[1];
+    zval arguments[1];
 
-    //Initilize arguments array
-    MAKE_STD_ZVAL(arguments[0]);
-
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     char* temp_string;
     int function_called;
 
     //Parameters for conversion
-    temp_string = (char*)malloc(sizeof(wxChar)*(url.size()+1));
-    strcpy(temp_string, (const char *) url.char_str());
-    ZVAL_STRING(arguments[0], temp_string, 1);
-    free(temp_string);
+    ZVAL_STRING(&arguments[0], url.char_str());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
@@ -300,7 +268,7 @@ void wxAppWrapper::MacOpenURL(const wxString& url)
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -330,25 +298,18 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacPrintFile", sizeof("MacPrintFile")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacPrintFile", sizeof("MacPrintFile")-1);
 
-    zval** params[1];
-    zval *arguments[1];
+    zval* params[1];
+    zval arguments[1];
 
-    //Initilize arguments array
-    MAKE_STD_ZVAL(arguments[0]);
-
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     char* temp_string;
     int function_called;
 
     //Parameters for conversion
-    temp_string = (char*)malloc(sizeof(wxChar)*(fileName.size()+1));
-    strcpy(temp_string, (const char *) fileName.char_str());
-    ZVAL_STRING(arguments[0], temp_string, 1);
-    free(temp_string);
+    ZVAL_STRING(&arguments[0], fileName.char_str());
 
     //Set parameters that are sent to function
     params[0] = &arguments[0];
@@ -359,7 +320,7 @@ void wxAppWrapper::MacPrintFile(const wxString& fileName)
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 1, params, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -389,10 +350,9 @@ void wxAppWrapper::MacReopenApp()
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"MacReopenApp", sizeof("MacReopenApp")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"MacReopenApp", sizeof("MacReopenApp")-1);
 
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     int function_called;
 
@@ -402,7 +362,7 @@ void wxAppWrapper::MacReopenApp()
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -429,10 +389,9 @@ bool wxAppWrapper::OSXIsGUIApplication()
     #endif
 
     zval function_name;
-    ZVAL_STRINGL(&function_name, (char *)"OSXIsGUIApplication", sizeof("OSXIsGUIApplication")-1, 0);
+    ZVAL_STRINGL(&function_name, (char *)"OSXIsGUIApplication", sizeof("OSXIsGUIApplication")-1);
 
-    zval* return_value;
-    MAKE_STD_ZVAL(return_value);
+    zval return_value;
 
     int function_called;
 
@@ -442,7 +401,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
 
     if(is_php_user_space_implemented)
     {
-        function_called = call_user_function_ex(NULL, &phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
+        function_called = call_user_function_ex(NULL, phpObj, &function_name, &return_value, 0, NULL, 0, NULL TSRMLS_CC);
     }
     else
     {
@@ -464,7 +423,7 @@ bool wxAppWrapper::OSXIsGUIApplication()
     php_printf("Returning userspace value.\n");
     #endif
 
-    return Z_BVAL_P(return_value);
+    return Z_TYPE_INFO_P(&return_value) == IS_TRUE;
 }
 #endif
 
@@ -481,7 +440,7 @@ PHP_METHOD(php_wxApp, __construct)
     native_object->tsrm_ls = tsrm_ls;
     #endif
 
-    current_object = (zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC);
+    current_object = Z_wxApp_P(getThis());
 
     current_object->native_object = native_object;
 
@@ -500,7 +459,7 @@ PHP_METHOD(php_wxApp, SetInstance)
         RETURN_NULL();
     }
 
-    wxApp::SetInstance((wxAppWrapper*) ((zo_wxApp*) zend_object_store_get_object(objvar TSRMLS_CC))->native_object);
+    wxApp::SetInstance((wxAppWrapper*) Z_wxApp_P(objvar TSRMLS_CC)->native_object);
 }
 /* }}} */
 
@@ -515,16 +474,14 @@ PHP_METHOD(php_wxApp, GetInstance)
     }
     else if(instance->phpObj != NULL)
     {
-        *return_value = *instance->phpObj;
-        zval_add_ref(&instance->phpObj);
+        return_value = instance->phpObj;
+        zval_add_ref(instance->phpObj);
     }
     else
     {
         object_init_ex(return_value, php_wxApp_entry);
-        
-        ((zo_wxApp*) 
-            zend_object_store_get_object(return_value TSRMLS_CC)
-        )->native_object = (wxAppWrapper*) instance;
+    
+        Z_wxApp_P(return_value TSRMLS_CC)->native_object = (wxAppWrapper*) instance;
     }
 }
 /* }}} */
@@ -532,7 +489,7 @@ PHP_METHOD(php_wxApp, GetInstance)
 /* {{{ proto bool wxApp::Yield() */
 PHP_METHOD(php_wxApp, Yield)
 {
-    wxAppWrapper* native_object = ((zo_wxApp*) zend_object_store_get_object(getThis() TSRMLS_CC))->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
 
     if (zend_parse_parameters_none() == FAILURE)
         return;
@@ -544,115 +501,60 @@ PHP_METHOD(php_wxApp, Yield)
 /* {{{ proto bool wxApp::GetAppDisplayName(string name) */
 PHP_METHOD(php_wxApp, GetAppDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
-            
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
+    
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetAppDisplayName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string, 1);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
 /* {{{ proto bool wxApp::GetAppName(string name) */
 PHP_METHOD(php_wxApp, GetAppName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetAppName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string, 1);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
 /* {{{ proto bool wxApp::GetClassName(string name) */
 PHP_METHOD(php_wxApp, GetClassName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetClassName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string, 1);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
  
 /* {{{ proto bool wxApp::GetVendorDisplayName(string name) */
 PHP_METHOD(php_wxApp, GetVendorDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetVendorDisplayName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string, 1);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
 /* {{{ proto bool wxApp::GetVendorName(string name) */
 PHP_METHOD(php_wxApp, GetVendorName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     wxString value_to_return;
     value_to_return = ((wxApp*)native_object)->GetVendorName();
     
-    char* temp_string;
-    temp_string = (char*)malloc(sizeof(wxChar)*(value_to_return.size()+1));
-    strcpy (temp_string, (const char *) value_to_return.char_str() );
-    
-    ZVAL_STRING(return_value, temp_string, 1);
-    
-    free(temp_string);
+    ZVAL_STRING(return_value, value_to_return.char_str());
 }
 /* }}} */
 
@@ -660,12 +562,7 @@ PHP_METHOD(php_wxApp, GetVendorName)
 /* {{{ proto bool wxApp::SetAppDisplayName(string name) */
 PHP_METHOD(php_wxApp, SetAppDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -696,12 +593,7 @@ PHP_METHOD(php_wxApp, SetAppDisplayName)
 /* {{{ proto bool wxApp::SetAppName(string name) */
 PHP_METHOD(php_wxApp, SetAppName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -732,12 +624,7 @@ PHP_METHOD(php_wxApp, SetAppName)
 /* {{{ proto bool wxApp::SetClassName(string name) */
 PHP_METHOD(php_wxApp, SetClassName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -768,12 +655,7 @@ PHP_METHOD(php_wxApp, SetClassName)
 /* {{{ proto bool wxApp::SetVendorDisplayName(string name) */
 PHP_METHOD(php_wxApp, SetVendorDisplayName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;
@@ -804,12 +686,7 @@ PHP_METHOD(php_wxApp, SetVendorDisplayName)
 /* {{{ proto bool wxApp::SetVendorName(string name) */
 PHP_METHOD(php_wxApp, SetVendorName)
 {
-    wxAppWrapper* native_object = (
-        (zo_wxApp*) 
-        zend_object_store_get_object(
-            getThis() TSRMLS_CC
-        )
-    )->native_object;
+    wxAppWrapper* native_object = Z_wxApp_P(getThis() TSRMLS_CC)->native_object;
     
     char* name;
 	long name_len;

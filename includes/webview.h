@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_webview_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxWebViewHistoryItem_entry;
-void php_wxWebViewHistoryItem_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxWebViewHistoryItem_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxWebViewHistoryItem_php: public wxWebViewHistoryItem{
 	public:
@@ -35,16 +35,15 @@ class wxWebViewHistoryItem_php: public wxWebViewHistoryItem{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxWebViewHistoryItem 
-{
-    zend_object zo;
+typedef struct _zo_wxWebViewHistoryItem{
     wxWebViewHistoryItem_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxWebViewHistoryItem;
 
 void php_wxWebViewHistoryItem_free(void *object TSRMLS_DC);
-zend_object_value php_wxWebViewHistoryItem_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxWebViewHistoryItem_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -56,8 +55,14 @@ static zend_function_entry php_wxWebViewHistoryItem_functions[] = {
 };
 #endif
 
+
+static inline zo_wxWebViewHistoryItem * php_wxWebViewHistoryItem_fetch_object(zend_object *obj) {
+      return (zo_wxWebViewHistoryItem *)((char *)obj - XtOffsetOf(zo_wxWebViewHistoryItem, zo));
+}
+
+#define Z_wxWebViewHistoryItem_P(zv) php_wxWebViewHistoryItem_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWebViewHandler_entry;
-void php_wxWebViewHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxWebViewHandler_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxWebViewHandler_php: public wxWebViewHandler{
 	public:
@@ -73,16 +78,15 @@ class wxWebViewHandler_php: public wxWebViewHandler{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxWebViewHandler 
-{
-    zend_object zo;
+typedef struct _zo_wxWebViewHandler{
     wxWebViewHandler_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxWebViewHandler;
 
 void php_wxWebViewHandler_free(void *object TSRMLS_DC);
-zend_object_value php_wxWebViewHandler_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxWebViewHandler_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -93,8 +97,14 @@ static zend_function_entry php_wxWebViewHandler_functions[] = {
 };
 #endif
 
+
+static inline zo_wxWebViewHandler * php_wxWebViewHandler_fetch_object(zend_object *obj) {
+      return (zo_wxWebViewHandler *)((char *)obj - XtOffsetOf(zo_wxWebViewHandler, zo));
+}
+
+#define Z_wxWebViewHandler_P(zv) php_wxWebViewHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWebViewArchiveHandler_entry;
-void php_wxWebViewArchiveHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxWebViewArchiveHandler_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxWebViewArchiveHandler_php: public wxWebViewArchiveHandler{
 	public:
@@ -109,16 +119,15 @@ class wxWebViewArchiveHandler_php: public wxWebViewArchiveHandler{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxWebViewArchiveHandler 
-{
-    zend_object zo;
+typedef struct _zo_wxWebViewArchiveHandler{
     wxWebViewArchiveHandler_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxWebViewArchiveHandler;
 
 void php_wxWebViewArchiveHandler_free(void *object TSRMLS_DC);
-zend_object_value php_wxWebViewArchiveHandler_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxWebViewArchiveHandler_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -129,4 +138,10 @@ static zend_function_entry php_wxWebViewArchiveHandler_functions[] = {
 };
 #endif
 
+
+static inline zo_wxWebViewArchiveHandler * php_wxWebViewArchiveHandler_fetch_object(zend_object *obj) {
+      return (zo_wxWebViewArchiveHandler *)((char *)obj - XtOffsetOf(zo_wxWebViewArchiveHandler, zo));
+}
+
+#define Z_wxWebViewArchiveHandler_P(zv) php_wxWebViewArchiveHandler_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_WEBVIEW_H_GUARD

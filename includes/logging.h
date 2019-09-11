@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_logging_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxLog_entry;
-void php_wxLog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLog_php: public wxLog{
 	public:
@@ -36,16 +36,15 @@ class wxLog_php: public wxLog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLog 
-{
-    zend_object zo;
+typedef struct _zo_wxLog{
     wxLog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLog;
 
 void php_wxLog_free(void *object TSRMLS_DC);
-zend_object_value php_wxLog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -80,8 +79,14 @@ static zend_function_entry php_wxLog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLog * php_wxLog_fetch_object(zend_object *obj) {
+      return (zo_wxLog *)((char *)obj - XtOffsetOf(zo_wxLog, zo));
+}
+
+#define Z_wxLog_P(zv) php_wxLog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogChain_entry;
-void php_wxLogChain_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLogChain_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLogChain_php: public wxLogChain{
 	public:
@@ -96,16 +101,15 @@ class wxLogChain_php: public wxLogChain{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLogChain 
-{
-    zend_object zo;
+typedef struct _zo_wxLogChain{
     wxLogChain_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLogChain;
 
 void php_wxLogChain_free(void *object TSRMLS_DC);
-zend_object_value php_wxLogChain_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLogChain_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -120,8 +124,14 @@ static zend_function_entry php_wxLogChain_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLogChain * php_wxLogChain_fetch_object(zend_object *obj) {
+      return (zo_wxLogChain *)((char *)obj - XtOffsetOf(zo_wxLogChain, zo));
+}
+
+#define Z_wxLogChain_P(zv) php_wxLogChain_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogInterposer_entry;
-void php_wxLogInterposer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLogInterposer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLogInterposer_php: public wxLogInterposer{
 	public:
@@ -136,16 +146,15 @@ class wxLogInterposer_php: public wxLogInterposer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLogInterposer 
-{
-    zend_object zo;
+typedef struct _zo_wxLogInterposer{
     wxLogInterposer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLogInterposer;
 
 void php_wxLogInterposer_free(void *object TSRMLS_DC);
-zend_object_value php_wxLogInterposer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLogInterposer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -155,8 +164,14 @@ static zend_function_entry php_wxLogInterposer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLogInterposer * php_wxLogInterposer_fetch_object(zend_object *obj) {
+      return (zo_wxLogInterposer *)((char *)obj - XtOffsetOf(zo_wxLogInterposer, zo));
+}
+
+#define Z_wxLogInterposer_P(zv) php_wxLogInterposer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogBuffer_entry;
-void php_wxLogBuffer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLogBuffer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLogBuffer_php: public wxLogBuffer{
 	public:
@@ -171,16 +186,15 @@ class wxLogBuffer_php: public wxLogBuffer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLogBuffer 
-{
-    zend_object zo;
+typedef struct _zo_wxLogBuffer{
     wxLogBuffer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLogBuffer;
 
 void php_wxLogBuffer_free(void *object TSRMLS_DC);
-zend_object_value php_wxLogBuffer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLogBuffer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -192,8 +206,14 @@ static zend_function_entry php_wxLogBuffer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLogBuffer * php_wxLogBuffer_fetch_object(zend_object *obj) {
+      return (zo_wxLogBuffer *)((char *)obj - XtOffsetOf(zo_wxLogBuffer, zo));
+}
+
+#define Z_wxLogBuffer_P(zv) php_wxLogBuffer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogWindow_entry;
-void php_wxLogWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLogWindow_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLogWindow_php: public wxLogWindow{
 	public:
@@ -210,16 +230,15 @@ class wxLogWindow_php: public wxLogWindow{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLogWindow 
-{
-    zend_object zo;
+typedef struct _zo_wxLogWindow{
     wxLogWindow_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLogWindow;
 
 void php_wxLogWindow_free(void *object TSRMLS_DC);
-zend_object_value php_wxLogWindow_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLogWindow_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -231,8 +250,14 @@ static zend_function_entry php_wxLogWindow_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLogWindow * php_wxLogWindow_fetch_object(zend_object *obj) {
+      return (zo_wxLogWindow *)((char *)obj - XtOffsetOf(zo_wxLogWindow, zo));
+}
+
+#define Z_wxLogWindow_P(zv) php_wxLogWindow_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogGui_entry;
-void php_wxLogGui_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLogGui_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLogGui_php: public wxLogGui{
 	public:
@@ -264,16 +289,15 @@ class wxLogGui_php: public wxLogGui{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLogGui 
-{
-    zend_object zo;
+typedef struct _zo_wxLogGui{
     wxLogGui_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLogGui;
 
 void php_wxLogGui_free(void *object TSRMLS_DC);
-zend_object_value php_wxLogGui_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLogGui_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -285,8 +309,14 @@ static zend_function_entry php_wxLogGui_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLogGui * php_wxLogGui_fetch_object(zend_object *obj) {
+      return (zo_wxLogGui *)((char *)obj - XtOffsetOf(zo_wxLogGui, zo));
+}
+
+#define Z_wxLogGui_P(zv) php_wxLogGui_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxLogTextCtrl_entry;
-void php_wxLogTextCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxLogTextCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxLogTextCtrl_php: public wxLogTextCtrl{
 	public:
@@ -301,16 +331,15 @@ class wxLogTextCtrl_php: public wxLogTextCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxLogTextCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxLogTextCtrl{
     wxLogTextCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxLogTextCtrl;
 
 void php_wxLogTextCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxLogTextCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxLogTextCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -320,4 +349,10 @@ static zend_function_entry php_wxLogTextCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxLogTextCtrl * php_wxLogTextCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxLogTextCtrl *)((char *)obj - XtOffsetOf(zo_wxLogTextCtrl, zo));
+}
+
+#define Z_wxLogTextCtrl_P(zv) php_wxLogTextCtrl_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_LOGGING_H_GUARD

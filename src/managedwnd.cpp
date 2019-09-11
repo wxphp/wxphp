@@ -63,36 +63,26 @@ void php_wxFrame_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxFrame_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFrame_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFrame_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxFrame* custom_object;
-    custom_object = (zo_wxFrame*) emalloc(sizeof(zo_wxFrame));
+	zo_wxFrame* custom_object;
+	custom_object = (zo_wxFrame*) ecalloc(1, sizeof(zo_wxFrame) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFrame_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -110,7 +100,8 @@ PHP_METHOD(php_wxFrame, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -118,14 +109,14 @@ PHP_METHOD(php_wxFrame, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxWindow* object_pointer1_0 = 0;
 	long id1;
 	char* title1;
 	long title_len1;
-	zval* pos1 = 0;
+	zval pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval* size1 = 0;
+	zval size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* name1;
@@ -158,51 +149,51 @@ PHP_METHOD(php_wxFrame, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &title1, &title_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
+				if(Z_TYPE(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
+				else if(Z_TYPE(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
+				if(Z_TYPE(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
+				else if(Z_TYPE(size1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -245,7 +236,7 @@ PHP_METHOD(php_wxFrame, __construct)
 				native_object = new wxFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFrame_php*) native_object)->references.AddReference(parent1, "wxFrame::wxFrame at call with 3 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&parent1, "wxFrame::wxFrame at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -257,8 +248,8 @@ PHP_METHOD(php_wxFrame, __construct)
 				native_object = new wxFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxFrame_php*) native_object)->references.AddReference(parent1, "wxFrame::wxFrame at call with 4 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(pos1, "wxFrame::wxFrame at call with 4 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&parent1, "wxFrame::wxFrame at call 2 with 4 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&pos1, "wxFrame::wxFrame at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -270,9 +261,9 @@ PHP_METHOD(php_wxFrame, __construct)
 				native_object = new wxFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
 
 				native_object->references.Initialize();
-				((wxFrame_php*) native_object)->references.AddReference(parent1, "wxFrame::wxFrame at call with 5 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(pos1, "wxFrame::wxFrame at call with 5 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(size1, "wxFrame::wxFrame at call with 5 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&parent1, "wxFrame::wxFrame at call 2 with 5 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&pos1, "wxFrame::wxFrame at call 4 with 5 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&size1, "wxFrame::wxFrame at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -284,9 +275,9 @@ PHP_METHOD(php_wxFrame, __construct)
 				native_object = new wxFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
 
 				native_object->references.Initialize();
-				((wxFrame_php*) native_object)->references.AddReference(parent1, "wxFrame::wxFrame at call with 6 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(pos1, "wxFrame::wxFrame at call with 6 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(size1, "wxFrame::wxFrame at call with 6 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&parent1, "wxFrame::wxFrame at call 2 with 6 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&pos1, "wxFrame::wxFrame at call 4 with 6 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&size1, "wxFrame::wxFrame at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -298,9 +289,9 @@ PHP_METHOD(php_wxFrame, __construct)
 				native_object = new wxFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(name1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxFrame_php*) native_object)->references.AddReference(parent1, "wxFrame::wxFrame at call with 7 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(pos1, "wxFrame::wxFrame at call with 7 argument(s)");
-				((wxFrame_php*) native_object)->references.AddReference(size1, "wxFrame::wxFrame at call with 7 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&parent1, "wxFrame::wxFrame at call 2 with 7 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&pos1, "wxFrame::wxFrame at call 4 with 7 argument(s)");
+				((wxFrame_php*) native_object)->references.AddReference(&size1, "wxFrame::wxFrame at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -312,7 +303,7 @@ PHP_METHOD(php_wxFrame, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -348,7 +339,8 @@ PHP_METHOD(php_wxFrame, Centre)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -357,7 +349,7 @@ PHP_METHOD(php_wxFrame, Centre)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -490,7 +482,8 @@ PHP_METHOD(php_wxFrame, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -499,7 +492,7 @@ PHP_METHOD(php_wxFrame, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -556,35 +549,35 @@ PHP_METHOD(php_wxFrame, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
 	long name_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxMDIParentFrame* object_pointer1_0 = 0;
 	long id1;
 	char* title1;
 	long title_len1;
-	zval* pos1 = 0;
+	zval pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval* size1 = 0;
+	zval size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* name1;
 	long name_len1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval* parent2 = 0;
+	zval parent2;
 	wxWindow* object_pointer2_0 = 0;
 	long id2;
 	char* title2;
@@ -592,13 +585,13 @@ PHP_METHOD(php_wxFrame, Create)
 	long style2;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	zval* parent3 = 0;
+	zval parent3;
 	wxWindow* object_pointer3_0 = 0;
 	long id3;
 	char* title3;
 	long title_len3;
 	long style3;
-	zval* config3 = 0;
+	zval config3;
 	wxConfigBase* object_pointer3_4 = 0;
 	char* rootpath3;
 	long rootpath_len3;
@@ -617,51 +610,51 @@ PHP_METHOD(php_wxFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -685,51 +678,51 @@ PHP_METHOD(php_wxFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &title1, &title_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMDIParentFrame_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMDIParentFrame_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMDIParentFrame*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMDIPARENTFRAME_TYPE))
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
+				if(Z_TYPE(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
+				else if(Z_TYPE(pos1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
+				if(Z_TYPE(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
+				else if(Z_TYPE(size1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -753,17 +746,17 @@ PHP_METHOD(php_wxFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent2, &id2, &title2, &title_len2, &style2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent2) == IS_OBJECT)
+				if(Z_TYPE(parent2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent2 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent2 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer2_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE_P(parent2) != IS_NULL)
+				else if(Z_TYPE(parent2) != IS_NULL)
 				{
 					goto overload3;
 				}
@@ -787,34 +780,34 @@ PHP_METHOD(php_wxFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent3, &id3, &title3, &title_len3, &style3, &config3, &rootpath3, &rootpath_len3 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent3) == IS_OBJECT)
+				if(Z_TYPE(parent3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent3 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent3 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent3 TSRMLS_CC)->native_object;
 					object_pointer3_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer3_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent3) != IS_NULL)
+				else if(Z_TYPE(parent3) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(config3) == IS_OBJECT)
+				if(Z_TYPE(config3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config3 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config3 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxConfigBase_P(&config3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxConfigBase_P(&config3 TSRMLS_CC)->native_object;
 					object_pointer3_4 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer3_4 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(config3) != IS_NULL)
+				else if(Z_TYPE(config3) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
@@ -838,7 +831,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -851,8 +844,8 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0, "wxFrame::Create at call with 4 argument(s)");
-				references->AddReference(pos0, "wxFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent0, "wxFrame::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos0, "wxFrame::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -865,9 +858,9 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0, "wxFrame::Create at call with 5 argument(s)");
-				references->AddReference(pos0, "wxFrame::Create at call with 5 argument(s)");
-				references->AddReference(size0, "wxFrame::Create at call with 5 argument(s)");
+				references->AddReference(&parent0, "wxFrame::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos0, "wxFrame::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size0, "wxFrame::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -880,9 +873,9 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0, "wxFrame::Create at call with 6 argument(s)");
-				references->AddReference(pos0, "wxFrame::Create at call with 6 argument(s)");
-				references->AddReference(size0, "wxFrame::Create at call with 6 argument(s)");
+				references->AddReference(&parent0, "wxFrame::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos0, "wxFrame::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size0, "wxFrame::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -895,9 +888,9 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxFrame::Create at call with 7 argument(s)");
-				references->AddReference(pos0, "wxFrame::Create at call with 7 argument(s)");
-				references->AddReference(size0, "wxFrame::Create at call with 7 argument(s)");
+				references->AddReference(&parent0, "wxFrame::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos0, "wxFrame::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size0, "wxFrame::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -917,7 +910,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8)));
 
-				references->AddReference(parent1, "wxFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent1, "wxFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -930,8 +923,8 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3));
 
-				references->AddReference(parent1, "wxFrame::Create at call with 4 argument(s)");
-				references->AddReference(pos1, "wxFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent1, "wxFrame::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos1, "wxFrame::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -944,9 +937,9 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4));
 
-				references->AddReference(parent1, "wxFrame::Create at call with 5 argument(s)");
-				references->AddReference(pos1, "wxFrame::Create at call with 5 argument(s)");
-				references->AddReference(size1, "wxFrame::Create at call with 5 argument(s)");
+				references->AddReference(&parent1, "wxFrame::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos1, "wxFrame::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size1, "wxFrame::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -959,9 +952,9 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1));
 
-				references->AddReference(parent1, "wxFrame::Create at call with 6 argument(s)");
-				references->AddReference(pos1, "wxFrame::Create at call with 6 argument(s)");
-				references->AddReference(size1, "wxFrame::Create at call with 6 argument(s)");
+				references->AddReference(&parent1, "wxFrame::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos1, "wxFrame::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size1, "wxFrame::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -974,9 +967,9 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(name1, wxConvUTF8)));
 
-				references->AddReference(parent1, "wxFrame::Create at call with 7 argument(s)");
-				references->AddReference(pos1, "wxFrame::Create at call with 7 argument(s)");
-				references->AddReference(size1, "wxFrame::Create at call with 7 argument(s)");
+				references->AddReference(&parent1, "wxFrame::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos1, "wxFrame::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size1, "wxFrame::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -996,7 +989,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer2_0, (wxWindowID) id2));
 
-				references->AddReference(parent2, "wxFrame::Create at call with 2 argument(s)");
+				references->AddReference(&parent2, "wxFrame::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -1009,7 +1002,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer2_0, (wxWindowID) id2, wxString(title2, wxConvUTF8)));
 
-				references->AddReference(parent2, "wxFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent2, "wxFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -1022,7 +1015,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer2_0, (wxWindowID) id2, wxString(title2, wxConvUTF8), (int) style2));
 
-				references->AddReference(parent2, "wxFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent2, "wxFrame::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -1042,7 +1035,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3));
 
-				references->AddReference(parent3, "wxFrame::Create at call with 2 argument(s)");
+				references->AddReference(&parent3, "wxFrame::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -1055,7 +1048,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8)));
 
-				references->AddReference(parent3, "wxFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent3, "wxFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -1068,7 +1061,7 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8), (int) style3));
 
-				references->AddReference(parent3, "wxFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent3, "wxFrame::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -1081,8 +1074,8 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8), (int) style3, (wxConfigBase*) object_pointer3_4));
 
-				references->AddReference(parent3, "wxFrame::Create at call with 5 argument(s)");
-				references->AddReference(config3, "wxFrame::Create at call with 5 argument(s)");
+				references->AddReference(&parent3, "wxFrame::Create at call 1 with 5 argument(s)");
+				references->AddReference(&config3, "wxFrame::Create at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -1095,8 +1088,8 @@ PHP_METHOD(php_wxFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8), (int) style3, (wxConfigBase*) object_pointer3_4, wxString(rootpath3, wxConvUTF8)));
 
-				references->AddReference(parent3, "wxFrame::Create at call with 6 argument(s)");
-				references->AddReference(config3, "wxFrame::Create at call with 6 argument(s)");
+				references->AddReference(&parent3, "wxFrame::Create at call 1 with 6 argument(s)");
+				references->AddReference(&config3, "wxFrame::Create at call 1 with 6 argument(s)");
 
 				return;
 				break;
@@ -1128,7 +1121,8 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1137,7 +1131,7 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1194,7 +1188,7 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 	#endif
 	
 	//Parameters for overload 0
-	zval* statusBar0 = 0;
+	zval statusBar0;
 	wxStatusBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1211,17 +1205,17 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &statusBar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(statusBar0) == IS_OBJECT)
+				if(Z_TYPE(statusBar0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxStatusBar*) zend_object_store_get_object(statusBar0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxStatusBar*) zend_object_store_get_object(statusBar0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxStatusBar_P(&statusBar0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxStatusBar_P(&statusBar0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxStatusBar*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXSTATUSBAR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'statusBar' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(statusBar0) != IS_NULL)
+				else if(Z_TYPE(statusBar0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'statusBar' not null, could not be retreived correctly.");
 				}
@@ -1245,7 +1239,7 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 
 				((wxFrame_php*)native_object)->SetStatusBar((wxStatusBar*) object_pointer0_0);
 
-				references->AddReference(statusBar0, "wxFrame::SetStatusBar at call with 1 argument(s)");
+				references->AddReference(&statusBar0, "wxFrame::SetStatusBar at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -1277,7 +1271,8 @@ PHP_METHOD(php_wxFrame, SetStatusBarPane)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1286,7 +1281,7 @@ PHP_METHOD(php_wxFrame, SetStatusBarPane)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1407,7 +1402,8 @@ PHP_METHOD(php_wxFrame, SetStatusText)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1416,7 +1412,7 @@ PHP_METHOD(php_wxFrame, SetStatusText)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1551,7 +1547,8 @@ PHP_METHOD(php_wxFrame, SetMenuBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1560,7 +1557,7 @@ PHP_METHOD(php_wxFrame, SetMenuBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1617,7 +1614,7 @@ PHP_METHOD(php_wxFrame, SetMenuBar)
 	#endif
 	
 	//Parameters for overload 0
-	zval* menuBar0 = 0;
+	zval menuBar0;
 	wxMenuBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1634,17 +1631,17 @@ PHP_METHOD(php_wxFrame, SetMenuBar)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuBar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menuBar0) == IS_OBJECT)
+				if(Z_TYPE(menuBar0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMenuBar*) zend_object_store_get_object(menuBar0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMenuBar*) zend_object_store_get_object(menuBar0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMenuBar_P(&menuBar0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenuBar_P(&menuBar0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenuBar*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENUBAR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menuBar' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(menuBar0) != IS_NULL)
+				else if(Z_TYPE(menuBar0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menuBar' not null, could not be retreived correctly.");
 				}
@@ -1668,7 +1665,7 @@ PHP_METHOD(php_wxFrame, SetMenuBar)
 
 				((wxFrame_php*)native_object)->SetMenuBar((wxMenuBar*) object_pointer0_0);
 
-				references->AddReference(menuBar0, "wxFrame::SetMenuBar at call with 1 argument(s)");
+				references->AddReference(&menuBar0, "wxFrame::SetMenuBar at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -1700,7 +1697,8 @@ PHP_METHOD(php_wxFrame, GetMenuBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1709,7 +1707,7 @@ PHP_METHOD(php_wxFrame, GetMenuBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1800,8 +1798,8 @@ PHP_METHOD(php_wxFrame, GetMenuBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1810,11 +1808,11 @@ PHP_METHOD(php_wxFrame, GetMenuBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxMenuBar_entry);
-					((zo_wxMenuBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenuBar_php*) value_to_return0;
+					Z_wxMenuBar_P(return_value TSRMLS_CC)->native_object = (wxMenuBar_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::GetMenuBar at call with 0 argument(s)");
+					references->AddReference(return_value, "wxFrame::GetMenuBar at call 5 with 0 argument(s)");
 				}
 
 
@@ -1845,31 +1843,21 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[4];
-	zval *arguments[4];
-	
-	//Initilize arguments array
-	for(int i=0; i<4; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[4];
+	zval arguments[4];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnCreateStatusBar", 0);
+	ZVAL_STRING(&function_name, "OnCreateStatusBar");
 	char* temp_string;
 	void* return_object;
 	int function_called;
 	
 	//Parameters for conversion
-	ZVAL_LONG(arguments[0], number);
-	ZVAL_LONG(arguments[1], style);
-	ZVAL_LONG(arguments[2], id);
-	temp_string = (char*)malloc(sizeof(wxChar)*(name.size()+1));
-	strcpy(temp_string, (const char *) name.char_str());
-	ZVAL_STRING(arguments[3], temp_string, 1);
-	free(temp_string);
+	ZVAL_LONG(&arguments[0], number);
+	ZVAL_LONG(&arguments[1], style);
+	ZVAL_LONG(&arguments[2], id);
+	ZVAL_STRING(&arguments[3], name.char_str());
 		
 	for(int i=0; i<4; i++)
 	{
@@ -1882,7 +1870,7 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnCreateStatusBar", 17, &return_value, 4, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnCreateStatusBar", 17, &return_value, 4, params TSRMLS_CC);
 	}
 	else
 	{
@@ -1911,13 +1899,13 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT)
+		if(Z_TYPE_P(&return_value) == IS_OBJECT)
 	{
-		return_object = (void*) ((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;
+		return_object = (void*) Z_wxStatusBar_P(&return_value TSRMLS_CC)->native_object;
 	}
 
 	//Threat it as a normal object on the calling function and not a php user space intiialized one
-	((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;
+	Z_wxStatusBar_P(&return_value TSRMLS_CC)->is_user_initialized = 0;
 	wxStatusBar_php* var = (wxStatusBar_php*) return_object;
 	var->references.UnInitialize();
 
@@ -1949,7 +1937,8 @@ PHP_METHOD(php_wxFrame, GetStatusBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1958,7 +1947,7 @@ PHP_METHOD(php_wxFrame, GetStatusBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2049,8 +2038,8 @@ PHP_METHOD(php_wxFrame, GetStatusBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2059,11 +2048,11 @@ PHP_METHOD(php_wxFrame, GetStatusBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxStatusBar_entry);
-					((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxStatusBar_php*) value_to_return0;
+					Z_wxStatusBar_P(return_value TSRMLS_CC)->native_object = (wxStatusBar_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::GetStatusBar at call with 0 argument(s)");
+					references->AddReference(return_value, "wxFrame::GetStatusBar at call 5 with 0 argument(s)");
 				}
 
 
@@ -2097,7 +2086,8 @@ PHP_METHOD(php_wxFrame, GetStatusBarPane)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2106,7 +2096,7 @@ PHP_METHOD(php_wxFrame, GetStatusBarPane)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2222,7 +2212,8 @@ PHP_METHOD(php_wxFrame, GetClientAreaOrigin)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2231,7 +2222,7 @@ PHP_METHOD(php_wxFrame, GetClientAreaOrigin)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2321,7 +2312,7 @@ PHP_METHOD(php_wxFrame, GetClientAreaOrigin)
 				object_init_ex(return_value, php_wxPoint_entry);
 				((wxPoint_php*)ptr)->phpObj = return_value;
 				((wxPoint_php*)ptr)->InitProperties();
-				zo_wxPoint* zo0 = (zo_wxPoint*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxPoint* zo0 = Z_wxPoint_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxPoint_php*) ptr;
 
 
@@ -2354,7 +2345,8 @@ PHP_METHOD(php_wxFrame, PopStatusText)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2363,7 +2355,7 @@ PHP_METHOD(php_wxFrame, PopStatusText)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2496,7 +2488,8 @@ PHP_METHOD(php_wxFrame, ProcessCommand)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2505,7 +2498,7 @@ PHP_METHOD(php_wxFrame, ProcessCommand)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2625,7 +2618,8 @@ PHP_METHOD(php_wxFrame, PushStatusText)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2634,7 +2628,7 @@ PHP_METHOD(php_wxFrame, PushStatusText)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2769,7 +2763,8 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2778,7 +2773,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2836,7 +2831,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 	
 	//Parameters for overload 0
 	long n0;
-	zval* widths_field0;
+	zval widths_field0;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -2845,11 +2840,11 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'la' (&n0, &widths_field0)\n");
+		php_printf("Parsing parameters with 'la' (&n0, widths_field0)\n");
 		#endif
 
 		char parse_parameters_string[] = "la";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0, &widths_field0 ) == SUCCESS)
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &n0, widths_field0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2863,7 +2858,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 		HashTable* arr_hash0_1;
 		if(arguments_received > 1)
 		{
-			arr_hash0_1 = Z_ARRVAL_P(widths_field0);
+			arr_hash0_1 = Z_ARRVAL(widths_field0);
 			array_count0_1 = zend_hash_num_elements(arr_hash0_1);
 		}
 		int* integers_array0_1 = new int[array_count0_1];
@@ -2874,13 +2869,13 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 			case 2:
 			{
 				int array_index0_1 = 0;
-				zval** temp_array_value0_1 = 0;
+				zval* temp_array_value0_1 = 0;
 				while(integers_continue0_1)
 				{
-					if(zend_hash_index_find(HASH_OF(widths_field0), array_index0_1, (void**)&temp_array_value0_1) == SUCCESS)
+					if((temp_array_value0_1 = zend_hash_index_find(HASH_OF(&widths_field0), array_index0_1)) != NULL)
 					{
 						convert_to_long_ex(temp_array_value0_1);
-						integers_array0_1[array_index0_1] = (int) Z_LVAL_PP(temp_array_value0_1);
+						integers_array0_1[array_index0_1] = (int) Z_LVAL_P(temp_array_value0_1);
 						array_index0_1++;
 					}
 					else
@@ -2926,7 +2921,8 @@ PHP_METHOD(php_wxFrame, GetToolBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2935,7 +2931,7 @@ PHP_METHOD(php_wxFrame, GetToolBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3026,8 +3022,8 @@ PHP_METHOD(php_wxFrame, GetToolBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3036,11 +3032,11 @@ PHP_METHOD(php_wxFrame, GetToolBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxToolBar_entry);
-					((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxToolBar_php*) value_to_return0;
+					Z_wxToolBar_P(return_value TSRMLS_CC)->native_object = (wxToolBar_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::GetToolBar at call with 0 argument(s)");
+					references->AddReference(return_value, "wxFrame::GetToolBar at call 5 with 0 argument(s)");
 				}
 
 
@@ -3071,30 +3067,20 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[3];
-	zval *arguments[3];
-	
-	//Initilize arguments array
-	for(int i=0; i<3; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[3];
+	zval arguments[3];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnCreateToolBar", 0);
+	ZVAL_STRING(&function_name, "OnCreateToolBar");
 	char* temp_string;
 	void* return_object;
 	int function_called;
 	
 	//Parameters for conversion
-	ZVAL_LONG(arguments[0], style);
-	ZVAL_LONG(arguments[1], id);
-	temp_string = (char*)malloc(sizeof(wxChar)*(name.size()+1));
-	strcpy(temp_string, (const char *) name.char_str());
-	ZVAL_STRING(arguments[2], temp_string, 1);
-	free(temp_string);
+	ZVAL_LONG(&arguments[0], style);
+	ZVAL_LONG(&arguments[1], id);
+	ZVAL_STRING(&arguments[2], name.char_str());
 		
 	for(int i=0; i<3; i++)
 	{
@@ -3107,7 +3093,7 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnCreateToolBar", 15, &return_value, 3, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnCreateToolBar", 15, &return_value, 3, params TSRMLS_CC);
 	}
 	else
 	{
@@ -3136,13 +3122,13 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT)
+		if(Z_TYPE_P(&return_value) == IS_OBJECT)
 	{
-		return_object = (void*) ((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;
+		return_object = (void*) Z_wxToolBar_P(&return_value TSRMLS_CC)->native_object;
 	}
 
 	//Threat it as a normal object on the calling function and not a php user space intiialized one
-	((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;
+	Z_wxToolBar_P(&return_value TSRMLS_CC)->is_user_initialized = 0;
 	wxToolBar_php* var = (wxToolBar_php*) return_object;
 	var->references.UnInitialize();
 
@@ -3174,7 +3160,8 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3183,7 +3170,7 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3240,7 +3227,7 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 	#endif
 	
 	//Parameters for overload 0
-	zval* toolBar0 = 0;
+	zval toolBar0;
 	wxToolBar* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3257,17 +3244,17 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &toolBar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(toolBar0) == IS_OBJECT)
+				if(Z_TYPE(toolBar0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxToolBar*) zend_object_store_get_object(toolBar0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxToolBar*) zend_object_store_get_object(toolBar0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxToolBar_P(&toolBar0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxToolBar_P(&toolBar0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxToolBar*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXTOOLBAR_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'toolBar' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(toolBar0) != IS_NULL)
+				else if(Z_TYPE(toolBar0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'toolBar' not null, could not be retreived correctly.");
 				}
@@ -3291,7 +3278,7 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 
 				((wxFrame_php*)native_object)->SetToolBar((wxToolBar*) object_pointer0_0);
 
-				references->AddReference(toolBar0, "wxFrame::SetToolBar at call with 1 argument(s)");
+				references->AddReference(&toolBar0, "wxFrame::SetToolBar at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3323,7 +3310,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3332,7 +3320,7 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3432,8 +3420,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3442,11 +3430,11 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxStatusBar_entry);
-					((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxStatusBar_php*) value_to_return0;
+					Z_wxStatusBar_P(return_value TSRMLS_CC)->native_object = (wxStatusBar_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateStatusBar at call with 0 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateStatusBar at call 5 with 0 argument(s)");
 				}
 
 
@@ -3467,8 +3455,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						*return_value = *value_to_return1->phpObj;
-						zval_add_ref(&value_to_return1->phpObj);
+						return_value = value_to_return1->phpObj;
+						zval_add_ref(value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3477,11 +3465,11 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxStatusBar_entry);
-					((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxStatusBar_php*) value_to_return1;
+					Z_wxStatusBar_P(return_value TSRMLS_CC)->native_object = (wxStatusBar_php*) value_to_return1;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateStatusBar at call with 1 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateStatusBar at call 5 with 1 argument(s)");
 				}
 
 
@@ -3502,8 +3490,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						*return_value = *value_to_return2->phpObj;
-						zval_add_ref(&value_to_return2->phpObj);
+						return_value = value_to_return2->phpObj;
+						zval_add_ref(value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3512,11 +3500,11 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxStatusBar_entry);
-					((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxStatusBar_php*) value_to_return2;
+					Z_wxStatusBar_P(return_value TSRMLS_CC)->native_object = (wxStatusBar_php*) value_to_return2;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateStatusBar at call with 2 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateStatusBar at call 5 with 2 argument(s)");
 				}
 
 
@@ -3537,8 +3525,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						*return_value = *value_to_return3->phpObj;
-						zval_add_ref(&value_to_return3->phpObj);
+						return_value = value_to_return3->phpObj;
+						zval_add_ref(value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3547,11 +3535,11 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxStatusBar_entry);
-					((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxStatusBar_php*) value_to_return3;
+					Z_wxStatusBar_P(return_value TSRMLS_CC)->native_object = (wxStatusBar_php*) value_to_return3;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateStatusBar at call with 3 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateStatusBar at call 5 with 3 argument(s)");
 				}
 
 
@@ -3572,8 +3560,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						*return_value = *value_to_return4->phpObj;
-						zval_add_ref(&value_to_return4->phpObj);
+						return_value = value_to_return4->phpObj;
+						zval_add_ref(value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3582,11 +3570,11 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxStatusBar_entry);
-					((zo_wxStatusBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxStatusBar_php*) value_to_return4;
+					Z_wxStatusBar_P(return_value TSRMLS_CC)->native_object = (wxStatusBar_php*) value_to_return4;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return4 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateStatusBar at call with 4 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateStatusBar at call 5 with 4 argument(s)");
 				}
 
 
@@ -3620,7 +3608,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3629,7 +3618,7 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3728,8 +3717,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3738,11 +3727,11 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxToolBar_entry);
-					((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxToolBar_php*) value_to_return0;
+					Z_wxToolBar_P(return_value TSRMLS_CC)->native_object = (wxToolBar_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateToolBar at call with 0 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateToolBar at call 5 with 0 argument(s)");
 				}
 
 
@@ -3763,8 +3752,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						*return_value = *value_to_return1->phpObj;
-						zval_add_ref(&value_to_return1->phpObj);
+						return_value = value_to_return1->phpObj;
+						zval_add_ref(value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3773,11 +3762,11 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxToolBar_entry);
-					((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxToolBar_php*) value_to_return1;
+					Z_wxToolBar_P(return_value TSRMLS_CC)->native_object = (wxToolBar_php*) value_to_return1;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateToolBar at call with 1 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateToolBar at call 5 with 1 argument(s)");
 				}
 
 
@@ -3798,8 +3787,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						*return_value = *value_to_return2->phpObj;
-						zval_add_ref(&value_to_return2->phpObj);
+						return_value = value_to_return2->phpObj;
+						zval_add_ref(value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3808,11 +3797,11 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxToolBar_entry);
-					((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxToolBar_php*) value_to_return2;
+					Z_wxToolBar_P(return_value TSRMLS_CC)->native_object = (wxToolBar_php*) value_to_return2;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return2 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateToolBar at call with 2 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateToolBar at call 5 with 2 argument(s)");
 				}
 
 
@@ -3833,8 +3822,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						*return_value = *value_to_return3->phpObj;
-						zval_add_ref(&value_to_return3->phpObj);
+						return_value = value_to_return3->phpObj;
+						zval_add_ref(value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3843,11 +3832,11 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else{
 					object_init_ex(return_value, php_wxToolBar_entry);
-					((zo_wxToolBar*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxToolBar_php*) value_to_return3;
+					Z_wxToolBar_P(return_value TSRMLS_CC)->native_object = (wxToolBar_php*) value_to_return3;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return3 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxFrame::CreateToolBar at call with 3 argument(s)");
+					references->AddReference(return_value, "wxFrame::CreateToolBar at call 5 with 3 argument(s)");
 				}
 
 
@@ -3912,36 +3901,26 @@ void php_wxMDIClientWindow_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxMDIClientWindow_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxMDIClientWindow_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMDIClientWindow_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxMDIClientWindow* custom_object;
-    custom_object = (zo_wxMDIClientWindow*) emalloc(sizeof(zo_wxMDIClientWindow));
+	zo_wxMDIClientWindow* custom_object;
+	custom_object = (zo_wxMDIClientWindow*) ecalloc(1, sizeof(zo_wxMDIClientWindow) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMDIClientWindow_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDICLIENTWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -3959,7 +3938,8 @@ PHP_METHOD(php_wxMDIClientWindow, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -4005,7 +3985,7 @@ PHP_METHOD(php_wxMDIClientWindow, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxMDIClientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIClientWindow_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -4041,7 +4021,8 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4050,7 +4031,7 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIClientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIClientWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4079,7 +4060,7 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxMDIParentFrame* object_pointer0_0 = 0;
 	long style0;
 	bool overload0_called = false;
@@ -4097,17 +4078,17 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &style0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMDIParentFrame_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMDIParentFrame_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMDIParentFrame*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMDIPARENTFRAME_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -4131,7 +4112,7 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 
 				ZVAL_BOOL(return_value, ((wxMDIClientWindow_php*)native_object)->CreateClient((wxMDIParentFrame*) object_pointer0_0));
 
-				references->AddReference(parent0, "wxMDIClientWindow::CreateClient at call with 1 argument(s)");
+				references->AddReference(&parent0, "wxMDIClientWindow::CreateClient at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -4144,7 +4125,7 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 
 				ZVAL_BOOL(return_value, ((wxMDIClientWindow_php*)native_object)->CreateClient((wxMDIParentFrame*) object_pointer0_0, (long) style0));
 
-				references->AddReference(parent0, "wxMDIClientWindow::CreateClient at call with 2 argument(s)");
+				references->AddReference(&parent0, "wxMDIClientWindow::CreateClient at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -4172,36 +4153,26 @@ void php_wxMDIParentFrame_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxMDIParentFrame_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxMDIParentFrame_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMDIParentFrame_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxMDIParentFrame* custom_object;
-    custom_object = (zo_wxMDIParentFrame*) emalloc(sizeof(zo_wxMDIParentFrame));
+	zo_wxMDIParentFrame* custom_object;
+	custom_object = (zo_wxMDIParentFrame*) ecalloc(1, sizeof(zo_wxMDIParentFrame) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMDIParentFrame_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDIPARENTFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -4220,7 +4191,8 @@ PHP_METHOD(php_wxMDIParentFrame, ActivateNext)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4229,7 +4201,7 @@ PHP_METHOD(php_wxMDIParentFrame, ActivateNext)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4317,7 +4289,8 @@ PHP_METHOD(php_wxMDIParentFrame, ActivatePrevious)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4326,7 +4299,7 @@ PHP_METHOD(php_wxMDIParentFrame, ActivatePrevious)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4414,7 +4387,8 @@ PHP_METHOD(php_wxMDIParentFrame, ArrangeIcons)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4423,7 +4397,7 @@ PHP_METHOD(php_wxMDIParentFrame, ArrangeIcons)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4511,7 +4485,8 @@ PHP_METHOD(php_wxMDIParentFrame, Cascade)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4520,7 +4495,7 @@ PHP_METHOD(php_wxMDIParentFrame, Cascade)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4608,7 +4583,8 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4617,7 +4593,7 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4646,14 +4622,14 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -4673,51 +4649,51 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -4741,7 +4717,7 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIParentFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxMDIParentFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxMDIParentFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -4754,8 +4730,8 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIParentFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0, "wxMDIParentFrame::Create at call with 4 argument(s)");
-				references->AddReference(pos0, "wxMDIParentFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent0, "wxMDIParentFrame::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos0, "wxMDIParentFrame::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -4768,9 +4744,9 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIParentFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0, "wxMDIParentFrame::Create at call with 5 argument(s)");
-				references->AddReference(pos0, "wxMDIParentFrame::Create at call with 5 argument(s)");
-				references->AddReference(size0, "wxMDIParentFrame::Create at call with 5 argument(s)");
+				references->AddReference(&parent0, "wxMDIParentFrame::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos0, "wxMDIParentFrame::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size0, "wxMDIParentFrame::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -4783,9 +4759,9 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIParentFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0, "wxMDIParentFrame::Create at call with 6 argument(s)");
-				references->AddReference(pos0, "wxMDIParentFrame::Create at call with 6 argument(s)");
-				references->AddReference(size0, "wxMDIParentFrame::Create at call with 6 argument(s)");
+				references->AddReference(&parent0, "wxMDIParentFrame::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos0, "wxMDIParentFrame::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size0, "wxMDIParentFrame::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -4798,9 +4774,9 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIParentFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxMDIParentFrame::Create at call with 7 argument(s)");
-				references->AddReference(pos0, "wxMDIParentFrame::Create at call with 7 argument(s)");
-				references->AddReference(size0, "wxMDIParentFrame::Create at call with 7 argument(s)");
+				references->AddReference(&parent0, "wxMDIParentFrame::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos0, "wxMDIParentFrame::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size0, "wxMDIParentFrame::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -4832,7 +4808,8 @@ PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4841,7 +4818,7 @@ PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4904,8 +4881,8 @@ PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4914,11 +4891,11 @@ PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 				}
 				else{
 					object_init_ex(return_value, php_wxMDIChildFrame_entry);
-					((zo_wxMDIChildFrame*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMDIChildFrame_php*) value_to_return0;
+					Z_wxMDIChildFrame_P(return_value TSRMLS_CC)->native_object = (wxMDIChildFrame_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxMDIParentFrame::GetActiveChild at call with 0 argument(s)");
+					references->AddReference(return_value, "wxMDIParentFrame::GetActiveChild at call 5 with 0 argument(s)");
 				}
 
 
@@ -4952,7 +4929,8 @@ PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4961,7 +4939,7 @@ PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5024,8 +5002,8 @@ PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5034,11 +5012,11 @@ PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 				}
 				else{
 					object_init_ex(return_value, php_wxMenu_entry);
-					((zo_wxMenu*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMenu_php*) value_to_return0;
+					Z_wxMenu_P(return_value TSRMLS_CC)->native_object = (wxMenu_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxMDIParentFrame::GetWindowMenu at call with 0 argument(s)");
+					references->AddReference(return_value, "wxMDIParentFrame::GetWindowMenu at call 5 with 0 argument(s)");
 				}
 
 
@@ -5072,7 +5050,8 @@ PHP_METHOD(php_wxMDIParentFrame, IsTDI)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5081,7 +5060,7 @@ PHP_METHOD(php_wxMDIParentFrame, IsTDI)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5167,15 +5146,12 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnCreateClient", 0);
+	ZVAL_STRING(&function_name, "OnCreateClient");
 	char* temp_string;
 	void* return_object;
 	int function_called;
@@ -5189,7 +5165,7 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnCreateClient", 14, &return_value, 0, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnCreateClient", 14, &return_value, 0, params TSRMLS_CC);
 	}
 	else
 	{
@@ -5213,13 +5189,13 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		if(Z_TYPE_P(return_value) == IS_OBJECT)
+		if(Z_TYPE_P(&return_value) == IS_OBJECT)
 	{
-		return_object = (void*) ((zo_wxMDIClientWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object;
+		return_object = (void*) Z_wxMDIClientWindow_P(&return_value TSRMLS_CC)->native_object;
 	}
 
 	//Threat it as a normal object on the calling function and not a php user space intiialized one
-	((zo_wxMDIClientWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->is_user_initialized = 0;
+	Z_wxMDIClientWindow_P(&return_value TSRMLS_CC)->is_user_initialized = 0;
 	wxMDIClientWindow_php* var = (wxMDIClientWindow_php*) return_object;
 	var->references.UnInitialize();
 
@@ -5251,7 +5227,8 @@ PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5260,7 +5237,7 @@ PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5289,7 +5266,7 @@ PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval* menu0 = 0;
+	zval menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5306,17 +5283,17 @@ PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT)
+				if(Z_TYPE(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(menu0) != IS_NULL)
+				else if(Z_TYPE(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -5340,7 +5317,7 @@ PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 
 				((wxMDIParentFrame_php*)native_object)->SetWindowMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0, "wxMDIParentFrame::SetWindowMenu at call with 1 argument(s)");
+				references->AddReference(&menu0, "wxMDIParentFrame::SetWindowMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -5372,7 +5349,8 @@ PHP_METHOD(php_wxMDIParentFrame, Tile)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5381,7 +5359,7 @@ PHP_METHOD(php_wxMDIParentFrame, Tile)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5485,7 +5463,8 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -5493,14 +5472,14 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxWindow* object_pointer1_0 = 0;
 	long id1;
 	char* title1;
 	long title_len1;
-	zval* pos1 = 0;
+	zval pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval* size1 = 0;
+	zval size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* name1;
@@ -5533,51 +5512,51 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &title1, &title_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
+				if(Z_TYPE(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
+				else if(Z_TYPE(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
+				if(Z_TYPE(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
+				else if(Z_TYPE(size1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -5620,7 +5599,7 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 				native_object = new wxMDIParentFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(parent1, "wxMDIParentFrame::wxMDIParentFrame at call with 3 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&parent1, "wxMDIParentFrame::wxMDIParentFrame at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5632,8 +5611,8 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 				native_object = new wxMDIParentFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(parent1, "wxMDIParentFrame::wxMDIParentFrame at call with 4 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(pos1, "wxMDIParentFrame::wxMDIParentFrame at call with 4 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&parent1, "wxMDIParentFrame::wxMDIParentFrame at call 2 with 4 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&pos1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -5645,9 +5624,9 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 				native_object = new wxMDIParentFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
 
 				native_object->references.Initialize();
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(parent1, "wxMDIParentFrame::wxMDIParentFrame at call with 5 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(pos1, "wxMDIParentFrame::wxMDIParentFrame at call with 5 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(size1, "wxMDIParentFrame::wxMDIParentFrame at call with 5 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&parent1, "wxMDIParentFrame::wxMDIParentFrame at call 2 with 5 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&pos1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 5 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&size1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -5659,9 +5638,9 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 				native_object = new wxMDIParentFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
 
 				native_object->references.Initialize();
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(parent1, "wxMDIParentFrame::wxMDIParentFrame at call with 6 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(pos1, "wxMDIParentFrame::wxMDIParentFrame at call with 6 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(size1, "wxMDIParentFrame::wxMDIParentFrame at call with 6 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&parent1, "wxMDIParentFrame::wxMDIParentFrame at call 2 with 6 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&pos1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 6 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&size1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -5673,9 +5652,9 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 				native_object = new wxMDIParentFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(name1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(parent1, "wxMDIParentFrame::wxMDIParentFrame at call with 7 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(pos1, "wxMDIParentFrame::wxMDIParentFrame at call with 7 argument(s)");
-				((wxMDIParentFrame_php*) native_object)->references.AddReference(size1, "wxMDIParentFrame::wxMDIParentFrame at call with 7 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&parent1, "wxMDIParentFrame::wxMDIParentFrame at call 2 with 7 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&pos1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 7 argument(s)");
+				((wxMDIParentFrame_php*) native_object)->references.AddReference(&size1, "wxMDIParentFrame::wxMDIParentFrame at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -5687,7 +5666,7 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxMDIParentFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIParentFrame_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -5719,36 +5698,26 @@ void php_wxMDIChildFrame_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxMDIChildFrame_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxMDIChildFrame_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMDIChildFrame_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxMDIChildFrame* custom_object;
-    custom_object = (zo_wxMDIChildFrame*) emalloc(sizeof(zo_wxMDIChildFrame));
+	zo_wxMDIChildFrame* custom_object;
+	custom_object = (zo_wxMDIChildFrame*) ecalloc(1, sizeof(zo_wxMDIChildFrame) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMDIChildFrame_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMDICHILDFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -5766,20 +5735,21 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxMDIParentFrame* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -5801,51 +5771,51 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMDIParentFrame_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMDIParentFrame_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMDIParentFrame*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMDIPARENTFRAME_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -5883,7 +5853,7 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 				native_object = new wxMDIChildFrame_php((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(parent0, "wxMDIChildFrame::wxMDIChildFrame at call with 3 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&parent0, "wxMDIChildFrame::wxMDIChildFrame at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -5895,8 +5865,8 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 				native_object = new wxMDIChildFrame_php((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(parent0, "wxMDIChildFrame::wxMDIChildFrame at call with 4 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(pos0, "wxMDIChildFrame::wxMDIChildFrame at call with 4 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&parent0, "wxMDIChildFrame::wxMDIChildFrame at call 2 with 4 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&pos0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -5908,9 +5878,9 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 				native_object = new wxMDIChildFrame_php((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(parent0, "wxMDIChildFrame::wxMDIChildFrame at call with 5 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(pos0, "wxMDIChildFrame::wxMDIChildFrame at call with 5 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(size0, "wxMDIChildFrame::wxMDIChildFrame at call with 5 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&parent0, "wxMDIChildFrame::wxMDIChildFrame at call 2 with 5 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&pos0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 5 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&size0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -5922,9 +5892,9 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 				native_object = new wxMDIChildFrame_php((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(parent0, "wxMDIChildFrame::wxMDIChildFrame at call with 6 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(pos0, "wxMDIChildFrame::wxMDIChildFrame at call with 6 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(size0, "wxMDIChildFrame::wxMDIChildFrame at call with 6 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&parent0, "wxMDIChildFrame::wxMDIChildFrame at call 2 with 6 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&pos0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 6 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&size0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -5936,9 +5906,9 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 				native_object = new wxMDIChildFrame_php((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(parent0, "wxMDIChildFrame::wxMDIChildFrame at call with 7 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(pos0, "wxMDIChildFrame::wxMDIChildFrame at call with 7 argument(s)");
-				((wxMDIChildFrame_php*) native_object)->references.AddReference(size0, "wxMDIChildFrame::wxMDIChildFrame at call with 7 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&parent0, "wxMDIChildFrame::wxMDIChildFrame at call 2 with 7 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&pos0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 7 argument(s)");
+				((wxMDIChildFrame_php*) native_object)->references.AddReference(&size0, "wxMDIChildFrame::wxMDIChildFrame at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -5968,7 +5938,7 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -6004,7 +5974,8 @@ PHP_METHOD(php_wxMDIChildFrame, Restore)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6013,7 +5984,7 @@ PHP_METHOD(php_wxMDIChildFrame, Restore)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6101,7 +6072,8 @@ PHP_METHOD(php_wxMDIChildFrame, Maximize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6110,7 +6082,7 @@ PHP_METHOD(php_wxMDIChildFrame, Maximize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6215,7 +6187,8 @@ PHP_METHOD(php_wxMDIChildFrame, IsAlwaysMaximized)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6224,7 +6197,7 @@ PHP_METHOD(php_wxMDIChildFrame, IsAlwaysMaximized)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6312,7 +6285,8 @@ PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6321,7 +6295,7 @@ PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6384,8 +6358,8 @@ PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6394,11 +6368,11 @@ PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 				}
 				else{
 					object_init_ex(return_value, php_wxMDIParentFrame_entry);
-					((zo_wxMDIParentFrame*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxMDIParentFrame_php*) value_to_return0;
+					Z_wxMDIParentFrame_P(return_value TSRMLS_CC)->native_object = (wxMDIParentFrame_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxMDIChildFrame::GetMDIParent at call with 0 argument(s)");
+					references->AddReference(return_value, "wxMDIChildFrame::GetMDIParent at call 5 with 0 argument(s)");
 				}
 
 
@@ -6432,7 +6406,8 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6441,7 +6416,7 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6470,14 +6445,14 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxMDIParentFrame* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -6497,51 +6472,51 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMDIParentFrame_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMDIParentFrame_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMDIParentFrame*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMDIPARENTFRAME_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -6565,7 +6540,7 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxMDIChildFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxMDIChildFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -6578,8 +6553,8 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0, "wxMDIChildFrame::Create at call with 4 argument(s)");
-				references->AddReference(pos0, "wxMDIChildFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent0, "wxMDIChildFrame::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos0, "wxMDIChildFrame::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -6592,9 +6567,9 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0, "wxMDIChildFrame::Create at call with 5 argument(s)");
-				references->AddReference(pos0, "wxMDIChildFrame::Create at call with 5 argument(s)");
-				references->AddReference(size0, "wxMDIChildFrame::Create at call with 5 argument(s)");
+				references->AddReference(&parent0, "wxMDIChildFrame::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos0, "wxMDIChildFrame::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size0, "wxMDIChildFrame::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -6607,9 +6582,9 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0, "wxMDIChildFrame::Create at call with 6 argument(s)");
-				references->AddReference(pos0, "wxMDIChildFrame::Create at call with 6 argument(s)");
-				references->AddReference(size0, "wxMDIChildFrame::Create at call with 6 argument(s)");
+				references->AddReference(&parent0, "wxMDIChildFrame::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos0, "wxMDIChildFrame::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size0, "wxMDIChildFrame::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -6622,9 +6597,9 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxMDIChildFrame::Create at call with 7 argument(s)");
-				references->AddReference(pos0, "wxMDIChildFrame::Create at call with 7 argument(s)");
-				references->AddReference(size0, "wxMDIChildFrame::Create at call with 7 argument(s)");
+				references->AddReference(&parent0, "wxMDIChildFrame::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos0, "wxMDIChildFrame::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size0, "wxMDIChildFrame::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -6656,7 +6631,8 @@ PHP_METHOD(php_wxMDIChildFrame, Activate)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6665,7 +6641,7 @@ PHP_METHOD(php_wxMDIChildFrame, Activate)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMDIChildFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMDIChildFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6749,36 +6725,26 @@ void php_wxMiniFrame_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxMiniFrame_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxMiniFrame_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxMiniFrame_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxMiniFrame* custom_object;
-    custom_object = (zo_wxMiniFrame*) emalloc(sizeof(zo_wxMiniFrame));
+	zo_wxMiniFrame* custom_object;
+	custom_object = (zo_wxMiniFrame*) ecalloc(1, sizeof(zo_wxMiniFrame) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxMiniFrame_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXMINIFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -6797,7 +6763,8 @@ PHP_METHOD(php_wxMiniFrame, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6806,7 +6773,7 @@ PHP_METHOD(php_wxMiniFrame, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxMiniFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMiniFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6835,14 +6802,14 @@ PHP_METHOD(php_wxMiniFrame, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -6862,51 +6829,51 @@ PHP_METHOD(php_wxMiniFrame, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -6930,7 +6897,7 @@ PHP_METHOD(php_wxMiniFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMiniFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxMiniFrame::Create at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxMiniFrame::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -6943,8 +6910,8 @@ PHP_METHOD(php_wxMiniFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMiniFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0, "wxMiniFrame::Create at call with 4 argument(s)");
-				references->AddReference(pos0, "wxMiniFrame::Create at call with 4 argument(s)");
+				references->AddReference(&parent0, "wxMiniFrame::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos0, "wxMiniFrame::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -6957,9 +6924,9 @@ PHP_METHOD(php_wxMiniFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMiniFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0, "wxMiniFrame::Create at call with 5 argument(s)");
-				references->AddReference(pos0, "wxMiniFrame::Create at call with 5 argument(s)");
-				references->AddReference(size0, "wxMiniFrame::Create at call with 5 argument(s)");
+				references->AddReference(&parent0, "wxMiniFrame::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos0, "wxMiniFrame::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size0, "wxMiniFrame::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -6972,9 +6939,9 @@ PHP_METHOD(php_wxMiniFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMiniFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0, "wxMiniFrame::Create at call with 6 argument(s)");
-				references->AddReference(pos0, "wxMiniFrame::Create at call with 6 argument(s)");
-				references->AddReference(size0, "wxMiniFrame::Create at call with 6 argument(s)");
+				references->AddReference(&parent0, "wxMiniFrame::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos0, "wxMiniFrame::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size0, "wxMiniFrame::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -6987,9 +6954,9 @@ PHP_METHOD(php_wxMiniFrame, Create)
 
 				ZVAL_BOOL(return_value, ((wxMiniFrame_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxMiniFrame::Create at call with 7 argument(s)");
-				references->AddReference(pos0, "wxMiniFrame::Create at call with 7 argument(s)");
-				references->AddReference(size0, "wxMiniFrame::Create at call with 7 argument(s)");
+				references->AddReference(&parent0, "wxMiniFrame::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos0, "wxMiniFrame::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size0, "wxMiniFrame::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -7020,7 +6987,8 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -7028,14 +6996,14 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxWindow* object_pointer1_0 = 0;
 	long id1;
 	char* title1;
 	long title_len1;
-	zval* pos1 = 0;
+	zval pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval* size1 = 0;
+	zval size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* name1;
@@ -7068,51 +7036,51 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &title1, &title_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
+				if(Z_TYPE(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
+				else if(Z_TYPE(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
+				if(Z_TYPE(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
+				else if(Z_TYPE(size1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -7155,7 +7123,7 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 				native_object = new wxMiniFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMiniFrame_php*) native_object)->references.AddReference(parent1, "wxMiniFrame::wxMiniFrame at call with 3 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&parent1, "wxMiniFrame::wxMiniFrame at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -7167,8 +7135,8 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 				native_object = new wxMiniFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxMiniFrame_php*) native_object)->references.AddReference(parent1, "wxMiniFrame::wxMiniFrame at call with 4 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(pos1, "wxMiniFrame::wxMiniFrame at call with 4 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&parent1, "wxMiniFrame::wxMiniFrame at call 2 with 4 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&pos1, "wxMiniFrame::wxMiniFrame at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -7180,9 +7148,9 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 				native_object = new wxMiniFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
 
 				native_object->references.Initialize();
-				((wxMiniFrame_php*) native_object)->references.AddReference(parent1, "wxMiniFrame::wxMiniFrame at call with 5 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(pos1, "wxMiniFrame::wxMiniFrame at call with 5 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(size1, "wxMiniFrame::wxMiniFrame at call with 5 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&parent1, "wxMiniFrame::wxMiniFrame at call 2 with 5 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&pos1, "wxMiniFrame::wxMiniFrame at call 4 with 5 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&size1, "wxMiniFrame::wxMiniFrame at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -7194,9 +7162,9 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 				native_object = new wxMiniFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
 
 				native_object->references.Initialize();
-				((wxMiniFrame_php*) native_object)->references.AddReference(parent1, "wxMiniFrame::wxMiniFrame at call with 6 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(pos1, "wxMiniFrame::wxMiniFrame at call with 6 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(size1, "wxMiniFrame::wxMiniFrame at call with 6 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&parent1, "wxMiniFrame::wxMiniFrame at call 2 with 6 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&pos1, "wxMiniFrame::wxMiniFrame at call 4 with 6 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&size1, "wxMiniFrame::wxMiniFrame at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -7208,9 +7176,9 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 				native_object = new wxMiniFrame_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(name1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxMiniFrame_php*) native_object)->references.AddReference(parent1, "wxMiniFrame::wxMiniFrame at call with 7 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(pos1, "wxMiniFrame::wxMiniFrame at call with 7 argument(s)");
-				((wxMiniFrame_php*) native_object)->references.AddReference(size1, "wxMiniFrame::wxMiniFrame at call with 7 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&parent1, "wxMiniFrame::wxMiniFrame at call 2 with 7 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&pos1, "wxMiniFrame::wxMiniFrame at call 4 with 7 argument(s)");
+				((wxMiniFrame_php*) native_object)->references.AddReference(&size1, "wxMiniFrame::wxMiniFrame at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -7222,7 +7190,7 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxMiniFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxMiniFrame_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -7289,36 +7257,26 @@ void php_wxPopupWindow_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPopupWindow_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPopupWindow_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPopupWindow_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPopupWindow* custom_object;
-    custom_object = (zo_wxPopupWindow*) emalloc(sizeof(zo_wxPopupWindow));
+	zo_wxPopupWindow* custom_object;
+	custom_object = (zo_wxPopupWindow*) ecalloc(1, sizeof(zo_wxPopupWindow) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPopupWindow_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOPUPWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -7337,7 +7295,8 @@ PHP_METHOD(php_wxPopupWindow, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7346,7 +7305,7 @@ PHP_METHOD(php_wxPopupWindow, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPopupWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7379,7 +7338,7 @@ PHP_METHOD(php_wxPopupWindow, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -7397,17 +7356,17 @@ PHP_METHOD(php_wxPopupWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -7431,7 +7390,7 @@ PHP_METHOD(php_wxPopupWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxPopupWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0, "wxPopupWindow::Create at call with 1 argument(s)");
+				references->AddReference(&parent0, "wxPopupWindow::Create at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -7444,7 +7403,7 @@ PHP_METHOD(php_wxPopupWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxPopupWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (int) flags0));
 
-				references->AddReference(parent0, "wxPopupWindow::Create at call with 2 argument(s)");
+				references->AddReference(&parent0, "wxPopupWindow::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -7476,7 +7435,8 @@ PHP_METHOD(php_wxPopupWindow, Position)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7485,7 +7445,7 @@ PHP_METHOD(php_wxPopupWindow, Position)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPopupWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7518,9 +7478,9 @@ PHP_METHOD(php_wxPopupWindow, Position)
 	#endif
 	
 	//Parameters for overload 0
-	zval* ptOrigin0 = 0;
+	zval ptOrigin0;
 	wxPoint* object_pointer0_0 = 0;
-	zval* sizePopup0 = 0;
+	zval sizePopup0;
 	wxSize* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -7537,34 +7497,34 @@ PHP_METHOD(php_wxPopupWindow, Position)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ptOrigin0, php_wxPoint_entry, &sizePopup0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(ptOrigin0) == IS_OBJECT)
+				if(Z_TYPE(ptOrigin0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(ptOrigin0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(ptOrigin0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&ptOrigin0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&ptOrigin0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'ptOrigin' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(ptOrigin0) != IS_NULL)
+				else if(Z_TYPE(ptOrigin0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'ptOrigin' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(sizePopup0) == IS_OBJECT)
+				if(Z_TYPE(sizePopup0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(sizePopup0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(sizePopup0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&sizePopup0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&sizePopup0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxSize*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'sizePopup' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(sizePopup0) != IS_NULL)
+				else if(Z_TYPE(sizePopup0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'sizePopup' not null, could not be retreived correctly.");
 				}
@@ -7588,8 +7548,8 @@ PHP_METHOD(php_wxPopupWindow, Position)
 
 				((wxPopupWindow_php*)native_object)->Position(*(wxPoint*) object_pointer0_0, *(wxSize*) object_pointer0_1);
 
-				references->AddReference(ptOrigin0, "wxPopupWindow::Position at call with 2 argument(s)");
-				references->AddReference(sizePopup0, "wxPopupWindow::Position at call with 2 argument(s)");
+				references->AddReference(&ptOrigin0, "wxPopupWindow::Position at call 3 with 2 argument(s)");
+				references->AddReference(&sizePopup0, "wxPopupWindow::Position at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -7620,13 +7580,14 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -7644,17 +7605,17 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -7679,7 +7640,7 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 				native_object = new wxPopupWindow_php((wxWindow*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPopupWindow_php*) native_object)->references.AddReference(parent0, "wxPopupWindow::wxPopupWindow at call with 1 argument(s)");
+				((wxPopupWindow_php*) native_object)->references.AddReference(&parent0, "wxPopupWindow::wxPopupWindow at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -7691,7 +7652,7 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 				native_object = new wxPopupWindow_php((wxWindow*) object_pointer0_0, (int) flags0);
 
 				native_object->references.Initialize();
-				((wxPopupWindow_php*) native_object)->references.AddReference(parent0, "wxPopupWindow::wxPopupWindow at call with 2 argument(s)");
+				((wxPopupWindow_php*) native_object)->references.AddReference(&parent0, "wxPopupWindow::wxPopupWindow at call 2 with 2 argument(s)");
 				break;
 			}
 		}
@@ -7703,7 +7664,7 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPopupWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupWindow_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -7770,36 +7731,26 @@ void php_wxPopupTransientWindow_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPopupTransientWindow_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPopupTransientWindow_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPopupTransientWindow_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPopupTransientWindow* custom_object;
-    custom_object = (zo_wxPopupTransientWindow*) emalloc(sizeof(zo_wxPopupTransientWindow));
+	zo_wxPopupTransientWindow* custom_object;
+	custom_object = (zo_wxPopupTransientWindow*) ecalloc(1, sizeof(zo_wxPopupTransientWindow) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPopupTransientWindow_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPOPUPTRANSIENTWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -7818,7 +7769,8 @@ PHP_METHOD(php_wxPopupTransientWindow, Dismiss)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7827,7 +7779,7 @@ PHP_METHOD(php_wxPopupTransientWindow, Dismiss)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPopupTransientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupTransientWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7915,7 +7867,8 @@ PHP_METHOD(php_wxPopupTransientWindow, Popup)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7924,7 +7877,7 @@ PHP_METHOD(php_wxPopupTransientWindow, Popup)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPopupTransientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupTransientWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7953,7 +7906,7 @@ PHP_METHOD(php_wxPopupTransientWindow, Popup)
 	#endif
 	
 	//Parameters for overload 0
-	zval* focus0 = 0;
+	zval focus0;
 	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -7970,17 +7923,17 @@ PHP_METHOD(php_wxPopupTransientWindow, Popup)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &focus0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(focus0) == IS_OBJECT)
+				if(Z_TYPE(focus0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(focus0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(focus0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&focus0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&focus0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'focus' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(focus0) != IS_NULL)
+				else if(Z_TYPE(focus0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'focus' not null, could not be retreived correctly.");
 				}
@@ -8016,7 +7969,7 @@ PHP_METHOD(php_wxPopupTransientWindow, Popup)
 
 				((wxPopupTransientWindow_php*)native_object)->Popup((wxWindow*) object_pointer0_0);
 
-				references->AddReference(focus0, "wxPopupTransientWindow::Popup at call with 1 argument(s)");
+				references->AddReference(&focus0, "wxPopupTransientWindow::Popup at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -8048,7 +8001,8 @@ PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8057,7 +8011,7 @@ PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPopupTransientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupTransientWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8086,7 +8040,7 @@ PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 	#endif
 	
 	//Parameters for overload 0
-	zval* event0 = 0;
+	zval event0;
 	wxMouseEvent* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8103,17 +8057,17 @@ PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxMouseEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(event0) == IS_OBJECT)
+				if(Z_TYPE(event0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMouseEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMouseEvent*) zend_object_store_get_object(event0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMouseEvent_P(&event0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMouseEvent_P(&event0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMouseEvent*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'event' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(event0) != IS_NULL)
+				else if(Z_TYPE(event0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'event' not null, could not be retreived correctly.");
 				}
@@ -8137,7 +8091,7 @@ PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 
 				ZVAL_BOOL(return_value, ((wxPopupTransientWindow_php*)native_object)->ProcessLeftDown(*(wxMouseEvent*) object_pointer0_0));
 
-				references->AddReference(event0, "wxPopupTransientWindow::ProcessLeftDown at call with 1 argument(s)");
+				references->AddReference(&event0, "wxPopupTransientWindow::ProcessLeftDown at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -8168,13 +8122,14 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long flags0;
 	bool overload0_called = false;
@@ -8192,17 +8147,17 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &flags0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -8227,7 +8182,7 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 				native_object = new wxPopupTransientWindow_php((wxWindow*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPopupTransientWindow_php*) native_object)->references.AddReference(parent0, "wxPopupTransientWindow::wxPopupTransientWindow at call with 1 argument(s)");
+				((wxPopupTransientWindow_php*) native_object)->references.AddReference(&parent0, "wxPopupTransientWindow::wxPopupTransientWindow at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -8239,7 +8194,7 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 				native_object = new wxPopupTransientWindow_php((wxWindow*) object_pointer0_0, (int) flags0);
 
 				native_object->references.Initialize();
-				((wxPopupTransientWindow_php*) native_object)->references.AddReference(parent0, "wxPopupTransientWindow::wxPopupTransientWindow at call with 2 argument(s)");
+				((wxPopupTransientWindow_php*) native_object)->references.AddReference(&parent0, "wxPopupTransientWindow::wxPopupTransientWindow at call 2 with 2 argument(s)");
 				break;
 			}
 		}
@@ -8251,7 +8206,7 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPopupTransientWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPopupTransientWindow_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -8283,36 +8238,26 @@ void php_wxPropertySheetDialog_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPropertySheetDialog_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPropertySheetDialog_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPropertySheetDialog_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPropertySheetDialog* custom_object;
-    custom_object = (zo_wxPropertySheetDialog*) emalloc(sizeof(zo_wxPropertySheetDialog));
+	zo_wxPropertySheetDialog* custom_object;
+	custom_object = (zo_wxPropertySheetDialog*) ecalloc(1, sizeof(zo_wxPropertySheetDialog) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPropertySheetDialog_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPROPERTYSHEETDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -8331,7 +8276,8 @@ PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8340,7 +8286,7 @@ PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8369,7 +8315,7 @@ PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 	#endif
 	
 	//Parameters for overload 0
-	zval* sizer0 = 0;
+	zval sizer0;
 	wxSizer* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -8386,17 +8332,17 @@ PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(sizer0) == IS_OBJECT)
+				if(Z_TYPE(sizer0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSizer*) zend_object_store_get_object(sizer0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSizer*) zend_object_store_get_object(sizer0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSizer_P(&sizer0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSizer_P(&sizer0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSizer*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXSIZER_TYPE && argument_type != PHP_WXBOXSIZER_TYPE && argument_type != PHP_WXSTATICBOXSIZER_TYPE && argument_type != PHP_WXWRAPSIZER_TYPE && argument_type != PHP_WXSTDDIALOGBUTTONSIZER_TYPE && argument_type != PHP_WXGRIDSIZER_TYPE && argument_type != PHP_WXFLEXGRIDSIZER_TYPE && argument_type != PHP_WXGRIDBAGSIZER_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'sizer' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(sizer0) != IS_NULL)
+				else if(Z_TYPE(sizer0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'sizer' not null, could not be retreived correctly.");
 				}
@@ -8420,7 +8366,7 @@ PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 
 				((wxPropertySheetDialog_php*)native_object)->AddBookCtrl((wxSizer*) object_pointer0_0);
 
-				references->AddReference(sizer0, "wxPropertySheetDialog::AddBookCtrl at call with 1 argument(s)");
+				references->AddReference(&sizer0, "wxPropertySheetDialog::AddBookCtrl at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -8452,7 +8398,8 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8461,7 +8408,7 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8490,14 +8437,14 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -8517,51 +8464,51 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -8585,7 +8532,7 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 
 				ZVAL_BOOL(return_value, ((wxPropertySheetDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxPropertySheetDialog::Create at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxPropertySheetDialog::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -8598,8 +8545,8 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 
 				ZVAL_BOOL(return_value, ((wxPropertySheetDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0, "wxPropertySheetDialog::Create at call with 4 argument(s)");
-				references->AddReference(pos0, "wxPropertySheetDialog::Create at call with 4 argument(s)");
+				references->AddReference(&parent0, "wxPropertySheetDialog::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos0, "wxPropertySheetDialog::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -8612,9 +8559,9 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 
 				ZVAL_BOOL(return_value, ((wxPropertySheetDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0, "wxPropertySheetDialog::Create at call with 5 argument(s)");
-				references->AddReference(pos0, "wxPropertySheetDialog::Create at call with 5 argument(s)");
-				references->AddReference(size0, "wxPropertySheetDialog::Create at call with 5 argument(s)");
+				references->AddReference(&parent0, "wxPropertySheetDialog::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos0, "wxPropertySheetDialog::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size0, "wxPropertySheetDialog::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -8627,9 +8574,9 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 
 				ZVAL_BOOL(return_value, ((wxPropertySheetDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0, "wxPropertySheetDialog::Create at call with 6 argument(s)");
-				references->AddReference(pos0, "wxPropertySheetDialog::Create at call with 6 argument(s)");
-				references->AddReference(size0, "wxPropertySheetDialog::Create at call with 6 argument(s)");
+				references->AddReference(&parent0, "wxPropertySheetDialog::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos0, "wxPropertySheetDialog::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size0, "wxPropertySheetDialog::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -8642,9 +8589,9 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 
 				ZVAL_BOOL(return_value, ((wxPropertySheetDialog_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxPropertySheetDialog::Create at call with 7 argument(s)");
-				references->AddReference(pos0, "wxPropertySheetDialog::Create at call with 7 argument(s)");
-				references->AddReference(size0, "wxPropertySheetDialog::Create at call with 7 argument(s)");
+				references->AddReference(&parent0, "wxPropertySheetDialog::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos0, "wxPropertySheetDialog::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size0, "wxPropertySheetDialog::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -8676,7 +8623,8 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8685,7 +8633,7 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8748,8 +8696,8 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8758,11 +8706,11 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 				}
 				else{
 					object_init_ex(return_value, php_wxBookCtrlBase_entry);
-					((zo_wxBookCtrlBase*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBookCtrlBase_php*) value_to_return0;
+					Z_wxBookCtrlBase_P(return_value TSRMLS_CC)->native_object = (wxBookCtrlBase_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPropertySheetDialog::CreateBookCtrl at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPropertySheetDialog::CreateBookCtrl at call 5 with 0 argument(s)");
 				}
 
 
@@ -8796,7 +8744,8 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateButtons)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8805,7 +8754,7 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateButtons)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8910,7 +8859,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8919,7 +8869,7 @@ PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8982,8 +8932,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8992,11 +8942,11 @@ PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 				}
 				else{
 					object_init_ex(return_value, php_wxBookCtrlBase_entry);
-					((zo_wxBookCtrlBase*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxBookCtrlBase_php*) value_to_return0;
+					Z_wxBookCtrlBase_P(return_value TSRMLS_CC)->native_object = (wxBookCtrlBase_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPropertySheetDialog::GetBookCtrl at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPropertySheetDialog::GetBookCtrl at call 5 with 0 argument(s)");
 				}
 
 
@@ -9030,7 +8980,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9039,7 +8990,7 @@ PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9102,8 +9053,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -9112,11 +9063,11 @@ PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 				}
 				else{
 					object_init_ex(return_value, php_wxSizer_entry);
-					((zo_wxSizer*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxSizer_php*) value_to_return0;
+					Z_wxSizer_P(return_value TSRMLS_CC)->native_object = (wxSizer_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPropertySheetDialog::GetInnerSizer at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPropertySheetDialog::GetInnerSizer at call 5 with 0 argument(s)");
 				}
 
 
@@ -9150,7 +9101,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetSheetStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9159,7 +9111,7 @@ PHP_METHOD(php_wxPropertySheetDialog, GetSheetStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9247,7 +9199,8 @@ PHP_METHOD(php_wxPropertySheetDialog, LayoutDialog)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9256,7 +9209,7 @@ PHP_METHOD(php_wxPropertySheetDialog, LayoutDialog)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9361,7 +9314,8 @@ PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9370,7 +9324,7 @@ PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9399,7 +9353,7 @@ PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 	#endif
 	
 	//Parameters for overload 0
-	zval* bookCtrl0 = 0;
+	zval bookCtrl0;
 	wxBookCtrlBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -9416,17 +9370,17 @@ PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bookCtrl0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(bookCtrl0) == IS_OBJECT)
+				if(Z_TYPE(bookCtrl0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxBookCtrlBase*) zend_object_store_get_object(bookCtrl0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxBookCtrlBase*) zend_object_store_get_object(bookCtrl0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxBookCtrlBase_P(&bookCtrl0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBookCtrlBase_P(&bookCtrl0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxBookCtrlBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'bookCtrl' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(bookCtrl0) != IS_NULL)
+				else if(Z_TYPE(bookCtrl0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bookCtrl' not null, could not be retreived correctly.");
 				}
@@ -9450,7 +9404,7 @@ PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 
 				((wxPropertySheetDialog_php*)native_object)->SetBookCtrl((wxBookCtrlBase*) object_pointer0_0);
 
-				references->AddReference(bookCtrl0, "wxPropertySheetDialog::SetBookCtrl at call with 1 argument(s)");
+				references->AddReference(&bookCtrl0, "wxPropertySheetDialog::SetBookCtrl at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -9482,7 +9436,8 @@ PHP_METHOD(php_wxPropertySheetDialog, SetSheetStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9491,7 +9446,7 @@ PHP_METHOD(php_wxPropertySheetDialog, SetSheetStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9583,20 +9538,21 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -9616,51 +9572,51 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -9685,7 +9641,7 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 				native_object = new wxPropertySheetDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 3 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -9697,8 +9653,8 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 				native_object = new wxPropertySheetDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 4 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 4 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call 2 with 4 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -9710,9 +9666,9 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 				native_object = new wxPropertySheetDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 5 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 5 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(size0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 5 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call 2 with 5 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 5 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&size0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -9724,9 +9680,9 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 				native_object = new wxPropertySheetDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 6 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 6 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(size0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 6 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call 2 with 6 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 6 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&size0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -9738,9 +9694,9 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 				native_object = new wxPropertySheetDialog_php((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 7 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 7 argument(s)");
-				((wxPropertySheetDialog_php*) native_object)->references.AddReference(size0, "wxPropertySheetDialog::wxPropertySheetDialog at call with 7 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&parent0, "wxPropertySheetDialog::wxPropertySheetDialog at call 2 with 7 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&pos0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 7 argument(s)");
+				((wxPropertySheetDialog_php*) native_object)->references.AddReference(&size0, "wxPropertySheetDialog::wxPropertySheetDialog at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -9752,7 +9708,7 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPropertySheetDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPropertySheetDialog_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -9784,36 +9740,26 @@ void php_wxSplashScreen_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxSplashScreen_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxSplashScreen_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxSplashScreen_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxSplashScreen* custom_object;
-    custom_object = (zo_wxSplashScreen*) emalloc(sizeof(zo_wxSplashScreen));
+	zo_wxSplashScreen* custom_object;
+	custom_object = (zo_wxSplashScreen*) ecalloc(1, sizeof(zo_wxSplashScreen) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxSplashScreen_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXSPLASHSCREEN_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -9832,7 +9778,8 @@ PHP_METHOD(php_wxSplashScreen, GetSplashStyle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9841,7 +9788,7 @@ PHP_METHOD(php_wxSplashScreen, GetSplashStyle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxSplashScreen*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxSplashScreen_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -9929,7 +9876,8 @@ PHP_METHOD(php_wxSplashScreen, GetTimeout)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9938,7 +9886,7 @@ PHP_METHOD(php_wxSplashScreen, GetTimeout)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxSplashScreen*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxSplashScreen_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -10025,22 +9973,23 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* bitmap0 = 0;
+	zval bitmap0;
 	wxBitmap* object_pointer0_0 = 0;
 	long splashStyle0;
 	long milliseconds0;
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_3 = 0;
 	long id0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_5 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_6 = 0;
 	long style0;
 	bool overload0_called = false;
@@ -10058,68 +10007,68 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry, &splashStyle0, &milliseconds0, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(bitmap0) == IS_OBJECT)
+				if(Z_TYPE(bitmap0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxBitmap*) zend_object_store_get_object(bitmap0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(&bitmap0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(&bitmap0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxBitmap*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'bitmap' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(bitmap0) != IS_NULL)
+				else if(Z_TYPE(bitmap0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'bitmap' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_3 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 6){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_5 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_5 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_6 = (wxSize*) argument_native_object;
 					if (!object_pointer0_6 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -10144,8 +10093,8 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 				native_object = new wxSplashScreen_php(*(wxBitmap*) object_pointer0_0, (long) splashStyle0, (int) milliseconds0, (wxWindow*) object_pointer0_3, (wxWindowID) id0);
 
 				native_object->references.Initialize();
-				((wxSplashScreen_php*) native_object)->references.AddReference(bitmap0, "wxSplashScreen::wxSplashScreen at call with 5 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(parent0, "wxSplashScreen::wxSplashScreen at call with 5 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&bitmap0, "wxSplashScreen::wxSplashScreen at call 4 with 5 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&parent0, "wxSplashScreen::wxSplashScreen at call 2 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -10157,9 +10106,9 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 				native_object = new wxSplashScreen_php(*(wxBitmap*) object_pointer0_0, (long) splashStyle0, (int) milliseconds0, (wxWindow*) object_pointer0_3, (wxWindowID) id0, *(wxPoint*) object_pointer0_5);
 
 				native_object->references.Initialize();
-				((wxSplashScreen_php*) native_object)->references.AddReference(bitmap0, "wxSplashScreen::wxSplashScreen at call with 6 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(parent0, "wxSplashScreen::wxSplashScreen at call with 6 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(pos0, "wxSplashScreen::wxSplashScreen at call with 6 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&bitmap0, "wxSplashScreen::wxSplashScreen at call 4 with 6 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&parent0, "wxSplashScreen::wxSplashScreen at call 2 with 6 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&pos0, "wxSplashScreen::wxSplashScreen at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -10171,10 +10120,10 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 				native_object = new wxSplashScreen_php(*(wxBitmap*) object_pointer0_0, (long) splashStyle0, (int) milliseconds0, (wxWindow*) object_pointer0_3, (wxWindowID) id0, *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6);
 
 				native_object->references.Initialize();
-				((wxSplashScreen_php*) native_object)->references.AddReference(bitmap0, "wxSplashScreen::wxSplashScreen at call with 7 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(parent0, "wxSplashScreen::wxSplashScreen at call with 7 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(pos0, "wxSplashScreen::wxSplashScreen at call with 7 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(size0, "wxSplashScreen::wxSplashScreen at call with 7 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&bitmap0, "wxSplashScreen::wxSplashScreen at call 4 with 7 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&parent0, "wxSplashScreen::wxSplashScreen at call 2 with 7 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&pos0, "wxSplashScreen::wxSplashScreen at call 4 with 7 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&size0, "wxSplashScreen::wxSplashScreen at call 4 with 7 argument(s)");
 				break;
 			}
 			case 8:
@@ -10186,10 +10135,10 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 				native_object = new wxSplashScreen_php(*(wxBitmap*) object_pointer0_0, (long) splashStyle0, (int) milliseconds0, (wxWindow*) object_pointer0_3, (wxWindowID) id0, *(wxPoint*) object_pointer0_5, *(wxSize*) object_pointer0_6, (long) style0);
 
 				native_object->references.Initialize();
-				((wxSplashScreen_php*) native_object)->references.AddReference(bitmap0, "wxSplashScreen::wxSplashScreen at call with 8 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(parent0, "wxSplashScreen::wxSplashScreen at call with 8 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(pos0, "wxSplashScreen::wxSplashScreen at call with 8 argument(s)");
-				((wxSplashScreen_php*) native_object)->references.AddReference(size0, "wxSplashScreen::wxSplashScreen at call with 8 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&bitmap0, "wxSplashScreen::wxSplashScreen at call 4 with 8 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&parent0, "wxSplashScreen::wxSplashScreen at call 2 with 8 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&pos0, "wxSplashScreen::wxSplashScreen at call 4 with 8 argument(s)");
+				((wxSplashScreen_php*) native_object)->references.AddReference(&size0, "wxSplashScreen::wxSplashScreen at call 4 with 8 argument(s)");
 				break;
 			}
 		}
@@ -10201,7 +10150,7 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxSplashScreen*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxSplashScreen_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -10268,36 +10217,26 @@ void php_wxTopLevelWindow_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxTopLevelWindow_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxTopLevelWindow_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxTopLevelWindow_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxTopLevelWindow* custom_object;
-    custom_object = (zo_wxTopLevelWindow*) emalloc(sizeof(zo_wxTopLevelWindow));
+	zo_wxTopLevelWindow* custom_object;
+	custom_object = (zo_wxTopLevelWindow*) ecalloc(1, sizeof(zo_wxTopLevelWindow) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxTopLevelWindow_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXTOPLEVELWINDOW_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -10315,7 +10254,8 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -10323,14 +10263,14 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxWindow* object_pointer1_0 = 0;
 	long id1;
 	char* title1;
 	long title_len1;
-	zval* pos1 = 0;
+	zval pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval* size1 = 0;
+	zval size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* name1;
@@ -10363,51 +10303,51 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &title1, &title_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
+				if(Z_TYPE(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
+				else if(Z_TYPE(pos1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
+				if(Z_TYPE(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
+				else if(Z_TYPE(size1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -10450,7 +10390,7 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 				native_object = new wxTopLevelWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(parent1, "wxTopLevelWindow::wxTopLevelWindow at call with 3 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&parent1, "wxTopLevelWindow::wxTopLevelWindow at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -10462,8 +10402,8 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 				native_object = new wxTopLevelWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3);
 
 				native_object->references.Initialize();
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(parent1, "wxTopLevelWindow::wxTopLevelWindow at call with 4 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(pos1, "wxTopLevelWindow::wxTopLevelWindow at call with 4 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&parent1, "wxTopLevelWindow::wxTopLevelWindow at call 2 with 4 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&pos1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -10475,9 +10415,9 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 				native_object = new wxTopLevelWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4);
 
 				native_object->references.Initialize();
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(parent1, "wxTopLevelWindow::wxTopLevelWindow at call with 5 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(pos1, "wxTopLevelWindow::wxTopLevelWindow at call with 5 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(size1, "wxTopLevelWindow::wxTopLevelWindow at call with 5 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&parent1, "wxTopLevelWindow::wxTopLevelWindow at call 2 with 5 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&pos1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 5 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&size1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -10489,9 +10429,9 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 				native_object = new wxTopLevelWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1);
 
 				native_object->references.Initialize();
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(parent1, "wxTopLevelWindow::wxTopLevelWindow at call with 6 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(pos1, "wxTopLevelWindow::wxTopLevelWindow at call with 6 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(size1, "wxTopLevelWindow::wxTopLevelWindow at call with 6 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&parent1, "wxTopLevelWindow::wxTopLevelWindow at call 2 with 6 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&pos1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 6 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&size1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -10503,9 +10443,9 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 				native_object = new wxTopLevelWindow_php((wxWindow*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(name1, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(parent1, "wxTopLevelWindow::wxTopLevelWindow at call with 7 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(pos1, "wxTopLevelWindow::wxTopLevelWindow at call with 7 argument(s)");
-				((wxTopLevelWindow_php*) native_object)->references.AddReference(size1, "wxTopLevelWindow::wxTopLevelWindow at call with 7 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&parent1, "wxTopLevelWindow::wxTopLevelWindow at call 2 with 7 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&pos1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 7 argument(s)");
+				((wxTopLevelWindow_php*) native_object)->references.AddReference(&size1, "wxTopLevelWindow::wxTopLevelWindow at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -10517,7 +10457,7 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -10553,7 +10493,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetTitle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -10562,7 +10503,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetTitle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -10748,7 +10689,8 @@ PHP_METHOD(php_wxTopLevelWindow, Maximize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -10757,7 +10699,7 @@ PHP_METHOD(php_wxTopLevelWindow, Maximize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -10954,7 +10896,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetTitle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -10963,7 +10906,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetTitle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -11112,11 +11055,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetTitle)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxTopLevelWindow_php*)native_object)->GetTitle();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -11149,7 +11088,8 @@ PHP_METHOD(php_wxTopLevelWindow, ShowFullScreen)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -11158,7 +11098,7 @@ PHP_METHOD(php_wxTopLevelWindow, ShowFullScreen)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -11356,7 +11296,8 @@ PHP_METHOD(php_wxTopLevelWindow, IsFullScreen)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -11365,7 +11306,7 @@ PHP_METHOD(php_wxTopLevelWindow, IsFullScreen)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -11545,7 +11486,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -11554,7 +11496,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -11675,7 +11617,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 	#endif
 	
 	//Parameters for overload 0
-	zval* icon0 = 0;
+	zval icon0;
 	wxIcon* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -11692,17 +11634,17 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &icon0, php_wxIcon_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(icon0) == IS_OBJECT)
+				if(Z_TYPE(icon0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxIcon*) zend_object_store_get_object(icon0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxIcon*) zend_object_store_get_object(icon0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxIcon_P(&icon0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIcon_P(&icon0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxIcon*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'icon' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(icon0) != IS_NULL)
+				else if(Z_TYPE(icon0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icon' not null, could not be retreived correctly.");
 				}
@@ -11726,7 +11668,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 
 				((wxTopLevelWindow_php*)native_object)->SetIcon(*(wxIcon*) object_pointer0_0);
 
-				references->AddReference(icon0, "wxTopLevelWindow::SetIcon at call with 1 argument(s)");
+				references->AddReference(&icon0, "wxTopLevelWindow::SetIcon at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -11758,7 +11700,8 @@ PHP_METHOD(php_wxTopLevelWindow, CanSetTransparent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -11767,7 +11710,7 @@ PHP_METHOD(php_wxTopLevelWindow, CanSetTransparent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -11947,7 +11890,8 @@ PHP_METHOD(php_wxTopLevelWindow, CentreOnScreen)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -11956,7 +11900,7 @@ PHP_METHOD(php_wxTopLevelWindow, CentreOnScreen)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -12153,7 +12097,8 @@ PHP_METHOD(php_wxTopLevelWindow, CenterOnScreen)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -12162,7 +12107,7 @@ PHP_METHOD(php_wxTopLevelWindow, CenterOnScreen)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -12359,7 +12304,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -12368,7 +12314,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -12489,35 +12435,35 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	long id0;
 	char* title0;
 	long title_len0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
 	long name_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxMDIParentFrame* object_pointer1_0 = 0;
 	long id1;
 	char* title1;
 	long title_len1;
-	zval* pos1 = 0;
+	zval pos1;
 	wxPoint* object_pointer1_3 = 0;
-	zval* size1 = 0;
+	zval size1;
 	wxSize* object_pointer1_4 = 0;
 	long style1;
 	char* name1;
 	long name_len1;
 	bool overload1_called = false;
 	//Parameters for overload 2
-	zval* parent2 = 0;
+	zval parent2;
 	wxWindow* object_pointer2_0 = 0;
 	long id2;
 	char* title2;
@@ -12525,21 +12471,21 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 	long style2;
 	bool overload2_called = false;
 	//Parameters for overload 3
-	zval* parent3 = 0;
+	zval parent3;
 	wxWindow* object_pointer3_0 = 0;
 	long id3;
 	char* title3;
 	long title_len3;
 	long style3;
-	zval* config3 = 0;
+	zval config3;
 	wxConfigBase* object_pointer3_4 = 0;
 	char* rootpath3;
 	long rootpath_len3;
 	bool overload3_called = false;
 	//Parameters for overload 4
-	zval* parent4 = 0;
+	zval parent4;
 	wxWindow* object_pointer4_0 = 0;
-	zval* data4 = 0;
+	zval data4;
 	wxFindReplaceData* object_pointer4_1 = 0;
 	char* title4;
 	long title_len4;
@@ -12552,43 +12498,43 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 	long initialFont_len5;
 	char* normalTextFont5;
 	long normalTextFont_len5;
-	zval* parent5 = 0;
+	zval parent5;
 	wxWindow* object_pointer5_3 = 0;
 	long id5;
 	char* caption5;
 	long caption_len5;
-	zval* pos5 = 0;
+	zval pos5;
 	wxPoint* object_pointer5_6 = 0;
-	zval* size5 = 0;
+	zval size5;
 	wxSize* object_pointer5_7 = 0;
 	long style5;
 	bool overload5_called = false;
 	//Parameters for overload 6
-	zval* parent6 = 0;
+	zval parent6;
 	wxWindow* object_pointer6_0 = 0;
 	long id6;
 	char* title6;
 	long title_len6;
-	zval* bitmap6 = 0;
+	zval bitmap6;
 	wxBitmap* object_pointer6_3 = 0;
-	zval* pos6 = 0;
+	zval pos6;
 	wxPoint* object_pointer6_4 = 0;
 	long style6;
 	bool overload6_called = false;
 	//Parameters for overload 7
-	zval* parent7 = 0;
+	zval parent7;
 	wxWindow* object_pointer7_0 = 0;
-	zval* data7 = 0;
+	zval data7;
 	wxColourData* object_pointer7_1 = 0;
 	bool overload7_called = false;
 	//Parameters for overload 8
-	zval* parent8 = 0;
+	zval parent8;
 	wxWindow* object_pointer8_0 = 0;
 	bool overload8_called = false;
 	//Parameters for overload 9
-	zval* parent9 = 0;
+	zval parent9;
 	wxWindow* object_pointer9_0 = 0;
-	zval* data9 = 0;
+	zval data9;
 	wxFontData* object_pointer9_1 = 0;
 	bool overload9_called = false;
 		
@@ -12605,51 +12551,51 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &title0, &title_len0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -12673,51 +12619,51 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &title1, &title_len1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMDIParentFrame*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMDIParentFrame_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMDIParentFrame_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMDIParentFrame*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMDIPARENTFRAME_TYPE))
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos1) == IS_OBJECT)
+				if(Z_TYPE(pos1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos1 TSRMLS_CC)->native_object;
 					object_pointer1_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer1_3 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
+				else if(Z_TYPE(pos1) != IS_NULL)
 				{
 					goto overload2;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size1) == IS_OBJECT)
+				if(Z_TYPE(size1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size1 TSRMLS_CC)->native_object;
 					object_pointer1_4 = (wxSize*) argument_native_object;
 					if (!object_pointer1_4 )
 					{
 						goto overload2;
 					}
 				}
-				else if(Z_TYPE_P(size1) != IS_NULL)
+				else if(Z_TYPE(size1) != IS_NULL)
 				{
 					goto overload2;
 				}
@@ -12741,17 +12687,17 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent2, &id2, &title2, &title_len2, &style2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent2) == IS_OBJECT)
+				if(Z_TYPE(parent2) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent2 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent2 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent2 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent2 TSRMLS_CC)->native_object;
 					object_pointer2_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer2_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload3;
 					}
 				}
-				else if(Z_TYPE_P(parent2) != IS_NULL)
+				else if(Z_TYPE(parent2) != IS_NULL)
 				{
 					goto overload3;
 				}
@@ -12775,34 +12721,34 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent3, &id3, &title3, &title_len3, &style3, &config3, &rootpath3, &rootpath_len3 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent3) == IS_OBJECT)
+				if(Z_TYPE(parent3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent3 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent3 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent3 TSRMLS_CC)->native_object;
 					object_pointer3_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer3_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload4;
 					}
 				}
-				else if(Z_TYPE_P(parent3) != IS_NULL)
+				else if(Z_TYPE(parent3) != IS_NULL)
 				{
 					goto overload4;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(config3) == IS_OBJECT)
+				if(Z_TYPE(config3) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config3 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config3 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxConfigBase_P(&config3 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxConfigBase_P(&config3 TSRMLS_CC)->native_object;
 					object_pointer3_4 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer3_4 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						goto overload4;
 					}
 				}
-				else if(Z_TYPE_P(config3) != IS_NULL)
+				else if(Z_TYPE(config3) != IS_NULL)
 				{
 					goto overload4;
 				}
@@ -12826,34 +12772,34 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent4, &data4, &title4, &title_len4, &style4 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent4) == IS_OBJECT)
+				if(Z_TYPE(parent4) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent4 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent4 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent4 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent4 TSRMLS_CC)->native_object;
 					object_pointer4_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer4_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload5;
 					}
 				}
-				else if(Z_TYPE_P(parent4) != IS_NULL)
+				else if(Z_TYPE(parent4) != IS_NULL)
 				{
 					goto overload5;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(data4) == IS_OBJECT)
+				if(Z_TYPE(data4) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFindReplaceData*) zend_object_store_get_object(data4 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFindReplaceData*) zend_object_store_get_object(data4 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFindReplaceData_P(&data4 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFindReplaceData_P(&data4 TSRMLS_CC)->native_object;
 					object_pointer4_1 = (wxFindReplaceData*) argument_native_object;
 					if (!object_pointer4_1 || (argument_type != PHP_WXFINDREPLACEDATA_TYPE))
 					{
 						goto overload5;
 					}
 				}
-				else if(Z_TYPE_P(data4) != IS_NULL)
+				else if(Z_TYPE(data4) != IS_NULL)
 				{
 					goto overload5;
 				}
@@ -12877,51 +12823,51 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &symbol5, &symbol_len5, &initialFont5, &initialFont_len5, &normalTextFont5, &normalTextFont_len5, &parent5, &id5, &caption5, &caption_len5, &pos5, php_wxPoint_entry, &size5, php_wxSize_entry, &style5 ) == SUCCESS)
 		{
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent5) == IS_OBJECT)
+				if(Z_TYPE(parent5) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent5 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent5 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent5 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent5 TSRMLS_CC)->native_object;
 					object_pointer5_3 = (wxWindow*) argument_native_object;
 					if (!object_pointer5_3 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload6;
 					}
 				}
-				else if(Z_TYPE_P(parent5) != IS_NULL)
+				else if(Z_TYPE(parent5) != IS_NULL)
 				{
 					goto overload6;
 				}
 			}
 
 			if(arguments_received >= 7){
-				if(Z_TYPE_P(pos5) == IS_OBJECT)
+				if(Z_TYPE(pos5) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos5 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos5 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos5 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos5 TSRMLS_CC)->native_object;
 					object_pointer5_6 = (wxPoint*) argument_native_object;
 					if (!object_pointer5_6 )
 					{
 						goto overload6;
 					}
 				}
-				else if(Z_TYPE_P(pos5) != IS_NULL)
+				else if(Z_TYPE(pos5) != IS_NULL)
 				{
 					goto overload6;
 				}
 			}
 
 			if(arguments_received >= 8){
-				if(Z_TYPE_P(size5) == IS_OBJECT)
+				if(Z_TYPE(size5) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size5 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size5 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size5 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size5 TSRMLS_CC)->native_object;
 					object_pointer5_7 = (wxSize*) argument_native_object;
 					if (!object_pointer5_7 )
 					{
 						goto overload6;
 					}
 				}
-				else if(Z_TYPE_P(size5) != IS_NULL)
+				else if(Z_TYPE(size5) != IS_NULL)
 				{
 					goto overload6;
 				}
@@ -12945,51 +12891,51 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent6, &id6, &title6, &title_len6, &bitmap6, php_wxBitmap_entry, &pos6, php_wxPoint_entry, &style6 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent6) == IS_OBJECT)
+				if(Z_TYPE(parent6) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent6 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent6 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent6 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent6 TSRMLS_CC)->native_object;
 					object_pointer6_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer6_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload7;
 					}
 				}
-				else if(Z_TYPE_P(parent6) != IS_NULL)
+				else if(Z_TYPE(parent6) != IS_NULL)
 				{
 					goto overload7;
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(bitmap6) == IS_OBJECT)
+				if(Z_TYPE(bitmap6) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxBitmap*) zend_object_store_get_object(bitmap6 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxBitmap*) zend_object_store_get_object(bitmap6 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxBitmap_P(&bitmap6 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxBitmap_P(&bitmap6 TSRMLS_CC)->native_object;
 					object_pointer6_3 = (wxBitmap*) argument_native_object;
 					if (!object_pointer6_3 )
 					{
 						goto overload7;
 					}
 				}
-				else if(Z_TYPE_P(bitmap6) != IS_NULL)
+				else if(Z_TYPE(bitmap6) != IS_NULL)
 				{
 					goto overload7;
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(pos6) == IS_OBJECT)
+				if(Z_TYPE(pos6) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos6 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos6 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos6 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos6 TSRMLS_CC)->native_object;
 					object_pointer6_4 = (wxPoint*) argument_native_object;
 					if (!object_pointer6_4 )
 					{
 						goto overload7;
 					}
 				}
-				else if(Z_TYPE_P(pos6) != IS_NULL)
+				else if(Z_TYPE(pos6) != IS_NULL)
 				{
 					goto overload7;
 				}
@@ -13013,34 +12959,34 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent7, &data7 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent7) == IS_OBJECT)
+				if(Z_TYPE(parent7) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent7 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent7 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent7 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent7 TSRMLS_CC)->native_object;
 					object_pointer7_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer7_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload8;
 					}
 				}
-				else if(Z_TYPE_P(parent7) != IS_NULL)
+				else if(Z_TYPE(parent7) != IS_NULL)
 				{
 					goto overload8;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(data7) == IS_OBJECT)
+				if(Z_TYPE(data7) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxColourData*) zend_object_store_get_object(data7 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxColourData*) zend_object_store_get_object(data7 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxColourData_P(&data7 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxColourData_P(&data7 TSRMLS_CC)->native_object;
 					object_pointer7_1 = (wxColourData*) argument_native_object;
 					if (!object_pointer7_1 || (argument_type != PHP_WXCOLOURDATA_TYPE))
 					{
 						goto overload8;
 					}
 				}
-				else if(Z_TYPE_P(data7) != IS_NULL)
+				else if(Z_TYPE(data7) != IS_NULL)
 				{
 					goto overload8;
 				}
@@ -13064,17 +13010,17 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent8 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent8) == IS_OBJECT)
+				if(Z_TYPE(parent8) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent8 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent8 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent8 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent8 TSRMLS_CC)->native_object;
 					object_pointer8_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer8_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload9;
 					}
 				}
-				else if(Z_TYPE_P(parent8) != IS_NULL)
+				else if(Z_TYPE(parent8) != IS_NULL)
 				{
 					goto overload9;
 				}
@@ -13098,34 +13044,34 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent9, &data9, php_wxFontData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent9) == IS_OBJECT)
+				if(Z_TYPE(parent9) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent9 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent9 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent9 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent9 TSRMLS_CC)->native_object;
 					object_pointer9_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer9_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent9) != IS_NULL)
+				else if(Z_TYPE(parent9) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(data9) == IS_OBJECT)
+				if(Z_TYPE(data9) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFontData*) zend_object_store_get_object(data9 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFontData*) zend_object_store_get_object(data9 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFontData_P(&data9 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFontData_P(&data9 TSRMLS_CC)->native_object;
 					object_pointer9_1 = (wxFontData*) argument_native_object;
 					if (!object_pointer9_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(data9) != IS_NULL)
+				else if(Z_TYPE(data9) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -13149,7 +13095,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxTopLevelWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxTopLevelWindow::Create at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -13162,8 +13108,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxTopLevelWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3));
 
-				references->AddReference(parent0, "wxTopLevelWindow::Create at call with 4 argument(s)");
-				references->AddReference(pos0, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent0, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos0, "wxTopLevelWindow::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -13176,9 +13122,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxTopLevelWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4));
 
-				references->AddReference(parent0, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(pos0, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(size0, "wxTopLevelWindow::Create at call with 5 argument(s)");
+				references->AddReference(&parent0, "wxTopLevelWindow::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos0, "wxTopLevelWindow::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size0, "wxTopLevelWindow::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -13191,9 +13137,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxTopLevelWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0));
 
-				references->AddReference(parent0, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(pos0, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(size0, "wxTopLevelWindow::Create at call with 6 argument(s)");
+				references->AddReference(&parent0, "wxTopLevelWindow::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos0, "wxTopLevelWindow::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size0, "wxTopLevelWindow::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -13206,9 +13152,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxTopLevelWindow_php*)native_object)->Create((wxWindow*) object_pointer0_0, (wxWindowID) id0, wxString(title0, wxConvUTF8), *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8)));
 
-				references->AddReference(parent0, "wxTopLevelWindow::Create at call with 7 argument(s)");
-				references->AddReference(pos0, "wxTopLevelWindow::Create at call with 7 argument(s)");
-				references->AddReference(size0, "wxTopLevelWindow::Create at call with 7 argument(s)");
+				references->AddReference(&parent0, "wxTopLevelWindow::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos0, "wxTopLevelWindow::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size0, "wxTopLevelWindow::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -13228,7 +13174,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8)));
 
-				references->AddReference(parent1, "wxTopLevelWindow::Create at call with 3 argument(s)");
+				references->AddReference(&parent1, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -13241,8 +13187,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3));
 
-				references->AddReference(parent1, "wxTopLevelWindow::Create at call with 4 argument(s)");
-				references->AddReference(pos1, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent1, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
+				references->AddReference(&pos1, "wxTopLevelWindow::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -13255,9 +13201,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4));
 
-				references->AddReference(parent1, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(pos1, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(size1, "wxTopLevelWindow::Create at call with 5 argument(s)");
+				references->AddReference(&parent1, "wxTopLevelWindow::Create at call 1 with 5 argument(s)");
+				references->AddReference(&pos1, "wxTopLevelWindow::Create at call 3 with 5 argument(s)");
+				references->AddReference(&size1, "wxTopLevelWindow::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -13270,9 +13216,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1));
 
-				references->AddReference(parent1, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(pos1, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(size1, "wxTopLevelWindow::Create at call with 6 argument(s)");
+				references->AddReference(&parent1, "wxTopLevelWindow::Create at call 1 with 6 argument(s)");
+				references->AddReference(&pos1, "wxTopLevelWindow::Create at call 3 with 6 argument(s)");
+				references->AddReference(&size1, "wxTopLevelWindow::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -13285,9 +13231,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxMDIChildFrame_php*)native_object)->Create((wxMDIParentFrame*) object_pointer1_0, (wxWindowID) id1, wxString(title1, wxConvUTF8), *(wxPoint*) object_pointer1_3, *(wxSize*) object_pointer1_4, (long) style1, wxString(name1, wxConvUTF8)));
 
-				references->AddReference(parent1, "wxTopLevelWindow::Create at call with 7 argument(s)");
-				references->AddReference(pos1, "wxTopLevelWindow::Create at call with 7 argument(s)");
-				references->AddReference(size1, "wxTopLevelWindow::Create at call with 7 argument(s)");
+				references->AddReference(&parent1, "wxTopLevelWindow::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos1, "wxTopLevelWindow::Create at call 3 with 7 argument(s)");
+				references->AddReference(&size1, "wxTopLevelWindow::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -13307,7 +13253,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer2_0, (wxWindowID) id2));
 
-				references->AddReference(parent2, "wxTopLevelWindow::Create at call with 2 argument(s)");
+				references->AddReference(&parent2, "wxTopLevelWindow::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -13320,7 +13266,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer2_0, (wxWindowID) id2, wxString(title2, wxConvUTF8)));
 
-				references->AddReference(parent2, "wxTopLevelWindow::Create at call with 3 argument(s)");
+				references->AddReference(&parent2, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -13333,7 +13279,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpDialog_php*)native_object)->Create((wxWindow*) object_pointer2_0, (wxWindowID) id2, wxString(title2, wxConvUTF8), (int) style2));
 
-				references->AddReference(parent2, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent2, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -13353,7 +13299,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3));
 
-				references->AddReference(parent3, "wxTopLevelWindow::Create at call with 2 argument(s)");
+				references->AddReference(&parent3, "wxTopLevelWindow::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -13366,7 +13312,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8)));
 
-				references->AddReference(parent3, "wxTopLevelWindow::Create at call with 3 argument(s)");
+				references->AddReference(&parent3, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -13379,7 +13325,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8), (int) style3));
 
-				references->AddReference(parent3, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent3, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -13392,8 +13338,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8), (int) style3, (wxConfigBase*) object_pointer3_4));
 
-				references->AddReference(parent3, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(config3, "wxTopLevelWindow::Create at call with 5 argument(s)");
+				references->AddReference(&parent3, "wxTopLevelWindow::Create at call 1 with 5 argument(s)");
+				references->AddReference(&config3, "wxTopLevelWindow::Create at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -13406,8 +13352,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxHtmlHelpFrame_php*)native_object)->Create((wxWindow*) object_pointer3_0, (wxWindowID) id3, wxString(title3, wxConvUTF8), (int) style3, (wxConfigBase*) object_pointer3_4, wxString(rootpath3, wxConvUTF8)));
 
-				references->AddReference(parent3, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(config3, "wxTopLevelWindow::Create at call with 6 argument(s)");
+				references->AddReference(&parent3, "wxTopLevelWindow::Create at call 1 with 6 argument(s)");
+				references->AddReference(&config3, "wxTopLevelWindow::Create at call 1 with 6 argument(s)");
 
 				return;
 				break;
@@ -13427,8 +13373,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer4_0, (wxFindReplaceData*) object_pointer4_1, wxString(title4, wxConvUTF8)));
 
-				references->AddReference(parent4, "wxTopLevelWindow::Create at call with 3 argument(s)");
-				references->AddReference(data4, "wxTopLevelWindow::Create at call with 3 argument(s)");
+				references->AddReference(&parent4, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
+				references->AddReference(&data4, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -13441,8 +13387,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxFindReplaceDialog_php*)native_object)->Create((wxWindow*) object_pointer4_0, (wxFindReplaceData*) object_pointer4_1, wxString(title4, wxConvUTF8), (int) style4));
 
-				references->AddReference(parent4, "wxTopLevelWindow::Create at call with 4 argument(s)");
-				references->AddReference(data4, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent4, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
+				references->AddReference(&data4, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -13462,7 +13408,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol5, wxConvUTF8), wxString(initialFont5, wxConvUTF8), wxString(normalTextFont5, wxConvUTF8), (wxWindow*) object_pointer5_3));
 
-				references->AddReference(parent5, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent5, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
 
 				return;
 				break;
@@ -13475,7 +13421,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol5, wxConvUTF8), wxString(initialFont5, wxConvUTF8), wxString(normalTextFont5, wxConvUTF8), (wxWindow*) object_pointer5_3, (wxWindowID) id5));
 
-				references->AddReference(parent5, "wxTopLevelWindow::Create at call with 5 argument(s)");
+				references->AddReference(&parent5, "wxTopLevelWindow::Create at call 1 with 5 argument(s)");
 
 				return;
 				break;
@@ -13488,7 +13434,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol5, wxConvUTF8), wxString(initialFont5, wxConvUTF8), wxString(normalTextFont5, wxConvUTF8), (wxWindow*) object_pointer5_3, (wxWindowID) id5, wxString(caption5, wxConvUTF8)));
 
-				references->AddReference(parent5, "wxTopLevelWindow::Create at call with 6 argument(s)");
+				references->AddReference(&parent5, "wxTopLevelWindow::Create at call 1 with 6 argument(s)");
 
 				return;
 				break;
@@ -13501,8 +13447,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol5, wxConvUTF8), wxString(initialFont5, wxConvUTF8), wxString(normalTextFont5, wxConvUTF8), (wxWindow*) object_pointer5_3, (wxWindowID) id5, wxString(caption5, wxConvUTF8), *(wxPoint*) object_pointer5_6));
 
-				references->AddReference(parent5, "wxTopLevelWindow::Create at call with 7 argument(s)");
-				references->AddReference(pos5, "wxTopLevelWindow::Create at call with 7 argument(s)");
+				references->AddReference(&parent5, "wxTopLevelWindow::Create at call 1 with 7 argument(s)");
+				references->AddReference(&pos5, "wxTopLevelWindow::Create at call 3 with 7 argument(s)");
 
 				return;
 				break;
@@ -13515,9 +13461,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol5, wxConvUTF8), wxString(initialFont5, wxConvUTF8), wxString(normalTextFont5, wxConvUTF8), (wxWindow*) object_pointer5_3, (wxWindowID) id5, wxString(caption5, wxConvUTF8), *(wxPoint*) object_pointer5_6, *(wxSize*) object_pointer5_7));
 
-				references->AddReference(parent5, "wxTopLevelWindow::Create at call with 8 argument(s)");
-				references->AddReference(pos5, "wxTopLevelWindow::Create at call with 8 argument(s)");
-				references->AddReference(size5, "wxTopLevelWindow::Create at call with 8 argument(s)");
+				references->AddReference(&parent5, "wxTopLevelWindow::Create at call 1 with 8 argument(s)");
+				references->AddReference(&pos5, "wxTopLevelWindow::Create at call 3 with 8 argument(s)");
+				references->AddReference(&size5, "wxTopLevelWindow::Create at call 3 with 8 argument(s)");
 
 				return;
 				break;
@@ -13530,9 +13476,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxSymbolPickerDialog_php*)native_object)->Create(wxString(symbol5, wxConvUTF8), wxString(initialFont5, wxConvUTF8), wxString(normalTextFont5, wxConvUTF8), (wxWindow*) object_pointer5_3, (wxWindowID) id5, wxString(caption5, wxConvUTF8), *(wxPoint*) object_pointer5_6, *(wxSize*) object_pointer5_7, (long) style5));
 
-				references->AddReference(parent5, "wxTopLevelWindow::Create at call with 9 argument(s)");
-				references->AddReference(pos5, "wxTopLevelWindow::Create at call with 9 argument(s)");
-				references->AddReference(size5, "wxTopLevelWindow::Create at call with 9 argument(s)");
+				references->AddReference(&parent5, "wxTopLevelWindow::Create at call 1 with 9 argument(s)");
+				references->AddReference(&pos5, "wxTopLevelWindow::Create at call 3 with 9 argument(s)");
+				references->AddReference(&size5, "wxTopLevelWindow::Create at call 3 with 9 argument(s)");
 
 				return;
 				break;
@@ -13552,7 +13498,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer6_0));
 
-				references->AddReference(parent6, "wxTopLevelWindow::Create at call with 1 argument(s)");
+				references->AddReference(&parent6, "wxTopLevelWindow::Create at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -13565,7 +13511,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer6_0, (int) id6));
 
-				references->AddReference(parent6, "wxTopLevelWindow::Create at call with 2 argument(s)");
+				references->AddReference(&parent6, "wxTopLevelWindow::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -13578,7 +13524,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer6_0, (int) id6, wxString(title6, wxConvUTF8)));
 
-				references->AddReference(parent6, "wxTopLevelWindow::Create at call with 3 argument(s)");
+				references->AddReference(&parent6, "wxTopLevelWindow::Create at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -13591,8 +13537,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer6_0, (int) id6, wxString(title6, wxConvUTF8), *(wxBitmap*) object_pointer6_3));
 
-				references->AddReference(parent6, "wxTopLevelWindow::Create at call with 4 argument(s)");
-				references->AddReference(bitmap6, "wxTopLevelWindow::Create at call with 4 argument(s)");
+				references->AddReference(&parent6, "wxTopLevelWindow::Create at call 1 with 4 argument(s)");
+				references->AddReference(&bitmap6, "wxTopLevelWindow::Create at call 3 with 4 argument(s)");
 
 				return;
 				break;
@@ -13605,9 +13551,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer6_0, (int) id6, wxString(title6, wxConvUTF8), *(wxBitmap*) object_pointer6_3, *(wxPoint*) object_pointer6_4));
 
-				references->AddReference(parent6, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(bitmap6, "wxTopLevelWindow::Create at call with 5 argument(s)");
-				references->AddReference(pos6, "wxTopLevelWindow::Create at call with 5 argument(s)");
+				references->AddReference(&parent6, "wxTopLevelWindow::Create at call 1 with 5 argument(s)");
+				references->AddReference(&bitmap6, "wxTopLevelWindow::Create at call 3 with 5 argument(s)");
+				references->AddReference(&pos6, "wxTopLevelWindow::Create at call 3 with 5 argument(s)");
 
 				return;
 				break;
@@ -13620,9 +13566,9 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxWizard_php*)native_object)->Create((wxWindow*) object_pointer6_0, (int) id6, wxString(title6, wxConvUTF8), *(wxBitmap*) object_pointer6_3, *(wxPoint*) object_pointer6_4, (long) style6));
 
-				references->AddReference(parent6, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(bitmap6, "wxTopLevelWindow::Create at call with 6 argument(s)");
-				references->AddReference(pos6, "wxTopLevelWindow::Create at call with 6 argument(s)");
+				references->AddReference(&parent6, "wxTopLevelWindow::Create at call 1 with 6 argument(s)");
+				references->AddReference(&bitmap6, "wxTopLevelWindow::Create at call 3 with 6 argument(s)");
+				references->AddReference(&pos6, "wxTopLevelWindow::Create at call 3 with 6 argument(s)");
 
 				return;
 				break;
@@ -13642,7 +13588,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer7_0));
 
-				references->AddReference(parent7, "wxTopLevelWindow::Create at call with 1 argument(s)");
+				references->AddReference(&parent7, "wxTopLevelWindow::Create at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -13655,8 +13601,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxColourDialog_php*)native_object)->Create((wxWindow*) object_pointer7_0, (wxColourData*) object_pointer7_1));
 
-				references->AddReference(parent7, "wxTopLevelWindow::Create at call with 2 argument(s)");
-				references->AddReference(data7, "wxTopLevelWindow::Create at call with 2 argument(s)");
+				references->AddReference(&parent7, "wxTopLevelWindow::Create at call 1 with 2 argument(s)");
+				references->AddReference(&data7, "wxTopLevelWindow::Create at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -13676,7 +13622,7 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer8_0));
 
-				references->AddReference(parent8, "wxTopLevelWindow::Create at call with 1 argument(s)");
+				references->AddReference(&parent8, "wxTopLevelWindow::Create at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -13696,8 +13642,8 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 
 				ZVAL_BOOL(return_value, ((wxFontDialog_php*)native_object)->Create((wxWindow*) object_pointer9_0, *(wxFontData*) object_pointer9_1));
 
-				references->AddReference(parent9, "wxTopLevelWindow::Create at call with 2 argument(s)");
-				references->AddReference(data9, "wxTopLevelWindow::Create at call with 2 argument(s)");
+				references->AddReference(&parent9, "wxTopLevelWindow::Create at call 1 with 2 argument(s)");
+				references->AddReference(&data9, "wxTopLevelWindow::Create at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -13729,7 +13675,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -13738,7 +13685,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -13893,8 +13840,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13903,11 +13850,11 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 				}
 				else{
 					object_init_ex(return_value, php_wxWindow_entry);
-					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return0;
+					Z_wxWindow_P(return_value TSRMLS_CC)->native_object = (wxWindow_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxTopLevelWindow::GetDefaultItem at call with 0 argument(s)");
+					references->AddReference(return_value, "wxTopLevelWindow::GetDefaultItem at call 5 with 0 argument(s)");
 				}
 
 
@@ -13941,7 +13888,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -13950,7 +13898,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -14104,7 +14052,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 				memcpy(ptr, (void*) &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				((wxSize_php*)ptr)->phpObj = return_value;
-				zo_wxSize* zo0 = (zo_wxSize*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxSize* zo0 = Z_wxSize_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxSize_php*) ptr;
 
 
@@ -14138,7 +14086,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -14147,7 +14096,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -14301,7 +14250,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 				memcpy(ptr, (void*) &value_to_return0, sizeof(wxIcon));
 				object_init_ex(return_value, php_wxIcon_entry);
 				((wxIcon_php*)ptr)->phpObj = return_value;
-				zo_wxIcon* zo0 = (zo_wxIcon*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxIcon* zo0 = Z_wxIcon_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxIcon_php*) ptr;
 
 
@@ -14335,7 +14284,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -14344,7 +14294,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -14496,8 +14446,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -14506,11 +14456,11 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 				}
 				else{
 					object_init_ex(return_value,php_wxIconBundle_entry);
-					((zo_wxIconBundle*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxIconBundle_php*) value_to_return0;
+					Z_wxIconBundle_P(return_value TSRMLS_CC)->native_object = (wxIconBundle_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxTopLevelWindow::GetIcons at call with 0 argument(s)");
+					references->AddReference(return_value, "wxTopLevelWindow::GetIcons at call 6 with 0 argument(s)");
 				}
 
 
@@ -14543,7 +14493,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -14552,7 +14503,7 @@ PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -14707,8 +14658,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -14717,11 +14668,11 @@ PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 				}
 				else{
 					object_init_ex(return_value, php_wxWindow_entry);
-					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return0;
+					Z_wxWindow_P(return_value TSRMLS_CC)->native_object = (wxWindow_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxTopLevelWindow::GetTmpDefaultItem at call with 0 argument(s)");
+					references->AddReference(return_value, "wxTopLevelWindow::GetTmpDefaultItem at call 5 with 0 argument(s)");
 				}
 
 
@@ -14755,7 +14706,8 @@ PHP_METHOD(php_wxTopLevelWindow, Iconize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -14764,7 +14716,7 @@ PHP_METHOD(php_wxTopLevelWindow, Iconize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -14961,7 +14913,8 @@ PHP_METHOD(php_wxTopLevelWindow, IsActive)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -14970,7 +14923,7 @@ PHP_METHOD(php_wxTopLevelWindow, IsActive)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -15150,7 +15103,8 @@ PHP_METHOD(php_wxTopLevelWindow, IsAlwaysMaximized)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -15159,7 +15113,7 @@ PHP_METHOD(php_wxTopLevelWindow, IsAlwaysMaximized)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -15339,7 +15293,8 @@ PHP_METHOD(php_wxTopLevelWindow, IsIconized)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -15348,7 +15303,7 @@ PHP_METHOD(php_wxTopLevelWindow, IsIconized)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -15528,7 +15483,8 @@ PHP_METHOD(php_wxTopLevelWindow, IsMaximized)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -15537,7 +15493,7 @@ PHP_METHOD(php_wxTopLevelWindow, IsMaximized)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -15717,7 +15673,8 @@ PHP_METHOD(php_wxTopLevelWindow, Layout)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -15726,7 +15683,7 @@ PHP_METHOD(php_wxTopLevelWindow, Layout)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -15906,7 +15863,8 @@ PHP_METHOD(php_wxTopLevelWindow, RequestUserAttention)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -15915,7 +15873,7 @@ PHP_METHOD(php_wxTopLevelWindow, RequestUserAttention)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -16112,7 +16070,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -16121,7 +16080,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -16242,7 +16201,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval* win0 = 0;
+	zval win0;
 	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16259,17 +16218,17 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(win0) == IS_OBJECT)
+				if(Z_TYPE(win0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&win0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&win0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'win' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(win0) != IS_NULL)
+				else if(Z_TYPE(win0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'win' not null, could not be retreived correctly.");
 				}
@@ -16299,8 +16258,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						*return_value = *value_to_return1->phpObj;
-						zval_add_ref(&value_to_return1->phpObj);
+						return_value = value_to_return1->phpObj;
+						zval_add_ref(value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -16309,14 +16268,14 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 				}
 				else{
 					object_init_ex(return_value, php_wxWindow_entry);
-					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return1;
+					Z_wxWindow_P(return_value TSRMLS_CC)->native_object = (wxWindow_php*) value_to_return1;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxTopLevelWindow::SetDefaultItem at call with 1 argument(s)");
+					references->AddReference(return_value, "wxTopLevelWindow::SetDefaultItem at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(win0, "wxTopLevelWindow::SetDefaultItem at call with 1 argument(s)");
+				references->AddReference(&win0, "wxTopLevelWindow::SetDefaultItem at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -16348,7 +16307,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -16357,7 +16317,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -16478,7 +16438,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 	#endif
 	
 	//Parameters for overload 0
-	zval* icons0 = 0;
+	zval icons0;
 	wxIconBundle* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16495,17 +16455,17 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &icons0, php_wxIconBundle_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(icons0) == IS_OBJECT)
+				if(Z_TYPE(icons0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxIconBundle*) zend_object_store_get_object(icons0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxIconBundle*) zend_object_store_get_object(icons0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxIconBundle_P(&icons0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxIconBundle_P(&icons0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxIconBundle*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'icons' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(icons0) != IS_NULL)
+				else if(Z_TYPE(icons0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'icons' not null, could not be retreived correctly.");
 				}
@@ -16529,7 +16489,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 
 				((wxTopLevelWindow_php*)native_object)->SetIcons(*(wxIconBundle*) object_pointer0_0);
 
-				references->AddReference(icons0, "wxTopLevelWindow::SetIcons at call with 1 argument(s)");
+				references->AddReference(&icons0, "wxTopLevelWindow::SetIcons at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16561,7 +16521,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -16570,7 +16531,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -16691,7 +16652,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 	#endif
 	
 	//Parameters for overload 0
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16708,17 +16669,17 @@ PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -16742,7 +16703,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 
 				((wxTopLevelWindow_php*)native_object)->SetMaxSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0, "wxTopLevelWindow::SetMaxSize at call with 1 argument(s)");
+				references->AddReference(&size0, "wxTopLevelWindow::SetMaxSize at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16774,7 +16735,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -16783,7 +16745,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -16904,7 +16866,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 	#endif
 	
 	//Parameters for overload 0
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -16921,17 +16883,17 @@ PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -16955,7 +16917,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 
 				((wxTopLevelWindow_php*)native_object)->SetMinSize(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(size0, "wxTopLevelWindow::SetMinSize at call with 1 argument(s)");
+				references->AddReference(&size0, "wxTopLevelWindow::SetMinSize at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -16987,7 +16949,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -16996,7 +16959,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -17125,11 +17088,11 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 	long incH0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* minSize1 = 0;
+	zval minSize1;
 	wxSize* object_pointer1_0 = 0;
-	zval* maxSize1 = 0;
+	zval maxSize1;
 	wxSize* object_pointer1_1 = 0;
-	zval* incSize1 = 0;
+	zval incSize1;
 	wxSize* object_pointer1_2 = 0;
 	bool overload1_called = false;
 		
@@ -17163,51 +17126,51 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &minSize1, php_wxSize_entry, &maxSize1, php_wxSize_entry, &incSize1, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(minSize1) == IS_OBJECT)
+				if(Z_TYPE(minSize1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(minSize1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(minSize1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&minSize1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&minSize1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxSize*) argument_native_object;
 					if (!object_pointer1_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'minSize' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(minSize1) != IS_NULL)
+				else if(Z_TYPE(minSize1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'minSize' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(maxSize1) == IS_OBJECT)
+				if(Z_TYPE(maxSize1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(maxSize1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(maxSize1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&maxSize1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&maxSize1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxSize*) argument_native_object;
 					if (!object_pointer1_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'maxSize' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(maxSize1) != IS_NULL)
+				else if(Z_TYPE(maxSize1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'maxSize' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(incSize1) == IS_OBJECT)
+				if(Z_TYPE(incSize1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(incSize1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(incSize1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&incSize1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&incSize1 TSRMLS_CC)->native_object;
 					object_pointer1_2 = (wxSize*) argument_native_object;
 					if (!object_pointer1_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'incSize' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(incSize1) != IS_NULL)
+				else if(Z_TYPE(incSize1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'incSize' not null, could not be retreived correctly.");
 				}
@@ -17298,7 +17261,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 
 				((wxTopLevelWindow_php*)native_object)->SetSizeHints(*(wxSize*) object_pointer1_0);
 
-				references->AddReference(minSize1, "wxTopLevelWindow::SetSizeHints at call with 1 argument(s)");
+				references->AddReference(&minSize1, "wxTopLevelWindow::SetSizeHints at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -17311,8 +17274,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 
 				((wxTopLevelWindow_php*)native_object)->SetSizeHints(*(wxSize*) object_pointer1_0, *(wxSize*) object_pointer1_1);
 
-				references->AddReference(minSize1, "wxTopLevelWindow::SetSizeHints at call with 2 argument(s)");
-				references->AddReference(maxSize1, "wxTopLevelWindow::SetSizeHints at call with 2 argument(s)");
+				references->AddReference(&minSize1, "wxTopLevelWindow::SetSizeHints at call 3 with 2 argument(s)");
+				references->AddReference(&maxSize1, "wxTopLevelWindow::SetSizeHints at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -17325,9 +17288,9 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 
 				((wxTopLevelWindow_php*)native_object)->SetSizeHints(*(wxSize*) object_pointer1_0, *(wxSize*) object_pointer1_1, *(wxSize*) object_pointer1_2);
 
-				references->AddReference(minSize1, "wxTopLevelWindow::SetSizeHints at call with 3 argument(s)");
-				references->AddReference(maxSize1, "wxTopLevelWindow::SetSizeHints at call with 3 argument(s)");
-				references->AddReference(incSize1, "wxTopLevelWindow::SetSizeHints at call with 3 argument(s)");
+				references->AddReference(&minSize1, "wxTopLevelWindow::SetSizeHints at call 3 with 3 argument(s)");
+				references->AddReference(&maxSize1, "wxTopLevelWindow::SetSizeHints at call 3 with 3 argument(s)");
+				references->AddReference(&incSize1, "wxTopLevelWindow::SetSizeHints at call 3 with 3 argument(s)");
 
 				return;
 				break;
@@ -17358,7 +17321,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -17367,7 +17331,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -17488,7 +17452,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 	#endif
 	
 	//Parameters for overload 0
-	zval* win0 = 0;
+	zval win0;
 	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -17505,17 +17469,17 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(win0) == IS_OBJECT)
+				if(Z_TYPE(win0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(win0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&win0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&win0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'win' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(win0) != IS_NULL)
+				else if(Z_TYPE(win0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'win' not null, could not be retreived correctly.");
 				}
@@ -17545,8 +17509,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						*return_value = *value_to_return1->phpObj;
-						zval_add_ref(&value_to_return1->phpObj);
+						return_value = value_to_return1->phpObj;
+						zval_add_ref(value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17555,14 +17519,14 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 				}
 				else{
 					object_init_ex(return_value, php_wxWindow_entry);
-					((zo_wxWindow*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxWindow_php*) value_to_return1;
+					Z_wxWindow_P(return_value TSRMLS_CC)->native_object = (wxWindow_php*) value_to_return1;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxTopLevelWindow::SetTmpDefaultItem at call with 1 argument(s)");
+					references->AddReference(return_value, "wxTopLevelWindow::SetTmpDefaultItem at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(win0, "wxTopLevelWindow::SetTmpDefaultItem at call with 1 argument(s)");
+				references->AddReference(&win0, "wxTopLevelWindow::SetTmpDefaultItem at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -17594,7 +17558,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetTransparent)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -17603,7 +17568,7 @@ PHP_METHOD(php_wxTopLevelWindow, SetTransparent)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -17788,7 +17753,8 @@ PHP_METHOD(php_wxTopLevelWindow, ShouldPreventAppExit)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -17797,7 +17763,7 @@ PHP_METHOD(php_wxTopLevelWindow, ShouldPreventAppExit)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxTopLevelWindow*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxTopLevelWindow_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_pickers_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxColourPickerCtrl_entry;
-void php_wxColourPickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxColourPickerCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxColourPickerCtrl_php: public wxColourPickerCtrl{
 	public:
@@ -35,16 +35,15 @@ class wxColourPickerCtrl_php: public wxColourPickerCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxColourPickerCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxColourPickerCtrl{
     wxColourPickerCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxColourPickerCtrl;
 
 void php_wxColourPickerCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxColourPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -57,8 +56,14 @@ static zend_function_entry php_wxColourPickerCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxColourPickerCtrl * php_wxColourPickerCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxColourPickerCtrl *)((char *)obj - XtOffsetOf(zo_wxColourPickerCtrl, zo));
+}
+
+#define Z_wxColourPickerCtrl_P(zv) php_wxColourPickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDatePickerCtrl_entry;
-void php_wxDatePickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxDatePickerCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxDatePickerCtrl_php: public wxDatePickerCtrl{
 	public:
@@ -73,16 +78,15 @@ class wxDatePickerCtrl_php: public wxDatePickerCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxDatePickerCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxDatePickerCtrl{
     wxDatePickerCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxDatePickerCtrl;
 
 void php_wxDatePickerCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxDatePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -97,8 +101,14 @@ static zend_function_entry php_wxDatePickerCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxDatePickerCtrl * php_wxDatePickerCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxDatePickerCtrl *)((char *)obj - XtOffsetOf(zo_wxDatePickerCtrl, zo));
+}
+
+#define Z_wxDatePickerCtrl_P(zv) php_wxDatePickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFilePickerCtrl_entry;
-void php_wxFilePickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFilePickerCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFilePickerCtrl_php: public wxFilePickerCtrl{
 	public:
@@ -113,16 +123,15 @@ class wxFilePickerCtrl_php: public wxFilePickerCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFilePickerCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxFilePickerCtrl{
     wxFilePickerCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFilePickerCtrl;
 
 void php_wxFilePickerCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFilePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -137,8 +146,14 @@ static zend_function_entry php_wxFilePickerCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFilePickerCtrl * php_wxFilePickerCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxFilePickerCtrl *)((char *)obj - XtOffsetOf(zo_wxFilePickerCtrl, zo));
+}
+
+#define Z_wxFilePickerCtrl_P(zv) php_wxFilePickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDirPickerCtrl_entry;
-void php_wxDirPickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxDirPickerCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxDirPickerCtrl_php: public wxDirPickerCtrl{
 	public:
@@ -153,16 +168,15 @@ class wxDirPickerCtrl_php: public wxDirPickerCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxDirPickerCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxDirPickerCtrl{
     wxDirPickerCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxDirPickerCtrl;
 
 void php_wxDirPickerCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxDirPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -177,8 +191,14 @@ static zend_function_entry php_wxDirPickerCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxDirPickerCtrl * php_wxDirPickerCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxDirPickerCtrl *)((char *)obj - XtOffsetOf(zo_wxDirPickerCtrl, zo));
+}
+
+#define Z_wxDirPickerCtrl_P(zv) php_wxDirPickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontPickerCtrl_entry;
-void php_wxFontPickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFontPickerCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFontPickerCtrl_php: public wxFontPickerCtrl{
 	public:
@@ -193,16 +213,15 @@ class wxFontPickerCtrl_php: public wxFontPickerCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFontPickerCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxFontPickerCtrl{
     wxFontPickerCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFontPickerCtrl;
 
 void php_wxFontPickerCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFontPickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -217,8 +236,14 @@ static zend_function_entry php_wxFontPickerCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFontPickerCtrl * php_wxFontPickerCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxFontPickerCtrl *)((char *)obj - XtOffsetOf(zo_wxFontPickerCtrl, zo));
+}
+
+#define Z_wxFontPickerCtrl_P(zv) php_wxFontPickerCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPickerBase_entry;
-void php_wxPickerBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPickerBase_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPickerBase_php: public wxPickerBase{
 	public:
@@ -232,16 +257,15 @@ class wxPickerBase_php: public wxPickerBase{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPickerBase 
-{
-    zend_object zo;
+typedef struct _zo_wxPickerBase{
     wxPickerBase_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPickerBase;
 
 void php_wxPickerBase_free(void *object TSRMLS_DC);
-zend_object_value php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPickerBase_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -263,8 +287,14 @@ static zend_function_entry php_wxPickerBase_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPickerBase * php_wxPickerBase_fetch_object(zend_object *obj) {
+      return (zo_wxPickerBase *)((char *)obj - XtOffsetOf(zo_wxPickerBase, zo));
+}
+
+#define Z_wxPickerBase_P(zv) php_wxPickerBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTimePickerCtrl_entry;
-void php_wxTimePickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxTimePickerCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxTimePickerCtrl_php: public wxTimePickerCtrl{
 	public:
@@ -279,16 +309,15 @@ class wxTimePickerCtrl_php: public wxTimePickerCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxTimePickerCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxTimePickerCtrl{
     wxTimePickerCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxTimePickerCtrl;
 
 void php_wxTimePickerCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxTimePickerCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -301,4 +330,10 @@ static zend_function_entry php_wxTimePickerCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxTimePickerCtrl * php_wxTimePickerCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxTimePickerCtrl *)((char *)obj - XtOffsetOf(zo_wxTimePickerCtrl, zo));
+}
+
+#define Z_wxTimePickerCtrl_P(zv) php_wxTimePickerCtrl_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_PICKERS_H_GUARD

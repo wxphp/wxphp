@@ -97,36 +97,26 @@ void php_wxPrinterDC_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPrinterDC_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPrinterDC_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrinterDC_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPrinterDC* custom_object;
-    custom_object = (zo_wxPrinterDC*) emalloc(sizeof(zo_wxPrinterDC));
+	zo_wxPrinterDC* custom_object;
+	custom_object = (zo_wxPrinterDC*) ecalloc(1, sizeof(zo_wxPrinterDC) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrinterDC_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTERDC_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -145,7 +135,8 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -154,7 +145,7 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinterDC*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinterDC_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -216,7 +207,7 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
-				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxRect* zo0 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
 
 
@@ -249,13 +240,14 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* printData0 = 0;
+	zval printData0;
 	wxPrintData* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -272,17 +264,17 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &printData0, php_wxPrintData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(printData0) == IS_OBJECT)
+				if(Z_TYPE(printData0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintData*) zend_object_store_get_object(printData0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintData*) zend_object_store_get_object(printData0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintData_P(&printData0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintData_P(&printData0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintData*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'printData' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(printData0) != IS_NULL)
+				else if(Z_TYPE(printData0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printData' not null, could not be retreived correctly.");
 				}
@@ -307,7 +299,7 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 				native_object = new wxPrinterDC_php(*(wxPrintData*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPrinterDC_php*) native_object)->references.AddReference(printData0, "wxPrinterDC::wxPrinterDC at call with 1 argument(s)");
+				((wxPrinterDC_php*) native_object)->references.AddReference(&printData0, "wxPrinterDC::wxPrinterDC at call 4 with 1 argument(s)");
 				break;
 			}
 		}
@@ -319,7 +311,7 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPrinterDC*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinterDC_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -354,36 +346,26 @@ void php_wxPreviewControlBar_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPreviewControlBar_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPreviewControlBar_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPreviewControlBar_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPreviewControlBar* custom_object;
-    custom_object = (zo_wxPreviewControlBar*) emalloc(sizeof(zo_wxPreviewControlBar));
+	zo_wxPreviewControlBar* custom_object;
+	custom_object = (zo_wxPreviewControlBar*) ecalloc(1, sizeof(zo_wxPreviewControlBar) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewControlBar_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPREVIEWCONTROLBAR_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -402,7 +384,8 @@ PHP_METHOD(php_wxPreviewControlBar, CreateButtons)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -411,7 +394,7 @@ PHP_METHOD(php_wxPreviewControlBar, CreateButtons)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewControlBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewControlBar_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -499,7 +482,8 @@ PHP_METHOD(php_wxPreviewControlBar, GetZoomControl)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -508,7 +492,7 @@ PHP_METHOD(php_wxPreviewControlBar, GetZoomControl)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewControlBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewControlBar_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -596,7 +580,8 @@ PHP_METHOD(php_wxPreviewControlBar, SetZoomControl)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -605,7 +590,7 @@ PHP_METHOD(php_wxPreviewControlBar, SetZoomControl)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewControlBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewControlBar_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -697,20 +682,21 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* preview0 = 0;
+	zval preview0;
 	wxPrintPreview* object_pointer0_0 = 0;
 	long buttons0;
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_2 = 0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_3 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_4 = 0;
 	long style0;
 	char* name0;
@@ -730,68 +716,68 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &preview0, &buttons0, &parent0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(preview0) == IS_OBJECT)
+				if(Z_TYPE(preview0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintPreview*) zend_object_store_get_object(preview0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintPreview*) zend_object_store_get_object(preview0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintPreview_P(&preview0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintPreview_P(&preview0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintPreview*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPRINTPREVIEW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'preview' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(preview0) != IS_NULL)
+				else if(Z_TYPE(preview0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'preview' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_2 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 5){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_4 = (wxSize*) argument_native_object;
 					if (!object_pointer0_4 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -816,8 +802,8 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				native_object = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2);
 
 				native_object->references.Initialize();
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 3 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 3 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&preview0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 3 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&parent0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -829,9 +815,9 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				native_object = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 4 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 4 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 4 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&preview0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 4 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&parent0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 4 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&pos0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -843,10 +829,10 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				native_object = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4);
 
 				native_object->references.Initialize();
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(size0, "wxPreviewControlBar::wxPreviewControlBar at call with 5 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&preview0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 5 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&parent0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 5 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&pos0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 5 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&size0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -858,10 +844,10 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				native_object = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0);
 
 				native_object->references.Initialize();
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(size0, "wxPreviewControlBar::wxPreviewControlBar at call with 6 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&preview0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 6 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&parent0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 6 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&pos0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 6 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&size0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 6 argument(s)");
 				break;
 			}
 			case 7:
@@ -873,10 +859,10 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 				native_object = new wxPreviewControlBar_php((wxPrintPreview*) object_pointer0_0, (long) buttons0, (wxWindow*) object_pointer0_2, *(wxPoint*) object_pointer0_3, *(wxSize*) object_pointer0_4, (long) style0, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(preview0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(parent0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(pos0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
-				((wxPreviewControlBar_php*) native_object)->references.AddReference(size0, "wxPreviewControlBar::wxPreviewControlBar at call with 7 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&preview0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 7 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&parent0, "wxPreviewControlBar::wxPreviewControlBar at call 2 with 7 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&pos0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 7 argument(s)");
+				((wxPreviewControlBar_php*) native_object)->references.AddReference(&size0, "wxPreviewControlBar::wxPreviewControlBar at call 4 with 7 argument(s)");
 				break;
 			}
 		}
@@ -888,7 +874,7 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPreviewControlBar*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewControlBar_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -923,36 +909,26 @@ void php_wxPreviewCanvas_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPreviewCanvas_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPreviewCanvas_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPreviewCanvas_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPreviewCanvas* custom_object;
-    custom_object = (zo_wxPreviewCanvas*) emalloc(sizeof(zo_wxPreviewCanvas));
+	zo_wxPreviewCanvas* custom_object;
+	custom_object = (zo_wxPreviewCanvas*) ecalloc(1, sizeof(zo_wxPreviewCanvas) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewCanvas_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPREVIEWCANVAS_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -970,19 +946,20 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* preview0 = 0;
+	zval preview0;
 	wxPrintPreview* object_pointer0_0 = 0;
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_1 = 0;
-	zval* pos0 = 0;
+	zval pos0;
 	wxPoint* object_pointer0_2 = 0;
-	zval* size0 = 0;
+	zval size0;
 	wxSize* object_pointer0_3 = 0;
 	long style0;
 	char* name0;
@@ -1002,68 +979,68 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &preview0, &parent0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(preview0) == IS_OBJECT)
+				if(Z_TYPE(preview0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintPreview*) zend_object_store_get_object(preview0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintPreview*) zend_object_store_get_object(preview0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintPreview_P(&preview0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintPreview_P(&preview0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintPreview*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPRINTPREVIEW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'preview' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(preview0) != IS_NULL)
+				else if(Z_TYPE(preview0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'preview' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(pos0) == IS_OBJECT)
+				if(Z_TYPE(pos0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPoint*) zend_object_store_get_object(pos0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPoint_P(&pos0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPoint_P(&pos0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxPoint*) argument_native_object;
 					if (!object_pointer0_2 )
 					{
 						zend_error(E_ERROR, "Parameter 'pos' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
+				else if(Z_TYPE(pos0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pos' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 4){
-				if(Z_TYPE_P(size0) == IS_OBJECT)
+				if(Z_TYPE(size0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(size0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&size0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&size0 TSRMLS_CC)->native_object;
 					object_pointer0_3 = (wxSize*) argument_native_object;
 					if (!object_pointer0_3 )
 					{
 						zend_error(E_ERROR, "Parameter 'size' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) != IS_NULL)
+				else if(Z_TYPE(size0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'size' not null, could not be retreived correctly.");
 				}
@@ -1088,8 +1065,8 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				native_object = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1);
 
 				native_object->references.Initialize();
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 2 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 2 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&preview0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 2 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&parent0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -1101,9 +1078,9 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				native_object = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2);
 
 				native_object->references.Initialize();
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 3 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 3 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 3 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&preview0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 3 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&parent0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 3 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&pos0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 3 argument(s)");
 				break;
 			}
 			case 4:
@@ -1115,10 +1092,10 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				native_object = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3);
 
 				native_object->references.Initialize();
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(size0, "wxPreviewCanvas::wxPreviewCanvas at call with 4 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&preview0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 4 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&parent0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 4 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&pos0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 4 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&size0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 4 argument(s)");
 				break;
 			}
 			case 5:
@@ -1130,10 +1107,10 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				native_object = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0);
 
 				native_object->references.Initialize();
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(size0, "wxPreviewCanvas::wxPreviewCanvas at call with 5 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&preview0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 5 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&parent0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 5 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&pos0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 5 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&size0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 5 argument(s)");
 				break;
 			}
 			case 6:
@@ -1145,10 +1122,10 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 				native_object = new wxPreviewCanvas_php((wxPrintPreview*) object_pointer0_0, (wxWindow*) object_pointer0_1, *(wxPoint*) object_pointer0_2, *(wxSize*) object_pointer0_3, (long) style0, wxString(name0, wxConvUTF8));
 
 				native_object->references.Initialize();
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(preview0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(parent0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(pos0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
-				((wxPreviewCanvas_php*) native_object)->references.AddReference(size0, "wxPreviewCanvas::wxPreviewCanvas at call with 6 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&preview0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 6 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&parent0, "wxPreviewCanvas::wxPreviewCanvas at call 2 with 6 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&pos0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 6 argument(s)");
+				((wxPreviewCanvas_php*) native_object)->references.AddReference(&size0, "wxPreviewCanvas::wxPreviewCanvas at call 4 with 6 argument(s)");
 				break;
 			}
 		}
@@ -1160,7 +1137,7 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPreviewCanvas*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewCanvas_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -1192,36 +1169,26 @@ void php_wxPreviewFrame_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPreviewFrame_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPreviewFrame_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPreviewFrame_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPreviewFrame* custom_object;
-    custom_object = (zo_wxPreviewFrame*) emalloc(sizeof(zo_wxPreviewFrame));
+	zo_wxPreviewFrame* custom_object;
+	custom_object = (zo_wxPreviewFrame*) ecalloc(1, sizeof(zo_wxPreviewFrame) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPreviewFrame_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPREVIEWFRAME_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -1240,7 +1207,8 @@ PHP_METHOD(php_wxPreviewFrame, CreateCanvas)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1249,7 +1217,7 @@ PHP_METHOD(php_wxPreviewFrame, CreateCanvas)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1340,7 +1308,8 @@ PHP_METHOD(php_wxPreviewFrame, CreateControlBar)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1349,7 +1318,7 @@ PHP_METHOD(php_wxPreviewFrame, CreateControlBar)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1440,7 +1409,8 @@ PHP_METHOD(php_wxPreviewFrame, Initialize)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1449,7 +1419,7 @@ PHP_METHOD(php_wxPreviewFrame, Initialize)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1540,7 +1510,8 @@ PHP_METHOD(php_wxPreviewFrame, InitializeWithModality)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1549,7 +1520,7 @@ PHP_METHOD(php_wxPreviewFrame, InitializeWithModality)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPreviewFrame*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPreviewFrame_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1675,36 +1646,26 @@ void php_wxPrintPreview_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPrintPreview_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPrintPreview_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintPreview_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPrintPreview* custom_object;
-    custom_object = (zo_wxPrintPreview*) emalloc(sizeof(zo_wxPrintPreview));
+	zo_wxPrintPreview* custom_object;
+	custom_object = (zo_wxPrintPreview*) ecalloc(1, sizeof(zo_wxPrintPreview) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintPreview_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTPREVIEW_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -1723,7 +1684,8 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1732,7 +1694,7 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1795,8 +1757,8 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1805,11 +1767,11 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 				}
 				else{
 					object_init_ex(return_value, php_wxPreviewCanvas_entry);
-					((zo_wxPreviewCanvas*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPreviewCanvas_php*) value_to_return0;
+					Z_wxPreviewCanvas_P(return_value TSRMLS_CC)->native_object = (wxPreviewCanvas_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintPreview::GetCanvas at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintPreview::GetCanvas at call 5 with 0 argument(s)");
 				}
 
 
@@ -1843,7 +1805,8 @@ PHP_METHOD(php_wxPrintPreview, GetCurrentPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1852,7 +1815,7 @@ PHP_METHOD(php_wxPrintPreview, GetCurrentPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1940,7 +1903,8 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1949,7 +1913,7 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2012,8 +1976,8 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2022,11 +1986,11 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 				}
 				else{
 					object_init_ex(return_value, php_wxFrame_entry);
-					((zo_wxFrame*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxFrame_php*) value_to_return0;
+					Z_wxFrame_P(return_value TSRMLS_CC)->native_object = (wxFrame_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintPreview::GetFrame at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintPreview::GetFrame at call 5 with 0 argument(s)");
 				}
 
 
@@ -2060,7 +2024,8 @@ PHP_METHOD(php_wxPrintPreview, GetMaxPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2069,7 +2034,7 @@ PHP_METHOD(php_wxPrintPreview, GetMaxPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2157,7 +2122,8 @@ PHP_METHOD(php_wxPrintPreview, GetMinPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2166,7 +2132,7 @@ PHP_METHOD(php_wxPrintPreview, GetMinPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2254,7 +2220,8 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2263,7 +2230,7 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2326,8 +2293,8 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2336,11 +2303,11 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 				}
 				else{
 					object_init_ex(return_value, php_wxPrintout_entry);
-					((zo_wxPrintout*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPrintout_php*) value_to_return0;
+					Z_wxPrintout_P(return_value TSRMLS_CC)->native_object = (wxPrintout_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintPreview::GetPrintout at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintPreview::GetPrintout at call 5 with 0 argument(s)");
 				}
 
 
@@ -2374,7 +2341,8 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2383,7 +2351,7 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2446,8 +2414,8 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2456,11 +2424,11 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 				}
 				else{
 					object_init_ex(return_value, php_wxPrintout_entry);
-					((zo_wxPrintout*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPrintout_php*) value_to_return0;
+					Z_wxPrintout_P(return_value TSRMLS_CC)->native_object = (wxPrintout_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintPreview::GetPrintoutForPrinting at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintPreview::GetPrintoutForPrinting at call 5 with 0 argument(s)");
 				}
 
 
@@ -2494,7 +2462,8 @@ PHP_METHOD(php_wxPrintPreview, IsOk)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2503,7 +2472,7 @@ PHP_METHOD(php_wxPrintPreview, IsOk)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2591,7 +2560,8 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2600,7 +2570,7 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2629,9 +2599,9 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 	#endif
 	
 	//Parameters for overload 0
-	zval* canvas0 = 0;
+	zval canvas0;
 	wxPreviewCanvas* object_pointer0_0 = 0;
-	zval* dc0 = 0;
+	zval dc0;
 	wxDC* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -2648,34 +2618,34 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &canvas0, &dc0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(canvas0) == IS_OBJECT)
+				if(Z_TYPE(canvas0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPreviewCanvas*) zend_object_store_get_object(canvas0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPreviewCanvas*) zend_object_store_get_object(canvas0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPreviewCanvas_P(&canvas0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPreviewCanvas_P(&canvas0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPreviewCanvas*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPREVIEWCANVAS_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'canvas' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(canvas0) != IS_NULL)
+				else if(Z_TYPE(canvas0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'canvas' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(dc0) == IS_OBJECT)
+				if(Z_TYPE(dc0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxDC*) zend_object_store_get_object(dc0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxDC_P(&dc0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxDC_P(&dc0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxDC*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXDC_TYPE && argument_type != PHP_WXWINDOWDC_TYPE && argument_type != PHP_WXCLIENTDC_TYPE && argument_type != PHP_WXPAINTDC_TYPE && argument_type != PHP_WXSCREENDC_TYPE && argument_type != PHP_WXPOSTSCRIPTDC_TYPE && argument_type != PHP_WXPRINTERDC_TYPE && argument_type != PHP_WXMEMORYDC_TYPE && argument_type != PHP_WXBUFFEREDDC_TYPE && argument_type != PHP_WXBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXAUTOBUFFEREDPAINTDC_TYPE && argument_type != PHP_WXMIRRORDC_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'dc' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(dc0) != IS_NULL)
+				else if(Z_TYPE(dc0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'dc' not null, could not be retreived correctly.");
 				}
@@ -2699,8 +2669,8 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 
 				ZVAL_BOOL(return_value, ((wxPrintPreview_php*)native_object)->PaintPage((wxPreviewCanvas*) object_pointer0_0, *(wxDC*) object_pointer0_1));
 
-				references->AddReference(canvas0, "wxPrintPreview::PaintPage at call with 2 argument(s)");
-				references->AddReference(dc0, "wxPrintPreview::PaintPage at call with 2 argument(s)");
+				references->AddReference(&canvas0, "wxPrintPreview::PaintPage at call 1 with 2 argument(s)");
+				references->AddReference(&dc0, "wxPrintPreview::PaintPage at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -2732,7 +2702,8 @@ PHP_METHOD(php_wxPrintPreview, PrintMethod)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2741,7 +2712,7 @@ PHP_METHOD(php_wxPrintPreview, PrintMethod)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2834,7 +2805,8 @@ PHP_METHOD(php_wxPrintPreview, RenderPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2843,7 +2815,7 @@ PHP_METHOD(php_wxPrintPreview, RenderPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2936,7 +2908,8 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -2945,7 +2918,7 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -2974,7 +2947,7 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 	#endif
 	
 	//Parameters for overload 0
-	zval* window0 = 0;
+	zval window0;
 	wxPreviewCanvas* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -2991,17 +2964,17 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(window0) == IS_OBJECT)
+				if(Z_TYPE(window0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPreviewCanvas*) zend_object_store_get_object(window0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPreviewCanvas*) zend_object_store_get_object(window0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPreviewCanvas_P(&window0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPreviewCanvas_P(&window0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPreviewCanvas*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPREVIEWCANVAS_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'window' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(window0) != IS_NULL)
+				else if(Z_TYPE(window0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'window' not null, could not be retreived correctly.");
 				}
@@ -3025,7 +2998,7 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 
 				((wxPrintPreview_php*)native_object)->SetCanvas((wxPreviewCanvas*) object_pointer0_0);
 
-				references->AddReference(window0, "wxPrintPreview::SetCanvas at call with 1 argument(s)");
+				references->AddReference(&window0, "wxPrintPreview::SetCanvas at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3057,7 +3030,8 @@ PHP_METHOD(php_wxPrintPreview, SetCurrentPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3066,7 +3040,7 @@ PHP_METHOD(php_wxPrintPreview, SetCurrentPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3159,7 +3133,8 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3168,7 +3143,7 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3197,7 +3172,7 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 	#endif
 	
 	//Parameters for overload 0
-	zval* frame0 = 0;
+	zval frame0;
 	wxFrame* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3214,17 +3189,17 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(frame0) == IS_OBJECT)
+				if(Z_TYPE(frame0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxFrame*) zend_object_store_get_object(frame0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxFrame*) zend_object_store_get_object(frame0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxFrame_P(&frame0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxFrame_P(&frame0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxFrame*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'frame' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(frame0) != IS_NULL)
+				else if(Z_TYPE(frame0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'frame' not null, could not be retreived correctly.");
 				}
@@ -3248,7 +3223,7 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 
 				((wxPrintPreview_php*)native_object)->SetFrame((wxFrame*) object_pointer0_0);
 
-				references->AddReference(frame0, "wxPrintPreview::SetFrame at call with 1 argument(s)");
+				references->AddReference(&frame0, "wxPrintPreview::SetFrame at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3280,7 +3255,8 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3289,7 +3265,7 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3318,7 +3294,7 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 	#endif
 	
 	//Parameters for overload 0
-	zval* printout0 = 0;
+	zval printout0;
 	wxPrintout* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -3335,17 +3311,17 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &printout0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(printout0) == IS_OBJECT)
+				if(Z_TYPE(printout0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintout_P(&printout0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintout_P(&printout0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintout*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'printout' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(printout0) != IS_NULL)
+				else if(Z_TYPE(printout0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printout' not null, could not be retreived correctly.");
 				}
@@ -3369,7 +3345,7 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 
 				((wxPrintPreview_php*)native_object)->SetPrintout((wxPrintout*) object_pointer0_0);
 
-				references->AddReference(printout0, "wxPrintPreview::SetPrintout at call with 1 argument(s)");
+				references->AddReference(&printout0, "wxPrintPreview::SetPrintout at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -3401,7 +3377,8 @@ PHP_METHOD(php_wxPrintPreview, SetZoom)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3410,7 +3387,7 @@ PHP_METHOD(php_wxPrintPreview, SetZoom)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3502,17 +3479,18 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* printout0 = 0;
+	zval printout0;
 	wxPrintout* object_pointer0_0 = 0;
-	zval* printoutForPrinting0 = 0;
+	zval printoutForPrinting0;
 	wxPrintout* object_pointer0_1 = 0;
-	zval* data0 = 0;
+	zval data0;
 	wxPrintDialogData* object_pointer0_2 = 0;
 	bool overload0_called = false;
 		
@@ -3529,51 +3507,51 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &printout0, &printoutForPrinting0, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(printout0) == IS_OBJECT)
+				if(Z_TYPE(printout0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintout_P(&printout0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintout_P(&printout0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintout*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'printout' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(printout0) != IS_NULL)
+				else if(Z_TYPE(printout0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printout' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(printoutForPrinting0) == IS_OBJECT)
+				if(Z_TYPE(printoutForPrinting0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintout*) zend_object_store_get_object(printoutForPrinting0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintout*) zend_object_store_get_object(printoutForPrinting0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintout_P(&printoutForPrinting0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintout_P(&printoutForPrinting0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxPrintout*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'printoutForPrinting' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(printoutForPrinting0) != IS_NULL)
+				else if(Z_TYPE(printoutForPrinting0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printoutForPrinting' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 3){
-				if(Z_TYPE_P(data0) == IS_OBJECT)
+				if(Z_TYPE(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintDialogData_P(&data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintDialogData_P(&data0 TSRMLS_CC)->native_object;
 					object_pointer0_2 = (wxPrintDialogData*) argument_native_object;
 					if (!object_pointer0_2 || (argument_type != PHP_WXPRINTDIALOGDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(data0) != IS_NULL)
+				else if(Z_TYPE(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -3598,7 +3576,7 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 				native_object = new wxPrintPreview_php((wxPrintout*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPrintPreview_php*) native_object)->references.AddReference(printout0, "wxPrintPreview::wxPrintPreview at call with 1 argument(s)");
+				((wxPrintPreview_php*) native_object)->references.AddReference(&printout0, "wxPrintPreview::wxPrintPreview at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -3610,8 +3588,8 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 				native_object = new wxPrintPreview_php((wxPrintout*) object_pointer0_0, (wxPrintout*) object_pointer0_1);
 
 				native_object->references.Initialize();
-				((wxPrintPreview_php*) native_object)->references.AddReference(printout0, "wxPrintPreview::wxPrintPreview at call with 2 argument(s)");
-				((wxPrintPreview_php*) native_object)->references.AddReference(printoutForPrinting0, "wxPrintPreview::wxPrintPreview at call with 2 argument(s)");
+				((wxPrintPreview_php*) native_object)->references.AddReference(&printout0, "wxPrintPreview::wxPrintPreview at call 2 with 2 argument(s)");
+				((wxPrintPreview_php*) native_object)->references.AddReference(&printoutForPrinting0, "wxPrintPreview::wxPrintPreview at call 2 with 2 argument(s)");
 				break;
 			}
 			case 3:
@@ -3623,9 +3601,9 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 				native_object = new wxPrintPreview_php((wxPrintout*) object_pointer0_0, (wxPrintout*) object_pointer0_1, (wxPrintDialogData*) object_pointer0_2);
 
 				native_object->references.Initialize();
-				((wxPrintPreview_php*) native_object)->references.AddReference(printout0, "wxPrintPreview::wxPrintPreview at call with 3 argument(s)");
-				((wxPrintPreview_php*) native_object)->references.AddReference(printoutForPrinting0, "wxPrintPreview::wxPrintPreview at call with 3 argument(s)");
-				((wxPrintPreview_php*) native_object)->references.AddReference(data0, "wxPrintPreview::wxPrintPreview at call with 3 argument(s)");
+				((wxPrintPreview_php*) native_object)->references.AddReference(&printout0, "wxPrintPreview::wxPrintPreview at call 2 with 3 argument(s)");
+				((wxPrintPreview_php*) native_object)->references.AddReference(&printoutForPrinting0, "wxPrintPreview::wxPrintPreview at call 2 with 3 argument(s)");
+				((wxPrintPreview_php*) native_object)->references.AddReference(&data0, "wxPrintPreview::wxPrintPreview at call 2 with 3 argument(s)");
 				break;
 			}
 		}
@@ -3637,7 +3615,7 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPrintPreview*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintPreview_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -3703,36 +3681,26 @@ void php_wxPrinter_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPrinter_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPrinter_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrinter_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPrinter* custom_object;
-    custom_object = (zo_wxPrinter*) emalloc(sizeof(zo_wxPrinter));
+	zo_wxPrinter* custom_object;
+	custom_object = (zo_wxPrinter*) ecalloc(1, sizeof(zo_wxPrinter) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrinter_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTER_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -3751,7 +3719,8 @@ PHP_METHOD(php_wxPrinter, GetAbort)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3760,7 +3729,7 @@ PHP_METHOD(php_wxPrinter, GetAbort)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3848,7 +3817,8 @@ PHP_METHOD(php_wxPrinter, GetLastError)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3857,7 +3827,7 @@ PHP_METHOD(php_wxPrinter, GetLastError)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -3946,7 +3916,8 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -3955,7 +3926,7 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4015,8 +3986,8 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4025,11 +3996,11 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 				}
 				else{
 					object_init_ex(return_value,php_wxPrintDialogData_entry);
-					((zo_wxPrintDialogData*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPrintDialogData_php*) value_to_return0;
+					Z_wxPrintDialogData_P(return_value TSRMLS_CC)->native_object = (wxPrintDialogData_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxPrinter::GetPrintDialogData at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrinter::GetPrintDialogData at call 6 with 0 argument(s)");
 				}
 
 
@@ -4063,7 +4034,8 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4072,7 +4044,7 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4101,9 +4073,9 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
-	zval* printout0 = 0;
+	zval printout0;
 	wxPrintout* object_pointer0_1 = 0;
 	bool prompt0;
 	bool overload0_called = false;
@@ -4121,34 +4093,34 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &printout0, &prompt0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(printout0) == IS_OBJECT)
+				if(Z_TYPE(printout0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintout_P(&printout0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintout_P(&printout0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxPrintout*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'printout' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(printout0) != IS_NULL)
+				else if(Z_TYPE(printout0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printout' not null, could not be retreived correctly.");
 				}
@@ -4172,8 +4144,8 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
 
 				ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1));
 
-				references->AddReference(parent0, "wxPrinter::Print at call with 2 argument(s)");
-				references->AddReference(printout0, "wxPrinter::Print at call with 2 argument(s)");
+				references->AddReference(&parent0, "wxPrinter::Print at call 1 with 2 argument(s)");
+				references->AddReference(&printout0, "wxPrinter::Print at call 1 with 2 argument(s)");
 
 				return;
 				break;
@@ -4186,8 +4158,8 @@ PHP_METHOD(php_wxPrinter, PrintMethod)
 
 				ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->Print((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, prompt0));
 
-				references->AddReference(parent0, "wxPrinter::Print at call with 3 argument(s)");
-				references->AddReference(printout0, "wxPrinter::Print at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxPrinter::Print at call 1 with 3 argument(s)");
+				references->AddReference(&printout0, "wxPrinter::Print at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -4219,7 +4191,8 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4228,7 +4201,7 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4257,7 +4230,7 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4274,17 +4247,17 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -4314,8 +4287,8 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						*return_value = *value_to_return1->phpObj;
-						zval_add_ref(&value_to_return1->phpObj);
+						return_value = value_to_return1->phpObj;
+						zval_add_ref(value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4324,14 +4297,14 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 				}
 				else{
 					object_init_ex(return_value, php_wxDC_entry);
-					((zo_wxDC*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDC_php*) value_to_return1;
+					Z_wxDC_P(return_value TSRMLS_CC)->native_object = (wxDC_php*) value_to_return1;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return1 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrinter::PrintDialog at call with 1 argument(s)");
+					references->AddReference(return_value, "wxPrinter::PrintDialog at call 5 with 1 argument(s)");
 				}
 
-				references->AddReference(parent0, "wxPrinter::PrintDialog at call with 1 argument(s)");
+				references->AddReference(&parent0, "wxPrinter::PrintDialog at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -4363,7 +4336,8 @@ PHP_METHOD(php_wxPrinter, ReportError)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4372,7 +4346,7 @@ PHP_METHOD(php_wxPrinter, ReportError)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4401,9 +4375,9 @@ PHP_METHOD(php_wxPrinter, ReportError)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
-	zval* printout0 = 0;
+	zval printout0;
 	wxPrintout* object_pointer0_1 = 0;
 	char* message0;
 	long message_len0;
@@ -4422,34 +4396,34 @@ PHP_METHOD(php_wxPrinter, ReportError)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &printout0, &message0, &message_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(printout0) == IS_OBJECT)
+				if(Z_TYPE(printout0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintout*) zend_object_store_get_object(printout0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintout_P(&printout0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintout_P(&printout0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxPrintout*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXPRINTOUT_TYPE && argument_type != PHP_WXHTMLPRINTOUT_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'printout' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(printout0) != IS_NULL)
+				else if(Z_TYPE(printout0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'printout' not null, could not be retreived correctly.");
 				}
@@ -4473,8 +4447,8 @@ PHP_METHOD(php_wxPrinter, ReportError)
 
 				((wxPrinter_php*)native_object)->ReportError((wxWindow*) object_pointer0_0, (wxPrintout*) object_pointer0_1, wxString(message0, wxConvUTF8));
 
-				references->AddReference(parent0, "wxPrinter::ReportError at call with 3 argument(s)");
-				references->AddReference(printout0, "wxPrinter::ReportError at call with 3 argument(s)");
+				references->AddReference(&parent0, "wxPrinter::ReportError at call 1 with 3 argument(s)");
+				references->AddReference(&printout0, "wxPrinter::ReportError at call 1 with 3 argument(s)");
 
 				return;
 				break;
@@ -4506,7 +4480,8 @@ PHP_METHOD(php_wxPrinter, Setup)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4515,7 +4490,7 @@ PHP_METHOD(php_wxPrinter, Setup)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4544,7 +4519,7 @@ PHP_METHOD(php_wxPrinter, Setup)
 	#endif
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4561,17 +4536,17 @@ PHP_METHOD(php_wxPrinter, Setup)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
@@ -4595,7 +4570,7 @@ PHP_METHOD(php_wxPrinter, Setup)
 
 				ZVAL_BOOL(return_value, ((wxPrinter_php*)native_object)->Setup((wxWindow*) object_pointer0_0));
 
-				references->AddReference(parent0, "wxPrinter::Setup at call with 1 argument(s)");
+				references->AddReference(&parent0, "wxPrinter::Setup at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -4626,13 +4601,14 @@ PHP_METHOD(php_wxPrinter, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* data0 = 0;
+	zval data0;
 	wxPrintDialogData* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4649,17 +4625,17 @@ PHP_METHOD(php_wxPrinter, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(data0) == IS_OBJECT)
+				if(Z_TYPE(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintDialogData_P(&data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintDialogData_P(&data0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPrintDialogData*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXPRINTDIALOGDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(data0) != IS_NULL)
+				else if(Z_TYPE(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -4695,7 +4671,7 @@ PHP_METHOD(php_wxPrinter, __construct)
 				native_object = new wxPrinter_php((wxPrintDialogData*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPrinter_php*) native_object)->references.AddReference(data0, "wxPrinter::wxPrinter at call with 1 argument(s)");
+				((wxPrinter_php*) native_object)->references.AddReference(&data0, "wxPrinter::wxPrinter at call 2 with 1 argument(s)");
 				break;
 			}
 		}
@@ -4707,7 +4683,7 @@ PHP_METHOD(php_wxPrinter, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPrinter*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrinter_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -4773,36 +4749,26 @@ void php_wxPrintout_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPrintout_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPrintout_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintout_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPrintout* custom_object;
-    custom_object = (zo_wxPrintout*) emalloc(sizeof(zo_wxPrintout));
+	zo_wxPrintout* custom_object;
+	custom_object = (zo_wxPrintout*) ecalloc(1, sizeof(zo_wxPrintout) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintout_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTOUT_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -4821,7 +4787,8 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4830,7 +4797,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4863,7 +4830,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 	#endif
 	
 	//Parameters for overload 0
-	zval* imageSize0 = 0;
+	zval imageSize0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -4880,17 +4847,17 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &imageSize0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(imageSize0) == IS_OBJECT)
+				if(Z_TYPE(imageSize0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(imageSize0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(imageSize0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&imageSize0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&imageSize0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'imageSize' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(imageSize0) != IS_NULL)
+				else if(Z_TYPE(imageSize0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'imageSize' not null, could not be retreived correctly.");
 				}
@@ -4914,7 +4881,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 
 				((wxPrintout_php*)native_object)->FitThisSizeToPage(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(imageSize0, "wxPrintout::FitThisSizeToPage at call with 1 argument(s)");
+				references->AddReference(&imageSize0, "wxPrintout::FitThisSizeToPage at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -4946,7 +4913,8 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -4955,7 +4923,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -4988,9 +4956,9 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 	#endif
 	
 	//Parameters for overload 0
-	zval* imageSize0 = 0;
+	zval imageSize0;
 	wxSize* object_pointer0_0 = 0;
-	zval* pageSetupData0 = 0;
+	zval pageSetupData0;
 	wxPageSetupDialogData* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -5007,34 +4975,34 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &imageSize0, php_wxSize_entry, &pageSetupData0, php_wxPageSetupDialogData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(imageSize0) == IS_OBJECT)
+				if(Z_TYPE(imageSize0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(imageSize0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(imageSize0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&imageSize0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&imageSize0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'imageSize' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(imageSize0) != IS_NULL)
+				else if(Z_TYPE(imageSize0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'imageSize' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(pageSetupData0) == IS_OBJECT)
+				if(Z_TYPE(pageSetupData0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPageSetupDialogData*) zend_object_store_get_object(pageSetupData0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPageSetupDialogData*) zend_object_store_get_object(pageSetupData0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPageSetupDialogData_P(&pageSetupData0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPageSetupDialogData_P(&pageSetupData0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxPageSetupDialogData*) argument_native_object;
 					if (!object_pointer0_1 )
 					{
 						zend_error(E_ERROR, "Parameter 'pageSetupData' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pageSetupData0) != IS_NULL)
+				else if(Z_TYPE(pageSetupData0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pageSetupData' not null, could not be retreived correctly.");
 				}
@@ -5058,8 +5026,8 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 
 				((wxPrintout_php*)native_object)->FitThisSizeToPageMargins(*(wxSize*) object_pointer0_0, *(wxPageSetupDialogData*) object_pointer0_1);
 
-				references->AddReference(imageSize0, "wxPrintout::FitThisSizeToPageMargins at call with 2 argument(s)");
-				references->AddReference(pageSetupData0, "wxPrintout::FitThisSizeToPageMargins at call with 2 argument(s)");
+				references->AddReference(&imageSize0, "wxPrintout::FitThisSizeToPageMargins at call 3 with 2 argument(s)");
+				references->AddReference(&pageSetupData0, "wxPrintout::FitThisSizeToPageMargins at call 3 with 2 argument(s)");
 
 				return;
 				break;
@@ -5091,7 +5059,8 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5100,7 +5069,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5133,7 +5102,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 	#endif
 	
 	//Parameters for overload 0
-	zval* imageSize0 = 0;
+	zval imageSize0;
 	wxSize* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5150,17 +5119,17 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &imageSize0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(imageSize0) == IS_OBJECT)
+				if(Z_TYPE(imageSize0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxSize*) zend_object_store_get_object(imageSize0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxSize*) zend_object_store_get_object(imageSize0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxSize_P(&imageSize0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxSize_P(&imageSize0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxSize*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'imageSize' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(imageSize0) != IS_NULL)
+				else if(Z_TYPE(imageSize0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'imageSize' not null, could not be retreived correctly.");
 				}
@@ -5184,7 +5153,7 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 
 				((wxPrintout_php*)native_object)->FitThisSizeToPaper(*(wxSize*) object_pointer0_0);
 
-				references->AddReference(imageSize0, "wxPrintout::FitThisSizeToPaper at call with 1 argument(s)");
+				references->AddReference(&imageSize0, "wxPrintout::FitThisSizeToPaper at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -5216,7 +5185,8 @@ PHP_METHOD(php_wxPrintout, GetDC)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5225,7 +5195,7 @@ PHP_METHOD(php_wxPrintout, GetDC)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5292,8 +5262,8 @@ PHP_METHOD(php_wxPrintout, GetDC)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5302,11 +5272,11 @@ PHP_METHOD(php_wxPrintout, GetDC)
 				}
 				else{
 					object_init_ex(return_value, php_wxDC_entry);
-					((zo_wxDC*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDC_php*) value_to_return0;
+					Z_wxDC_P(return_value TSRMLS_CC)->native_object = (wxDC_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintout::GetDC at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintout::GetDC at call 5 with 0 argument(s)");
 				}
 
 
@@ -5340,7 +5310,8 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5349,7 +5320,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5382,7 +5353,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 	#endif
 	
 	//Parameters for overload 0
-	zval* pageSetupData0 = 0;
+	zval pageSetupData0;
 	wxPageSetupDialogData* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -5399,17 +5370,17 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageSetupData0, php_wxPageSetupDialogData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(pageSetupData0) == IS_OBJECT)
+				if(Z_TYPE(pageSetupData0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPageSetupDialogData*) zend_object_store_get_object(pageSetupData0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPageSetupDialogData*) zend_object_store_get_object(pageSetupData0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPageSetupDialogData_P(&pageSetupData0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPageSetupDialogData_P(&pageSetupData0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPageSetupDialogData*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pageSetupData' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pageSetupData0) != IS_NULL)
+				else if(Z_TYPE(pageSetupData0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pageSetupData' not null, could not be retreived correctly.");
 				}
@@ -5438,10 +5409,10 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
-				zo_wxRect* zo1 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxRect* zo1 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo1->native_object = (wxRect_php*) ptr;
 
-				references->AddReference(pageSetupData0, "wxPrintout::GetLogicalPageMarginsRect at call with 1 argument(s)");
+				references->AddReference(&pageSetupData0, "wxPrintout::GetLogicalPageMarginsRect at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -5473,7 +5444,8 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5482,7 +5454,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5548,7 +5520,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
-				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxRect* zo0 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
 
 
@@ -5582,7 +5554,8 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5591,7 +5564,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5657,7 +5630,7 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
-				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxRect* zo0 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
 
 
@@ -5691,7 +5664,8 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5700,7 +5674,7 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5734,9 +5708,9 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 	
 	//Parameters for overload 0
 	long* w0;
-	zval* w0_ref;
+	zval w0_ref;
 	long* h0;
-	zval* h0_ref;
+	zval h0_ref;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -5755,7 +5729,7 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 			already_called = true;
 
 			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &w0_ref, &h0_ref );
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, w0_ref, h0_ref );
 		}
 	}
 
@@ -5773,16 +5747,16 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 				((wxPrintout_php*)native_object)->GetPPIPrinter((int*) w0, (int*) h0);
 
 				size_t elements_returned0_0 = sizeof(w0)/sizeof(*w0);
-				array_init(w0_ref);
+				array_init(&w0_ref);
 				for(size_t i=0; i<elements_returned0_0; i++)
 				{
-					add_next_index_long(w0_ref, w0[i]);
+					add_next_index_long(&w0_ref, w0[i]);
 				}
 				size_t elements_returned0_1 = sizeof(h0)/sizeof(*h0);
-				array_init(h0_ref);
+				array_init(&h0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
 				{
-					add_next_index_long(h0_ref, h0[i]);
+					add_next_index_long(&h0_ref, h0[i]);
 				}
 
 				return;
@@ -5815,7 +5789,8 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5824,7 +5799,7 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5858,9 +5833,9 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 	
 	//Parameters for overload 0
 	long* w0;
-	zval* w0_ref;
+	zval w0_ref;
 	long* h0;
-	zval* h0_ref;
+	zval h0_ref;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -5879,7 +5854,7 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 			already_called = true;
 
 			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &w0_ref, &h0_ref );
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, w0_ref, h0_ref );
 		}
 	}
 
@@ -5897,16 +5872,16 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 				((wxPrintout_php*)native_object)->GetPPIScreen((int*) w0, (int*) h0);
 
 				size_t elements_returned0_0 = sizeof(w0)/sizeof(*w0);
-				array_init(w0_ref);
+				array_init(&w0_ref);
 				for(size_t i=0; i<elements_returned0_0; i++)
 				{
-					add_next_index_long(w0_ref, w0[i]);
+					add_next_index_long(&w0_ref, w0[i]);
 				}
 				size_t elements_returned0_1 = sizeof(h0)/sizeof(*h0);
-				array_init(h0_ref);
+				array_init(&h0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
 				{
-					add_next_index_long(h0_ref, h0[i]);
+					add_next_index_long(&h0_ref, h0[i]);
 				}
 
 				return;
@@ -5939,7 +5914,8 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -5948,7 +5924,7 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -5982,13 +5958,13 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 	
 	//Parameters for overload 0
 	long* minPage0;
-	zval* minPage0_ref;
+	zval minPage0_ref;
 	long* maxPage0;
-	zval* maxPage0_ref;
+	zval maxPage0_ref;
 	long* pageFrom0;
-	zval* pageFrom0_ref;
+	zval pageFrom0_ref;
 	long* pageTo0;
-	zval* pageTo0_ref;
+	zval pageTo0_ref;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -6007,7 +5983,7 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 			already_called = true;
 
 			char parse_references_string[] = "zzzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &minPage0_ref, &maxPage0_ref, &pageFrom0_ref, &pageTo0_ref );
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, minPage0_ref, maxPage0_ref, pageFrom0_ref, pageTo0_ref );
 		}
 	}
 
@@ -6025,28 +6001,28 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 				((wxPrintout_php*)native_object)->GetPageInfo((int*) minPage0, (int*) maxPage0, (int*) pageFrom0, (int*) pageTo0);
 
 				size_t elements_returned0_0 = sizeof(minPage0)/sizeof(*minPage0);
-				array_init(minPage0_ref);
+				array_init(&minPage0_ref);
 				for(size_t i=0; i<elements_returned0_0; i++)
 				{
-					add_next_index_long(minPage0_ref, minPage0[i]);
+					add_next_index_long(&minPage0_ref, minPage0[i]);
 				}
 				size_t elements_returned0_1 = sizeof(maxPage0)/sizeof(*maxPage0);
-				array_init(maxPage0_ref);
+				array_init(&maxPage0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
 				{
-					add_next_index_long(maxPage0_ref, maxPage0[i]);
+					add_next_index_long(&maxPage0_ref, maxPage0[i]);
 				}
 				size_t elements_returned0_2 = sizeof(pageFrom0)/sizeof(*pageFrom0);
-				array_init(pageFrom0_ref);
+				array_init(&pageFrom0_ref);
 				for(size_t i=0; i<elements_returned0_2; i++)
 				{
-					add_next_index_long(pageFrom0_ref, pageFrom0[i]);
+					add_next_index_long(&pageFrom0_ref, pageFrom0[i]);
 				}
 				size_t elements_returned0_3 = sizeof(pageTo0)/sizeof(*pageTo0);
-				array_init(pageTo0_ref);
+				array_init(&pageTo0_ref);
 				for(size_t i=0; i<elements_returned0_3; i++)
 				{
-					add_next_index_long(pageTo0_ref, pageTo0[i]);
+					add_next_index_long(&pageTo0_ref, pageTo0[i]);
 				}
 
 				return;
@@ -6079,7 +6055,8 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6088,7 +6065,7 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6122,9 +6099,9 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 	
 	//Parameters for overload 0
 	long* w0;
-	zval* w0_ref;
+	zval w0_ref;
 	long* h0;
-	zval* h0_ref;
+	zval h0_ref;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -6143,7 +6120,7 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 			already_called = true;
 
 			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &w0_ref, &h0_ref );
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, w0_ref, h0_ref );
 		}
 	}
 
@@ -6161,16 +6138,16 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 				((wxPrintout_php*)native_object)->GetPageSizeMM((int*) w0, (int*) h0);
 
 				size_t elements_returned0_0 = sizeof(w0)/sizeof(*w0);
-				array_init(w0_ref);
+				array_init(&w0_ref);
 				for(size_t i=0; i<elements_returned0_0; i++)
 				{
-					add_next_index_long(w0_ref, w0[i]);
+					add_next_index_long(&w0_ref, w0[i]);
 				}
 				size_t elements_returned0_1 = sizeof(h0)/sizeof(*h0);
-				array_init(h0_ref);
+				array_init(&h0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
 				{
-					add_next_index_long(h0_ref, h0[i]);
+					add_next_index_long(&h0_ref, h0[i]);
 				}
 
 				return;
@@ -6203,7 +6180,8 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6212,7 +6190,7 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6246,9 +6224,9 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 	
 	//Parameters for overload 0
 	long* w0;
-	zval* w0_ref;
+	zval w0_ref;
 	long* h0;
-	zval* h0_ref;
+	zval h0_ref;
 	bool overload0_called = false;
 		
 	//Overload 0
@@ -6267,7 +6245,7 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 			already_called = true;
 
 			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &w0_ref, &h0_ref );
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, w0_ref, h0_ref );
 		}
 	}
 
@@ -6285,16 +6263,16 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 				((wxPrintout_php*)native_object)->GetPageSizePixels((int*) w0, (int*) h0);
 
 				size_t elements_returned0_0 = sizeof(w0)/sizeof(*w0);
-				array_init(w0_ref);
+				array_init(&w0_ref);
 				for(size_t i=0; i<elements_returned0_0; i++)
 				{
-					add_next_index_long(w0_ref, w0[i]);
+					add_next_index_long(&w0_ref, w0[i]);
 				}
 				size_t elements_returned0_1 = sizeof(h0)/sizeof(*h0);
-				array_init(h0_ref);
+				array_init(&h0_ref);
 				for(size_t i=0; i<elements_returned0_1; i++)
 				{
-					add_next_index_long(h0_ref, h0[i]);
+					add_next_index_long(&h0_ref, h0[i]);
 				}
 
 				return;
@@ -6327,7 +6305,8 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6336,7 +6315,7 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6402,7 +6381,7 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 				object_init_ex(return_value, php_wxRect_entry);
 				((wxRect_php*)ptr)->phpObj = return_value;
 				((wxRect_php*)ptr)->InitProperties();
-				zo_wxRect* zo0 = (zo_wxRect*) zend_object_store_get_object(return_value TSRMLS_CC);
+				zo_wxRect* zo0 = Z_wxRect_P(return_value TSRMLS_CC);
 				zo0->native_object = (wxRect_php*) ptr;
 
 
@@ -6436,7 +6415,8 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6445,7 +6425,7 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6512,8 +6492,8 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6522,11 +6502,11 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 				}
 				else{
 					object_init_ex(return_value, php_wxPrintPreview_entry);
-					((zo_wxPrintPreview*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPrintPreview_php*) value_to_return0;
+					Z_wxPrintPreview_P(return_value TSRMLS_CC)->native_object = (wxPrintPreview_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintout::GetPreview at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintout::GetPreview at call 5 with 0 argument(s)");
 				}
 
 
@@ -6560,7 +6540,8 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6569,7 +6550,7 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6630,11 +6611,7 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 
 				wxString value_to_return0;
 				value_to_return0 = ((wxPrintout_php*)native_object)->GetTitle();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
+				ZVAL_STRING(return_value, value_to_return0.char_str());
 
 
 				return;
@@ -6667,7 +6644,8 @@ PHP_METHOD(php_wxPrintout, HasPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6676,7 +6654,7 @@ PHP_METHOD(php_wxPrintout, HasPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6773,7 +6751,8 @@ PHP_METHOD(php_wxPrintout, IsPreview)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6782,7 +6761,7 @@ PHP_METHOD(php_wxPrintout, IsPreview)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6874,7 +6853,8 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToDevice)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6883,7 +6863,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToDevice)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -6975,7 +6955,8 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPage)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -6984,7 +6965,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPage)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7076,7 +7057,8 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7085,7 +7067,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7118,7 +7100,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 	#endif
 	
 	//Parameters for overload 0
-	zval* pageSetupData0 = 0;
+	zval pageSetupData0;
 	wxPageSetupDialogData* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -7135,17 +7117,17 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pageSetupData0, php_wxPageSetupDialogData_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(pageSetupData0) == IS_OBJECT)
+				if(Z_TYPE(pageSetupData0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPageSetupDialogData*) zend_object_store_get_object(pageSetupData0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPageSetupDialogData*) zend_object_store_get_object(pageSetupData0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPageSetupDialogData_P(&pageSetupData0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPageSetupDialogData_P(&pageSetupData0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxPageSetupDialogData*) argument_native_object;
 					if (!object_pointer0_0 )
 					{
 						zend_error(E_ERROR, "Parameter 'pageSetupData' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pageSetupData0) != IS_NULL)
+				else if(Z_TYPE(pageSetupData0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'pageSetupData' not null, could not be retreived correctly.");
 				}
@@ -7169,7 +7151,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 
 				((wxPrintout_php*)native_object)->MapScreenSizeToPageMargins(*(wxPageSetupDialogData*) object_pointer0_0);
 
-				references->AddReference(pageSetupData0, "wxPrintout::MapScreenSizeToPageMargins at call with 1 argument(s)");
+				references->AddReference(&pageSetupData0, "wxPrintout::MapScreenSizeToPageMargins at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -7201,7 +7183,8 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPaper)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7210,7 +7193,7 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPaper)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7302,7 +7285,8 @@ PHP_METHOD(php_wxPrintout, OffsetLogicalOrigin)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7311,7 +7295,7 @@ PHP_METHOD(php_wxPrintout, OffsetLogicalOrigin)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7406,26 +7390,19 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[2];
-	zval *arguments[2];
-	
-	//Initilize arguments array
-	for(int i=0; i<2; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[2];
+	zval arguments[2];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnBeginDocument", 0);
+	ZVAL_STRING(&function_name, "OnBeginDocument");
 	char* temp_string;
 	void* return_object;
 	int function_called;
 	
 	//Parameters for conversion
-	ZVAL_LONG(arguments[0], startPage);
-	ZVAL_LONG(arguments[1], endPage);
+	ZVAL_LONG(&arguments[0], startPage);
+	ZVAL_LONG(&arguments[1], endPage);
 		
 	for(int i=0; i<2; i++)
 	{
@@ -7438,7 +7415,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnBeginDocument", 15, &return_value, 2, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnBeginDocument", 15, &return_value, 2, params TSRMLS_CC);
 	}
 	else
 	{
@@ -7467,7 +7444,7 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_BVAL_P(return_value);
+		return Z_TYPE_INFO_P(&return_value) == IS_TRUE;
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -7492,15 +7469,12 @@ void wxPrintout_php::OnBeginPrinting()
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnBeginPrinting", 0);
+	ZVAL_STRING(&function_name, "OnBeginPrinting");
 	char* temp_string;
 	void* return_object;
 	int function_called;
@@ -7514,7 +7488,7 @@ void wxPrintout_php::OnBeginPrinting()
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnBeginPrinting", 15, &return_value, 0, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnBeginPrinting", 15, &return_value, 0, params TSRMLS_CC);
 	}
 	else
 	{
@@ -7563,15 +7537,12 @@ void wxPrintout_php::OnEndDocument()
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnEndDocument", 0);
+	ZVAL_STRING(&function_name, "OnEndDocument");
 	char* temp_string;
 	void* return_object;
 	int function_called;
@@ -7585,7 +7556,7 @@ void wxPrintout_php::OnEndDocument()
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnEndDocument", 13, &return_value, 0, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnEndDocument", 13, &return_value, 0, params TSRMLS_CC);
 	}
 	else
 	{
@@ -7634,15 +7605,12 @@ void wxPrintout_php::OnEndPrinting()
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnEndPrinting", 0);
+	ZVAL_STRING(&function_name, "OnEndPrinting");
 	char* temp_string;
 	void* return_object;
 	int function_called;
@@ -7656,7 +7624,7 @@ void wxPrintout_php::OnEndPrinting()
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnEndPrinting", 13, &return_value, 0, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnEndPrinting", 13, &return_value, 0, params TSRMLS_CC);
 	}
 	else
 	{
@@ -7705,15 +7673,12 @@ void wxPrintout_php::OnPreparePrinting()
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval* arguments[1];
-	arguments[0] = NULL;
-	params[0] = NULL;
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnPreparePrinting", 0);
+	ZVAL_STRING(&function_name, "OnPreparePrinting");
 	char* temp_string;
 	void* return_object;
 	int function_called;
@@ -7727,7 +7692,7 @@ void wxPrintout_php::OnPreparePrinting()
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnPreparePrinting", 17, &return_value, 0, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnPreparePrinting", 17, &return_value, 0, params TSRMLS_CC);
 	}
 	else
 	{
@@ -7776,25 +7741,18 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 	php_printf("===========================================\n");
 	#endif
 	
-	zval** params[1];
-	zval *arguments[1];
-	
-	//Initilize arguments array
-	for(int i=0; i<1; i++)
-	{
-		ALLOC_INIT_ZVAL(arguments[i]);
-	}
+	zval* params[1];
+	zval arguments[1];
 
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
+	zval return_value;
 	zval function_name;
-	ZVAL_STRING(&function_name, "OnPrintPage", 0);
+	ZVAL_STRING(&function_name, "OnPrintPage");
 	char* temp_string;
 	void* return_object;
 	int function_called;
 	
 	//Parameters for conversion
-	ZVAL_LONG(arguments[0], pageNum);
+	ZVAL_LONG(&arguments[0], pageNum);
 		
 	for(int i=0; i<1; i++)
 	{
@@ -7807,7 +7765,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 	
 	if(is_php_user_space_implemented)
 	{
-		function_called = wxphp_call_method((zval**) &this->phpObj, NULL, &cached_function, "OnPrintPage", 11, &return_value, 1, params TSRMLS_CC);
+		function_called = wxphp_call_method(this->phpObj, NULL, &cached_function, "OnPrintPage", 11, &return_value, 1, params TSRMLS_CC);
 	}
 	else
 	{
@@ -7836,7 +7794,7 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 	php_printf("Returning userspace value.\n");
 	#endif
 		
-	return Z_BVAL_P(return_value);
+	return Z_TYPE_INFO_P(&return_value) == IS_TRUE;
 	
 }
 /* }}} */
@@ -7856,7 +7814,8 @@ PHP_METHOD(php_wxPrintout, SetLogicalOrigin)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -7865,7 +7824,7 @@ PHP_METHOD(php_wxPrintout, SetLogicalOrigin)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -7962,7 +7921,8 @@ PHP_METHOD(php_wxPrintout, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -8025,7 +7985,7 @@ PHP_METHOD(php_wxPrintout, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPrintout*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintout_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -8091,36 +8051,26 @@ void php_wxPrintDialog_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPrintDialog_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPrintDialog_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPrintDialog_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPrintDialog* custom_object;
-    custom_object = (zo_wxPrintDialog*) emalloc(sizeof(zo_wxPrintDialog));
+	zo_wxPrintDialog* custom_object;
+	custom_object = (zo_wxPrintDialog*) ecalloc(1, sizeof(zo_wxPrintDialog) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPrintDialog_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPRINTDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -8139,7 +8089,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8148,7 +8099,7 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8211,8 +8162,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8221,11 +8172,11 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 				}
 				else{
 					object_init_ex(return_value, php_wxDC_entry);
-					((zo_wxDC*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxDC_php*) value_to_return0;
+					Z_wxDC_P(return_value TSRMLS_CC)->native_object = (wxDC_php*) value_to_return0;
 				}
 
 				if(Z_TYPE_P(return_value) != IS_NULL && (void*)value_to_return0 != (void*)native_object && return_is_user_initialized){
-					references->AddReference(return_value, "wxPrintDialog::GetPrintDC at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintDialog::GetPrintDC at call 5 with 0 argument(s)");
 				}
 
 
@@ -8259,7 +8210,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8268,7 +8220,7 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8328,8 +8280,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8338,11 +8290,11 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 				}
 				else{
 					object_init_ex(return_value,php_wxPrintDialogData_entry);
-					((zo_wxPrintDialogData*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPrintDialogData_php*) value_to_return0;
+					Z_wxPrintDialogData_P(return_value TSRMLS_CC)->native_object = (wxPrintDialogData_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxPrintDialog::GetPrintDialogData at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintDialog::GetPrintDialogData at call 6 with 0 argument(s)");
 				}
 
 
@@ -8376,7 +8328,8 @@ PHP_METHOD(php_wxPrintDialog, ShowModal)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8385,7 +8338,7 @@ PHP_METHOD(php_wxPrintDialog, ShowModal)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8472,21 +8425,22 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
-	zval* data0 = 0;
+	zval data0;
 	wxPrintDialogData* object_pointer0_1 = 0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* parent1 = 0;
+	zval parent1;
 	wxWindow* object_pointer1_0 = 0;
-	zval* data1 = 0;
+	zval data1;
 	wxPrintData* object_pointer1_1 = 0;
 	bool overload1_called = false;
 		
@@ -8503,34 +8457,34 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					goto overload1;
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(data0) == IS_OBJECT)
+				if(Z_TYPE(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintDialogData_P(&data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintDialogData_P(&data0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxPrintDialogData*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXPRINTDIALOGDATA_TYPE))
 					{
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(data0) != IS_NULL)
+				else if(Z_TYPE(data0) != IS_NULL)
 				{
 					goto overload1;
 				}
@@ -8554,34 +8508,34 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &data1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent1) == IS_OBJECT)
+				if(Z_TYPE(parent1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
+				else if(Z_TYPE(parent1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(data1) == IS_OBJECT)
+				if(Z_TYPE(data1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPrintData*) zend_object_store_get_object(data1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPrintData*) zend_object_store_get_object(data1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPrintData_P(&data1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPrintData_P(&data1 TSRMLS_CC)->native_object;
 					object_pointer1_1 = (wxPrintData*) argument_native_object;
 					if (!object_pointer1_1 || (argument_type != PHP_WXPRINTDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(data1) != IS_NULL)
+				else if(Z_TYPE(data1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -8606,7 +8560,7 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 				native_object = new wxPrintDialog_php((wxWindow*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPrintDialog_php*) native_object)->references.AddReference(parent0, "wxPrintDialog::wxPrintDialog at call with 1 argument(s)");
+				((wxPrintDialog_php*) native_object)->references.AddReference(&parent0, "wxPrintDialog::wxPrintDialog at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -8618,8 +8572,8 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 				native_object = new wxPrintDialog_php((wxWindow*) object_pointer0_0, (wxPrintDialogData*) object_pointer0_1);
 
 				native_object->references.Initialize();
-				((wxPrintDialog_php*) native_object)->references.AddReference(parent0, "wxPrintDialog::wxPrintDialog at call with 2 argument(s)");
-				((wxPrintDialog_php*) native_object)->references.AddReference(data0, "wxPrintDialog::wxPrintDialog at call with 2 argument(s)");
+				((wxPrintDialog_php*) native_object)->references.AddReference(&parent0, "wxPrintDialog::wxPrintDialog at call 2 with 2 argument(s)");
+				((wxPrintDialog_php*) native_object)->references.AddReference(&data0, "wxPrintDialog::wxPrintDialog at call 2 with 2 argument(s)");
 				break;
 			}
 		}
@@ -8638,8 +8592,8 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 				native_object = new wxPrintDialog_php((wxWindow*) object_pointer1_0, (wxPrintData*) object_pointer1_1);
 
 				native_object->references.Initialize();
-				((wxPrintDialog_php*) native_object)->references.AddReference(parent1, "wxPrintDialog::wxPrintDialog at call with 2 argument(s)");
-				((wxPrintDialog_php*) native_object)->references.AddReference(data1, "wxPrintDialog::wxPrintDialog at call with 2 argument(s)");
+				((wxPrintDialog_php*) native_object)->references.AddReference(&parent1, "wxPrintDialog::wxPrintDialog at call 2 with 2 argument(s)");
+				((wxPrintDialog_php*) native_object)->references.AddReference(&data1, "wxPrintDialog::wxPrintDialog at call 2 with 2 argument(s)");
 				break;
 			}
 		}
@@ -8651,7 +8605,7 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPrintDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintDialog_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -8687,7 +8641,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintData)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8696,7 +8651,7 @@ PHP_METHOD(php_wxPrintDialog, GetPrintData)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPrintDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPrintDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8756,8 +8711,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8766,11 +8721,11 @@ PHP_METHOD(php_wxPrintDialog, GetPrintData)
 				}
 				else{
 					object_init_ex(return_value,php_wxPrintData_entry);
-					((zo_wxPrintData*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPrintData_php*) value_to_return0;
+					Z_wxPrintData_P(return_value TSRMLS_CC)->native_object = (wxPrintData_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxPrintDialog::GetPrintData at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPrintDialog::GetPrintData at call 6 with 0 argument(s)");
 				}
 
 
@@ -8834,36 +8789,26 @@ void php_wxPageSetupDialog_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxPageSetupDialog_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxPageSetupDialog_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxPageSetupDialog_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxPageSetupDialog* custom_object;
-    custom_object = (zo_wxPageSetupDialog*) emalloc(sizeof(zo_wxPageSetupDialog));
+	zo_wxPageSetupDialog* custom_object;
+	custom_object = (zo_wxPageSetupDialog*) ecalloc(1, sizeof(zo_wxPageSetupDialog) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxPageSetupDialog_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXPAGESETUPDIALOG_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -8882,7 +8827,8 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -8891,7 +8837,7 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPageSetupDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPageSetupDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -8951,8 +8897,8 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
+						return_value = value_to_return0->phpObj;
+						zval_add_ref(value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8961,11 +8907,11 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 				}
 				else{
 					object_init_ex(return_value,php_wxPageSetupDialogData_entry);
-					((zo_wxPageSetupDialogData*) zend_object_store_get_object(return_value TSRMLS_CC))->native_object = (wxPageSetupDialogData_php*) value_to_return0;
+					Z_wxPageSetupDialogData_P(return_value TSRMLS_CC)->native_object = (wxPageSetupDialogData_php*) value_to_return0;
 				}
 
 				if((void*)value_to_return0 != (void*)native_object && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value, "wxPageSetupDialog::GetPageSetupData at call with 0 argument(s)");
+					references->AddReference(return_value, "wxPageSetupDialog::GetPageSetupData at call 6 with 0 argument(s)");
 				}
 
 
@@ -8998,15 +8944,16 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
 	
 	//Parameters for overload 0
-	zval* parent0 = 0;
+	zval parent0;
 	wxWindow* object_pointer0_0 = 0;
-	zval* data0 = 0;
+	zval data0;
 	wxPageSetupDialogData* object_pointer0_1 = 0;
 	bool overload0_called = false;
 		
@@ -9023,34 +8970,34 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT)
+				if(Z_TYPE(parent0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxWindow*) zend_object_store_get_object(parent0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxWindow_P(&parent0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxWindow_P(&parent0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxWindow*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXWINDOW_TYPE && argument_type != PHP_WXNONOWNEDWINDOW_TYPE && argument_type != PHP_WXTOPLEVELWINDOW_TYPE && argument_type != PHP_WXFRAME_TYPE && argument_type != PHP_WXSPLASHSCREEN_TYPE && argument_type != PHP_WXMDICHILDFRAME_TYPE && argument_type != PHP_WXMDIPARENTFRAME_TYPE && argument_type != PHP_WXMINIFRAME_TYPE && argument_type != PHP_WXPREVIEWFRAME_TYPE && argument_type != PHP_WXHTMLHELPDIALOG_TYPE && argument_type != PHP_WXHTMLHELPFRAME_TYPE && argument_type != PHP_WXDIALOG_TYPE && argument_type != PHP_WXTEXTENTRYDIALOG_TYPE && argument_type != PHP_WXPASSWORDENTRYDIALOG_TYPE && argument_type != PHP_WXMESSAGEDIALOG_TYPE && argument_type != PHP_WXFINDREPLACEDIALOG_TYPE && argument_type != PHP_WXDIRDIALOG_TYPE && argument_type != PHP_WXSYMBOLPICKERDIALOG_TYPE && argument_type != PHP_WXPROPERTYSHEETDIALOG_TYPE && argument_type != PHP_WXWIZARD_TYPE && argument_type != PHP_WXPROGRESSDIALOG_TYPE && argument_type != PHP_WXCOLOURDIALOG_TYPE && argument_type != PHP_WXFILEDIALOG_TYPE && argument_type != PHP_WXFONTDIALOG_TYPE && argument_type != PHP_WXSINGLECHOICEDIALOG_TYPE && argument_type != PHP_WXGENERICPROGRESSDIALOG_TYPE && argument_type != PHP_WXPOPUPWINDOW_TYPE && argument_type != PHP_WXPOPUPTRANSIENTWINDOW_TYPE && argument_type != PHP_WXCONTROL_TYPE && argument_type != PHP_WXSTATUSBAR_TYPE && argument_type != PHP_WXANYBUTTON_TYPE && argument_type != PHP_WXBUTTON_TYPE && argument_type != PHP_WXBITMAPBUTTON_TYPE && argument_type != PHP_WXTOGGLEBUTTON_TYPE && argument_type != PHP_WXBITMAPTOGGLEBUTTON_TYPE && argument_type != PHP_WXTREECTRL_TYPE && argument_type != PHP_WXCONTROLWITHITEMS_TYPE && argument_type != PHP_WXLISTBOX_TYPE && argument_type != PHP_WXCHECKLISTBOX_TYPE && argument_type != PHP_WXREARRANGELIST_TYPE && argument_type != PHP_WXCHOICE_TYPE && argument_type != PHP_WXBOOKCTRLBASE_TYPE && argument_type != PHP_WXAUINOTEBOOK_TYPE && argument_type != PHP_WXLISTBOOK_TYPE && argument_type != PHP_WXCHOICEBOOK_TYPE && argument_type != PHP_WXNOTEBOOK_TYPE && argument_type != PHP_WXTREEBOOK_TYPE && argument_type != PHP_WXTOOLBOOK_TYPE && argument_type != PHP_WXANIMATIONCTRL_TYPE && argument_type != PHP_WXSTYLEDTEXTCTRL_TYPE && argument_type != PHP_WXSCROLLBAR_TYPE && argument_type != PHP_WXSTATICTEXT_TYPE && argument_type != PHP_WXSTATICLINE_TYPE && argument_type != PHP_WXSTATICBOX_TYPE && argument_type != PHP_WXSTATICBITMAP_TYPE && argument_type != PHP_WXCHECKBOX_TYPE && argument_type != PHP_WXTEXTCTRL_TYPE && argument_type != PHP_WXSEARCHCTRL_TYPE && argument_type != PHP_WXCOMBOBOX_TYPE && argument_type != PHP_WXBITMAPCOMBOBOX_TYPE && argument_type != PHP_WXAUITOOLBAR_TYPE && argument_type != PHP_WXLISTCTRL_TYPE && argument_type != PHP_WXLISTVIEW_TYPE && argument_type != PHP_WXRADIOBOX_TYPE && argument_type != PHP_WXRADIOBUTTON_TYPE && argument_type != PHP_WXSLIDER_TYPE && argument_type != PHP_WXSPINCTRL_TYPE && argument_type != PHP_WXSPINBUTTON_TYPE && argument_type != PHP_WXGAUGE_TYPE && argument_type != PHP_WXHYPERLINKCTRL_TYPE && argument_type != PHP_WXSPINCTRLDOUBLE_TYPE && argument_type != PHP_WXGENERICDIRCTRL_TYPE && argument_type != PHP_WXCALENDARCTRL_TYPE && argument_type != PHP_WXPICKERBASE_TYPE && argument_type != PHP_WXCOLOURPICKERCTRL_TYPE && argument_type != PHP_WXFONTPICKERCTRL_TYPE && argument_type != PHP_WXFILEPICKERCTRL_TYPE && argument_type != PHP_WXDIRPICKERCTRL_TYPE && argument_type != PHP_WXTIMEPICKERCTRL_TYPE && argument_type != PHP_WXTOOLBAR_TYPE && argument_type != PHP_WXDATEPICKERCTRL_TYPE && argument_type != PHP_WXCOLLAPSIBLEPANE_TYPE && argument_type != PHP_WXCOMBOCTRL_TYPE && argument_type != PHP_WXDATAVIEWCTRL_TYPE && argument_type != PHP_WXDATAVIEWLISTCTRL_TYPE && argument_type != PHP_WXDATAVIEWTREECTRL_TYPE && argument_type != PHP_WXHEADERCTRL_TYPE && argument_type != PHP_WXHEADERCTRLSIMPLE_TYPE && argument_type != PHP_WXFILECTRL_TYPE && argument_type != PHP_WXINFOBAR_TYPE && argument_type != PHP_WXRIBBONCONTROL_TYPE && argument_type != PHP_WXRIBBONBAR_TYPE && argument_type != PHP_WXRIBBONBUTTONBAR_TYPE && argument_type != PHP_WXRIBBONGALLERY_TYPE && argument_type != PHP_WXRIBBONPAGE_TYPE && argument_type != PHP_WXRIBBONPANEL_TYPE && argument_type != PHP_WXRIBBONTOOLBAR_TYPE && argument_type != PHP_WXWEBVIEW_TYPE && argument_type != PHP_WXMEDIACTRL_TYPE && argument_type != PHP_WXSPLITTERWINDOW_TYPE && argument_type != PHP_WXPANEL_TYPE && argument_type != PHP_WXSCROLLEDWINDOW_TYPE && argument_type != PHP_WXHTMLWINDOW_TYPE && argument_type != PHP_WXGRID_TYPE && argument_type != PHP_WXPREVIEWCANVAS_TYPE && argument_type != PHP_WXWIZARDPAGE_TYPE && argument_type != PHP_WXWIZARDPAGESIMPLE_TYPE && argument_type != PHP_WXEDITABLELISTBOX_TYPE && argument_type != PHP_WXHSCROLLEDWINDOW_TYPE && argument_type != PHP_WXPREVIEWCONTROLBAR_TYPE && argument_type != PHP_WXMENUBAR_TYPE && argument_type != PHP_WXBANNERWINDOW_TYPE && argument_type != PHP_WXMDICLIENTWINDOW_TYPE && argument_type != PHP_WXTREELISTCTRL_TYPE && argument_type != PHP_WXSASHWINDOW_TYPE && argument_type != PHP_WXSASHLAYOUTWINDOW_TYPE && argument_type != PHP_WXHTMLHELPWINDOW_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'parent' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
+				else if(Z_TYPE(parent0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'parent' not null, could not be retreived correctly.");
 				}
 			}
 
 			if(arguments_received >= 2){
-				if(Z_TYPE_P(data0) == IS_OBJECT)
+				if(Z_TYPE(data0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxPageSetupDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxPageSetupDialogData*) zend_object_store_get_object(data0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxPageSetupDialogData_P(&data0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxPageSetupDialogData_P(&data0 TSRMLS_CC)->native_object;
 					object_pointer0_1 = (wxPageSetupDialogData*) argument_native_object;
 					if (!object_pointer0_1 || (argument_type != PHP_WXPAGESETUPDIALOGDATA_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'data' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(data0) != IS_NULL)
+				else if(Z_TYPE(data0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'data' not null, could not be retreived correctly.");
 				}
@@ -9075,7 +9022,7 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 				native_object = new wxPageSetupDialog_php((wxWindow*) object_pointer0_0);
 
 				native_object->references.Initialize();
-				((wxPageSetupDialog_php*) native_object)->references.AddReference(parent0, "wxPageSetupDialog::wxPageSetupDialog at call with 1 argument(s)");
+				((wxPageSetupDialog_php*) native_object)->references.AddReference(&parent0, "wxPageSetupDialog::wxPageSetupDialog at call 2 with 1 argument(s)");
 				break;
 			}
 			case 2:
@@ -9087,8 +9034,8 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 				native_object = new wxPageSetupDialog_php((wxWindow*) object_pointer0_0, (wxPageSetupDialogData*) object_pointer0_1);
 
 				native_object->references.Initialize();
-				((wxPageSetupDialog_php*) native_object)->references.AddReference(parent0, "wxPageSetupDialog::wxPageSetupDialog at call with 2 argument(s)");
-				((wxPageSetupDialog_php*) native_object)->references.AddReference(data0, "wxPageSetupDialog::wxPageSetupDialog at call with 2 argument(s)");
+				((wxPageSetupDialog_php*) native_object)->references.AddReference(&parent0, "wxPageSetupDialog::wxPageSetupDialog at call 2 with 2 argument(s)");
+				((wxPageSetupDialog_php*) native_object)->references.AddReference(&data0, "wxPageSetupDialog::wxPageSetupDialog at call 2 with 2 argument(s)");
 				break;
 			}
 		}
@@ -9100,7 +9047,7 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxPageSetupDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPageSetupDialog_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		
@@ -9136,7 +9083,8 @@ PHP_METHOD(php_wxPageSetupDialog, ShowModal)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -9145,7 +9093,7 @@ PHP_METHOD(php_wxPageSetupDialog, ShowModal)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxPageSetupDialog*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxPageSetupDialog_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{

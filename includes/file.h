@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_file_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFFile_entry;
-void php_wxFFile_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFFile_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFFile_php: public wxFFile{
 	public:
@@ -36,16 +36,15 @@ class wxFFile_php: public wxFFile{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFFile 
-{
-    zend_object zo;
+typedef struct _zo_wxFFile{
     wxFFile_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFFile;
 
 void php_wxFFile_free(void *object TSRMLS_DC);
-zend_object_value php_wxFFile_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFFile_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -68,8 +67,14 @@ static zend_function_entry php_wxFFile_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFFile * php_wxFFile_fetch_object(zend_object *obj) {
+      return (zo_wxFFile *)((char *)obj - XtOffsetOf(zo_wxFFile, zo));
+}
+
+#define Z_wxFFile_P(zv) php_wxFFile_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFile_entry;
-void php_wxFile_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFile_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFile_php: public wxFile{
 	public:
@@ -86,16 +91,15 @@ class wxFile_php: public wxFile{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFile 
-{
-    zend_object zo;
+typedef struct _zo_wxFile{
     wxFile_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFile;
 
 void php_wxFile_free(void *object TSRMLS_DC);
-zend_object_value php_wxFile_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFile_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -124,8 +128,14 @@ static zend_function_entry php_wxFile_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFile * php_wxFile_fetch_object(zend_object *obj) {
+      return (zo_wxFile *)((char *)obj - XtOffsetOf(zo_wxFile, zo));
+}
+
+#define Z_wxFile_P(zv) php_wxFile_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPathList_entry;
-void php_wxPathList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPathList_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPathList_php: public wxPathList{
 	public:
@@ -141,16 +151,15 @@ class wxPathList_php: public wxPathList{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPathList 
-{
-    zend_object zo;
+typedef struct _zo_wxPathList{
     wxPathList_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPathList;
 
 void php_wxPathList_free(void *object TSRMLS_DC);
-zend_object_value php_wxPathList_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPathList_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -165,8 +174,14 @@ static zend_function_entry php_wxPathList_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPathList * php_wxPathList_fetch_object(zend_object *obj) {
+      return (zo_wxPathList *)((char *)obj - XtOffsetOf(zo_wxPathList, zo));
+}
+
+#define Z_wxPathList_P(zv) php_wxPathList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileName_entry;
-void php_wxFileName_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFileName_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFileName_php: public wxFileName{
 	public:
@@ -186,16 +201,15 @@ class wxFileName_php: public wxFileName{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFileName 
-{
-    zend_object zo;
+typedef struct _zo_wxFileName{
     wxFileName_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFileName;
 
 void php_wxFileName_free(void *object TSRMLS_DC);
-zend_object_value php_wxFileName_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFileName_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -277,8 +291,14 @@ static zend_function_entry php_wxFileName_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFileName * php_wxFileName_fetch_object(zend_object *obj) {
+      return (zo_wxFileName *)((char *)obj - XtOffsetOf(zo_wxFileName, zo));
+}
+
+#define Z_wxFileName_P(zv) php_wxFileName_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFSFile_entry;
-void php_wxFSFile_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFSFile_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFSFile_php: public wxFSFile{
 	public:
@@ -293,16 +313,15 @@ class wxFSFile_php: public wxFSFile{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFSFile 
-{
-    zend_object zo;
+typedef struct _zo_wxFSFile{
     wxFSFile_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFSFile;
 
 void php_wxFSFile_free(void *object TSRMLS_DC);
-zend_object_value php_wxFSFile_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFSFile_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -318,8 +337,14 @@ static zend_function_entry php_wxFSFile_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFSFile * php_wxFSFile_fetch_object(zend_object *obj) {
+      return (zo_wxFSFile *)((char *)obj - XtOffsetOf(zo_wxFSFile, zo));
+}
+
+#define Z_wxFSFile_P(zv) php_wxFSFile_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileSystemWatcher_entry;
-void php_wxFileSystemWatcher_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFileSystemWatcher_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFileSystemWatcher_php: public wxFileSystemWatcher{
 	public:
@@ -334,16 +359,15 @@ class wxFileSystemWatcher_php: public wxFileSystemWatcher{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFileSystemWatcher 
-{
-    zend_object zo;
+typedef struct _zo_wxFileSystemWatcher{
     wxFileSystemWatcher_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFileSystemWatcher;
 
 void php_wxFileSystemWatcher_free(void *object TSRMLS_DC);
-zend_object_value php_wxFileSystemWatcher_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFileSystemWatcher_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -360,8 +384,14 @@ static zend_function_entry php_wxFileSystemWatcher_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFileSystemWatcher * php_wxFileSystemWatcher_fetch_object(zend_object *obj) {
+      return (zo_wxFileSystemWatcher *)((char *)obj - XtOffsetOf(zo_wxFileSystemWatcher, zo));
+}
+
+#define Z_wxFileSystemWatcher_P(zv) php_wxFileSystemWatcher_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxStandardPaths_entry;
-void php_wxStandardPaths_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxStandardPaths_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxStandardPaths_php: public wxStandardPaths{
 	public:
@@ -375,16 +405,15 @@ class wxStandardPaths_php: public wxStandardPaths{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxStandardPaths 
-{
-    zend_object zo;
+typedef struct _zo_wxStandardPaths{
     wxStandardPaths_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxStandardPaths;
 
 void php_wxStandardPaths_free(void *object TSRMLS_DC);
-zend_object_value php_wxStandardPaths_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxStandardPaths_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -407,4 +436,10 @@ static zend_function_entry php_wxStandardPaths_functions[] = {
 };
 #endif
 
+
+static inline zo_wxStandardPaths * php_wxStandardPaths_fetch_object(zend_object *obj) {
+      return (zo_wxStandardPaths *)((char *)obj - XtOffsetOf(zo_wxStandardPaths, zo));
+}
+
+#define Z_wxStandardPaths_P(zv) php_wxStandardPaths_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_FILE_H_GUARD

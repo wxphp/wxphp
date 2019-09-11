@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_stc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxStyledTextCtrl_entry;
-void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxStyledTextCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxStyledTextCtrl_php: public wxStyledTextCtrl{
 	public:
@@ -35,16 +35,15 @@ class wxStyledTextCtrl_php: public wxStyledTextCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxStyledTextCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxStyledTextCtrl{
     wxStyledTextCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxStyledTextCtrl;
 
 void php_wxStyledTextCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxStyledTextCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxStyledTextCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -940,4 +939,10 @@ static zend_function_entry php_wxStyledTextCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxStyledTextCtrl * php_wxStyledTextCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxStyledTextCtrl *)((char *)obj - XtOffsetOf(zo_wxStyledTextCtrl, zo));
+}
+
+#define Z_wxStyledTextCtrl_P(zv) php_wxStyledTextCtrl_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_STC_H_GUARD

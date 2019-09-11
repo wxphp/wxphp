@@ -41,7 +41,7 @@ void wxPHPObjectReferences::AddReference(zval* var, std::string class_and_method
 		php_printf("Adding Reference on %s\n", class_and_method.c_str());
 		#endif
 		
-		Z_ADDREF_P(var);
+		Z_TRY_ADDREF_P(var);
 		
 		m_references.push_back(var); 
 	}
@@ -61,7 +61,7 @@ void wxPHPObjectReferences::RemoveReferences()
 			php_printf("Removing reference: %i\n", i);
 			#endif
 			
-			zval_ptr_dtor(&m_references[i]);
+			zval_ptr_dtor(m_references[i]);
 		}
 	}
 }

@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_richtext_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxTextAttr_entry;
-void php_wxTextAttr_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxTextAttr_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxTextAttr_php: public wxTextAttr{
 	public:
@@ -37,16 +37,15 @@ class wxTextAttr_php: public wxTextAttr{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxTextAttr 
-{
-    zend_object zo;
+typedef struct _zo_wxTextAttr{
     wxTextAttr_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxTextAttr;
 
 void php_wxTextAttr_free(void *object TSRMLS_DC);
-zend_object_value php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxTextAttr_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -151,4 +150,10 @@ static zend_function_entry php_wxTextAttr_functions[] = {
 };
 #endif
 
+
+static inline zo_wxTextAttr * php_wxTextAttr_fetch_object(zend_object *obj) {
+      return (zo_wxTextAttr *)((char *)obj - XtOffsetOf(zo_wxTextAttr, zo));
+}
+
+#define Z_wxTextAttr_P(zv) php_wxTextAttr_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_RICHTEXT_H_GUARD

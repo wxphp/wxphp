@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_grid_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGridCellRenderer_entry;
-void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellRenderer_php: public wxGridCellRenderer{
 	public:
@@ -37,16 +37,15 @@ class wxGridCellRenderer_php: public wxGridCellRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellRenderer{
     wxGridCellRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellRenderer;
 
 void php_wxGridCellRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -55,8 +54,14 @@ static zend_function_entry php_wxGridCellRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellRenderer * php_wxGridCellRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellRenderer, zo));
+}
+
+#define Z_wxGridCellRenderer_P(zv) php_wxGridCellRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAutoWrapStringRenderer_entry;
-void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRenderer{
 	public:
@@ -71,16 +76,15 @@ class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRende
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellAutoWrapStringRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellAutoWrapStringRenderer{
     wxGridCellAutoWrapStringRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellAutoWrapStringRenderer;
 
 void php_wxGridCellAutoWrapStringRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellAutoWrapStringRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellAutoWrapStringRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -90,8 +94,14 @@ static zend_function_entry php_wxGridCellAutoWrapStringRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellAutoWrapStringRenderer * php_wxGridCellAutoWrapStringRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellAutoWrapStringRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellAutoWrapStringRenderer, zo));
+}
+
+#define Z_wxGridCellAutoWrapStringRenderer_P(zv) php_wxGridCellAutoWrapStringRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellBoolRenderer_entry;
-void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellBoolRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
 	public:
@@ -106,16 +116,15 @@ class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellBoolRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellBoolRenderer{
     wxGridCellBoolRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellBoolRenderer;
 
 void php_wxGridCellBoolRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellBoolRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellBoolRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -125,8 +134,14 @@ static zend_function_entry php_wxGridCellBoolRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellBoolRenderer * php_wxGridCellBoolRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellBoolRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellBoolRenderer, zo));
+}
+
+#define Z_wxGridCellBoolRenderer_P(zv) php_wxGridCellBoolRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellDateTimeRenderer_entry;
-void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellDateTimeRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
 	public:
@@ -141,16 +156,15 @@ class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellDateTimeRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellDateTimeRenderer{
     wxGridCellDateTimeRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellDateTimeRenderer;
 
 void php_wxGridCellDateTimeRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellDateTimeRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellDateTimeRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -161,8 +175,14 @@ static zend_function_entry php_wxGridCellDateTimeRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellDateTimeRenderer * php_wxGridCellDateTimeRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellDateTimeRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellDateTimeRenderer, zo));
+}
+
+#define Z_wxGridCellDateTimeRenderer_P(zv) php_wxGridCellDateTimeRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEnumRenderer_entry;
-void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellEnumRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
 	public:
@@ -177,16 +197,15 @@ class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellEnumRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellEnumRenderer{
     wxGridCellEnumRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellEnumRenderer;
 
 void php_wxGridCellEnumRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellEnumRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellEnumRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -197,8 +216,14 @@ static zend_function_entry php_wxGridCellEnumRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellEnumRenderer * php_wxGridCellEnumRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellEnumRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellEnumRenderer, zo));
+}
+
+#define Z_wxGridCellEnumRenderer_P(zv) php_wxGridCellEnumRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellFloatRenderer_entry;
-void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellFloatRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
 	public:
@@ -213,16 +238,15 @@ class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellFloatRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellFloatRenderer{
     wxGridCellFloatRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellFloatRenderer;
 
 void php_wxGridCellFloatRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellFloatRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellFloatRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -239,8 +263,14 @@ static zend_function_entry php_wxGridCellFloatRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellFloatRenderer * php_wxGridCellFloatRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellFloatRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellFloatRenderer, zo));
+}
+
+#define Z_wxGridCellFloatRenderer_P(zv) php_wxGridCellFloatRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellNumberRenderer_entry;
-void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellNumberRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
 	public:
@@ -255,16 +285,15 @@ class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellNumberRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellNumberRenderer{
     wxGridCellNumberRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellNumberRenderer;
 
 void php_wxGridCellNumberRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellNumberRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellNumberRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -274,8 +303,14 @@ static zend_function_entry php_wxGridCellNumberRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellNumberRenderer * php_wxGridCellNumberRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellNumberRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellNumberRenderer, zo));
+}
+
+#define Z_wxGridCellNumberRenderer_P(zv) php_wxGridCellNumberRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellStringRenderer_entry;
-void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellStringRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
 	public:
@@ -290,16 +325,15 @@ class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellStringRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellStringRenderer{
     wxGridCellStringRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellStringRenderer;
 
 void php_wxGridCellStringRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellStringRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellStringRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -309,8 +343,14 @@ static zend_function_entry php_wxGridCellStringRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellStringRenderer * php_wxGridCellStringRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellStringRenderer *)((char *)obj - XtOffsetOf(zo_wxGridCellStringRenderer, zo));
+}
+
+#define Z_wxGridCellStringRenderer_P(zv) php_wxGridCellStringRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEditor_entry;
-void php_wxGridCellEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellEditor_php: public wxGridCellEditor{
 	public:
@@ -330,16 +370,15 @@ class wxGridCellEditor_php: public wxGridCellEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellEditor{
     wxGridCellEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellEditor;
 
 void php_wxGridCellEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -356,8 +395,14 @@ static zend_function_entry php_wxGridCellEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellEditor * php_wxGridCellEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellEditor, zo));
+}
+
+#define Z_wxGridCellEditor_P(zv) php_wxGridCellEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAutoWrapStringEditor_entry;
-void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
 	public:
@@ -372,16 +417,15 @@ class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellAutoWrapStringEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellAutoWrapStringEditor{
     wxGridCellAutoWrapStringEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellAutoWrapStringEditor;
 
 void php_wxGridCellAutoWrapStringEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellAutoWrapStringEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellAutoWrapStringEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -391,8 +435,14 @@ static zend_function_entry php_wxGridCellAutoWrapStringEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellAutoWrapStringEditor * php_wxGridCellAutoWrapStringEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellAutoWrapStringEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellAutoWrapStringEditor, zo));
+}
+
+#define Z_wxGridCellAutoWrapStringEditor_P(zv) php_wxGridCellAutoWrapStringEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellBoolEditor_entry;
-void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellBoolEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
 	public:
@@ -407,16 +457,15 @@ class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellBoolEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellBoolEditor{
     wxGridCellBoolEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellBoolEditor;
 
 void php_wxGridCellBoolEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellBoolEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellBoolEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -428,8 +477,14 @@ static zend_function_entry php_wxGridCellBoolEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellBoolEditor * php_wxGridCellBoolEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellBoolEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellBoolEditor, zo));
+}
+
+#define Z_wxGridCellBoolEditor_P(zv) php_wxGridCellBoolEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellChoiceEditor_entry;
-void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellChoiceEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
 	public:
@@ -444,16 +499,15 @@ class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellChoiceEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellChoiceEditor{
     wxGridCellChoiceEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellChoiceEditor;
 
 void php_wxGridCellChoiceEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellChoiceEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellChoiceEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -464,8 +518,14 @@ static zend_function_entry php_wxGridCellChoiceEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellChoiceEditor * php_wxGridCellChoiceEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellChoiceEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellChoiceEditor, zo));
+}
+
+#define Z_wxGridCellChoiceEditor_P(zv) php_wxGridCellChoiceEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellEnumEditor_entry;
-void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellEnumEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
 	public:
@@ -480,16 +540,15 @@ class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellEnumEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellEnumEditor{
     wxGridCellEnumEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellEnumEditor;
 
 void php_wxGridCellEnumEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellEnumEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellEnumEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -499,8 +558,14 @@ static zend_function_entry php_wxGridCellEnumEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellEnumEditor * php_wxGridCellEnumEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellEnumEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellEnumEditor, zo));
+}
+
+#define Z_wxGridCellEnumEditor_P(zv) php_wxGridCellEnumEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellTextEditor_entry;
-void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellTextEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellTextEditor_php: public wxGridCellTextEditor{
 	public:
@@ -515,16 +580,15 @@ class wxGridCellTextEditor_php: public wxGridCellTextEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellTextEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellTextEditor{
     wxGridCellTextEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellTextEditor;
 
 void php_wxGridCellTextEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellTextEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellTextEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -535,8 +599,14 @@ static zend_function_entry php_wxGridCellTextEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellTextEditor * php_wxGridCellTextEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellTextEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellTextEditor, zo));
+}
+
+#define Z_wxGridCellTextEditor_P(zv) php_wxGridCellTextEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellFloatEditor_entry;
-void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellFloatEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
 	public:
@@ -551,16 +621,15 @@ class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellFloatEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellFloatEditor{
     wxGridCellFloatEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellFloatEditor;
 
 void php_wxGridCellFloatEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellFloatEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellFloatEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -571,8 +640,14 @@ static zend_function_entry php_wxGridCellFloatEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellFloatEditor * php_wxGridCellFloatEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellFloatEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellFloatEditor, zo));
+}
+
+#define Z_wxGridCellFloatEditor_P(zv) php_wxGridCellFloatEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellNumberEditor_entry;
-void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellNumberEditor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
 	public:
@@ -587,16 +662,15 @@ class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellNumberEditor 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellNumberEditor{
     wxGridCellNumberEditor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellNumberEditor;
 
 void php_wxGridCellNumberEditor_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellNumberEditor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellNumberEditor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -607,8 +681,14 @@ static zend_function_entry php_wxGridCellNumberEditor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellNumberEditor * php_wxGridCellNumberEditor_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellNumberEditor *)((char *)obj - XtOffsetOf(zo_wxGridCellNumberEditor, zo));
+}
+
+#define Z_wxGridCellNumberEditor_P(zv) php_wxGridCellNumberEditor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridCellAttr_entry;
-void php_wxGridCellAttr_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridCellAttr_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridCellAttr_php: public wxGridCellAttr{
 	public:
@@ -624,16 +704,15 @@ class wxGridCellAttr_php: public wxGridCellAttr{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridCellAttr 
-{
-    zend_object zo;
+typedef struct _zo_wxGridCellAttr{
     wxGridCellAttr_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridCellAttr;
 
 void php_wxGridCellAttr_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridCellAttr_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridCellAttr_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -668,8 +747,14 @@ static zend_function_entry php_wxGridCellAttr_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridCellAttr * php_wxGridCellAttr_fetch_object(zend_object *obj) {
+      return (zo_wxGridCellAttr *)((char *)obj - XtOffsetOf(zo_wxGridCellAttr, zo));
+}
+
+#define Z_wxGridCellAttr_P(zv) php_wxGridCellAttr_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridTableBase_entry;
-void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridTableBase_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridTableBase_php: public wxGridTableBase{
 	public:
@@ -688,16 +773,15 @@ class wxGridTableBase_php: public wxGridTableBase{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridTableBase 
-{
-    zend_object zo;
+typedef struct _zo_wxGridTableBase{
     wxGridTableBase_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridTableBase;
 
 void php_wxGridTableBase_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridTableBase_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridTableBase_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -742,8 +826,14 @@ static zend_function_entry php_wxGridTableBase_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridTableBase * php_wxGridTableBase_fetch_object(zend_object *obj) {
+      return (zo_wxGridTableBase *)((char *)obj - XtOffsetOf(zo_wxGridTableBase, zo));
+}
+
+#define Z_wxGridTableBase_P(zv) php_wxGridTableBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridSizesInfo_entry;
-void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridSizesInfo_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridSizesInfo_php: public wxGridSizesInfo{
 	public:
@@ -771,16 +861,15 @@ class wxGridSizesInfo_php: public wxGridSizesInfo{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridSizesInfo 
-{
-    zend_object zo;
+typedef struct _zo_wxGridSizesInfo{
     wxGridSizesInfo_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridSizesInfo;
 
 void php_wxGridSizesInfo_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridSizesInfo_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridSizesInfo_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -792,8 +881,14 @@ static zend_function_entry php_wxGridSizesInfo_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridSizesInfo * php_wxGridSizesInfo_fetch_object(zend_object *obj) {
+      return (zo_wxGridSizesInfo *)((char *)obj - XtOffsetOf(zo_wxGridSizesInfo, zo));
+}
+
+#define Z_wxGridSizesInfo_P(zv) php_wxGridSizesInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGrid_entry;
-void php_wxGrid_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGrid_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGrid_php: public wxGrid{
 	public:
@@ -809,16 +904,15 @@ class wxGrid_php: public wxGrid{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGrid 
-{
-    zend_object zo;
+typedef struct _zo_wxGrid{
     wxGrid_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGrid;
 
 void php_wxGrid_free(void *object TSRMLS_DC);
-zend_object_value php_wxGrid_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGrid_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1038,8 +1132,14 @@ static zend_function_entry php_wxGrid_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGrid * php_wxGrid_fetch_object(zend_object *obj) {
+      return (zo_wxGrid *)((char *)obj - XtOffsetOf(zo_wxGrid, zo));
+}
+
+#define Z_wxGrid_P(zv) php_wxGrid_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGridUpdateLocker_entry;
-void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGridUpdateLocker_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGridUpdateLocker_php: public wxGridUpdateLocker{
 	public:
@@ -1054,16 +1154,15 @@ class wxGridUpdateLocker_php: public wxGridUpdateLocker{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGridUpdateLocker 
-{
-    zend_object zo;
+typedef struct _zo_wxGridUpdateLocker{
     wxGridUpdateLocker_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGridUpdateLocker;
 
 void php_wxGridUpdateLocker_free(void *object TSRMLS_DC);
-zend_object_value php_wxGridUpdateLocker_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGridUpdateLocker_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1074,4 +1173,10 @@ static zend_function_entry php_wxGridUpdateLocker_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGridUpdateLocker * php_wxGridUpdateLocker_fetch_object(zend_object *obj) {
+      return (zo_wxGridUpdateLocker *)((char *)obj - XtOffsetOf(zo_wxGridUpdateLocker, zo));
+}
+
+#define Z_wxGridUpdateLocker_P(zv) php_wxGridUpdateLocker_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_GRID_H_GUARD

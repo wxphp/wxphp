@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_appmanagement_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxEventLoopBase_entry;
-void php_wxEventLoopBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxEventLoopBase_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxEventLoopBase_php: public wxEventLoopBase{
 	public:
@@ -40,16 +40,15 @@ class wxEventLoopBase_php: public wxEventLoopBase{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxEventLoopBase 
-{
-    zend_object zo;
+typedef struct _zo_wxEventLoopBase{
     wxEventLoopBase_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxEventLoopBase;
 
 void php_wxEventLoopBase_free(void *object TSRMLS_DC);
-zend_object_value php_wxEventLoopBase_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxEventLoopBase_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -70,8 +69,14 @@ static zend_function_entry php_wxEventLoopBase_functions[] = {
 };
 #endif
 
+
+static inline zo_wxEventLoopBase * php_wxEventLoopBase_fetch_object(zend_object *obj) {
+      return (zo_wxEventLoopBase *)((char *)obj - XtOffsetOf(zo_wxEventLoopBase, zo));
+}
+
+#define Z_wxEventLoopBase_P(zv) php_wxEventLoopBase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxEventLoopActivator_entry;
-void php_wxEventLoopActivator_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxEventLoopActivator_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxEventLoopActivator_php: public wxEventLoopActivator{
 	public:
@@ -86,16 +91,15 @@ class wxEventLoopActivator_php: public wxEventLoopActivator{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxEventLoopActivator 
-{
-    zend_object zo;
+typedef struct _zo_wxEventLoopActivator{
     wxEventLoopActivator_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxEventLoopActivator;
 
 void php_wxEventLoopActivator_free(void *object TSRMLS_DC);
-zend_object_value php_wxEventLoopActivator_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxEventLoopActivator_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -105,8 +109,14 @@ static zend_function_entry php_wxEventLoopActivator_functions[] = {
 };
 #endif
 
+
+static inline zo_wxEventLoopActivator * php_wxEventLoopActivator_fetch_object(zend_object *obj) {
+      return (zo_wxEventLoopActivator *)((char *)obj - XtOffsetOf(zo_wxEventLoopActivator, zo));
+}
+
+#define Z_wxEventLoopActivator_P(zv) php_wxEventLoopActivator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxModule_entry;
-void php_wxModule_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxModule_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxModule_php: public wxModule{
 	public:
@@ -123,16 +133,15 @@ class wxModule_php: public wxModule{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxModule 
-{
-    zend_object zo;
+typedef struct _zo_wxModule{
     wxModule_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxModule;
 
 void php_wxModule_free(void *object TSRMLS_DC);
-zend_object_value php_wxModule_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxModule_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -142,8 +151,14 @@ static zend_function_entry php_wxModule_functions[] = {
 };
 #endif
 
+
+static inline zo_wxModule * php_wxModule_fetch_object(zend_object *obj) {
+      return (zo_wxModule *)((char *)obj - XtOffsetOf(zo_wxModule, zo));
+}
+
+#define Z_wxModule_P(zv) php_wxModule_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxProcess_entry;
-void php_wxProcess_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxProcess_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxProcess_php: public wxProcess{
 	public:
@@ -160,16 +175,15 @@ class wxProcess_php: public wxProcess{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxProcess 
-{
-    zend_object zo;
+typedef struct _zo_wxProcess{
     wxProcess_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxProcess;
 
 void php_wxProcess_free(void *object TSRMLS_DC);
-zend_object_value php_wxProcess_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxProcess_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -192,8 +206,14 @@ static zend_function_entry php_wxProcess_functions[] = {
 };
 #endif
 
+
+static inline zo_wxProcess * php_wxProcess_fetch_object(zend_object *obj) {
+      return (zo_wxProcess *)((char *)obj - XtOffsetOf(zo_wxProcess, zo));
+}
+
+#define Z_wxProcess_P(zv) php_wxProcess_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSingleInstanceChecker_entry;
-void php_wxSingleInstanceChecker_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxSingleInstanceChecker_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{
 	public:
@@ -209,16 +229,15 @@ class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxSingleInstanceChecker 
-{
-    zend_object zo;
+typedef struct _zo_wxSingleInstanceChecker{
     wxSingleInstanceChecker_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxSingleInstanceChecker;
 
 void php_wxSingleInstanceChecker_free(void *object TSRMLS_DC);
-zend_object_value php_wxSingleInstanceChecker_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxSingleInstanceChecker_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -231,4 +250,10 @@ static zend_function_entry php_wxSingleInstanceChecker_functions[] = {
 };
 #endif
 
+
+static inline zo_wxSingleInstanceChecker * php_wxSingleInstanceChecker_fetch_object(zend_object *obj) {
+      return (zo_wxSingleInstanceChecker *)((char *)obj - XtOffsetOf(zo_wxSingleInstanceChecker, zo));
+}
+
+#define Z_wxSingleInstanceChecker_P(zv) php_wxSingleInstanceChecker_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_APPMANAGEMENT_H_GUARD

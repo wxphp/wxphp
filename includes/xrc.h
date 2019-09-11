@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_xrc_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxXmlResourceHandler_entry;
-void php_wxXmlResourceHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxXmlResourceHandler_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxXmlResourceHandler_php: public wxXmlResourceHandler{
 	public:
@@ -37,16 +37,15 @@ class wxXmlResourceHandler_php: public wxXmlResourceHandler{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxXmlResourceHandler 
-{
-    zend_object zo;
+typedef struct _zo_wxXmlResourceHandler{
     wxXmlResourceHandler_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxXmlResourceHandler;
 
 void php_wxXmlResourceHandler_free(void *object TSRMLS_DC);
-zend_object_value php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxXmlResourceHandler_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -58,8 +57,14 @@ static zend_function_entry php_wxXmlResourceHandler_functions[] = {
 };
 #endif
 
+
+static inline zo_wxXmlResourceHandler * php_wxXmlResourceHandler_fetch_object(zend_object *obj) {
+      return (zo_wxXmlResourceHandler *)((char *)obj - XtOffsetOf(zo_wxXmlResourceHandler, zo));
+}
+
+#define Z_wxXmlResourceHandler_P(zv) php_wxXmlResourceHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxXmlResource_entry;
-void php_wxXmlResource_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxXmlResource_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxXmlResource_php: public wxXmlResource{
 	public:
@@ -76,16 +81,15 @@ class wxXmlResource_php: public wxXmlResource{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxXmlResource 
-{
-    zend_object zo;
+typedef struct _zo_wxXmlResource{
     wxXmlResource_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxXmlResource;
 
 void php_wxXmlResource_free(void *object TSRMLS_DC);
-zend_object_value php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxXmlResource_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -124,4 +128,10 @@ static zend_function_entry php_wxXmlResource_functions[] = {
 };
 #endif
 
+
+static inline zo_wxXmlResource * php_wxXmlResource_fetch_object(zend_object *obj) {
+      return (zo_wxXmlResource *)((char *)obj - XtOffsetOf(zo_wxXmlResource, zo));
+}
+
+#define Z_wxXmlResource_P(zv) php_wxXmlResource_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_XRC_H_GUARD

@@ -97,36 +97,26 @@ void php_wxFileHistory_free(void *object TSRMLS_DC)
     efree(custom_object);
 }
 
-zend_object_value php_wxFileHistory_new(zend_class_entry *class_type TSRMLS_DC)
+zend_object* php_wxFileHistory_new(zend_class_entry *class_type TSRMLS_DC)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling php_wxFileHistory_new on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
 	php_printf("===========================================\n");
 	#endif
 	
-	zval *temp;
-    zend_object_value retval;
-    zo_wxFileHistory* custom_object;
-    custom_object = (zo_wxFileHistory*) emalloc(sizeof(zo_wxFileHistory));
+	zo_wxFileHistory* custom_object;
+	custom_object = (zo_wxFileHistory*) ecalloc(1, sizeof(zo_wxFileHistory) + abs((int)zend_object_properties_size(class_type))); // For some reason zend_object_properties_size() can go negative which leads to segfaults.
 
-    zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	zend_object_std_init(&custom_object->zo, class_type TSRMLS_CC);
+	object_properties_init(&custom_object->zo, class_type TSRMLS_CC);
 
-#if PHP_VERSION_ID < 50399
-	ALLOC_HASHTABLE(custom_object->zo.properties);
-    zend_hash_init(custom_object->zo.properties, 0, NULL, ZVAL_PTR_DTOR, 0);
-    zend_hash_copy(custom_object->zo.properties, &class_type->default_properties, (copy_ctor_func_t) zval_add_ref,(void *) &temp, sizeof(zval *));
-#else
-	object_properties_init(&custom_object->zo, class_type);
-#endif
+	custom_object->zo.handlers = zend_get_std_object_handlers();
 
-	retval.handle = zend_objects_store_put(custom_object, NULL, php_wxFileHistory_free, NULL TSRMLS_CC);
-	retval.handlers = zend_get_std_object_handlers();
-
-    custom_object->native_object = NULL;
+	custom_object->native_object = NULL;
 	custom_object->object_type = PHP_WXFILEHISTORY_TYPE;
 	custom_object->is_user_initialized = 0;
 	
-    return retval;
+    return &custom_object->zo;
 }
 END_EXTERN_C()
 
@@ -145,7 +135,8 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -154,7 +145,7 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -248,7 +239,8 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -257,7 +249,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -288,7 +280,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	//Parameters for overload 0
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* menu1 = 0;
+	zval menu1;
 	wxMenu* object_pointer1_0 = 0;
 	bool overload1_called = false;
 		
@@ -318,17 +310,17 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu1) == IS_OBJECT)
+				if(Z_TYPE(menu1) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu1 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu1 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(&menu1 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(&menu1 TSRMLS_CC)->native_object;
 					object_pointer1_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer1_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(menu1) != IS_NULL)
+				else if(Z_TYPE(menu1) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -371,7 +363,7 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 
 				((wxFileHistory_php*)native_object)->AddFilesToMenu((wxMenu*) object_pointer1_0);
 
-				references->AddReference(menu1, "wxFileHistory::AddFilesToMenu at call with 1 argument(s)");
+				references->AddReference(&menu1, "wxFileHistory::AddFilesToMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -403,7 +395,8 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -412,7 +405,7 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -500,7 +493,8 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -509,7 +503,7 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -597,7 +591,8 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -606,7 +601,7 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -668,11 +663,7 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 
 				wxString value_to_return1;
 				value_to_return1 = ((wxFileHistory_php*)native_object)->GetHistoryFile((size_t) index0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
+				ZVAL_STRING(return_value, value_to_return1.char_str());
 
 
 				return;
@@ -705,7 +696,8 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -714,7 +706,7 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -802,7 +794,8 @@ PHP_METHOD(php_wxFileHistory, Load)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -811,7 +804,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -840,7 +833,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 	#endif
 	
 	//Parameters for overload 0
-	zval* config0 = 0;
+	zval config0;
 	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -857,17 +850,17 @@ PHP_METHOD(php_wxFileHistory, Load)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(config0) == IS_OBJECT)
+				if(Z_TYPE(config0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxConfigBase_P(&config0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxConfigBase_P(&config0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(config0) != IS_NULL)
+				else if(Z_TYPE(config0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
@@ -891,7 +884,7 @@ PHP_METHOD(php_wxFileHistory, Load)
 
 				((wxFileHistory_php*)native_object)->Load(*(wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(config0, "wxFileHistory::Load at call with 1 argument(s)");
+				references->AddReference(&config0, "wxFileHistory::Load at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -923,7 +916,8 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -932,7 +926,7 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1025,7 +1019,8 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1034,7 +1029,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1063,7 +1058,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval* menu0 = 0;
+	zval menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1080,17 +1075,17 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT)
+				if(Z_TYPE(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(menu0) != IS_NULL)
+				else if(Z_TYPE(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -1114,7 +1109,7 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 
 				((wxFileHistory_php*)native_object)->RemoveMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0, "wxFileHistory::RemoveMenu at call with 1 argument(s)");
+				references->AddReference(&menu0, "wxFileHistory::RemoveMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -1146,7 +1141,8 @@ PHP_METHOD(php_wxFileHistory, Save)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1155,7 +1151,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1184,7 +1180,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 	#endif
 	
 	//Parameters for overload 0
-	zval* config0 = 0;
+	zval config0;
 	wxConfigBase* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1201,17 +1197,17 @@ PHP_METHOD(php_wxFileHistory, Save)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(config0) == IS_OBJECT)
+				if(Z_TYPE(config0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxConfigBase*) zend_object_store_get_object(config0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxConfigBase_P(&config0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxConfigBase_P(&config0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxConfigBase*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXCONFIGBASE_TYPE && argument_type != PHP_WXFILECONFIG_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'config' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(config0) != IS_NULL)
+				else if(Z_TYPE(config0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'config' not null, could not be retreived correctly.");
 				}
@@ -1235,7 +1231,7 @@ PHP_METHOD(php_wxFileHistory, Save)
 
 				((wxFileHistory_php*)native_object)->Save(*(wxConfigBase*) object_pointer0_0);
 
-				references->AddReference(config0, "wxFileHistory::Save at call with 1 argument(s)");
+				references->AddReference(&config0, "wxFileHistory::Save at call 3 with 1 argument(s)");
 
 				return;
 				break;
@@ -1267,7 +1263,8 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1276,7 +1273,7 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1369,7 +1366,8 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	wxPHPObjectReferences* references;
 	int arguments_received = ZEND_NUM_ARGS();
@@ -1378,7 +1376,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	//Get native object of the php object that called the method
 	if(getThis() != NULL) 
 	{
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		if(current_object->native_object == NULL)
 		{
@@ -1407,7 +1405,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	#endif
 	
 	//Parameters for overload 0
-	zval* menu0 = 0;
+	zval menu0;
 	wxMenu* object_pointer0_0 = 0;
 	bool overload0_called = false;
 		
@@ -1424,17 +1422,17 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
-				if(Z_TYPE_P(menu0) == IS_OBJECT)
+				if(Z_TYPE(menu0) == IS_OBJECT)
 				{
-					wxphp_object_type argument_type = ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->object_type;
-					argument_native_object = (void*) ((zo_wxMenu*) zend_object_store_get_object(menu0 TSRMLS_CC))->native_object;
+					wxphp_object_type argument_type = Z_wxMenu_P(&menu0 TSRMLS_CC)->object_type;
+					argument_native_object = (void*) Z_wxMenu_P(&menu0 TSRMLS_CC)->native_object;
 					object_pointer0_0 = (wxMenu*) argument_native_object;
 					if (!object_pointer0_0 || (argument_type != PHP_WXMENU_TYPE))
 					{
 						zend_error(E_ERROR, "Parameter 'menu' could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(menu0) != IS_NULL)
+				else if(Z_TYPE(menu0) != IS_NULL)
 				{
 					zend_error(E_ERROR, "Parameter 'menu' not null, could not be retreived correctly.");
 				}
@@ -1458,7 +1456,7 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 
 				((wxFileHistory_php*)native_object)->UseMenu((wxMenu*) object_pointer0_0);
 
-				references->AddReference(menu0, "wxFileHistory::UseMenu at call with 1 argument(s)");
+				references->AddReference(&menu0, "wxFileHistory::UseMenu at call 1 with 1 argument(s)");
 
 				return;
 				break;
@@ -1489,7 +1487,8 @@ PHP_METHOD(php_wxFileHistory, __construct)
 	void* argument_native_object = NULL;
 	
 	//Other variables used thru the code
-	zval* dummy = NULL;
+	zval dummy;
+	ZVAL_NULL(&dummy);
 	bool already_called = false;
 	int arguments_received = ZEND_NUM_ARGS();
 	
@@ -1563,7 +1562,7 @@ PHP_METHOD(php_wxFileHistory, __construct)
 		native_object->phpObj = getThis();
 		
 
-		current_object = (zo_wxFileHistory*) zend_object_store_get_object(getThis() TSRMLS_CC);
+		current_object = Z_wxFileHistory_P(getThis() TSRMLS_CC);
 		
 		current_object->native_object = native_object;
 		

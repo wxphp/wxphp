@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_net_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxURI_entry;
-void php_wxURI_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxURI_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxURI_php: public wxURI{
 	public:
@@ -37,16 +37,15 @@ class wxURI_php: public wxURI{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxURI 
-{
-    zend_object zo;
+typedef struct _zo_wxURI{
     wxURI_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxURI;
 
 void php_wxURI_free(void *object TSRMLS_DC);
-zend_object_value php_wxURI_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxURI_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -79,4 +78,10 @@ static zend_function_entry php_wxURI_functions[] = {
 };
 #endif
 
+
+static inline zo_wxURI * php_wxURI_fetch_object(zend_object *obj) {
+      return (zo_wxURI *)((char *)obj - XtOffsetOf(zo_wxURI, zo));
+}
+
+#define Z_wxURI_P(zv) php_wxURI_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_NET_H_GUARD

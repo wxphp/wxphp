@@ -42,16 +42,16 @@ class wxAppWrapper : public wxApp
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxApp
+typedef struct _zo_wxApp
 {
-    zend_object zo;
     wxAppWrapper* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxApp;
 
 void php_wxApp_free(void *object TSRMLS_DC);
-zend_object_value php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxApp_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 static zend_function_entry php_wxApp_functions[] = {
@@ -71,5 +71,11 @@ static zend_function_entry php_wxApp_functions[] = {
     PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
     { NULL, NULL, NULL }
 };
+
+static inline zo_wxApp * php_wxApp_fetch_object(zend_object *obj) {
+      return (zo_wxApp *)((char *)obj - XtOffsetOf(zo_wxApp, zo));
+}
+
+#define Z_wxApp_P(zv) php_wxApp_fetch_object(Z_OBJ_P(zv))
 
 #endif //WXPHP_APP_H_GUARD

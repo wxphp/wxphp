@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_threading_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxCondition_entry;
-void php_wxCondition_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxCondition_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxCondition_php: public wxCondition{
 	public:
@@ -35,16 +35,15 @@ class wxCondition_php: public wxCondition{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxCondition 
-{
-    zend_object zo;
+typedef struct _zo_wxCondition{
     wxCondition_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxCondition;
 
 void php_wxCondition_free(void *object TSRMLS_DC);
-zend_object_value php_wxCondition_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxCondition_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -59,8 +58,14 @@ static zend_function_entry php_wxCondition_functions[] = {
 };
 #endif
 
+
+static inline zo_wxCondition * php_wxCondition_fetch_object(zend_object *obj) {
+      return (zo_wxCondition *)((char *)obj - XtOffsetOf(zo_wxCondition, zo));
+}
+
+#define Z_wxCondition_P(zv) php_wxCondition_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCriticalSectionLocker_entry;
-void php_wxCriticalSectionLocker_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxCriticalSectionLocker_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxCriticalSectionLocker_php: public wxCriticalSectionLocker{
 	public:
@@ -75,16 +80,15 @@ class wxCriticalSectionLocker_php: public wxCriticalSectionLocker{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxCriticalSectionLocker 
-{
-    zend_object zo;
+typedef struct _zo_wxCriticalSectionLocker{
     wxCriticalSectionLocker_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxCriticalSectionLocker;
 
 void php_wxCriticalSectionLocker_free(void *object TSRMLS_DC);
-zend_object_value php_wxCriticalSectionLocker_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxCriticalSectionLocker_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -94,8 +98,14 @@ static zend_function_entry php_wxCriticalSectionLocker_functions[] = {
 };
 #endif
 
+
+static inline zo_wxCriticalSectionLocker * php_wxCriticalSectionLocker_fetch_object(zend_object *obj) {
+      return (zo_wxCriticalSectionLocker *)((char *)obj - XtOffsetOf(zo_wxCriticalSectionLocker, zo));
+}
+
+#define Z_wxCriticalSectionLocker_P(zv) php_wxCriticalSectionLocker_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxThreadHelper_entry;
-void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxThreadHelper_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxThreadHelper_php: public wxThreadHelper{
 	public:
@@ -109,16 +119,15 @@ class wxThreadHelper_php: public wxThreadHelper{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxThreadHelper 
-{
-    zend_object zo;
+typedef struct _zo_wxThreadHelper{
     wxThreadHelper_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxThreadHelper;
 
 void php_wxThreadHelper_free(void *object TSRMLS_DC);
-zend_object_value php_wxThreadHelper_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxThreadHelper_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -129,8 +138,14 @@ static zend_function_entry php_wxThreadHelper_functions[] = {
 };
 #endif
 
+
+static inline zo_wxThreadHelper * php_wxThreadHelper_fetch_object(zend_object *obj) {
+      return (zo_wxThreadHelper *)((char *)obj - XtOffsetOf(zo_wxThreadHelper, zo));
+}
+
+#define Z_wxThreadHelper_P(zv) php_wxThreadHelper_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCriticalSection_entry;
-void php_wxCriticalSection_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxCriticalSection_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxCriticalSection_php: public wxCriticalSection{
 	public:
@@ -145,16 +160,15 @@ class wxCriticalSection_php: public wxCriticalSection{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxCriticalSection 
-{
-    zend_object zo;
+typedef struct _zo_wxCriticalSection{
     wxCriticalSection_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxCriticalSection;
 
 void php_wxCriticalSection_free(void *object TSRMLS_DC);
-zend_object_value php_wxCriticalSection_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxCriticalSection_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -167,8 +181,14 @@ static zend_function_entry php_wxCriticalSection_functions[] = {
 };
 #endif
 
+
+static inline zo_wxCriticalSection * php_wxCriticalSection_fetch_object(zend_object *obj) {
+      return (zo_wxCriticalSection *)((char *)obj - XtOffsetOf(zo_wxCriticalSection, zo));
+}
+
+#define Z_wxCriticalSection_P(zv) php_wxCriticalSection_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxThread_entry;
-void php_wxThread_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxThread_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxThread_php: public wxThread{
 	public:
@@ -184,16 +204,15 @@ class wxThread_php: public wxThread{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxThread 
-{
-    zend_object zo;
+typedef struct _zo_wxThread{
     wxThread_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxThread;
 
 void php_wxThread_free(void *object TSRMLS_DC);
-zend_object_value php_wxThread_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxThread_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -227,8 +246,14 @@ static zend_function_entry php_wxThread_functions[] = {
 };
 #endif
 
+
+static inline zo_wxThread * php_wxThread_fetch_object(zend_object *obj) {
+      return (zo_wxThread *)((char *)obj - XtOffsetOf(zo_wxThread, zo));
+}
+
+#define Z_wxThread_P(zv) php_wxThread_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSemaphore_entry;
-void php_wxSemaphore_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxSemaphore_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxSemaphore_php: public wxSemaphore{
 	public:
@@ -243,16 +268,15 @@ class wxSemaphore_php: public wxSemaphore{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxSemaphore 
-{
-    zend_object zo;
+typedef struct _zo_wxSemaphore{
     wxSemaphore_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxSemaphore;
 
 void php_wxSemaphore_free(void *object TSRMLS_DC);
-zend_object_value php_wxSemaphore_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxSemaphore_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -266,8 +290,14 @@ static zend_function_entry php_wxSemaphore_functions[] = {
 };
 #endif
 
+
+static inline zo_wxSemaphore * php_wxSemaphore_fetch_object(zend_object *obj) {
+      return (zo_wxSemaphore *)((char *)obj - XtOffsetOf(zo_wxSemaphore, zo));
+}
+
+#define Z_wxSemaphore_P(zv) php_wxSemaphore_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMutexLocker_entry;
-void php_wxMutexLocker_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMutexLocker_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMutexLocker_php: public wxMutexLocker{
 	public:
@@ -282,16 +312,15 @@ class wxMutexLocker_php: public wxMutexLocker{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMutexLocker 
-{
-    zend_object zo;
+typedef struct _zo_wxMutexLocker{
     wxMutexLocker_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMutexLocker;
 
 void php_wxMutexLocker_free(void *object TSRMLS_DC);
-zend_object_value php_wxMutexLocker_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMutexLocker_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -302,8 +331,14 @@ static zend_function_entry php_wxMutexLocker_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMutexLocker * php_wxMutexLocker_fetch_object(zend_object *obj) {
+      return (zo_wxMutexLocker *)((char *)obj - XtOffsetOf(zo_wxMutexLocker, zo));
+}
+
+#define Z_wxMutexLocker_P(zv) php_wxMutexLocker_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMutex_entry;
-void php_wxMutex_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMutex_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMutex_php: public wxMutex{
 	public:
@@ -318,16 +353,15 @@ class wxMutex_php: public wxMutex{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMutex 
-{
-    zend_object zo;
+typedef struct _zo_wxMutex{
     wxMutex_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMutex;
 
 void php_wxMutex_free(void *object TSRMLS_DC);
-zend_object_value php_wxMutex_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMutex_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -341,4 +375,10 @@ static zend_function_entry php_wxMutex_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMutex * php_wxMutex_fetch_object(zend_object *obj) {
+      return (zo_wxMutex *)((char *)obj - XtOffsetOf(zo_wxMutex, zo));
+}
+
+#define Z_wxMutex_P(zv) php_wxMutex_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_THREADING_H_GUARD

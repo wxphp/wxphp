@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_media_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxMediaCtrl_entry;
-void php_wxMediaCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMediaCtrl_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMediaCtrl_php: public wxMediaCtrl{
 	public:
@@ -36,16 +36,15 @@ class wxMediaCtrl_php: public wxMediaCtrl{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMediaCtrl 
-{
-    zend_object zo;
+typedef struct _zo_wxMediaCtrl{
     wxMediaCtrl_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMediaCtrl;
 
 void php_wxMediaCtrl_free(void *object TSRMLS_DC);
-zend_object_value php_wxMediaCtrl_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMediaCtrl_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -72,8 +71,14 @@ static zend_function_entry php_wxMediaCtrl_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMediaCtrl * php_wxMediaCtrl_fetch_object(zend_object *obj) {
+      return (zo_wxMediaCtrl *)((char *)obj - XtOffsetOf(zo_wxMediaCtrl, zo));
+}
+
+#define Z_wxMediaCtrl_P(zv) php_wxMediaCtrl_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSound_entry;
-void php_wxSound_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxSound_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxSound_php: public wxSound{
 	public:
@@ -90,16 +95,15 @@ class wxSound_php: public wxSound{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxSound 
-{
-    zend_object zo;
+typedef struct _zo_wxSound{
     wxSound_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxSound;
 
 void php_wxSound_free(void *object TSRMLS_DC);
-zend_object_value php_wxSound_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxSound_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -113,4 +117,10 @@ static zend_function_entry php_wxSound_functions[] = {
 };
 #endif
 
+
+static inline zo_wxSound * php_wxSound_fetch_object(zend_object *obj) {
+      return (zo_wxSound *)((char *)obj - XtOffsetOf(zo_wxSound, zo));
+}
+
+#define Z_wxSound_P(zv) php_wxSound_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_MEDIA_H_GUARD

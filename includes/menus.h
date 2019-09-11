@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_menus_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxMenuBar_entry;
-void php_wxMenuBar_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMenuBar_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMenuBar_php: public wxMenuBar{
 	public:
@@ -35,16 +35,15 @@ class wxMenuBar_php: public wxMenuBar{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMenuBar 
-{
-    zend_object zo;
+typedef struct _zo_wxMenuBar{
     wxMenuBar_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMenuBar;
 
 void php_wxMenuBar_free(void *object TSRMLS_DC);
-zend_object_value php_wxMenuBar_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMenuBar_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -79,8 +78,14 @@ static zend_function_entry php_wxMenuBar_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMenuBar * php_wxMenuBar_fetch_object(zend_object *obj) {
+      return (zo_wxMenuBar *)((char *)obj - XtOffsetOf(zo_wxMenuBar, zo));
+}
+
+#define Z_wxMenuBar_P(zv) php_wxMenuBar_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMenu_entry;
-void php_wxMenu_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMenu_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMenu_php: public wxMenu{
 	public:
@@ -97,16 +102,15 @@ class wxMenu_php: public wxMenu{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMenu 
-{
-    zend_object zo;
+typedef struct _zo_wxMenu{
     wxMenu_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMenu;
 
 void php_wxMenu_free(void *object TSRMLS_DC);
-zend_object_value php_wxMenu_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMenu_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -157,8 +161,14 @@ static zend_function_entry php_wxMenu_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMenu * php_wxMenu_fetch_object(zend_object *obj) {
+      return (zo_wxMenu *)((char *)obj - XtOffsetOf(zo_wxMenu, zo));
+}
+
+#define Z_wxMenu_P(zv) php_wxMenu_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMenuItem_entry;
-void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMenuItem_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMenuItem_php: public wxMenuItem{
 	public:
@@ -173,16 +183,15 @@ class wxMenuItem_php: public wxMenuItem{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMenuItem 
-{
-    zend_object zo;
+typedef struct _zo_wxMenuItem{
     wxMenuItem_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMenuItem;
 
 void php_wxMenuItem_free(void *object TSRMLS_DC);
-zend_object_value php_wxMenuItem_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMenuItem_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -212,4 +221,10 @@ static zend_function_entry php_wxMenuItem_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMenuItem * php_wxMenuItem_fetch_object(zend_object *obj) {
+      return (zo_wxMenuItem *)((char *)obj - XtOffsetOf(zo_wxMenuItem, zo));
+}
+
+#define Z_wxMenuItem_P(zv) php_wxMenuItem_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_MENUS_H_GUARD

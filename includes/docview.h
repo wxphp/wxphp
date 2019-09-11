@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_docview_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxFileHistory_entry;
-void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFileHistory_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFileHistory_php: public wxFileHistory{
 	public:
@@ -35,16 +35,15 @@ class wxFileHistory_php: public wxFileHistory{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFileHistory 
-{
-    zend_object zo;
+typedef struct _zo_wxFileHistory{
     wxFileHistory_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFileHistory;
 
 void php_wxFileHistory_free(void *object TSRMLS_DC);
-zend_object_value php_wxFileHistory_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFileHistory_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -66,4 +65,10 @@ static zend_function_entry php_wxFileHistory_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFileHistory * php_wxFileHistory_fetch_object(zend_object *obj) {
+      return (zo_wxFileHistory *)((char *)obj - XtOffsetOf(zo_wxFileHistory, zo));
+}
+
+#define Z_wxFileHistory_P(zv) php_wxFileHistory_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_DOCVIEW_H_GUARD

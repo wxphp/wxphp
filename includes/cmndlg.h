@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_cmndlg_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxAboutDialogInfo_entry;
-void php_wxAboutDialogInfo_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxAboutDialogInfo_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxAboutDialogInfo_php: public wxAboutDialogInfo{
 	public:
@@ -35,16 +35,15 @@ class wxAboutDialogInfo_php: public wxAboutDialogInfo{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxAboutDialogInfo 
-{
-    zend_object zo;
+typedef struct _zo_wxAboutDialogInfo{
     wxAboutDialogInfo_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxAboutDialogInfo;
 
 void php_wxAboutDialogInfo_free(void *object TSRMLS_DC);
-zend_object_value php_wxAboutDialogInfo_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxAboutDialogInfo_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -75,8 +74,14 @@ static zend_function_entry php_wxAboutDialogInfo_functions[] = {
 };
 #endif
 
+
+static inline zo_wxAboutDialogInfo * php_wxAboutDialogInfo_fetch_object(zend_object *obj) {
+      return (zo_wxAboutDialogInfo *)((char *)obj - XtOffsetOf(zo_wxAboutDialogInfo, zo));
+}
+
+#define Z_wxAboutDialogInfo_P(zv) php_wxAboutDialogInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBusyInfo_entry;
-void php_wxBusyInfo_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxBusyInfo_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxBusyInfo_php: public wxBusyInfo{
 	public:
@@ -91,16 +96,15 @@ class wxBusyInfo_php: public wxBusyInfo{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxBusyInfo 
-{
-    zend_object zo;
+typedef struct _zo_wxBusyInfo{
     wxBusyInfo_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxBusyInfo;
 
 void php_wxBusyInfo_free(void *object TSRMLS_DC);
-zend_object_value php_wxBusyInfo_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxBusyInfo_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -110,8 +114,14 @@ static zend_function_entry php_wxBusyInfo_functions[] = {
 };
 #endif
 
+
+static inline zo_wxBusyInfo * php_wxBusyInfo_fetch_object(zend_object *obj) {
+      return (zo_wxBusyInfo *)((char *)obj - XtOffsetOf(zo_wxBusyInfo, zo));
+}
+
+#define Z_wxBusyInfo_P(zv) php_wxBusyInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSingleChoiceDialog_entry;
-void php_wxSingleChoiceDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxSingleChoiceDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxSingleChoiceDialog_php: public wxSingleChoiceDialog{
 	public:
@@ -127,16 +137,15 @@ class wxSingleChoiceDialog_php: public wxSingleChoiceDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxSingleChoiceDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxSingleChoiceDialog{
     wxSingleChoiceDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxSingleChoiceDialog;
 
 void php_wxSingleChoiceDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxSingleChoiceDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxSingleChoiceDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -151,8 +160,14 @@ static zend_function_entry php_wxSingleChoiceDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxSingleChoiceDialog * php_wxSingleChoiceDialog_fetch_object(zend_object *obj) {
+      return (zo_wxSingleChoiceDialog *)((char *)obj - XtOffsetOf(zo_wxSingleChoiceDialog, zo));
+}
+
+#define Z_wxSingleChoiceDialog_P(zv) php_wxSingleChoiceDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPrintDialogData_entry;
-void php_wxPrintDialogData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPrintDialogData_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPrintDialogData_php: public wxPrintDialogData{
 	public:
@@ -168,16 +183,15 @@ class wxPrintDialogData_php: public wxPrintDialogData{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPrintDialogData 
-{
-    zend_object zo;
+typedef struct _zo_wxPrintDialogData{
     wxPrintDialogData_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPrintDialogData;
 
 void php_wxPrintDialogData_free(void *object TSRMLS_DC);
-zend_object_value php_wxPrintDialogData_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPrintDialogData_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -211,8 +225,14 @@ static zend_function_entry php_wxPrintDialogData_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPrintDialogData * php_wxPrintDialogData_fetch_object(zend_object *obj) {
+      return (zo_wxPrintDialogData *)((char *)obj - XtOffsetOf(zo_wxPrintDialogData, zo));
+}
+
+#define Z_wxPrintDialogData_P(zv) php_wxPrintDialogData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourDialog_entry;
-void php_wxColourDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxColourDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxColourDialog_php: public wxColourDialog{
 	public:
@@ -227,16 +247,15 @@ class wxColourDialog_php: public wxColourDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxColourDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxColourDialog{
     wxColourDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxColourDialog;
 
 void php_wxColourDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxColourDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxColourDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -249,8 +268,14 @@ static zend_function_entry php_wxColourDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxColourDialog * php_wxColourDialog_fetch_object(zend_object *obj) {
+      return (zo_wxColourDialog *)((char *)obj - XtOffsetOf(zo_wxColourDialog, zo));
+}
+
+#define Z_wxColourDialog_P(zv) php_wxColourDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourData_entry;
-void php_wxColourData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxColourData_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxColourData_php: public wxColourData{
 	public:
@@ -265,16 +290,15 @@ class wxColourData_php: public wxColourData{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxColourData 
-{
-    zend_object zo;
+typedef struct _zo_wxColourData{
     wxColourData_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxColourData;
 
 void php_wxColourData_free(void *object TSRMLS_DC);
-zend_object_value php_wxColourData_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxColourData_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -292,8 +316,14 @@ static zend_function_entry php_wxColourData_functions[] = {
 };
 #endif
 
+
+static inline zo_wxColourData * php_wxColourData_fetch_object(zend_object *obj) {
+      return (zo_wxColourData *)((char *)obj - XtOffsetOf(zo_wxColourData, zo));
+}
+
+#define Z_wxColourData_P(zv) php_wxColourData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDialog_entry;
-void php_wxDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxDialog_php: public wxDialog{
 	public:
@@ -309,16 +339,15 @@ class wxDialog_php: public wxDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxDialog{
     wxDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxDialog;
 
 void php_wxDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -360,8 +389,14 @@ static zend_function_entry php_wxDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxDialog * php_wxDialog_fetch_object(zend_object *obj) {
+      return (zo_wxDialog *)((char *)obj - XtOffsetOf(zo_wxDialog, zo));
+}
+
+#define Z_wxDialog_P(zv) php_wxDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDirDialog_entry;
-void php_wxDirDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxDirDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxDirDialog_php: public wxDirDialog{
 	public:
@@ -376,16 +411,15 @@ class wxDirDialog_php: public wxDirDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxDirDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxDirDialog{
     wxDirDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxDirDialog;
 
 void php_wxDirDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxDirDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxDirDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -400,8 +434,14 @@ static zend_function_entry php_wxDirDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxDirDialog * php_wxDirDialog_fetch_object(zend_object *obj) {
+      return (zo_wxDirDialog *)((char *)obj - XtOffsetOf(zo_wxDirDialog, zo));
+}
+
+#define Z_wxDirDialog_P(zv) php_wxDirDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFindReplaceData_entry;
-void php_wxFindReplaceData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFindReplaceData_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFindReplaceData_php: public wxFindReplaceData{
 	public:
@@ -416,16 +456,15 @@ class wxFindReplaceData_php: public wxFindReplaceData{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFindReplaceData 
-{
-    zend_object zo;
+typedef struct _zo_wxFindReplaceData{
     wxFindReplaceData_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFindReplaceData;
 
 void php_wxFindReplaceData_free(void *object TSRMLS_DC);
-zend_object_value php_wxFindReplaceData_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFindReplaceData_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -441,8 +480,14 @@ static zend_function_entry php_wxFindReplaceData_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFindReplaceData * php_wxFindReplaceData_fetch_object(zend_object *obj) {
+      return (zo_wxFindReplaceData *)((char *)obj - XtOffsetOf(zo_wxFindReplaceData, zo));
+}
+
+#define Z_wxFindReplaceData_P(zv) php_wxFindReplaceData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFindReplaceDialog_entry;
-void php_wxFindReplaceDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFindReplaceDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFindReplaceDialog_php: public wxFindReplaceDialog{
 	public:
@@ -458,16 +503,15 @@ class wxFindReplaceDialog_php: public wxFindReplaceDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFindReplaceDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxFindReplaceDialog{
     wxFindReplaceDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFindReplaceDialog;
 
 void php_wxFindReplaceDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxFindReplaceDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFindReplaceDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -479,8 +523,14 @@ static zend_function_entry php_wxFindReplaceDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFindReplaceDialog * php_wxFindReplaceDialog_fetch_object(zend_object *obj) {
+      return (zo_wxFindReplaceDialog *)((char *)obj - XtOffsetOf(zo_wxFindReplaceDialog, zo));
+}
+
+#define Z_wxFindReplaceDialog_P(zv) php_wxFindReplaceDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFileDialog_entry;
-void php_wxFileDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFileDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFileDialog_php: public wxFileDialog{
 	public:
@@ -495,16 +545,15 @@ class wxFileDialog_php: public wxFileDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFileDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxFileDialog{
     wxFileDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFileDialog;
 
 void php_wxFileDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxFileDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFileDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -530,8 +579,14 @@ static zend_function_entry php_wxFileDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFileDialog * php_wxFileDialog_fetch_object(zend_object *obj) {
+      return (zo_wxFileDialog *)((char *)obj - XtOffsetOf(zo_wxFileDialog, zo));
+}
+
+#define Z_wxFileDialog_P(zv) php_wxFileDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontData_entry;
-void php_wxFontData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFontData_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFontData_php: public wxFontData{
 	public:
@@ -546,16 +601,15 @@ class wxFontData_php: public wxFontData{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFontData 
-{
-    zend_object zo;
+typedef struct _zo_wxFontData{
     wxFontData_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFontData;
 
 void php_wxFontData_free(void *object TSRMLS_DC);
-zend_object_value php_wxFontData_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFontData_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -578,8 +632,14 @@ static zend_function_entry php_wxFontData_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFontData * php_wxFontData_fetch_object(zend_object *obj) {
+      return (zo_wxFontData *)((char *)obj - XtOffsetOf(zo_wxFontData, zo));
+}
+
+#define Z_wxFontData_P(zv) php_wxFontData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontDialog_entry;
-void php_wxFontDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFontDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFontDialog_php: public wxFontDialog{
 	public:
@@ -596,16 +656,15 @@ class wxFontDialog_php: public wxFontDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFontDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxFontDialog{
     wxFontDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFontDialog;
 
 void php_wxFontDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxFontDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFontDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -618,8 +677,14 @@ static zend_function_entry php_wxFontDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFontDialog * php_wxFontDialog_fetch_object(zend_object *obj) {
+      return (zo_wxFontDialog *)((char *)obj - XtOffsetOf(zo_wxFontDialog, zo));
+}
+
+#define Z_wxFontDialog_P(zv) php_wxFontDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMessageDialog_entry;
-void php_wxMessageDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMessageDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMessageDialog_php: public wxMessageDialog{
 	public:
@@ -634,16 +699,15 @@ class wxMessageDialog_php: public wxMessageDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMessageDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxMessageDialog{
     wxMessageDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMessageDialog;
 
 void php_wxMessageDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxMessageDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMessageDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -672,8 +736,14 @@ static zend_function_entry php_wxMessageDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMessageDialog * php_wxMessageDialog_fetch_object(zend_object *obj) {
+      return (zo_wxMessageDialog *)((char *)obj - XtOffsetOf(zo_wxMessageDialog, zo));
+}
+
+#define Z_wxMessageDialog_P(zv) php_wxMessageDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGenericProgressDialog_entry;
-void php_wxGenericProgressDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGenericProgressDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGenericProgressDialog_php: public wxGenericProgressDialog{
 	public:
@@ -688,16 +758,15 @@ class wxGenericProgressDialog_php: public wxGenericProgressDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGenericProgressDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxGenericProgressDialog{
     wxGenericProgressDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGenericProgressDialog;
 
 void php_wxGenericProgressDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxGenericProgressDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGenericProgressDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -716,8 +785,14 @@ static zend_function_entry php_wxGenericProgressDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGenericProgressDialog * php_wxGenericProgressDialog_fetch_object(zend_object *obj) {
+      return (zo_wxGenericProgressDialog *)((char *)obj - XtOffsetOf(zo_wxGenericProgressDialog, zo));
+}
+
+#define Z_wxGenericProgressDialog_P(zv) php_wxGenericProgressDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRearrangeDialog_entry;
-void php_wxRearrangeDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxRearrangeDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxRearrangeDialog_php: public wxRearrangeDialog{
 	public:
@@ -732,16 +807,15 @@ class wxRearrangeDialog_php: public wxRearrangeDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxRearrangeDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxRearrangeDialog{
     wxRearrangeDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxRearrangeDialog;
 
 void php_wxRearrangeDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxRearrangeDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxRearrangeDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -753,8 +827,14 @@ static zend_function_entry php_wxRearrangeDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxRearrangeDialog * php_wxRearrangeDialog_fetch_object(zend_object *obj) {
+      return (zo_wxRearrangeDialog *)((char *)obj - XtOffsetOf(zo_wxRearrangeDialog, zo));
+}
+
+#define Z_wxRearrangeDialog_P(zv) php_wxRearrangeDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxSymbolPickerDialog_entry;
-void php_wxSymbolPickerDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxSymbolPickerDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxSymbolPickerDialog_php: public wxSymbolPickerDialog{
 	public:
@@ -770,16 +850,15 @@ class wxSymbolPickerDialog_php: public wxSymbolPickerDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxSymbolPickerDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxSymbolPickerDialog{
     wxSymbolPickerDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxSymbolPickerDialog;
 
 void php_wxSymbolPickerDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxSymbolPickerDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxSymbolPickerDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -802,8 +881,14 @@ static zend_function_entry php_wxSymbolPickerDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxSymbolPickerDialog * php_wxSymbolPickerDialog_fetch_object(zend_object *obj) {
+      return (zo_wxSymbolPickerDialog *)((char *)obj - XtOffsetOf(zo_wxSymbolPickerDialog, zo));
+}
+
+#define Z_wxSymbolPickerDialog_P(zv) php_wxSymbolPickerDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPasswordEntryDialog_entry;
-void php_wxPasswordEntryDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPasswordEntryDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPasswordEntryDialog_php: public wxPasswordEntryDialog{
 	public:
@@ -818,16 +903,15 @@ class wxPasswordEntryDialog_php: public wxPasswordEntryDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPasswordEntryDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxPasswordEntryDialog{
     wxPasswordEntryDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPasswordEntryDialog;
 
 void php_wxPasswordEntryDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxPasswordEntryDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPasswordEntryDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -837,8 +921,14 @@ static zend_function_entry php_wxPasswordEntryDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPasswordEntryDialog * php_wxPasswordEntryDialog_fetch_object(zend_object *obj) {
+      return (zo_wxPasswordEntryDialog *)((char *)obj - XtOffsetOf(zo_wxPasswordEntryDialog, zo));
+}
+
+#define Z_wxPasswordEntryDialog_P(zv) php_wxPasswordEntryDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTextEntryDialog_entry;
-void php_wxTextEntryDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxTextEntryDialog_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxTextEntryDialog_php: public wxTextEntryDialog{
 	public:
@@ -853,16 +943,15 @@ class wxTextEntryDialog_php: public wxTextEntryDialog{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxTextEntryDialog 
-{
-    zend_object zo;
+typedef struct _zo_wxTextEntryDialog{
     wxTextEntryDialog_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxTextEntryDialog;
 
 void php_wxTextEntryDialog_free(void *object TSRMLS_DC);
-zend_object_value php_wxTextEntryDialog_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxTextEntryDialog_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -875,8 +964,14 @@ static zend_function_entry php_wxTextEntryDialog_functions[] = {
 };
 #endif
 
+
+static inline zo_wxTextEntryDialog * php_wxTextEntryDialog_fetch_object(zend_object *obj) {
+      return (zo_wxTextEntryDialog *)((char *)obj - XtOffsetOf(zo_wxTextEntryDialog, zo));
+}
+
+#define Z_wxTextEntryDialog_P(zv) php_wxTextEntryDialog_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxWizard_entry;
-void php_wxWizard_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxWizard_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxWizard_php: public wxWizard{
 	public:
@@ -892,16 +987,15 @@ class wxWizard_php: public wxWizard{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxWizard 
-{
-    zend_object zo;
+typedef struct _zo_wxWizard{
     wxWizard_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxWizard;
 
 void php_wxWizard_free(void *object TSRMLS_DC);
-zend_object_value php_wxWizard_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxWizard_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -929,4 +1023,10 @@ static zend_function_entry php_wxWizard_functions[] = {
 };
 #endif
 
+
+static inline zo_wxWizard * php_wxWizard_fetch_object(zend_object *obj) {
+      return (zo_wxWizard *)((char *)obj - XtOffsetOf(zo_wxWizard, zo));
+}
+
+#define Z_wxWizard_P(zv) php_wxWizard_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_CMNDLG_H_GUARD

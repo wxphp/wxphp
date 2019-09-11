@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_containers_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxClientData_entry;
-void php_wxClientData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxClientData_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxClientData_php: public wxClientData{
 	public:
@@ -35,16 +35,15 @@ class wxClientData_php: public wxClientData{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxClientData 
-{
-    zend_object zo;
+typedef struct _zo_wxClientData{
     wxClientData_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxClientData;
 
 void php_wxClientData_free(void *object TSRMLS_DC);
-zend_object_value php_wxClientData_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxClientData_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -54,8 +53,14 @@ static zend_function_entry php_wxClientData_functions[] = {
 };
 #endif
 
+
+static inline zo_wxClientData * php_wxClientData_fetch_object(zend_object *obj) {
+      return (zo_wxClientData *)((char *)obj - XtOffsetOf(zo_wxClientData, zo));
+}
+
+#define Z_wxClientData_P(zv) php_wxClientData_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxTreeItemData_entry;
-void php_wxTreeItemData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxTreeItemData_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxTreeItemData_php: public wxTreeItemData{
 	public:
@@ -70,16 +75,15 @@ class wxTreeItemData_php: public wxTreeItemData{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxTreeItemData 
-{
-    zend_object zo;
+typedef struct _zo_wxTreeItemData{
     wxTreeItemData_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxTreeItemData;
 
 void php_wxTreeItemData_free(void *object TSRMLS_DC);
-zend_object_value php_wxTreeItemData_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxTreeItemData_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -91,4 +95,10 @@ static zend_function_entry php_wxTreeItemData_functions[] = {
 };
 #endif
 
+
+static inline zo_wxTreeItemData * php_wxTreeItemData_fetch_object(zend_object *obj) {
+      return (zo_wxTreeItemData *)((char *)obj - XtOffsetOf(zo_wxTreeItemData, zo));
+}
+
+#define Z_wxTreeItemData_P(zv) php_wxTreeItemData_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_CONTAINERS_H_GUARD

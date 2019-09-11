@@ -20,7 +20,7 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_gdi_get_args, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 extern zend_class_entry* php_wxGraphicsGradientStop_entry;
-void php_wxGraphicsGradientStop_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGraphicsGradientStop_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGraphicsGradientStop_php: public wxGraphicsGradientStop{
 	public:
@@ -35,16 +35,15 @@ class wxGraphicsGradientStop_php: public wxGraphicsGradientStop{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGraphicsGradientStop 
-{
-    zend_object zo;
+typedef struct _zo_wxGraphicsGradientStop{
     wxGraphicsGradientStop_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGraphicsGradientStop;
 
 void php_wxGraphicsGradientStop_free(void *object TSRMLS_DC);
-zend_object_value php_wxGraphicsGradientStop_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGraphicsGradientStop_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -58,8 +57,14 @@ static zend_function_entry php_wxGraphicsGradientStop_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGraphicsGradientStop * php_wxGraphicsGradientStop_fetch_object(zend_object *obj) {
+      return (zo_wxGraphicsGradientStop *)((char *)obj - XtOffsetOf(zo_wxGraphicsGradientStop, zo));
+}
+
+#define Z_wxGraphicsGradientStop_P(zv) php_wxGraphicsGradientStop_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGraphicsGradientStops_entry;
-void php_wxGraphicsGradientStops_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGraphicsGradientStops_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGraphicsGradientStops_php: public wxGraphicsGradientStops{
 	public:
@@ -74,16 +79,15 @@ class wxGraphicsGradientStops_php: public wxGraphicsGradientStops{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGraphicsGradientStops 
-{
-    zend_object zo;
+typedef struct _zo_wxGraphicsGradientStops{
     wxGraphicsGradientStops_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGraphicsGradientStops;
 
 void php_wxGraphicsGradientStops_free(void *object TSRMLS_DC);
-zend_object_value php_wxGraphicsGradientStops_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGraphicsGradientStops_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -100,8 +104,14 @@ static zend_function_entry php_wxGraphicsGradientStops_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGraphicsGradientStops * php_wxGraphicsGradientStops_fetch_object(zend_object *obj) {
+      return (zo_wxGraphicsGradientStops *)((char *)obj - XtOffsetOf(zo_wxGraphicsGradientStops, zo));
+}
+
+#define Z_wxGraphicsGradientStops_P(zv) php_wxGraphicsGradientStops_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxAnimation_entry;
-void php_wxAnimation_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxAnimation_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxAnimation_php: public wxAnimation{
 	public:
@@ -117,16 +127,15 @@ class wxAnimation_php: public wxAnimation{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxAnimation 
-{
-    zend_object zo;
+typedef struct _zo_wxAnimation{
     wxAnimation_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxAnimation;
 
 void php_wxAnimation_free(void *object TSRMLS_DC);
-zend_object_value php_wxAnimation_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxAnimation_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -143,8 +152,14 @@ static zend_function_entry php_wxAnimation_functions[] = {
 };
 #endif
 
+
+static inline zo_wxAnimation * php_wxAnimation_fetch_object(zend_object *obj) {
+      return (zo_wxAnimation *)((char *)obj - XtOffsetOf(zo_wxAnimation, zo));
+}
+
+#define Z_wxAnimation_P(zv) php_wxAnimation_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmapHandler_entry;
-void php_wxBitmapHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxBitmapHandler_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxBitmapHandler_php: public wxBitmapHandler{
 	public:
@@ -159,16 +174,15 @@ class wxBitmapHandler_php: public wxBitmapHandler{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxBitmapHandler 
-{
-    zend_object zo;
+typedef struct _zo_wxBitmapHandler{
     wxBitmapHandler_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxBitmapHandler;
 
 void php_wxBitmapHandler_free(void *object TSRMLS_DC);
-zend_object_value php_wxBitmapHandler_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxBitmapHandler_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -187,8 +201,14 @@ static zend_function_entry php_wxBitmapHandler_functions[] = {
 };
 #endif
 
+
+static inline zo_wxBitmapHandler * php_wxBitmapHandler_fetch_object(zend_object *obj) {
+      return (zo_wxBitmapHandler *)((char *)obj - XtOffsetOf(zo_wxBitmapHandler, zo));
+}
+
+#define Z_wxBitmapHandler_P(zv) php_wxBitmapHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBitmap_entry;
-void php_wxBitmap_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxBitmap_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxBitmap_php: public wxBitmap{
 	public:
@@ -208,16 +228,15 @@ class wxBitmap_php: public wxBitmap{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxBitmap 
-{
-    zend_object zo;
+typedef struct _zo_wxBitmap{
     wxBitmap_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxBitmap;
 
 void php_wxBitmap_free(void *object TSRMLS_DC);
-zend_object_value php_wxBitmap_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxBitmap_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -252,8 +271,14 @@ static zend_function_entry php_wxBitmap_functions[] = {
 };
 #endif
 
+
+static inline zo_wxBitmap * php_wxBitmap_fetch_object(zend_object *obj) {
+      return (zo_wxBitmap *)((char *)obj - XtOffsetOf(zo_wxBitmap, zo));
+}
+
+#define Z_wxBitmap_P(zv) php_wxBitmap_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxMask_entry;
-void php_wxMask_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxMask_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxMask_php: public wxMask{
 	public:
@@ -271,16 +296,15 @@ class wxMask_php: public wxMask{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxMask 
-{
-    zend_object zo;
+typedef struct _zo_wxMask{
     wxMask_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxMask;
 
 void php_wxMask_free(void *object TSRMLS_DC);
-zend_object_value php_wxMask_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxMask_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -291,8 +315,14 @@ static zend_function_entry php_wxMask_functions[] = {
 };
 #endif
 
+
+static inline zo_wxMask * php_wxMask_fetch_object(zend_object *obj) {
+      return (zo_wxMask *)((char *)obj - XtOffsetOf(zo_wxMask, zo));
+}
+
+#define Z_wxMask_P(zv) php_wxMask_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxBrush_entry;
-void php_wxBrush_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxBrush_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxBrush_php: public wxBrush{
 	public:
@@ -309,16 +339,15 @@ class wxBrush_php: public wxBrush{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxBrush 
-{
-    zend_object zo;
+typedef struct _zo_wxBrush{
     wxBrush_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxBrush;
 
 void php_wxBrush_free(void *object TSRMLS_DC);
-zend_object_value php_wxBrush_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxBrush_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -338,8 +367,14 @@ static zend_function_entry php_wxBrush_functions[] = {
 };
 #endif
 
+
+static inline zo_wxBrush * php_wxBrush_fetch_object(zend_object *obj) {
+      return (zo_wxBrush *)((char *)obj - XtOffsetOf(zo_wxBrush, zo));
+}
+
+#define Z_wxBrush_P(zv) php_wxBrush_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColour_entry;
-void php_wxColour_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxColour_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxColour_php: public wxColour{
 	public:
@@ -358,16 +393,15 @@ class wxColour_php: public wxColour{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxColour 
-{
-    zend_object zo;
+typedef struct _zo_wxColour{
     wxColour_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxColour;
 
 void php_wxColour_free(void *object TSRMLS_DC);
-zend_object_value php_wxColour_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxColour_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -386,8 +420,14 @@ static zend_function_entry php_wxColour_functions[] = {
 };
 #endif
 
+
+static inline zo_wxColour * php_wxColour_fetch_object(zend_object *obj) {
+      return (zo_wxColour *)((char *)obj - XtOffsetOf(zo_wxColour, zo));
+}
+
+#define Z_wxColour_P(zv) php_wxColour_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxCursor_entry;
-void php_wxCursor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxCursor_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxCursor_php: public wxCursor{
 	public:
@@ -405,16 +445,15 @@ class wxCursor_php: public wxCursor{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxCursor 
-{
-    zend_object zo;
+typedef struct _zo_wxCursor{
     wxCursor_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxCursor;
 
 void php_wxCursor_free(void *object TSRMLS_DC);
-zend_object_value php_wxCursor_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxCursor_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -425,8 +464,14 @@ static zend_function_entry php_wxCursor_functions[] = {
 };
 #endif
 
+
+static inline zo_wxCursor * php_wxCursor_fetch_object(zend_object *obj) {
+      return (zo_wxCursor *)((char *)obj - XtOffsetOf(zo_wxCursor, zo));
+}
+
+#define Z_wxCursor_P(zv) php_wxCursor_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxDCClipper_entry;
-void php_wxDCClipper_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxDCClipper_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxDCClipper_php: public wxDCClipper{
 	public:
@@ -443,16 +488,15 @@ class wxDCClipper_php: public wxDCClipper{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxDCClipper 
-{
-    zend_object zo;
+typedef struct _zo_wxDCClipper{
     wxDCClipper_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxDCClipper;
 
 void php_wxDCClipper_free(void *object TSRMLS_DC);
-zend_object_value php_wxDCClipper_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxDCClipper_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -462,8 +506,14 @@ static zend_function_entry php_wxDCClipper_functions[] = {
 };
 #endif
 
+
+static inline zo_wxDCClipper * php_wxDCClipper_fetch_object(zend_object *obj) {
+      return (zo_wxDCClipper *)((char *)obj - XtOffsetOf(zo_wxDCClipper, zo));
+}
+
+#define Z_wxDCClipper_P(zv) php_wxDCClipper_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFont_entry;
-void php_wxFont_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFont_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFont_php: public wxFont{
 	public:
@@ -483,16 +533,15 @@ class wxFont_php: public wxFont{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFont 
-{
-    zend_object zo;
+typedef struct _zo_wxFont{
     wxFont_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFont;
 
 void php_wxFont_free(void *object TSRMLS_DC);
-zend_object_value php_wxFont_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFont_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -542,8 +591,14 @@ static zend_function_entry php_wxFont_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFont * php_wxFont_fetch_object(zend_object *obj) {
+      return (zo_wxFont *)((char *)obj - XtOffsetOf(zo_wxFont, zo));
+}
+
+#define Z_wxFont_P(zv) php_wxFont_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontList_entry;
-void php_wxFontList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFontList_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFontList_php: public wxFontList{
 	public:
@@ -558,16 +613,15 @@ class wxFontList_php: public wxFontList{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFontList 
-{
-    zend_object zo;
+typedef struct _zo_wxFontList{
     wxFontList_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFontList;
 
 void php_wxFontList_free(void *object TSRMLS_DC);
-zend_object_value php_wxFontList_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFontList_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -578,8 +632,14 @@ static zend_function_entry php_wxFontList_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFontList * php_wxFontList_fetch_object(zend_object *obj) {
+      return (zo_wxFontList *)((char *)obj - XtOffsetOf(zo_wxFontList, zo));
+}
+
+#define Z_wxFontList_P(zv) php_wxFontList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxFontEnumerator_entry;
-void php_wxFontEnumerator_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxFontEnumerator_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxFontEnumerator_php: public wxFontEnumerator{
 	public:
@@ -595,16 +655,15 @@ class wxFontEnumerator_php: public wxFontEnumerator{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxFontEnumerator 
-{
-    zend_object zo;
+typedef struct _zo_wxFontEnumerator{
     wxFontEnumerator_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxFontEnumerator;
 
 void php_wxFontEnumerator_free(void *object TSRMLS_DC);
-zend_object_value php_wxFontEnumerator_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxFontEnumerator_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -618,8 +677,14 @@ static zend_function_entry php_wxFontEnumerator_functions[] = {
 };
 #endif
 
+
+static inline zo_wxFontEnumerator * php_wxFontEnumerator_fetch_object(zend_object *obj) {
+      return (zo_wxFontEnumerator *)((char *)obj - XtOffsetOf(zo_wxFontEnumerator, zo));
+}
+
+#define Z_wxFontEnumerator_P(zv) php_wxFontEnumerator_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxNativeFontInfo_entry;
-void php_wxNativeFontInfo_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxNativeFontInfo_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxNativeFontInfo_php: public wxNativeFontInfo{
 	public:
@@ -635,16 +700,15 @@ class wxNativeFontInfo_php: public wxNativeFontInfo{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxNativeFontInfo 
-{
-    zend_object zo;
+typedef struct _zo_wxNativeFontInfo{
     wxNativeFontInfo_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxNativeFontInfo;
 
 void php_wxNativeFontInfo_free(void *object TSRMLS_DC);
-zend_object_value php_wxNativeFontInfo_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxNativeFontInfo_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -674,8 +738,14 @@ static zend_function_entry php_wxNativeFontInfo_functions[] = {
 };
 #endif
 
+
+static inline zo_wxNativeFontInfo * php_wxNativeFontInfo_fetch_object(zend_object *obj) {
+      return (zo_wxNativeFontInfo *)((char *)obj - XtOffsetOf(zo_wxNativeFontInfo, zo));
+}
+
+#define Z_wxNativeFontInfo_P(zv) php_wxNativeFontInfo_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxColourDatabase_entry;
-void php_wxColourDatabase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxColourDatabase_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxColourDatabase_php: public wxColourDatabase{
 	public:
@@ -690,16 +760,15 @@ class wxColourDatabase_php: public wxColourDatabase{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxColourDatabase 
-{
-    zend_object zo;
+typedef struct _zo_wxColourDatabase{
     wxColourDatabase_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxColourDatabase;
 
 void php_wxColourDatabase_free(void *object TSRMLS_DC);
-zend_object_value php_wxColourDatabase_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxColourDatabase_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -712,8 +781,14 @@ static zend_function_entry php_wxColourDatabase_functions[] = {
 };
 #endif
 
+
+static inline zo_wxColourDatabase * php_wxColourDatabase_fetch_object(zend_object *obj) {
+      return (zo_wxColourDatabase *)((char *)obj - XtOffsetOf(zo_wxColourDatabase, zo));
+}
+
+#define Z_wxColourDatabase_P(zv) php_wxColourDatabase_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGDIObject_entry;
-void php_wxGDIObject_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGDIObject_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGDIObject_php: public wxGDIObject{
 	public:
@@ -727,16 +802,15 @@ class wxGDIObject_php: public wxGDIObject{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGDIObject 
-{
-    zend_object zo;
+typedef struct _zo_wxGDIObject{
     wxGDIObject_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGDIObject;
 
 void php_wxGDIObject_free(void *object TSRMLS_DC);
-zend_object_value php_wxGDIObject_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGDIObject_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -745,8 +819,14 @@ static zend_function_entry php_wxGDIObject_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGDIObject * php_wxGDIObject_fetch_object(zend_object *obj) {
+      return (zo_wxGDIObject *)((char *)obj - XtOffsetOf(zo_wxGDIObject, zo));
+}
+
+#define Z_wxGDIObject_P(zv) php_wxGDIObject_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGraphicsRenderer_entry;
-void php_wxGraphicsRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGraphicsRenderer_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGraphicsRenderer_php: public wxGraphicsRenderer{
 	public:
@@ -760,16 +840,15 @@ class wxGraphicsRenderer_php: public wxGraphicsRenderer{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGraphicsRenderer 
-{
-    zend_object zo;
+typedef struct _zo_wxGraphicsRenderer{
     wxGraphicsRenderer_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGraphicsRenderer;
 
 void php_wxGraphicsRenderer_free(void *object TSRMLS_DC);
-zend_object_value php_wxGraphicsRenderer_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGraphicsRenderer_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -778,8 +857,14 @@ static zend_function_entry php_wxGraphicsRenderer_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGraphicsRenderer * php_wxGraphicsRenderer_fetch_object(zend_object *obj) {
+      return (zo_wxGraphicsRenderer *)((char *)obj - XtOffsetOf(zo_wxGraphicsRenderer, zo));
+}
+
+#define Z_wxGraphicsRenderer_P(zv) php_wxGraphicsRenderer_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxGraphicsMatrix_entry;
-void php_wxGraphicsMatrix_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxGraphicsMatrix_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxGraphicsMatrix_php: public wxGraphicsMatrix{
 	public:
@@ -793,16 +878,15 @@ class wxGraphicsMatrix_php: public wxGraphicsMatrix{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxGraphicsMatrix 
-{
-    zend_object zo;
+typedef struct _zo_wxGraphicsMatrix{
     wxGraphicsMatrix_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxGraphicsMatrix;
 
 void php_wxGraphicsMatrix_free(void *object TSRMLS_DC);
-zend_object_value php_wxGraphicsMatrix_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxGraphicsMatrix_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -811,8 +895,14 @@ static zend_function_entry php_wxGraphicsMatrix_functions[] = {
 };
 #endif
 
+
+static inline zo_wxGraphicsMatrix * php_wxGraphicsMatrix_fetch_object(zend_object *obj) {
+      return (zo_wxGraphicsMatrix *)((char *)obj - XtOffsetOf(zo_wxGraphicsMatrix, zo));
+}
+
+#define Z_wxGraphicsMatrix_P(zv) php_wxGraphicsMatrix_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxIcon_entry;
-void php_wxIcon_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxIcon_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxIcon_php: public wxIcon{
 	public:
@@ -829,16 +919,15 @@ class wxIcon_php: public wxIcon{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxIcon 
-{
-    zend_object zo;
+typedef struct _zo_wxIcon{
     wxIcon_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxIcon;
 
 void php_wxIcon_free(void *object TSRMLS_DC);
-zend_object_value php_wxIcon_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxIcon_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -857,8 +946,14 @@ static zend_function_entry php_wxIcon_functions[] = {
 };
 #endif
 
+
+static inline zo_wxIcon * php_wxIcon_fetch_object(zend_object *obj) {
+      return (zo_wxIcon *)((char *)obj - XtOffsetOf(zo_wxIcon, zo));
+}
+
+#define Z_wxIcon_P(zv) php_wxIcon_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxIconBundle_entry;
-void php_wxIconBundle_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxIconBundle_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxIconBundle_php: public wxIconBundle{
 	public:
@@ -877,16 +972,15 @@ class wxIconBundle_php: public wxIconBundle{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxIconBundle 
-{
-    zend_object zo;
+typedef struct _zo_wxIconBundle{
     wxIconBundle_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxIconBundle;
 
 void php_wxIconBundle_free(void *object TSRMLS_DC);
-zend_object_value php_wxIconBundle_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxIconBundle_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -902,8 +996,14 @@ static zend_function_entry php_wxIconBundle_functions[] = {
 };
 #endif
 
+
+static inline zo_wxIconBundle * php_wxIconBundle_fetch_object(zend_object *obj) {
+      return (zo_wxIconBundle *)((char *)obj - XtOffsetOf(zo_wxIconBundle, zo));
+}
+
+#define Z_wxIconBundle_P(zv) php_wxIconBundle_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxImageHandler_entry;
-void php_wxImageHandler_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxImageHandler_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxImageHandler_php: public wxImageHandler{
 	public:
@@ -917,16 +1017,15 @@ class wxImageHandler_php: public wxImageHandler{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxImageHandler 
-{
-    zend_object zo;
+typedef struct _zo_wxImageHandler{
     wxImageHandler_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxImageHandler;
 
 void php_wxImageHandler_free(void *object TSRMLS_DC);
-zend_object_value php_wxImageHandler_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxImageHandler_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -948,8 +1047,14 @@ static zend_function_entry php_wxImageHandler_functions[] = {
 };
 #endif
 
+
+static inline zo_wxImageHandler * php_wxImageHandler_fetch_object(zend_object *obj) {
+      return (zo_wxImageHandler *)((char *)obj - XtOffsetOf(zo_wxImageHandler, zo));
+}
+
+#define Z_wxImageHandler_P(zv) php_wxImageHandler_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxImage_entry;
-void php_wxImage_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxImage_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxImage_php: public wxImage{
 	public:
@@ -974,16 +1079,15 @@ class wxImage_php: public wxImage{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxImage 
-{
-    zend_object zo;
+typedef struct _zo_wxImage{
     wxImage_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxImage;
 
 void php_wxImage_free(void *object TSRMLS_DC);
-zend_object_value php_wxImage_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxImage_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1061,8 +1165,14 @@ static zend_function_entry php_wxImage_functions[] = {
 };
 #endif
 
+
+static inline zo_wxImage * php_wxImage_fetch_object(zend_object *obj) {
+      return (zo_wxImage *)((char *)obj - XtOffsetOf(zo_wxImage, zo));
+}
+
+#define Z_wxImage_P(zv) php_wxImage_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxImageList_entry;
-void php_wxImageList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxImageList_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxImageList_php: public wxImageList{
 	public:
@@ -1078,16 +1188,15 @@ class wxImageList_php: public wxImageList{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxImageList 
-{
-    zend_object zo;
+typedef struct _zo_wxImageList{
     wxImageList_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxImageList;
 
 void php_wxImageList_free(void *object TSRMLS_DC);
-zend_object_value php_wxImageList_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxImageList_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1107,8 +1216,14 @@ static zend_function_entry php_wxImageList_functions[] = {
 };
 #endif
 
+
+static inline zo_wxImageList * php_wxImageList_fetch_object(zend_object *obj) {
+      return (zo_wxImageList *)((char *)obj - XtOffsetOf(zo_wxImageList, zo));
+}
+
+#define Z_wxImageList_P(zv) php_wxImageList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPalette_entry;
-void php_wxPalette_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPalette_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPalette_php: public wxPalette{
 	public:
@@ -1125,16 +1240,15 @@ class wxPalette_php: public wxPalette{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPalette 
-{
-    zend_object zo;
+typedef struct _zo_wxPalette{
     wxPalette_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPalette;
 
 void php_wxPalette_free(void *object TSRMLS_DC);
-zend_object_value php_wxPalette_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPalette_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1149,8 +1263,14 @@ static zend_function_entry php_wxPalette_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPalette * php_wxPalette_fetch_object(zend_object *obj) {
+      return (zo_wxPalette *)((char *)obj - XtOffsetOf(zo_wxPalette, zo));
+}
+
+#define Z_wxPalette_P(zv) php_wxPalette_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPen_entry;
-void php_wxPen_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPen_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPen_php: public wxPen{
 	public:
@@ -1166,16 +1286,15 @@ class wxPen_php: public wxPen{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPen 
-{
-    zend_object zo;
+typedef struct _zo_wxPen{
     wxPen_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPen;
 
 void php_wxPen_free(void *object TSRMLS_DC);
-zend_object_value php_wxPen_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPen_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1200,8 +1319,14 @@ static zend_function_entry php_wxPen_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPen * php_wxPen_fetch_object(zend_object *obj) {
+      return (zo_wxPen *)((char *)obj - XtOffsetOf(zo_wxPen, zo));
+}
+
+#define Z_wxPen_P(zv) php_wxPen_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxPenList_entry;
-void php_wxPenList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxPenList_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxPenList_php: public wxPenList{
 	public:
@@ -1216,16 +1341,15 @@ class wxPenList_php: public wxPenList{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxPenList 
-{
-    zend_object zo;
+typedef struct _zo_wxPenList{
     wxPenList_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxPenList;
 
 void php_wxPenList_free(void *object TSRMLS_DC);
-zend_object_value php_wxPenList_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxPenList_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1236,8 +1360,14 @@ static zend_function_entry php_wxPenList_functions[] = {
 };
 #endif
 
+
+static inline zo_wxPenList * php_wxPenList_fetch_object(zend_object *obj) {
+      return (zo_wxPenList *)((char *)obj - XtOffsetOf(zo_wxPenList, zo));
+}
+
+#define Z_wxPenList_P(zv) php_wxPenList_fetch_object(Z_OBJ_P(zv))
 extern zend_class_entry* php_wxRendererNative_entry;
-void php_wxRendererNative_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+void php_wxRendererNative_destruction_handler(zend_resource * TSRMLS_DC);
 
 class wxRendererNative_php: public wxRendererNative{
 	public:
@@ -1267,16 +1397,15 @@ class wxRendererNative_php: public wxRendererNative{
 };
 
 BEGIN_EXTERN_C()
-struct zo_wxRendererNative 
-{
-    zend_object zo;
+typedef struct _zo_wxRendererNative{
     wxRendererNative_php* native_object;
     wxphp_object_type object_type;
     int is_user_initialized;
-};
+    zend_object zo;
+} zo_wxRendererNative;
 
 void php_wxRendererNative_free(void *object TSRMLS_DC);
-zend_object_value php_wxRendererNative_new(zend_class_entry *class_type TSRMLS_DC);
+zend_object* php_wxRendererNative_new(zend_class_entry *class_type TSRMLS_DC);
 END_EXTERN_C()
 
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
@@ -1290,4 +1419,10 @@ static zend_function_entry php_wxRendererNative_functions[] = {
 };
 #endif
 
+
+static inline zo_wxRendererNative * php_wxRendererNative_fetch_object(zend_object *obj) {
+      return (zo_wxRendererNative *)((char *)obj - XtOffsetOf(zo_wxRendererNative, zo));
+}
+
+#define Z_wxRendererNative_P(zv) php_wxRendererNative_fetch_object(Z_OBJ_P(zv))
 #endif //WXPHP_GDI_H_GUARD
