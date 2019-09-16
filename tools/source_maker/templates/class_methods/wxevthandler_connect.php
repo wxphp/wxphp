@@ -100,7 +100,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 		zend_error(E_ERROR, "Could not process Connect call as static\n");
 	}
 
-	zval fc;
+	zval* fc;
 	long flag, id0 = 0, id1 = 0;
 
 	zval* fc_obj;
@@ -119,7 +119,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lllz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_4, &id0, &id1, &flag , (void*)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_4, &id0, &id1, &flag, (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -129,7 +129,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"llz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_3, &id0, &flag , (void*)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_3, &id0, &flag, (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -139,7 +139,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_2, &flag , (void*)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_2, &flag, (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -149,8 +149,8 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			zend_error(E_ERROR, "Wrong amount of parameters");
 	}
 
-	fc_obj = zend_hash_index_find(Z_ARRVAL_P(&fc), 0);
-	fc_name = zend_hash_index_find(Z_ARRVAL_P(&fc), 1);
+	fc_obj = zend_hash_index_find(Z_ARRVAL_P(fc), 0);
+	fc_name = zend_hash_index_find(Z_ARRVAL_P(fc), 1);
 	Z_ADDREF_P(fc_obj);
 	
 	ct = Z_STRVAL_P(fc_name);
